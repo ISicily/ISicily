@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 0679</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic0679</idno>
+                <idno type="TM">175745</idno>
+                <idno type="EDR">81488</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Tindari</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/052">Antiquarium di Tindari</repository>
+                  <!--No inventory number found-->
+                  <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType n="plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462527">Tyndaris
+<geo>38.14227, 15.04385</geo>
+                                </placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/10282151/tindari-greek-theatre.html">Tindari
+</placeName>
+                            </origPlace>
+                            <origDate n="Ka" notBefore-custom="0200" notAfter-custom="0250">To Severus, Caracalla and Geta, so between 198 and 211</origDate>
+                        </origin>
+                        <provenance type="found"/>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2006.04</provenance>
+                        <acquisition>Tindari, Antiquarium di Tindari</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="la">Latin</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+      <!--delete empty surface above and uncomment template below if needed-->
+      <!--
+<surface type="front">
+  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
+    height="4912px" width="7360px">
+    <desc>Add Description Here</desc>
+  </graphic>
+  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+    <desc>Add Description Here</desc>
+  </graphic>
+</surface>
+
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="EDR" n="EDR081488" xml:lang="la">
+                <ab>
+                    <lb n="1"/>
+                    <supplied reason="lost">Pro salute <expan>
+                            <abbr>I<am>mpp.</am>
+                            </abbr>
+                            <ex>mperatorum</ex>
+                        </expan>
+                        <expan>
+                            <abbr>Caes<am>s</am>
+                            </abbr>
+                            <ex>arum</ex>
+                        </expan>
+                        <expan>
+                            <abbr>L</abbr>
+                            <ex>uci</ex>
+                        </expan> Septimi Sev</supplied>e<supplied reason="lost">ri - - - et <expan>
+                            <abbr>M</abbr>
+                            <ex>arci</ex>
+                        </expan> Aureli Antonini e</supplied>t <expan>
+                        <abbr>P</abbr>
+                        <ex>ubli</ex>
+                    </expan> Septimii G<supplied reason="lost">etae </supplied>
+                    <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/>
+                    <gap reason="lost" extent="unknown" unit="character"/>
+                    <expan>
+                        <abbr>r</abbr>
+                        <ex>es</ex>
+                    </expan>
+                    <expan>
+                        <abbr>p</abbr>
+                        <ex>ublica</ex>
+                    </expan>
+                    <expan>
+                        <abbr>col</abbr>
+                        <ex>oniae</ex>
+                    </expan>
+                    <expan>
+                        <abbr>Aug</abbr>
+                        <ex>ustae</ex>
+                    </expan> Ty[<expan>
+                        <abbr>ndarit</abbr>
+                        <ex>anorum</ex>
+                    </expan>
+                    <lb n="3"/>
+                    <supplied reason="lost">
+                        <expan>
+                            <abbr>p</abbr>
+                            <ex>ecunia</ex>
+                        </expan>
+                        <expan>
+                            <abbr>p</abbr>
+                            <ex>ublica</ex>
+                        </expan>
+                    </supplied>
+                    <expan>
+                        <abbr>d</abbr>
+                        <ex>ecreto</ex>
+                    </expan>
+                    <expan>
+                        <abbr>d</abbr>
+                        <ex>ecurionum</ex>
+                    </expan>.
+				</ab>
+            <!--This EDR text 081488 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+          <!--frag. (restoration on the basis of Dessau ILS 594): Pro salute imppp.Caesss. L. Septimi Severi - - - et M. Aureli Antonini et P. Septimi Getae - - - res publica colonia Augusta Tyndaritanorum P.P.D.D. Actual surviving text: - -]E[- -|- -]T P. SEPTIMI G[- - -|- - -]R.P.COL.AUG.TY[- - -|- - -]D.D. Final line therefore prob. includes publice pecunia decreto decurionum. Photograph from antiquarium visit 2006-->
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl type="AE">
+                        <citedRange>1989.0338f<!--Failed to convert--></citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1989</date>
+                        <citedRange>163 no.10 fig.10</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/EZMBJ6GN"/>
+                    </bibl>
+                    <bibl>
+                        <author>Fasolo</author>
+                        <date>2013</date>
+                        <citedRange>74-75 no.8 fig.38</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/X2SEXMRX"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

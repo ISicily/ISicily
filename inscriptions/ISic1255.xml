@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 1255</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic1255</idno>
+                <idno type="TM">492861</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">140743</idno>
+                <idno type="PHI">329620</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Taormina</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/062">Antiquarium del Teatro Antico</repository>
+                  <!--No inventory number found-->
+                  <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="breccia" ref="http://www.eagle-network.eu/voc/material/lod/73.html">breccia</material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462506">Tauromenium
+<geo>37.85358, 15.28851</geo>
+                                </placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/2522975/taormina.html">Taormina
+</placeName>
+                            </origPlace>
+                            <origDate n="GH" notBefore-custom="-0200" notAfter-custom="-0001">C2 BC - C1 BC</origDate>
+                        </origin>
+                        <provenance type="found"/>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2009.10.06</provenance>
+                        <acquisition>Taormina, Antiquarium del Teatro Antico</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="accounts" ref="http://www.eagle-network.eu/voc/typeins/lod/410.html">accounts</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+      <!--delete empty surface above and uncomment template below if needed-->
+      <!--
+<surface type="front">
+  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
+    height="4912px" width="7360px">
+    <desc>Add Description Here</desc>
+  </graphic>
+  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+    <desc>Add Description Here</desc>
+  </graphic>
+</surface>
+
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="PHI" n="PHI140743">
+                <ab>
+                    <lb n="1"/>
+                    <supplied reason="lost">— — — — — — — — σιτωνίῳ παρὰ τῶν ἐπαγγειλαμένων χρημάτων</supplied>
+                    <lb n="2"/>
+                    <supplied reason="lost">λοιπὸν τεσσαράκοντα λί</supplied>τραι, τρία δέκα τρισχίλια <supplied reason="lost">τάλαντα</supplied>.<lb n="3"/>
+                    <supplied reason="lost" cert="low">καὶ παρὰ ἀγέρταις</supplied> σίτου ἴκοσι πεντακόσια τάλαντα.<lb n="4"/>
+                    <supplied reason="lost">Εὐκλείου πρ(ύτανις<certainty locus="name" match="preceding-sibling::text()" cert="low"/>) — — Φιλι</supplied>στίωνος Σπαρ(—). ἱερομναμόνοις ἔσο-<lb n="5"/>
+                    <supplied reason="lost">δος — — — — — — λί</supplied>τραι, πέντε τριάκοντα τρισχίλια τά-<lb n="6"/>
+                    <supplied reason="lost">λαντα· ἔξοδος — —</supplied> λίτραι, πέντε ἐνενήκοντα τριακόσια<lb n="7"/>
+                    <supplied reason="lost">— — — τάλαντα· λοιπὸ</supplied>
+                    <unclear>ν</unclear> ὀκτὼ τεσσαράκοντα λίτραι, ἐννέα τριά-<lb n="8"/>
+                    <supplied reason="lost">κο— — — τάλαντα. ταμί</supplied>αις ἔσοδος ἐννέα δέκα ἑκατὸν λίτραι,<lb n="9"/>
+                    <supplied reason="lost">— — — — — — — — — —κό</supplied>σια μύρια τάλαντα· ἔξοδος μία τριά-<lb n="10"/>
+                    <supplied reason="lost">κοντα λίτραι, — — — ἐ</supplied>νακόσια ὀκτακισχίλια τάλαντα. λοι-<lb n="11"/>
+                    <supplied reason="lost">πὸν — — — — λίτραι</supplied>, <unclear>π</unclear>έντε ὀκτακόσια πεντακισχίλια τά-<lb n="12"/>
+                    <supplied reason="lost">λαντα· — — — — — —χί</supplied>λια τάλαντα παρὰ     γυμνασιάρχοις<lb n="13"/>
+                    <supplied reason="lost">— — — — — — — — — — —</supplied>τα λίτραι, ἓξ ἑξήκοντα ἑξακόσια χίλια τά-<lb n="14"/>
+                    <supplied reason="lost">λαντα — — — — — — —</supplied> ἀγορασθήμειν σιτοφυλάκοις χαλκοῦ ἔσοδος<lb n="15"/>
+                    <supplied reason="lost">— — — — — — — — — — τρ</supplied>ιάκοντα τάλαντα· ἔξοδος τὸ ἴσον· κυά-<lb n="16"/>
+                    <supplied reason="lost">μων ἔσοδος — — — —κόσ</supplied>ιοι μέδιμνοι· ἔξοδος ἡμέδιμνος ἓν δέ-<lb n="17"/>
+                    <supplied reason="lost">κα — — — μέδιμνοι· λοι</supplied>πὸν δύω ἡμίεκτα, ἓξ δέκα ὀκτακόσιοι<lb n="18"/>
+                    <supplied reason="lost">μέδιμνοι. σιτωνίῳ Φρ</supplied>ύνιος λοιπὸν τεσσαράκοντα λίτραι,<lb n="19"/>
+                    <supplied reason="lost">τρία τριάκοντα τριακόσια τρισχί</supplied>λια μύρια τάλαντα. σιτωνίωι Εὐκλεί-<lb n="20"/>
+                    <supplied reason="lost">δα λοιπὸν δέκα ἑκατὸν λίτραι, τέσσ</supplied>αρα ἑβδομήκοντα ἑπτακόσια<lb n="21"/>
+                    <supplied reason="lost">χίλια δισμύρια τάλαντα· τούτου ἐν<certainty locus="name" match="preceding-sibling::text()" cert="low"/> ἀ</supplied>ργυρωμάτοις ἀγέρταις τριάκον-<lb n="22"/>
+                    <supplied reason="lost">τα — — — — — — τάλαντα. σιτωνίῳ παρ</supplied>ὰ τῶν ἐπαγγειλαμένων χρημά-<lb n="23"/>
+                    <supplied reason="lost">των λοιπὸν τεσσαράκοντα λίτρ</supplied>αι, τρία δέκα τρισχίλια τάλαν-<lb n="24"/>
+                    <supplied reason="lost">τα. καὶ παρὰ ἀγέρταις<certainty locus="name" match="preceding-sibling::text()" cert="low"/> σίτου ἴκοσ</supplied>ι πεντακόσια τάλαντα· ἀγο-<lb n="25"/>
+                    <supplied reason="lost">ρᾶν διὰ πωλημάτων — — — — — — — λ</supplied>ίτραι, ἐννέα ὀγδοήκοντα δια-<lb n="26"/>
+                    <supplied reason="lost">κόσια — — — τάλαντα</supplied>.<lb n="27"/>                                                                       vacat<lb n="28"/>
+                    <supplied reason="lost">Δυωδεκατέος πρ(ύτανις<certainty locus="name" match="preceding-sibling::text()" cert="low"/>) — — — Ὀλύ</supplied>
+                    <unclear>μ</unclear>πιος Ταυ(—). ἱερομναμόνοις ἔσοδος ἴκοσι λίτραι, ἐννέα δέκα<lb n="29"/>
+                    <supplied reason="lost">— — — — — — τάλαντα· ἔξοδος</supplied> ἑπτὰ ἴκοσι λίτραι, τέσσαρα ἑξήκοντα ἑκατὸν χίλια τάλαντα· λοι-<lb n="30"/>
+                    <supplied reason="lost">πὸν — — — — — — — — — —κο</supplied>ντα λίτραι, τέσσαρα τεσσαράκοντα ἑκατὸν τάλαντα. ταμίαις ἔσοδος<lb n="31"/>
+                    <supplied reason="lost">— — — —</supplied>κον<supplied reason="lost">τα</supplied>
+                    <unclear>λ</unclear>
+                    <supplied reason="lost">ί</supplied>
+                    <unclear>τρα</unclear>
+                    <supplied reason="lost">ι, ἑ</supplied>πτὰ τεσσαράκοντα διακόσια τρισχίλια τάλαντα· ἔξοδος δέκα λί-<lb n="32"/> τρ<supplied reason="lost">αι, — — τρ</supplied>ιάκοντα πεντακόσια χίλια τάλαντα· λοιπὸν μία τεσσα<supplied reason="omitted">ρά</supplied>κοντα λίτραι, τέ<supplied reason="omitted">σσ</supplied>αρα ὀγδοήκον-<lb n="33"/> τα ἐνακόσια χίλια τάλαντα. σιτοφυλάκοις κυάμων ἔξοδος ἓν δέκα ἡμίεκτα, ἐννέα τριά-<lb n="34"/> κοντα διακόσιοι μέδιμνοι· λοιπὸν ἑπτὰ ἡμίεκτα, ἑπτὰ χίλιοι μέδιμνοι. σιτωνίῳ Φρύνιος<lb n="35"/> λοιπὸν τὸ ἴσον. σιτωνίῳ Εὐκλείδα λοιπὸν τὸ ἴσον. σιτωνίῳ παρὰ τῶν ἐπαγγειλαμένων λοιπὸν τὸ ἴσον.<lb n="36"/>Εὐκλείου <expan>
+                        <abbr>πρ</abbr>
+                        <ex>ύτανις?</ex>
+                    </expan> Ἀμμώνιος Σαραπίωνος Ἀρεθ(—). ἱερομναμόνοις ἔσοδος τρεῖς ὀγδοήκοντα λίτραι,<lb n="37"/> πέντε ἑβδομήκοντα ἑπτακόσια πεντακισχίλια μύρια τάλαντα· ἔξοδος ἓξ ἑβδο-<lb n="38"/> μήκοντα λίτραι, ὀκτὼ ἑβδομήκοντα ἑπτακόσια τετρακισχίλια τάλαντα· λοιπὸν μία<lb n="39"/> ὀγδοήκοντα λίτραι, ἓν τεσσαράκοντα ἑκατὸν χίλια μύρια τάλαντα· τούτου Διὸς μύρια<lb n="40"/> τάλαντα· καὶ Διονύσου τριάκοντα λίτραι, ἑπτὰ ἑβδομήκοντα χίλια τάλαντα. ταμίαις<lb n="41"/> ἔσοδος ἓξ τριάκοντα λίτραι, ὀκτὼ τεσσαράκοντα ἑπτακόσια πεντακισχίλια τετρακισ-<lb n="42"/> μύρια τάλαντα· ἔξοδος πέντε ἑξήκοντα λίτραι, ἑπτὰ ἐνενήκοντα ἑκατὸν τρι<supplied reason="omitted">σ</supplied>χίλια<lb n="43"/> δισμύρια τάλαντα· λοιπὸν δύω δέκα λίτραι, πέντε τριάκοντα πεντακόσια τετρακισ-<lb n="44"/> χίλια δισμύρια τάλαντα. σιτοφυλάκοις κυάμων ἔσοδος ὀγδοήκοντα τριακόσιοι μέ-<lb n="45"/> διμνοι· ἔξοδος δέκα ἡμίεκτα, τρεῖς ἴκοσι ἑκατὸν μέδιμνοι· λοιπὸν ἐννέα ἡμίεκτα,<lb n="46"/> τρεῖς ἑξήκοντα διακόσιοι χίλιοι μέδιμνοι. σιτωνίῳ Φρύνιος λοιπὸν τεσσαράκον-<lb n="47"/> τα λίτραι, τρία τριάκοντα τριακόσια τρισχίλια μύρια τάλαντα. σιτωνίῳ Εὐκλείδα<lb n="48"/> λοιπὸν δέκα ἑκατὸν λίτραι, τέσσαρα ἑβδομήκοντα ἑπτακόσια χίλια δισμύρια τά-<lb n="49"/> λαντα. σιτωνίῳ παρὰ τῶν ἐπαγγειλαμένων λοιπὸν τεσσαράκοντα λίτραι, τρία τριά-<lb n="50"/> κοντα πεντακόσια τρισχίλια τάλαντα. ἀγορᾶν διὰ πωλημάτων τέσσαρα ἑξήκον-<lb n="51"/> τα διακόσια χίλια τάλαντα.<lb n="52"/>                                                                   vacat<lb n="53"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="PHI" n="PHI329620">
+                <ab>
+                    <lb n="1"/>
+            
+            
+            
+            IG XIV 430, col. I, ll. 1, 7-14, 23; col. II, ll. 1-4 (V. Arangio-Ruiz):<lb n="2"/> 
+               <lb n="3"/>
+                    <supplied reason="lost">— — σιτωνίωι παρὰ τῶν ἐπαγγειλαμένων χρημάτων λοιπὸν τεσσαράκοντα</supplied> λίτραι, τρία δέκα τρισχίλια τάλ<supplied reason="lost">αντα</supplied>,<lb n="4"/> 
+               <lb n="5"/>. . .<lb n="6"/> 
+               <lb n="7"/>                                                                                                       . . . τρια-<lb n="8"/>
+                    <supplied reason="lost">κο— — — — τάλαντα. ταμ</supplied>ίαις ἔσοδος ἐννέ<supplied reason="omitted">α</supplied> δέκα ἑκατὸν λίτραι,<lb n="9"/>
+                    <supplied reason="lost">— — — — — — — — — —κό</supplied>σια μύρια τάλα<unclear>ν</unclear>τα· ἔξοδος μία τριά-<lb n="10"/>
+                    <supplied reason="lost">κοντα λίτραι, — — —</supplied> ἐνακόσια ὀκτακισχίλια τάλαντα· λοι-<lb n="11"/>
+                    <supplied reason="lost">πὸν — — — λίτραι</supplied>, πέντε ὀκτακόσια πεντακισχίλια τά-<lb n="12"/>
+                    <supplied reason="lost">λαντα — — — — —χί</supplied>λια τάλαντα παρὰ γυμνασιάρχοις<lb n="13"/>
+                    <supplied reason="lost">τούτου τριάκον(?)</supplied>τα λίτραι, ἓξ ἑξήκοντα ἑξακόσια χίλια τά-<lb n="14"/>
+                    <supplied reason="lost">λαντα ὡς ἔλαιον</supplied> ἀγορασθήμειν. σιτοφυλάκοις χαλκοῦ ἔσοδος<lb n="15"/>
+                    <supplied reason="lost">— — — — — — τ</supplied>ριάκοντα τάλαντα· ἔξοδος τὸ ἴσον·  κυά-<lb n="16"/>
+                    <supplied reason="lost">μων</supplied> . . .<lb n="17"/> 
+               <lb n="18"/>. . .<lb n="19"/> 
+               <lb n="20"/>                                                                                              . . . τάλαν-<lb n="21"/>
+                    <supplied reason="lost">τα, καὶ παρὰ ἀγέρταις σίτου ἴκο</supplied>
+                    <unclear>σ</unclear>ι πεντακόσια τάλαντα. ἀγο-<lb n="22"/>
+                    <supplied reason="lost">ρᾶν</supplied> . . .<lb n="23"/> 
+               <lb n="24"/>. . .<lb n="25"/> 
+               <lb n="26"/>
+                    <supplied reason="lost">Δυωδεκατέος, πρ(ύτανις) — — — — — Ὀλ</supplied>ύμπιος Ταυ. ἱε<supplied reason="lost">ρο</supplied>μναμόνοις ἔσοδος ἴκοσι λίτραι, ἐννέα δέκα<lb n="27"/>
+                    <supplied reason="lost">— — — — — — τάλαντα· ἔξοδος</supplied> ἑπτὰ ἴκοσι λίτραι, τέσσαρα ἑξήκοντα ἑκατὸν χίλια τάλαντα· λοι-<lb n="28"/>
+                    <supplied reason="lost">πὸν τέσσαρες ἑβδομή</supplied>
+                    <unclear>κ</unclear>οντα λίτραι, τέσσαρα τεσσαράκοντα ἑκατον τάλαντα. ταμίαις ἔσοδος<lb n="29"/>
+                    <supplied reason="lost">— — —</supplied>κον<supplied reason="lost">τα</supplied> λί<unclear>τραι</unclear>, <unclear>ἑ</unclear>πτὰ τεσσαράκοντα διακόσια τρισχίλια τάλαντα· ἔξοδος δέκα λί-<lb n="30"/>τραι . . .<lb n="31"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commentary--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl type="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0430</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>45.1342</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>42.1762</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>38.0973</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>04.0057</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Arangio Ruiz and Olivieri</author>
+                        <date>1925</date>
+                        <citedRange>no.8</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5Q2B5T7T"/>
+                    </bibl>
+                    <bibl type="SGDI">
+                        <citedRange>5228</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
+                    </bibl>
+                    <bibl type="CIG">
+                        <citedRange>3.5640 tab.4</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

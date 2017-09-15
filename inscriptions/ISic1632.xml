@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 1632</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic1632</idno>
+                <idno type="TM">645083</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Salemi</settlement>
+                        <repository><!--Add Repository Here--></repository>
+                  <!--No inventory number found-->
+                  <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="mosaic" ref="http://www.eagle-network.eu/voc/material/lod/134.html">mosaic</material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462227" cert="low">Halicyae (?)
+<geo>37.82199, 12.80506</geo>
+                                </placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/2523557/salemi.html">Salemi
+</placeName>
+                            </origPlace>
+                            <origDate n="M" notBefore-custom="0400" notAfter-custom="0500">C5 AD (so Pace)</origDate>
+                        </origin>
+                        <provenance type="found">Basilica</provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>, </acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+      <!--delete empty surface above and uncomment template below if needed-->
+      <!--
+<surface type="front">
+  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
+    height="4912px" width="7360px">
+    <desc>Add Description Here</desc>
+  </graphic>
+  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+    <desc>Add Description Here</desc>
+  </graphic>
+</surface>
+
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="unsupplied" xml:lang="la">
+                <ab><!--Greek or Latin (etc.) text here--></ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+          <!--part of the mosaic floor of middle phase of a three period basilica; this is the dedication thereof by kobouldeous and Maxima on behalf of their and their children's soteria. On the name, cf. CIL 10.7175, the equivalent of Quodvultdeus. Note Pace's comments on Greek vs. Latin on the island, inspired by the way in which the third and most recent level of the basilica has Latin inscr, not Greek ones. For fuller details, see Bilotta (non vidi).-->
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl>
+                        <author>Agnello</author>
+                        <date>1953</date>
+                        <citedRange>no.67</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Pace</author>
+                        <date>1916</date>
+                        <citedRange>707 no.2</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/G8N68WX4"/>
+                    </bibl>
+                    <bibl>
+                        <author>Bilotta</author>
+                        <date>1977</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/BE9Q4HHE"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

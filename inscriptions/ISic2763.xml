@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 2763</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic2763</idno>
+                <idno type="TM">645160</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">332960</idno>
+                <idno type="PHI">336565</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Ragusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository>
+                  <!--No inventory number found-->
+                  <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType n="plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462378">Mutyca
+<geo>36.84594, 14.77399</geo>
+                                </placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/6541972/modica.html">Modica
+</placeName>
+                            </origPlace>
+                            <origDate n="M" notBefore-custom="0400" notAfter-custom="0500">C5 AD</origDate>
+                        </origin>
+                        <provenance type="found">Contrada Monte Margi</provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Ragusa, Museo Archeologico Ibleo</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="prayer" ref="http://www.eagle-network.eu/voc/typeins/lod/85.html">prayer</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+      <!--delete empty surface above and uncomment template below if needed-->
+      <!--
+<surface type="front">
+  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
+    height="4912px" width="7360px">
+    <desc>Add Description Here</desc>
+  </graphic>
+  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+    <desc>Add Description Here</desc>
+  </graphic>
+</surface>
+
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="PHI" n="PHI332960">
+                <ab>
+                    <lb n="1"/>
+            
+            
+            
+                 ☩ πρὸς ε<supplied reason="omitted">ὐ</supplied>καρ-<lb n="2"/>    πήα<supplied reason="omitted">ν</supplied>, χουρίον <surplus>²⁶χωρίων</surplus>²⁶ (καὶ) κλα-<lb n="3"/>   ρίον ἄνγελος τοῦ <expan>
+                        <abbr>θ</abbr>
+                        <ex>εο</ex>
+                        <abbr>ῦ</abbr>
+                    </expan>
+                    <lb n="4"/>  ὁ <expan>
+                        <abbr>Κρα</abbr>
+                        <ex>υίλ</ex>
+                    </expan>, Μαμιλανφιναηλ,<lb n="5"/>  Λουιλ, Ἀμεγα ὡ <expan>
+                        <abbr>θ</abbr>
+                        <ex>εὸς</ex>
+                    </expan>
+                    <expan>
+                        <abbr>Κρεφι</abbr>
+                        <ex>ήλ</ex>
+                    </expan>,<lb n="6"/> Φακτω Εδανεμουὴλ Μου<lb n="7"/> μουκαθαλλουιχανδα<lb n="8"/> εεις δραμελ γιάμεν σε,<lb n="9"/>Ἰεσοῦ <expan>
+                        <abbr>Χ</abbr>
+                        <ex>ρι</ex>
+                        <abbr>στέ</abbr>
+                    </expan>, <supplied reason="omitted">δ</supplied>ὸς τὸν καρ-<lb n="10"/> πὸν κὲ τὶν ἰσφορὰν ἰς τὸν<lb n="11"/> ἄνπελον ἅ<supplied reason="omitted">μ</supplied>α, τοῦ καρποῦ<lb n="12"/> σίτου κὲ ὔνου <surplus>²⁶οἴνου</surplus>²⁶ (καὶ) ἐλέου <surplus>²⁶ἐλαίου</surplus>²⁶ τοῦ<lb n="13"/> Πέτρο<surplus>ο</surplus>υ <surplus>²⁶Πέτρου</surplus>²⁶, ποῦ κῖτε τοὺ φυλα-<lb n="14"/> κτήριον τοῦτου συνολον ο<supplied reason="lost">— —</supplied>
+                    <lb n="15"/> 
+               <supplied reason="lost">— —</supplied>τητο κτήσαντα Μιχαήλ,<lb n="16"/> 
+               <supplied reason="lost">Γ</supplied>αβριαύλ, Οὐριήλ, Ῥαφαὴλ<lb n="17"/>  τὸν Μισχουτον, τὸν <supplied reason="omitted">δ</supplied>υνατὸν<lb n="18"/>  τ<unclear>ης</unclear> χάριν ἰς τὴν σῦν, θε-<lb n="19"/>  έ, ἥν’ ἀποῦ καρποῦ (καὶ) ἐλέ-<lb n="20"/>        ου κὲ ὔνου<lb n="21"/>  ἐλεο͂να, τὸν ἀν-<lb n="22"/> πελο͂να τοῦ Πέτρου,<lb n="23"/>πλίθυνον, πλύθυ-<lb n="24"/>   νον <expan>
+                        <abbr>νῦ</abbr>
+                        <ex>ν</ex>
+                    </expan>
+                    <expan>
+                        <abbr>Κ</abbr>
+                        <ex>ύριε</ex>
+                    </expan> Ἰεσοῦ<lb n="25"/>
+                    <expan>
+                        <abbr>Χ</abbr>
+                        <ex>ρι</ex>
+                        <abbr>στέ</abbr>
+                    </expan>, νὲ ἀμέν.<lb n="26"/>       ☩<lb n="27"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="PHI" n="PHI336565">
+                <ab>
+                    <lb n="1"/>
+            
+            
+            
+                  <surplus>²charaktér</surplus>² πρὸς ἐνκαρ-<lb n="2"/>    πήα<supplied reason="omitted">ν</supplied>, χουρίον <surplus>²⁶χωρίων</surplus>²⁶ (κὲ) κλα-<lb n="3"/>   ρίον ἄνγελος τοῦ <expan>
+                        <abbr>θ</abbr>
+                        <ex>εο</ex>
+                        <abbr>ῦ</abbr>
+                    </expan>
+                    <lb n="4"/>  ω Κραμαμιλαν Φιναὴλ<lb n="5"/>  Λουὶλ Αμεγαωθ <expan>
+                        <abbr>Κρεφι</abbr>
+                        <ex>ὴλ</ex>
+                    </expan>
+                    <lb n="6"/> Φακτωὲλ Ἀνεμουὴλ Μου<lb n="7"/> Μουκαθὰλ λουιχανδα<lb n="8"/> Εεισδραμὲλ γιάμεν σε,<lb n="9"/>Ἰεσοῦ <expan>
+                        <abbr>Χ</abbr>
+                        <ex>ριστ</ex>
+                        <abbr>έ</abbr>
+                    </expan> τε, δὸς τὸν καρ-<lb n="10"/> πὸν κὲ τὶν ἰσφορὰν ἰς τὸν<lb n="11"/> ἀνπελο͂ναν ἀποὺ καρποῦ<lb n="12"/> σίτου κὲ ὔνου (κὲ) ἐλέου τοῦ<lb n="13"/> Πέτρο<supplied reason="omitted">υ</supplied>, οὕπου κῖτε τοὺ φυλα-<lb n="14"/> κτήριον τοῦτου εω<supplied reason="lost">— — —</supplied>
+                    <lb n="15"/> 
+               <supplied reason="lost">— —</supplied>τητο κτήσαντα Μιχαὴλ<lb n="16"/> 
+               <supplied reason="lost">Γ</supplied>αβριάυλ, Οὐριήλ, Ῥαφαὴλ<lb n="17"/>    τὸν Μισχοῦτον, τὸν δυνατὸν<lb n="18"/>         δὸς χάριν ἰς τὴν σύνθε-<lb n="19"/>          σην ἀποὺ καρποῦ<lb n="20"/>                 σίτου (κὲ) ὔνου (κὲ) ἐλέ-<lb n="21"/>                         ου<lb n="22"/> 
+               <lb n="23"/>    ἐλεο͂να, τὸν ἀν-<lb n="24"/> πελο͂να τοῦ Πέτρου<lb n="25"/>πλίθυνον, πλύθυ-<lb n="26"/>      νον <expan>
+                        <abbr>νῦ</abbr>
+                        <ex>ν</ex>
+                    </expan>
+                    <expan>
+                        <abbr>Κ</abbr>
+                        <ex>ύριε</ex>
+                    </expan> Ἰεσοῦ<lb n="27"/>
+                    <expan>
+                        <abbr>Χ</abbr>
+                        <ex>ριστ</ex>
+                        <abbr>έ</abbr>
+                    </expan> τε, νὲ ἀμέν.<lb n="28"/>            
+               <surplus>²charaktér</surplus>²<lb n="29"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+          <!--small oval limestone tablet inscribed on both sides (22.5x18x3cm), found in a field in 1977, with a Christian prayer for a vineyard with olive trees. cf. SEG 44.775. Not visible in the museum on visit in early 2015.-->
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl type="AE">
+                        <citedRange>2006.00517a-b<!--Failed to convert--></citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>57.0883</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>56.1097</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>55.1017</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>50.1017</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>44.0781</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="BE">
+                        <citedRange>1995.0750</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1994</date>
+                        <citedRange>491-496 ph</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QRD8P4T8"/>
+                    </bibl>
+                    <bibl>
+                        <author>Zambito</author>
+                        <date>2006</date>
+                        <citedRange>fig.1</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GPTWM25N"/>
+                    </bibl>
+                    <bibl>
+                        <author>Bevilacqua and Giannobile</author>
+                        <date>2000</date>
+                        <citedRange>138-140</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/XAJ8Q2QU"/>
+                    </bibl>
+                    <bibl>
+                        <author>Zambito</author>
+                        <date>2005</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PXTN4ESV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro Perrone</author>
+                        <date>2007</date>
+                        <citedRange>272-274 fig.2-3</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/X67DIIRS"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

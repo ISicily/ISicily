@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Epitaph of Zoe</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic0815</idno>
+                <idno type="TM">175813</idno>
+                <idno type="EDR">074418</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Ragusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository>
+                        <idno type="inventory">607</idno>
+                  <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient"/>
+                                <placeName type="modern" ref="http://pleiades.stoa.org/places/462169">Cozzo Cicirello<geo>37.016817, 14.405837</geo></placeName>
+                            </origPlace>
+                            <origDate n="MN" notBefore-custom="0400" notAfter-custom="0600">C5 AD - C6 AD (Wilson C6, Manganaro C5)</origDate>
+                        </origin>
+                        <provenance type="found"/>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Ragusa, Museo Archeologico Ibleo no. 607</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="la">Latin</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2017-08-23" who="#JP">Jonathan Prag checked the EpiDoc, added text div and reference</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+      <!--delete empty surface above and uncomment template below if needed-->
+      <!--
+<surface type="front">
+  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
+    height="4912px" width="7360px">
+    <desc>Add Description Here</desc>
+  </graphic>
+  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+    <desc>Add Description Here</desc>
+  </graphic>
+</surface>
+
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition">
+                <ab>
+                    <lb n="1"/>Super lo
+                    <lb n="2" break="no"/>cellum, u
+                    <lb n="3" break="no"/>bi iaceo e
+                    <lb n="4" break="no"/>go virgo
+                    <lb n="5"/>nomi
+                    <lb n="6" break="no"/>ne Zoe
+                    <lb n="7"/>annorum
+                    <lb n="8"/>quinquaginta
+                    <lb n="9"/>menses VI
+                    <lb n="10"/>adiura
+                    <lb n="11" break="no"/>te per de
+                    <lb n="12" break="no"/>um et infero
+                    <lb n="13" break="no"/>s: nemi
+                    <lb n="14" break="no"/>ni lice
+                    <lb n="15" break="no"/>at aperir<supplied reason="lost">e</supplied>
+                    <lb n="16"/>cupa
+                    <lb n="17" break="no"/>m
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>standardised text taken from Korhonen 2010: 132-3</note></app></listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+          <!--Manganaro would argue for a C5 date, drawing comparisons with e.g. that of the deacon Ausonius (CIL 10.7201) and the poor latin of the epitaph of Bonipatia (Diehl, ILCV n.2734) which is dated, to AD 411.-->
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl type="AE">
+                        <citedRange>2004.0662</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    </bibl>
+                    <bibl type="AE">
+                        <citedRange>1964.0184</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    </bibl>
+                    <bibl>
+                        <author>Nicosia</author>
+                        <date>1959-1960</date>
+                    </bibl>
+                    <bibl>
+                        <author>Di Vita</author>
+                        <date>1961</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/EZAA2UBK"/>
+                    </bibl>
+                    <bibl>
+                        <author>Wilson</author>
+                        <date>1990</date>
+                        <citedRange>318 fig.271, 416 n.18</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1993</date>
+                        <citedRange>589-590 fig.33</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JBI7CI5R"/>
+                    </bibl>
+                    <bibl>
+                        <author>Di Vita</author>
+                        <date>2005</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/8NPVZTAZ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Korhonen</author>
+                        <date>2010</date>
+                        <citedRange>132-133</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/S9N9RGE8"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

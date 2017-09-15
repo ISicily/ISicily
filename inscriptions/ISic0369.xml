@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 0369</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic0369</idno>
+                <idno type="TM">491580</idno>
+                <idno type="EDR">140105</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Catania</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
+                        <idno type="inventory">935</idno>
+                  <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina
+<geo>37.49223, 15.07041</geo>
+                                </placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/2525068/catania.html">Catania
+</placeName>
+                            </origPlace>
+                            <origDate n="K (?)" notBefore-custom="0200" notAfter-custom="0300" cert="low">C2 AD (K)</origDate>
+                        </origin>
+                        <provenance type="found"/>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Catania, Museo Civico di Catania no. 935</acquisition>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <note type="location">sala IX.114, mag. sup.</note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="la">Latin</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+      <!--delete empty surface above and uncomment template below if needed-->
+      <!--
+<surface type="front">
+  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
+    height="4912px" width="7360px">
+    <desc>Add Description Here</desc>
+  </graphic>
+  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+    <desc>Add Description Here</desc>
+  </graphic>
+</surface>
+
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="EDR" n="EDR140105" xml:lang="la">
+                <div n="1" type="textpart">
+                    <ab>
+                        <lb n="1"/>
+				〈:in fronte〉<lb n="2"/>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">D</supplied>
+                            </abbr>
+                            <ex>is</ex>
+                        </expan>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">M</supplied>
+                            </abbr>
+                            <ex>anibus</ex>
+                        </expan>
+                        <expan>
+                            <abbr>s</abbr>
+                            <ex>acrum</ex>
+                        </expan>
+                        <lb n="3"/>
+                        <supplied reason="undefined" evidence="previouseditor">Publicia</supplied>
+                        <supplied reason="undefined" evidence="previouseditor">Ifis</supplied>
+                        <lb n="4"/>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">vix</supplied>
+                            </abbr>
+                            <ex>it</ex>
+                        </expan>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">ann</supplied>
+                            </abbr>
+                            <ex>is</ex>
+                        </expan> LXVIII<lb n="5"/>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">P</supplied>
+                            </abbr>
+                            <ex>ublius</ex>
+                        </expan>
+                        <supplied reason="undefined" evidence="previouseditor">Pedius</supplied>
+                        <supplied reason="undefined" evidence="previouseditor">Severus</supplied>
+                        <lb n="6"/>
+                        <supplied reason="undefined" evidence="previouseditor">patronus</supplied>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">f</supplied>
+                            </abbr>
+                            <ex>ecit</ex>
+                        </expan>
+                        <lb n="7"/>
+                        <lb n="8"/>
+                    </ab>
+                </div>
+                <div n="2" type="textpart">
+                    <ab>
+                        <lb n="1"/>
+                        <lb n="2"/>
+                        <expan>
+                            <abbr>D</abbr>
+                            <ex>is</ex>
+                        </expan>
+                        <expan>
+                            <abbr>M</abbr>
+                            <ex>anibus</ex>
+                        </expan>
+                        <expan>
+                            <abbr>s</abbr>
+                            <ex>acrum</ex>
+                        </expan>
+                        <lb n="3"/>
+                        <expan>
+                            <abbr>P</abbr>
+                            <ex>ublius</ex>
+                        </expan> Pedius Marianus <expan>
+                            <abbr>v</abbr>
+                            <ex>ixit</ex>
+                        </expan>
+                        <unclear>a</unclear>(nnis) XXV<lb n="4"/>et Publicia <unclear>I</unclear>fis<lb n="5"/>
+                        <unclear>T</unclear>(itus) Pe⌜di⌝us Severus <expan>
+                            <abbr>f</abbr>
+                            <ex>ilius</ex>
+                        </expan>
+                        <supplied reason="lost">
+                            <expan>
+                                <abbr>v</abbr>
+                                <ex>ixit</ex>
+                            </expan>
+                        </supplied>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">a</supplied>
+                            </abbr>
+                            <ex>nnis</ex>
+                        </expan> XVIII<lb n="6"/>
+                        <unclear>Pe</unclear>d<supplied reason="undefined" evidence="previouseditor">i</supplied>us Sev<supplied reason="undefined" evidence="previouseditor">er</supplied>us<lb n="7"/>
+                        <supplied reason="undefined" evidence="previouseditor">Ar</supplied>ria Volumn<unclear>i</unclear>lla <expan>
+                            <abbr>m</abbr>
+                            <ex>ater</ex>
+                        </expan>
+                        <lb n="8"/>
+                        <expan>
+                            <abbr>
+                                <supplied reason="undefined" evidence="previouseditor">C</supplied>
+                            </abbr>
+                            <ex>aius</ex>
+                        </expan>
+                        <supplied reason="undefined" evidence="previouseditor">Ped</supplied>
+                        <unclear>i</unclear>us Severus <expan>
+                            <abbr>f</abbr>
+                            <ex>ilius</ex>
+                        </expan>
+                        <expan>
+                            <abbr>f</abbr>
+                            <ex>ecerunt</ex>
+                        </expan>.
+				</ab>
+                </div>
+            <!--This EDR text 140105 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+          <!--marble slab carved on two sides; on side b, the last three individuals, [-] Pedius Severus, Arria Volumnilla m(ater), Caius Pedius Severus f(ilius) are the dedicants. Side a is a funerary inscr. for Publicia Ifis alone, erected by Publius Pedius Severus patronus (who may be the same man as the [-] Pedius Severus on (b). (b) commemorates Publius Pedius Marianus and Titus Pedius Severus filius, with the name of Publicia Ifis inserted between them; perhaps (b) superseded (a) after the death of ?husband and son? also. Both sides have DMS header. By the name, Publicia may have originally been a city slave.-->
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl type="CIL">
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7087</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                    </bibl>
+                    <bibl type="IMusCatania">
+                        <citedRange>122</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                    </bibl>
+                    <bibl/>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

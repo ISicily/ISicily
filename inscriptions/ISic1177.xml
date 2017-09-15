@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 1177</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic1177</idno>
+                <idno type="TM">492782</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">140660</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Halaesa</settlement>
+                        <repository role="museum">Antiquarium e sito archeologico di Halaesa</repository>
+                        <idno type="inventory">ME 20218</idno>
+                  <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa
+<geo>37.99907,14.26197</geo>
+                                </placeName>
+                                <offset>near <placeName type="modern" ref="http://www.geonames.org/2525099/castel-di-tusa.html">Castel di Tusa
+</placeName>
+                                </offset>
+                            </origPlace>
+                            <origDate n="GH" notBefore-custom="-0200" notAfter-custom="-0001">Late Hellenistic</origDate>
+                        </origin>
+                        <provenance type="found"/>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2011.06.15</provenance>
+                        <acquisition>Halaesa, Antiquarium e sito archeologico di Halaesa no. ME 20218</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+      <!--delete empty surface above and uncomment template below if needed-->
+      <!--
+<surface type="front">
+  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
+    height="4912px" width="7360px">
+    <desc>Add Description Here</desc>
+  </graphic>
+  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+    <desc>Add Description Here</desc>
+  </graphic>
+</surface>
+
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="PHI" n="PHI140660">
+                <ab>
+                    <lb n="1"/>
+            
+            
+            
+                   θεοῖς πᾶσι<lb n="2"/>οἱ στρατ<unclear>ε</unclear>
+                    <supplied reason="omitted">υσ</supplied>άμενοι<lb n="3"/>         ἐν Ἔ<unclear>ρ</unclear>
+                    <supplied reason="omitted">υκ</supplied>ι<lb n="4"/>     ΕΚΙΙΩΝΖΕΟΙΜΩΝ<lb n="5"/>   ΤΩΝΣ․Υ․ΒΟΑΙΙΙΣΤ<unclear>Ε</unclear>Ι<lb n="6"/>    ΜΕΝ<supplied reason="lost">— — —</supplied>#⁷ΓΩΓ<lb n="7"/>
+                    <expan>
+                        <abbr>Ἡράκλεον</abbr>
+                        <ex>?</ex>
+                    </expan>
+                    <supplied reason="lost">Δ</supplied>
+                    <supplied reason="omitted">ι</supplied>οδώρου<lb n="8"/>  ΚαΙΡΕ<supplied reason="lost">— — — — — — — —</supplied>
+                    <lb n="9"/>χιλιαρχήσαν<supplied reason="lost">τα</supplied> ἐν Ἔρυκι<lb n="10"/>
+                    <supplied reason="omitted">ἀ</supplied>
+                    <supplied reason="lost">ρετᾶς(?) ἕν</supplied>εκεν.<lb n="11"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+          <!--to a military commander. cf. IG 14.282. Text is a mess, since the stone is v. badly corroded since Gualtherus saw it. Mommsen has a guess! M's comments to the effect that it's a statue of Herakleos, the tr.mil. of the Eryx 200, erected in Halaesa b/c that was where he came from. Suggests that Ka- - -, line 8 could well be the start of his cognomen, in the Sicilian onomastic tradition. NB Nenci in Colloquio Alesino (1998); Prestianni Giallombardo in ibid., p.72 observes this shows Halaesa not merely one of the 17 (see Diod.Sic.4.83.4) but also could provide the commanding officer, and that it goes with Halaesa’s other privileges such as immunis ac libera. cf. Launey (1950: 1007) discussing this type of honorific by troops to commander, and citing this example, i.a.-->
+                </p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl type="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0355</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>43.1208.2<!--Failed to convert--></citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>41.0776</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>Gualtherus (no date) no.137, 141</bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange>47 no.300</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
+                    </bibl>
+                    <bibl>
+                        <author>Muratori</author>
+                        <date>1740</date>
+                        <citedRange>820 no.3</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9S5VIRWZ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1753</date>
+                        <citedRange>147-148 no.5</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/U7S4ZAG3"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1769</date>
+                        <citedRange>cl.9 no.15</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1784</date>
+                        <citedRange>cl.9 no.16</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
+                    </bibl>
+                    <bibl type="CIG">
+                        <citedRange>3.5598</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    </bibl>
+                    <bibl type="SGDI">
+                        <citedRange>5203</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
+                    </bibl>
+                    <bibl type="IGRR">
+                        <citedRange>507</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/KSH4D9GK"/>
+                    </bibl>
+                    <bibl>
+                        <author>Prestianni Giallombardo</author>
+                        <date>1987</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/29XU2HR9"/>
+                    </bibl>
+                    <bibl>
+                        <author>Prestianni Giallombardo</author>
+                        <date>1993</date>
+                        <citedRange>ph</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HQDFME9N"/>
+                    </bibl>
+                    <bibl>
+                        <author>Nenci</author>
+                        <date>1998</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RMIFQVHG"/>
+                    </bibl>
+                    <bibl>
+                        <author>Facella</author>
+                        <date>2006</date>
+                        <citedRange>329-331</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/J4XWZPV6"/>
+                    </bibl>
+                    <bibl>
+                        <author>Prestianni Giallombardo</author>
+                        <date>2012</date>
+                        <citedRange>175 fig.152</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/CJISRIUV"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
