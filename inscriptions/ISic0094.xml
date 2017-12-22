@@ -1,187 +1,278 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title>I.Sicily inscription 0094</title>
-        <editor ref="#JP">Jonathan Prag</editor>
-        <principal ref="#JP">Jonathan Prag</principal>
-        <funder>John Fell OUP Research Fund</funder>
-        <respStmt>
-          <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-          <resp>original data collection and editing</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-          <resp>conversion to EpiDoc</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-          <resp>site construction and encoding</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-          <resp>editing of geo data</resp>
-        </respStmt>
-        <respStmt>
-          <name xml:id="MM">Michael Metcalfe</name>
-          <resp>museum data collection</resp>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <authority>I.Sicily</authority>
-        <idno type="filename">ISic0094</idno>
-        <idno type="TM">285286</idno>
-        <idno type="EDR">127507</idno>
-        <idno type="EDH"/>
-        <idno type="EDCS"/>
-        <idno type="PHI"/>
-        <availability>
-          <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-            Commons-Attribution 4.0 licence.</licence>
-        </availability>
-      </publicationStmt>
-      <sourceDesc>
-        <msDesc>
-          <msIdentifier>
-            <!--Default country and region-->
-            <country>Italy</country>
-            <region>Sicily</region>
-            <settlement>Lost</settlement>
-            <repository><!--Add Repository Here--></repository>
-            <!--No inventory number found-->
-            <!--Adding location for old id numbers if available-->
-            <altIdentifier>
-              <settlement/>
-              <repository/>
-              <idno type="old"/>
-            </altIdentifier>
-          </msIdentifier>
-          <msContents>
-            <textLang mainLang="la">Latin</textLang>
-          </msContents>
-          <physDesc>
-            <objectDesc>
-              <supportDesc>
-                <support><material n="stone"
-                    ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material><dimensions>
-                    <!--Default values and requires editing-->
-                    <height unit="cm"/>
-                    <width unit="cm"/>
-                    <depth unit="cm"/>
-                  </dimensions></support>
-              </supportDesc>
-              <layoutDesc>
-                <layout><!--Default value and requires checking--><rs type="execution"
-                    ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs></layout>
-              </layoutDesc>
-            </objectDesc>
-            <handDesc>
-              <handNote><!--Default value and requires editing--><locus from="line1" to="line1">Line
-                  1</locus><dimensions type="letterHeight">
-                  <height unit="mm"/>
-                </dimensions><locus from="line1" to="line2">Interlineation line 1 to
-                  2</locus><dimensions type="interlinear">
-                  <height unit="mm"/>
-                </dimensions></handNote>
-            </handDesc>
-          </physDesc>
-          <history>
-            <origin><origPlace datingMethod="#julian"><placeName type="ancient"
-                  ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae
-                    <geo>37.98365, 13.69555</geo></placeName><placeName type="modern"
-                  ref="http://www.geonames.org/6539140/termini-imerese.html">Termini Imerese
-                </placeName></origPlace><origDate n="Ia" notBefore-custom="0001"
-                notAfter-custom="0050">Probably C1 AD, connected with colony's estab.; Wilson would
-                make it pre-Claudius probably (1990, n.58 (p.359)</origDate></origin>
-            <provenance type="found"/>
-            <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-            <acquisition>Lost, </acquisition>
-          </history>
-        </msDesc>
-      </sourceDesc>
-    </fileDesc>
-    <profileDesc>
-      <calendarDesc>
-        <calendar xml:id="julian">
-          <p>Julian Calendar</p>
-        </calendar>
-      </calendarDesc>
-      <langUsage>
-        <!--English and Italian added by default (for translations) delete where not appropriate.-->
-        <language ident="en">English</language>
-        <language ident="it">Italian</language>
-        <language ident="la">Latin</language>
-      </langUsage>
-      <textClass>
-        <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-          <term n="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html"
-            >honorific</term>
-        </keywords>
-      </textClass>
-    </profileDesc>
-    <revisionDesc status="unchecked">
-      <listChange>
-        <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from
-          database</change>
-        <change when="2017-11-16" who="#JP">Jonathan Prag added a bibl element</change>
-      </listChange>
-    </revisionDesc>
-  </teiHeader>
-  <facsimile>
-    <surface/>
-    <!--delete empty surface above and uncomment template below if needed-->
-    <!--
-<surface type="front">
-  <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}" 
-    height="4912px" width="7360px">
-    <desc>Add Description Here</desc>
-  </graphic>
-  <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-    <desc>Add Description Here</desc>
-  </graphic>
-</surface>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 0094</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic0094</idno>
+                <idno type="TM">285286</idno>
+                <idno type="EDR">127507</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Lost</settlement>
+                        <repository><!--Add Repository Here--></repository>
+                        <!--No inventory number found-->
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material n="stone"
+                                              ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone
+                                    </material>
+                                    <dimensions>
+                                        <!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution"
+                                        ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    </rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line
+                                    1
+                                </locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to
+                                    2
+                                </locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace datingMethod="#julian">
+                                <placeName type="ancient"
+                                           ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae
+                                    <geo>37.98365, 13.69555</geo>
+                                </placeName>
+                                <placeName type="modern"
+                                           ref="http://www.geonames.org/6539140/termini-imerese.html">Termini Imerese
+                                </placeName>
+                            </origPlace>
+                            <origDate n="Ia" notBefore-custom="0001"
+                                      notAfter-custom="0050">Probably C1 AD, connected with colony's estab.; Wilson
+                                would
+                                make it pre-Claudius probably (1990, n.58 (p.359)
+                            </origDate>
+                        </origin>
+                        <provenance type="found"/>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Lost,</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <!--English and Italian added by default (for translations) delete where not appropriate.-->
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="la">Latin</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term n="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html"
+                    >honorific
+                    </term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from
+                    database
+                </change>
+                <change when="2017-11-16" who="#JP">Jonathan Prag added a bibl element</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+    <surface type="front">
+      <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+        height="4912px" width="7360px">
+        <desc>Add Description Here</desc>
+      </graphic>
+      <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+        <desc>Add Description Here</desc>
+      </graphic>
+    </surface>
 
-  -->
-  </facsimile>
-  <text>
-    <body>
-      <div type="edition" subtype="EDR" n="EDR127507" xml:lang="la">
-        <ab><lb n="1"/><expan><abbr>M</abbr><ex>arco</ex></expan> Cestio
-              <expan><abbr>P</abbr><ex>ubli</ex></expan><expan><abbr>f</abbr><ex>ilio</ex></expan><expan><abbr>Cla</abbr><ex>udia</ex></expan><lb
-            n="2"/>primo pilo <expan><abbr>praef</abbr><ex>ecto</ex></expan><lb n="3"/>fabrum
-              <expan><abbr>trib</abbr><ex>uno</ex></expan><expan><abbr>mil</abbr><ex>itum</ex></expan><lb
-            n="4"/>I̅I̅<choice>
-            <sic><expan><abbr>vir</abbr><ex>o</ex></expan></sic>
-            <corr>duoviro</corr>
-          </choice> ex
-              <expan><abbr>d</abbr><ex>ecreto</ex></expan><expan><abbr>d</abbr><ex>ecurionum</ex></expan>. </ab>
-        <!--This EDR text 127507 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-      </div>
-      <div type="apparatus">
-        <p><!--external apparatus criticus (if applicable)--></p>
-      </div>
-      <div type="translation">
-        <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
-      </div>
-      <div type="commentary">
-        <p><!--commented out pending revision-->
-          <!--Marco Cestio Publi filio Claudia tribu primo pilo praefecto fabrum tribuno militum IIviro ex decreto decurionum. Probably as one of the first magistrates of the colony, in the establishment of which he may well have played a direct role. A M. Cestius appears also on coinage of Henna as IIvir. Cf. CIL 10.7439 for honorifc to another Tr.Mil. (Cn. Pollienus) but without indications of public honorifc.--></p>
-      </div>
-      <div type="bibliography">
-        <listBibl>
-          <bibl type="CIL"><citedRange><ref target="http://arachne.uni-koeln.de/books/CILv10pII1883"
-                >10.7348</ref></citedRange><ptr
-              target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/></bibl>
-          <bibl type="ILMusTermini"><citedRange>12</citedRange><ptr
-              target="https://www.zotero.org/groups/382445/items/JCV85C79"/></bibl>
-          <bibl><author>Manganaro</author><date>1988</date><citedRange>42</citedRange>
-            <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/></bibl>
-          <bibl><author>Wilson</author><date>1990</date><citedRange>38-39 n.58</citedRange><ptr
-              target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/></bibl>
-        </listBibl>
-      </div>
-    </body>
-  </text>
+      -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="EDR" n="EDR127507" xml:lang="la">
+                <ab>
+                    <lb n="1"/>
+                    <expan>
+                        <abbr>M</abbr>
+                        <ex>arco</ex>
+                    </expan>
+                    Cestio
+                    <expan>
+                        <abbr>P</abbr>
+                        <ex>ubli</ex>
+                    </expan>
+                    <expan>
+                        <abbr>f</abbr>
+                        <ex>ilio</ex>
+                    </expan>
+                    <expan>
+                        <abbr>Cla</abbr>
+                        <ex>udia</ex>
+                    </expan>
+                    <lb
+                            n="2"/>primo pilo
+                    <expan>
+                        <abbr>praef</abbr>
+                        <ex>ecto</ex>
+                    </expan>
+                    <lb n="3"/>fabrum
+                    <expan>
+                        <abbr>trib</abbr>
+                        <ex>uno</ex>
+                    </expan>
+                    <expan>
+                        <abbr>mil</abbr>
+                        <ex>itum</ex>
+                    </expan>
+                    <lb
+                            n="4"/>I̅I̅
+                    <choice>
+                        <sic>
+                            <expan>
+                                <abbr>vir</abbr>
+                                <ex>o</ex>
+                            </expan>
+                        </sic>
+                        <corr>duoviro</corr>
+                    </choice>
+                    ex
+                    <expan>
+                        <abbr>d</abbr>
+                        <ex>ecreto</ex>
+                    </expan>
+                    <expan>
+                        <abbr>d</abbr>
+                        <ex>ecurionum</ex>
+                    </expan>
+                    .
+                </ab>
+                <!--This EDR text 127507 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--Marco Cestio Publi filio Claudia tribu primo pilo praefecto fabrum tribuno militum IIviro ex decreto decurionum. Probably as one of the first magistrates of the colony, in the establishment of which he may well have played a direct role. A M. Cestius appears also on coinage of Henna as IIvir. Cf. CIL 10.7439 for honorifc to another Tr.Mil. (Cn. Pollienus) but without indications of public honorifc.--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl>
+                    <bibl type="CIL">
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883"
+                            >10.7348
+                            </ref>
+                        </citedRange>
+                        <ptr
+                                target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                    </bibl>
+                    <bibl type="ILMusTermini">
+                        <citedRange>12</citedRange>
+                        <ptr
+                                target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <citedRange>42</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Wilson</author>
+                        <date>1990</date>
+                        <citedRange>38-39 n.58</citedRange>
+                        <ptr
+                                target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
 </TEI>
