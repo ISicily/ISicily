@@ -28,6 +28,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="MC" ref=" https://orcid.org/0000-0002-0210-3551">Marta Capano</name>
+                    <resp>Epidoc encoding</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -121,7 +125,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="grc">Ancient Greek</language>
@@ -156,27 +160,28 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="PHI" n="PHI140326">
+            <div type="edition" xml:lang="grc" resp="#MC">
                 <ab>
                     <lb n="1"/>
                     <unclear>Θ</unclear>ρασεῖα
-                    <certainty match="preceding-sibling::node()" locus="value"/>
-                    <lb n="2"/>
-                    <supplied reason="lost">—</supplied>Α
-                    <unclear>Ϲ</unclear>
-                    <supplied reason="lost">—</supplied>
-                    <lb n="3"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>αϲ</orig><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app loc="line 1">
+                        <note>Keibel[θ]ρασεῖα; it could be also <supplied reason="lost" evidence="parallel">ἀγο</supplied><choice><reg>ρασία</reg><orig>ρασεία</orig></choice></note></app>
+                </listApp>
+                <p></p>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#MC">
+                <p>Thraseia</p> 
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Thraseia? v. frag.--></p>
+            <div type="translation" xml:lang="it" resp="#MC">
+                <p>Traseia</p>
+            </div>
+            <div type="commentary" resp="#MC">
+                <p>The text has been interpreted by Keibel as Θρασεια, but it could also be ἀγορασεία, hypercorrected form for ἀγορασία, as attested in ISic1547 and in Wessel 1989:875.</p>
             </div>
             <div type="bibliography">
                 <listBibl>
@@ -185,6 +190,12 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0032</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    </bibl>
+                    <bibl>
+                        <author>Wessel</author>
+                        <date>1989</date>
+                        <citedRange>207, no.875</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/itemKey/9CT5ZWIK"/>
                     </bibl>
                     <bibl/>
                 </listBibl>
