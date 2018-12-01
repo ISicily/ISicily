@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3511</title>
+                <title>Epitaph for Klodia Romana</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,6 +27,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="KB" ref="http://orcid.org/0000-0002-5532-9917">Katherine Backler</name>
+                    <resp>EpiDoc editing and English translation</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -45,7 +48,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
@@ -53,11 +56,10 @@
                             interdisciplinare di Messina
                         </repository>
                         <idno type="inventory">A3568</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement>Messina</settlement>
+                            <repository>Museo regionale interdisciplinare di Messina</repository>
+                            <idno type="old">2486</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -66,35 +68,38 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
+                                <support><p>An intact marble tablet, uneven on the left and upper borders, with minor damage to the lower left corner</p>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
                                     <objectType n="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--measurements from Bitto 2001-->
+                                        <height unit="cm">21</height>
+                                        <width unit="cm">26.8</width>
+                                        <depth unit="cm">1.8-2.2</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Five lines of Greek text, observing a regular left margin, with hedera in the four corners</p>
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--measurements of Bitto 2001--><p>Somewhat irregular letters, tending to cursive (e.g. mu), and often leaning to the left; omega, sigma and epislon all lunate in form; theta a circle with an unconnected central bar; triangular letters tend to have a slightly extended top stroke.</p>
+                                <locus from="line1" to="line4">Lines 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">22-28</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line5" to="line5">Line 5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">30</height>
+                                </dimensions>
+                                <locus from="line1" to="line5">Interlineation lines 1 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">10-13</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -110,13 +115,14 @@
                             </origPlace>
                             <origDate n="IJK" notBefore-custom="0001" notAfter-custom="0300">C1-3 AD</origDate>
                         </origin>
-                        <provenance type="found">Necropolis of San Placido</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <provenance type="found">Found within a funerary building within the area designated 'recinto B' by Paolo Orsi during excavation in 1914 of the <placeName type="ancient" ref="https://pleiades.stoa.org/places/888447551">Necropolis of San Placido</placeName><geo>38.1992517, 15.5566385</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">2017.07.20 (Prag)</provenance>
+                        <provenance type="observed">Seen in the depositi in 2017 by J. Prag</provenance>
                         <acquisition>Messina, Museo regionale interdisciplinare di Messina no. A3568</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
-                            <note type="location">old inv 2486</note>
+                            <note type="location">Currently in the Museum stores (2017)</note>
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -128,7 +134,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="grc">Ancient Greek</language>
@@ -139,9 +145,11 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2018-11-30" who="#KB">Katherine Backler carried out EpiDoc editing and produced an English translation</change>
+                <change when="2018-12-01" who="#JP">Jonathan Prag further revised the file from Bitto 2001</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -163,33 +171,28 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="PHI" n="PHI313627">
+            <div type="edition" xml:lang="grc" resp="#KB">
                 <ab>
-                    <lb n="1"/>
-
-
-                    ❦
-                    <expan>
-                        <abbr>Θ</abbr>
-                        <ex>εοῖς</ex>
-                    </expan>
-                    <expan>
-                        <abbr>Δ</abbr>
-                        <ex>αίμοσιν</ex>
-                    </expan>
-                    ❦<lb n="2"/>Κλωδία<lb n="3"/>Ῥωμάνα<lb n="4"/>ἔζησε ἔ-<lb n="5"/>τη λεʹ.<lb n="6"/>❦      ❦
-                    <lb n="7"/>
+                    <lb n="1"/><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf"/><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan><space quantity="3" unit="character" precision="low"/><expan><abbr>Δ</abbr><ex>αίμοσιν</ex></expan><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf"/>
+                    <lb n="2"/>Κλωδία
+                    <lb n="3"/>Ῥωμάνα
+                    <lb n="4"/>ἔζησε ἔ
+                    <lb n="5" break="no"/>τη <num value="35">λε</num>
+                    <lb n="6"/><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf"/><space quantity="5" unit="character" precision="low"/><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>Text based upon Bitto 2001 and photograph.</note>
+                    </app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#KB">
+                <p>To the divine spirits. Klodia Romana lived 35 years.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Th D Klodia Romana ezese ete LE--></p>
+                <p><!--commented out pending revision--></p>
             </div>
             <div type="bibliography">
                 <listBibl>
