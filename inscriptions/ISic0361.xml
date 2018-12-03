@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0361</title>
+                <title>Fragmentary bilingual epitaph for Marylla</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,6 +28,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="WS" ref="https://orcid.org/0000-0003-1478-6633"> Winnie Smith</name>
+                    <resp>EpiDoc encoding</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -46,12 +50,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania
                         </repository>
                         <idno type="inventory">910</idno>
                         <!--Adding location for old id numbers if available-->
@@ -67,29 +70,28 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Two joining fragments preserving the upper left portion of the text (top left corner is intact); the right hand fragment is more poorly preserved with the surface more degraded. The rear of the stone is very rough and uneven</p>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType n="plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">17</height>
+                                        <width unit="cm">27</width>
+                                        <depth unit="cm">2.2-4.4</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Remains of two lines of Latin letters across the stone, with traces of a third line below</p>
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Thinly incised letters with terminal points/serifs to the strokes. The M tends lightly towards the cursive form, and some letters join at the foot; A in the Latin text has an upward sloping cross-bar; Greek text appears to have lunate epsilon.</p>
+                                <locus from="line1" to="line2">Lines 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">30-35</height><!--measurement of Korhonen-->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -111,13 +113,13 @@
                                 (K
                             </origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <provenance type="found">Apparently from Catania</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2016.10.14 and 2016.05.13 (Prag)</provenance>
                         <acquisition>Catania, Museo Civico di Catania no. 910</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
-                            <note type="location">sala IX.89, mag. sup.</note>
+                            <note type="location">Formerly sala IX.89, now mag. sup.</note>
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -129,7 +131,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
@@ -141,92 +143,72 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2018-11-30" who="#WS">Winnie Smith checked the EpiDoc encoding</change>
+                <change when="2018-12-02" who="#JP">Jonathan Prag revised the text on the basis of photographs and added further metadata</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+         <surface type="front">
+                <graphic n="screen" url="ISic0361_fr1_tiled.tif" height="3680px" width="5520px">
+                    <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+                </graphic>
+                <graphic n="print" url="ISic0361_fr1.jpg" height="3680px" width="5520px">
+                    <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+                </graphic>
+             <graphic n="screen" url="ISic0361_fr2_tiled.tif" height="3680px" width="5520px">
+                 <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+             </graphic>
+             <graphic n="print" url="ISic0361_fr2.jpg" height="3680px" width="5520px">
+                 <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+             </graphic>
+       </surface>
+       <surface type="rear">
+           <graphic n="screen" url="ISic0361_fr1_rev_tiled.tif" height="3680px" width="5520px">
+               <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+           </graphic>
+           <graphic n="print" url="ISic0361_rev_fr1.jpg" height="3680px" width="5520px">
+               <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+           </graphic>
+           <graphic n="screen" url="ISic0361_fr2_rev_tiled.tif" height="3680px" width="5520px">
+               <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+           </graphic>
+           <graphic n="print" url="ISic0361_fr2_rev.jpg" height="3680px" width="5520px">
+               <desc>Photo J. Prag courtesy Museo Civico di Catania</desc>
+           </graphic>
+       </surface>     
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="PHI" n="PHI140806">
+            <div type="edition" resp="#WS">
+                <div type="textpart" xml:lang="la">
                 <ab>
-                    <lb n="1"/>
-
-
-                    ∙
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>arcia</ex>
-                    </expan>
-                    ∙ Marylia <surplus>²⁷Marylia[s]</surplus>²⁷<lb n="2"/>vixit ∙ ann
-                    <supplied reason="lost">os L</supplied>
-                    <lb n="3"/>
-                    <expan>
-                        <abbr>Μ</abbr>
-                        <ex>αρκία</ex>
-                    </expan>
-                    ∙ Μαρύ<supplied reason="omitted">λλα</supplied> ∙ ἔ
-                    <unclear>ζ</unclear>
-                    <supplied reason="lost">ησεν</supplied>
-                    <lb n="4"/>           ἔτη ν.
-                    <lb n="5"/>
+                    <lb n="1"/>· <expan><abbr>M</abbr><ex cert="low">arcia</ex></expan> · Marylla
+                    <lb n="2"/>vixit · <expan><abbr>ann</abbr><ex>is</ex></expan> <num atLeast="50" atMost="59"><supplied reason="lost">L</supplied><gap reason="lost" unit="character" extent="unknown"/></num>
+                </ab>
+                </div>
+                <div type="textpart" xml:lang="grc">
+                    <ab>
+                        <lb n="3"/><supplied reason="lost" evidence="previouseditor"><expan><abbr>Μ</abbr><ex cert="low">αρκία</ex></expan> Μάρυ<choice><corr>λλα</corr><sic><gap reason="illegible" unit="character" quantity="1"/>Μ</sic></choice><unclear>α</unclear> <unclear>ἔζ</unclear></supplied><supplied reason="lost">ησεν</supplied>
+                            <lb n="4"/><supplied reason="lost" evidence="previouseditor">ἔτη</supplied> <num atLeast="50" atMost="59"><supplied reason="lost" evidence="previouseditor">ν</supplied><gap reason="lost" unit="character" quantity="1"/></num>
                 </ab>
             </div>
-            <div type="edition" subtype="PHI" n="PHI316230">
-                <ab>
-                    <lb n="1"/>
-
-
-                    ∙
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex cert="low">arcia</ex>
-                    </expan>
-                    ∙ Marylla<lb n="2"/>vixit ∙
-                    <expan>
-                        <abbr>ann</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    <supplied reason="lost">L— —</supplied>.
-                    <lb n="3"/>
-                    <expan>
-                        <abbr>Μ</abbr>
-                        <ex>αρκία?</ex>
-                    </expan>
-                    Μά
-                    <unclear>ρυ</unclear>
-                    <supplied reason="lost">λ</supplied>λα ἔζ
-                    <supplied reason="lost">ησεν</supplied>
-                    <lb n="4"/>ἔτη ν<supplied reason="lost">— — —</supplied>.
-                    <lb n="5"/>
-                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>Text revised after Mommsen and Korhonen, using new photographs</note>
+                    </app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#WS">
+                <p>Marcia Marylla lived 5- years. Markia Marulla lived 5- years.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Two joining frr. Most of the Greek half, seen by Mommsen is now lost; the only other such bilingual at Catania is IMusCat 74. Marcia marylla vixit annis L- - Markia Marylla ezesen ete n- - : M. Marylla | vixit ann(is) [L- - -] | M Maryl[la ez[esen] | ete n[- - -].--></p>
+                <p>Provenance is uncertain, but likely Catania (for another such bilingual compare IMusCat 74 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic0348">ISicily0348</ref>. The Greek text is now almost wholly lost, partially reported by Mommsen in <ref target="http://arachne.uni-koeln.de/item/buchseite/650761">CIL 10.7078</ref>. Mommsen was unable to read the name on line 3 in full, but the traces printed in CIL appear compatible with the name in line 1. The surviving traces of line 3 on the left-hand fragment are clearly compatible with Α ΕΖ (the epsilon being lunate).</p>
             </div>
             <div type="bibliography">
                 <listBibl>
@@ -238,7 +220,7 @@
                     </bibl>
                     <bibl type="CIL">
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7078</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650761">10.7078</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     </bibl>
