@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1492</title>
+                <title>Epitaph for Aisaris Sattaras</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,6 +27,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>EpiDoc editing and English translation</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -45,19 +48,17 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale
-                            interdisciplinare di Messina
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina
                         </repository>
                         <idno type="inventory">A3572</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement>Messina</settlement>
+                            <repository>Museo regionale interdisciplinare di Messina</repository>
+                            <idno type="old">6727</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -66,31 +67,34 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
+                                <support><p>A rectangular slab of marble, heavily abraded on the upper right corner, but without obscuring the text.</p>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
                                     <objectType n="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                    <dimensions><!--from Bitto 2001: 112-->
+                                        <height unit="cm">23</height>
+                                        <width unit="cm">28.5</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Five lines of Greek, centred on the stone with an attempt to maintain regular margins. Guide lines are visible. Words are separated by substnatial interpuncts, and the final line is visibly smaller.</p>Five lines
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--from Bitto 2001: 112-->
+                                <locus from="line1" to="line4">Lines 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">25</height>
+                                </dimensions>
+                                <locus from="line5" to="line5">Line 5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -108,7 +112,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina
                                 </placeName>
                             </origPlace>
-                            <origDate n="Kb" notBefore-custom="0250" notAfter-custom="0300">Later C3 AD</origDate>
+                            <origDate n="Kb" notBefore-custom="0001" notAfter-custom="0300">first to third century AD</origDate>
                         </origin>
                         <provenance type="found">via S. Marta, fondo Martines</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -128,7 +132,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="grc">Ancient Greek</language>
@@ -139,9 +143,11 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-01-18" who="#AA">Alex Antoniou Epidoc editing and English translation</change>
+                <change when="2019-01-25" who="#JP">Jonathan Prag edited the file and added metadata from Bitto 2001</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -163,34 +169,25 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="PHI" n="PHI313673">
+            <div type="edition" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>
-
-
-                      
-                    <expan>
-                        <abbr>Θ</abbr>
-                        <ex>εοῖς</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>Κ</abbr>
-                        <ex>αταχθονίοις</ex>
-                    </expan>
-                    ∙<lb n="2"/>Αἴσαρις ∙ Σατ-<lb n="3"/> τάρας ∙ ἔζη-<lb n="4"/> σεν ∙ ἔτη<lb n="5"/>∙ ν∙βʹ ∙
-                    <lb n="6"/>
+                    <lb n="1"/><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan> · <expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan> ·
+                    <lb n="2"/>Αἴσαρις · Σατ
+                    <lb n="3" break="no"/>τάρας · ἔζη
+                    <lb n="4" break="no"/>σεν · ἔτη
+                    <lb n="5"/>· <num value="52">ν · β</num> ·
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <p><listApp><app><note>Text based upon Bitto 2001 no.41 with photograph</note></app></listApp></p>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>To the underworld deities, Aisaris Sataras lived for 52 years</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--Th.K. heading. Of Aisaris Sataras, a freedman of eastern origin, of someone with a gentilicium taken from the Esarus of Calabria?, viz. Esarius, etc. - or so suggests Ferrua. Age in years given.--></p>
+                    <!--Th.K. heading. Of Aisaris Sataras, a freedman of eastern origin, of someone with a gentilicium taken from the Esarus of Calabria?, viz. Esarius, etc. - or so suggests Ferrua. Age in years given.-->
+                </p>
             </div>
             <div type="bibliography">
                 <listBibl>
