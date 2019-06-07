@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0274</title>
+                <title>Epitaph for Aulus Magullius</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,7 +27,11 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-            </titleStmt>
+                 <respStmt>
+                        <name xml:id="DM" ref="http://orcid.org/0000-0003-2267-0411">Davide Massimo</name>
+                        <resp>revised the EpiDoc encoding, added English and Italian translation</resp>
+                    </respStmt>
+               </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic0274</idno>
@@ -45,11 +48,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <settlement></settlement>
+                        <repository>Lost</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -65,10 +68,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material n="stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <material n="stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType n="unknown" ref="http://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</objectType>
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
@@ -76,14 +78,14 @@
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -104,9 +106,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina
                                 </placeName>
                             </origPlace>
-                            <origDate n="IJKL" notBefore-custom="0001" notAfter-custom="0400">Imperial (?)</origDate>
+                            <origDate n="IJK" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
-                        <provenance type="found"/>
+                        <provenance type="found">Already lost by the time of Gualtherus</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>Lost,</acquisition>
                     </history>
@@ -119,7 +121,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
@@ -130,9 +132,11 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-02-08" who="#DM">Davide Massimo revised the text, added English and Italian translation</change>
+                <change when="2019-06-07" who="#JP">Jonathan Prag made minor edits to metadata, added bibliography</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -154,107 +158,39 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="EDR" n="EDR033600" xml:lang="la">
+            <div type="edition" xml:lang="la" resp="#DM">
                 <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>A</abbr>
-                        <ex>ulo</ex>
-                    </expan>
-                    Magullio
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>A</abbr>
-                        <ex>uli</ex>
-                    </expan>
-                    <expan>
-                        <abbr>l</abbr>
-                        <ex>iberto</ex>
-                    </expan>
-                    Euhodo<lb n="3"/>Magullia Tyche<lb n="4"/>patrono et co
-                    <lb break="no" n="5"/>
-                    <choice>
-                        <sic>iugi</sic>
-                        <corr>coniugi</corr>
-                    </choice>
-                    monumen<lb break="no" n="6"/>tum fecit,
-                    <lb n="7"/>
-                    <expan>
-                        <abbr>o</abbr>
-                        <ex>ptime</ex>
-                    </expan>
-                    <expan>
-                        <abbr>d</abbr>
-                        <ex>e</ex>
-                    </expan>
-                    <expan>
-                        <abbr>s</abbr>
-                        <ex>e</ex>
-                    </expan>
-                    <expan>
-                        <abbr>m</abbr>
-                        <ex>erito</ex>
-                    </expan>
-                    .
-                </ab>
-                <!--This EDR text 033600 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
-            <div type="edition" subtype="PHI" n="PHI313694">
-                <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>A</abbr>
-                        <ex>ulo</ex>
-                    </expan>
-                    ∙ Magullio
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>A</abbr>
-                        <ex>uli</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>l</abbr>
-                        <ex>iberto</ex>
-                    </expan>
-                    ∙ Euhodo<lb n="3"/>Magullia ∙ Tyche<lb n="4"/>patrono ∙ et ∙ co-<lb n="5"/>iugi ∙ monumen-<lb
-                        n="6"/>tum ∙ fecit
-                    <lb n="7"/>
-                    <expan>
-                        <abbr>o</abbr>
-                        <ex>ptime</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>d</abbr>
-                        <ex>e</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>s</abbr>
-                        <ex>e</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>m</abbr>
-                        <ex>erito</ex>
-                    </expan>
-                    .
-                    <lb n="8"/>
+                    <lb n="1"/><expan><abbr>A</abbr><ex>ulo</ex></expan> · Magullio
+                    <lb n="2"/><expan><abbr>A</abbr><ex>uli</ex></expan> · <expan><abbr>l</abbr><ex>iberto</ex></expan> · Euhodo
+                    <lb n="3"/>Magullia · Tyche
+                    <lb n="4"/>patrono · et · co
+                    <lb n="5" break="no"/><choice><reg>niugi</reg><orig>iugi</orig></choice> · monumen    
+                    <lb n="6" break="no"/>tum · fecit
+                    <lb n="7"/><expan><abbr>o</abbr><ex>ptime</ex></expan> · <expan><abbr>d</abbr><ex>e</ex></expan> · <expan><abbr>s</abbr><ex>e</ex></expan> · <expan><abbr>m</abbr><ex>erito</ex></expan>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Bitto 2001</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#DM">
+                <p>To Aulus Magullius Euhodus, freedman of Aulus. Magullia Tyche erected this monument for her patron and spouse who has behaved excellently with her.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#DM">
+                <p>Ad Aulo Magullio Euhodus, liberto di Aulo. Magullia Tyche ha eretto questo monumento per il suo patrono e consorte che è stato meritevole verso di lei.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--A.Magullio A.l.Euhodo Magullia tyche patrono et coiugi munumentum fecit o.d.s.m.--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/310930">20</ref>
+                        </citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
+                    </bibl>
                     <bibl type="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.6985</ref>

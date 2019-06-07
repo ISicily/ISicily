@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3541</title>
+                <title>Fragment of a Latin inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,6 +27,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="DM" ref="http://orcid.org/0000-0003-2267-0411">Davide Massimo</name>
+                    <resp>revised the EpiDoc encoding, added English and Italian translation</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -45,19 +48,17 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale
-                            interdisciplinare di Messina
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina
                         </repository>
                         <idno type="inventory">A3631</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement>Messina</settlement>
+                            <repository>Museo regionale interdisciplinare di Messina</repository>
+                            <idno type="old">2731</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -67,34 +68,35 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
-                                    <objectType n="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
-                                    </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType n="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula</objectType>
+                                    <dimensions><!-- measurements of Bitto 2001 -->
+                                        <height unit="cm">26</height>
+                                        <width unit="cm">17</width>
+                                        <depth unit="cm">2</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>Remains of the right-hand end of four lines of Latin text. Line 1 may be centered, lines 2-4 do not maintain a regular margin.
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--measurements of Bitto 2001-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">40</height>
+                                </dimensions>
+                                <locus from="line2" to="line4">Lines 2-4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not measured</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -116,7 +118,7 @@
                     </history>
                     <additional>
                         <adminInfo>
-                            <note type="location">old inv 2731</note>
+                            <note type="location">In store</note>
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -128,7 +130,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
@@ -139,9 +141,11 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-02-08" who="#DM">Davide Massimo revised the text, added English and Italian translation</change>
+                <change when="2019-06-07" who="#JP">Jonathan Prag revised metadata from Bitto 2001</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -163,64 +167,31 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="EDR" n="EDR033627" xml:lang="la">
+            <div type="edition" xml:lang="la" resp="#DM"> 
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">
-                        <expan>
-                            <abbr>D</abbr>
-                            <ex>is</ex>
-                        </expan>
-                    </supplied>
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    <certainty match="preceding-sibling::node()" locus="value"/>
-                    <lb n="2"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>ria
-                    <lb n="3"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>as
-                    <lb n="4"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    <unclear>c</unclear>is
-                </ab>
-                <!--This EDR text 033627 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
-            <div type="edition" subtype="PHI" n="PHI313676">
-                <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">
-                        <expan>
-                            <abbr>D</abbr>
-                            <ex>is</ex>
-                        </expan>
-                    </supplied>
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    <certainty match="preceding-sibling::node()" locus="value"/>
-                    <lb n="2"/>
-                    <supplied reason="lost">— — —</supplied>ria
-                    <lb n="3"/>
-                    <supplied reason="lost">— — — —</supplied>as
-                    <lb n="4"/>
-                    <supplied reason="lost">— — — —</supplied>cis
-                    <lb n="5"/>
-                    <supplied reason="lost">— — — — —</supplied>
-                    <lb n="6"/>
+                    <lb n="1"/><supplied reason="lost"><expan><abbr>D</abbr><ex>is</ex></expan></supplied> <expan><abbr>M</abbr><ex>anibus</ex></expan>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>ria
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>as
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/>cis
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>Text from Bitto 2001</note>
+                    </app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#DM">
+                <p>to the shades of the underworld(?) ...
+                </p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#DM">
+                <p>agli dei Mani(?) ...
+                </p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--upper right frag, with - - -M - - -RIA - - -AS - - -CIS--></p>
+                <p>It is a reasonable assumption that this is the upper right fragment of an epitaph, but certainty is not possible</p>
             </div>
             <div type="bibliography">
                 <listBibl>

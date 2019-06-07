@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3542</title>
+                <title>Fragment of a Greek inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,7 +27,11 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-            </titleStmt>
+                <respStmt>
+                        <name xml:id="DM" ref="http://orcid.org/0000-0003-2267-0411">Davide Massimo</name>
+                        <resp>EpiDoc encoding</resp>
+                  </respStmt>
+                 </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic3542</idno>
@@ -45,19 +48,17 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale
-                            interdisciplinare di Messina
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina
                         </repository>
                         <idno type="inventory">A3632</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement>Messina</settlement>
+                            <repository>Museo regionale interdisciplinare di Messina</repository>
+                            <idno type="old">2489</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -67,35 +68,31 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble (?)
-                                    </material>
-                                    <objectType n="fragment" ref="http://www.eagle-network.eu/voc/objtyp/lod/125.html">
-                                        fragment
-                                    </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType n="fragment" ref="http://www.eagle-network.eu/voc/objtyp/lod/125.html">fragment</objectType>
+                                    <dimensions><!--measurement of Bitto 2001-->
+                                        <height unit="cm">8</height>
+                                        <width unit="cm">6</width>
+                                        <depth unit="cm">3.1</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--from Bitto 2001-->
+                                <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not measured</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -103,9 +100,10 @@
                     <history>
                         <origin>
                             <origPlace datingMethod="#julian">
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462492">Sicilia
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462538">Messana
+                                    <geo>38.19394, 15.55256</geo>
                                 </placeName>
-                                <placeName type="modern" ref="http://sws.geonames.org/2523119">Sicily
+                                <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina
                                 </placeName>
                             </origPlace>
                             <origDate n="JK" notBefore-custom="0100" notAfter-custom="0300">C2-3 AD</origDate>
@@ -116,7 +114,7 @@
                     </history>
                     <additional>
                         <adminInfo>
-                            <note type="location">old inv 2489</note>
+                            <note type="location">In stores</note>
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -128,15 +126,17 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="grc">Ancient Greek</language>
             </langUsage>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-02-08" who="#DM">Davide Massimo revised the text</change>
+                <change when="2019-06-07" who="#JP">Jonathan Prag revised the metadata from Bitto 2001</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -158,27 +158,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="PHI" n="PHI313677">
+            <div type="edition" xml:lang="grc" resp="#DM">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— — —</supplied>ΙΜΗ
-                    <lb n="2"/>
-                    <supplied reason="lost">— — —</supplied>
-                    <unclear>ΥϹ</unclear>ΓΟ
-                    <lb n="3"/>
-                    <supplied reason="lost">— — — — —</supplied>
-                    <lb n="4"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ιμη</orig>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>υσ</unclear>γο</orig>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="line"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text from Bitto 2001</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--fragment with remains of two lines Greek letters - - -IMH - - -YSGO--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl>
