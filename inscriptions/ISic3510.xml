@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3510</title>
+                <title>Epitaph for Lucius Ostrius Crescens</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,6 +28,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>EpiDoc editing and English translation</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -45,7 +49,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
@@ -53,11 +57,10 @@
                             interdisciplinare di Messina
                         </repository>
                         <idno type="inventory">A3560</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement>Messina</settlement>
+                            <repository>Museo regionale interdisciplinare di Messina</repository>
+                            <idno type="old">2501</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -66,35 +69,42 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
+                                <support><p>A slightly irregular small tablet of marble</p>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
                                     <objectType n="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--measurements from Bitto 2001-->
+                                        <height unit="cm">16</height>
+                                        <width unit="cm">20.5</width>
+                                        <depth unit="cm">3</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Four lines of Latin letters approximately centred on the stone</p>
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--measurements from Bitto 2001--><p>Thinly but deeply incised regular letters with minimal serifs and of slightly uneven size. R has a small open eye, with a long straight tail; E is fully perpendicular with equal length strokes; M is made up four equal oblique strokes reaching to top and bottom of the line.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">25</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">20-22</height>
+                                </dimensions>
+                                <locus from="line3" to="line4">Lines 3-4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">20</height>
+                                </dimensions>
+                                <locus from="line1" to="line4">Interlineation lines 1 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">9-14</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -110,13 +120,13 @@
                             </origPlace>
                             <origDate n="IJK" notBefore-custom="0001" notAfter-custom="0300">C1-3 AD</origDate>
                         </origin>
-                        <provenance type="found">Necropolis of San Placido</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <provenance type="found">Found within a funerary building within the area designated 'recinto B' by Paolo Orsi during excavation in 1914 of the <placeName type="ancient" ref="https://pleiades.stoa.org/places/888447551">Necropolis of San Placido</placeName><geo>38.1992517, 15.5566385</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">2017.07.20 (Prag)</provenance>
                         <acquisition>Messina, Museo regionale interdisciplinare di Messina no. A3560</acquisition>
                     </history>
                     <additional>
                         <adminInfo>
-                            <note type="location">old inv 2501</note>
+                            <note type="location">Currently on display</note>
                         </adminInfo>
                     </additional>
                 </msDesc>
@@ -128,7 +138,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
@@ -139,9 +149,11 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2018-11-30" who="#AA">Alex Antoniou undertook Epidoc editing of the text and English translation</change>
+                <change when="2018-12-01" who="#JP">Jonathan Prag further revised the EpiDoc after Bitto 2001</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -158,81 +170,26 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="EDR" n="EDR033612" xml:lang="la">
+            <div type="edition" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>D</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    .
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>L</abbr>
-                        <ex>ucius</ex>
-                    </expan>
-                    Ostrius Cres<lb break="no" n="3"/>cens<lb n="4"/>vixit
-                    <expan>
-                        <abbr>an</abbr>
-                        <ex>nis</ex>
-                    </expan>
-                    LXXVI.
-                </ab>
-                <!--This EDR text 033612 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
-            <div type="edition" subtype="PHI" n="PHI313626">
-                <ab>
-                    <lb n="1"/>
-
-
-                       ∙
-                    <expan>
-                        <abbr>D</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    ∙
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>L</abbr>
-                        <ex>ucius</ex>
-                    </expan>
-                    ∙ Ostrius Cres-<lb n="3"/>   cens
-                    <lb n="4"/>
-                    <expan>
-                        <abbr>vix</abbr>
-                        <ex>it</ex>
-                    </expan>
-                    <expan>
-                        <abbr>ann</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    ∙ LXXVI.
-                    <lb n="5"/>
+                    <lb n="1"/> · <expan><abbr>D</abbr><ex>is</ex></expan> · <expan><abbr>M</abbr><ex>anibus</ex></expan> ·
+                    <lb n="2"/><expan><abbr>L</abbr><ex>ucius</ex></expan> · Ostrius Cres
+                    <lb break="no" n="3"/>cens
+                    <lb n="4"/><expan><abbr>vix</abbr><ex>it</ex></expan> <expan><abbr>ann</abbr><ex>is</ex></expan> · <num value="76">LXXV<hi rend="small">I</hi></num>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text based upon Bitto 2001 Photograph</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>To the shades of the underworld. Lucius Ostrius Crescens died at 76 years of age</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--D.M. L. Ostrius Crescens vixit annis LXXVI--></p>
+                <p><!--commented out pending revision--></p>
             </div>
             <div type="bibliography">
                 <listBibl>

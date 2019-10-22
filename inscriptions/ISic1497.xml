@@ -1,10 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1497</title>
+                <title>Epitaph for Caius Terentius Symphorus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -28,6 +27,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="ME">Michael Economou</name>
+                    <resp>Epidoc encoding, translation</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -45,19 +48,17 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale
-                            interdisciplinare di Messina
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina
                         </repository>
                         <idno type="inventory">A3573</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement>Messina</settlement>
+                            <repository>Museo regionale interdisciplinare di Messina</repository>
+                            <idno type="old">2476</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -66,35 +67,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
+                                <support><p>A marble slab, with lightly convex suface, broken into three joining pieces (and restored). The upper left corner is missing. Part of a damaged moulding projects along the upper edge.</p>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
                                     <objectType n="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--measurements of Bitto 2001: 47-->
+                                        <height unit="cm">26.2</height>
+                                        <width unit="cm">29.8</width>
+                                        <depth unit="cm">1-1.7</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
-                                    </rs>
+                                <layout><p>The text is carefully aligned on the left margin, less evenly along the right, and fills the stone over 5 lines, with a large hedera at the end of the text, lower right.</p>
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--measurements from Bitto 2001: 47-->
+                                <locus from="line1" to="line5">Lines 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">33-34</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line1" to="line5">Interlineation lines 1 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">11-15</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -110,7 +109,7 @@
                             </origPlace>
                             <origDate n="JK" notBefore-custom="0100" notAfter-custom="0300">C2-3 AD</origDate>
                         </origin>
-                        <provenance type="found">Necropolis of San Placido, sep.104</provenance>
+                        <provenance type="found">Found in 1914 in exavations by Orsi in the<placeName ref="https://pleiades.stoa.org/places/888447551"> Necropolis of San Placido</placeName><geo>38.1992517, 15.5566385</geo>, sep.104</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>Messina, Museo regionale interdisciplinare di Messina no. A3573</acquisition>
                     </history>
@@ -128,7 +127,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
@@ -139,9 +138,11 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-01-18" who="#ME">Michael Economou Bottino encoded the text division and added some metadata</change>
+                <change when="2019-01-24" who="#JP">Jonathan Prag checked and revised the file with additional metadata</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -158,107 +159,32 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="EDR" n="EDR073509" xml:lang="la">
+            <div type="edition" xml:lang="la" resp="#ME">
                 <ab>
                     <lb n="1"/>
-                    <expan>
-                        <abbr>C</abbr>
-                        <ex>aio</ex>
-                    </expan>
-                    Terentio Symphoro,
+                    <supplied reason="undefined" evidence="previouseditor"><expan><abbr>C</abbr><ex>aio</ex></expan> <g type="interpunct">·</g></supplied> Terentio <g type="interpunct">·</g> Symphoro
                     <lb n="2"/>
-                    <expan>
-                        <abbr>C</abbr>
-                        <ex>ai</ex>
-                    </expan>
-                    Terenti Syntrophi
-                    <expan>
-                        <abbr>lib</abbr>
-                        <ex>erto</ex>
-                    </expan>
-                    ,<lb n="3"/>medico
-                    <expan>
-                        <abbr>chir</abbr>
-                        <ex>urgo</ex>
-                    </expan>
-                    <expan>
-                        <abbr>coh</abbr>
-                        <ex>ortis</ex>
-                    </expan>
-                    IIII
+                    <expan><abbr>C</abbr><ex>ai</ex></expan> <g type="interpunct">·</g> Terenti <g type="interpunct">·</g> Syntro<hi rend="ligature">phi</hi> <g type="interpunct">·</g> <expan><abbr>lib</abbr><ex>erto</ex></expan>
+                    <lb n="3"/>
+                    medico <expan><abbr>chir</abbr><ex>urgo</ex></expan> <g type="interpunct">·</g> <expan><abbr>coh</abbr><ex>ortis</ex></expan> <g type="interpunct">·</g> <hi rend="supraline">IIII</hi>
                     <lb n="4"/>
-                    <expan>
-                        <abbr>praet</abbr>
-                        <ex>oriae</ex>
-                    </expan>
-                    <expan>
-                        <abbr>ann</abbr>
-                        <ex>orum</ex>
-                    </expan>
-                    XXIIX. Huius<lb n="5"/>cura egit Atticus.
-                </ab>
-                <!--This EDR text 073509 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
-            <div type="edition" subtype="PHI" n="PHI313639">
-                <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>C</abbr>
-                        <ex>aio</ex>
-                    </expan>
-                    ∙ Terentio ∙ Symphoro<lb n="2"/> 
-                    <expan>
-                        <abbr>C</abbr>
-                        <ex>ai</ex>
-                    </expan>
-                    ∙ Terenti ∙ Syntrophi ∙
-                    <expan>
-                        <abbr>lib</abbr>
-                        <ex>erto</ex>
-                    </expan>
-                    <lb n="3"/>  medico
-                    <expan>
-                        <abbr>chir</abbr>
-                        <ex>urgo</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>coh</abbr>
-                        <ex>ortis</ex>
-                    </expan>
-                    ∙ IIII<lb n="4"/> 
-                    <expan>
-                        <abbr>praet</abbr>
-                        <ex>oriae</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>ann</abbr>
-                        <ex>orum</ex>
-                    </expan>
-                    ∙ XXIIX <surplus>²⁶XXVIII</surplus>²⁶ ∙ huius<lb n="5"/> 
-                    <expan>
-                        <abbr>cura</abbr>
-                        <ex>m</ex>
-                    </expan>
-                    ∙ egit ∙ Atticus ∙ ❦
-                    <lb n="6"/>
+                    <expan><abbr>praet</abbr><ex>oriae</ex></expan> <g type="interpunct">·</g> <expan><abbr>ann</abbr><ex>orum</ex></expan> <g type="interpunct">·</g> <hi rend="supraline"><num value="28">XXIIX</num></hi> <g type="interpunct">·</g> huius
+                    <lb n="5"/>
+                    <expan> <abbr>cura</abbr><ex>m</ex></expan> <g type="interpunct">·</g> egit <g type="interpunct">·</g> Atticus <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text after Bitto 2001</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#ME">
+                <p>To Caius Terentius Symphorus, freedman of Caius Terentius Syntrophus, surgeon of the 4th Praetorian Cohort, died aged 28 (or 'surgeon for 28 years'). Atticus took care of this.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--To Caius Terentius Symphorus, son of man of the same name, medicus chirurgus, i.e. doctor, of praetorian cohort. Difficulty over exactly who erected it and the last line. There's a Greek epitaph on the back, which I've recorded as Ferrua n.13b (=Inscr.Mess., vol.1, no.12, p.47). C(aio) Terentio Symphoro | C(aii) Terenti Syntrophi lib(erto) | medico chir(urgo) coh(ortis) IIII | praet(oriae) ann(orum) XXIIX. Huius | cura(m) egit Atticus--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl>
