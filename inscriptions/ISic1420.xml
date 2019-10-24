@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1420</title>
+                <title>Funerary inscription of Krateas</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -45,12 +45,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi
                         </repository>
                         <idno type="inventory">43049</idno>
                         <!--Adding location for old id numbers if available-->
@@ -67,32 +66,32 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material n="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
-                                        limestone
+                                    <material n="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone
                                     </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType n="tabula" ref="https://www.eagle-network.eu/voc/objtyp/lod/257.html">slab</objectType>
+                                    <dimensions>
+                                        <height unit="cm">47</height>
+                                        <width unit="cm">126</width>
+                                        <depth unit="cm">14</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>Text runs right to left across the upper part of the front face, continuing for a couple of letters left to right on a second line below
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not measured</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -105,8 +104,7 @@
                                 </placeName>
                                 <offset>near
                                     <placeName type="modern"
-                                               ref="http://sws.geonames.org/2525010">Chiaramonte
-                                        Gulfi
+                                               ref="http://sws.geonames.org/2525010">Chiaramonte Gulfi
                                     </placeName>
                                 </offset>
                             </origPlace>
@@ -130,7 +128,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="grc">Ancient Greek</language>
@@ -141,38 +139,36 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-10-24" who="#JP">Jonathan Prag revised the EpiDoc, added bibl and an image</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic1420_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic1420.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1" style="text-direction:r-to-l"/>Κρατέα εἰμὶ <unclear>σ</unclear>ᾶμα <unclear>τ</unclear>οῦ Εὐ<unclear>π</unclear>ύλ 
+                    <lb n="2" break="no" style="text-direction:l-to-r"/>ου
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Arena 1998</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>I am the tombstone of Krateas, son of Eupylos</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
@@ -181,7 +177,7 @@
             <div type="bibliography">
                 <listBibl>
                     <bibl type="SEG">
-                        <citedRange>46.1260.1<!--Failed to convert--></citedRange>
+                        <citedRange>46.1260.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
                     <bibl type="BE">
@@ -209,6 +205,12 @@
                         <date>1929</date>
                         <citedRange>123</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/AHZ3TB5P"/>
+                    </bibl>
+                    <bibl>
+                        <author>Schmoll</author>
+                        <date>1958</date>
+                        <citedRange>no.22</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/JQNCGI8C"/>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
