@@ -33,7 +33,7 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic1632</idno>
                 <idno type="TM">645083</idno>
-                <idno type="EDR"/>
+                <idno type="EDR">108400</idno>
                 <idno type="EDH"/>
                 <idno type="EDCS"/>
                 <idno type="PHI"/>
@@ -45,11 +45,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Salemi</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository></repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -65,10 +65,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material n="mosaic" ref="http://www.eagle-network.eu/voc/material/lod/134.html">
-                                        mosaic
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <material n="mosaic" ref="http://www.eagle-network.eu/voc/material/lod/134.html">mosaic</material>
+                                    <objectType n="mosaic" ref="http://www.eagle-network.eu/voc/objtyp/lod/184">mosaic</objectType>
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
@@ -76,21 +75,20 @@
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
-                                    </rs>
+                                <layout>
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/16">tessillis</rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -98,16 +96,14 @@
                     <history>
                         <origin>
                             <origPlace datingMethod="#julian">
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462227" cert="low">
-                                    Halicyae (?)
-                                    <geo>37.82199, 12.80506</geo>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462227" cert="low">Halicyae<geo>37.82199, 12.80506</geo>
                                 </placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523557">Salemi
                                 </placeName>
                             </origPlace>
                             <origDate n="M" notBefore-custom="0400" notAfter-custom="0500">C5 AD (so Pace)</origDate>
                         </origin>
-                        <provenance type="found">Basilica</provenance>
+                        <provenance type="found">Central panel of mosaic/basilica B, in the paleo-Christian basilica first excavated by Salinas in 1893<geo>37.833019, 12.808066</geo></provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>,</acquisition>
                     </history>
@@ -120,7 +116,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="grc">Ancient Greek</language>
@@ -131,9 +127,10 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-12-05" who="#JP">Jonathan Prag revised the file from publications</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -155,11 +152,16 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/>Κοβουλδέους κ<supplied reason="omitted">ὲ</supplied> Μα
+                    <lb n="2" break="no"/><supplied reason="lost">ξ</supplied>ίμα <unclear>ε</unclear>ὐχὴν <supplied reason="lost">ἐ</supplied>πλή
+                    <lb n="3" break="no"/><supplied reason="lost">ρ</supplied>ωσαν ὑπὲ<unclear>ρ</unclear> <supplied reason="lost">σ</supplied>ω
+                    <lb n="4" break="no"/><supplied reason="lost">τ</supplied>ηρία<supplied reason="lost">ς</supplied> αὐ<unclear>τ</unclear>ῶν κὲ <expan><abbr><supplied reason="lost">τ</supplied>έκν</abbr><ex>ων</ex></expan>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Bilotta via SEG 36.828</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -186,6 +188,17 @@
                         <author>Bilotta</author>
                         <date>1977</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/BE9Q4HHE"/>
+                    </bibl>
+                    <bibl type="SEG">
+                        <citedRange>36.0828</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="NSA">
+                        <author>Salinas</author>
+                        <title>NSA</title>
+                        <date>1893</date>
+                        <citedRange>339-342</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
                 </listBibl>
             </div>
