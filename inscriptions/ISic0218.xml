@@ -45,11 +45,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository>Lost</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -64,33 +64,32 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material n="stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Fazellus lists this as one of a number of ancient marble tablets to be found in private houses in Termini</p>
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType n="tabula" ref="http://www.http://www.eagle-network.eu/voc/objtyp/lod/257">tablet</objectType>
+                                    <dimensions>
+                                        <height unit="cm">unknown</height>
+                                        <width unit="cm">unknown</width>
+                                        <depth unit="cm">unknown</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>Three lines of Latin letters, if Fazellus' layout is reliable
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>No information is preserved</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">unknown</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">unknown</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -98,19 +97,17 @@
                     <history>
                         <origin>
                             <origPlace datingMethod="#julian">
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513" cert="low">
-                                    Thermae Himeraeae
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae
                                     <geo>37.98365, 13.69555</geo>
                                 </placeName>
-                                <placeName type="modern" ref="http://sws.geonames.org/6539140">
-                                    Termini Imerese
+                                <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese
                                 </placeName>
                             </origPlace>
-                            <origDate n="IJK" notBefore-custom="0001" notAfter-custom="0300">Imperial (?)</origDate>
+                            <origDate n="IJK" notBefore-custom="0001" notAfter-custom="0300">Presumably of imperial date, C1-3 AD</origDate>
                         </origin>
-                        <provenance type="found"/>
+                        <provenance type="found">The text is reported in Fazellus' De Rebus Siculis (1558) as being in a private house in Termini ('In domo Garfofali'). It was already either unfindable or illegible ('litera abolita') by the time of Gualtherus (1624)</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Lost,</acquisition>
+                        <acquisition>Lost</acquisition>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -121,7 +118,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
@@ -132,9 +129,10 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-02-12" who="#JP">Jonathan Prag edited the file on the basis of prior publications</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -156,33 +154,51 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="EDR" n="EDR127464" xml:lang="la">
+            <div type="edition" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    Sempronio
-                    <lb n="2"/>
-                    <g type="mulieris">mulieris</g>
-                    <expan>
-                        <abbr>l</abbr>
-                        <ex>iberto</ex>
-                    </expan>
-                    Primioni<lb n="3"/>annorum XIIII.
-                    <lb n="4"/>
-                </ab>
-                <!--This EDR text 127464 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
+                    <lb n="1"/><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#mulieris"/> · Sempronio
+                    <lb n="2"/>7 · L · Primioni ·
+                    <lb n="3"/>annorum · XIIII ·
+                  </ab>
+              </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Fazellus 1558</note></app>
+                    <app loc="Line 1"><note>Mommsen: [---]Sempronio</note></app>
+                    <app loc="Line 2"><note>Mommsen: ((mulieris)) L Primioni</note></app>
+                <app loc="Line 3"><note>Gualtherus 1624, Torremuzza 1769, 1784 (ex Gualt.): XVIII</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Sempronio (mulieris) l. Primioni annorum XIIII - freedman of a lady - gens Sempronia known in w. Sic.--></p>
+                <p>Interpretation of this text (lost) remains extremely problematic. Fazellus is the only authority who may have seen this (it is implied in his account, but not explicit); all subsequent authorities did not. Consequently, subsequent versions of the text posterior to the 1558 edition of Fazellus all appear to be attempts to intepret the text reported in Fazellus. This contains a reversed C prior to Sempronio in line 1; a symbol in the form of the arabic numeral 7 at the beginning of line 2. Other inscriptions from Termini employ a reversed C in a role other than that of the abbreviation for (freedperson of) a woman; however in each case the symbol stands directly before a numeral, and so has reasonably been interpreted to signify 'circiter'; that context does not apply here. Fazellus can be shown, in another surviving text (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic0146">ISic0146</ref>) to have reported such a reversed C correctly, so the transcription here need not be doubted. There is, in turn, no obvious parallel in Fazellus for the use of the symbol '7' (in another text, also lost - <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic0119">ISic0119</ref> -  a symbol comparable to a '6' is however apparently employed to signify a hedera). What is not clear is how Mommsen arrived at the text which he presents in CIL, in which the reversed C is arbitrarily transposed to the beginning of line 2 and/or substituted for the '7'. It is also noteworthy that in subsequent editions the numeral is variously presented as XIV and in Gualtherus as XVIII (the latter surely an error of transcription from his source). There is also no material basis for the rectangular form within which Gualtherus places the text.</p>
             </div>
             <div type="bibliography">
                 <listBibl>
+                    <bibl>
+                        <author>Fazellus</author>
+                        <date>1558</date>
+                        <citedRange>Decade 1, Liber 9, p.194</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/UKMEHMF4"/>
+                    </bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310971">no.292</ref></citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1769</date>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/501422">p.130, cl.10, no.48</ref></citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1784</date>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/501841">p.138, cl.10, no.55</ref></citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                    </bibl>
                     <bibl type="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7437</ref>
