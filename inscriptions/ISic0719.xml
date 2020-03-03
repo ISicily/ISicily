@@ -45,12 +45,12 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
+                        <repository ref="http://sicily.classics.ox.ac.uk/museum/17">Teatro Romano di Catania</repository>
+                        <idno type="inventory">5937</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -65,32 +65,32 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType n="balustrade" ref="https://www.eagle-network.eu/voc/objtyp/lod/1851.html">balustrade</objectType>
+                                    <dimensions>
+                                        <height unit="cm">20.5</height>
+                                        <width unit="cm">32.8</width>
+                                        <depth unit="cm">5.4-6.0</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">78</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not available</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -104,9 +104,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania
                                 </placeName>
                             </origPlace>
-                            <origDate n="IJKL" notBefore-custom="0001" notAfter-custom="0400">Imperial (?)</origDate>
+                            <origDate n="JK" notBefore-custom="0100" notAfter-custom="0300" evidence="lettering">C2-3 AD</origDate>
                         </origin>
-                        <provenance type="found">Theatre</provenance>
+                        <provenance type="found">Assumed to come from the theatre (in store in a box labelled 'marmi provenienti dall'Antiquarium')</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2014.09.25</provenance>
                         <acquisition>,</acquisition>
                     </history>
@@ -119,60 +119,62 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term n="seat inscription" ref="http://www.eagle-network.eu/voc/typeins/lod/111.html">seat
-                        inscription
-                    </term>
+                    <term n="unknown" ref="https://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-03-03" who="#JP">Jonathan Prag made preliminary edits and added images following autopsy</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+          <surface type="front">
+                    <graphic n="screen" url="ISic0719_tiled.tif" height="4912px" width="7360px">
+                        <desc>Photo J.Prag, with permission of Soprintendenza di Catania</desc>
+                    </graphic>
+              <graphic n="print" url="ISic0719.jpg" height="4912px" width="7360px">
+                        <desc>Photo J.Prag, with permission of Soprintendenza di Catania</desc>
+                     </graphic>
+                 </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic0719_rear_tiled.tif" height="4912px" width="7360px">
+                <desc>Photo J.Prag, with permission of Soprintendenza di Catania</desc>
+            </graphic>
+            <graphic n="print" url="ISic0719_rear.jpg" height="4912px" width="7360px">
+                <desc>Photo J.Prag, with permission of Soprintendenza di Catania</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:lang="la" resp="#JP">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">C</supplied><unclear>a</unclear>ecilianu<supplied reason="lost">s</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <p>Text based upon autopsy by J. Prag and M. Metcalfe</p>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Caecilianus or Maecilianus - 'forse fronte di un sedile'--></p>
+                <p>Manganaro suggested that this was perhaps from a seat in the theatre</p>
             </div>
             <div type="bibliography">
                 <listBibl>
                     <bibl type="AE">
-                        <citedRange>1989.0341p<!--Failed to convert--></citedRange>
+                        <citedRange>1989.0341p</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     </bibl>
                     <bibl>
