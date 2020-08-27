@@ -45,13 +45,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">100</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -67,20 +65,18 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material n="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
-                                        limestone
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <material n="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType n="plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--from ILTermini-->
+                                        <height unit="cm">22</height>
+                                        <width unit="cm">29</width>
+                                        <depth unit="cm">11.5</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
-                                    </rs>
+                                <layout>
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -100,16 +96,12 @@
                     <history>
                         <origin>
                             <origPlace datingMethod="#julian">
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae
-                                    <geo>37.98365, 13.69555</geo>
-                                </placeName>
-                                <placeName type="modern" ref="http://sws.geonames.org/6539140">
-                                    Termini Imerese
-                                </placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae<geo>37.98365, 13.69555</geo></placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                             </origPlace>
-                            <origDate n="IJK" notBefore-custom="0001" notAfter-custom="0300">Imperial (?)</origDate>
+                            <origDate n="IJK" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
-                        <provenance type="found"/>
+                        <provenance type="found">Found outside the city gates of Termini Imerese (together with ISic1143) in 1824</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>Termini Imerese, Museo Civico Baldassare Romano no. 100</acquisition>
                     </history>
@@ -122,7 +114,7 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="la">Latin</language>
@@ -133,9 +125,10 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-08-27" who="#JP">Jonathan Prag made draft revisions based on ILTermini</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -157,35 +150,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="EDR" n="EDR127472" xml:lang="la">
+            <div type="edition" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>arcus</ex>
-                    </expan>
-                    Hortes
-                    <supplied reason="lost">ius</supplied>
-                    <lb n="2"/>Prímus
-                    <lb n="3"/>
-                    <expan>
-                        <abbr>vix</abbr>
-                        <ex>it</ex>
-                    </expan>
-                    <expan>
-                        <abbr>an</abbr>
-                        <ex>nis</ex>
-                    </expan>
-                    <supplied reason="lost">V</supplied>
-                    <lb n="4"/>
+                    <lb n="1"/><expan><abbr>M</abbr><ex>arcus</ex></expan> Hortes<supplied reason="lost">ius</supplied>
+                    <lb n="2"/>Pr<hi rend="tall">i</hi>mus
+                    <lb n="3"/><expan><abbr>vix</abbr><ex>it</ex></expan> <expan><abbr>an</abbr><ex>nis</ex></expan> <supplied reason="lost" evidence="previouseditor">V</supplied>
                 </ab>
-                <!--This EDR text 127472 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text after ILTermini</note></app>
+                    <app loc="line 3"><note>Mommsen was able to read part of the final V</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Marcus Hortesius Primus, lived for 5 years</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
@@ -193,6 +172,12 @@
             </div>
             <div type="bibliography">
                 <listBibl>
+                    <bibl>
+                        <author>Crispi</author>
+                        <date>1824</date>
+                        <citedRange>82 no.2</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/43IBXI4E"/>
+                    </bibl>
                     <bibl type="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7412</ref>
