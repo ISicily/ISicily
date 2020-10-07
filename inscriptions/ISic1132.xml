@@ -28,11 +28,11 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	</titleStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>encoding text division</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic1132</idno>
@@ -49,7 +49,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
@@ -71,22 +71,22 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
+                                    <material n="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
                                         marble
                                     </material>
-                                    <objectType key="altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar
+                                    <objectType n="altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar
                                         or base
                                     </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">30.5</height>
+                                        <width unit="cm">63.5</width>
+                                        <depth unit="cm">48</depth>
                                     </dimensions>
                                 </support>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                <layout>
+                                    <rs type="engraved" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
                                     </rs>
                                 </layout>
                             </layoutDesc>
@@ -106,7 +106,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace datingMethod="#julian">
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae
                                     <geo>37.98365, 13.69555</geo>
                                 </placeName>
@@ -114,7 +114,7 @@
                                     Termini Imerese
                                 </placeName>
                             </origPlace>
-                            <origDate datingMethod="#julian" n="Fa" notBefore-custom="-0300" notAfter-custom="-0250">First quarter C3 BC
+                            <origDate n="Fa" notBefore-custom="-0300" notAfter-custom="-0250">First quarter C3 BC
                             </origDate>
                         </origin>
                         <provenance type="found"/>
@@ -130,21 +130,21 @@
                     <p>Julian Calendar</p>
                 </calendar>
             </calendarDesc>
-            <langUsage><!--English and Italian added by default (for translations) delete where not appropriate.-->
+            <langUsage>
                 <language ident="en">English</language>
                 <language ident="it">Italian</language>
                 <language ident="grc">Ancient Greek</language>
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                    <term n="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JC">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-05" who="#MV">Valentina Mignosa encoded text division</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -166,32 +166,31 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140617">
+            <div type="edition" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— — — — — — — — —</supplied>
-                    <lb n="2"/>Δωρόθεος Λυσ
-                    <supplied reason="lost">— — —</supplied>
-                    <lb n="3"/>Ἄνταλλος Νύμφ
-                    <supplied reason="lost">ωνος</supplied>
-                    <lb n="4"/> ἀγορανομήσαν
-                    <supplied reason="lost">τες</supplied>
-                    <lb n="5"/>Ἀφροδίται.<lb n="6"/>
-                    <del rend="erasure">ἐκ τοῦ δήμου</del>
-                    <lb n="7"/>
-                    <unclear>γρ</unclear>αμματεὺς<lb n="8"/>Ἀπο<unclear>λ</unclear>λόδωρος Φαλάκρου.
-                    <lb n="9"/>
+                    <lb n="1"/>Δωρόθεος Λυσ<gap reason="lost" unit="character" extent="unknown"/>
+                    <lb n="2"/>Ἄνταλλος Νύμφ<supplied reason="lost">ωνος</supplied>
+                    <lb n="3"/>ἀγορανομήσαν<supplied reason="lost">τες</supplied>
+                    <lb n="4"/>Ἀφροδίται
+                    <lb n="5"/><del rend="erasure">ἐκ τοῦ δήμου</del>
+                    <lb n="6"/><unclear>γρ</unclear>αμματεὺς 
+                    <lb n="7"/>Ἀπο<unclear>λ</unclear>λόδωρος Φαλάκρου
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                    <listApp>
+                        <app><note>Text of IGTermini</note></app>
+                    </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p>Dorotheos Lys [— — —] Antallos son of Nymphon who were agoranomoi to Aphrodite.
+                   [[by the people]] secretary (was) Apollodoros, son of Phalakros.
+                </p>  
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--Dorotheos and Antallos (son of Nymphon) agoranomoi, Apollodoros, son of Phalakros, the grammateus; on the names, see Brugnone. Compare such fasti lists dedicated to Aphrodite from Akrai, IG 14.208ff--></p>
+                    <!--Dorotheos and Antallos (son of Nymphon) agoranomoi, Apollodoros, son of Phalakros, the grammateus; on the names, see Brugnone. Compare such fasti lists dedicated to Aphrodite from Akrai, IG 14.208ff-->
+                </p>
             </div>
             <div type="bibliography">
                 <listBibl>
