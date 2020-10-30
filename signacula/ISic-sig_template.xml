@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal> <!-- Ilenia's name goes in both editor and principal? -->
+                <funder>John Fell OUP Research Fund</funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="IG">Ilenia Gradante</name>
+                    <resp></resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority> <!-- I.Sicily-sig or something? -->
+                <idno type="filename"></idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI"/>
+                <idno type="DOI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country/>
+                        <region/>
+                        <settlement/>
+                        <institution></institution>
+                        <repository></repository>
+                        <collection></collection>
+                        <idno></idno>
+                        <altIdentifier xml:lang="en">
+                            <repository/>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="xx"></textLang>
+                        <msItem>
+                            <author>
+                                <roleName role="issuer" type="civil"> <!-- modify values for @role and @type as appropriate -->
+                                    <!--this applies to coins and seals, and possibly some stamps; to align potentially with nomisma?-->
+                                </roleName>
+                                <orgName role="mint"><!-- possible model for capturing mints --></orgName>
+                            </author>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p></p>
+                                    <objectType/><material/>
+                                    <dimensions unit="mm">
+                                        <height></height>
+                                        <width></width>
+                                        <depth></depth>
+                                        <dim type="diameter"></dim>
+                                    </dimensions>
+                                    <!-- assuming all these are nomisma supported / alignable terms, this, and other variants, makes sense here-->
+                                    <!-- Ilenia to delete or add as needed -->
+                                    <measure type="weight" unit="gr"/>
+                                    <measure type="axis" unit="clock"/>
+                                    <measure type="overstrikeOrient" unit="clock"/>
+                                    <measure type="channelOrient" unit="clock"/>
+                                    <measure type="countermark" unit="clock"/>
+                                </support>
+                                <condition rend="broken"><!-- decide on a controlled vocabulary of terms -->
+                                    <p></p>
+                                </condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs type="layout"></rs> <!-- keep this also for brick stamps -->
+                                    <rs type="execution"></rs>
+                                    <rs type="shape"></rs>
+                                    <rs type="matrix" subtype="xxxx" ref="URI">
+                                        <idno/>
+                                    </rs>                                     
+                                    <rs type="imprint"><!-- what do we call this - imprint, sealing, thingy? -->
+                                        <idno/>
+                                    </rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote></handNote>
+                        </handDesc>
+                        <decoDesc>
+                            <decoNote>
+                                <figure>
+                                    <figDesc/> <!-- some classification of figures needed -->
+                                </figure>
+                            </decoNote>
+                        </decoDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/xxxxx"> <geo></geo></placeName>
+                                <offset><!-- optional -->
+                                    <placeName type="modern" ref="http://sws.geonames.org/xxxxx"></placeName>
+                                </offset>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0000" notAfter-custom="-0000" evidence="xxxxx"></origDate>
+                        </origin>
+                        <provenance type="found"></provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#IG"></provenance>
+                        <acquisition></acquisition>
+                    </history>
+                    <msPart type="handle">  <!-- can put a reference pointing to the text division for this text -->
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <msContents>
+                            <textLang xml:lang="xx"><!-- if different from the language of the main object --></textLang>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <dimensions unit="mm">
+                                            <dim type="diameter"></dim>
+                                        </dimensions>
+                                        <rs type="matrix">
+                                            <idno/>
+                                        </rs>
+                                        <rs type="layout"></rs>
+                                        <p/>
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote></handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <decoNote>
+                                    <figure>
+                                        <figDesc/>
+                                    </figure>
+                                </decoNote>
+                            </decoDesc>
+                        </physDesc>
+                    </msPart>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term key="building" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html">building</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change when="2020" who="#xx"></change>
+        </revisionDesc>
+      </teiHeader>
+      <facsimile>
+              <surface> <!-- we can put @type with main or handle, to be decided -->
+                  <desc></desc>
+                  <graphic url="" scale="1.5">
+                      <desc xml:lang="en">Digital reproduction ....</desc>
+                  </graphic>
+              </surface>
+              <surface>
+                  <desc></desc>
+                  <graphic url="" scale="1.5">
+                      <desc xml:lang="en">Digital reproduction ....</desc>
+                  </graphic>
+              </surface>
+      </facsimile>
+      <text>
+          <body>
+              <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
+                  <div type="textpart" subtype="label" n="obv" rend="linear"><!-- divs to be decided by Ilenia - what subtypes, rends etc. -->
+                      <ab></ab><!-- add @style with direction of writing, either on lb or on higher-level elements, as needed -->
+                  </div>
+                  <div type="textpart" subtype="face" n="obv" rend="linear">
+                      <ab>Greek or Latin... text here</ab>
+                  </div>
+                  <div type="textpart" subtype="label" n="rev" rend="linear">
+                      <ab>Greek or Latin... text here</ab>
+                  </div>
+                  <div type="textpart" subtype="face" n="rev" rend="linear">
+                      <ab></ab>
+                  </div>
+              </div>
+              <div type="apparatus">
+                  <listApp>
+                      <app xml:lang="xx"></app>
+                  </listApp>
+              </div>
+              <div type="translation">
+                  <p xml:lang="xx">[Modern language text here]</p>
+              </div>
+              <div type="commentary">
+                   <p xml:lang="xx"></p>
+              </div>
+              <div type="bibliography">
+                  <listBibl> <!-- bibliography taken from Zotero -->
+                      <bibl></bibl>
+                  </listBibl>
+              </div>
+          </body>
+      </text>
+</TEI>             
