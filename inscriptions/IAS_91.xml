@@ -59,7 +59,7 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="xly">Elymian<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Greek</desc></certainty></textLang>
+                        <textLang mainLang="grc">Greek<certainty locus="value" match="../@mainLang" assertedValue="xly"><desc>Elymian</desc></certainty></textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -67,25 +67,25 @@
                                 <support>
                                     <material key="ceramic" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
                                     <objectType n="1" key="vessel" ref="https://www.eagle-network.eu/voc/objtyp/lod/305.html">vase</objectType>
-                                    <objectType n="2" key="kylix" ref="http://kerameikos.org/id/kylix">kylix</objectType>
+                                    <objectType n="2" key="kylix" cert="low" ref="http://kerameikos.org/id/kylix">kylix</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition>Broken; two fragments (of base?).</condition>
+                                <condition>Broken; fragment of foot.</condition>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs type="graffito" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
-                                    <p>The text consists of two inscriptions, arranged on two different parts of the same object. The first (a) is on the underside of the foot: it consists of five letters arranged in one line and a fifth letter not aligned with the others. The second (b) is on the bottom of the interior of the cup and consists of three letters not aligned with each other.</p>
+                                    <p>The text is placed on the underside of the foot.</p>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <!--  Based on Poinikastas table: fragm.a) epsilon19(?); lambda08 or upsilon03 or Elymian symbol (see nos.83-84 Agostiniani 1977); pi02(?); fragm.b) alpha09; delta05.-->
+                                <!--  Based on Poinikastas table: delta05; iota01; chi02.-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -138,7 +138,7 @@
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2020-11-27" who="#VM">Valentina Mignosa added metadata, text</change>
+                <change when="2020-12-04" who="#VM">Valentina Mignosa added metadata, text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -160,21 +160,10 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve">
-                <div type="textpart" subtype="fragment" n="a" xml:lang="xly-Grek"> 
+            <div type="edition" xml:space="preserve" xml:lang="xly-Grek"> 
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ΠΛΛΛΛ<gap reason="lost" extent="unknown" unit="character"/>
-                        <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><unclear>Ε</unclear><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1"/><num cert="low" value="1">Ι</num> ΔΧΙ <num cert="low" value="11">ΔΙ</num>
                     </ab>
-               </div>
-            
-               <div type="textpart" subtype="fragment" n="b" xml:lang="xly-Grek"> 
-                   <ab>
-                       <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>Δ
-                       <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>Α
-                       <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>
-                   </ab>
-               </div>
             </div>
             <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="xly-Latn">
                 <ab></ab>
@@ -183,6 +172,12 @@
                 <listApp>
                     <app>
                         <note>Text after Agostiniani 1977 (IAS I)</note>
+                    </app>
+                    <app loc="1">
+                        <note>]l dχi, Alessio 1970, who suggests Tite]los Decius.</note>
+                    </app>
+                    <app loc="1">
+                        <note>[δλ]ι δλι δλ̣[ι], Lejeune 1970</note>
                     </app>
                 </listApp>
             </div>
@@ -193,31 +188,48 @@
                 <p><!--No translation currently agreed--></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>The text appears to consist of a part (fragm.b), presumably previously scratched, in Greek and a part (fragm.a), later graffitied, in Elymian language. The Greek text can be interpreted as an Attic abbreviation, while the text in Elymian could consist of numerals pertaining to the culture of Segesta.</p>
+                <p><!-- Agostiniani suggests to compare the sequence ΔΧΙ with similar groups of letters on Attic ceramics, see Graef, Langlotz p. 127, no. 1517 N 401 and N 402.  --></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IAS1">
                         <author>Agostiniani</author>
                         <date>1977</date>
-                        <citedRange>87</citedRange>
+                        <citedRange>91</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/QR2S9AJ9"/>
                     </bibl>
                     <bibl>
-                        <author>Ambrosini</author>
+                        <author>Alessio</author>
                         <date>1970</date>
-                        <citedRange>471</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/CMVPRJZD"/>
+                        <citedRange>58-60</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/5X3JK8SE"/>
+                    </bibl>
+                    <bibl>
+                        <author>Lejeune</author>
+                        <date>1970</date>
+                        <citedRange>147</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/2H7NP37F"/>
+                    </bibl>
+                    <bibl>
+                        <author>Schmoll</author>
+                        <date>1961</date>
+                        <citedRange>69</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/EBTAVEAP"/>
                     </bibl>
                     <bibl>
                         <author>Tusa</author>
-                        <date>1970</date>
-                        <citedRange>no.80a-b</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7UWGV2KR"/>
+                        <date>1960</date>
+                        <citedRange>no.37</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/W57IFXNR"/>
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl></bibl>
+                    <bibl>
+                        <author>Graef, Langlotz</author>
+                        <date>1933</date>
+                        <citedRange>p. 127 no.1517 N401-N402</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/MAEBB7ZT"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>
