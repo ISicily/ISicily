@@ -78,7 +78,7 @@
                                 <roleName role="issuer" type="civil"> <!-- modify values for @role and @type as appropriate -->
                                     <!--this applies to coins and seals, and possibly some stamps; to align potentially with nomisma?-->
                                     <!-- see http://nomisma.org/id/issuer "The office holder responsible for the issuance of a coin. Can be distinct from the ruler in whose name a coin is issued" -->
-                                </roleName>
+                                </roleName><!-- leave as empty element, not applicable for signacula  -->
                                 <orgName role="mint"><!-- possible model for capturing mints --></orgName>
                                 <!-- http://nomisma.org/id/mint: "Generic term for a place of manufacture of a coin or for the issuing city."-->
                             </author>
@@ -99,10 +99,6 @@
                                     <!-- assuming all these are nomisma supported / alignable terms, this, and other variants, makes sense here-->
                                     <!-- Ilenia to delete or add as needed -->
                                     <measure type="weight" unit="gr"/>
-                                    <measure type="axis" unit="clock"/>
-                                    <measure type="overstrikeOrient" unit="clock"/>
-                                    <measure type="channelOrient" unit="clock"/>
-                                    <measure type="countermark" unit="clock"/>
                                 </support>
                                 <condition rend="broken"><!-- decide on a controlled vocabulary of terms -->
                                     <p></p>
@@ -110,21 +106,28 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="layout"></rs> <!-- keep this also for brick stamps --><!-- is there a controlled vocabulary?-->
-                                    <rs type="execution"></rs><!-- EAGLE vocab?-->
-                                    <rs type="shape"></rs><!-- shape of what? (as distinct from layout or object? controlled vocabulary?-->
-                                    <rs type="matrix" subtype="xxxx" ref="URI"><!-- referencing an authority list of matrices?-->
+                                    <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
+                                    <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
+                                    <rs type="orientation"></rs>
+                                    <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
                                         <idno/>
-                                    </rs>                                     
-                                    <rs type="imprint"><!-- what do we call this - imprint, sealing, thingy? --><!-- impression? cf. http://nomisma.org/id/impression-->
-                                        <idno/>
-                                    </rs>
-                                    <!-- transfer of these two to coinage could be tricky, since a coin could serve as matrix for an impression, as indeed the nomisma id indicates / assumes; so would an individual coin be a "matrix" on this model; and in turn the mould for a signaculum would be hierarchically the equivalent of a 'die' in coinage? -->
+                                    </rs> -->                                    
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote></handNote>
+                            <handNote><!--Default value and requires editing; generalise as needed-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <dimensions type="letterDepth"></dimensions> <!-- revise? -->
+                                <dimensions type="letterRelief"></dimensions> <!-- revise? -->
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
                         </handDesc>
                         <decoDesc>
                             <decoNote>
@@ -149,7 +152,7 @@
                         <provenance type="observed" subtype="autopsied" resp="#IG"></provenance>
                         <acquisition></acquisition>
                     </history>
-                    <msPart type="handle">  <!-- can put a reference pointing to the text division for this text -->
+                    <msPart type="handle" xml:id="h1">  <!-- can put a reference pointing to the text division for this text -->
                         <msIdentifier>
                             <idno/>
                         </msIdentifier>
@@ -158,21 +161,33 @@
                         </msContents>
                         <physDesc>
                             <objectDesc>
+                                <supportDesc>
+                                    <condition></condition>
+                                </supportDesc>
                                 <layoutDesc>
                                     <layout>
-                                        <dimensions unit="mm">
-                                            <dim type="diameter"></dim>
-                                        </dimensions>
-                                        <rs type="matrix">
-                                            <idno/>
-                                        </rs>
-                                        <rs type="layout"></rs>
-                                        <p/>
+                                        <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
+                                        <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
+                                        <rs type="orientation"></rs>
+                                        <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
+                                        <idno/>
+                                    </rs> -->                                    
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote></handNote>
+                                <handNote><!--Default value and requires editing-->
+                                    <locus from="line1" to="line1">Line 1</locus>
+                                    <dimensions type="letterHeight">
+                                        <height unit="mm"/>
+                                    </dimensions>
+                                    <dimensions type="letterDepth"></dimensions> <!-- revise? -->
+                                    <dimensions type="letterRelief"></dimensions> <!-- revise? -->
+                                    <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                    <dimensions type="interlinear">
+                                        <height unit="mm"/>
+                                    </dimensions>
+                                </handNote>
                             </handDesc>
                             <decoDesc>
                                 <decoNote>
@@ -209,6 +224,9 @@
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
                     <term key="building" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html">building</term>
                 </keywords>
+                <keywords>
+                    <term>imprint</term> <!-- rather than in layout/object in <rs>; revise -->
+                </keywords>
             </textClass>
         </profileDesc>
         <revisionDesc status="draft">
@@ -218,31 +236,25 @@
       <facsimile>
               <surface> <!-- we can put @type with main or handle, to be decided -->
                   <desc></desc>
-                  <graphic url="" scale="1.5"><!--I don't think we'll have built in scale for most of these? This is speciifc to the demands of numismatists and sigilographers I think -->
-                      <desc xml:lang="en">Digital reproduction ....</desc>
+                  <graphic url="">
+                      <desc>Digital reproduction ....</desc>
                   </graphic>
               </surface>
               <surface>
                   <desc></desc>
-                  <graphic url="" scale="1.5">
-                      <desc xml:lang="en">Digital reproduction ....</desc>
+                  <graphic url="">
+                      <desc>Digital reproduction ....</desc>
                   </graphic>
               </surface>
       </facsimile>
       <text>
           <body>
               <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
-                  <div type="textpart" subtype="label" n="obv" rend="linear"><!-- divs to be decided by Ilenia - what subtypes, rends etc. -->
+                  <div type="textpart" subtype="main" rend="linear"><!-- divs to be decided by Ilenia - what subtypes, rends etc. -->
                       <ab></ab><!-- add @style with direction of writing, either on lb or on higher-level elements, as needed -->
                   </div>
-                  <div type="textpart" subtype="face" n="obv" rend="linear">
+                  <div type="textpart" subtype="lamina" rend="linear">
                       <ab>Greek or Latin... text here</ab>
-                  </div>
-                  <div type="textpart" subtype="label" n="rev" rend="linear">
-                      <ab>Greek or Latin... text here</ab>
-                  </div>
-                  <div type="textpart" subtype="face" n="rev" rend="linear">
-                      <ab></ab>
                   </div>
               </div>
               <div type="apparatus">
