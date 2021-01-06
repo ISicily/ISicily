@@ -9,7 +9,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -34,7 +34,11 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	</titleStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic3025</idno>
@@ -43,21 +47,19 @@
                 <idno type="EDH"/>
                 <idno type="EDCS"/>
                 <idno type="PHI">334103</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic3025</idno>
+                <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387995</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
                         <idno type="inventory">12346</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -72,33 +74,32 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material key="volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">
-                                        volcanic
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>rectangular block, part of a structure, perhaps an altar</p>
+                                    <material key="volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                    <objectType key="block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <dimensions><!--I.Lipara-->
+                                        <height unit="cm">20</height>
+                                        <width unit="cm">52</width>
+                                        <depth unit="cm">20</depth>
                                     </dimensions>
                                 </support>
-                            </supportDesc>
+                                <condition/>
+		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
-                                    </rs>
+                                <layout>
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--I.Lipara--><p>small omicron, 11.5 cm</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">150</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">NA</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -110,12 +111,11 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100" evidence="lettering" cert="low">Hellenistic(?)</origDate>
                         </origin>
-                        <provenance type="found"/>
+                        <provenance type="found" subtype="first-seen">Recovered in 1959 from re-use in wall of the 'magazzino Corrieri sul Castello'</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Lipari, Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea" no. 12346
-                        </acquisition>
+                        <acquisition>Lipari, Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea" no. 12346</acquisition>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -145,13 +145,15 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	</listChange>
+	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-04" who="#JP">Jonathan Prag edited text and metadata</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -172,18 +174,16 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI334103">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-
-
-                    Ἀφρο
-                    <supplied reason="lost">δίτ— —</supplied>
-                    <lb n="2"/>
+                    <lb n="1"/>Ἀφρο<supplied reason="lost">δίτ</supplied><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text of I.Lipara</note></app>
+                    <app loc="line 1"><note>Manganaro: Ἀφρο[δίτας]</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -195,7 +195,7 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
-                        <citedRange>49.1304.1<!--Failed to convert--></citedRange>
+                        <citedRange>49.1304.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
                     <bibl type="bulletin" n="SEG">

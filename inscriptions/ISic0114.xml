@@ -9,7 +9,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -38,7 +38,11 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
-	</titleStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic0114</idno>
@@ -47,6 +51,10 @@
                 <idno type="EDH"/>
                 <idno type="EDCS">22100064</idno>
                 <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic0114</idno>
+                <idno type="DOI" when="2020-12-11">10.5281/zenodo.4316591</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic0114</idno>
+                <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334184</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
                         Commons-Attribution 4.0 licence.
@@ -74,7 +82,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>A thick, pinkish limestone plaque, intact on all sides but with the face damaged on the left, upper and right edges (later re-working?), and the lower right corner</p>
                                     <material key="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType key="plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--from ILTermini-->
@@ -83,22 +91,23 @@
                                         <depth unit="cm">9</depth>
                                     </dimensions>
                                 </support>
-                            </supportDesc>
+                                <condition/>
+		    </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><p>Three lines of Latin text, approximately centred and with a vacat below</p>
                                     <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Neat thinly cut  letters mostly without substantial serifs/terminations to the strokes. Letters are somewhat irregular both in height and width. A has horizontal bar which does not fully intersect the diagonals; B has rounded eyes, not closed, and the upper is smaller; E has equal horizontal strokes; G has vertical tail stroke; O is variable in dimensions; P has rounded open head; R is lcosd, with full tail. Small triangular interpunct in line 1.</p>
+                                <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">32-40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -113,7 +122,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
                         <provenance type="found">Original details of discovery not recorded; first attested in Termini</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <provenance type="observed" subtype="autopsied">Photographed 2018-07-10</provenance>
                         <acquisition>Termini Imerese, Museo Civico Baldassare Romano no. 102</acquisition>
                     </history>
                 </msDesc>
@@ -152,25 +161,34 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	</listChange>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-10" who="#JP">Jonathan Prag edited file from publication and photograph</change>
+	    <change when="2020-12-11" who="#system">Updated Zenodo DOI</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic0114_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Museo Civico Baldassare Romano, Termini Imerese</desc>
+            </graphic>
+            <graphic n="print" url="ISic0114.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Museo Civico Baldassare Romano, Termini Imerese</desc>
+            </graphic>
+            <graphic n="screen" url="ISic0114_scale_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Museo Civico Baldassare Romano, Termini Imerese</desc>
+            </graphic>
+            <graphic n="print" url="ISic0114_scale.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Museo Civico Baldassare Romano, Termini Imerese</desc>
+            </graphic>
+            <graphic n="screen" url="ISic0114_leftthreequarter_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Museo Civico Baldassare Romano, Termini Imerese</desc>
+            </graphic>
+            <graphic n="print" url="ISic0114_leftthreequarter.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Museo Civico Baldassare Romano, Termini Imerese</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
@@ -178,7 +196,7 @@
                 <ab>
                     <lb n="1"/><expan><abbr>P</abbr><ex>ublio</ex></expan> <g type="interpunct">·</g>  Antonio <expan><abbr><unclear>P</unclear></abbr><ex>ublio</ex></expan> <supplied reason="lost" cert="low"><expan><abbr>l</abbr><ex>iberto</ex></expan></supplied>
                     <lb n="2"/>Psorioni
-                    <lb n="3"/>ergolabo
+                    <lb n="3"/><foreign xml:lang="grc-Latn">ergolabo</foreign>
                 </ab>
             </div>
             <div type="apparatus">
@@ -190,10 +208,7 @@
                 <p>To Publius Antonius Psorion, (freedman?) of Publius, a contractor.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--P.Antonius Psorion (?freedman). NB the term 'ergolabus' which follows: virtually unique in Latin (instead of redemptor; Psorion is not generally recorded either, but thought to be a Gr.name)-->
-                    <!-- Tuuli: The profession of the deceased that follows in the dative, 'ergolabus', appears to be a transliteration of the Greek ἐργόλαβος, which is occasionally attested in Greek inscriptions; e.g. I.Miletos 479. -->
-                </p>
+                <p>The term 'ergolabus', a transliteration of the Greek ἐργόλαβος is possibly unique in Latin (instead of redemptor); the Greek term is occasionally attested.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -207,20 +222,21 @@
                         <citedRange>32</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                     </bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1988</date>
-                        <citedRange>49 n.244</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    </bibl>
-                    <bibl>
+                   <bibl>
                         <author>Rizzo</author>
                         <date>1989</date>
                         <citedRange>73 no.43</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/K83EWCEC"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Manganaro</author>
+	           <date>1988</date>
+	           <citedRange>49 n.244</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>
