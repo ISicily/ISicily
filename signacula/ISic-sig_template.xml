@@ -88,7 +88,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p></p>
+                                    <p>General description of whole object...</p>
                                     <objectType/><material/>
                                     <dimensions unit="mm">
                                         <height></height>
@@ -100,12 +100,10 @@
                                     <!-- Ilenia to delete or add as needed -->
                                     <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition rend="broken"><!-- decide on a controlled vocabulary of terms -->
-                                    <p></p>
-                                </condition>
+                                <condition rend="broken"><!-- decide on a controlled vocabulary of terms --></condition>
                             </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><!-- general description, where is the writing, not much detail -->
                                     <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
                                     <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
                                     <rs type="orientation"></rs>
@@ -118,25 +116,13 @@
                         <handDesc>
                             <handNote><!--Default value and requires editing; generalise as needed-->
                                 <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterHeight">
+                                <dimensions type="letterHeight"><!-- remove from here, keep in msParts -->
                                     <height unit="mm"/>
                                 </dimensions>
                                 <dimensions type="letterDepth"></dimensions> <!-- revise? -->
                                 <dimensions type="letterRelief"></dimensions> <!-- revise? -->
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
                             </handNote>
                         </handDesc>
-                        <decoDesc>
-                            <decoNote>
-                                <figure>
-                                    <figDesc/> <!-- some classification of figures needed -->
-                                    <!-- this needs working out more broadly, as discussed in relation to Elymian, etc. -->
-                                </figure>
-                            </decoNote>
-                        </decoDesc>
                     </physDesc>
                     <history>
                         <origin>
@@ -152,7 +138,7 @@
                         <provenance type="observed" subtype="autopsied" resp="#IG"></provenance>
                         <acquisition></acquisition>
                     </history>
-                    <msPart type="handle" xml:id="h1">  <!-- can put a reference pointing to the text division for this text -->
+                    <msPart type="lamina" xml:id="part1">  <!-- can put a reference pointing to the text division for this text -->
                         <msIdentifier>
                             <idno/>
                         </msIdentifier>
@@ -162,10 +148,15 @@
                         <physDesc>
                             <objectDesc>
                                 <supportDesc>
+                                    <support><p>More detailed description of this part of the object, in the shape 
+                                        of a <rs type="shape">penguin</rs> <!-- keep terms consistent --> ...</p>
+                                    <dimensions></dimensions>
+                                    <measure type="weight"></measure>
+                                    </support>
                                     <condition></condition>
                                 </supportDesc>
                                 <layoutDesc>
-                                    <layout>
+                                    <layout><!-- detailed desription here -->
                                         <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
                                         <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
                                         <rs type="orientation"></rs>
@@ -183,10 +174,53 @@
                                     </dimensions>
                                     <dimensions type="letterDepth"></dimensions> <!-- revise? -->
                                     <dimensions type="letterRelief"></dimensions> <!-- revise? -->
-                                    <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                    <dimensions type="interlinear">
+                                </handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <decoNote>
+                                    <figure>
+                                        <figDesc/>
+                                    </figure>
+                                </decoNote>
+                            </decoDesc>
+                        </physDesc>
+                    </msPart>
+                    <msPart type="handle" xml:id="part2">  <!-- can put a reference pointing to the text division for this text -->
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <msContents>
+                            <textLang xml:lang="xx"><!-- if different from the language of the main object --></textLang>
+                        </msContents>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support><p>More detailed description of this part of the object, in the shape 
+                                        of a <rs type="shape">octagonal</rs> <!-- keep terms consistent --> ...</p>
+                                        <dimensions></dimensions>
+                                        <measure type="weight"></measure>
+                                    </support>
+                                    <condition></condition>
+                                </supportDesc>
+                                <layoutDesc>
+                                    <layout><!-- detailed desription here -->
+                                        <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
+                                        <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
+                                        <rs type="orientation"></rs>
+                                        <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
+                                        <idno/>
+                                    </rs> -->                                    
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote><!--Default value and requires editing-->
+                                    <locus from="line1" to="line1">Line 1</locus>
+                                    <dimensions type="letterHeight">
                                         <height unit="mm"/>
                                     </dimensions>
+                                    <dimensions type="letterDepth"></dimensions> <!-- revise? -->
+                                    <dimensions type="letterRelief"></dimensions> <!-- revise? -->
                                 </handNote>
                             </handDesc>
                             <decoDesc>
@@ -222,10 +256,11 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="building" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html">building</term>
+                    <term key="invocation" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html"><!-- find reference :-D --></term>
+                    <term key="ownership"></term>
                 </keywords>
                 <keywords>
-                    <term>imprint</term> <!-- rather than in layout/object in <rs>; revise -->
+                    <term>imprint</term> <!-- rather than in layout/object in <rs>; revise! -->
                 </keywords>
             </textClass>
         </profileDesc>
@@ -250,10 +285,10 @@
       <text>
           <body>
               <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
-                  <div type="textpart" subtype="main" rend="linear"><!-- divs to be decided by Ilenia - what subtypes, rends etc. -->
+                  <div type="textpart" subtype="lamina" rend="linear" corresp="#part1"><!-- divs to be decided by Ilenia - what subtypes, rends etc. -->
                       <ab></ab><!-- add @style with direction of writing, either on lb or on higher-level elements, as needed -->
                   </div>
-                  <div type="textpart" subtype="lamina" rend="linear">
+                  <div type="textpart" subtype="handle" rend="linear" corresp="#part2">
                       <ab>Greek or Latin... text here</ab>
                   </div>
               </div>
