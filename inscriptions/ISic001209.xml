@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Epitaph of Philisto</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001209</idno>
+                <idno type="TM">492813</idno>
+                <idno type="EDR">147869</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">39101573</idno>
+                <idno type="PHI">140693</idno>
+                <idno type="PHI">175726</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001209</idno>
+                <idno type="DOI" when="2020-12-18">10.5281/zenodo.4352218</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Palermo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas
+                        </repository>
+                        <idno type="inventory">8790</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A rectangular sandstone cippus, slightly damaged on the lower left corner</p>
+                                    <material key="sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
+                                    <objectType key="cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85.html">cippus</objectType>
+                                    <dimensions><!-- from IGPal -->
+                                        <height unit="cm">43.5</height>
+                                        <width unit="cm">30.5</width>
+                                        <depth unit="cm">14</depth>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Single line of Greek letters across the middle of the stone</p>
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    </rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Regular plain letters. Phi is slightly taller than the rest, but with a small circular eye; sigma has horizontal top and bottom bars, with the diagonals joined by a curve; omicron is smaller than the other letters and mid-line.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">30-35</height><!-- from IGPal -->
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">NA</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462062">Abacaenum</placeName>		
+                                <offset>near
+                                    <placeName type="modern" ref="http://sws.geonames.org/2522853">Tripi</placeName>
+                                </offset>
+                            	<geo>38.05191, 15.10158</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100">C3 BC - C2 BC</origDate>
+                        </origin>
+                        <provenance type="found">From the area of the necropolis in contrada Cardusa<geo>38.065190, 15.114380</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Palermo, Museo Archeologico Regionale Antonino Salinas no. 8790</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-03-08" who="#JP">Jonathan Prag revised the EpiDoc</change>
+                <change when="2020-06-09" who="#JP">Jonathan Prag made minor revisions and added image</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic120_tiled.tif" height="2034px" width="1459px">
+                <desc>Scan from IGMusPal, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="print" url="ISic001209.jpg" height="2034px" width="1459px">
+                <desc>Scan from IGMusPal, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc">
+                <ab>
+                    <lb n="1"/>Φιλιστοῦς
+                </ab>
+               </div>
+             <div type="apparatus">
+                <listApp><app><note>Text of IG</note></app></listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>(Tomb) of Philisto</p>
+            </div>
+            <div type="commentary">
+                <p>The name <ref target="http://clas-lgpn2.classics.ox.ac.uk/cgi-bin/lgpn_search.cgi?name=%CE%A6%CE%B9%CE%BB%CE%B9%CF%83%CF%84%CF%8E">Φιλιστώ</ref> is not common; it is also attested in Sicily in the theatre seat inscriptions of <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001262">ISic001262</ref> (Taormina). Although dated on the grounds of letter forms to the C2-1 BC by Manni Piraino, the evidence from the necropolis suggests the range C3-2 BC is more plausible.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0382d</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    </bibl>
+                    <bibl type="corpus" n="IGMusPalermo">
+                        <citedRange>123</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
+                    </bibl>
+                    <bibl type="bulletin" n="NSA">
+                        <author>Salinas</author>
+                        <title>NSA</title>
+                        <date>1886</date>
+                        <citedRange>464 no.b</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
+                    <bibl type="corpus" n="SGDI">
+                        <citedRange>5208d</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
+                    </bibl>
+                    <bibl>
+                        <author>Sofia</author>
+                        <date>2015</date>
+                        <citedRange>107 and fig.110</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/9QTE4E3Z"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
