@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 1039</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001039</idno>
+                <idno type="TM">492666</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS">39102192</idno>
+                <idno type="PHI">140517</idno>
+                <idno type="PHI">175486</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001039</idno>
+                <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385375</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
+                            Regionale Paolo Orsi
+                        </repository>
+                        <idno type="inventory">12256</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material key="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
+                                        limestone
+                                    </material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    </rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>		
+                                <offset>near
+                                    <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                </offset>
+                            	<geo>37.05780, 14.89346</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0400">C6 BC - C5 BC (archaic
+                                script)
+                            </origDate>
+                        </origin>
+                        <provenance type="found">Theatre</provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Siracusa, Museo Archeologico Regionale Paolo Orsi no. 12256</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term key="">(?)</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140517">
+                <ab>
+                    <lb n="1"/>
+                    <supplied reason="lost">— —</supplied>Ο
+                    <supplied reason="lost">— —</supplied>
+                    <lb n="2"/>
+                    <unclear>Κ</unclear>Ρ<unclear>Ο</unclear>ΙΝ ∶ ΤΑΙΔ<lb n="3"/>Ν ∶ ΤΟΝΤΕ#⁷
+                    <supplied reason="lost">—</supplied>
+                    <lb n="4"/>ΙΝ ∶ ℎΟΤΕ
+                    <unclear>Κ</unclear>
+                    <supplied reason="lost">—</supplied>
+                    <lb n="5"/>ΝΙΝΚ
+                    <unclear>ΕΙ</unclear>
+                    <supplied reason="lost">— — —</supplied>
+                    <lb n="6"/>
+                    <supplied reason="lost">—</supplied>ΕΙΣΩ
+                    <expan>
+                        <abbr>vacat</abbr>
+                        <ex>?</ex>
+                    </expan>
+                    <lb n="7"/> vacat<lb n="8"/>
+                    <lb n="9"/>
+                    <supplied reason="lost">— —</supplied>ΙΟΝΙ
+                    <supplied reason="lost">— —</supplied>
+                    <lb n="10"/>․ΚΕΙΝ ∶ ΡΑΙΝ<lb n="11"/>ΑΕΤΙ#⁷ΝΤΚ#⁷
+                    <supplied reason="lost">—</supplied>
+                    <lb n="12"/>ΙΝ ∶ ℎΟΤΕΚ
+                    <supplied reason="lost">—</supplied>
+                    <lb n="13"/>ΝΙΝΚΕΠ
+                    <unclear>Ο</unclear>
+                    <supplied reason="lost">— —</supplied>
+                    <lb n="14"/>ΕΙΣ#⁷
+                    <supplied reason="lost">— — — —</supplied>
+                    <lb n="15"/>
+                    <lb n="16"/>
+                    <supplied reason="lost">— —</supplied>Ι<unclear>Ο</unclear>Δ<lb n="17"/>Ε<supplied reason="lost">
+                    ․</supplied>․ΝΤΑΙ<lb n="18"/>Α<unclear>Χ</unclear>Τ<unclear>Ο</unclear>ΝΤ#⁷<lb n="19"/>Α․ΕΟΙΕΙ<lb n="20"/>ΑΙΝ․<unclear>Ε</unclear>ΡΙ
+                    <lb n="21"/>
+                    <supplied reason="lost">․</supplied>ΕΙΣΟ
+                    <supplied reason="lost">—</supplied>
+                    <lb n="22"/>
+                </ab>
+            </div>
+            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI175486">
+                <ab>
+                    <lb n="1"/>
+                    <supplied reason="lost">․․</supplied>
+                    <unclear>Μ</unclear>Ο<unclear>Ν</unclear> ․
+                    <supplied reason="lost">․․</supplied>
+                    <lb n="2"/>Ε<unclear>ΡΕ</unclear>ΙΝ ∶ ΤΑΙ
+                    <unclear>Δ</unclear>
+                    <lb n="3"/>ΑΙ ∶ ΤΟΝΤΕΛ<lb n="4"/>Ν ∶ ΗΟ<unclear>Τ</unclear>Ε
+                    <unclear>Κ</unclear>
+                    <lb n="5"/>ΝΙΝΚΕΓΙ<lb n="6"/>∶ ΕΙΣΩ vacat
+                    
+                    <lb n="7"/> vacat
+                    <lb n="8"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--V. frag. appears not to have been included by either Arena or Dubois in their entries for Acrae (or Syracuse)--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0218</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    </bibl>
+                    <bibl>
+                        <author>Pugliese Carratelli</author>
+                        <date>1956</date>
+                        <citedRange>no.53 tav.39</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PJDRZH66"/>
+                    </bibl>
+                    <bibl>
+                        <author>Roehl</author>
+                        <date>1882</date>
+                        <citedRange>no.511</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HR24PMMR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Stephani</author>
+                        <date>1851</date>
+                        <citedRange>394 dr</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/DHKH72B6"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

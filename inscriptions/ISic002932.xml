@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>funerary inscription for Rouphina</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic002932</idno>
+                <idno type="TM">645316</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">331425</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002932</idno>
+                <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387753</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <!--No inventory number found; not yet located-->
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257.html">tabula</objectType>
+                                    <dimensions><!--from Ferrua-->
+                                        <height unit="cm">15.5</height>
+                                        <width unit="cm">34.5</width>
+                                        <depth unit="cm">4</depth>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Four lines of Greek text, with a Latin inscription on the reverse.</p>
+                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    </rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--from Ferrua-->
+                                <locus from="line1" to="line4">Line 1-4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">35</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">not recorded</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                            	<geo>37.08415, 15.27628</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0350" notAfter-custom="0450" evidence="internal-date">Dated by Manganaro to C4 AD, Ferrua suggests could be specifically 417 AD</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found in the suburb of S.Lucia, Siracusa</provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Siracusa</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                            <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	   <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	               <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+                            <change when="2021-01-11" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-01-26" who="#JP">Jonathan Prag revised text and metadata from ed.pr., added translation and created separate file for Latin reverse</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/>Ῥουφῖνα <choice><orig>χαροῦσα</orig><reg>χαιροῦσα</reg></choice> ἐν
+                    <lb n="2"/><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr><hi rend="supraline">ῷ</hi></abbr></expan> ἔτη <num value="65">ξε</num> ἀνεπαύ
+                    <lb n="3" break="no"/>σατο πρὸ <num value="14">ιδ</num> καλανδῶν ἰανουαρίων
+                    <lb n="4"/><expan><abbr>ἐπ</abbr><ex>ὶ</ex></expan> <supplied reason="subaudible">τῇ</supplied> <num value="11">ια</num> <supplied reason="subaudible">ὥρᾳ</supplied>
+                </ab>
+            </div>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app>
+                        <note>Text of Ferrua 1946-47</note>
+                    </app>
+                    <app loc="line 4"><note>Ferrua 1982-83: no.44 alternatively: ἐπ(ὶ τῇ) ια (ὑπατίᾳ); Feissel 1987:  ἐπι(νεμήσεως) αʹ or  ἐπι(νεμήσεως) ιαʹ</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Rouphina, rejoicing in Christ, died at 65 years of age, 14 days before the Kalends of January (19 December), at the 11th hour [or: in the 11th consulship (of Honorius); or in the 1st/11th indiction]</p>
+            </div>
+            <div type="commentary" resp="#JP">
+                <p>The reverse of the stone was re-used for a later Latin inscription (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001669">ISic001669</ref>).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>36.0872</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>1987.0553</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ferrua</author>
+                        <date>1946-1947</date>
+                        <citedRange>238 no.48</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9TZ8AM4A"/>
+                    </bibl>
+                    </listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Ferrua</author>
+	           <date>1982-1983</date>
+	           <citedRange>15 no.44</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/Q7DDNWD6"/>
+	       </bibl>
+	       <bibl>
+	           <author>Manganaro</author>
+	           <date>1993</date>
+	           <citedRange>587 n.130</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/JBI7CI5R"/>
+	       </bibl>
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

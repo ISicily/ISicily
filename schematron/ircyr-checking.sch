@@ -65,5 +65,14 @@
 
     </pattern>
     
+    <pattern name="checking for Leiden sigla in app">
+        <!-- the regexes below will only work if you have Schematron set to XPATH version 2.0 in your local environment -->
+        <!-- in Oxygen: Options > Preferences > XML > XML Parser > Schematron -->
+        <rule context="//t:div[@type='apparatus']">
+            <report test="descendant::t:note[matches(.,'&#x0323;|&#xE1C0;')]">Underdots in apparatus</report>
+            <report test="descendant::t:note[matches(.,'&lt;|&gt;')]">Angle brackets in apparatus</report>
+        </rule>
+    </pattern>
+    
     
 </schema>
