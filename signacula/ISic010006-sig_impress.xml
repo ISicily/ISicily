@@ -11,7 +11,7 @@
                 <funder ref="#JP">John Fell OUP Research Fund</funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp><!-- amend this to template and general editing-->
+                    <resp>Project direction, corpus editing, and original template construction</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -43,17 +43,17 @@
                 </respStmt>
             </titleStmt>
             <publicationStmt>
-                <authority>I.Sicily</authority> <!-- I.Sicily-sig or something? I think this just stays I.Sicily?-->
-                <idno type="filename">ISic-010006</idno>
+                <authority>I.Sicily</authority> 
+                <idno type="filename">ISic010006</idno><!-- link somewhere to ISic010005 -->
                 <idno type="TM"/>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
                 <idno type="EDCS"/>
                 <idno type="PHI"/>
-                <idno type="URI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic010006</idno>
                 <idno type="DOI"/>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -64,59 +64,49 @@
                         <settlement>Siracusa</settlement>
                         <institution>Parco Archeologico di Siracusa, Eloro e Villa del Tellaro</institution>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/97">Museo Archeologico Regionale Paolo Orsi</repository>
-                        <collection></collection>
                         <idno type="inventory">no</idno>
-                        <altIdentifier xml:lang="en">
+                        <altIdentifier>
                             <repository/>
                             <idno/>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="grc">Greek</textLang>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
                         <msItem>
                             <author>
-                                <roleName role="issuer" type="civil"> <!-- modify values for @role and @type as appropriate -->
-                                    <!--this applies to coins and seals, and possibly some stamps; to align potentially with nomisma?-->
-                                    <!-- see http://nomisma.org/id/issuer "The office holder responsible for the issuance of a coin. Can be distinct from the ruler in whose name a coin is issued" -->
-                                </roleName><!-- leave as empty element, not applicable for signacula  -->
-                                <orgName role="mint"><!-- possible model for capturing mints --></orgName>
-                                <!-- http://nomisma.org/id/mint: "Generic term for a place of manufacture of a coin or for the issuing city."-->
                             </author>
                         </msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <p>circular seal impression on the mortar layer covering the closing tiles of the tomb</p>
+                                <support><p>mortar layer covering the closing tiles of the tomb</p>
                                     <objectType ref="https://archwort.dainst.org/de/term/1628" key="tomb cover">tomb cover</objectType>
                                     <material>mortar</material>
-                                        <dimensions unit="mm">
-                                        <height></height>
-                                        <width></width>
-                                        <depth></depth>
-                                        <dim type="diameter"></dim>
+                                    <dimensions>
+                                        <height unit="cm"></height>
+                                        <width unit="cm"></width>
+                                        <depth unit="cm"></depth>
+                                        <dim type="diameter" unit="cm"></dim>
                                     </dimensions>
-                                    <!-- assuming all these are nomisma supported / alignable terms, this, and other variants, makes sense here-->
-                                    <!-- Ilenia to delete or add as needed -->
                                     <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition rend="fragment">fragment<!-- decide on a controlled vocabulary of terms --></condition>
+                                <condition>fragment</condition>
                             </supportDesc>
                             <layoutDesc>
-                                <layout> 
-                                    <rs type="execution" ></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc.  -->
-                                    <rs type="orientation"></rs>
-                                    <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
-                                        <idno/>
-                                    </rs> -->                                    
+                                <layout><p>impression of a<rs type="shape">circular</rs> signaculum. Epigraphic field divided into two concentric registers delimited by a linear frame.</p>
+                                    <dimensions><dim type="diameter">80</dim></dimensions>
+                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/166.html" key="impressed">impressed</rs>
+                                    <rs type="execution">hollow letters</rs>
+                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/13.html" key="signaculum">signaculo</rs>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing; generalise as needed-->
-                                <locus from="line1" to="line1"></locus>
-                                <locus from="line1" to="line1"></locus>
+                            <handNote>
+                                <p>A with broken crossbar</p>
+                                <locus from="line1" to="line2">Line 1-2</locus>
+                                <dimensions type="letterHeight"><height unit="mm"/><height>15</height></dimensions>
                                 <dimensions type="letterDepth"></dimensions> <!-- revise? -->
                                 <dimensions type="letterRelief"></dimensions> <!-- revise? -->
                             </handNote>
@@ -124,117 +114,18 @@
                         </physDesc>
                     <history>
                         <origin>
-                            <origPlace>Siracusa</origPlace>
-                            <origPlace></origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/xxxxx"> <geo></geo></placeName>
-                                <offset><!-- optional -->
-                                    <placeName type="modern" ref="http://sws.geonames.org/xxxxx"></placeName>
-                                </offset>
-                            <origDate datingMethod="#julian" notBefore-custom="351" notAfter-custom="500" precision="medium" evidence="textual content, archaeological-context" >351-500 C.E.</origDate>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>                              
+                            <origDate datingMethod="#julian" notBefore-custom="0351" notAfter-custom="0500" evidence="textual-context archaeological-context" >351-500</origDate>
                         </origin>
-                        <provenance type="found" >San Giovanni catacomb, gallery no. 2, Region N</provenance>
-                        <provenance type="observed" subtype="autopsy" resp="#IG">december 2015</provenance><!-- see separate discussion document for values and attributes-->
+                        <provenance type="found" subtype="discovered">San Giovanni catacomb, gallery no. 2, Region N</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#IG" when="2015-12">Ilenia Gradante, December 2015</provenance>
                         <acquisition></acquisition>
                     </history>
-                    <msPart type="lamina" xml:id="part1">  <!-- can put a reference pointing to the text division for this text -->
-                        <msIdentifier>  
-                            <idno/>
-                        </msIdentifier>
-                        <msContents>
-                            <textLang xml:lang="xx"><!-- if different from the language of the main object --></textLang>
-                        </msContents>
-                        <physDesc>
-                            <objectDesc>
-                                <supportDesc>
-                                    <support>
-                                        <p>impression of a<rs type="shape">circular</rs> lamina, epigraphic field divided into two concentric registers delimited by a linear frame<!-- keep terms consistent --> ...</p>
-                                        <dimensions unit="mm"><dim type="diameter">80</dim></dimensions>
-                                        <height></height>
-                                        <width></width>
-                                        <depth></depth>
-                                    <measure type="weight"></measure>
-                                    </support>
-                                    <condition>broken</condition>
-                                </supportDesc>
-                                <layoutDesc>
-                                    <layout>in the external epigraphic field the inscription follows the circular profile of the lamina, in the central epigraphic field there is a Staurogram<!-- detailed desription here -->
-                                        <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
-                                        <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/166.html" key="impressed">impressed</rs><!-- EAGLE vocab - revise; relief letters vs impressed etc.  -->
-                                        <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/13.html" key="signaculum">signaculo</rs>
-                                        <rs type="orientation">circular</rs>
-                                        <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
-                                        <idno/>
-                                    </rs> -->                                    
-                                    </layout>
-                                </layoutDesc>
-                            </objectDesc>
-                            <handDesc>
-                                <handNote><!--Default value and requires editing-->
-                                    
-                                    <locus from="line1" to="line2">Line 1-2</locus>
-                                    <dimensions type="letterHeight"><height unit="mm"/><height>15</height>
-                                    </dimensions>
-                                    <dimensions type="letterDepth"></dimensions> <!-- revise? -->
-                                    <dimensions type="letterRelief"></dimensions> <!-- revise? -->
-                                    </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <decoNote>
-                                    <figure>
-                                        <figDesc>Staurogram</figDesc>
-                                    </figure>
-                                </decoNote>
-                            </decoDesc>
-                        </physDesc>
-                    </msPart>
-                    <msPart type="handle" xml:id="part2">  <!-- can put a reference pointing to the text division for this text -->
-                        <msIdentifier>
-                            <idno/>
-                        </msIdentifier>
-                        <msContents>
-                            <textLang xml:lang="xx"><!-- if different from the language of the main object --></textLang>
-                        </msContents>
-                        <physDesc>
-                            <objectDesc>
-                                <supportDesc>
-                                    <support><p><rs type="shape"></rs> 
-                                      <!-- keep terms consistent --> ...</p>
-                                        <dimensions></dimensions>
-                                        <measure type="weight"></measure>
-                                    </support>
-                                    <condition></condition>
-                                </supportDesc>
-                                <layoutDesc>
-                                    <layout><!-- detailed desription here -->
-                                        <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
-                                        <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
-                                        <rs type="orientation"></rs>
-                                        <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
-                                        <idno/>
-                                    </rs> -->                                    
-                                    </layout>
-                                </layoutDesc>
-                            </objectDesc>
-                            <handDesc>
-                                <handNote><!--Default value and requires editing-->
-                                    <locus from="line1" to="line1"></locus>
-                                    <dimensions type="letterHeight">
-                                        <height unit="mm"/>
-                                    </dimensions>
-                                    <dimensions type="letterDepth"></dimensions> <!-- revise? -->
-                                    <dimensions type="letterRelief"></dimensions> <!-- revise? -->
-                                </handNote>
-                            </handDesc>
-                            <decoDesc>
-                                <decoNote>
-                                    <figure>
-                                        <figDesc></figDesc>
-                                    </figure>
-                                </decoNote>
-                            </decoDesc>
-                        </physDesc>
-                    </msPart>
-                </msDesc>
+                     </msDesc>
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -258,15 +149,15 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ref="https://www.eagle-network.eu/voc/typeins/lod/387.html" key="ownership">ownership</term>
-                 </keywords>
+                    <term ref="https://www.eagle-network.eu/voc/typeins/lod/105.html" key="ownership">ownership</term><!-- ref not entirely satisfactory or even wrong -->
+                </keywords>
                 <keywords>
                     <term ref="https://www.eagle-network.eu/voc/typeins/lod/387.html" key="invocation">christian invocation</term>
                 </keywords>
                 </textClass>
         </profileDesc>
         <revisionDesc status="draft">
-            <change when="2020" who="#xx"></change>
+            <change when="2021-02-03" who="#IG">Ilenia Gradante created the file</change>
         </revisionDesc>
       </teiHeader>
       <facsimile>
@@ -286,22 +177,25 @@
       <text>
           <body>
               <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG">
-                  <div type="textpart" subtype="external epigraphic field" corresp="#part1">
+                  <div type="textpart" subtype="external_epigraphic_field" n="1">
                       <ab>
-                          <lb n="1"/>Ἀθανα<supplied reason="lost">σίο</supplied>υ. <expan><abbr>Χ</abbr><ex>ριστὸν</ex></expan> <expan> <abbr>Μ</abbr><ex>αρία</ex></expan> <expan><abbr>γ</abbr><ex>εννᾶ</ex></expan>. 
+                         <lb n="1" style="text-direction:circular"/>Ἀθανασίου. <expan><abbr>Χ</abbr><ex>ριστὸν</ex></expan> <expan><abbr>Μ</abbr><ex>αρία</ex></expan> <expan><abbr>γ</abbr><ex>εννᾶ</ex></expan>. 
                           </ab></div>          
-                  <div type="textpart" subtype="central epigraphic field" corresp="#part2">
-                      <ab><lb n="2"/><g type="Staurogram"/>
+                  <div type="textpart" subtype="central_epigraphic_field" n="2">
+                      <ab><lb n="1"/><g type="Staurogram"/>
                      </ab>
                   </div>
               </div>
               <div type="apparatus">
                   <listApp>
-                      <app xml:lang="xx"></app>
+                      <app><note>Text from autopsy</note></app>
                   </listApp>
               </div>
-              <div type="translation" resp="#IG">
-                  <p xml:lang="en">of Athanisios. Maria bears Christ</p>
+              <div type="translation" xml:lang="en" resp="#IG">
+                  <p>of Athanasios. Maria bears Christ</p>
+              </div>
+              <div type="translation" xml:lang="it" resp="#IG">
+                  <p>di Athanasios. Cristo generato da Maria</p>
               </div>
               <div type="commentary">
                    <p xml:lang="xx"></p>
