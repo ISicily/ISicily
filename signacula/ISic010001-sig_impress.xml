@@ -11,7 +11,7 @@
                 <funder>John Fell OUP Research Fund</funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp><!-- amend this to template and general editing-->
+                    <resp>Project direction, corpus editing, and original template construction</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -44,16 +44,16 @@
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority> 
-                <idno type="filename">ISic-010001</idno>
+                <idno type="filename">ISic010001</idno>
                 <idno type="TM"/>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
                 <idno type="EDCS"/>
                 <idno type="PHI"/>
-                <idno type="URI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic010001</idno>
                 <idno type="DOI"/>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -63,10 +63,10 @@
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
                         <institution>Pontificia Commissione di Archeologia Sacra Ispettorato per le catacombe della Sicilia orientale</institution>
-                        <repository>hypogeum M1 plateau ex Vigna Cassia</repository>
-                        <collection></collection>
+                        <repository>Vigna Cassia catacomb</repository><!-- we will add each of the principal catacombs to the sites category in the museums database, and then we can give this @type="site" @ref="URL"; this isn't the findspot listing in detail-->
+                        <collection></collection><!-- unless we're sure we're going to need / use this, we're nto doing so at the moment, so I'd just delete it-->
                         <idno></idno>
-                        <altIdentifier xml:lang="en">
+                        <altIdentifier>
                             <repository/>
                             <idno/>
                         </altIdentifier>
@@ -80,56 +80,59 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>mortar layer covering the closing tiles of the tomb
-                                    <objectType ref="https://archwort.dainst.org/de/term/1628" key="tomb cover">tomb cover</objectType>
-                                    <material>mortar</material>
-                                        <dimensions unit="mm">
-                                        <height></height>
-                                        <width></width>
-                                        <depth></depth>
-                                        <dim type="diameter"></dim>
+                                <support><p>mortar layer covering the closing tiles of the tomb<p>
+                                    <objectType key="tomb-cover" ref="https://archwort.dainst.org/de/term/1628" key="tomb cover">tomb cover</objectType><!-- NB this is not an EAGLE ref; but I do realise nothing for this in EAGLE; @Simona, are we okay to mix up our URIs thus? or it might be better just to have the higher level 'tomb' or equivalent for the URI?-->
+                                    <material key="mortar" ref="https://www.eagle-network.eu/voc/objtyp/lod/41.html">mortar</material><!-- this seems to be the best/right EAGLE URI-->
+                                        <dimensions><!-- I think the dimensons of the stamp go here, since this is a single level file, not a multiple part one?-->
+                                        <height unit="cm"></height><!-- existing files ahve the unit on each measure; and for general dimensions we use cm elsewhere, so stick with that here if possible too-->
+                                        <width unit="cm"></width>
+                                        <depth unit="cm"></depth>
+                                        <dim type="diameter" unit="cm"></dim>
                                     </dimensions>
                                   <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition rend="complete">complete</condition>
+                                <condition rend="complete">complete</condition><!-- not using @rend I think, but we're waiting for final clarification from Simona-->
                             </supportDesc>
                             <layoutDesc>
-                                <layout>16 impressions of the same <rs type="shape">circular</rs> signaculum impressed along the joints between the closing tiles of the tomb<!-- general description, where is the writing, not much detail -->
-                                    <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
-                                    <rs type="execution" ></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc.  -->
-                                    <rs type="orientation"></rs>
-                                    <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
-                                        <idno/>
-                                    </rs> -->                                    
+                                <layout><p>16 impressions of the same <rs type="shape">circular</rs> signaculum impressed along the joints between the closing tiles of the tomb</p><!-- general description of the location and form of the text, where is the writing, not much detail -->
+                                    <!--  <rs type="layout"></rs> <!-- keep this also for brick stamps; this may be type="shape" instead?-->
+                                    <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. [as in other examples already established I think, two sequential terms to capture relief and impressed? -->
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote><!--Default value and requires editing; generalise as needed-->
-                                <locus from="line1" to="line1"></locus>
-                                <locus from="line1" to="line1"></locus>
-                                <dimensions type="letterDepth"></dimensions> <!-- revise? -->
-                                <dimensions type="letterRelief"></dimensions> <!-- revise? -->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                 <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterDepth">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                 <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterRelief">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <!-- we can include all three of these measurements if they are standardly collected for editions of signacula? but are they? Seems a lot of detail -->
                             </handNote>
                         </handDesc>
                         </physDesc>
                     <history>
                         <origin>
-                            <origPlace>Siracusa</origPlace>
-                            <origPlace></origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/xxxxx"> <geo></geo></placeName>
-                                <offset><!-- optional -->
-                                    <placeName type="modern" ref="http://sws.geonames.org/xxxxx"></placeName>
-                                </offset>
-                            <origDate datingMethod="#julian" notBefore-custom="301" notAfter-custom="500" precision="medium" evidence="textual content, archaeological-context" >301-500 C.E.</origDate>
+                            <origPlace><!-- example inserted below of the full version of a place in origPlace: the URLs and geo refs for all places are listed in a CSV in the a-list folder (or can just be copied from existing files fromt he same place!)-->
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                            	<geo>37.08415, 15.27628</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" evidence="textual-context archaeological-context">301-500 C.E.</origDate><!--we don't bother with @precision, since date ranges clearly imply that already; note four digit numbers and use hyphens to join multi-word terms, spaces to separate multiple terms -->
                         </origin>
-                        <provenance type="found" subtype="discovered">found in situ in hypogeum M1 plateau ex Vigna Cassia</provenance>
-                        <provenance type="found" when="1954">found in 1954</provenance>
-                        <provenance type="observed">in situ</provenance>
-                        <provenance type="observed" subtype="autopsy" resp="#IG">december 2015</provenance><!-- see separate discussion document for values and attributes-->
+                        <provenance type="found" subtype="discovered" when="1954">found in situ in hypogeum M1 plateau ex Vigna Cassia, in 1954</provenance><!-- if you have geo ref for the hypogeum, or just the catacomb, include here in <geo> inside provenance-->
+                        <provenance type="observed">in situ</provenance><!-- clarify with @Simona, but this is going to be built in to the previous element with an @corresp attribute-->
+                        <provenance type="observed" subtype="autopsy" resp="#IG" when="2015-12">Ilenia Gradante, December 2015</provenance><!-- see separate discussion document for values and attributes-->
                         <acquisition></acquisition>
                     </history>
-                    <msPart type="lamina" xml:id="part1"> 
+                    <msPart type="lamina" xml:id="part1"> <!-- @Simona will clarify, but for this example we could reduce to normal template, without msParts, since it's just the stamp/lamina-->
                         <msIdentifier>  
                             <idno/>
                         </msIdentifier>
@@ -139,8 +142,8 @@
                         <physDesc>
                             <objectDesc>
                                 <supportDesc>
-                                    <support>impression of a<rs type="shape">circular</rs>lamina
-                                        <dimensions unit="mm"><dim type="diameter">75</dim></dimensions>
+                                    <support>impression of a<rs type="shape">circular</rs>lamina<!-- shape would go in layout I think, not the support description [in place of the rs type="layout" that is in the top level support/layout desc above-->
+                                        <dimensions unit="mm"><dim type="diameter">75</dim></dimensions><!-- see above; collapse this into the main version, change units to cm-->
                                         <height></height>
                                         <width></width>
                                         <depth></depth>
@@ -149,22 +152,21 @@
                                     <condition>complete</condition>
                                 </supportDesc>
                                 <layoutDesc>
-                                    <layout>epigraphic field divided into two concentric registers delimited by a linear frame
+                                    <layout><p>epigraphic field divided into two concentric registers delimited by a linear frame</p>
                                         <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/166.html" key="impressed">impressed</rs>
                                         <rs type="execution">hollow letters</rs>
                                         <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/13.html" key="signaculum">signaculo</rs>
-                                        <rs type="orientation"></rs>                    
-                                    </layout>
+                                   </layout><!-- agreed not using orientation I think? -->
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote><!--Default value and requires editing-->
+                                <handNote><!--See example at the upper level fo the handDesc for how this is organised / separated out-->
                                     <locus from="line1" to="line2">Line 1-2</locus>
                                     <dimensions type="letterHeight"><height unit="mm"/><height>25-15</height>
                                     </dimensions>
                                     <dimensions type="letterDepth"></dimensions> <!-- revise? -->
                                     <dimensions type="letterRelief"></dimensions> <!-- revise? -->
-                                    <locus>Line 2</locus>A with hooked crossbar; monogram MAT
+                                    <locus>Line 2</locus>A with hooked crossbar; monogram MAT<!-- details of the letters, etc., go into a <p> element after <handNote>; we're not using specific locus elements at present-->
                                 </handNote>
                             </handDesc>
                             <decoDesc>
@@ -254,7 +256,7 @@
             </textClass>
         </profileDesc>
         <revisionDesc status="draft">
-            <change when="2020" who="#xx"></change>
+            <change when="2021-02-03" who="#IG">Ilenia Gradante created the file</change>
         </revisionDesc>
       </teiHeader>
       <facsimile>
@@ -274,25 +276,27 @@
       <text>
           <body>
               <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG">
-                  <div type="textpart" subtype="external_epigraphic_field" rend="linear" corresp="#part1">
+                  <div type="textpart" subtype="external_epigraphic_field" corresp="#part1"><!-- we will need to make a list of @subtypes to standardise -->
                       <ab>
-                          <lb n="1"/> spes in Deo semper
-                          </ab></div>          
-                  <div type="textpart" subtype="central_epigraphic_field" rend="linear" corresp="#part2">
-                      <ab><lb n="2"/><orig>MAT</orig>
+                          <lb n="1"/>spes in Deo semper<!-- does this need a text direction on @style on the lb?-->
+                      </ab>
+                  </div>          
+                  <div type="textpart" subtype="central_epigraphic_field" corresp="#part2">
+                      <ab>
+                          <lb n="2"/><orig>MAT</orig><!-- if this is a monogram, it needs different rendering, not orig - discuss with @Simona-->
                      </ab>
                   </div>
               </div>
               <div type="apparatus">
                   <listApp>
-                      <app xml:lang="xx"></app>
+                      <app><note>Text from autopsy</note></app>
                   </listApp>
               </div>
-              <div type="translation" resp="#IG">
-                  <p xml:lang="en">hope in God always; of MAT</p>
+              <div type="translation" xml:lang="en" resp="#IG">
+                  <p>hope in God always; of MAT</p>
               </div>
               <div type="commentary">
-                   <p xml:lang="xx"></p>
+                   <p></p>
               </div>
               <div type="bibliography">
                   <listBibl> <!-- bibliography taken from Zotero -->
