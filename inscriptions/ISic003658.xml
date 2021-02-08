@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragment of a Greek inscription</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DM" ref="http://orcid.org/0000-0003-2267-0411">Davide Massimo</name>
+                    <resp>revised the EpiDoc encoding</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic003658</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003658</idno>
+                <idno type="DOI" when="2020-12-21">10.5281/zenodo.4381432</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Halaesa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/053">Antiquarium e sito archeologico di Halaesa</repository>
+                        <idno type="inventory">ME30588</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
+                                    <dimensions><!--measurements of Carettoni-->
+                                        <height unit="cm">5.7</height>
+                                        <width unit="cm">18.5</width>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.painted" ref="http://www.eagle-network.eu/voc/writing/lod/10">Painted</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--from Carettoni-->
+                                <locus from="line1" to="line4">Line 1-4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">6-10</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">not measured</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>		
+                                <offset>near
+                                    <placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
+                                </offset>
+                            	<geo>37.99907, 14.26197</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0001" cert="low">Hellenistic?</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Trench (1956) on west side of Temple A <geo>38.000628, 14.261263</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Halaesa, Antiquarium e sito archeologico di Halaesa</acquisition>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <note type="location">in store?</note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc status="draft"><!-- to be revised from autopsy notes from 2019-->
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2019-02-15" who="#DM">Davide Massimo revised the text</change>
+                <change when="2019-06-07" who="#JP">Jonathan Prag added some metadata and bibliography</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#DM">             
+                <ab>
+                    <lb n="1"/><gap reason="lost" unit="character" quantity="4"/><orig><unclear>Σ</unclear></orig><gap reason="lost" unit="character" quantity="2"/><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" unit="character" quantity="2"/><orig><unclear>Ο</unclear></orig><gap reason="lost" unit="character" quantity="1"/><orig>Ρ</orig><gap reason="lost" unit="character" quantity="1"/><gap reason="illegible" unit="character" quantity="1"/>
+                    <lb n="2"/><gap reason="lost" unit="character" quantity="6"/><orig><unclear>ΤΙ</unclear>ΛΩΟ</orig>
+                    <lb n="3"/><gap reason="lost" unit="character" quantity="2"/><orig>Α<unclear>Γ</unclear>ΜΔΑΡΥΗ</orig>
+                    <lb n="4"/><orig><unclear>Ι</unclear></orig><gap reason="lost" quantity="2" unit="character"/><orig><unclear>Τ</unclear>Α<unclear>Ο</unclear>Α<unclear>Γ</unclear></orig><gap reason="lost" unit="character" quantity="3"/>
+                </ab>
+                </div>
+            <div type="apparatus">
+                <listApp><app><note>Text from Prag-Tigano 2017</note></app></listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--Described by Carettoni as 'basetta mancante della parte sinistra (dimensioni cm 18.5 x 5.7). Inscr on four lines, only partly legible, with letters of another text said to be visible on one of the sides. Letters fom 0.6-1cm high, with the last line in smaller letters. Line 2: ...TILWO line 3: AGMDARYH Line 3: I..TAOAG...--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="NSA">
+                        <author>Carettoni</author>
+                        <date>1961</date>
+                        <citedRange>318 no.12b</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Prag and Tigano</author>
+                        <date>2017</date>
+                        <citedRange>no.2</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

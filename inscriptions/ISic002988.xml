@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 2988</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic002988</idno>
+                <idno type="TM">285060</idno>
+                <idno type="EDR">108314</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">59500344</idno>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002988</idno>
+                <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387875</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier><!--Default country and region-->
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Mazara del Vallo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/115">Mirabilia Urbis (?)
+                        </repository>
+                        <!--No inventory number found-->
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
+                                        marble
+                                    </material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
+                                    </rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462305">Mazara</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2524205">Mazara del Vallo</placeName>
+                            	<geo>37.65418, 12.59304</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200" cert="low">C1 AD - C2 AD
+                                (?)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Via Santa Teresa</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2002.07.01</provenance>
+                        <acquisition>Mazara del Vallo, Mirabilia Urbis (?)</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR108314" xml:lang="grc">
+                <ab>
+                    <lb n="1"/>
+                    Μ(άρκον) Ἰούν(ιον) Φήλι
+                    <supplied reason="lost">κα</supplied>
+                    <lb n="2"/>βουλευτ(ὴν) Λιλυ
+                    <supplied reason="lost">βα</supplied>
+                    <lb n="3" break="no"/>ειτῶν φιλοτει
+                    <supplied reason="lost">μη</supplied>
+                    <lb n="4" break="no"/>σάμενον περἰ τὴ
+                    <supplied reason="lost">ν</supplied>
+                    <lb n="5"/>πατρίδα τὸ κοινὸ
+                    <supplied reason="lost">ν</supplied>
+                    <lb n="6"/>Κινακων ἐκ τῶν<lb n="7"/>ἰδίων πάτρω
+                    <supplied reason="lost">νι</supplied>
+                    <lb n="8"/>ἀξίῳ<lb n="9"/>δ.δ.β.
+                </ab>
+                <!--This EDR text 108314 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--Brugnone does not make explicit whether she reports the text from autopsy, and in fact checking the photograph and comparing texts, Bisi's text is more accurate than Brugnone's; but Brugnone provides a full bibliography. BE reports M-P's publ, which confirms the corrections of Segre for the reading. The inscr. is in honour of Iounios Phelix, bouleutes Lilubaeiton. At the end are the letters d.d.b. (gr.), which M-P asserts are not dogma dekourionon boules, but dono dedit benmerentissimo. For 'koinon kinakon', M-P follows Segre in thinking it's a punic name. Conjectures that it may be a variant on the Canaanite ethnic, and thus that this marks a resident group of 'Phoenicians' engaged in trade at Mazara. The AE notice has a full text, after Segre, with the observation that the koinon kinakon perhaps 'une association religieuse'. (koinon, cf. Lintott (1993), 178 with refs). I now have p'copy of the Manni Piraino article (Inst of Arch stores) on file. Also three colour prints + negatives of the stone, and brief notes, from visit 1.7.02.--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="AE">
+                        <citedRange>2010.0613</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    </bibl>
+                    <bibl type="bulletin" n="AE">
+                        <citedRange>1935.0123</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>60.1013</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>58.1047</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>2010.0613</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>1971.0767</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>1936.0394</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ribezzo</author>
+                        <date>1933</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/B3R2D5KD"/>
+                    </bibl>
+                    <bibl>
+                        <author>Segre</author>
+                        <date>1934</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/MVKVUHCH"/>
+                    </bibl>
+                    <bibl>
+                        <author>De Sanctis</author>
+                        <date>1934</date>
+                        <citedRange>134</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9XMTCBGS"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ribezzo</author>
+                        <date>1934</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/B4IN86E5"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manni Piraino</author>
+                        <date>1969</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JJAHET95"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <citedRange>19 n.71</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Brugnone</author>
+                        <date>2003</date>
+                        <citedRange>80 no.1</citedRange>
+                    </bibl>
+                    <bibl>
+                        <author>Prag</author>
+                        <date>2008</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5GXZKI7W"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 0406</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic000406</idno>
+                <idno type="TM">284592</idno>
+                <idno type="EDR">074189</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">21900447</idno>
+                <idno type="PHI">140305</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000406</idno>
+                <idno type="DOI" when="2020-12-17">10.5281/zenodo.4335558</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
+                            Regionale Paolo Orsi
+                        </repository>
+                        <idno type="inventory">8</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc" otherLangs="la">Ancient Greek with the first two lines in Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
+                                        marble
+                                    </material>
+                                    <objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">statue base
+                                    </objectType>
+                                    <dimensions><!-- from the inventory -->
+                                        <height unit="cm">105</height>
+                                        <width unit="cm">49.5</width>
+                                        <depth unit="cm">49</depth>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
+                                    </rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                            	<geo>37.08415, 15.27628</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0300" notAfter-custom="0400" cert="low">
+                                'Fourth-century governor' (Wilson, 1990, p.316)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found on Ortygia 10 May 1792</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2013.10.03</provenance>
+                        <acquisition>Siracusa, Museo Archeologico Regionale Paolo Orsi no. 8</acquisition>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <note type="location">Depositi, Mag C</note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2018-01-20" who="#JP">Jonathan Prag checked the file and the epidoc encoding</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic000406_tiled.tif" height="7360px" width="4912px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="print" url="ISic000406.jpg" height="7360px" width="4912px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve">
+                <div type="textpart" xml:lang="la">
+                <ab>
+                    <lb n="1"/><expan><abbr>Perpenna</abbr><ex>m</ex></expan> <expan><abbr>Roman</abbr><ex>um</ex></expan>
+                    <lb n="2"/><expan><abbr>v</abbr><ex>irum</ex></expan> <expan><abbr>c</abbr><ex>larissimum</ex></expan> <expan><abbr>cons</abbr><ex>ularem</ex></expan> <expan><abbr>p</abbr><ex>opulus</ex></expan> <expan><abbr>Syrac</abbr><ex>usanus</ex></expan>
+                </ab>
+                </div>
+                <div type="textpart" xml:lang="grc">
+                    <ab>
+                    <lb n="3"/>
+                    <supplied reason="lost">Ῥ</supplied>ωμανοῦ πραπίδεσσι
+                    <lb n="4"/>
+                    <supplied reason="lost">Συ</supplied>ρηκοσίων τόδε ἄστυ
+                    <lb n="5"/>ἐκ καμάτων ἀνέπνευσε
+                    <lb n="6"/>καὶ ἔ<supplied reason="lost">δρα</supplied>κεν ἴα<supplied reason="lost">ρ</supplied>ος ὥρην·
+                    <lb n="7"/>τοὔνεκα λαινέην μὲν
+                    <lb n="8"/>ἀνεστήσανθ’ οἱ ἄριστοι
+                    <lb n="9"/>εἰκόνα, τῆς σοφίης δὲ
+                    <lb n="10"/>καὶ ἐν στήθεσσιν ἔχου
+                    <lb break="no" n="11"/>σειν
+                  </ab>
+                </div>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>Text of Manganaro 1994</note></app></listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p/>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0014</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    </bibl>
+                    <bibl type="corpus" n="CIL">
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7125</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>44.0738.9</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>1959.0543</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl type="corpus" n="CIG">
+                        <citedRange>3.5408</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    </bibl>
+                    <bibl>
+                        <author>Wilson</author>
+                        <date>1990</date>
+                        <citedRange>316 n.11</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1994</date>
+                        <citedRange>95 no.9</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/532NF7SV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1958-1959</date>
+                        <citedRange>18-19</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/BVD8KVF7"/>
+                    </bibl>
+                    <bibl>
+                        <author>Agosti</author>
+                        <date>2008</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/6JRVCJJS"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>2010</date>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZJA2JMRW"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Verse inscription recording building of a nymphaeum</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SA">Serena Agodi</name>
+                    <resp>Italian translation</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic000649</idno>
+                <idno type="TM">653657</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">140767</idno>
+                <idno type="PHI">332860</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000649</idno>
+                <idno type="DOI" when="2020-12-17">10.5281/zenodo.4338147</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Catania</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
+                            Catania
+                        </repository>
+                        <idno type="inventory">539</idno>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tablet</objectType>
+                                    <dimensions><!--Values from Manganaro; require checking on the stone-->
+                                        <height unit="cm">53</height>
+                                        <width unit="cm">72</width>
+                                        <depth unit="cm">3</depth>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
+                            	<geo>37.49223, 15.07041</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300" cert="low">Third or possibly early fourth century AD. Perhaps middle/later
+                                    fourth century AD</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found in May 1771 in excavations undertaken by the Prince of Biscari on
+                                the northern side of Piazza Dante and the church of S. Nicolò <geo>37.504537, 15.080570</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Catania, Museo Civico di Catania inv.539</acquisition>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <note type="location">Display, Voci di pietra no.15</note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.building" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html">building</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2017-06-11" who="#JP">Jonathan Prag made initial revision of the EpiDoc, intial edit of
+                    text, added English translation
+                </change>
+                <change when="2017-06-23" who="#JP">Jonathan Prag edited the text division and added further metadata
+                </change>
+                <change when="2017-07-06" who="#JP">Jonathan Prag added elements for parallel Italian</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed
+   <surface type="front">
+    <graphic n="screen" url="ISic000649-gr.jpg">
+      <desc>Photograph of front face by Liceo M.M. Lazzaro</desc>
+    </graphic>
+  </surface>
+   <surface type="front_copy">
+       <graphic n="screen" url="ISic000649-lat.jpg">
+      <desc>Photograph of front face by Liceo M.M. Lazzaro</desc>
+    </graphic>
+   <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+  -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc">
+                <ab><lb n="1"/>Βαιὸν ἐμὲ Νύμφαις ἔργον κάμ
+                    <supplied reason="lost">εν</supplied>
+                    <gap reason="lost" quantity="3" unit="character"/>
+                    <lb n="2"/>οὐ γάρ μοι σθεναρὴν χεῖρ’ ἐπέ
+                    <supplied reason="lost">θηκε</supplied> <supplied reason="lost">μάτην</supplied>
+                    <lb n="3"/>αλλ’ ἐν ἐμοὶ καμάτων εὗρεν τέλ
+                    <supplied reason="lost">ος</supplied> <supplied reason="lost">ἔσχε</supplied> <supplied reason="lost">τ’</supplied><supplied reason="lost">ἄγαλμα</supplied>
+                    <lb n="4"/>ἀγχόθι λαϊνέης αὔλακος ὑδρο
+                    <supplied reason="lost">φόρου</supplied>
+                    <lb n="5"/>τὴν αὐτὸς ποίησεν, ἐς ἠέρα πολλ
+                    <supplied reason="lost">ὸν</supplied> <supplied reason="lost">ἀείρας</supplied>
+                    <lb n="6"/>νᾶμα φέρειν καθαρὸν ἐνναέται
+                    <supplied reason="lost">ς</supplied> <supplied reason="lost">Κατὰνης</supplied>
+                    <lb n="7"/>
+                    <space quantity="8" unit="character" precision="low"/>
+                    <persName>
+                        <name>Ἐννοΐου</name>
+                    </persName>
+                    <space quantity="7" unit="character" precision="low"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>The restorations proposed by Manganaro are adopted here</note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>[---] wrought me, a humble work for the Nymphs.
+                    Indeed he did not lay his mighty hand upon me in vain,
+                    but in me he found fulfilment of his toils, and gained a statue
+                    next the stony water-bearing furrow
+                    which he himself made, having lifted it high into the air,
+                    to bring a pure stream to those dwelling in Katania.
+                    (verses) of Ennoios.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#SA">
+                <p>[---] mi ha fatto, un umile lavoro per le Ninfe.
+                    Infatti, non mi ha imposto invano la sua potente mano,
+                    ma in me ha trovato compimento dei suoi sforzi e ha ottenuto una statua
+                    accanto al solco che fornisce l’acqua,
+                    che egli stesso ha fatto, avendolo innalzato fino in cielo,
+                    per portare un flusso puro a coloro che abitano in Katania.
+                    (Versi) di Ennoios.</p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>The name of the individual who carried out the work, and is honoured in the text, is lost at the end
+                    of line 1. Traces of the acqueduct which brought water into this part of Catania from the south side
+                    of Etna survive. Biscari uncovered remains of a complex which it has been suggested is identical
+                    with the nymphaeum (fountain house) mentioned in the later Latin text. The fragmentary mosaic of the
+                    months preserved in the museum appears to come from the same location. It is possible that this text
+                    commemorates the completion/extension of one branch of the acqueduct, and the construction of a
+                    nymphaeum at its terminus. Although Latin was the language of public documents, Greek was used
+                    occasionally for highly literary texts of this sort, and the two texts provide another illustration
+                    of the bilingualism present in Catania at this time.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IG">
+                        <citedRange>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0453</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                    </bibl>
+                    <bibl type="bulletin" n="AE">
+                        <citedRange>1959.0025</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>60.1009</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>44.0738.10</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>1959.0541</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl type="corpus" n="CIG">
+                        <citedRange>3.5649h</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    </bibl>
+                    <bibl type="corpus" n="SGDI">
+                        <citedRange>5240</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
+                    </bibl>
+                    <bibl>
+                        <author>Kaibel</author>
+                        <date>1878</date>
+                        <citedRange>no.599</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R6EN7EKK"/>
+                    </bibl>
+                    <bibl>
+                        <author>Peek</author>
+                        <date>1955</date>
+                        <citedRange>883</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RIH8AQF6"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1958-1959</date>
+                        <citedRange>19-24 no.4 fig.5</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/BVD8KVF7"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1961</date>
+                        <citedRange>196</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HXK7DASC"/>
+                    </bibl>
+                    <bibl>
+                        <author>Wilson</author>
+                        <date>1990</date>
+                        <citedRange>184 fig.153</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1994</date>
+                        <citedRange>96 no.10 fig.15</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/532NF7SV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>2010</date>
+                        <citedRange>516-518 fig.3</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZJA2JMRW"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

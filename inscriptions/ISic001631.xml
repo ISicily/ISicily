@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Epitaph for Ianouarios</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001631</idno>
+                <idno type="TM">645082</idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">175472</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001631</idno>
+                <idno type="DOI" when="2020-12-22">10.5281/zenodo.4386238</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence. </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Palazzolo Acreide</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/102">Museo Archeologico Gabriele Judica </repository>
+                        <idno type="inventory">2245</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <dimensions>
+                                        <!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <!--Default value and requires checking-->
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>		
+                                <offset>near <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                </offset>
+                            	<geo>37.05780, 14.89346</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0400" notAfter-custom="0500">C5 AD (so Orsi, p.210)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Contrada Murica</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">2015.01.17</provenance>
+                        <acquisition>Palazzolo Acreide, Museo Archeologico Gabriele Judica no. 2245</acquisition>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <note type="location">Courtyard to rear of museum</note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="unchecked">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2017-11-10" who="#JP">Jonathan Prag added bibl</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+    <surface type="front">
+      <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+        height="4912px" width="7360px">
+        <desc>Add Description Here</desc>
+      </graphic>
+      <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+        <desc>Add Description Here</desc>
+      </graphic>
+    </surface>
+
+      -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI175472">
+                <ab>
+                    <lb n="1"/>Ἰανουάριος ἐνθάδε κῖτε ζήσας χρηστῶς καὶ ἀμένπ<unclear>τ</unclear>ως ἔτ
+                    <supplied reason="lost">η</supplied>
+                    <gap reason="lost" unit="character" extent="unknown"/>
+                    <lb n="2"/>καὶ ἐν Λογαριανοῖς πρεσβύτερος ἔτη μʹ καὶ δʹ
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--large slab, covering a tomb; burial of Ianouarios, enthade keitai, a presbiteros for 44 years in Longarius, synonym for Longinius (Agnello disputes Orsi's reading of this name [I read Logarianois, as does Ferrua].--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Agnello</author>
+                        <date>1953</date>
+                        <citedRange>no.66</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>1942</date>
+                        <citedRange>208 fig.106 = Orsi (1931) 292 fig.1</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/XXUZUPJI"/>
+                    </bibl>
+                    <bibl>
+                        <author>Pugliese Carratelli</author>
+                        <date>1956</date>
+                        <citedRange>no.39</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PJDRZH66"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ferrua</author>
+                        <date>1941</date>
+                        <citedRange>204 no.77</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4HR4GXBX"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <citedRange>34-35 n.158</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
