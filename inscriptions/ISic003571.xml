@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -83,9 +83,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Five joining fragments of a thin slab of cream marble with extensive blue veins. The right hand side of the text survives entire, with part of the top, right and bottom margins intact; the lower right corner is missing, but no text is there lost. On a conservative estimate, slightly more than half of the stone is missing on the left side.</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">69.2</height>
@@ -96,10 +96,11 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>The right hand end of five lines of Latin text are preserved, with clear vacats above the first and below the final line. The text decreases in size from lines 1-4 (55-36 mm), and a slight gap precedes line 5, which is larger again (46 mm). </p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                <layout><p>The right hand end of five lines of Latin text are preserved, with clear vacats above the first and below the final line. The text decreases in size from lines 1-4 (55-36 mm), and a slight gap precedes line 5, which is larger again (46 mm).</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -140,8 +141,7 @@
                                 </offset>
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0021" notAfter-custom="0050">Augustan/Julio-Claudian
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0021" notAfter-custom="0050">Augustan/Julio-Claudian</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Excavated in 1971, in room 7 of the west portico of the agora <geo>37.997856, 14.262463</geo></provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2011.06.15</provenance>
@@ -155,6 +155,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -176,7 +184,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
                 </keywords>
             </textClass>
         </profileDesc>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -77,9 +77,9 @@
                             <supportDesc>
                                 <support>
                                     <p>A slab of white marble, broken into six joining fragments, with only the left margin partially preserved</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">Marble
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <dimensions><!-- measurements of GV -->
                                         <height unit="cm">50.5</height>
@@ -92,9 +92,10 @@
                             <layoutDesc>
                                 <layout>
                                     <p>The remains of six evenly spaced lines of Latin letters are preserved, with a regular left margin; the right margin is not preserved for any line</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -119,8 +120,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
                             	<geo>37.32084, 13.58876</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0300">later second or third century AD
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0300">later second or third century AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in secondary deposition during excavations in the summer of 2015 in the western part of the area of the 'Hellenistic-Roman temple'<geo>37.298238, 13.589125</geo></provenance>
                         <provenance type="observed" subtype="autopsied" resp="#GV">2016 (Vallarino)</provenance>
@@ -129,6 +129,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -150,7 +158,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">Honorific (?)</term>
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">Honorific (?)</term>
                 </keywords>
             </textClass>
         </profileDesc>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -79,9 +79,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble (white)
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble (white)
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <p>Fragment of white marble slab, broken on all sides; finished on the reverse</p>
                                     <dimensions>
@@ -94,19 +94,18 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                    <p>Parts of two lines of latin letters are preserved. Substantial vacat below line 2.
-                                    </p>
-                                </layout>
+                                    <p>Parts of two lines of latin letters are preserved. Substantial vacat below line 2.</p>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
                                 <p>The letters are neatly V-cut, of wide proportions, with minimal serifs. P is open; S
                                     has a larger upper half, leaning slightly to the right. Words are separated by a
-                                    comma-like three pointed serif.
-                                </p>
+                                    comma-like three pointed serif.</p>
                                 <locus from="line1" to="line2">Lines 1-2</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">38-40</height>
@@ -141,6 +140,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -162,7 +169,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific; building (?)
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific; building (?)
                     </term>
                 </keywords>
             </textClass>
@@ -219,8 +226,7 @@
                     follows is certainly plausible (i.e. that the individual named in the first part of the inscription
                     restored something – a building perhaps – at his/her own expense due to the lack of funds on the
                     part of the town or another body or individual). Manganaro’s suggestion of incohavit is also
-                    possible, and there are few other alternatives beginning INC or INO.
-                </p>
+                    possible, and there are few other alternatives beginning INC or INO.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

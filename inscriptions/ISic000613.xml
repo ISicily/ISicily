@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -79,10 +79,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="stucco" ref="http://www.eagle-network.eu/voc/material/lod/126.html">stucco
-                                    </material>
-                                    <objectType key="painted_wall" ref="http://www.eagle-network.eu/voc/objtyp/lod/416.html">painted wall
-                                    </objectType>
+                                    <material ana="#material.stone.stucco" ref="http://www.eagle-network.eu/voc/material/lod/126.html">stucco</material>
+                                    <objectType ana="#object.arch_element.wall" ref="http://www.eagle-network.eu/voc/objtyp/lod/416.html">wall</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -93,9 +91,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/10">Painted
-                                    </rs>
-                                </layout>
+                                    <rs ana="#execution.painted" ref="http://www.eagle-network.eu/voc/writing/lod/10">Painted</rs>
+                                	<damage/>
+	              </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -118,8 +116,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
                             	<geo>37.85358, 15.28851</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0100">Late C3 BC or C2 BC
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0100">Late C3 BC or C2 BC</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">The fragments were found in 1969, without clear dating evidence, in the fill of a large cistern within an ancient building containing a small peristyle courtyard - most likely a rich private house - on the slopes below the theatre (adjoining via Bagnoli Croci, next to the modern Hotel Taormina Park)<geo>37.850795, 15.291562</geo></provenance>
                         <provenance type="observed" subtype="autopsied">2017.03.22</provenance>
@@ -133,6 +130,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">

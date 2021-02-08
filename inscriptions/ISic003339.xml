@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -77,14 +77,13 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
                                         marble (white)
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <p>A rectangular off-white marble slab, broken in three joining fragments, the lower
-                                        right corner missing. The reverse is unfinished.
-                                    </p>
+                                        right corner missing. The reverse is unfinished.</p>
                                     <dimensions>
                                         <height unit="cm">15.1</height>
                                         <width unit="cm">70.2</width>
@@ -95,19 +94,18 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
                                     <p>Latin text over three lines. The two letters of the third line are centred and
-                                        much smaller
-                                    </p>
-                                </layout>
+                                        much smaller</p>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
                                 <p>Neat v-cut letters, well, but not perfectly spaced and regular, with deep triangular
-                                    serifs, and deep triangular interpuncts between every word. Long 'I' is elongated.
-                                </p>
+                                    serifs, and deep triangular interpuncts between every word. Long 'I' is elongated.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">42-61</height>
@@ -135,8 +133,7 @@
                             	<geo>38.16579, 14.75064</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0014" notAfter-custom="0037">AD 14-37 (reign of
-                                Tiberius)
-                            </origDate>
+                                Tiberius)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found when digging a well in or before 1882, on the farm of Filippo
                             Cangemi, Capo d'Orlando (Casa Cangemi is marked on the 1:25000 map)
@@ -148,6 +145,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -169,7 +174,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -284,13 +289,11 @@
             </div>
             <div type="translation" xml:lang="en">
                 <p>For Tiberius Caesar, son of the divine Augustus. Publius Clodius Rufus Latro, son of Gaius took care
-                    of making this with his own money.
-                </p>
+                    of making this with his own money.</p>
             </div>
             <div type="commentary">
                 <p>This is the only known inscription from the immediate area of Capo d'Orlando (probably ancient
-                    Agathyrnum).
-                </p>
+                    Agathyrnum).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

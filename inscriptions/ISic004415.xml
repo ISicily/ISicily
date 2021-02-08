@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -75,8 +75,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Plinth (support for a stele) with mouldings top and bottom, of the local sandstone; the upper moulding is damaged, principally at the corners. The plinth is the left one of a pair mounted on a single base, classified as an epitymbion of type C.</p>
-                                    <material key="sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
-                                    <objectType key="plinth" ref="https://www.eagle-network.eu/voc/objtyp/lod/1910.html">plinth</objectType>
+                                    <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
+                                    <objectType ana="#object.arch_element.plinth" ref="https://www.eagle-network.eu/voc/objtyp/lod/1910.html">plinth</objectType>
                                     <dimensions><!--from Sofia 2018-->
                                         <height unit="cm">32</height>
                                         <width unit="cm">60</width>
@@ -87,8 +87,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Single line of greek letters approximately centred on the face of the plinth</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -122,6 +123,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -143,7 +152,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -189,7 +198,7 @@
                 <p>Krimma, child of Aunakos</p>
             </div>
             <div type="commentary">
-                <p>The name Κριμμα lacks parallels (although note <ref target="http://www.lgpn.ox.ac.uk/id/V3b-13184">Κριμμάτιον</ref> at Pythion in northern Greece, and is most likely an indigenous name; the same is true for Αυνακος. This plinth is one of a pair on a single base - a type attested several times in this necropolis - and the second plinth (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004416">ISic004416</ref>) is also inscribed and appears also to bear the name Αυνακος in the genitive as its second element, suggesting that the tomb is a double one for siblings. The same situation seems to be attested in the case of <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004417">ISic004417</ref> / <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004418">ISic004418</ref>. The first name here appears to be in the nominative (which has a parallel in <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001208">ISic001208</ref>), rather than the more commonly found genitive in this necropolis. </p>
+                <p>The name Κριμμα lacks parallels (although note <ref target="http://www.lgpn.ox.ac.uk/id/V3b-13184">Κριμμάτιον</ref> at Pythion in northern Greece, and is most likely an indigenous name; the same is true for Αυνακος. This plinth is one of a pair on a single base - a type attested several times in this necropolis - and the second plinth (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004416">ISic004416</ref>) is also inscribed and appears also to bear the name Αυνακος in the genitive as its second element, suggesting that the tomb is a double one for siblings. The same situation seems to be attested in the case of <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004417">ISic004417</ref> / <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004418">ISic004418</ref>. The first name here appears to be in the nominative (which has a parallel in <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001208">ISic001208</ref>), rather than the more commonly found genitive in this necropolis.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

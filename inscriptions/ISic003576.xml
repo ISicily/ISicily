@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -79,9 +79,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A large thin slab of reddish-pink veined marble. The rear is rough and unfinished. Intact at upper left, top and upper right (except for the extreme top left corner), but broken across the bottom, with parts of the lower left and right margins also missing. The lower right portion of the slab has been recomposed of several small fragments.</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">55.1</height>
@@ -93,9 +93,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Six lines of Latin text are preserved, and only a single letter seems to be lost from the end of the final line (and traces of that letter survive).There are traces of red paint preserved in several of the letters. The text as a whole is neatly centred.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -138,6 +139,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,7 +168,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>

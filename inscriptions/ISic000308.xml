@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -84,8 +84,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Two joining fragments of a white marble tablet. The larger fragment is intact along the upper edge, but broken left and right. The lower edge is uneven and corroded. The smaller fragment is broken or eroded on all sides, but preserves part of the right margin. Both fragments are highly finished on the reverse. The larger fragment preserves a raised margin along the upper edge of the reverse. Faint traces of a similar raised margin on the lower right corner of the reverse of the smaller fragment suggest the stone is more or less complete bottom right, but the text could have continued on a second stone below. If the restoration of the Emperors' titles in line 1 is correct, then approximately half the stone is missing on the left side. Some letters are lost from the right margin over the first few lines.</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula</objectType>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula</objectType>
                                     <dimensions>
                                         <height unit="cm">30.5</height>
                                         <width unit="cm">greater than 53</width>
@@ -96,8 +96,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p> Latin text preserved over 12 lines. The first line is in slightly larger and more widely spaced letters. The text closes up over lines 2 and 3, with a more or less regular size and spacing over the rest of the stone. Interpuncts are used sparingly in the text, and their placing appears deliberately intended to emphasise certain elements. The letters are neatly cut, with limited serifs (but sometimes substantial feet to vertical strokes), and a tendency towards the taller narrower letters common from the second/third centuries AD onwards; this is particularly noticeable with the letter E, which is not always easy to distinguish when corroded. Tall 'I' is employed. P is generally open.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -135,6 +136,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -156,7 +165,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="building" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html">building</term>
+                    <term ana="#function.building" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html">building</term>
                 </keywords>
             </textClass>
         </profileDesc>

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>
-                    <seg xml:lang="en">Funerary inscription for Kallistos and Eukarpia</seg>
-                </title>
+                <title>Funerary inscription for Kallistos and Eukarpia</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -79,23 +77,14 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="grc">
-                            <seg xml:lang="en">Ancient Greek</seg>
-                        </textLang>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        <seg xml:lang="en">marble</seg>
-                                    </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">
-                                        <seg xml:lang="en">tablet</seg>
-                                    </objectType>
-                                    <p>
-                                        <seg xml:lang="en"/>
-                                    </p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tablet</objectType>
                                     <dimensions>
                                         <height unit="cm">28</height>
                                         <width unit="cm">30.2</width>
@@ -106,16 +95,14 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">
-                                        <seg xml:lang="en">Engraved</seg>
-                                    </rs>
-                                    <seg xml:lang="en"/>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <seg xml:lang="en"/>
+                                <p/>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">30-40</height>
@@ -134,9 +121,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300">
-                                <seg xml:lang="en">Third century AD (?)</seg>
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300">Third century AD (?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in Catania (precise location unknown), shortly after 1705.</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -150,6 +135,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -171,9 +164,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">
-                        <seg xml:lang="en">funerary</seg>
-                    </term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -222,13 +213,11 @@
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Kallistos and Eukarpia, who, loving one another tenderly, made this while living for themselves and
-                    their family. Peace to all.
-                </p>
+                    their family. Peace to all.</p>
             </div>
             <div type="translation" xml:lang="it" resp="#SA">
                 <p>Callistos e Eukarpia, che, amandosi reciprocamente con tenerezza, in vita la costruirono per se
-                    stessi e per i propri cari. Pace a tutti.
-                </p>
+                    stessi e per i propri cari. Pace a tutti.</p>
             </div>
             <div type="commentary" xml:lang="en">
                 <p><!--commented out pending revision-->
@@ -237,8 +226,7 @@
                     third century BC; but the final phrase is typical of Christian inscriptions, which implies that this
                     is one of the earliest Christian texts from Catania. Kallistos is a common name, although rare in
                     Sicily; Eukarpia is less common generally, but well attested in eastern Sicily. The paint is a
-                    modern addition and misses several of the less well-preserved letter strokes
-                </p>
+                    modern addition and misses several of the less well-preserved letter strokes</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

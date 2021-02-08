@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>
-                    <seg xml:lang="en">Inscribed block of uncertain purpose</seg>
-                </title>
+                <title>Inscribed block of uncertain purpose</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -78,23 +76,14 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="la">
-                            <seg xml:lang="en">Latin</seg>
-                        </textLang>
+                        <textLang mainLang="la">Latin</textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">
-                                        <seg xml:lang="en">volcanic</seg>
-                                    </material>
-                                    <objectType key="cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85.html">
-                                        <seg xml:lang="en">cippus</seg>
-                                    </objectType>
-                                    <p>
-                                        <seg xml:lang="en"/>
-                                    </p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
+                                    <objectType ana="#object.cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85.html">cippus</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -105,16 +94,14 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">
-                                        <seg xml:lang="en">Engraved</seg>
-                                    </rs>
-                                    <seg xml:lang="en"/>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <seg xml:lang="en"/>
+                                <p/>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -133,9 +120,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0300">
-                                <seg xml:lang="en">Second or third century AD</seg>
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0300">Second or third century AD</origDate>
                         </origin>
                         <provenance type="found"></provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -149,6 +134,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -170,9 +163,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="terminus" ref="http://www.eagle-network.eu/voc/typeins/lod/96.html">
-                        <seg xml:lang="en">terminus</seg>
-                    </term>
+                    <term ana="#function.terminus" ref="http://www.eagle-network.eu/voc/typeins/lod/96.html">terminus</term>
                 </keywords>
             </textClass>
         </profileDesc>

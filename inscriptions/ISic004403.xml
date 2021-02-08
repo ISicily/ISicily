@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -77,8 +77,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A somewhat damaged block with triglyphs on four sides, with a single line of text running below the triglyphs on one side</p>
-                                    <material key="tufa limestone" ref="http://www.eagle-network.eu/voc/material/lod/64.html">tufa limestone</material>
-                                    <objectType key="architrave" ref="http://www.eagle-network.eu/voc/objtyp/lod/119.html">architrave</objectType>
+                                    <material ana="#material.stone.limestone_tufa" ref="http://www.eagle-network.eu/voc/material/lod/64.html">tufa limestone</material>
+                                    <objectType ana="#object.arch_element.architrave" ref="http://www.eagle-network.eu/voc/objtyp/lod/119.html">architrave</objectType>
                                     <dimensions><!-- measurements from Pace 1916: 734 n.1 -->
                                         <height unit="cm">46</height>
                                         <width unit="cm">65</width>
@@ -89,8 +89,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>single incomplete line of Greek letters immediately below the triglyphs</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -122,6 +123,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -143,7 +152,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="unknown" ref="https://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
+                    <term ana="#function.unknown" ref="https://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
                 </keywords>
             </textClass>
         </profileDesc>

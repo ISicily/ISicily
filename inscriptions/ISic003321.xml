@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -81,14 +81,13 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">
+                                    <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">
                                         sandstone
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">Slab
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">Slab
                                     </objectType>
                                     <p>A large quadrangular slab of sandstone, intact and finished on all sides, but
-                                        left rough on the reverse
-                                    </p>
+                                        left rough on the reverse</p>
                                     <dimensions>
                                         <height unit="cm">64</height>
                                         <width unit="cm">75</width>
@@ -99,20 +98,19 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
                                     <p>One word on each of two lines, with clear space at the end of each line as well
-                                        as above and below
-                                    </p>
-                                </layout>
+                                        as above and below</p>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
                                 <p>Very large clear letters without serifs, regularly cut: omicron is smaller and
                                     mid-line; epsilon middle bar is not joined to the vertical; alpha with straight bar;
-                                    beta with closed eyes, the lower is larger.
-                                </p>
+                                    beta with closed eyes, the lower is larger.</p>
                                 <locus from="line1" to="line2">Lines 1-2</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">170</height>
@@ -132,8 +130,7 @@
                             	<geo>37.26494, 14.69381</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100" cert="low">
-                                Hellenistic
-                            </origDate>
+                                Hellenistic</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in contrada Sparagagna and acquired by Orsi, 30 June 1903
                             <geo>37.28726, 14.66071</geo>
@@ -149,6 +146,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -170,7 +175,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -244,8 +249,7 @@
                     first proposed by Orsi, and subsequently by Manganaro, appears unnecessary - an assumption that
                     finds support both in the fact that the stone is clearly intact and the text carefully laid out with
                     space above, below and after the visible letters, and because the formula 'vocative + χαῖρε' is
-                    attested more than once in other epitaphs from Mineo.
-                </p>
+                    attested more than once in other epitaphs from Mineo.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

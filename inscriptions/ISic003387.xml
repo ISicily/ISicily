@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -80,10 +80,10 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
                                         limestone
                                     </material>
-                                    <objectType key="block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">
                                         block
                                     </objectType>
                                     <p>A slightly tapering rectangular block of yellow grey limestone: height 440 mm
@@ -113,8 +113,7 @@
                                         of the stone, including a significant chip to the left margin of the front face
                                         and two substantial gouges in
                                         the upper left of the front face of the stone, extending from the red band into
-                                        the inscribed field.
-                                    </p>
+                                        the inscribed field.</p>
                                     <dimensions>
                                         <height unit="cm">44</height>
                                         <width unit="cm">32</width>
@@ -125,13 +124,11 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/7">Relief
-                                        letters
-                                    </rs>
                                     <p>Two lines of Greek letters in very light relief, centred in a slightly recessed
-                                        field in the middle of the front face.
-                                    </p>
-                                </layout>
+                                        field in the middle of the front face.</p>
+                                    <rs ana="#execution.chiselled #execution.relief" ref="http://www.eagle-network.eu/voc/writing/lod/7">Relief letters</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -143,8 +140,7 @@
                                     include the kappa (arms are symmetrical and do not extend to the top and bottom of
                                     the line); alpha (very broad and straight); sigma (consistently formed with open
                                     upper and lower bars); omicron (smaller than the other letters and mid-line);
-                                    epsilon (shorter middle-bar).
-                                </p>
+                                    epsilon (shorter middle-bar).</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">35</height>
@@ -168,8 +164,7 @@
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0200">Hellenistic,
-                                third-century (by letter form)
-                            </origDate>
+                                third-century (by letter form)</origDate>
                         </origin>
                         <provenance type="found">Unknown</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2013.10.04</provenance>
@@ -183,6 +178,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -204,7 +207,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -301,16 +304,14 @@
                         Νικασίων
                     </ref> is well attested in Sicily, with one instance at Adranon, two at Akrai, one at Henna, two at
                     Lipara, and one at Tauromenion. The patronym, <ref target="http://clas-lgpn2.classics.ox.ac.uk/cgi-bin/lgpn_search.cgi?region=sicily;namenoaccents=ΑΡΙΣΤΟΚΡΑΤΗΣ">
-                        Ἀριστοκράτης</ref>, is extremely common, including ten instances in Sicily.
-                </p>
+                        Ἀριστοκράτης</ref>, is extremely common, including ten instances in Sicily.</p>
                 <p>The use of relief lettering and bichromatic colouring on alternate letters are both extremely rare in
                     classical epigraphy. Attested examples of both features are discussed in detail in Prag 2017. Relief
                     lettering is not otherwise attested in Sicily (except on a couple of examples of engraved river
                     stones), and the clearest parallels can be found in late Hellenistic funerary epigraphy from western
                     Greece (Corcyra, Ambracia, Apollonia, etc.). Bichrome painted letters are also found in a funerary
                     inscription from Lilybaeum (Marsala) - ISic003662 - but are generally very unusual. A number of
-                    examples are attested in funerary inscriptions from ancient Lycia.
-                </p>
+                    examples are attested in funerary inscriptions from ancient Lycia.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

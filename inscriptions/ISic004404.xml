@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -78,8 +78,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Substantial fragment of a mosaic floor, with wave pattern border surrounding white field, with dolphins in corners, standing figure with cup in centre; a 'doormat' at the lower edge, with greeting inscription above, at entry to room</p>
-                                    <material key="mosaic" ref="http://www.eagle-network.eu/voc/material/lod/134.html">mosaic</material>
-                                    <objectType key="mosaic" ref="http://www.eagle-network.eu/voc/objtyp/lod/184">mosaic</objectType>
+                                    <material ana="#material.mosaic" ref="http://www.eagle-network.eu/voc/material/lod/134.html">mosaic</material>
+                                    <objectType ana="#object.mosaic" ref="http://www.eagle-network.eu/voc/objtyp/lod/184">mosaic</objectType>
                                     <dimensions>
                                         <height unit="cm">329</height>
                                         <width unit="cm">277</width>
@@ -90,8 +90,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Text set out in large red letters along the lower edge facing the entrant to the room, on a single line</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/16">tessillis</rs>
-                                </layout>
+                                    <rs ana="#execution.mosaic" ref="http://www.eagle-network.eu/voc/writing/lod/16">Mosaic</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -123,6 +124,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -144,7 +153,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="greeting" ref="http://www.eagle-network.eu/voc/typeins/lod/386.html">greeting</term>
+                    <term ana="#function.greeting" ref="http://www.eagle-network.eu/voc/typeins/lod/386.html">greeting</term>
                 </keywords>
             </textClass>
         </profileDesc>

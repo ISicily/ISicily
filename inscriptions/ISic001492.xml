@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -81,9 +81,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A rectangular slab of marble, heavily abraded on the upper right corner, but without obscuring the text.</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <dimensions><!--from Bitto 2001: 112-->
                                         <height unit="cm">23</height>
@@ -95,9 +95,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Five lines of Greek, centred on the stone with an attempt to maintain regular margins. Guide lines are visible. Words are separated by substnatial interpuncts, and the final line is visibly smaller.</p>Five lines
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -138,6 +139,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,7 +168,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -212,8 +221,7 @@
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--Th.K. heading. Of Aisaris Sataras, a freedman of eastern origin, of someone with a gentilicium taken from the Esarus of Calabria?, viz. Esarius, etc. - or so suggests Ferrua. Age in years given.-->
-                </p>
+                    <!--Th.K. heading. Of Aisaris Sataras, a freedman of eastern origin, of someone with a gentilicium taken from the Esarus of Calabria?, viz. Esarius, etc. - or so suggests Ferrua. Age in years given.--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

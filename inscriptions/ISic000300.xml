@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -81,10 +81,10 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="copper" ref="http://www.eagle-network.eu/voc/material/lod/113.html">
+                                    <material ana="#material.metal.copper" ref="http://www.eagle-network.eu/voc/material/lod/113.html">
                                         copper
                                     </material>
-                                    <objectType key="lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">
+                                    <objectType ana="#object.lanima" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">
                                         lamina
                                     </objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -97,9 +97,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -131,6 +132,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -152,7 +161,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="votive" ref="http://www.eagle-network.eu/voc/typeins/lod/83.html">votive</term>
+                    <term ana="#function.votive" ref="http://www.eagle-network.eu/voc/typeins/lod/83.html">votive</term>
                 </keywords>
             </textClass>
         </profileDesc>

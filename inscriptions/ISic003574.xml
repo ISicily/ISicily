@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -79,9 +79,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Two joining fragments of a marble slab, cream-coloured with blue-grey veins. Part of the left margin is preserved, but the stone is broken the other three sides. The rear of both fragments is finished and smooth. The lower fragment (b) has surface accretions on the front face that are not present on fragment (a).</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">22.5</height>
@@ -93,8 +93,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The remains of two lines of Latin text are visible, neatly following guidelines to top and bottom in both cases. There is no trace of letters either above line 1 or below line 2, but in both cases a shorter line length and a centred text could account for this. The absence of a guide line above line 1 suggests that this may be the first line of the text; but there does seem to be the faint trace of a guide line visible below line 2, which would then be the upper guide line for a hypothetical line 3. The break at the beginning of line 2 makes it formally impossible to know if there were one or two additional letters at the start of line 2, but the nature of the surviving text makes this unlikely.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -138,6 +139,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,7 +168,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">honorific (?)</term>
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">honorific (?)</term>
                 </keywords>
             </textClass>
         </profileDesc>

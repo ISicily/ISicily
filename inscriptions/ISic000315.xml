@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>
-                    <seg xml:lang="en">Fragmentary inscription of a civic magistrate</seg>
-                </title>
+                <title>Fragmentary inscription of a civic magistrate</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -80,27 +78,18 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="la">
-                            <seg xml:lang="en">Latin</seg>
-                        </textLang>
+                        <textLang mainLang="la">Latin</textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        <seg xml:lang="en">marble</seg>
-                                    </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">
-                                        <seg xml:lang="en">tablet</seg>
-                                    </objectType>
-                                    <p>
-                                        <seg xml:lang="en">Fragment of a white marble slab. The left margin is
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tablet</objectType>
+                                    <p>Fragment of a white marble slab. The left margin is
                                             preserved, but otherwise broken top, right, and below. The rear is finished
                                             and smooth. The left edge is finished and smooth. A moulding is preserved on
-                                            the left side, 3.5 cm wide, and beginning 4.7 cm in from the left edge.
-                                        </seg>
-                                    </p>
+                                            the left side, 3.5 cm wide, and beginning 4.7 cm in from the left edge.</p>
                                     <dimensions>
                                         <height unit="cm">17.8</height>
                                         <width unit="cm">26.3</width>
@@ -111,20 +100,16 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">
-                                        <seg xml:lang="en">Engraved</seg>
-                                    </rs>
-                                    <seg xml:lang="en">Beginning of two lines of Latin letters, set within the moulding.
-                                        Red paint is preserved in some of the letters.
-                                    </seg>
-                                </layout>
+                                    <p>Beginning of two lines of Latin letters, set within the moulding. Red paint is preserved in some of the letters.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <seg xml:lang="en">Neat, elegant letters in a thin v-cut; both lines are broken off and
-                                    incomplete.
-                                </seg>
+                                <p>Neat, elegant letters in a thin v-cut; both lines are broken off and
+                                    incomplete.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">greater than 30</height>
@@ -147,9 +132,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150">
-                                <seg xml:lang="en">C1 AD, or beginning C2 AD (so Korhonen)</seg>
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150">C1 AD, or beginning C2 AD (so Korhonen)</origDate>
                         </origin>
                         <provenance type="found" cert="low">Probably from Catania</provenance>
                         <provenance type="found" subtype="first-recorded">First recorded by Mommsen in the Museo Biscari.</provenance>
@@ -164,6 +147,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -185,9 +176,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">
-                        <seg xml:lang="en">honorific (?)</seg>
-                    </term>
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">honorific (?)</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -278,8 +267,7 @@
                     form or material (e.g. compare the moulding on each), the text presented on each appears to be the
                     same. A manuscript in the Vatican library records a fourth, similar fragment seen in the Museo dei
                     Benedettini by C. Stevenson in the 1880s. The text, which may be common to all these fragmentary
-                    inscriptions, can be restored as it has been here.
-                </p>
+                    inscriptions, can be restored as it has been here.</p>
                 <p>The texts are probably honorific inscriptions. Marble slabs of this sort are commonly attached to a
                     statue base or similar monument. The base itself would be made out of a different, cheaper, local
                     stone (e.g. volcanic stone), the more expensive imported marble reserved for the inscription. The
@@ -289,8 +277,7 @@
                     individual (both possibilities are attested elsewhere). The remainder of the inscription will have
                     included details of the rest of his career (compare the inscriptions for Quintus Atilius Severus
                     (also of the Claudian tribe) and Lucius Rubrius Proculus). Lucius Caelius Macer is one of five
-                    duumviri known from Roman Catania.
-                </p>
+                    duumviri known from Roman Catania.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

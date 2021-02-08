@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -81,9 +81,9 @@
                             <supportDesc>
                                 <support>
                                     <p>A thick fragment of a dense grey stone (identified so far as a calcitic stone), broken on all sides. The rear is rough and uneven. The thickness of the stone suggests a substantial free-standing stele, but the unfinished state of the reverse may suggest either that it stood against an existing structure, or that it was not free-standing but built into a monument of some description. The unusual stone has similarities to the material used for the large honorific base for Hieron II, <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000823">ISic000823</ref></p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions>
                                         <height unit="cm">13</height>
                                         <width unit="cm">36-42</width>
@@ -95,9 +95,10 @@
                             <layoutDesc>
                                 <layout>
                                     <p>The text is set out in two columns on the front face. The left margin of the second column is justified, the right margin of the first column is uneven. Part of the text of the right column, from line 6 (the oath) onwards, is indented</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -135,6 +136,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -156,7 +165,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="letter" ref="http://www.eagle-network.eu/voc/typeins/lod/402.html">letter</term>
+                    <term ana="#function.letter" ref="http://www.eagle-network.eu/voc/typeins/lod/402.html">letter</term>
                 </keywords>
             </textClass>
         </profileDesc>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -72,8 +72,8 @@
                             <supportDesc>
                                 <support>
                                     <p>Right half of a limestone plaque. The left half is missing, minor damage to the upper and right edges. The reverse is rough. Remains of an iron nail in the upper edge rear edge, and traces of a metal clamp on the upper margin</p>
-                                    <material key="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType key="plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">24.8</height>
                                         <width unit="cm">30.5</width>
@@ -85,8 +85,9 @@
                             <layoutDesc>
                                 <layout>
                                     <p>Remains of five lines of Greek letters, apparently cnetered on the stone, with incised guidelines. The final line is significantly smaller. The outline of a human hand is incised on the lower right below the text.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -109,8 +110,7 @@
                                 <placeName ref="http://sws.geonames.org/2524170" type="modern">Messina</placeName>
                                 <geo>38.19394, 15.55256</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200">C1-C2 AD
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200">C1-C2 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Excavated (between 1990 and 2012) in the southern necropolis, in re-use as the cover of an ash-chest in t.1, Isolato 96, II Comparto, via degli Orti<geo>38.183646, 15.549568</geo></provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -124,6 +124,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -145,7 +153,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>

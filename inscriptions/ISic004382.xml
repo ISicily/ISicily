@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -72,8 +72,8 @@
                             <supportDesc>
                                 <support>
                                     <p>A rectangular tablet of white marble (a small fragment on the middle lower margin has been reattached) with minor chipping to the upper and right edges. The rear is smooth.</p>
-                                        <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType key="plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                        <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
                                         <height unit="cm">20</height>
                                         <width unit="cm">31</width>
@@ -85,8 +85,9 @@
                             <layoutDesc>
                                 <layout>
                                     <p>Five lines of Greek letters, unevenly set out and unevenly spaced (the first line is set apart by a larger gap from the remaining lines); a left margin is more or less observed.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -109,8 +110,7 @@
                                 <placeName ref="http://sws.geonames.org/2524170" type="modern">Messina</placeName>
                                 <geo>38.19394, 15.55256</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300">C2-3 AD
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300">C2-3 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Recovered from demolition of a C19 house on via Quod Quaeris, Messina, and therefore presumed to come from the 'northern' necropolis<geo>38.202117, 15.554338</geo><!-- approx geo, locating the street, but not the actual findspot --></provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -124,6 +124,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -145,7 +153,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>

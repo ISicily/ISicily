@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -78,10 +78,10 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A section of moulding, composed of off-white marble. Intact at the left end, with a clean cut or break at the right end (both the inscription and moulding are incomplete). The upper edge is rough chiselled, with metal pegs inserted in the top towards each end (8cm from left end, 5 cm from right end). The moulding is made up of four stepped elements, of which the lower (and larger) two carry the inscribed field. </p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                <support><p>A section of moulding, composed of off-white marble. Intact at the left end, with a clean cut or break at the right end (both the inscription and moulding are incomplete). The upper edge is rough chiselled, with metal pegs inserted in the top towards each end (8cm from left end, 5 cm from right end). The moulding is made up of four stepped elements, of which the lower (and larger) two carry the inscribed field.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar or base
+                                    <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar or base
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">11.8</height>
@@ -93,9 +93,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Two lines of Latin text incised on the lower two elements of the moulding</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -134,6 +135,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -155,7 +164,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -222,8 +231,7 @@
                 <listApp><app><note>Text from autopsy</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
-                <p>To the Genius of Augustus and [---] Lucius Cornelius Eupl[us?], freedman of a woman [(set this up)---]
-                </p>
+                <p>To the Genius of Augustus and [---] Lucius Cornelius Eupl[us?], freedman of a woman [(set this up)---]</p>
             </div>
             <div type="commentary" resp="#JP">
                 <p>Approximately half the text can be assumed to be missing from the right side. Dedications to the Genius of Augustus are commonly paired with dedications to the (Augustan) Lares. Line 1 therefore probably originally read in full: Genio Augusti et Laribus Augustis. Line 2 might have contained the name of a second individual, but the available space is probably not sufficient for this, and it is more likely that the cognomen of Cornelius was followed by an indication of the position he held (sevir or sevir Augustalis) and an abbreviation such as S(ua) P(ecunia) F(ecit) (i.e. set it up at his own expense).</p>

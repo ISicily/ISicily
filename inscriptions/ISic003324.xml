@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -78,9 +78,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A small square marble base (a relatively fine off-white marble), intact on all sides, but with part of the upper rim missing on the front face. There is a recessed square depression on the top surface, which is rough-picked within. The sides are roughly finished, but front and back faces are finely finished (and inscribed)</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base
+                                    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">18.6</height>
@@ -92,9 +92,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Three lines of Latin letters centred on each of front and rear face, first line larger in both cases</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -149,8 +150,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
                             	<geo>37.32084, 13.58876</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0016" notAfter-custom="0004">Perhaps between 16 BC and 4 AD
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0016" notAfter-custom="0004">Perhaps between 16 BC and 4 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Area of bouleuterion, 1983<geo>37.297479, 13.589125</geo></provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2018.07.17 Prag</provenance>
@@ -164,6 +164,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -185,7 +193,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific
                     </term>
                 </keywords>
             </textClass>

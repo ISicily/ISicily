@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -78,17 +78,16 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
                                         limestone
                                     </material>
-                                    <objectType key="statue" ref="http://www.eagle-network.eu/voc/objtyp/lod/241.html">
+                                    <objectType ana="#object.statue" ref="http://www.eagle-network.eu/voc/objtyp/lod/241.html">
                                         statue
                                     </objectType>
                                     <p>A limestone statue of Demeter, holding a large torch in right hand and a piglet
                                         in her left. The rear of the stone is cut straight and the statue is in full
                                         relief rather than free-standing, with the stone left intact below to form a
-                                        pedastal.
-                                    </p>
+                                        pedastal.</p>
                                     <dimensions>
                                         <height unit="cm">62</height>
                                         <width unit="cm">30.3</width>
@@ -99,7 +98,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
                                     <p>The text is engraved over six lines on a flat field 30.3 cm wide and 12-13 cm
                                         high. The left and right sides of this field are cut smooth, the upper and lower
@@ -107,17 +106,16 @@
                                         inscription is intact apart from damage to the middle of line 1 where the upper
                                         front edge of the plinth has been damaged. There is a clear vacat to the bottom
                                         and right of the text. The first line is larger and extends to left and right of
-                                        the rest of the text. Lines 2-6 have a consistent left margin.
-                                    </p>
-                                </layout>
+                                        the rest of the text. Lines 2-6 have a consistent left margin.</p>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
                                 <p>Alpha has broken bar; epsilon and sigma are lunate; omega is lightly but clearly
                                     rhomboid; omicron is smaller than the other letters and sits above the line; phi is
-                                    extended well above and below the line.
-                                </p>
+                                    extended well above and below the line.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">8-13</height>
@@ -139,8 +137,7 @@
                                 <placeName type="ancient"/>
                                 <placeName type="modern" ref="http://pleiades.stoa.org/places/462115/">Borgellusa di Avola</placeName>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0100">C2 BC (so Manganaro 2009)
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0100">C2 BC (so Manganaro 2009)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Contrada Bargalluzzo (Borgellusa di Avola) <geo>36.918320,
                             15.156483</geo>, Oct. 1954, chance find
@@ -156,6 +153,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -177,7 +182,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication; list of
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication; list of
                         magistrates
                     </term>
                 </keywords>
@@ -293,8 +298,7 @@
             </div>
             <div type="translation" xml:lang="en">
                 <p>The 'prostatai' of Demeter: Gaios Orkeios, son of Gaios; Gaios Solpikios, son of Gaios; Leukios
-                    Kaulios, son of Leukios; Chairetios son of Chairetios; Lykon son of Nymphon
-                </p>
+                    Kaulios, son of Leukios; Chairetios son of Chairetios; Lykon son of Nymphon</p>
             </div>
             <div type="commentary">
                 <p>The statue is one of three found together close to the coast at Contrada Borgelusa di Avola, in the
@@ -304,8 +308,7 @@
                     shrine)of Damater (Demeter). The first three names are Latin / Roman: Gaius Orceius, Gaius
                     Sulpicius, and Lucius Caulius. Gentili (1954) records the discovery; a Roman villa was subsequently
                     excavated in the immediate vicinity. Manganaro (2009) is the most recent discussion, dating the
-                    statue to the second century BC.
-                </p>
+                    statue to the second century BC.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

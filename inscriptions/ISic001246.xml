@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -75,8 +75,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType key="stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions>
                                         <height unit="cm">155</height>
                                         <width unit="cm">42.5 (base) - 39.8 (top)</width>
@@ -87,8 +87,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The text is inscribed on three faces, the precise organisation of which remains a question of discussion. Battistoni 2020 and 2011, after Bormann, offers the most plausible and complete reconstruction, followed here: Section A in two columns on face I (left face for the viewer), continuing upper left on face III (central face for the viewer); Section B in a single column on face II (right face for the viewer); Section C, top of face III, followed by a large lacuna; Section D, lower left of face III; Section E.i, traces top right of face III, followed by a large lacuna; section E.ii, lower right of face III.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -120,6 +121,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -141,7 +150,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="list of magistrates" ref="http://www.eagle-network.eu/voc/typeins/lod/32.html">list of magistrates</term>
+                    <term ana="#function.list.magistrates" ref="http://www.eagle-network.eu/voc/typeins/lod/32.html">list of magistrates</term>
                 </keywords>
             </textClass>
         </profileDesc>

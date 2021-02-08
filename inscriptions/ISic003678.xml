@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -79,9 +79,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Two small joining fragments of an off-white marble plaque, of which the top margin is preserved, but broken on left, right and below. The reverse is only roughly finished.</p>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType key="tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">8.5</height>
@@ -93,13 +93,14 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The remains of two lines of Greek letters are preserved, with a small border of white space above; the second line is only partially preserved; the beginning and end of both lines is missing.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Relatively tall and thin letters with short serifs: alpha with straight bar; kappa with full length, lightly curving tail; rho with small closed eye; </p>
+                            <handNote><p>Relatively tall and thin letters with short serifs: alpha with straight bar; kappa with full length, lightly curving tail; rho with small closed eye;</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">36</height>
@@ -120,8 +121,7 @@
                                 </offset>
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" evidence="lettering">C1- C3 AD
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" evidence="lettering">C1- C3 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in summer 1956 in trench 31 (5-10m east of the 'east portico', see Carettoni, NSA 1959, fig.8)<geo>37.998108, 14.263053</geo></provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2017-07-24</provenance>
@@ -135,6 +135,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -156,7 +164,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="unknown" ref="https://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
+                    <term ana="#function.unknown" ref="https://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
                 </keywords>
             </textClass>
         </profileDesc>

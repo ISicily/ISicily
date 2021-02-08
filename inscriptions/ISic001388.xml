@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -79,9 +79,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Described by Orsi as a fragment of volcanic stone with a moulding around the top, intact above, below and on the right side, but broken on the left: the description is compatible with either a votive altar or a small base for a statue or other dedication. Orsi himself observed that the form of the stone with moulding along the upper edge is compatible either with the upper part of a stele/cippus, or as part of a small edifice.</p>
-                                    <material key="volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
-                                    <objectType key="altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/30.html">altar
-                                        <certainty locus="value" match="../@key" assertedValue="base"><desc>base</desc></certainty></objectType>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
+                                    <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/30.html">altar
+                                        <certainty locus="value" match="../@ana" assertedValue="#object.base"><desc>base</desc></certainty></objectType>
                                     <dimensions><!--from Orsi-->
                                         <height unit="cm">45</height>
                                         <width unit="cm">25</width>
@@ -92,9 +92,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>single line of Greek letters, only partly preserved</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -129,6 +130,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -150,7 +159,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>

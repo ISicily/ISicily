@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -76,9 +76,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A block of yellow-orange local sandstone ('tufo arenaria'), intact left and below, but seemingly broken on top and on the right. Roughly finished on the reverse.</p>
-                                    <material key="sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone
+                                    <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone
                                     </material>
-                                    <objectType key="block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">33</height>
@@ -90,9 +90,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Two lines of Greek text, with a deep horizontal line above each (same depth as the letters). Although the stone is broken top and right, there is no clear evidence that the text continued beyond what is preserved (the surface is preserved beyond the text, and the 'guidelines' also stop with the preserved text. A cross precedes line 1.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -133,6 +134,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -154,7 +163,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="terminus" ref="http://www.eagle-network.eu/voc/typeins/lod/96.html">terminus</term>
+                    <term ana="#function.terminus" ref="http://www.eagle-network.eu/voc/typeins/lod/96.html">terminus</term>
                 </keywords>
             </textClass>
         </profileDesc>

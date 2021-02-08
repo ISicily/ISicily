@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -84,9 +84,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A rectangular block of limestone</p>
-                                    <material key="limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone
                                     </material>
-                                    <objectType key="block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block
                                     </objectType>
                                     <dimensions>
                                         <height unit="cm">26</height>
@@ -98,9 +98,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The text occupies two lines with interpuncts visible at the end of line 1 and between words in line 2. It is possible that the text continued below, or to the right, on another block, but it is complete in itself</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -126,8 +127,7 @@
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0150">C3 or early C2 BC (letter
-                                forms and orthography)
-                            </origDate>
+                                forms and orthography)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Said to come from Halaesa</provenance>
                         <provenance type="observed" subtype="autopsied">2017-07-21</provenance>
@@ -142,6 +142,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -163,7 +171,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -209,14 +217,14 @@
                 <listApp><app><note>Text from autopsy</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
-                <p>Lucius Carnius, son of Gaius (dedicated this) to Apollo </p>
+                <p>Lucius Carnius, son of Gaius (dedicated this) to Apollo</p>
             </div>
             <div type="translation" xml:lang="en" resp="#MF">
                 <p>Lucius Carnius, figlio di Gaius (ha dedicato questo) ad Apollo</p>
             </div>
             <div type="commentary">
-                <p>The dative Apoline (rather than Apollini) is well attested in archaic Latin (Sihler 1995: 284, §276.5; e.g. CIL 12, nos.384, 399, 1928, 2233). If the inscription is genuinely from Halaesa, then it is further evidence for the importance of the sanctuary of Apollo in the city (Diod. Sic. 14.16.4; cf. IG 14, no.352, col. II, ll. 52-54 (=<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001174">ISic001174</ref>); SEG 59 no.1100; Prestianni Giallombardo 2003: 1075-1081). The inscription also provides some of the earliest evidence for Roman presence on the island (cf. Facella 2006: 203-204), although the name Carnius is not otherwise attested on the island. Together with the milestone of Aurelius Cotta from Corleone (ILLRP 1274 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000610">ISic000610</ref>, c.252 BC), and the Egadi rostra inscriptions (Prag 2014, before 241 BC, e.g. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004367">ISic004367</ref>), this is one of the earliest Latin inscriptions from Sicily. </p>
-                    <p>The form Apoline and the letter forms suggest a date in the third or early second century BC. </p>
+                <p>The dative Apoline (rather than Apollini) is well attested in archaic Latin (Sihler 1995: 284, §276.5; e.g. CIL 12, nos.384, 399, 1928, 2233). If the inscription is genuinely from Halaesa, then it is further evidence for the importance of the sanctuary of Apollo in the city (Diod. Sic. 14.16.4; cf. IG 14, no.352, col. II, ll. 52-54 (=<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001174">ISic001174</ref>); SEG 59 no.1100; Prestianni Giallombardo 2003: 1075-1081). The inscription also provides some of the earliest evidence for Roman presence on the island (cf. Facella 2006: 203-204), although the name Carnius is not otherwise attested on the island. Together with the milestone of Aurelius Cotta from Corleone (ILLRP 1274 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000610">ISic000610</ref>, c.252 BC), and the Egadi rostra inscriptions (Prag 2014, before 241 BC, e.g. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004367">ISic004367</ref>), this is one of the earliest Latin inscriptions from Sicily.</p>
+                    <p>The form Apoline and the letter forms suggest a date in the third or early second century BC.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

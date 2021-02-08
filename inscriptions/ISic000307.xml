@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>
-                    <seg xml:lang="en">Funerary altar for Quintus Atilius Severus, duumvir of Catania</seg>
-                </title>
+                <title>Funerary altar for Quintus Atilius Severus, duumvir of Catania</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -78,23 +76,14 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="la">
-                            <seg xml:lang="en">Latin</seg>
-                        </textLang>
+                        <textLang mainLang="la">Latin</textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        <seg xml:lang="en">marble</seg>
-                                    </material>
-                                    <objectType key="altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">
-                                        <seg xml:lang="en">altar</seg>
-                                    </objectType>
-                                    <p>
-                                        <seg xml:lang="en"/>
-                                    </p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar</objectType>
                                     <dimensions><!--values from Korhonen-->
                                         <height unit="cm">135</height>
                                         <width unit="cm">89</width>
@@ -105,10 +94,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">
-                                        <seg xml:lang="en">Engraved</seg>
-                                    </rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -131,9 +119,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150">
-                                <seg xml:lang="en">C1 AD or beginning of C2 AD (Korhonen)</seg>
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150">C1 AD or beginning of C2 AD (Korhonen)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in 1832 at a depth of c.16 palms on property belonging to the Duke of Carcaci outside the Porta Ferdinanda near the hill of D. Clarae.</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2017.03.21</provenance>
@@ -147,6 +133,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -168,9 +162,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">
-                        <seg xml:lang="en">funerary</seg>
-                    </term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -294,8 +286,7 @@
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Sacred to the shades of the underworld. (Set up for) Quintus Atilius Severus, son of Quintus, of the
-                    Claudian tribe, praefectus fabrum, appointed duumvir by the votes of the people
-                </p>
+                    Claudian tribe, praefectus fabrum, appointed duumvir by the votes of the people</p>
             </div>
             <div type="translation" xml:lang="it" resp="#SA">
                 <p/>
@@ -311,8 +302,7 @@
                     under the empire it was more common for the appointments effectively to be made by co-option by the
                     decuriones (town councillors), and a formal popular vote therefore constituted an honour, whence the
                     choice to record it explicitly as here. Both the Claudia and the Quirina tribes (formal divisions of
-                    Roman citizens) are attested at Catania.
-                </p>
+                    Roman citizens) are attested at Catania.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

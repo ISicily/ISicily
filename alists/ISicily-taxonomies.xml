@@ -99,7 +99,7 @@
             <category xml:id="object.sarcophagus">
                 <catDesc>Sarcophagus</catDesc>
             </category>
-            <category xml:id="object.ash-chest">
+            <category xml:id="object.ash_chest">
                 <catDesc>Ash chest</catDesc>
             </category>
             <category xml:id="object.bench">
@@ -143,6 +143,9 @@
                 <category xml:id="object.arch_element.plinth">
                     <catDesc>Plinth</catDesc>
                 </category>
+            </category>
+            <category xml:id="object.building"> <!-- Do we keep this as a whole building or use arch parts like wall etc.? -->
+                <catDesc>Building structure</catDesc>
             </category>
             <category xml:id="object.cupa">
                 <catDesc>Cupa</catDesc> <!-- Barrel? -->
@@ -195,14 +198,26 @@
             <category xml:id="object.rock">
                 <catDesc>Rock inscription</catDesc>
             </category>
-            <category xml:id="object.tomb">
-                <catDesc>Tomb</catDesc>
-            </category>
-            <category xml:id="object.tomb_cover">
-                <catDesc>Tomb cover</catDesc>
+            <category xml:id="object.funerary_monument">
+                <catDesc>Funerary monument</catDesc>
+                <category xml:id="object.funerary_monument.tomb">
+                    <catDesc>Tomb</catDesc>
+                </category>
+                <category xml:id="object.funerary_monument.tomb_cover">
+                    <catDesc>Tomb cover</catDesc>
+                </category>
+                <category xml:id="object.funerary_monument.altar">
+                    <catDesc>Funerary altar</catDesc>
+                </category>
             </category>
             <category xml:id="object.weight">
                 <catDesc>Weight</catDesc>
+            </category>
+            <category xml:id="object.tessera_hospitalis">
+                <catDesc>Tessera hospitalis</catDesc>
+            </category>
+            <category xml:id="object.basin">
+                <catDesc>Basin</catDesc>
             </category>
             <category xml:id="object.unknown">
                 <catDesc>Unknown</catDesc>
@@ -213,11 +228,20 @@
         <taxonomy xml:id="ISicily-Material">
             <category xml:id="material.stone">
                 <catDesc>Stone</catDesc>
+                <category xml:id="material.stone.local">
+                    <catDesc>Local stone</catDesc>
+                </category>
                 <category xml:id="material.stone.marble">
                     <catDesc>Marble</catDesc>
                 </category>
                 <category xml:id="material.stone.limestone">
                     <catDesc>Limestone</catDesc>
+                    <category xml:id="material.stone.limestone_marl">
+                        <catDesc>Limestone marl</catDesc>
+                    </category>
+                    <category xml:id="material.stone.limestone_tufa">
+                        <catDesc>Tufa limestone</catDesc>
+                    </category>
                 </category>
                 <category xml:id="material.stone.alabaster">
                     <catDesc>Alabaster</catDesc>
@@ -279,7 +303,7 @@
                 </category>
             </category>
             
-            <category xml:id="material.ceramic">
+            <category xml:id="material.ceramic"> <!-- pending review -->
                 <catDesc>Ceramic</catDesc>
                 <category xml:id="material.ceramic.brick">
                     <catDesc>Brick</catDesc>
@@ -292,8 +316,8 @@
                 </category>
             </category>
             
-            <category xml:id="material.bone">
-                <catDesc>Bone</catDesc>
+            <category xml:id="material.ivory">
+                <catDesc>Ivory</catDesc>
             </category>
             <category xml:id="material.glass">
                 <catDesc>Glass</catDesc>
@@ -301,8 +325,15 @@
             <category xml:id="material.plaster">
                 <catDesc>Plaster</catDesc>
             </category>
+            <category xml:id="material.mosaic">
+                <catDesc>Mosaic</catDesc> <!-- pending review -->
+            </category>
             <category xml:id="material.rock">
-                <catDesc>Rock</catDesc>
+                <catDesc>Natural rock</catDesc>
+            </category>
+            
+            <category xml:id="material.unknown">
+                <catDesc>Unknown</catDesc>
             </category>
         </taxonomy>
         
@@ -323,11 +354,14 @@
             <category xml:id="function.account">
                 <catDesc>Account</catDesc>
             </category>
-            <category xml:id="function.list_magistrates">
-                <catDesc>List of magistrates</catDesc>
-            </category>
-            <category xml:id="function.list_priests">
-                <catDesc>List of Priests</catDesc>
+            <category xml:id="function.list">
+                <catDesc>List</catDesc>
+                <category xml:id="function.list.magistrates">
+                    <catDesc>List of magistrates</catDesc>
+                </category>
+                    <category xml:id="function.list.priests">
+                    <catDesc>List of Priests</catDesc>
+                </category>
             </category>
             <category xml:id="function.lex_sacra">
                 <catDesc>Lex sacra</catDesc>
@@ -392,6 +426,9 @@
             <category xml:id="function.testament">
                 <catDesc>Testament</catDesc>
             </category>
+            <category xml:id="function.milestone">
+                <catDesc>Milestone</catDesc>
+            </category>
             <category xml:id="function.legal">
                 <catDesc>Legal text</catDesc>
             </category>
@@ -408,8 +445,17 @@
         
         <!-- ************** Execution of text ************** -->
         <taxonomy xml:id="ISicily-Execution">
-            <category xml:id="execution.engraved">
+            <category xml:id="execution.chiselled"> <!-- stone -->
+                <catDesc>Chiselled</catDesc>
+            </category>
+            <category xml:id="execution.engraved"> <!-- metal -->
                 <catDesc>Engraved</catDesc>
+            </category>
+            <category xml:id="execution.relief"> 
+                <catDesc>In relief</catDesc> <!-- whether chiselled or engraved etc. -->
+            </category>
+            <category xml:id="execution.moulded">
+                <catDesc>Moulded</catDesc>
             </category>
             <category xml:id="execution.etched">
                 <catDesc>Etched</catDesc>
@@ -419,6 +465,7 @@
             </category>
             <category xml:id="execution.scratched">
                 <catDesc>Scratched</catDesc>
+                <catDesc>Graffiti</catDesc>
             </category>
             <category xml:id="execution.stamped">
                 <catDesc>Stamped</catDesc>
@@ -434,6 +481,9 @@
             </category>
             <category xml:id="execution.punched">
                 <catDesc>Punched</catDesc>
+            </category>
+            <category xml:id="execution.mosaic">
+                <catDesc>Mosaic</catDesc>
             </category>
         </taxonomy>
         

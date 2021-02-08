@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -81,8 +81,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material key="stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <objectType key="base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!--measurements of Carettoni-->
                                         <height unit="cm">5.7</height>
                                         <width unit="cm">18.5</width>
@@ -93,8 +93,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/10">painted</rs>
-                                </layout>
+                                    <rs ana="#execution.painted" ref="http://www.eagle-network.eu/voc/writing/lod/10">Painted</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -119,8 +120,7 @@
                                 </offset>
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0001" cert="low">Hellenistic?
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0001" cert="low">Hellenistic?</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Trench (1956) on west side of Temple A <geo>38.000628, 14.261263</geo></provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -134,6 +134,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -201,8 +209,7 @@
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--Described by Carettoni as 'basetta mancante della parte sinistra (dimensioni cm 18.5 x 5.7). Inscr on four lines, only partly legible, with letters of another text said to be visible on one of the sides. Letters fom 0.6-1cm high, with the last line in smaller letters. Line 2: ...TILWO line 3: AGMDARYH Line 3: I..TAOAG...-->
-                </p>
+                    <!--Described by Carettoni as 'basetta mancante della parte sinistra (dimensioni cm 18.5 x 5.7). Inscr on four lines, only partly legible, with letters of another text said to be visible on one of the sides. Letters fom 0.6-1cm high, with the last line in smaller letters. Line 2: ...TILWO line 3: AGMDARYH Line 3: I..TAOAG...--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

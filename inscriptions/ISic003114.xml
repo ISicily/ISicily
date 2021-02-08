@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -79,9 +79,9 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>A funerary stele in the form of a fluted column supporting a rectangular block bearing the inscribed field (the block is 26cm high by 57 cm wide)</p>
-                                    <material key="stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone
                                     </material>
-                                    <objectType key="column" ref="http://www.eagle-network.eu/voc/objtyp/lod/100">column
+                                    <objectType ana="#object.column" ref="http://www.eagle-network.eu/voc/objtyp/lod/100">column
                                     </objectType>
                                     <dimensions><!--from Manni Piraino-->
                                         <height unit="cm">75</height>
@@ -93,9 +93,10 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Four lines of Greek text, engraved in stucco and painted in red, across the full width of the rectangular block, with a vacat below.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
                                     </rs>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -118,8 +119,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                             	<geo>37.80355, 12.4379</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0150" evidence="lettering">Suggested to date to the later third or earlier second century BC
-                            </origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0150" evidence="lettering">Suggested to date to the later third or earlier second century BC</origDate>
                         </origin>
                         <provenance type="found"/>
                         <provenance type="observed" subtype="autopsied" resp="#MM">Metcalfe 2015.04.18</provenance>
@@ -134,6 +134,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -155,7 +163,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>

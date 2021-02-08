@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -73,8 +73,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>An ivory token carved on one long side in the form of  two clasped left hands, and cut vertically smooth on the reverse, on which face are four lines of Greek letters. A crack runs diagonally across the upper left corner of the reverse, and a fragment is lost from the upper edge of the middle of the rear (inscribed) face. Slight damage to the lower corners.</p>
-                                    <material key="ivory" ref="http://www.eagle-network.eu/voc/material/lod/120.html">ivory</material>
-                                    <objectType key="tessera-hospitalis" ref="https://www.eagle-network.eu/voc/objtyp/lod/278.html">tessera hospitalis</objectType>
+                                    <material ana="#material.ivory" ref="http://www.eagle-network.eu/voc/material/lod/120.html">ivory</material>
+                                    <objectType ana="#object.tessera_hospitalis" ref="https://www.eagle-network.eu/voc/objtyp/lod/278.html">tessera hospitalis</objectType>
                                     <dimensions><!-- Brugnone -->
                                         <height unit="cm">4</height>
                                         <width unit="cm">10.1</width>
@@ -85,8 +85,9 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Four lines of Greek letters, with a consistent left margin, starting at the top of the rear (smooth) side of the tessera, with small vacat below.</p>
-                                    <rs type="execution" ref="http://www.eagle-network.eu/voc/writing/lod/1">Engraved</rs>
-                                </layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -123,6 +124,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
