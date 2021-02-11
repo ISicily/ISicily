@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A Punic abecedarium</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>original development of EpiDoc template</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001670</idno>
+                <idno type="TM"></idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001670</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Palermo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
+                        <idno type="inventory">47236</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="xpu">Punic</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A plaque of limestone, intact across the top, but broken on the other three sides. Roughly finished on the reverse.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--De Simone 2013-->
+                                        <height unit="cm">20.2</height>
+                                        <width unit="cm">19.5</width>
+                                        <depth unit="cm">9.5</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Three lines of text, incomplete left and right.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--De Simone 2013--><p>De Simone notes that line 1 is written in a different hand from lines 2-3</p>
+                                <locus from="line1" to="line3">Line 1-3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">40-50</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">not recorded</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName>
+                            	<geo>37.58337, 12.82522</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0409" notAfter-custom="-0300" evidence="lettering">4th cent. BC (after 409 BCE on historical grounds)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">From the site of Selinunte, but exact details unknown</provenance>
+                        <provenance type="observed" subtype="autopsied">Photographed in Palermo museum, Prag 2017-07-21</provenance>
+                        <acquisition>Palermo, Museo Archeologico Regionale Antonino Salinas</acquisition>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <note type="location">On display</note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.abecedarium" ref="http://www.eagle-network.eu/voc/typeins/lod/112.html">abecedarium</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                    <change when="2021-02-11" who="#JP">Jonathan Prag created file from template, photograph and De Simone 2013</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+          <surface type="front">
+                    <graphic n="screen" url="ISic001670_tiled.tif" height="4912px" width="7360px">
+                        <desc>Photo J. Prag, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+                    </graphic>
+              <graphic n="print" url="ISic001670.jpg" height="4912px" width="7360px">
+                  <desc>Photo J. Prag, courtesy Museo Archeologico Regionale Antonino Salinas</desc>
+              </graphic>
+           </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="transliteration" xml:space="preserve" xml:lang="xpu-Latn" resp="#JP">
+                <ab>
+                    <lb n="1" style="text-direction:r-to-l"/><handShift new="h1"/><gap reason="lost" extent="unknown" unit="character"/>wzḥṭyklmns'pṣqršt<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2" style="text-direction:r-to-l"/><handShift new="h2"/><gap reason="lost" extent="unknown" unit="character"/>lzyṣnqṭ'q<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3" style="text-direction:r-to-l"/><gap reason="lost" extent="unknown" unit="character"/>bqtq<gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>Text of De Simone 2013 (Minima epigraphica punica)</note></app></listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>De Simone</author>
+                        <date>2010</date>
+                        <citedRange>51 no.12 ph</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/QGZVD5TK"/>
+                    </bibl><bibl>
+                        <author>De Simone</author>
+                        <date>2013</date>
+                        <citedRange>33 SEL.2 fig.24 and pp.47-50</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/EGNUE9CZ"/>
+                    </bibl>
+                    <bibl>
+                        <author>De Simone</author>
+                        <date>2013</date>
+                        <ptr target="http://zotero.org/groups/382445/items/P8Y26F46"/>
+                    </bibl>
+                 </listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>De Simone</author>
+	           <date>2010</date>
+	           <citedRange>185-186 fig.4</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/JW3WK2BN"/>
+	       </bibl>
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
