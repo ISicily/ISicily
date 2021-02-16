@@ -50,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000002</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333725</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -75,33 +73,41 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque, damaged on the right side</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType/>
-                                    <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!-- from ILPalermo -->
+                                        <height unit="cm">19</height>
+                                        <width unit="cm">24.5</width>
+                                        <depth unit="cm">3.5-4</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"></condition>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILPalermo-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">20</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">15-18</height>
+                                </dimensions>
+                                <locus from="line3" to="line4">Line 3-4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">10-15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -113,9 +119,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                                 <geo>37.49223, 15.07041</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300">C3 AD ?</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300" evidence="lettering">C3 AD</origDate>
                         </origin>
-                        <provenance type="found"/>
+                        <provenance type="found" subtype="discovered" notAfter="1833">Reported by Alessi as found outside and to the south of 'Porta Stesicorea' of Catania<geo cert="medium">37.506418, 15.086543></geo> in the years before 1833.</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>Palermo, Museo Archeologico Regionale Antonino Salinas no. 3502</acquisition>
                     </history>
@@ -166,6 +172,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-02-16" who="#JP">Jonathan Prag revised file from publications</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -192,22 +199,23 @@
                     <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <g type="interpunct">·</g> <expan><abbr>M</abbr><ex>anibus</ex></expan> <g type="interpunct">·</g> <expan><abbr>s</abbr><ex>acrum</ex></expan>
                     <lb n="2"/><persName><name>Lurius</name> <g type="interpunct">·</g> <name>Zosimus</name></persName>
                     <lb n="3"/><expan><abbr>vix</abbr><ex>it</ex></expan> <g type="interpunct">·</g> annis <g type="interpunct">·</g> <num value="7">VII</num>
-                    <lb n="4"/><persName><name>Luria</name> <g type="interpunct">·</g> <name><expan><abbr>Melanth</abbr><ex>e</ex></expan></name></persName> i
-                    <lb n="5" break="no"/>n <g type="interpunct">·</g> suo <g type="interpunct">·</g> filio <g type="interpunct">·</g> fecit
+                    <lb n="4"/><persName><name>Luria</name> <g type="interpunct">·</g> <name>Melant<supplied reason="lost" evidence="previouseditor">hi</supplied></name></persName> <supplied reason="lost" evidence="previouseditor"><g type="interpunct">·</g></supplied>
+                    <lb n="5"/><g type="interpunct">·</g> n <g type="interpunct">·</g> suo <g type="interpunct">·</g> filio <g type="interpunct">·</g> fecit <g type="interpunct">·</g>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app loc="Line 4-5">
-                        <note>Mommsen rejects the alternative reading of 'Melanthin(a) suo'</note>
+                    <app loc="Line 4">
+                        <note>Alessi reported the text as intact and read MELANTHI· ; the text seems to have suffered damaged to the right margin since discovery</note>
                     </app>
+                    <app loc="Line 4-5"><note>Mommsen: 'potius Melanth(e) in suo, quam Melanthin(a) suo'</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Sacred to the shades of the underworld. Luris Zosimus lived for 7 years. Luria Melanthe made it for her son.</p>
             </div>
             <div type="commentary">
-                <p><!--commentary--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -221,7 +229,12 @@
                         <citedRange>2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
                     </bibl>
-                    <bibl/>
+                    <bibl>
+                        <author>Alessi</author>
+                        <date>1833</date>
+                        <citedRange>174</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F986DASI"/>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
