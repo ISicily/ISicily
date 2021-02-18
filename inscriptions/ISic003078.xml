@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>I.Sicily inscription 3078</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic003078</idno>
+                <idno type="TM">645430</idno>
+                <idno type="EDR">136074</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">64900839</idno>
+                <idno type="PHI">331797</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003078</idno>
+                <idno type="DOI" when="2020-12-21">10.5281/zenodo.4382704</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Agrigento</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/130">Museo Regionale Archeologico Pietro Griffo</repository>
+                        <!--No inventory number found-->
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula</objectType>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><!--Default value and requires checking-->
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
+                            	<geo>37.32084, 13.58876</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0300">C2 AD - C3 AD</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found 1954 in a sarcophagus in grotta di Fragapane, rotonda n.XII <geo>37.290161, 13.589661</geo></provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#MM" when="2015-11-10">2015.11.10 Metcalfe</provenance>
+                        <acquisition>Agrigento, Museo Regionale Archeologico Pietro Griffo</acquisition>
+                    </history>
+                    <additional>
+                        <adminInfo>
+                            <note type="location">display</note>
+                        </adminInfo>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2018-09-18" who="#JP">Jonathan Prag checked the EpiDoc and added images</change>
+                <change when="2019-06-18" who="#JP">Jonathan Prag corrected image file name</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-21" who="#JP">Jonathan Prag minor edits</change>
+	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+         <surface type="front">
+             <graphic n="screen" url="ISic003078_tiled.tif" height="3680px" width="5520px">
+                 <desc>Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento</desc>
+             </graphic>
+             <graphic n="print" url="ISic003078.jpg" height="3680px" width="5520px">
+                 <desc>Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento</desc>
+             </graphic>
+             <graphic n="screen" url="ISic003078_copy2_tiled.tif" height="3680px" width="5520px">
+                 <desc>Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento</desc>
+             </graphic>
+             <graphic n="print" url="ISic003078_copy2.jpg" height="3680px" width="5520px">
+                 <desc>Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento</desc>
+             </graphic>
+             <graphic n="screen" url="ISic003078_rightthreequarter_tiled.tif" height="3680px" width="5520px">
+                 <desc>Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento</desc>
+             </graphic>
+             <graphic n="print" url="ISic003078_rightthreequarter.jpg" height="3680px" width="5520px">
+                 <desc>Photo J. Prag, courtesy Museo Archeologico Regionale P. Griffo, Agrigento</desc>
+             </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP"><!-- requires checking still against autopsy notes -->
+                <ab>
+                    <lb n="1"/><g type="interpunct">·</g> χαί<g type="interpunct">·</g>ροις <g type="interpunct">·</g> πα<g type="interpunct">·</g>ρο<g type="interpunct">·</g>δ<supplied reason="lost">εῖτα</supplied>
+                    <lb n="2"/>πα<g type="interpunct">·</g>ρὰ <g type="interpunct">·</g> Φα<g type="interpunct">·</g>βίου <g type="interpunct">·</g> Σα
+                    <lb n="3" break="no"/>τορ<g type="interpunct">·</g>νί<g type="interpunct">·</g>λου <g type="interpunct">·</g> ζή<g type="interpunct">·</g>σαν
+                    <lb n="4" break="no"/>τος <g type="interpunct">·</g> ἔτη <g type="interpunct">·</g> <num value="21">κ<g type="interpunct">·</g><hi rend="supraline">αʹ</hi></num> <g type="interpunct">·</g> μῆ<g type="interpunct">·</g>νας
+                    <lb n="5"/><g type="interpunct">·</g> <num value="8">ηʹ</num> <g type="interpunct">·</g> ἡμέρας <g type="interpunct">·</g> <num value="15">ι<g type="interpunct">·</g>εʹ</num> <g type="interpunct">·</g> ἀ<g type="interpunct">·</g>έ<g type="interpunct">·</g>ρι <g type="interpunct">·</g> μὴ φόβι                    
+                </ab>
+            </div>
+            <div type="apparatus">
+                <p><!--external apparatus criticus (if applicable)--></p>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--Slab, broken upper right corner. somewhat older in the catacomb acc. to Griffo; Chairios parodeita para Phabiou Satorneilou zesantos eth ka', menas h', hemeras i', Aeri, me phobi.--></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>49.1266.11</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>38.0922</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>26.1058</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>2000.0772</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Griffo</author>
+                        <date>1963</date>
+                        <citedRange>174-175 no.6 tav.55.6</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JH9U8UMU"/>
+                    </bibl>
+                    <bibl>
+                        <author>Griffo</author>
+                        <date>1987</date>
+                        <citedRange>186 fig.162</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HP9HQST2"/>
+                    </bibl>
+                    <bibl>
+                        <author>Moretti</author>
+                        <date>1976</date>
+                        <citedRange>183 n.1</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZNPZT8MV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1999</date>
+                        <citedRange>38 no.11 fig.88</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GRB3IPD5"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
