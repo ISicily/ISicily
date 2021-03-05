@@ -4,19 +4,19 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
-            <titleStmt><!-- this file's header and app, trans, comm, and bibl divs is based on an old version of ISic000002, re-used as template / example -->
-                <title>Epitaph</title>
+            <titleStmt><!-- this file's header and app, trans, comm, and bibl divs is based on an old version of ISic000002, re-used as template / example ; conversion to template a work-in-progress-->
+                <title>Free text descriptive title for the inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
+                <principal ref="#JP">Jonathan Prag</principal><!-- may be substituted with the name of whoever is the lead researcher in the production of this particular text edition-->
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+	<funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
+                    <resp>original epidoc template generation and data conversion</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
@@ -38,21 +38,20 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <!-- any additional contributor to add their details in a separate respStmt, including xml:id for cross-referencing and ORCID for linked data identification -->
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
-                <idno type="filename">ISic000000</idno>
-                <idno type="TM">491568</idno>
-                <idno type="EDR">141180</idno>
-                <idno type="EDH"/>
-                <idno type="EDCS">21900397</idno>
-                <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000002</idno>
-                <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333725</idno>
+                <idno type="filename">ISic000000</idno><!-- unique ISic number, in six-digit format -->
+                <idno type="TM">491568</idno><!-- Trismegistos identifier if available, at https://www.trismegistos.org/index.php -->
+                <idno type="EDR">141180</idno><!-- EDR number if available, at http://www.edr-edr.it/Italiano/index_it.php ; can be multiple-->
+                <idno type="EDH"/><!-- EDH at https://edh-www.adw.uni-heidelberg.de/home -->
+                <idno type="EDCS">21900397</idno><!-- Clauss-Slaby, at http://db.edcs.eu/epigr/epi.php?s_sprache=en -->
+                <idno type="PHI"/><!-- PHI number, from https://inscriptions.packhum.org/ ; can be multiple-->
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000002</idno><!-- full URI for this inscription -->
+                <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333725</idno><!-- system generated reference with date-stamp to uploaded archival copy at Zenodo with DOI; can be multiple reflecting different versions over time -->
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -174,18 +173,18 @@
     <facsimile>
         <surface/>
      </facsimile>
-    <text><!-- QUESTION TO RESOLVE: various cases where potentially the alternative output might be shown as pop-up or note or app entry - we need to decide what, if anything to do about these -->
+    <text>
         <body>
             <div type="edition" xml:space="preserve" resp="#JP">
                 <div type="textpart" subtype="section" xml:lang="la" n="a"><!-- Print value of @subtype followed by value of @n as sub-heading, e.g.: 'section a' (other values are possible, e.g. fragment, face, etc.)-->
                     <ab><!-- this div for content mark-up? -->
                     <lb n="1"/>Dis Manibus sacrum
                     <lb n="2"/><persName><name>Lurius</name> <name>Zosimus</name></persName> <!-- persName will have @ref to external list of all persons; each name will have @ref to external list of all names (understood as names, not as individuals) -->
-                    <lb n="3"/>vixit annis <num value="7">VII</num> <!-- QUESTION: do we want a pop-up with Arabic value of all numerals?  -->
-                    <lb n="4"/><num atLeast="51" atMost="55">L<gap reason="lost" quantity="1" unit="character"/></num> <!-- L[.] --> <!-- QUESTION: do we want a pop-up with Arabic value of all numerals (in this case 51-55)?  -->
-                    <lb n="5"/><choice><orig>Caesare</orig><reg>Caesari</reg></choice> <!-- display the text in orig; decision needed on where / how to output the text in reg, whether into app/note - or just a pop-up?-->
-                    <lb n="6"/><choice><sic>Caesare</sic><corr>Caesari</corr></choice> <!-- display the text in sic; decision needed on where / how to output the text in corr, whether into app/note - or just a pop-up? text in corr within ⌈ ⌉, so Caesar⌈i⌉ and output sic into app/note, but this tricky if whole word encoded-->
-                     <lb n="7"/><handShift new="#h2"/>Ὡριγένης <!-- @new refers to a handNote/@xml:id declared in the header; QUESTION: should we have output '(hand 2)' before the text? Or reserve for app/note/comm? -->
+                    <lb n="3"/>vixit annis <num value="7">VII</num> <!-- VII --><!-- pop-up with Arabic value of numerals, i.e. '7' -->
+                    <lb n="4"/><num atLeast="51" atMost="55">L<gap reason="lost" quantity="1" unit="character"/></num> <!-- L[.] --> <!-- pop-up with Arabic value, i.e. '51-55'  -->
+                    <lb n="5"/><choice><orig>Caesare</orig><reg>Caesari</reg></choice> <!-- display the text in orig; output in pop-up as: 'Regularised: Caesari'-->
+                    <lb n="6"/><choice><sic>Caesare</sic><corr>Caesari</corr></choice> <!-- display the text in sic; output in pop-up as: 'Corrected: Caesari' -->
+                     <lb n="7"/><handShift new="#h2"/>Ὡριγένης <!-- ((hand 2)) --> <!-- @new refers to a handNote/@xml:id declared in the header -->
                      <lb n="8"/>patronus <foreign xml:lang="la-Grek">πατρων</foreign> <!-- no transformation required, but short sections of text which switch language and/or script flagged thus; larger blocks separated into seg, ab, or div type=textpart with @xml:lang-->
                 </ab>
                 </div>
@@ -212,7 +211,7 @@
                     <lb n="15" style="text-direction:downwards"/>Φαίδιμος ἐποίε <!-- ↓ -->
                         <!-- visibility or otherwise of text -->
                     <lb n="16"/><orig>ΑΒΓ</orig>  <!-- leave content of orig in uppercase -->
-                     <lb n="17"/>D<unclear>io</unclear>cletiano Pio  <!-- all characters in unclear output with an underdot &#x0323; --> 
+                     <lb n="17"/>D<unclear>io</unclear>cletiano Pio  <!-- all characters in unclear output with an underdot &#x0323; but when xml:lang=xpu-Latn then output with &#x30A; instead (=combining ring above)--> 
                     <lb n="18"/><gap reason="illegible" quantity="3" unit="character"/> <!-- . . . --> <!-- NB no square brackets, output as dots with space between each, where @quantity = number of dots; used for up to 4 characters-->
                     <lb n="19"/><gap reason="illegible" quantity="5" unit="character"/> <!-- . . 5 . .  --> <!-- NB no square brackets, used for quantity of 5 or more, alter numeral from @quantity, number of dots unchanged -->
                     <lb n="20"/><gap reason="illegible" extent="unknown" unit="character"/> <!-- . . ? . . --><!-- NB no square brackets, output with space between each dot -->
@@ -221,8 +220,9 @@
                      <lb n="23"/><gap reason="illegible" atLeast="3" atMost="5" unit="line"/>  <!-- (Traces of 3-5 lines) --> <!-- alter numerals from @atLeast / @atMost or @quantity -->
                      <lb n="24"/><gap reason="illegible" extent="unknown" unit="line"/>  <!-- (Traces of lines) --> 
                      <lb n="25"/><gap reason="lost" quantity="2" unit="character"/> <!-- [. .]  --> <!-- NB for quantities of 4 or less, simply print the appropriate number of dots per @quantity -->
-                     <lb n="26"/><gap reason="lost" quantity="5" unit="character"/> <!-- [. . 5 . .]  --> <!-- for quantities of 5 or more, simply alter the stated @quantity, but leave dots the same --> <!-- QUESTION: could we have alternative @unit of "cm", rendered then as [- - 5cm - -] -->
-                     <lb n="27"/><gap reason="lost" extent="unknown" unit="character"/>   <!--  [- - ? - -]  -->
+                     <lb n="26"/><gap reason="lost" quantity="5" unit="character"/><!-- [. . 5 . .] --> <!-- used for quantity of 5 or more, alter numeral from @quantity, number of dots unchanged-->
+                     <lb n="26a"/><gap reason="lost" quantity="5" unit="cm"/><!-- [- - 5cm - -]   --> <!-- note possible alternative @unit of "cm"-->
+                     <lb n="27"/><gap reason="lost" extent="unknown" unit="character"/>   <!--  [- - ? - -]  --> <!-- dashes are used wherever the precise quantity of lost is uncertain; fixed as here where extent is unknown -->
                      <lb n="28"/><gap reason="lost" quantity="12" unit="character" precision="low"/> <!-- [- - ca. 12 - -]  --> <!-- dashes remain unchanged, alter numeral per @quantity -->
                      <lb n="29"/><gap reason="lost" atLeast="1" atMost="3" unit="character"/> <!-- [ - 1-3 - ]  --> <!-- dashes remain unchanged, alter numeral per @atLeast / @atMost -->
                       <lb n="30"/><gap reason="lost" extent="unknown" unit="line"/> <!--  - - - - - -  -->
@@ -234,22 +234,29 @@
                      <lb n="36"/><space extent="3" unit="line"/> <!-- if space is measured in lines, output '(vacat)' on new line -->
                      <lb n="37"/><del rend="erasure">lio</del> <!-- ⟦lio⟧ --> <!-- text visible but erased in antiquity -->
                       <lb n="38"/><del rend="erasure"><supplied reason="lost">Ale</supplied>xan<unclear>d</unclear>ro <gap reason="lost" quantity="3" unit="character"/></del> <!-- ⟦[Ale]xandro [. . .]⟧ - and underdot on the d--> <!-- in other words, all of the above, orig, supplied, gap, unclear (and potentially space, etc.) can all occur within del, and so as in those cases but within  ⟦ ⟧ -->    
-                      <lb n="39"/>ἔτ<subst><del rend="corrected">η</del><add place="overstrike">ῶν</add></subst>  <!-- ἔτ«ῶν» --> <!-- i.e. output the text from <add> between «»  (POSSIBLE output version with text from <del>, i.e. ἔτη, in an app/note) -->   
-                      <lb n="40"/>ἔτ<add place="overstrike">ῶ</add>ν <!-- ἔτ«ῶ»ν --> <!-- this is similar to previous, but for a case where whatever was underneath is unrecoverable (@SIMONA, would it not be better to be able to have unclear, gap, etc. within <del> in the style of the previous, rather than this?) -->  
+                      <lb n="39"/>ἔτ<subst><del rend="corrected">η</del><add place="overstrike">ῶν</add></subst>  <!-- ἔτ«ῶν» --> <!-- i.e. output the text from <add> between «»  (POSSIBLE output version with text from <del rend="corrected">, i.e. ἔτη, in an app/note but we assume doing this will depend on word tagging first to enable retrieval of the complete original word) -->   
+                      <lb n="40"/>ἔτ<add place="overstrike">ῶ</add>ν <!-- ἔτ«ῶ»ν --> <!-- this is similar to previous, but for a case where whatever was underneath is unrecoverable -->  
                       <!-- editorial restoration -->
                      <lb n="41"/><supplied reason="lost">In</supplied>comparabilis <!-- [In]comparabilis -->
                      <lb n="42"/><supplied reason="lost" cert="low">ὁμο</supplied>λογῶ  <!-- [ὁμο(?)]λογῶ -->
                      <lb n="43"/><w><supplied reason="lost">diui</supplied></w> <name><supplied reason="lost">Tra</supplied>iani</name>  <!-- [diui Tra]iani --> <!-- supplied across two words or equivalent-->
                      <lb n="44"/><supplied reason="lost"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></supplied> <num><supplied reason="lost">I</supplied>V</num> <!-- [co(n)s(uli) I]V --> <!-- supplied across multiple elements with abbreviation -->
+                     <lb n="44a"/>dis m<supplied reason="lost">an</supplied>  <!-- dis m[an-]  --><!-- i.e., notwithstanding that supplied continues after the lb, do not elide (the rule presumably, as with gap in next example, is simply to stop any eliding of brackets when you meet an lb or cb) -->
+                     <lb n="44b" break="no"/><supplied reason="lost">ibu</supplied>s sacrum <!-- [ibu]s sacrum --> <!-- QUESTION @Simona: I know there are examples currently of supplied running across the lb (so <supplied reason="lost">man<lb n="3" break="no"/>ibus</supplied>), but presumably we would consider it better practice to split it up as I have done above, and therefore some of the complication disappears? at present this will only apply to individual words that run over the lb, whcih will be clarified by use of <w>, but the question still stands I think? -->
+                     <lb n="44c"/>dis m<gap reason="lost" unit="character" quantity="2"/><!-- dis m[..] --> <!-- i.e., notwithstanding that gap follows on the next line, do not elide (the rule, presumably, is simply to stop any eliding of brackets when you meet an lb or cb (I'm not sure that ab applies here) -->
+                     <lb n="44d"/><gap reason="lost" unit="character" quantity="3"></gap>s sacrum <!-- [...]s sacrum -->
                      <lb n="45"/><supplied reason="lost" evidence="previouseditor">ὑπ</supplied>ὲρ  <!-- underline the content of the supplied when @evidence is 'previouseditor' -->
                      <lb n="46"/>Ἰουλιανὴ<surplus>ν</surplus> <!-- Ἰουλιανὴ{ν} -->   
                      <lb n="47"/>Valent<supplied reason="omitted">in</supplied>iani <!-- Valent<in>iani -->
                      <lb n="48"/><gap reason="lost" quantity="4" unit="character"><desc>personal name</desc></gap>  <!-- [. . . . (personal name)]  --> <!-- for addition of a comment within a gap -->
                       <lb n="49"/><note>editor's note here</note>  <!-- (editor's note here) -->
+                        <!-- extended gap/supplied etc. examples -->
+                      <lb n="101"/>dis <supplied reason="lost">manibus</supplied> <gap reason="lost" unit="character" quantity="5"/> <!-- dis [manibus .. 5 ..] --> <!-- i.e. supplied followed by gap will both be within single elided set of [ ] -->
+                        
                      <!-- abbreviations and symbols -->
                      <lb n="50"/><expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>M</abbr><ex>anibus</ex></expan> <!-- D(is) M(anibus)-->
                      <lb n="51"/><expan><abbr>Iul</abbr><ex cert="low">ius</ex></expan> <!-- Iul(ius?) -->
-                     <!--QUESTION: further type of abbreviation expansion to clarify, viz. when the abbreviation can only be partially expanded; the epidoc guidelines at https://epidoc.stoa.org/gl/latest/trans-abbrevpartial.html actually fail to provide for cases where e.g. the inflected ending is uknowable, such as:  Aug(ust-) -->
+                     <!--NOTE: there is one further type of abbreviation expansion to clarify, viz. when the abbreviation can only be partially expanded, usually cases where e.g. the inflected ending is unknowable, resulting e.g. in Iul(i-). However, this will only be possible once we have added word elements, since it requires word parts -->
                      <lb n="52"/><expan><abbr>Aug<am>g</am></abbr><ex>usti duo</ex></expan> <!-- Aug(usti duo) -->
                      <lb n="53"/><abbr>στρατηγ</abbr>  <!-- στρατηγ(- - -) --> <!-- i.e. the completion of the abbreviated word is unknown -->
                      <lb n="54"/><expan><abbr><am><g ref="#sestertius">&#x10198;</g></am></abbr><ex>sestertius</ex></expan> <!-- ((sestertius)) --> <!-- NB see next: I actually think this should be simply <abbr><am><g ref="#sestertius">&#x10198;</g></am></abbr> ?-->
@@ -263,26 +270,38 @@
                       <lb n="61"/><hi rend="underline">abc</hi> <!-- abc underlined (not reproduceable in the xml) -->
                      <lb n="62"/>ab<hi rend="superscript">c</hi> <!-- normal superscript rendering; same logic for subscript --> 
                      <lb n="63"/>Εὐα<hi rend="reversed">ν</hi>τήτῳ <!-- Εὐα((ν))τήτῳ -->  
-                     <lb n="64"/>Claud<hi rend="tall">i</hi>us <!-- Claudìus --> <!-- NB this addition of grave (&#768;) applies ONLY to the letter 'i' in Latin texts; in all other cases, no separate rendering (I suppose in an ideal world, this would lead to a note in the apparatus?) -->
-                     <lb n="65"/><hi rend="ligature">Th</hi>eodoulos <!-- T̂heodoulos --> <!-- for each letter within the hi rend=ligature apply a circumflex (&#770;), except the final letter -->
-                      <lb n="66"/>Cla<hi rend=" small">u</hi>dius <!-- no action required (I suppose in an ideal world, this would lead to a note in the apparatus?) -->
-                      <lb n="67"/>Cla<hi rend="stacked">u</hi>dius <!-- no action required (I suppose in an ideal world, this would lead to a note in the apparatus?) -->
+                     <lb n="64"/>Claud<hi rend="tall">i</hi>us <!-- Claudius --> <!-- no action: K-P rules suggest addition of grave (&#768;) on to letter 'i' in Latin texts; we conclude that it is better to take no action at this point, and use this mark-up only for indexing etc. -->
+                     <lb n="65"/><hi rend="ligature">Th</hi>eodoulos <!-- T̂heodoulos --> <!-- for each letter within the hi rend=ligature apply a circumflex (&#770;), except the final letter  (note: this reflects the revised Krummery-Panciera guidelines for Leiden style)-->
+                      <lb n="66"/>Cla<hi rend=" small">u</hi>dius <!-- no action required (potentially this could lead to a note in the apparatus) -->
+                      <lb n="67"/>Cla<hi rend="stacked">u</hi>dius <!-- no action required (potentially this could lead to a note in the apparatus) -->
                       <lb n="68"/>ἑ<add place="above">κ</add>κέδεκα <!-- ἑ`κ´κέδεκα --> <!-- output `  ´ (&#96; and &#180; I think) around the added character(s) --> <!-- other values on @place possible, but output is the same--> 
                      </ab>
                </div>
             </div>
+            <div type="edition" subtype="transliteration" xml:space="preserve" xml:lang="xpu-Latn"><!-- when subtype = transliteration insert a sub-heading above the text "Transliteration"; this will apply for a variety of language combinations, and may sometimes exist in series with a 'normal' div type="edition" (as here), and both should be displayed in sequence if so-->
+                <ab>
+                    <lb n="1" style="text-direction:r-to-l"/>wzḥṭyklmnsʾpṣqršt
+                    <lb n="2" style="text-direction:r-to-l"/>l<unclear>z</unclear>yṣnqṭʾq<!-- lz̊yṣnqṭʾq --> <!-- when xml:lang=xpu-Latn then output unclear with &#x30A;  (=combining ring above), and not the underdot employed in all other languages as above--> 
+                    <lb n="3" style="text-direction:r-to-l"/><gap reason="lost" extent="unknown" unit="character"/>bqtq<gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+            </div>
             <div type="apparatus">
                 <listApp>
-                    <app loc="Line 4-5">
-                        <note>Mommsen rejects the alternative reading of 'Melanthin(a) suo'</note>
+                    <app loc="Line 1">
+                        <note>Apparatus note here for line 1</note>
                     </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
-                <p>Sacred to the shades of the underworld. Luris Zosimus lived for 7 years. Luria Melanthe made it for her son.</p>
+                <p>This is the English translation of the inscription</p>
             </div>
-            <div type="commentary">
-                <p><!--commentary--></p>
+            <div type="translation" xml:lang="it" resp="#JP">
+                <p>traduzione italiana</p>
+            </div>
+            <div type="commentary" resp="#JP">
+                <p>Extended free-text commentary</p>
+                <p>May be multiple paragraphs</p>
+                <p>May include cross-references to other texts such as <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001670">ISic001670</ref> a punic text; or to any other external resource.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
