@@ -31,9 +31,14 @@
     <pattern name="checking for Leiden sigla">
         <!-- the regexes below will only work if you have Schematron set to XPATH version 2.0 in your local environment -->
         <!-- in Oxygen: Options > Preferences > XML > XML Parser > Schematron -->
-        <rule context="//t:div[@type='edition']">
+        <rule context="//t:div[@type='edition'][@xml:lang='grc|la|xly|xly-Grek|scx-Latn|xly-Latn']"> 
             <report test="descendant::text()[not(ancestor::t:desc or ancestor::t:note)][matches(.,'[\[\]\(\)]')]">Brackets and parentheses in epigraphic text</report>
             <report test="descendant::text()[not(ancestor::t:desc or ancestor::t:note)][matches(.,'&#x0323;|&#xE1C0;')]">Underdots in epigraphic text</report>
+            <report test="descendant::text()[not(ancestor::t:desc or ancestor::t:note)][matches(.,'&lt;|&gt;')]">Angle brackets in epigraphic text</report>
+        </rule>
+        <rule context="//t:div[@type='edition'][@xml:lang='xpu-Latn']"> <!-- for Punic transliteration where underdots are allowed because unclear symbol is different  -->
+            <report test="descendant::text()[not(ancestor::t:desc or ancestor::t:note)][matches(.,'[\[\]\(\)]')]">Brackets and parentheses in epigraphic text</report>
+            <report test="descendant::text()[not(ancestor::t:desc or ancestor::t:note)][matches(.,'&#x30A;')]">Unclear character in epigraphic text</report>
             <report test="descendant::text()[not(ancestor::t:desc or ancestor::t:note)][matches(.,'&lt;|&gt;')]">Angle brackets in epigraphic text</report>
         </rule>
     </pattern>
