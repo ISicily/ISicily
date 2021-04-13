@@ -82,8 +82,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>thick lead rectangular lamina, with irregular borders</p>
-                                    <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/1962.html" key="lamina">lamina</objectType><!-- not sure about ref -->
-                                    <material ref="https://www.eagle-network.eu/voc/material/lod/108.html" key="lead">lead</material>
+                                    <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
+                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                         <dimensions>
                                             <height unit="cm"></height>
                                             <width unit="cm"></width>
@@ -92,25 +92,19 @@
                                     </dimensions>
                                    <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition>complete</condition>
+                                <condition ana="#condition.complete">complete</condition>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><p>impression of a<rs type="shape">rectangular</rs> signaculum on the entire surface of one of the two main faces of the object</p><!-- general description, where is the writing, not much detail -->
-                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/166.html" key="impressed">impressed</rs>
-                                    <rs type="execution">hollow letters</rs>
-                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/13.html" key="signaculum">signaculo</rs>
-                                    <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
-                                        <idno/>
-                                    </rs> -->                                    
+                                <layout><p>impression of a<rs ana="#shape.rectangular">rectangular</rs> signaculum on the entire surface of one of the two main faces of the object</p>
+                                    <rs ana="#execution.stamped.impressed"  ref="https://www.eagle-network.eu/voc/writing/lod/166.html" key="impressed">impressed</rs>
+                                    <damage ana="#text_condition.complete #text_condition.legible">complete legible</damage>                                 
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing; generalise as needed-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
-                                <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterDepth"></dimensions> <!-- revise? -->
-                                <dimensions type="letterRelief"></dimensions> <!-- revise? -->
+                                <dimensions type="letterHeight"></dimensions>
                             </handNote>
                         </handDesc>
                         </physDesc>
@@ -119,13 +113,13 @@
                             <origPlace>unknown</origPlace>
                             <origPlace></origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/xxxxx"> <geo></geo></placeName>
-                                <offset><!-- optional -->
+                                <offset>
                                     <placeName type="modern" ref="http://sws.geonames.org/xxxxx"></placeName>
                                 </offset>
-                            <origDate datingMethod="#julian" notBefore-custom="0051" notAfter-custom="0215" evidence="lettering nomenclature" >51-215</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0051" notAfter-custom="0215" evidence="lettering textual-context" >51-215 CE</origDate>
                         </origin>
                         <provenance type="found" ></provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#IG">untraceable</provenance><!-- see separate discussion document for values and attributes-->
+                        <provenance type="observed" subtype="autopsied" resp="#IG">untraceable</provenance>
                         <acquisition></acquisition>
                     </history>
                     </msDesc>
@@ -160,7 +154,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ref="https://www.eagle-network.eu/voc/typeins/lod/105.html" key="ownership">ownership</term><!-- ref not entirely satisfactory or even wrong -->
+                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/105.html">ownership</term>
                  </keywords>
                 </textClass>
         </profileDesc>
@@ -192,14 +186,14 @@
                          </div>
               <div type="apparatus">
                   <listApp>
-                      <app xml:lang="xx"></app>
+                      <app><note>Text from picture</note></app>
                   </listApp>
               </div>
-              <div type="translation" resp="#IG">
-                  <p xml:lang="en">Chryses (slave) of Silanus</p>
+              <div type="translation"  xml:lang="en" resp="#IG">
+                  <p>Chryses (slave) of Silanus</p>
               </div>
-                  <div type="translation" resp="#IG">
-                      <p xml:lang="it">Chryses (schiavo) di Silanus</p>
+                  <div type="translation" xml:lang="it" resp="#IG">
+                      <p>Chryses (schiavo) di Silanus</p>
               </div>
               <div type="commentary">
                    <p xml:lang="xx"></p>

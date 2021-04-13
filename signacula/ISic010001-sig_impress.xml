@@ -80,56 +80,44 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>mortar layer covering the closing tiles of the tomb</p>
-                                    <objectType key="tomb-cover" ref="https://archwort.dainst.org/de/term/1628">tomb cover</objectType><!-- NB this is not an EAGLE ref; but I do realise nothing for this in EAGLE; @Simona, are we okay to mix up our URIs thus? or it might be better just to have the higher level 'tomb' or equivalent for the URI?-->
-                                    <material key="mortar" ref="https://www.eagle-network.eu/voc/objtyp/lod/41.html">mortar</material><!-- this seems to be the best/right EAGLE URI-->
-                                        <dimensions><!-- I think the dimensons of the stamp go here, since this is a single level file, not a multiple part one? We think the dimensions should be object dimensions-->
-                                        <height unit="cm"></height><!-- existing files ahve the unit on each measure; and for general dimensions we use cm elsewhere, so stick with that here if possible too-->
+                                    <objectType ana="#object.cover" ref="https://archwort.dainst.org/de/term/1628">tomb cover</objectType>
+                                    <material ana="#material.mortar" ref="https://www.eagle-network.eu/voc/objtyp/lod/41.html">mortar</material>
+                                        <dimensions>
+                                            <height unit="cm"></height>
                                         <width unit="cm"></width>
                                         <depth unit="cm"></depth>
                                         <dim type="diameter" unit="cm"></dim>
                                     </dimensions>
                                   <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition>complete</condition><!-- not using @rend I think, but we're waiting for final clarification from Simona-->
+                                <condition ana="#condition.complete">complete</condition>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><p>16 impressions of the same <rs type="shape">circular</rs> signaculum impressed along the joints between the closing tiles of the tomb. Epigraphic field divided into two concentric registers delimited by a linear frame</p>
+                                <layout><p>16 impressions of the same <rs ana="#shape.circular">circular</rs> signaculum impressed along the joints between the closing tiles of the tomb. Epigraphic field divided into two concentric registers delimited by a linear frame</p>
                                      <dimensions unit="mm"><dim type="diameter">75</dim></dimensions>
-                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/166.html" key="impressed">impressed</rs>
-                                    <rs type="execution">hollow letters</rs>
-                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/13.html" key="signaculum">signaculo</rs>
-                                    <!-- general description of the location and form of the text, where is the writing, not much detail -->
-                                    <!--  <rs type="layout"></rs>keep this also for brick stamps; this may be type="shape" instead?-->
+                                     <rs ana="#execution.stamped.impressed" ref="https://www.eagle-network.eu/voc/writing/lod/166.html">impressed</rs>
+                                    <damage ana="#text_condition.complete #text_condition.legible">complete legible</damage>
                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing; generalise as needed-->
+                            <handNote>
                                 <p>A with broken crossbar; monogram MAT</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">25-15</height>
                                 </dimensions>
-                                 <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterDepth">
-                                    <height unit="mm"/>
-                                </dimensions>
-                                 <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterRelief">
-                                    <height unit="mm"/>
-                                </dimensions>
-                                <!-- we can include all three of these measurements if they are standardly collected for editions of signacula? but are they? Seems a lot of detail -->
-                            </handNote>
+                               </handNote>
                         </handDesc>
                         </physDesc>
                     <history>
                         <origin>
-                            <origPlace><!-- example inserted below of the full version of a place in origPlace: the URLs and geo refs for all places are listed in a CSV in the a-list folder (or can just be copied from existing files fromt he same place!)-->
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" evidence="textual-context archaeological-context">301-500</origDate><!--we don't bother with @precision, since date ranges clearly imply that already; note four digit numbers and use hyphens to join multi-word terms, spaces to separate multiple terms -->
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" evidence="textual-context archaeological-context">301-500 CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1954">found in situ in hypogeum M1 plateau ex Vigna Cassia, in 1954</provenance><!-- if you have geo ref for the hypogeum, or just the catacomb, include here in <geo> inside provenance-->
                         <provenance type="observed">in situ</provenance><!-- clarify with @Simona, but this is going to be built in to the previous element with an @corresp attribute-->
@@ -168,10 +156,10 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ref="https://www.eagle-network.eu/voc/typeins/lod/105.html" key="ownership">ownership</term><!-- ref not entirely satisfactory or even wrong -->
+                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/105.html">ownership</term><!-- ref not entirely satisfactory or even wrong -->
                  </keywords>
                 <keywords>
-                    <term ref="https://www.eagle-network.eu/voc/typeins/lod/387.html" key="invocation">christian invocation</term>
+                    <term ana="#function.invocation" ref="https://www.eagle-network.eu/voc/typeins/lod/387.html">christian invocation</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -198,12 +186,12 @@
               <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG">
                   <div type="textpart" subtype="external_epigraphic_field" n="1"><!-- we will need to make a list of @subtypes to standardise -->
                       <ab>
-                          <lb n="1" style="text-direction:circular"/>spes in Deo semper<!-- does this need a text direction on @style on the lb?-->
+                          <lb n="1" style="text-direction:circular_clockwise"/>spes in Deo semper<!-- does this need a text direction on @style on the lb?-->
                       </ab>
                   </div>          
                   <div type="textpart" subtype="central_epigraphic_field" n="2">
                       <ab>
-                          <lb n="1"/><g type="monogram">MAT</g><!-- if this is a monogram, it needs different rendering, not orig - discuss with @Simona-->
+                          <lb n="1"/><g ref="#monogram">MAT</g>
                      </ab>
                   </div>
               </div>
@@ -222,7 +210,7 @@
                    <p></p>
               </div>
               <div type="bibliography">
-                  <listBibl> <!-- bibliography taken from Zotero -->
+                  <listBibl> 
                       <bibl>
                           <author>Agnello</author>
                           <date>1955</date>
