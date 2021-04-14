@@ -67,11 +67,11 @@
                         <idno type="inventory">22478</idno>
                         <altIdentifier>
                             <repository/>
-                            <idno/>
+                            <idno type="old"/>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="La">Latin</textLang>
+                        <textLang mainLang="la">Latin</textLang>
                         <msItem>
                             <author>
                              </author>
@@ -91,7 +91,7 @@
                                     </dimensions>
                                    <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition ana="#condition.complete"></condition>
+                                <condition ana="#condition.complete"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout></layout>
@@ -119,14 +119,11 @@
                         <msIdentifier>
                             <idno/>
                         </msIdentifier>
-                        <msContents>
-                            <textLang xml:lang="xx"><!-- if different from the language of the main object --></textLang>
-                        </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc>
                                     <support>
-                                        <p><rs type="shape">rectangular</rs> lamina with raised border<!-- keep terms consistent --> ...</p>
+                                        <p><rs type="shape">rectangular</rs> lamina with raised border<!-- keep terms consistent --></p>
                                         <dimensions></dimensions>
                                         <height unit="mm">26</height>
                                         <width unit="mm">62</width>
@@ -138,7 +135,7 @@
                                 <layoutDesc>
                                     <layout>3 lines inscription on a <rs ana="#shape.rectangular">rectangular</rs> lamina with raised borders 
                                         <rs ana="#execution.relief" ref="https://www.eagle-network.eu/voc/writing/lod/7.html">relief letters</rs>                                                            
-                                        <damage ana="#text_condition.complete #text_condition.legible"></damage>                             
+                                        <damage ana="#text_condition.complete #text_condition.legible"/>                             
                                     </layout>
                                 </layoutDesc>
                             </objectDesc>
@@ -146,7 +143,7 @@
                                 <handNote>letters with a uniform square module, characterized by pronounced serifs, with slight signs of wear
                                     <locus from="line1" to="line3">Line 1- line 3</locus>
                                     <dimensions type="letterHeight">
-                                        <height unit="mm"/><height>6-5</height>
+                                        <height unit="mm">6-5</height>
                                     </dimensions>
                                   </handNote>
                             </handDesc>
@@ -163,9 +160,6 @@
                         <msIdentifier>
                             <idno/>
                         </msIdentifier>
-                        <msContents>
-                            <textLang xml:lang="xx"><!-- if different from the language of the main object --></textLang>
-                        </msContents>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc>
@@ -208,6 +202,11 @@
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -236,6 +235,7 @@
         </profileDesc>
         <revisionDesc status="draft">
             <change when="2021-02-03" who="#IG">Ilenia Gradante created the file</change>
+            <change when="2021-04-14" who="#SS">xinclude taxonomy and charDecl files</change>
         </revisionDesc>
       </teiHeader>
       <facsimile>
@@ -255,13 +255,14 @@
       <text>
           <body>
               <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG"></div>
-                      <div type="textpart" subtype="lamina" rend="r. to l." corresp="#part1">
-                 <ab>
-                          <lb n="1"/> <expan><abbr>P</abbr><ex>ubli</ex></expan> <g ref="#ivy-leaf"/> Aeli Sy
-                          <lb n="2" break="no"/>racusani <supplied reason="subaudible">servi</supplied>
-                          <lb n="3"/><choice><reg>Valenti</reg><orig>Balenti</orig></choice>
-</ab></div>
-                   <div type="textpart" subtype="handle" rend="linear" corresp="#part2">
+                      <div type="textpart" subtype="lamina" corresp="#part1">
+                             <ab>
+                                      <lb n="1"/> <expan><abbr>P</abbr><ex>ubli</ex></expan> <g ref="#ivy-leaf"/> Aeli Sy
+                                      <lb n="2" break="no"/>racusani <supplied reason="subaudible">servi</supplied>
+                                      <lb n="3"/><choice><reg>Valenti</reg><orig>Balenti</orig></choice>
+                            </ab>
+                      </div>
+                   <div type="textpart" subtype="handle" corresp="#part2">
                       <ab><g ref="#palmette"/></ab>
                   </div>
               <div type="apparatus">

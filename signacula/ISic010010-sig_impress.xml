@@ -67,14 +67,13 @@
                         <idno type="inventory">13080</idno>
                         <altIdentifier>
                             <repository/>
-                            <idno/>
+                            <idno type="old"/>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
                         <textLang mainLang="grc">Ancient Greek</textLang>
                         <msItem>
-                            <author>
-                            </author>
+                            <author/>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -91,14 +90,14 @@
                                     </dimensions>
                                     <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition ana="#condition.fragment"></condition>
+                                <condition ana="#condition.fragment"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout><p>impression of a<rs ana="#shape.rectangular">rectangular</rs> signaculum, together with ISic010009. Inscription on two lines.</p>
                                     <height unit="mm">22</height>
                                     <width unit="mm"></width>
                                     <rs ana="#execution.stamped.impressed" ref="https://www.eagle-network.eu/voc/writing/lod/166.html">impressed</rs>
-                                    <damage ana="#text_condition.incomplete #text_condition.legible"></damage>
+                                    <damage ana="#text_condition.incomplete #text_condition.legible"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -119,7 +118,8 @@
                             <origDate datingMethod="#julian" notBefore-custom="0351" notAfter-custom="0500" evidence="textual-context archaeological-context">351-500 CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">found in the San Giovanni catacomb, gallery no. 2, Region N</provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#IG">untraceable</provenance>
+                        <provenance type="not-observed" subtype="lost" cert="low">Untraceable, possibly lost</provenance> <!-- remove if this is not how you want to express the situation -->
+                        <provenance type="observed" subtype="autopsied" resp="#IG">None</provenance>
                         <acquisition></acquisition>
                     </history>
                      </msDesc>
@@ -132,6 +132,11 @@
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -160,6 +165,7 @@
         </profileDesc>
         <revisionDesc status="draft">
             <change when="2021-02-04" who="#IG">Ilenia Gradante created the file</change>
+            <change when="2021-04-14" who="#SS">xinclude taxonomy and charDecl files</change>
         </revisionDesc>
       </teiHeader>
       <facsimile>
@@ -181,7 +187,7 @@
               <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG">
                    <ab>
                          <lb n="1"/><supplied reason="lost">Κα</supplied>πίτ 
-                       <lb n="2" break="no"/><supplied reason="lost">ωνο</supplied>ς <g type="Staurogram"/>
+                       <lb n="2" break="no"/><supplied reason="lost">ωνο</supplied>ς <g ref="#staurogram"/>
                           </ab>          
                               </div>
               <div type="apparatus">
