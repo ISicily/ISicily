@@ -119,12 +119,23 @@
                             <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0200" evidence="archaeological-context">C2 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" xml:id="findspot">From the hypogeum of Crispia Salvia, on via Massimo D'Azeglio, Marsala<geo>37.8044224,12.4372473</geo>, excavated in 1996.</provenance> 
-                        <provenance type="observed" n="1" corresp="#findspot">Three fragments remain in situ.</provenance> <!-- split into msParts when we have support description and refer to their ids here -->
-                        <provenance type="observed" n="2">The fourth now in the Baglio Anselmi museum.</provenance>
+                        <provenance type="observed" corresp="#findspot #frA #frB #frC">Three fragments remain in situ.</provenance> 
+                        <provenance type="observed" corresp="#frD">The fourth now in the Baglio Anselmi museum.</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#MM">Metcalfe 2015.04.18</provenance>
                         <acquisition/>
                     </history>
-                    
+                    <msPart xml:id="frA">
+                        <msIdentifier/> <!-- add descriptions to each fragment -->
+                    </msPart>
+                    <msPart xml:id="frB">
+                        <msIdentifier/>
+                    </msPart>
+                    <msPart xml:id="frC">
+                        <msIdentifier/>
+                    </msPart>
+                    <msPart xml:id="frD">
+                        <msIdentifier/>
+                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -135,6 +146,11 @@
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -194,7 +210,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#palmbranch"/>Crispia <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf">❦</g> Salvia
+                    <lb n="1"/><g ref="#palm"/>Crispia <g ref="#ivy-leaf">❦</g> Salvia
                     <lb n="2"/>vixit a<unclear>n</unclear>nos
                     <lb n="3"/>plus mi<unclear>nu</unclear>s <num value="45"><hi rend="supraline">XL<hi rend="small">V</hi></hi></num>
                     <lb n="4"/>uxori dulcissi<hi rend="ligature">mae</hi>
