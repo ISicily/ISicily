@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3695</title>
+                <title>I.Sicily inscription 003695</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -65,7 +65,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Megara Hyblaea</settlement>
-                        <repository role="museum">Megara Hyblaia</repository>
+                        <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/167">Area archeologica di Megara Hyblaea</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -114,21 +114,18 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462307">Megara Hyblaea</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462307" corresp="#findspot">Megara Hyblaea</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/8063661">Megara Iblea</placeName>
                             	<geo>37.20380, 15.18274</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0700" notAfter-custom="-0600">C7 BC</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">In re-use in the Hellenistic walls</provenance>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">In re-use in the Hellenistic walls</provenance>
+                        <provenance type="observed" corresp="#findspot">in situ</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">in situ, in reuse in the Hellenistic walls</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -139,6 +136,11 @@
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
