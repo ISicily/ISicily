@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0626</title>
+                <title>I.Sicily inscription 000626</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -50,20 +50,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000626</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385074</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Trapani</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/105">Museo Regionale
-                            Agostino Pepoli
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/105">Museo Regionale Agostino Pepoli</repository>
                         <idno type="inventory">5304</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,33 +75,32 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble (white)
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
+                                    <dimensions><!--from Oliveri-->
+                                        <height unit="cm">80</height>
+                                        <width unit="cm">52.7</width>
+                                        <depth unit="cm">44.8</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--Oliveri-->
+                                <locus from="line1" to="line11">Line 1-11</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">45-50</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line1" to="line11">Interlineation line 1 to 11</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">10</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -117,23 +112,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                             	<geo>37.80355, 12.4379</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0350" notAfter-custom="0450">Second half C4 AD or early
-                                C5 AD</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0321" notAfter-custom="0440" evidence="titulature">Between 320 and 440 CE (following LSA)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Trapani, Museo Regionale Agostino Pepoli no. 5304</acquisition>
+                        <provenance type="found" subtype="discovered" notAfter="1905">Found together with a number of tombs, within the confines of the vineyard of the Signori Tumborello near Capo Boeo and reported by Salinas in NSA 1905<geo cert="low">37.801847, 12.427609</geo></provenance><!-- generic geo placeholder for Capo Boeo, vineyard not currently located -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -160,15 +159,16 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+            	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2021-05-20" who="#JP">Jonathan Prag made provisional revision of the file from published information</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -189,76 +189,43 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR072109" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    Pompeianis vita.<lb n="2"/>Ob insignem iustitiam<lb n="3"/>et merita litterarum et amorem<lb n="4"/>
-                    quem non solum circa patriam<lb n="5"/>sed per omnem provinci<hi rend="ligature">âm</hi> conlocavit,
-                    <lb n="6"/>
-                    <expan>
-                        <abbr>Iul</abbr>
-                        <ex>io</ex>
-                    </expan>
-                    <expan>
-                        <abbr>Cl</abbr>
-                        <ex>audio</ex>
-                    </expan>
-                    Peristerio<lb n="7"/>Pompeiano,
-                    <expan>
-                        <abbr>v</abbr>
-                        <ex>iro</ex>
-                    </expan>
-                    <expan>
-                        <abbr>c</abbr>
-                        <ex>larissimo</ex>
-                    </expan>
-                    , ex
-                    <expan>
-                        <abbr>cons</abbr>
-                        <ex>ulari</ex>
-                    </expan>
-                    <expan>
-                        <abbr>p</abbr>
-                        <ex>rovinciae</ex>
-                    </expan>
-                    <expan>
-                        <abbr>S</abbr>
-                        <ex>iciliae</ex>
-                    </expan>
-                    ,<lb n="8"/>universa curia in coetu
-                    <choice>
-                        <sic>splendidu</sic>
-                        <corr>splendido</corr>
-                    </choice>
-                    suo<lb n="9"/>patrono digno et
-                    <choice>
-                        <sic>prestantissimo</sic>
-                        <corr>praestantissimo</corr>
-                    </choice>
-                    ,<lb n="10"/>statuam conlocavit.<lb n="11"/>Amazoniis vita.
+                    <lb n="1"/><g ref="#palm">⸙</g> Pompeianis <g ref="#interpunct">·</g> vita <g ref="#palm">⸙</g>
+                    <lb n="2"/>Ob insignem iustitiam
+                    <lb n="3"/>et merita litterarum et amorem
+                    <lb n="4"/>quem non solum circa patriam
+                    <lb n="5"/>sed per omnem provinci<hi rend="ligature">am</hi> c<hi rend="small">o</hi>nl<hi rend="small">o</hi>cavit
+                    <lb n="6"/><expan><abbr>Iul</abbr><ex>io</ex></expan> <g ref="#interpunct">·</g>  <expan><abbr>Cl</abbr><ex>audio</ex></expan> <g ref="#interpunct">·</g>  Peristerio <space extent="unknown" unit="character"/>
+                    <lb n="7"/>Pompeiano <expan><abbr>v</abbr><ex>iro</ex></expan> <g ref="#interpunct">·</g>  <expan><abbr>c</abbr><ex>larissimo</ex></expan> ex <expan><abbr>cons</abbr><ex>ulari</ex></expan> <g ref="#interpunct">·</g>  <expan><abbr>p</abbr><ex>rovinciae</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>S</abbr><ex>iciliae</ex></expan> <g ref="#interpunct">·</g> 
+                    <lb n="8"/>universa curia in c<hi rend="small">o</hi>etu <choice><sic>splendidu</sic><corr>splendido</corr></choice> <g ref="#interpunct">·</g>  suo
+                    <lb n="9"/>patrono digno et <choice><orig>prestantissimo</orig><reg>praestantissimo</reg></choice>
+                    <lb n="10"/>statuam conlocavit
+                    <lb/><space unit="line" quantity="1"/>
+                    <lb n="11"/><g ref="#palm">⸙</g> Amazoniis vita <g ref="#palm">⸙</g>
                 </ab>
-                <!--This EDR text 072109 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
-            <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+            <div type="apparatus" resp="#JP">
+                <listApp><app><note>Text based upon photograph in Wilson</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" resp="UlrichGehn">
+                <p>Life to the (family of the) Pompeiani! On account of his distinguished justice, and of his literary merits, and of the love which he placed not only on his fatherland but on the whole province; to Iulius Claudius Peristerius Pompeianus, of clarissimus rank, former governor (consularis) of the province of Sicily; the whole council (curia), in a splendid meeting, set up this statue to its worthy and most excellent patron. Life to the (family of the) Amazonii! [translation from <ref target="http://laststatues.classics.ox.ac.uk/database/detail-base.php?record=LSA-2853">LSA 2853</ref>]
+                </p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
+                <p>This inscription is on the reverse of the block employed for <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000627">ISic000627</ref>, a prior, late C2 CE, honorific text.<!--commented out pending revision-->
                     <!--in honour of governor Iulius Claudius Persterius Pompeianus, erected by the entire curia of the city. On the reverse of the C2 AD Latin honorific which is also in Wilson (fig.253) and is AE 1906.75.i.--></p>
             </div>
-            <div type="bibliography">
+            <div type="bibliography"><!-- also LSA: http://laststatues.classics.ox.ac.uk/database/detail-base.php?record=LSA-2853 -->
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
-                        <citedRange>1906.0075.ii<!--Failed to convert--></citedRange>
+                        <citedRange>1906.0075.ii</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     </bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1990</date>
-                        <citedRange>180 n.114-115 fig.152</citedRange>
+                        <citedRange>180 fig.152 with n.114-115</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
                     </bibl>
                     <bibl type="corpus" n="ILS">

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1332</title>
+                <title>I.Sicily inscription 001332</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -67,9 +67,7 @@
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania
-                        </repository>
-                        <idno type="inventory">291 + 307</idno>
+                            Catania</repository>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -120,29 +118,44 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0200">C2 AD (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0200">2nd century CE (K)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Catania, Museo Civico di Catania no. 291 + 307</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">(a) mag.sup; (b) no.291, sala VI.99, mag.cort.; (c) no.307, sala
-                                VI.115, mag.cort.
-                            </note>
-                        </adminInfo>
-                    </additional>
+                    
+                    <msPart xml:id="frA">
+                        <msIdentifier> <!-- in adminInfo/note there was a reference to a third part located in mag.sup. but there is no third invno ? -->
+                            <idno type="inventory">291</idno>
+                        </msIdentifier>
+                        <history>
+                            <provenance type="observed" corresp="#frA">sala VI.99, mag.cort.</provenance>
+                        </history>
+                    </msPart>
+                    <msPart xml:id="frB">
+                        <msIdentifier>
+                            <idno type="inventory">307</idno>
+                        </msIdentifier>
+                        <history>
+                            <provenance type="observed" corresp="#frB">sala VI.115, mag.cort.</provenance>
+                        </history>
+                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>

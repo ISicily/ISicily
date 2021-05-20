@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3200</title>
+                <title>I.Sicily inscription 003200</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -50,18 +50,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003200</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388340</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository><!--Add Repository Here--></repository><!-- check whether still in situ, or now in Palermo museum -->
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,7 +75,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.mosaic" ref="http://www.eagle-network.eu/voc/material/lod/134.html" cert="low">mosaic</material>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.mosaic" ref="http://www.eagle-network.eu/voc/objtyp/lod/184">mosaic</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -87,8 +86,8 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                <layout>
+                                    <rs ana="#execution.mosaic" ref="http://www.eagle-network.eu/voc/writing/lod/16">mosaic</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -113,22 +112,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                             	<geo>38.13205, 13.33561</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0125" notAfter-custom="-0075">later 2nd — early 1st century BCE</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found">on the threshold of room p in edificio B, piazza Vittoria excavations, Palermo</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -155,7 +159,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -164,6 +168,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-04-21" who="#JP">Jonathan Prag made initial edits</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -185,12 +190,10 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR114090" xml:lang="grc">
+            <div type="edition" xml:space="preserve" xml:lang="grc"><!-- check against editions, since Gabrici describes the text as presented twice, on each side of teh threshhold -->
                 <ab>
-                    <lb n="1"/>
-                    χαῖρε σύ
+                    <lb n="1"/>χαῖρε σύ
                 </ab>
-                <!--This EDR text 114090 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
@@ -214,6 +217,7 @@
                         <citedRange>197 dr</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/BKMCZ8SA"/>
                     </bibl>
+                    <!-- add Boeselager, Antike Mosaiken in Sizilien, Roma 1983, p. 53 -->
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

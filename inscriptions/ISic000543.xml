@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0543</title>
+                <title>I.Sicily inscription 000543</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="NCash" ref="https://orcid.org/0000-0002-8767-3368">Noah Cashian</name>
+                    <resp>editing existing inscription edition and providing a translation</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -116,20 +120,25 @@
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -166,7 +175,8 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2021-03-05" who="#NCash">began editing inscription and working on translation</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -187,12 +197,12 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#NCash">
                 <ab>
-                    <lb n="1"/> Aeliae Aug<supplied reason="lost">e</supplied>
+                    <lb n="1"/>Aeliae <g ref="#interpunct">·</g> Aug<supplied reason="lost">e</supplied><!--CIL apparatus not clear - could this not be Aug(ustae) (libertae)?-->
                     <lb n="2"/>coniugi
-                    <lb n="3"/>sancitissimae
-                    <lb n="4"/>Publius Aelius Augusti libertus
+                    <lb n="3"/>sanctissimae
+                    <lb n="4"/><expan><abbr>P</abbr><ex>ublius</ex></expan> <g ref="#interpunct">·</g> Aelius <g ref="#interpunct">·</g> <expan><abbr>Aug</abbr><ex>usti</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>lib</abbr><ex>ertus</ex></expan>
                     <lb n="5"/><supplied reason="lost">N</supplied>igr<supplied reason="lost">ia</supplied>nus
                 </ab>
             </div>
@@ -202,8 +212,9 @@
                 <app loc="line 5"><note>Auria 1697: [..]IGR[..]NVS[..]; Gualtherus 1624: ΛIGRANIVS</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div xml:lang="en" type="translation" resp="#NCash">
+                <p>Publius Aelius Nigrianus, freedman of the emperor, (made) (this) for his most pure wife Aelia Auge</p>
+                <!--If Aug(ustae) (libertae), then: 'Publius Aelius Nigrianus, freedman of the emperor, (made) (this) for his most pure wife Aelia, freedwoman of the emperor'-->
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->

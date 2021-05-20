@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3330</title>
+                <title>I.Sicily inscription 003330</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -93,18 +93,13 @@
                                 </offset>
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0100" evidence="archaeological-context">Probably later C2 BC on archaeological grounds</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0100" evidence="archaeological-context">Probably later 2nd century BCE on archaeological grounds</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found during excavations by Carettoni, summer 1956 in two separate locations to the east of the agora/'muro a bugnato'</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2008.09.30</provenance>
-                        <acquisition>Halaesa, Antiquarium e sito archeologico di Halaesa</acquisition>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">on site</note>
-                        </adminInfo>
-                    </additional>
-                    <msPart corresp="#frA">
+                    <msPart xml:id="frA">
                         <msIdentifier/>
                        <physDesc>
                         <objectDesc>
@@ -142,16 +137,17 @@
                         </handDesc>
                     </physDesc>
                         <history>
-                            <provenance type="found" subtype="discovered">Found during excavations by Carettoni in trench VI (1956) on the east side of the monumental 'muro a bugnato', thought to form the foundation of a ‘portico orientale’ which borders the east side of the so-called ‘agora inferiore’<geo>37.998248, 14.263128</geo></provenance>
+                            <provenance type="found" subtype="discovered" xml:id="findspot" corresp="#frA">Found during excavations by Carettoni in trench VI (1956) on the east side of the monumental 'muro a bugnato', thought to form the foundation of a ‘portico orientale’ which borders the east side of the so-called ‘agora inferiore’<geo>37.998248, 14.263128</geo></provenance>
+                            <provenance type="observed" corresp="#findspot #frA">in situ</provenance>
                         </history>
                     </msPart>
-                    <msPart corresp="#frB">
+                    <msPart xml:id="frB">
                         <msIdentifier/>
                         <physDesc>
                             <objectDesc>
                                 <supportDesc>
                                     <support>
-                                        <p> Intact on the top, but partially damaged below and with some damage / loss to the left and right ends</p>
+                                        <p>Intact on the top, but partially damaged below and with some damage / loss to the left and right ends</p>
                                         <material/>
                                         <objectType/>
                                         <dimensions>
@@ -183,19 +179,25 @@
                             </handDesc>
                         </physDesc>
                         <history>
-                            <provenance type="found" subtype="discovered">Found during excavations by Carettoni in trench XXXII (16 October 1956) on the 'rampa settentrionale' leading from the house with portico (the so-called ginnasio) towards the monumental wall supporting the 'portico orientale'<geo>37.998023, 14.263120</geo></provenance>
+                            <provenance type="found" subtype="discovered" corresp="#frB">Found during excavations by Carettoni in trench XXXII (16 October 1956) on the 'rampa settentrionale' leading from the house with portico (the so-called ginnasio) towards the monumental wall supporting the 'portico orientale'<geo>37.998023, 14.263120</geo></provenance>
+                            <provenance type="observed" corresp="#findspot #frB">in situ</provenance>
                         </history>
                     </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -285,12 +287,12 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
-                <div type="textpart" subtype="fragment" n="A" xml:id="frA">
+                <div type="textpart" subtype="fragment" corresp="#frA">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ΕΡΩ<gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
-                <div type="textpart" subtype="fragment" n="B" xml:id="frB">
+                <div type="textpart" subtype="fragment" corresp="#frB">
                     <ab>
                         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><unclear>Κ</unclear>ΤΩΝΧ<gap reason="lost" extent="unknown" unit="character"/>
                     </ab>

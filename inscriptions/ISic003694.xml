@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3694</title>
+                <title>I.Sicily inscription 003694</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>adding bibliography, language, apparatus and text</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -60,10 +64,8 @@
                     <msIdentifier><!--Default country and region-->
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Siracusa (?)</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi (?)
-                        </repository>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097" cert="low">Museo Archeologico Regionale Paolo Orsi</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -73,7 +75,7 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="grc">Ancient Greek</textLang>
+                        <textLang mainLang="scx">Sikel<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Greek</desc></certainty></textLang>    
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -81,10 +83,10 @@
                                 <support>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85.html">cippus</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">47</height>
+                                        <width unit="cm">38</width>
+                                        <depth unit="cm">31</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -116,29 +118,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523650">Ragusa</placeName>
                             	<geo>36.92653, 14.74761</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0500">C6 BC</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0500">6th century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Contrada Pendente (and/or contrada Cuciniello), vicinity of Ragusa
-                            station, necropolis, sepoltura 15
-                        </provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Siracusa (?), Museo Archeologico Regionale Paolo Orsi (?)</acquisition>
+                        <provenance type="found" subtype="discovered">Contrada Pendente (and/or contrada Cuciniello), vicinity of Ragusa station, necropolis, sepoltura 15</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">inv. 19047 and 19048 are from the same tomb</note>
-                        </adminInfo>
-                    </additional>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -165,7 +166,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -173,6 +174,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-03-16" who="#VM">added bibliography, language, apparatus and text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,17 +196,25 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="scx">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>Ν
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>ΤΙΟ<gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>Text after Orsi 1899</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p></p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
+                    <!-- inv. 19047 (ISic003376) and 19048 (ISIc003375) are from the same tomb - put links to them -->
                     <!--fragment of 'cippo colossale', well squared, but broken to left and below. Traces of two lines of Greek letters (ends of line), seemingly N and TIO. 47 cm high by 38 cm wide, by 31 cm thick. Orsi records this together with two other fragmentary blocks, but Orsi not explicitly suggesting they go together; monumental sculptural fragments also. Only invl. 19047 seen so far. Appears to be ignored in all subsequent publications.--></p>
             </div>
             <div type="bibliography">
@@ -215,6 +225,12 @@
                         <date>1899</date>
                         <citedRange>411 frag.b</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
+                    <bibl type="corpus" n="IAS2">
+                        <author>Agostiniani</author>
+                        <date>Forthcoming</date>
+                        <citedRange></citedRange> <!-- RAG3 for now -->
+                        <ptr target="http://zotero.org/groups/382445/items/UE7VX29V"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

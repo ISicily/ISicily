@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1554</title>
+                <title>I.Sicily inscription 001554</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -55,20 +55,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001554</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4354420</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico
-                            Regionale Antonino Salinas
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
                         <idno type="inventory">1073</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -84,31 +80,32 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.stucco" ref="http://www.eagle-network.eu/voc/material/lod/126.html">stucco</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <material ana="#material.plaster" ref="http://www.eagle-network.eu/voc/material/lod/126.html">plaster</material>
+                                    <objectType ana="#object.aedicula" ref="http://www.eagle-network.eu/voc/objtyp/lod/180.html">aedicula</objectType>
+                                    <dimensions><!--from Vento-->
+                                        <height unit="cm">51</height>
+                                        <width unit="cm">51.5</width>
+                                        <depth unit="cm">43</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                <layout><p>Text over two lines in the upper central part of the rear wall of the niche on the front of the aedicula; text sits below a set of decorative symbols and above a banqueting scene.</p>
+                                    <rs type="painted" ref="http://www.eagle-network.eu/voc/writing/lod/10">painted</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Plain painted letters without serifs. Alpha is broad with straight bar; theta is nearly circular with horizontal bar; lunate sigma and lunate omega.</p>
+                                <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">6-15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not measured</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -120,22 +117,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                             	<geo>37.80355, 12.4379</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100">C1 BC - C1 AD</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100">1st century BCE - 1st century CE</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Palermo, Museo Archeologico Regionale Antonino Salinas no. 1073</acquisition>
+                        <provenance type="found" subtype="discovered" when="1895">One of thirteen found in Marsala in 1895; the original findspot was concealed.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -165,14 +167,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-10-26" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2021-03-12" who="#JP">Jonathan Prag edited metadata and bibliography, revised text from photograph</change>
+             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -193,14 +196,14 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <ab>
-                    <lb n="1"/>Διόδωρος ἥ<supplied reason="omitted">ρ</supplied>ως ἀγ
+                    <lb n="1"/>Διόδωρος ἥ<choice><corr>ρ</corr><sic>γ</sic></choice>ως ἀγ
                     <lb n="2" break="no"/>αθός
                 </ab>
             </div>
             <div type="apparatus">
-                <p>Text of IGPalermo</p>
+                <listApp><app><note>Text checked against photograph</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -218,6 +221,12 @@
                     <bibl type="corpus" n="IGMusPalermo">
                         <citedRange>24</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
+                    </bibl>
+                    <bibl>
+                        <author>Kretschmer</author>
+                        <date>1927</date>
+                        <citedRange>306 no.2</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/NT9TNH4M"/>
                     </bibl>
                     <bibl>
                         <author>Gabrici</author>
@@ -240,7 +249,7 @@
                     <bibl>
                         <author>Vento</author>
                         <date>2000</date>
-                        <citedRange>62-65 tav.15-16, 19</citedRange>
+                        <citedRange>62-65 tav.15-19</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RTAB9A28"/>
                     </bibl>
                 </listBibl>

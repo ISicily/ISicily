@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0546</title>
+                <title>I.Sicily inscription 000546</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -37,6 +37,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="NCash" ref="https://orcid.org/0000-0002-8767-3368">Noah Cashian</name>
+                    <resp>editing the inscription and providing a translation</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -114,23 +118,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                             	<geo>38.13205, 13.33561</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0250">First half of C3 AD (cf.
+                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0250">First half of 3rd century CE (cf.
                                 Barbieri)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -166,7 +175,8 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2021-03-12" who="#NCash">Noah Cashian began editing the inscription and translation</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -187,46 +197,24 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR138302" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#NCash">
                 <ab>
-                    <lb n="0"/>
-                    <gap reason="lost" extent="unknown" unit="line"/>
-                    <lb n="1"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    <expan>
-                        <abbr>Q</abbr>
-                        <ex>uinti</ex>
-                    </expan>
-                    Fabi Caesili Titiani
-                    <lb n="2"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>avo
-                    <expan>
-                        <abbr>Q</abbr>
-                        <ex>uinto</ex>
-                    </expan>
-                    Aquilio Nigro
-                    <lb n="3"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    <supplied reason="lost">p</supplied>roco
-                    <expan>
-                        <ex>n</ex>
-                        <abbr>s</abbr>
-                        <ex>uli</ex>
-                    </expan>
-                    <lb n="4"/>Si<supplied reason="lost">cili</supplied>ae.
-                    <lb n="5"/>
+                    <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">et</supplied> <expan><abbr>Q</abbr><ex>uinti</ex></expan> <g ref="#interpunct">·</g> Fabi <g ref="#interpunct">·</g> Caesili <g ref="#interpunct">·</g> Titiani
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>avo <g ref="#interpunct">·</g> <expan><abbr>Q</abbr><ex>uinto</ex></expan> <g ref="#interpunct">·</g> Aquilio <g ref="#interpunct">·</g> Nigro
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">p</supplied>ro <g ref="#interpunct">·</g> <expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan>
+                    <lb n="4"/>Si<supplied reason="lost">cili</supplied>ae
                 </ab>
-                <!--This EDR text 138302 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of CIL</note></app></listApp> 
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#NCash">
+                <p>...[and] of Quintus Fabius Caesilius Titianus...for [his] uncle Quintus Aquilius Niger...proconsul...of Sicily</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--Q. Fabi. Caesili. Titiani...Q. Aquilio Nigro.../ [p]ro cos / - - -]Si[cili]ae. cf. AE 1964.182, Barbieri (1961) 41-44, and CIL 10.7276 for the family--></p>
+                    <!--cf. AE 1964.182, Barbieri (1961) 41-44, and CIL 10.7276 for the family--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
