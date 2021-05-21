@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title></title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal> <!-- Ilenia as principal researcher; JP remains as editor within the I.Sicily context (and as obtainer of the specific funding grant)? -->
+                <principal ref="#IG">Ilenia Gradante</principal> <!-- Ilenia as principal researcher; JP remains as editor within the I.Sicily context (and as obtainer of the specific funding grant)? -->
                 <funder>John Fell OUP Research Fund</funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
@@ -38,13 +38,13 @@
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="IG">Ilenia Gradante</name>
-                    <resp></resp><!-- original research, signacula corpus composition, data gathering and file creation ?-->
+                    <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
+                    <resp>original research, signacula corpus composition, data gathering and file creation</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority> <!-- I.Sicily-sig or something? I think this just stays I.Sicily?-->
-                <idno type="filename"></idno><!-- ISic-sig0000 ?-->
+                <idno type="filename">ISic-010001</idno>
                 <idno type="TM"/>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
@@ -59,20 +59,20 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country/>
-                        <region/>
-                        <settlement/>
-                        <institution></institution>
-                        <repository></repository>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <institution>Parco Archeologico di Siracusa, Eloro e Villa del Tellaro</institution>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/97">Museo Archeologico Regionale Paolo Orsi</repository>
                         <collection></collection>
-                        <idno></idno>
+                        <idno type="inventory">22478</idno>
                         <altIdentifier xml:lang="en">
                             <repository/>
                             <idno/>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="xx"></textLang>
+                        <textLang mainLang="la">Latin</textLang>
                         <msItem>
                             <author>
                                 <roleName role="issuer" type="civil"> <!-- modify values for @role and @type as appropriate -->
@@ -88,9 +88,10 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p>General description of whole object...</p>
-                                    <objectType/><material/>
-                                    <dimensions unit="mm">
+                                    <p>Bronze seal with framed rectangular lamina. Intact ring handle, with square external profile and palmette engraved on the bezel</p>
+                                    <objectType ref="https://www.eagle-network.eu/voc/objtyp/lod/240.html" key="signaculum">signaculum</objectType>
+                                    <material ref="https://www.eagle-network.eu/voc/material/lod/109.html" key="bronze">bronze</material>
+                                        <dimensions unit="mm">
                                         <height></height>
                                         <width></width>
                                         <depth></depth>
@@ -100,12 +101,13 @@
                                     <!-- Ilenia to delete or add as needed -->
                                     <measure type="weight" unit="gr"/>
                                 </support>
-                                <condition rend="broken"><!-- decide on a controlled vocabulary of terms --></condition>
+                                <condition rend="intact"> <!-- decide on a controlled vocabulary of terms --></condition>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!-- general description, where is the writing, not much detail -->
+                                <layout>3 lines inscription on the lamina with linear orientation<!-- general description, where is the writing, not much detail -->
                                     <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
-                                    <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
+                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/7.html">relief letters</rs><!-- EAGLE vocab - revise; relief letters vs impressed etc.  -->
+                                    <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/8.html">ex forma</rs>
                                     <rs type="orientation"></rs>
                                     <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
                                         <idno/>
@@ -115,28 +117,25 @@
                         </objectDesc>
                         <handDesc>
                             <handNote><!--Default value and requires editing; generalise as needed-->
+                                <locus from="line1" to="line1"></locus>
                                 <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterHeight"><!-- remove from here, keep in msParts -->
-                                    <height unit="mm"/>
-                                </dimensions>
                                 <dimensions type="letterDepth"></dimensions> <!-- revise? -->
                                 <dimensions type="letterRelief"></dimensions> <!-- revise? -->
                             </handNote>
                         </handDesc>
-                    </physDesc>
+                        </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace>unknown</origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/xxxxx"> <geo></geo></placeName>
                                 <offset><!-- optional -->
                                     <placeName type="modern" ref="http://sws.geonames.org/xxxxx"></placeName>
                                 </offset>
-                            </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0000" notAfter-custom="-0000" evidence="xxxxx"></origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="101" notAfter-custom="215" precision="medium" evidence="lettering nomenclature" ></origDate>
                         </origin>
-                        <provenance type="found"></provenance><!-- see separate discussion document for values and attributes-->
+                        <provenance></provenance><!-- see separate discussion document for values and attributes-->
                         <provenance type="observed" subtype="autopsied" resp="#IG"></provenance>
-                        <acquisition></acquisition>
+                        <acquisition>donation of I. Virzì antiquarian from Palermo</acquisition>
                     </history>
                     <msPart type="lamina" xml:id="part1">  <!-- can put a reference pointing to the text division for this text -->
                         <msIdentifier>
@@ -148,12 +147,15 @@
                         <physDesc>
                             <objectDesc>
                                 <supportDesc>
-                                    <support><p>More detailed description of this part of the object, in the shape 
-                                        of a <rs type="shape">penguin</rs> <!-- keep terms consistent --> ...</p>
+                                    <support>
+                                        <p><rs type="shape">rectangular</rs> lamina with raised border<!-- keep terms consistent --> ...</p>
                                     <dimensions></dimensions>
+                                        <height>26</height>
+                                        <width>62</width>
+                                        <depth>5</depth>
                                     <measure type="weight"></measure>
                                     </support>
-                                    <condition></condition>
+                                    <condition>intact</condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout><!-- detailed desription here -->
@@ -167,10 +169,10 @@
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote><!--Default value and requires editing-->
-                                    <locus from="line1" to="line1">Line 1</locus>
+                                <handNote>letters with a uniform square module, characterized by pronounced serifs, with slight signs of wear<!--Default value and requires editing-->
+                                    <locus from="line1" to="line3">Line 1- line 3</locus>
                                     <dimensions type="letterHeight">
-                                        <height unit="mm"/>
+                                        <height unit="mm"/><height>6-5</height>
                                     </dimensions>
                                     <dimensions type="letterDepth"></dimensions> <!-- revise? -->
                                     <dimensions type="letterRelief"></dimensions> <!-- revise? -->
@@ -195,17 +197,17 @@
                         <physDesc>
                             <objectDesc>
                                 <supportDesc>
-                                    <support><p>More detailed description of this part of the object, in the shape 
-                                        of a <rs type="shape">octagonal</rs> <!-- keep terms consistent --> ...</p>
+                                    <support><p>ring handle, with <rs type="shape">square</rs> external profile and palmette engraved on the bezel
+                                      <!-- keep terms consistent --> ...</p>
                                         <dimensions></dimensions>
                                         <measure type="weight"></measure>
                                     </support>
-                                    <condition></condition>
+                                    <condition>intact</condition>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout><!-- detailed desription here -->
                                         <!--  <rs type="layout"></rs> <!-\- keep this also for brick stamps -\-> -->
-                                        <rs type="execution"></rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
+                                        <rs type="execution" ref="https://www.eagle-network.eu/voc/writing/lod/1.html" key="engraved">engraved</rs><!-- EAGLE vocab - revise; relief letters vs impressed etc. -->
                                         <rs type="orientation"></rs>
                                         <!--<rs type="matrix" subtype="xxxx" ref="URI"><!-\- referencing an authority list of matrices?-\->
                                         <idno/>
@@ -226,7 +228,7 @@
                             <decoDesc>
                                 <decoNote>
                                     <figure>
-                                        <figDesc/>
+                                        <figDesc>palmette</figDesc>
                                     </figure>
                                 </decoNote>
                             </decoDesc>
@@ -235,6 +237,14 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -256,11 +266,10 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term key="invocation" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html"><!-- find reference :-D --></term>
-                    <term key="ownership"></term>
+                 <term key="ownership"></term>
                 </keywords>
                 <keywords>
-                    <term>imprint</term> <!-- rather than in layout/object in <rs>; revise! -->
+                    <term></term> <!-- rather than in layout/object in <rs>; revise! -->
                 </keywords>
             </textClass>
         </profileDesc>
@@ -284,12 +293,15 @@
       </facsimile>
       <text>
           <body>
-              <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
-                  <div type="textpart" subtype="lamina" rend="linear" corresp="#part1"><!-- divs to be decided by Ilenia - what subtypes, rends etc. -->
-                      <ab></ab><!-- add @style with direction of writing, either on lb or on higher-level elements, as needed -->
-                  </div>
+              <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG">
+                  <div type="textpart" subtype="lamina" rend="r. to l." corresp="#part1">
+                      <ab>
+                          <lb n="1"/> <expan><abbr>P</abbr><ex>ubli</ex></expan> <g type="hedera"/> Aeli Sy
+                          <lb n="2" break="no"/>racusani <supplied reason="subaudible">servi</supplied>
+                          <lb n="3"/><choice><reg>Valenti</reg><orig>Balenti</orig></choice>
+</ab></div>
                   <div type="textpart" subtype="handle" rend="linear" corresp="#part2">
-                      <ab>Greek or Latin... text here</ab>
+                      <ab></ab>
                   </div>
               </div>
               <div type="apparatus">
@@ -297,15 +309,21 @@
                       <app xml:lang="xx"></app>
                   </listApp>
               </div>
-              <div type="translation">
-                  <p xml:lang="xx">[Modern language text here]</p>
+              <div type="translation" resp="#IG">
+                  <p xml:lang="en">of Valentius, (slave) of Publius Aelius Syracusanus</p>
               </div>
               <div type="commentary">
                    <p xml:lang="xx"></p>
               </div>
               <div type="bibliography">
-                  <listBibl> <!-- bibliography taken from Zotero -->
-                      <bibl></bibl>
+                  <listBibl>
+                      <!-- bibliography taken from Zotero -->
+                      <bibl>
+                          <author>Manganaro Perrone</author>
+                          <date>2006</date>
+                          <citedRange>18, no. 1</citedRange>
+                          <ptr target="http://zotero.org/groups/382445/items/GP8C6MAM"/>
+                      </bibl>
                   </listBibl>
               </div>
           </body>
