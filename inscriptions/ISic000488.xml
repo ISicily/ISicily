@@ -38,6 +38,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AR" ref="https://orcid.org/0000-0001-5677-4679">Alessandra Rocchetti</name>
+                    <resp>Epidoc editing and translation</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -171,6 +175,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-05-21" who="#AR">edited text division and added translation</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -192,14 +197,26 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AR">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>tate et iustitia pr<choice><reg>ae</reg><orig>e</orig></choice>di<supplied reason="lost">tus</supplied>
+                    <lb n="2"/><supplied reason="lost">e</supplied>t <g ref="#interpunct">·</g> singulari <g ref="#interpunct">·</g> sincerita<supplied reason="lost">te</supplied>
+                    <lb n="3"/><supplied reason="lost">omnib</supplied>us antecell <gap reason="lost" extent="unknown" unit="line"><certainty match=".." locus="end"></certainty></gap>
+                    <lb n="4"/>felicita <gap reason="lost" extent="unknown" unit="line"><certainty match=".." locus="end"></certainty></gap>
+            </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>text of CIL</note>
+                    </app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="it" resp="#AR">
+                <p>Dotato di rettitudine [...]</p>
+            </div>
+            <div type="translation" xml:lang="en" resp="#AR">
+                <p>Endowed of rectitude [...]</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
