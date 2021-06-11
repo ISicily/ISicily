@@ -72,7 +72,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Large texts incised on the walls of four galleries off the second ditch of the Euryelos fortress</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.arch_element.wall" ref="https://www.eagle-network.eu/voc/objtyp/lod/416.html">Building (store-room?)</objectType>
                                     <dimensions>
@@ -81,12 +81,12 @@
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><p>Each text is incised on a single line, in the first case on the right as one enters, in the other three cases on the left as one enters</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.deteriorated"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -94,13 +94,9 @@
                             <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">190-200</height>
+                                    <height unit="mm">120-150</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
-                            </handNote>
+                             </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
@@ -110,18 +106,17 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low" notBefore="-0400" notAfter="-0200">Fourth/third century BC (?)</origDate>
+                            <origDate datingMethod="#julian" cert="low" notBefore="-0400" notAfter="-0200" evidence="archaeological-context">4th — 3rd century BCE (?)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" xml:id="findspot">Euryelos; four subterranean crypts</provenance>
+                        <provenance type="found" subtype="first-recorded" notAfter="1867" xml:id="findspot">First described in situ in the galleries off the second ditch of the fortress by Schubring in the 1860s<geo cert="medium">37.091182, 15.221975</geo></provenance><!-- approx location not precise -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
-                </msDesc>
+                    </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
@@ -168,6 +163,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-02" who="#JP">Jonathan Prag made further edits from publications</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -189,22 +185,36 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <div type="textpart" subtype="gallery-1">
                 <ab>
                     <lb n="1"/>CIIINbbb
+                </ab>
+                    </div>
+                 <div type="textpart" subtype="gallery-2">
+                <ab>
                     <lb n="2"/>CIIIINbbb
+                </ab>
+                 </div>
+                 <div type="textpart" subtype="gallery-3">
+                <ab>
                     <lb n="3"/>CINNb<gap reason="illegible" unit="character" quantity="1"/>
+                </ab>
+                 </div>
+                 <div type="textpart" subtype="gallery-4">
+                <ab>
                     <lb n="4"/>CIIINbbbb                    
                 </ab>
+                 </div>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Placeholder text based upon the transcription of Kaibel in IG</note></app></listApp>
+                <listApp><app><note>Preliminary text based upon the transcription of Kaibel in IG</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p>Previous editors have been uncertain whether these are numerals or letters, and whether Latin or Greek. The most recent edition by Mertens, after consultation with Maria Letizia Lazzarini, suggests that these are acrophonic numerals (Greek) of the fourth or third century BC. A revised edition will follow</p>
+                <p>Previous editors have been uncertain whether these are numerals or letters, and whether Latin or Greek. The most recent edition by Mertens, after consultation with Maria Letizia Lazzarini, suggests that these are acrophonic numerals (Greek) of the fourth or third century BC. A revised edition will follow. Orsi's taccuini (vol. 2, p. 41) provide a further autoptic transcription (8 November 1888).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -231,6 +241,12 @@
                         <date>1861-1867</date>
                         <citedRange>671-672 tab. no.8</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TBDXRINA"/>
+                    </bibl>
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>2018</date>
+                        <citedRange>Tacc. 2, p. 41</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
                     </bibl>
                     <bibl>
                         <author>Beste and Mertens</author>
