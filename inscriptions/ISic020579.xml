@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ISic020579</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>project direction, template development and general editor</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>original data collection and editing, encoding text in Epidoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic020579</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic020579</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">66529</idno>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>    
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Floor of a black-glazed kylix (Attic).</p>
+                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <objectType ana="#object.vessel.kylix" ref="http://kerameikos.org/id/kylix">kylix</objectType>
+                                    <dimensions>
+                                        <height unit="cm">8.5</height>
+                                        <dim type="diameter" unit="cm">18</dim>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
+                                    <p>The text is placed on the floor of the vessel, arranged in a clockwise spiral.</p>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <!-- Based on Glyph table: chi02 (blu alphabet) -->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">5-7</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462239">Herbessus (?)</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/11102431/">Montagna di Marzo</placeName>
+                                <geo>37.42658,14.30061</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0480">499—480 BCE (so Arena on letters)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found in Montagna di Marzo<geo>37.42658,14.30061</geo>.</provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Siracusa, Museo Archeologico Regionale Paolo Orsi</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>             
+            <xi:include href="../alists/charDecl.xml">                 
+                <xi:fallback>                     
+                    <p>ISicily glyphs authority list</p>                 
+                </xi:fallback>             
+            </xi:include>         
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.dedication" ref="https://www.eagle-network.eu/voc/typeins/lod/359.html">gift, private document</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2021-05-21" who="#VM">Valentina Mignosa added metadata, text</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/> 
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1" rend="spiral-clockwise"/>τοῦτον τὸν σϙύφον <persName><name>Πόρϙος</name></persName> ἀποδίδο̄τι ἐς τὸν θίασον το͂ν π<supplied reason="lost">οτᾶ</supplied>ν
+                    <lb n="2" rend="spiral-clockwise"/>αἰ δὲ φίλε̄ <persName><name>Φρύνᾱν</name></persName> οὐκ ἄλλος κ’ ἄγε̄ 
+                    <lb n="3" rend="spiral-clockwise"/>hο δὲ γράπσας τὸν ἀννέμο<supplied reason="omitted">ν</supplied>τα πυγιξεῖ
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text after Dubois (IGDS 1)</note>
+                    </app>
+                    <app loc="1">
+                        <note>Manganaro, Arena: π[ᾱο͂]ν</note>
+                    </app>
+                    <app loc="2">
+                        <note>Arena: δ’ἐφίλε̄ ... ἆγε</note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p>Porkos returns this skyphos to the thiasos of the drinkers.
+                       Since he is in love with Phryna, it is not another who will take her.
+                       He has written, the one who reads will practice sodomy.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#VM">
+                <p>Porkos restituisce questo skyphos al tiaso dei bevitori.
+                       Poiché ama Phryna, non è certo un altro che la prenderà.
+                       Lui ha scritto, colui che legge praticherà la sodomia.</p>
+            </div>
+            <div type="commentary" xml:lang="en" resp="#VM">
+                <p>Text engraved in a spiral pattern on the floor of a kylix that is, however, identified by the inscription as a skyphos. 
+                    Forssman's reading gave a better understanding of the text, which would be a joke engraved on the cup for use in a 
+                    symposial context. Manganaro speculated that this was an invitation to κοτταβίζειν. Dubois hypothesised that one could think of an 
+                    object used in the symposium and that the inscription refers to a scurrilous game intended for the drinker who emptied the cup in question 
+                    and found the inscription. 
+                    Unusual is not only the type of text and its layout but also the onomastics. The name Πόρϙος is attested only in this inscription 
+                    by epigraphy and in an Alcmanes (Fr. 1.1.19) verse known indirectly by Hesychius (ν 516) Νηρεύς· θαλάσσιος δαίμων. Ἀλκμὰν 
+                    καὶ Πόρκον ὀνομάζει. Φρύνᾱ occurs also elsewhere, although rarely (two occurrences in total, at Thebes and Thespiai). 
+                    Given the interplay of the inscription, Dubois assumed that this last name referred to a female courtesan.
+                    The gap at l. 1 was reconstructed by Manganaro as π[οτᾶ]ν, an integration we accept. It is also possible to read, with Dubois, φίλη as 
+                    an archaic present indicative (the form would be akin, as the scholar notes, to similar ones in Theocritus, cf. ὅρη in Theoc. XXX.22).
+                    The word form ἀννέμο&lt;ν&gt;τα has been interpreted by Forssamn and Gallavotti, with whom later editors agree, 
+                    as the accusative of the participle of ἀνανέμω (= ἀναγιγνώσκω), with ellipsis of the nasal, on the basis of its use by Epicarmus and Theocritus. 
+                    Gallavotti recognises the segment between the beginning of line 2 and γράπσας as a hexameter and the following syllables as an iambic cadence.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IGASM2[2]">
+                        <author>Arena</author>
+                        <date>2002</date>
+                        <citedRange>120, pl. XXXIII.1</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/65P7AM6N"/>
+                    </bibl>
+                    <bibl type="corpus" n="IGDS1">
+                        <author>Dubois</author>
+                        <date>1989</date>
+                        <citedRange>167</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RWXNUFEX"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>35.1009</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Masson, Taillardat</author>
+                        <date>1985</date>
+                        <citedRange>137-140, pl. 9-10</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/PMDUEJIF"/>
+                    </bibl>
+                    <bibl>
+                        <author>Masson</author>
+                        <date>1984-1985</date>
+                        <citedRange>76</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/GGHQGHAM"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>31.0824</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Gallavotti</author>
+                        <date>1980-1981</date>
+                        <citedRange>426</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/5XIQ2TEU"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manni Piraino</author>
+                        <date>1976-1977</date>
+                        <citedRange>273</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7PCINW4E"/>
+                    </bibl>
+                    <bibl>
+                        <author>Forssman</author>
+                        <date>1976</date>
+                        <citedRange>39-46</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/QN9QVAQU"/>
+                    </bibl>
+                    <bibl>
+                        <author>Gallavotti</author>
+                        <date>1975</date>
+                        <citedRange>172-177</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/N3IU2MG2"/>
+                    </bibl>
+                    <bibl>
+                        <author>Lazzarini</author>
+                        <date>1973-1974</date>
+                        <citedRange>355-357, nr. 23, pl. 71</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/UNHWCCD2"/>
+                    </bibl>
+                    <bibl>
+                        <author>Lazzarini</author>
+                        <date>1973</date>
+                        <ptr target="http://zotero.org/groups/382445/items/2T5JURKA"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1964-1965</date>
+                        <citedRange>197-199, pl. 18</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/P4E466WU"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl></bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
