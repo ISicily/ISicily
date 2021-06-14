@@ -1,5 +1,7 @@
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -126,11 +128,19 @@
                 </msDesc>
             </sourceDesc>
         </fileDesc>
-        <encodingDesc>
-            <p>Encoded following the latest EpiDoc guidelines</p>
-            <p>Taxonomies for ISicily controlled values</p>
-            <p>ISicily glyphs authority list</p>
-        </encodingDesc>
+       <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -189,15 +199,15 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#FP">
                 <ab> 
-                <lb n="1"/> <persName><name><supplied reason="lost">Cl</supplied>odi<supplied reason="lost">ae</supplied> </name> <persName><name><expan><abbr>P</abbr><ex>ubli</ex></expan></name></persName> <g ref="#interpunct">·</g> <expan><abbr>F</abbr><ex>iliae</ex></expan> <g ref="#ivy-leaf">❦</g>
-                    <lb n="2"/> <name>Falconillae</name></persName> ma<hi rend="ligature">tri</hi>
-                    <lb n="3"/> <persName><name>Pompei</name> <g ref="#interpunct">·</g> <name>Falconis</name></persName>
-                    <lb n="4"/> <persName><name>Sosius</name> <space unit="character" quantity="1"/> <name>Priscus</name></persName>
-                    <lb n="5"/> <space unit="character" quantity="3"/> <unclear>M</unclear> <gap reason="lost" extent="unknown" unit="character"/>
+                <lb n="1"/><persName><name><supplied reason="lost">Cl</supplied>odi<supplied reason="lost">ae</supplied> </name> <persName><name><expan><abbr>P</abbr><ex>ubli</ex></expan></name></persName> <g ref="#interpunct">·</g> <expan><abbr>F</abbr><ex>iliae</ex></expan> <g ref="#ivy-leaf">❦</g>
+                    <lb n="2"/><name>Falconillae</name></persName> ma<hi rend="ligature">tri</hi>
+                    <lb n="3"/><persName><name>Pompei</name> <g ref="#interpunct">·</g> <name>Falconis</name></persName>
+                    <lb n="4"/><persName><name>Sosius</name> <space unit="character" quantity="1"/> <name>Priscus</name></persName>
+                    <lb n="5"/><space unit="character" quantity="3"/> <unclear>M</unclear> <gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp> <app> <note>text based on photograph</note></app></listApp>
+                <listApp><app><note>text based on photograph</note></app></listApp>
      </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
