@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Part of a caduceus of the city of Hi(p)pana</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>establishment of EpiDoc template</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic030115</idno>
+                <idno type="TM">697270</idno>
+                <idno type="EDR">139028</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">64900546</idno>
+                <idno type="PHI">333393</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030115</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement/>
+                        <repository/>
+                        <!--No inventory number found-->
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <country/>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Part of the staff and ring of a bronze caduceus</p>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <objectType ana="#object.caduceus" ref="https://www.eagle-network.eu/voc/objtyp/lod/58.html">caduceus</objectType>
+                                    <dimensions>
+                                        <height unit="cm"></height>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                        </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>The text is split between the handle (the civic ethnic) and the ring (the statement of public property)</p>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p></p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"></height>
+                                    <width></width>
+                                    <depth></depth>
+                                </dimensions>
+                                </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462247">Hippana</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/11102432/">Montagna dei Cavalli</placeName>
+                                <geo>37.701564, 13.436825</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0500" notAfter-custom="-0401" precision="low" evidence="lettering">5th century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" notAfter="1875">Found on the site of ancient Hippana (Montagna dei Cavalli)<geo>37.701564, 13.436825</geo></provenance><!-- representative location of site only -->
+                        <provenance type="not-observed" subtype="lost">Reported lost, with no modern observation</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.public-document" ref="http://www.eagle-network.eu/voc/typeins/lod/360.html">public document</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2021-06-18" who="#JP">Jonathan Prag created file from published data</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <div type="textpart" subtype="ring">
+                <ab>
+                    <lb n="1"/>δαμόσιον
+                </ab>
+                </div>
+                 <div type="textpart" subtype="staff">
+                <ab>
+                    <lb n="1"/><placeName type="ethnic">Ἱπα<supplied reason="lost">νατᾶν</supplied></placeName>
+                </ab>
+                </div>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>Text after previous editions</note></app></listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>State property of the people of Hipana</p>
+            </div>
+            <div type="commentary">
+                <p>Coins bearing the same ethnic, with the same spelling support the restoration (so Manganaro). The site of Hip(p)ana (also Sippana) is now generally accepted to be that on Montagna dei Cavalli, just to the south of modern Prizzi.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>46.1296 note</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>56.1077.B3</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Crispi</author>
+                        <date>1875</date>
+                        <ptr target="http://zotero.org/groups/382445/items/ZV5UIZXV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1997</date>
+                        <ptr target="http://zotero.org/groups/382445/items/7Y9AIUSP"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ampolo</author>
+                        <date>2006</date>
+                        <citedRange>185 appendix B no.3</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/LCT7H63L"/>
+                    </bibl>
+                    <bibl type="corpus" n="IGDS2">
+                        <citedRange>93</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SM2KDHZC"/>
+                    </bibl>
+                   </listBibl>
+	   <listBibl type="discussion">
+	       <bibl></bibl>
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
