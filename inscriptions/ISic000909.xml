@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000909</title>
+                <title>Epitaph of Daphros</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -54,19 +54,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000909</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4340025</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">47</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -80,35 +78,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>A marble plaque, damaged / roughly cut on all sides, but seemingly inscribed subsequent to any such cutting.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!-- from Orsi -->
+                                        <height unit="cm">17</height>
+                                        <width unit="cm">22</width>
+                                        <depth unit="cm">not recorded</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Text on two lines, with final letter of line 1 squeezed in small before the broken edge of the stone; two birds and christian monograms fill the space below.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Moderately neat and regular letters, cut with a broad groove rather than v-cut, without scerifs, but with extensions to tops of some letters (alpha, delta). alpha has broken bar; epsilon is lunate; kappa has full length arms; omicron is full size; rho has small almost closed eye; sigma is lunate but rectilinear; phi is circular with extended vertical; omega (in symbols below) is lunate.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
+                        <decoDesc ana="#decoration.figure.animal"><decoNote>Two birds on lower part of stone, either side of staurogram with sigma/omega.</decoNote></decoDesc>
                     </physDesc>
                     <history>
                         <origin>
@@ -117,9 +117,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0500" cert="low">3rd — 5th century CE; enthade keitai (?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" cert="low" precision="low">4th — 5th century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Catacombs</provenance>
+                        <provenance type="found" subtype="discovered" when="1872">Found during exploration of the <placeName ref="https://pleiades.stoa.org/places/560149180">catacomb of S. Giovanni</placeName><geo>37.0767995, 15.2848558</geo> (Rotonda di Adelfia) in June 1872</provenance><!-- general geo for the catacombs -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -164,7 +164,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -174,46 +174,42 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2021-06-20" who="#JP">Jonathan Prag edited file from available published data and photograph</change>
+                </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic000909_tiled.tif" height="3721px" width="4724px">
+                <desc>Photo Museo Arch. Reg. P. Orsi (2012), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic000909.jpg" height="3721px" width="4724px">
+                <desc>Photo Museo Arch. Reg. P. Orsi (2012), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <ab>
                     <lb n="1"/>ἐνθάδε κεῖτε
-                    <lb n="2"/>Δάφροε
+                    <lb n="2"/><persName><name>Δάφρος</name></persName> <g ref="#staurogram">&#x101a0;</g>
+                    <lb n="3"/><expan><abbr>σ<am><g ref="#staurogram">&#x101a0;</g></am>ω</abbr><ex>τήρ</ex></expan>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text of IG</note>
+                        <note>Text after Orsi and photograph</note>
                     </app>
+                    <app loc="line 1"><note>Carini, Kaibel: ΔΑΦΡΟΕ</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Here lies Daphros</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Daphros (or Daphnos, or Elaphros); enthade keitai--></p>
+                <p>The form Daphros is not otherwise attested, and Kaibel speculates that Daphnos was intended (although Kaibel, following Carini, actually read Daphroe, which is also unparalleled). The combination of sigma, staurogram, omega between the two doves in the third line presumably signifies 'soter', 'saviour'. Kaibel simply reproduces Carini's text, without included reference to the symbols on the stone, which Carini did report (overleaf on p.34). Orsi transcribed the text and its symbols accurately in his taccuini in 1888.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -223,8 +219,23 @@
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     </bibl>
-                    <bibl/>
-                </listBibl>
+                    <bibl>
+                        <author>Carini</author>
+                        <date>1872</date>
+                        <citedRange>p.33 no.5</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RPAM24QT"/>
+                    </bibl>
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>2018</date>
+                        <citedRange>Tacc. 2, p. 8</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
+                    </bibl>
+                    <bibl type="corpus" n="IGCVO">
+                        <citedRange>1589</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK"/>
+                    </bibl>
+          </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>
