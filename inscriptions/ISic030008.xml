@@ -15,7 +15,7 @@
                     <resp>project direction, template development and general editor</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="TS" ref="">Thea Sommerschield</name> <!-- add orcid -->
+                    <name xml:id="SN" ref="https://orcid.org/0000-0003-2868-9164">Savannah Neibart</name> <!-- add orcid -->
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
@@ -42,11 +42,13 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic030008</idno>
-                <idno type="TM"/>
+                <idno type="TM">696117</idno>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDCS">64800280</idno>
+                <idno type="PHI">301170</idno>
+                <idno type="PHI">340341</idno>
+                
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030008</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
@@ -58,8 +60,8 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Selinunte</settlement>
-                        <repository role="museum" ref=""></repository> <!-- check museum and inv no. -->
-                        <idno type="inventory"></idno>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/isicily/museums/064">Museo Archeologico Regionale Antonio Salinas</repository> <!-- check museum and inv no. -->
+                        <idno type="inventory">42564</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -73,31 +75,33 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p></p>
-                                    <material ana="#material.metal.lead" ref="">lead</material> <!-- add ref to eagle vocabulary -->
-                                    <objectType ana="#object.lamina" ref="">lamina</objectType> <!-- add ref to eagle vocabulary -->
+                                    <p>Oval shape. Heavily corroded.</p>
+                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material> <!-- add ref to eagle vocabulary -->
+                                    <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType> <!-- add ref to eagle vocabulary -->
                                     <dimensions>
-                                        <height unit="cm"/> <!-- add value -->
-                                        <width unit="cm"/>
+                                        <!--  from Bettarini  -->
+                                        <height unit="cm" atMost="8">8</height>
+                                        <width unit="cm" atMost="5">5</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs ana="#execution.engraved" ref="">engraved</rs> <!-- add ref to eagle vocabulary -->
-                                    <p></p>
-                                    <damage/>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs> <!-- add ref to eagle vocabulary -->
+                                    <p> Horizontal Writing. Left-Right. Two columns side by side.</p>
+                                    <damage ana="#text_condition.deteriorated"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
                                 <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1">Line 1</locus>
+                                <locus from="line1" to="line5">Line 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">3</height>
+                                    <!--  from Bettarini  -->
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -105,11 +109,11 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462489">Selinus</placeName>
-                                <placeName type="modern">Selinunte</placeName>
-                                <geo>37.5853775, 12.8298666</geo>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/502577471">Selinus, Malophoros Sanctuary</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523164/">Selinunte</placeName>
+                                <geo>37.586763, 12.816874</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0600" notAfter-custom="-0400" precision="low">6th—5th century BCE</origDate> <!-- check date -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0500" notAfter-custom="-0450">First half V cent BCE</origDate> <!-- check date -->
                         </origin>
                         <provenance type="found">Found in the archaeological area of Selinunte<geo>37.5853775, 12.8298666</geo>.</provenance> <!-- check provenance -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -161,6 +165,7 @@
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-03-24" who="#VM">Valentina Mignosa created new file and added metadata</change>
+                <change when="2021-06-15" who="SN">Savannah Neibart encoded inscription using data from ISicDef, supplemented by Bettarini</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -183,15 +188,36 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS"> <!-- add text, apparatus, translation and commentary -->
+                
+                    <div type="textpart" subtype="column" n="i">
+                        <ab>
+                    <lb n="1"/> Πολυκλε͂ς
+                    <lb n="2"/> Ὀν<hi rend="supraline">έ</hi>ρ<hi rend="supraline">ο</hi>ν
+                    <lb n="3"/> <expan>
+<abbr>
+<am><g ref="#diple">></g></am>
+</abbr>
+          <ex cert="low">γ</ex></expan>              
+Ἀδείμαντος
+               <lb n="4"/>Μύχα
+                    <lb n="5"/>Μειχύλος
+       </ab>
+                </div>
+            <div type="textpart" subtype="column" n="ii">
                 <ab>
-                    <lb n="1"/>
-                    <lb n="2"/>
+                <lb n="1"/>Ἀρειάδας
+                <lb n="2"/>Ἐξάκεστος
+                <lb n="3"/>
+                <lb n="4"/>
+                <lb n="5"/>ℎιστίαρχος
                 </ab>
             </div>
+            </div>
+            
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text after ...</note>
+                        <note>Text after Bettarini</note>
                     </app>
                     <app>
                         <note></note>
@@ -208,8 +234,11 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p></p>
+                <p>A list of names (nom.), 7 men, 1 possibly a woman, to the left of them the sign >, interpreted by the editors as a γ(ράφο). (Jordan)</p>
+                <p>Plaque de plomb contenant une liste de huit noms gravés négligemment. (Dubois) </p>
+                <p>Μύχα es la unica mujer entre las victimas. La onomástica es griega. (Lopez-Jimeno) </p>
             </div>
+            
             <div type="bibliography"> <!-- add other editions -->
                 <listBibl type="edition">
                     <bibl type="corpus" n="IGASM1">
@@ -218,8 +247,45 @@
                         <citedRange>64</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/VC9IHZAR"/>
                     </bibl>
+                    <bibl>
+                        <author>Comparetti</author>
+                        <date>1918</date>
+                        <citedRange>197-199 no.27</citedRange>
+                                            </bibl>
+                    
+                    <bibl>
+                        <author>DuBois</author>
+                        <date>1989</date>
+                        <citedRange>45 no.35</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/RWXNUFEX" />
+                    </bibl>
+                    <bibl>
+                        <author>Lopez-Jimeno</author>
+                        <date>1991</date>
+                        <citedRange>no.8</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/N5IF2DZR"/>
+                    </bibl>
+                    
+                    <bibl>
+                        <author>Bettarini</author>
+                        <date>2005</date>
+                        <citedRange>135-136 no.26</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/SEW88NC7"/>
+                                  </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl></bibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Jordan</author>
+                        <date>1985</date>
+                        <citedRange>175-176 no.101</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7UQBFBPB"/>
+                    </bibl>
+                    <bibl>
+                        <author>Curbera</author>
+                        <date>1999</date>
+                        <citedRange>178 no.24</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/9DL74VZN"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>
