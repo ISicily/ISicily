@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Caduceus from an unknown Sicilian location</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>establishment of EpiDoc template</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic030119</idno>
+                <idno type="TM">698289</idno>
+                <idno type="EDR">149522</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">70900616</idno>
+                <idno type="PHI">333394</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030119</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>unknown</settlement>
+                        <repository role="private">Apparently in a private collection</repository>
+                        <idno type="inventory"></idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <country/>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Lower part of the staff of a bronze caduceus</p>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <objectType ana="#object.caduceus" ref="https://www.eagle-network.eu/voc/objtyp/lod/58.html">caduceus</objectType>
+                                    <dimensions><!-- from Manganaro -->
+                                        <height unit="cm">13</height>
+                                        <width unit="cm"></width>
+                                        <depth unit="cm"/>
+                                        <dim type="diameter" unit="cm">0.6</dim>
+                                        </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>The text is on one side of the staff, which is cylindrical in cross-section, immediately above the terminal section of the staff; the text is followed by a vacat before the break.</p>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
+                                	<damage ana="#text_condition.complete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Small well-spaced letters. Epsilon has short middle-bar; kappa has full length arms; omicron is smaller than other letters; sigma is four bar and slightly open.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">5</height>
+                                    <width></width>
+                                    <depth></depth>
+                                    </dimensions>
+                                </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462492">Sicilia</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523119">Sicily</placeName>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0201" precision="low" evidence="lettering">4th-3rd century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" notAfter="1996">Described by Manganaro as having been found in an unspecified zone of eastern Sicily.</provenance>
+                        <provenance type="observed" subtype="autopsied">none</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.public-document" ref="http://www.eagle-network.eu/voc/typeins/lod/360.html">public document</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2021-06-21" who="#JP">Jonathan Prag created file from published data</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!-- 
+                <surface type="front">
+                    <graphic n="screen" url="ISic030116_tiled.tif" height="4912px" width="7360px">
+                        <desc>Image from https://www.britishmuseum.org/collection/image/256673001 (c) The Trustees of the British Museum, under a CC-BY-NC-SA 4.0 licence.</desc>
+                    </graphic>
+                    <graphic n="print" url="ISic030116.jpg" height="3680px" width="5520px">
+                        <desc>Image from https://www.britishmuseum.org/collection/image/256673001 (c) The Trustees of the British Museum, under a CC-BY-NC-SA 4.0 licence.</desc>
+    </graphic>
+  </surface>
+ -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+               <ab>
+                    <lb n="1"/>Διὸς Ἱκεσίου
+                </ab>
+           </div>
+            <div type="apparatus">
+                <listApp><app><note>Text after published editions and photographs</note></app></listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>(property) of Zeus Hikesios</p>
+            </div>
+            <div type="commentary">
+                <p></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>46.1297</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>56.1077.B9</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl type="bulletin" n="BE">
+                        <citedRange>1997.0724</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1996</date>
+                        <citedRange>143 with tav. 16 fig. 16</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/KS57W5TB"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ampolo</author>
+                        <date>2006</date>
+                        <citedRange>186 appendix B no.9 with fig. 14</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/LCT7H63L"/>
+                    </bibl>
+                   </listBibl>
+	   <listBibl type="discussion">
+                        <bibl></bibl>	       
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
