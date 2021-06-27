@@ -7,7 +7,7 @@
             <titleStmt>
                 <title>ISic030011</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#TS">Thea Sommerschield</principal>
+                <principal ref="#SN">Savannah Neibart</principal>
                 <funder>John Fell OUP Research Fund</funder>
                 <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
@@ -15,7 +15,7 @@
                     <resp>project direction, template development and general editor</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="TS" ref="">Thea Sommerschield</name> <!-- add orcid -->
+                    <name xml:id="SN" ref="https://orcid.org/0000-0003-2868-9164">Savannah Neibart</name> <!-- add orcid -->
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
@@ -42,11 +42,13 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic030011</idno>
-                <idno type="TM"/>
+                <idno type="TM">696120</idno>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDCS">64800283</idno>
+                <idno type="PHI">301173</idno>
+                <idno type="PHI">340337</idno>
+                <idno type="PHI">329823</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030011</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
@@ -58,7 +60,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Selinunte</settlement>
-                        <repository role="museum" ref=""></repository> <!-- check museum and inv no. -->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/isicily/museums/064">Museo Archeologico Regionale Antonio Salinas</repository> <!-- check museum and inv no. -->
                         <idno type="inventory"></idno>
                         <altIdentifier>
                             <settlement/>
@@ -73,29 +75,31 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p></p>
-                                    <material ana="#material.metal.lead" ref="">lead</material> <!-- add ref to eagle vocabulary -->
-                                    <objectType ana="#object.lamina" ref="">lamina</objectType> <!-- add ref to eagle vocabulary -->
+                                    <p>Rectangular lamina.</p>
+                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material> 
+                                    <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType> 
                                     <dimensions>
-                                        <height unit="cm"/> <!-- add value -->
-                                        <width unit="cm"/>
+                                        <!-- from Bettarini-->
+                                        <height unit="cm" atMost="4.4">4.4</height> <!-- add value -->
+                                        <width unit="cm" atMost="7.2">7.2</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment" />
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs ana="#execution.engraved" ref="">engraved</rs> <!-- add ref to eagle vocabulary -->
-                                    <p></p>
-                                    <damage/>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs> 
+                                    <p>Horizontal Greek writing. Left-Right.</p>
+                                    <damage ana="#text_condition.partly_illegible"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
+                                <p>presence of qoppa</p>
                                 <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1">Line 1</locus>
+                                <locus from="line1" to="line6">Line 1-6</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
                                 </dimensions>
@@ -109,9 +113,10 @@
                                 <placeName type="modern">Selinunte</placeName>
                                 <geo>37.5853775, 12.8298666</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0600" notAfter-custom="-0400" precision="low">6th—5th century BCE</origDate> <!-- check date -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" cert="low" notBefore-custom="-0475" notAfter-custom="-0450">475—450 BCE</origDate> 
+                            <!-- dates from Jordan-->
                         </origin>
-                        <provenance type="found">Found in the archaeological area of Selinunte<geo>37.5853775, 12.8298666</geo>.</provenance> <!-- check provenance -->
+                        <provenance type="found">Found in the archaeological area of Selinunte, in the Malophoros Sanctuary<geo>37.585378, 12.829867</geo>.</provenance> 
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition></acquisition>
                     </history>
@@ -161,6 +166,7 @@
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-03-24" who="#VM">Valentina Mignosa created new file and added metadata</change>
+                <change when="2021-06-21" who="SN">Savannah Neibart encoded inscription using data from ISicDef, supplemented by Bettarini and other editions</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -177,24 +183,30 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS"> <!-- add text, apparatus, translation and commentary -->
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SN"> <!-- add text, apparatus, translation and commentary -->
                 <ab>
-                    <lb n="1"/>
-                    <lb n="2"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><unclear>τ</unclear>ο͂ι Σο̄π<unclear>ά</unclear>τ<unclear>ρ</unclear>ο̄ι <space extent="unknown" unit="character"/>
+                    <lb n="2"/>ΓΥϙ<gap reason="lost" quantity="3" unit="character"/><unclear>ο</unclear>ς κ<unclear>α</unclear>ὶ ℎα Σο̄π<unclear>ά</unclear>τρο̄ γλο͂<supplied reason="lost"><choice><orig>σα</orig><reg>σσα</reg></choice></supplied>
+                    <lb n="3"/>Φρῦνις Νοαβ<unclear>αρ</unclear>ίλο̄ καὶ ℎα <supplied reason="lost">Φρύνιος <choice><orig>γ</orig></choice></supplied>
+                    <lb n="4" break="no"/><choice><orig>λο͂σ<unclear>α</unclear></orig><reg>λο͂σσα</reg></choice> <surplus><choice><orig>γλο͂σ<unclear>α</unclear></orig><reg>γλο͂σσα</reg></choice></surplus> ∶ ἀ<unclear>ν</unclear>ε<gap reason="lost" extent="unknown" unit="character" cert="low"/>
+                    <lb n="5"/>ΜΕ<unclear>Κ</unclear>ΟΛΥ<unclear>Ε</unclear> συνδικε<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="6"/>τὰς Γ<gap reason="lost" quantity="3" unit="character"/>ΛΟ <space extent="unknown" unit="character"/> Λ<gap reason="lost" extent="unknown" unit="character"/>
+                    
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app>
-                        <note>Text after ...</note>
+                    <app loc="4">
+                        <lem>ἀ<unclear>ν</unclear>ε<gap reason="lost" extent="unknown" unit="character"/></lem>
+                        <rdg source="tdb1989">ἀ<unclear>ν</unclear>ε<supplied reason="lost"><choice><orig>στραμένα</orig><reg>στραμμένα</reg></choice></supplied><gap reason="lost" extent="unknown" unit="character"/></rdg>
+                        <note>Alternate reading by Arena.</note>
                     </app>
                     <app>
-                        <note></note>
+                        <note>Text after Bettarini.</note>
                     </app>
                     <app>
                         <note></note>
@@ -208,7 +220,8 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p></p>
+                <p>Judiciary. (Jordan)</p>
+                <p>Les deux personnages maudits sont Σώπατρος et Φρΰνις. (Dubois)</p>
             </div>
             <div type="bibliography"> <!-- add other editions -->
                 <listBibl type="edition">
@@ -218,8 +231,48 @@
                         <citedRange>67</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/VC9IHZAR"/>
                     </bibl>
+                    <bibl>
+                        <author>Ferri</author>
+                        <date>1944-1945</date>
+                        <citedRange>VII.5-6</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/T24IFS3N"
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>16.574</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Dubois</author>
+                        <date>1989</date>
+                        <citedRange>43-44 no.33</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/RWXNUFEX"/>
+                    </bibl>
+                    <bibl>
+                    <author>Lopez-Jimeno</author>
+                    <date>1991</date>
+                    <citedRange>no.13</citedRange>
+                    <ptr target="http://zotero.org/groups/382445/items/N5IF2DZR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Bettarini</author>
+                        <date>2005</date>
+                        <citedRange>109-111 no.22</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/SEW88NC7"/>
+                    </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl></bibl>
+                <listBibl type="discussion">
+                    <bibl>  
+                        <author>Jordan</author>
+                        <date>1985</date>
+                        <citedRange>177 no.108</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7UQBFBPB"/>
+                    </bibl>
+                    <bibl>
+                        <author>Curbera</author>
+                        <date>1999</date>
+                        <citedRange>179 no.30</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/9DL74VZN"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>
