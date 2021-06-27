@@ -7,7 +7,7 @@
             <titleStmt>
                 <title>ISic030013</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#TS">Thea Sommerschield</principal>
+                <principal ref="#SN">Savannah Neibart</principal>
                 <funder>John Fell OUP Research Fund</funder>
                 <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
@@ -15,7 +15,7 @@
                     <resp>project direction, template development and general editor</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="TS" ref="">Thea Sommerschield</name> <!-- add orcid -->
+                    <name xml:id="SN" ref="https://orcid.org/0000-0003-2868-9164">Savannah Neibart</name> <!-- add orcid -->
                     <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
@@ -42,11 +42,13 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic030013</idno>
-                <idno type="TM"/>
+                <idno type="TM">696122</idno>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDCS">4800285</idno>
+                <idno type="PHI">340339</idno>
+                <idno type="PHI">329820</idno>
+                <idno type="PHI">340339</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030013</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
@@ -58,8 +60,8 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Selinunte</settlement>
-                        <repository role="museum" ref=""></repository> <!-- check museum and inv no. -->
-                        <idno type="inventory"></idno>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/isicily/museums/064">Museo Archeologico Regionale Antonio Salinas</repository>
+                        <idno type="inventory">42566</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -74,30 +76,30 @@
                             <supportDesc>
                                 <support>
                                     <p></p>
-                                    <material ana="#material.metal.lead" ref="">lead</material> <!-- add ref to eagle vocabulary -->
-                                    <objectType ana="#object.lamina" ref="">lamina</objectType> <!-- add ref to eagle vocabulary -->
+                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material> 
+                                    <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
-                                        <height unit="cm"/> <!-- add value -->
-                                        <width unit="cm"/>
+                                        <height unit="cm" atMost="5">5</height> <!-- from Bettarini -->
+                                        <width unit="cm" atMost="12">12</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs ana="#execution.engraved" ref="">engraved</rs> <!-- add ref to eagle vocabulary -->
-                                    <p></p>
-                                    <damage/>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs> 
+                                    <p>L'imprecazione è scritta in direzione progressiva, i nomi dei defissi invece sono scritti in direzione regressiva. (Arena)</p>
+                                    <damage ana="#text_condition.partly_illegible"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1">Line 1</locus>
+                                <!-- from Bettarini -->
+                                <locus from="line1" to="line7">Line 1-7</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">4</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -109,9 +111,9 @@
                                 <placeName type="modern">Selinunte</placeName>
                                 <geo>37.5853775, 12.8298666</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0600" notAfter-custom="-0400" precision="low">6th—5th century BCE</origDate> <!-- check date -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0450" notAfter-custom="-0450">450 BCE</origDate> <!-- from Arena-->
                         </origin>
-                        <provenance type="found">Found in the archaeological area of Selinunte<geo>37.5853775, 12.8298666</geo>.</provenance> <!-- check provenance -->
+                        <provenance type="found">Found in the archaeological area of Selinunte, in the Malophoros Sanctuary<geo>37.585378, 12.829867</geo>.</provenance> 
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition></acquisition>
                     </history>
@@ -161,6 +163,7 @@
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-03-24" who="#VM">Valentina Mignosa created new file and added metadata</change>
+                <change when="2021-06-21" who="SN">Savannah Neibart encoded inscription using data from ISicDef, supplemented by Bettarini and other editions</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -177,38 +180,77 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS"> <!-- add text, apparatus, translation and commentary -->
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SN"> <!-- add text, apparatus, translation and commentary -->
                 <ab>
-                    <lb n="1"/>
-                    <lb n="2"/>
+                    <lb n="1"/> ἐ<unclear>π</unclear>ὶ ἐξο̄<unclear>λ</unclear>είαι καὶ αὐτο͂ν καὶ γενεᾶς· Νίκυλλος
+                    <lb n="2"/>Καπόσο̄, Δένδιλος Μάμονος, Αἴνο̄ν Β<unclear>λ</unclear>έπονος,
+                    <lb n="3"/>Ξένιος Ἀπόντιος ℎɛ̄ρακλείδας, Σαῦρις, <seg style="textdirection:r-to-l">ανις
+                   <lb n="4" break="no"/>Ἄθ</seg> Ταμμάρο̄ ℎɛ̄ρακλείδας, Ῥας Φαρμαυα, <seg style="textdirection:r-to-l">ν
+                    <lb n="5" break="no"/>Δίο̄</seg> Πιάκιος, Πιθθίας, Χαίο̄ν, <choice><orig>Μαμαρειṑι</orig><reg>Μαμμαρειṑι</reg></choice> <seg style="textdirection:r-to-l">τα
+                    <lb n="6" break="no"/>Ζο<unclear>ζ</unclear></seg>, Ἀγάθυλλος Ξένιος ℎɛ̄ρακλείδας, <seg style="textdirection:r-to-l">τος
+                    <lb n="7" break="no"/>Σύνε</seg> Ξένο̄νος.
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text after ...</note>
+                        <note>Text after Bettarini</note>
                     </app>
-                    <app>
-                        <note></note>
+                    <app loc="1">
+                        <lem>ἐ<unclear>π</unclear>ὶ</lem>
+                        <rdg source="tdb1989">Εῑ̓εν</rdg>
+                        <note>Alternate reading by Arena.</note>
                     </app>
-                    <app>
-                        <note></note>
+                    <app loc="1">
+                        <lem>ἐ<unclear>π</unclear>ὶ ἐξο̄<unclear>λ</unclear>είαι καὶ αὐτο͂ν καὶ γενεᾶς·ἐξο̄<unclear>λ</unclear>είαι καὶ αὐτο͂ν καὶ γενεᾶς·</lem>
+                        <rdg source="tdb1989">ἐσθίετε οἰνεῖαι καὶ αὐτὸν καὶ Αἰνέας.</rdg>
+                        <note>Alternate reading by Dubois.</note>
+                    </app>
+                    <app loc="2">
+                        <lem>Μάμονος</lem>
+                        <rdg source="tdb1989"><choice><orig>Μάμονος</orig><reg>Μνάμονος</reg></choice></rdg>
+                        <note>Alternate reading by Arena.</note>
+                    </app>
+                    <app loc="4">
+                        <lem> Ῥας Φαρμαυα</lem>
+                        <rdg source="tdb1989">Ρασφαρμαῦκα</rdg>
+                        <note>Alternate reading by Arena.</note>
+                    </app>
+                    <app loc="6">
+                        <lem>Ζο<unclear>ζ</unclear></lem>
+                        <rdg source="tdb1989">Ζο̄ι</rdg>
+                        <note>Alternate reading by Arena.</note>
                     </app>
                 </listApp>
             </div>
-            <div type="translation" xml:lang="en">
-                <p></p>
+            <div type="translation" xml:lang="fr">
+                <p>Malédiction pour eux et pour leur descendance: Nikullos fils de Kaposos etc. (Dubois)</p>
             </div>
             <div type="translation" xml:lang="it">
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p></p>
+                <p>Initial formula, followed by a list of men's names (nom. or nom.+gen.). At least two of the intended victims are further qualified as Herakleidai. (Jordan)</p>
+            </div>
+                <div type="commentary" xml:lang="fr">
+                <p>La présence du patronymique n'est pas systématique; certains individus sont qualifiés du terme Ηέρακλείδας qui doit être un phylétique. (Dubois) </p>
+                    <p>Noms grecs : 1 Νίκυλλος, 2 Μνάμων, Δενδίλος, Αϊνων, 3 Ξένις, "Αθανις, Σαΰρις, 4 Δίων, 5 Πιθθίας, 6 Άγάθυλλος, Συνετός, 7 Ξένων (Dubois)</p>
+                   <p> Les autres noms doivent être indigènes. Πίακις, 1. 5, pourrait être en rapport avec le toponyme Πίακος connu par Et. de Byzance et par des monnaies du Ve siècle. Le nom Ταμμαρος, 1. 4, est apparu sur des tuiles de Monte lato, Bull. 1977, n°615.' Καποσος apparait a Gela n° 131. Le premier membre de Ναεπονος 1. 2, rappelle celui de Ναυεροτοσ n° 38 1. 4, et de Ναυεριάδας 1. 18 : s'agirait-il d'un nom hybride dont le second membre serait grec, HPN, p. 380? (Dubois)</p>
+                 <p>Semblent attestés pour la première fois les anthroponymes non helléniques Άποντιος 1. 3, 'Ρασφαρμαυα 1. 4, Ίχαιον, Μαμμαρειος, Ζοξτα 1.5. (Dubois)</p>
+                    </div>
+                <div type="commentary" xml:lang="sp">
+                <p>
+                    Destaca la formula inicial. exclusiva de esta maldición, en la que la creación de un sustantivo abstracto demuestra un conocimiento del lenguaje culto y elaborado. Lo que sì es común es extender la maldición a los descendientes el enemigo. (Lopez-Jimeno)
+                </p>
+                </div>
+                <div type="commentary" xml:lang="it">
+                <p>
+                    L'utilizzo del nome ℎɛ̄ρακλείδας lascia supporre che il defissore si sia compiaciuto di riprendere l'uso del terzo nome che vedeva usato nei documenti pubblici: non è per denotare il valore politico del testo nè ad evitare la sovrapposizione di nomi, ma unicamente a conferire autorità e spessore ufficiale al documento stesso. (Bettarini)
+                </p>
             </div>
             <div type="bibliography"> <!-- add other editions -->
                 <listBibl type="edition">
@@ -218,8 +260,51 @@
                         <citedRange>69</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/VC9IHZAR"/>
                     </bibl>
+                    <bibl>
+                        <author>Gabrici</author>
+                        <date>1927</date> 
+                        <citedRange>no.15</citedRange>           
+                        <ptr target = "https://www.zotero.org/groups/382445/isicily/items/SP4NJIAA"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>16.571</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Dubois</author>
+                        <date>1989</date>
+                        <citedRange>45-47 no.36</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/RWXNUFEX"/>
+                    </bibl>
+                    <bibl>
+                        <author>Bettarini</author>
+                        <date>2005</date>
+                        <citedRange>125-130 no.24</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/SEW88NC7"/>
+                    </bibl>
+                    <bibl>
+                        <author>Lopez-Jimeno</author>
+                        <date>1991</date>
+                        <citedRange>no.19</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/N5IF2DZR"/>
+                    </bibl>
+                  
                 </listBibl>
-                <listBibl type="discussion"><bibl></bibl>
+                <listBibl type="discussion">
+                    <bibl>Jordan 104</bibl>
+                    <bibl>Curbera 27</bibl>
+                    <bibl>
+                        <author>Jordan</author>
+                        <date>1985</date>
+                        <citedRange>176 no.104</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7UQBFBPB"/>
+                    </bibl>
+                    <bibl>
+                        <author>Curbera</author>
+                        <date>1999</date>
+                        <citedRange>179 no.27</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/9DL74VZN"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>
