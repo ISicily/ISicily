@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title></title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <principal ref="#MAP">Mariangela Puglisi</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>Project direction, corpus editing, and original template construction</resp>
+                </respStmt>
+              <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+            <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MAP" ref="https://orcid.org/0000-0002-2102-6395">Mariangela Puglisi</name>
+                    <resp>original research, corpus composition, data gathering and file creation</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority> 
+                <idno type="filename">ISic040001</idno>
+                <idno type="ISicNumType">HAL052</idno><!-- create distinct identifiers for the legend types, and record here, alongside the ISic number? -->
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic040001</idno>
+                <idno type="DOI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country/>
+                        <region/>
+                        <settlement/>
+                        <repository/>
+                        <altIdentifier>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                        <msItem>
+                            <author>
+                             </author>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p/> 
+                                    <material n="bronze" ref="http://nomisma.org/id/ae">Bronze</material><!-- using nomisma rather than EAGLE URIs (no EAGLE entry for coin in any case) -->
+                                    <objectType n="coin" ref="http://nomisma.org/id/coin">Coin</objectType>
+                                    <term n="denomination" ref="http://nomisma.org/id/denomination" cert="low">as</term>
+                                    <dimensions >
+                                        <dim type="diameter" unit="mm">26</dim><!-- since measurements generally of specific examples, probably better to be excluded, unless a general / average measure is useful for the type? -->
+                                       </dimensions>
+                                    <measure type="weight" unit="gr">10.7</measure>
+                                </support>
+                                <condition/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout></layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                          <handNote>
+                          <locus from="line1" to="line1"></locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/><height></height>
+                              </dimensions> 
+                            </handNote>
+                        </handDesc>
+                        </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace type="mint" ref="http://nomisma.org/id/alaesa">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa<geo>37.99907,14.26197</geo></placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/11396052/">Alaisa</placeName>
+                            </origPlace>
+                            <origDate notBefore-custom="-0027" notAfter-custom="0014" evidence="office">27 BC-AD 14</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered"/>
+                        <provenance type="observed" subtype="autopsied"/>
+                        <acquisition></acquisition>
+                    </history>
+                    <msPart type="obverse" xml:id="obv">  
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support></support>
+                                    <condition/>
+                                </supportDesc>
+                                <layoutDesc>
+                                    <layout><p> legend clockwise around outside</p>
+                                        <rs ana="#execution.stamped.impressed #execution.relief" ref="https://www.eagle-network.eu/voc/writing/lod/166.html https://www.eagle-network.eu/voc/writing/lod/7.html">stamped relief letters</rs>                                                            
+                                        <damage/>                             
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc><!-- note discrete handnotes for obverse and reverse; often probably not necessary but sometimes so, and so keep separate as standard -->
+                                <handNote><p>Regular letters without serifs: L has very short foot; M has vertical first and final strokes;
+                                    P is open; R is closed with curved tail</p>
+                                    <locus from="line1" to="line1">Line 1</locus>
+                                    <dimensions type="letterHeight">
+                                        <height unit="mm">3</height>
+                                    </dimensions>
+                                  </handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <decoNote>
+                                    <figure>
+                                        <figDesc>Apollo h. l., laureate; d.b.</figDesc>
+                                    </figure>
+                                </decoNote>
+                            </decoDesc>
+                        </physDesc>
+                    </msPart>
+                    <msPart type="reverse" xml:id="rev">
+                        <msIdentifier>
+                            <idno/>
+                        </msIdentifier>
+                        <physDesc>
+                            <objectDesc>
+                                <supportDesc>
+                                    <support></support>
+                                    <condition/>
+                                </supportDesc>
+                                <layoutDesc>
+                                    <layout><p> legend clockwise around outside</p> 
+                                        <rs ana="#execution.stamped.impressed #execution.relief" ref="https://www.eagle-network.eu/voc/writing/lod/166.html https://www.eagle-network.eu/voc/writing/lod/7.html">stamped relief letters</rs> 
+                                    </layout>
+                                </layoutDesc>
+                            </objectDesc>
+                            <handDesc>
+                                <handNote><p>add description of letter forms</p>
+                                    <locus from="line1" to="line1">Line 1</locus>
+                                    <dimensions type="letterHeight">
+                                        <height unit="mm"></height>
+                                    </dimensions>
+                                </handNote>
+                            </handDesc>
+                            <decoDesc>
+                                <decoNote>
+                                    <figure>
+                                        <figDesc> Laurel wreath within which AVG; d.b.</figDesc>
+                                    </figure>
+                                </decoNote>
+                            </decoDesc>
+                        </physDesc>
+                    </msPart>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://nomisma.org/id/"><!-- no entry for legend in http://www.eagle-network.eu/voc/typeins.html -->
+                    <term ref="http://nomisma.org/id/legend">Coin legend</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <change when="2021-07-15" who="#JP">created draft file</change>
+        </revisionDesc>
+      </teiHeader>
+      <facsimile><!-- any image is necessarily of a specific example, although the file is for the legend's ideal type -->
+          <surface type="obverse" corresp="#obv">
+              <graphic n="screen" url="ISicNum0013obv_tiled.tif" height="679px" width="647px">
+                  <desc>Photograph from the Berlin Münzkabinett Online Catalogue of https://ikmk.smb.museum/object?id=18252542</desc>
+              </graphic>
+              <graphic n="print" url="ISicNum0013obv.jpg" height="679px" width="647px">
+                  <desc>Photograph from the Berlin Münzkabinett Online Catalogue of https://ikmk.smb.museum/object?id=18252542</desc>
+              </graphic>
+          </surface>
+          <surface type="reverse" corresp="#rev">
+              <graphic n="screen" url="ISicNum0013rev_tiled.tif" height="679px" width="659px">
+                  <desc>Photograph from the Berlin Münzkabinett Online Catalogue of https://ikmk.smb.museum/object?id=18252542</desc>
+              </graphic>
+              <graphic n="print" url="ISicNum0013rev.jpg" height="679px" width="659px">
+                  <desc>Photograph from the Berlin Münzkabinett Online Catalogue of https://ikmk.smb.museum/object?id=18252542</desc>
+              </graphic>
+          </surface>
+      </facsimile>
+      <text>
+          <body>
+              <div type="edition" subtype="legend" xml:space="preserve" xml:lang="la" resp="#JP"><!-- is subtype legend on the edition div the best place to put/capture the term legend? the same / nomisma id is captured above under textClass also -->
+                      <div type="textpart" subtype="obverse" corresp="#obv">
+                          <ab>
+                              <lb n="1" style="text-direction:clockwise"/>
+                              <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225"><w>Halaesa</w> <space unit="character" quantity="1"/> <w>Arc<space unit="character" quantity="1"/>honida</w></placeName>
+                          </ab>
+                      </div>
+                   <div type="textpart" subtype="reverse" corresp="#rev"><!-- how to capture the location of different parts of the text? line 1 is around the outside of the die; line 2 is within the laurel wreath, centre of the die-->
+                       <ab>
+                           <lb n="1" style="text-direction:clockwise"/><persName type="attested"><name type="praenomen"><expan><abbr>M</abbr><ex>arcus</ex></expan></name> <g ref="#interpunct">·</g>  <name type="nomen">Paccius</name> <g ref="#interpunct">·</g> <name type="cognomen"><expan><abbr><choice><orig>Macxu</orig><reg>Maxi</reg></choice></abbr><ex>mus</ex></expan></name></persName> <g ref="#interpunct">·</g> <roleName type="priest"><w><expan><abbr>flame</abbr><ex>n</ex></expan></w> <g ref="#interpunct">·</g>   
+                           <lb n="2"/><persName type="divine"><name><expan><abbr><hi rend="ligature">Au</hi>g</abbr><ex>usti</ex></expan></name></persName></roleName>
+                       </ab>
+                  </div>
+              </div>
+              <div type="apparatus">
+                  <listApp>
+                      <app><note></note></app>
+                  </listApp>
+              </div>
+              <div type="translation" xml:lang="en" resp="#JP" corresp="#obv">
+                  <p></p>
+              </div>
+              <div type="translation" xml:lang="en" resp="#JP" corresp="#rev">
+                  <p></p>
+              </div>
+              <div type="translation" xml:lang="it" resp="#MAP" corresp="#obv">
+                  <p></p>
+              </div>
+              <div type="translation" xml:lang="it" resp="#MAP" corresp="#rev">
+                  <p></p>
+              </div>
+              <div type="commentary">
+                   <p></p>
+              </div>
+              <div type="bibliography"><!-- currently records different catalogue entries for this type -->
+                  <listBibl type="edition">
+                      <bibl type="corpus" n="CNS">
+                          <author>Calciati</author>
+                          <date>1983</date>
+                          <citedRange>Alaisa 21</citedRange>
+                          <ptr target="http://zotero.org/groups/382445/items/ZNJ83B59"/>
+                      </bibl>
+                      <bibl type="corpus" n="CNAI">
+                          <author>Campana</author>
+                          <date>1996</date>
+                          <citedRange>34</citedRange>
+                          <ptr target="http://zotero.org/groups/382445/items/HH8TCLDH"/>
+                      </bibl>
+                      <bibl type="corpus" n="BMCSicily">
+                          <author>Poole</author>
+                          <date>1876</date>
+                          <citedRange>Alaesa 17</citedRange>
+                          <ptr target="http://zotero.org/groups/382445/items/GEVQURJ3"/>
+                      </bibl>
+                      <bibl type="corpus" n="RPC">
+                          <author>Burnett</author>
+                          <date>1992</date>
+                          <citedRange><ref target="https://rpc.ashmus.ox.ac.uk/coins/1/631">631.1</ref></citedRange>
+                          <ptr target="http://zotero.org/groups/382445/items/EKESJDH7"/>
+                      </bibl>
+                  </listBibl>
+                  <listBibl type="discussion">
+                      <bibl></bibl>
+                  </listBibl>
+              </div>
+          </body>
+      </text>
+</TEI>             
