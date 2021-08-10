@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Greek funerary inscription</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>establishment of EpiDoc template</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+               </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001684</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001684</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">50674</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A limestone cippus recut for building stone at a later date, with material sawn off from the left side and the lower edge.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85.html">cippus</objectType>
+                                    <dimensions><!-- from Agnello-->
+                                        <height unit="cm">60</height>
+                                        <width unit="cm">44.5</width>
+                                        <depth unit="cm">27</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.damaged"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Text laid out with separating lines on the lower portion of the stone, filling the width, with a blank space above.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete #text_condition.partly_illegible"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Lunate letters of plain form, getting smaller from line 1 to line 4; the fifth line is much larger and Agnello suggests a different hand. Alpha has straight bar throughout; Epsilon is mostly lunate but somewhat variable; zeta in form of straight Z; Kappa has detached arms; Mu in first instance has middle strokes joining very high, in second instance four equal length oblique strokes; xsi is vertical with three equal horizontals; omicron full size; pi straight strokes of equal length; rho rounded and closed; sigma lunate.</p>
+                                <locus from="line1" to="line1">Line 1</locus><!-- from Agnello -->
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">36</height>
+                                </dimensions>
+                                <locus from="line2" to="line4">Line 2-4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">31-36</height>
+                                </dimensions>
+                                <locus from="line5" to="line5">Line 5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">47</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">not recorded</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient"/>		
+                                <placeName type="modern" ref="https://sws.geonames.org/2523679/">Priolo Gargallo</placeName>
+                                <geo>37.15512, 15.18248</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low" evidence="textual-context">Imperial period (1st-3rd centuries CE)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="1949">Found during agricultural works on the property of the marchese di Castel Lentini, 15m to the east of the farmhouse, in the territory of Priolo<geo cert="low">37.15512, 15.18248</geo></provenance><!-- property not located, generic location for Priolog -->
+                        <provenance type="observed" subtype="autopsied">Not yet observed</provenance>
+                        <acquisition/>
+                    </history>
+                    </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2021-06-15" who="#JP">Jonathan Prag created file from ed. pr.</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/><persName><name><supplied reason="lost">Φῆ</supplied>λιξ</name></persName> <choice><orig>χρητὸς</orig><reg>χρηστὸς</reg></choice> κα
+                    <lb n="2"/><supplied reason="lost">ἄμ</supplied>εμπτος ἔζησεν
+                    <lb n="3"/><supplied reason="lost">ἔτη</supplied> <choice><reg><supplied reason="lost">ἑ</supplied>πτὰ</reg><orig><supplied reason="lost">ἑ</supplied>ντὰ</orig></choice> μῆνες δ<supplied reason="lost">ύο</supplied>
+                    <lb n="4"/><supplied reason="lost">ἡμέρ</supplied>ας πέντε χαῖρε
+                    <lb n="5"/><orig>ΠΡΙΑ</orig><gap reason="illegible" unit="character" quantity="2"/><unclear>Α</unclear><gap reason="illegible" unit="character" quantity="1"/><orig>ΡΗ</orig>                    <lb/><gap reason="lost" unit="line" extent="unknown" cert="low"/>
+                </ab>
+            </div>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app>
+                        <note>Text of Agnello</note>
+                    </app>
+                    <app loc="line 3"><note>In the drawing, NTA is clear, and alternative interpretations (a larger number in the tens) should be considered</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Felix, worthy and blameless, lived 7 years, 2 months five days. Farewell. ... </p>
+            </div>
+            <div type="commentary">
+                <p>The letters in the final line are larger, but it is not immediately clear from the drawing that they must be in a second hand (the assumption of Agnello is that they were written later). Judgement on this point, and the preferred reading of line 3 should be reserved until autopsy is possible.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="NSA">
+                        <author>Agnello</author>
+                        <date>1949</date>
+                        <citedRange>211 with fig. 1</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
