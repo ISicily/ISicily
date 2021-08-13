@@ -32,7 +32,7 @@
                 </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>EpiDoc editing</resp>
+                    <resp>EpiDoc editing and addition of metadata</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -66,8 +66,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
                         <idno type="inventory">12337</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,28 +81,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Small stele with base; the surfaces of the stele are well polished. Chips along the edges and on the front face</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (local: riolite grigia)</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">51</height>
+                                        <width unit="cm">38.4</width>
+                                        <depth unit="cm">9.8</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
-		    </supportDesc>
+                                <condition ana="#condition.complete"/>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">42-46</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -121,7 +121,7 @@
 		</origPlace>
                             <origDate datingMethod="#julian" cert="low">(?)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1865">The place, date and circumstances of the discovery are unknown. In Lipari at the time of Kaibel, subsequently transported to Museo Archeologico di Palermo in which it was found in Libertini in 1965, and was again transferred to Lipari, al Museo Archeologico Eoliano</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -176,6 +176,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-08-12" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -199,7 +200,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>Ἀγάθωνος
+                    <lb n="1"/><persName><name>Ἀγάθωνος</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
