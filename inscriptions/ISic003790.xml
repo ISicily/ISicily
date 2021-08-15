@@ -32,7 +32,7 @@
                 </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>EpiDoc editing</resp>
+                    <resp>EpiDoc editing and addition of metadata</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -80,27 +80,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Small cippus; it has a large irregular hollow on the lower face, another hollow on the right face and a circular hole on the left face. Missing the lower right corner of the front face and with slight chipping on the edges</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                    <objectType ana="#object.cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85">cippus</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">20</height>
+                                        <width unit="cm">26</width>
+                                        <depth unit="cm">19.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
-		    </supportDesc>
+                                <condition ana="#condition.damaged"/>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <damage ana="#text_condition.complete #text_condition.partly_illegible"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">22-26</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -117,7 +119,7 @@
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1996">Found in 1996 in the excavation of trench XLVII on the Biviano property; reused in the jamb south of the walled door between zone J of the large room in building B and the open space L<geo/></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -156,6 +158,11 @@
                 <language ident="scx">Sikel</language>
                 <language ident="sxc">Sikan</language>
             </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
@@ -166,6 +173,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-08-10" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -189,7 +197,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/><gap reason="illegible" quantity="1" unit="character"/>υδάρωνο<unclear>ς</unclear>
+                    <lb n="1"/><persName><name><gap reason="illegible" quantity="1" unit="character"/>υδάρωνο<unclear>ς</unclear></name></persName>
                 </ab>
             </div>
             <div type="apparatus">
