@@ -7,16 +7,16 @@
             <titleStmt>
                 <title>ISic030037</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#TS">Thea Sommerschield</principal>
+                <principal ref="#SN">Savannah Neibart</principal>
                 <funder>John Fell OUP Research Fund</funder>
                 <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>project direction, template development and general editor</resp>
-                 </respStmt>
-	    <respStmt>
-	        <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
-	        <resp>basic data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>basic data collection</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
@@ -35,18 +35,22 @@
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="TS" ref="add orcid here">Thea Sommerschield</name><!-- add orcid -->
-                    <resp>original data collection and editing</resp>
+                    <name xml:id="TS" ref="https://orcid.org/0000-0002-6965-8105">Thea Sommerschield</name>
+                    <resp>original data collection in ISicDef</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SN" ref="https://orcid.org/0000-0003-2868-9164">Savannah Neibart</name> 
+                    <resp>data collation and editing, encoding text in Epidoc</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic030037</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
+                <idno type="TM">696261</idno>
+                <idno type="EDR">152731</idno>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDCS">64800221</idno>
+                <idno type="PHI">329540</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030037</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
@@ -57,9 +61,9 @@
                     <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement></settlement>
-                        <repository role="museum"></repository>
-                        <idno type="inventory"></idno>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">19439</idno>                        
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -82,13 +86,13 @@
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/167.html">engraved</rs>
                                     <p></p>
-                                    <damage/>
+                                    <damage ana="#text_condition.incomplete"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -106,15 +110,15 @@
                         <origin>
                             <origPlace>
                                 <placeName/>
-                                <placeName type="ancient" ref=""></placeName><!-- add ancient place name and pleiades ref -->
-                                <placeName type="modern"></placeName><!-- add modern place name and geonames ref -->
-                                <geo></geo> <!-- add geo coordinates -->
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462126">Kamarina</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/8063309">Camarina</placeName>
+                                <geo>36.8736,14.4507</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> 
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in ...<geo>...</geo>.</provenance> <!-- add specific geo coordinates -->
+                        <provenance type="found">Found in the necropolis of Passo Marinaro (Camarina)<geo>36.85957, 14.46436</geo>.</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition></acquisition> <!-- add -->
+                        <acquisition></acquisition>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -157,11 +161,12 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-06-09" who="#VM">Valentina Mignosa added basic metadata</change>
+                <change when="2021-08-11" who="#SN">Savannah Neibart encoded inscription using data from ISicDef, supplemented by Cordano and other editions</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -183,15 +188,23 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SN">
+                <div type="textpart" subtype="face" n="a">
                 <ab>
-                    <lb n="1"/>
+                    <lb n="1"/><persName type="attested"><name type="idionym">Σο̄́κα</name> <name>Χα</name></persName>
+                    <lb n="2"/><persName type="attested"><name type="idionym">Σο̄́<supplied reason="lost">κα</supplied></name> <name>Νιλ</name></persName>
                 </ab>
+                </div>
+                <div type="textpart" subtype="face" n="b">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΛΕΜΑ</orig>
+                </ab>
+            </div>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text after ...</note><!-- ISicDef no. 59 -->
+                        <note>Text after Cordano.</note><!-- ISicDef no. 59 -->
                     </app>
                 </listApp>
             </div>
@@ -202,18 +215,39 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p></p>
+                <p>Σο̄́κα could be the female form of Σῶκος; on the two lines this name is followed by different words, probably names of accessaries or of father and mother which were either abbreviated or continued at the right of a crack in the tablet (O. reports no further letters). (SEG)</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IGASM2[2]">
                         <author>Arena</author>
                         <date>2002</date>
-                        <citedRange>133</citedRange>
+                        <citedRange>no. 133</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/65P7AM6N"/>
                     </bibl>
+                    <bibl>
+                        <author>Cordano</author>
+                        <date>1988</date>
+                        <citedRange>no. 15</citedRange>
+                        <ptr target="http://www.zotero.org/groups/382445/items/2W27E5DN"/>
+                    </bibl>
+                    <bibl>
+                        <author>Orsis</author>
+                        <date>1904</date>
+                        <citedRange>no. 2</citedRange>
+                        <ptr target="http://www.zotero.org/groups/382445/items/R337N55M"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>38.0937</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl></bibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Jeffery</author>
+                        <date>1955</date>
+                        <ptr target="http://www.zotero.org/groups/382445/items/X3DZJ6CW"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>
