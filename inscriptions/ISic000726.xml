@@ -54,9 +54,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000726</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4338941</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -65,9 +63,8 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi</repository>
-                        <idno type="inventory">33617</idno>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">38617</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -81,13 +78,13 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Large slab of white crystalline marble. Intact top and left, but broken on right and below. Left edge only roughly finished; top edge neatly finished. circular hole drilled in middle of the top edge, and on the rear of the left side there is a clamp hole. Front side has brown discolouration / encrustation, the rear is clean. A second text on the reverse, the clamp holes and letter forms imply this is the primary text, the reverse the re-use.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--from autopsy -->
+                                        <height unit="cm">23.3</height>
+                                        <width unit="cm">32.2</width>
+                                        <depth unit="cm">3.3-4.6</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -119,10 +116,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" when-custom="0116">116 CE (if restoration accepted)</origDate>
+                            <origDate datingMethod="#julian" when-custom="0116">116 CE (if Manganaro's restoration accepted)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1917-07">Found in the area of S. Lucia, July 1917.</provenance>
+                        <provenance type="observed" subtype="autopsied">2016-10-10, Magazzino B, cassa 33.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -176,6 +173,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-08-23" who="#JP">Initial drafting from autopsy and inventory research</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -197,7 +195,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
                 <lb n="1"/><expan><abbr>Imp</abbr><ex>eratori</ex></expan> <expan><abbr>Caes</abbr><ex>ari</ex></expan> <supplied reason="lost">Divi</supplied> <supplied reason="lost">Nervae</supplied> <supplied reason="lost"><expan><abbr>f</abbr><ex>ilio</ex></expan></supplied> <supplied reason="lost">Nervae</supplied> <supplied reason="lost">Traiano</supplied><gap reason="lost" extent="unknown" unit="character"/>
                 <lb n="2"/>Germa<supplied reason="lost">nico</supplied><gap reason="lost" extent="unknown" unit="character"/>
@@ -205,17 +203,23 @@
                 </ab>
             </div>
             <div type="apparatus">
-                    <listApp><app><note>Text of Manganaro (1989), p. 181 no. 59</note></app></listApp> 
+                    <listApp><app><note>Text after autopsy and Manganaro (1989), p. 181 no. 59</note></app></listApp> 
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--to Trajan; Mang beleives that title procos. indicates absence from R, on Parthian war, therefore AD 116; restoration based on Dessau ILS 301--></p>
+                <p>Published by Manganaro without knowledge of the original publication by Orsi, NSA 1920, and without commenting on / observing the fragmentary monumental text on the reverse (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001686">ISic001686</ref>). Manganaro also misreports the inventory number.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl type="bulletin" n="NSA">
+                        <author>Orsi</author>
+                        <title>NSA</title>
+                        <date>1920</date>
+                        <citedRange>312</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1989.0342d</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
