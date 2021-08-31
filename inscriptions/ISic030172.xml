@@ -89,9 +89,16 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
+                            <handNote xml:id="h1">
                                 <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1"/>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                            <handNote xml:id="h2">
+                                <!-- Based on Glyph table: -->
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"></height>
                                 </dimensions>
@@ -102,12 +109,12 @@
                         <origin>
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462126">Kamarina</placeName>
-                                <placeName type="modern" ref="http://sws.geonames.org/8063309/">Camarina</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/6540853">Santa Croce Camerina</placeName>
                                 <geo>36.8736, 14.4507</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0480" notAfter-custom="-0450">480—450 BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in Camarina, inside a storeroom in the sanctuary of Athena, in contrada Cammarana<geo>36.87316, 14.4415</geo>.</provenance> <!-- double check coordinates -->
+                        <provenance type="found" subtype="discovered">Found in the archaeological area of Kamarina, inside a storeroom in the sanctuary of Athena, in contrada Cammarana<geo>36.87316, 14.4415</geo>.</provenance> <!-- double check coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>Santa Croce Camerina, Museo Archeologico Regionale di Kamarina</acquisition>
                     </history>
@@ -180,22 +187,16 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <div type="textpart" subtype="face" n="a">
-                    <div type="textpart" subtype="use" n="1">
-                        <ab>
-                            <lb n="1"/><persName type="attested"><name type="idionym">Σάκις</name>
-                            <lb n="2"/><name type="patronym"><supplied reason="lost">Π</supplied>ολυκλέος</name></persName>
-                        </ab>
-                    </div>
-                    <div type="textpart" subtype="use" n="2">
-                        <ab>
-                            <lb n="1"/><persName type="attested"><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ο̄ν</seg></name> <name type="patronym">Κ<unclear>α</unclear>λαίκο</name></persName>
-                        </ab>
-                    </div>
+                    <ab>
+                        <lb n="1"/><handShift new="#h1"/><persName type="attested"><name type="idionym">Σάκις</name>
+                        <lb n="2"/><handShift new="#h2"/><persName type="attested"><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ο̄ν</seg></name> <persName type="attested"><name type="patronym">Κ<unclear>α</unclear>λαίκο</name></persName></persName>
+                        <lb n="3"/><handShift new="#h1"/><persName type="attested"><name type="patronym"><supplied reason="lost">Π</supplied>ολυκλέος</name></persName></persName>
+                    </ab>
                 </div>
                 <div type="textpart" subtype="face" n="b">
                     <ab>
-                        <lb n="1"/><persName type="attested"><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F"><supplied reason="lost">ο̄ν</supplied></seg></name> <name type="patronym">Καλαίκο̄</name></persName>
-                        </ab>
+                        <lb n="1"/><handShift new="#h2"/><persName type="attested"><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F"><supplied reason="lost">ο̄ν</supplied></seg></name> <persName type="attested"><name type="patronym">Καλαίκο̄</name></persName></persName>
+                    </ab>
                 </div>
             </div>
             <div type="apparatus">
@@ -212,7 +213,9 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>This document is one of several (about 150) lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.</p>
+                <p>This document is one of a large deposit (c. 150) of lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.
+                        The tessera seems to have been used twice (see Cordano 1992, p. 45). The first use can be associated with Σάκις on face a and on face b Πολυκλέος, 
+                        the patronym referring to the name Σάκις; the second use seems to be associated with line 2, [---]ο̄ν Καλαίκο̄ on face a, and [---] Καλαίκο̄ on face b, written in smaller characters.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

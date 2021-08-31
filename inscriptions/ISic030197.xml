@@ -55,7 +55,7 @@
                         <region>Sicily</region>
                         <settlement>Santa Croce Camerina</settlement> 
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/093">Museo Archeologico Regionale di Kamarina</repository>
-                        <idno type="inventory"></idno>
+                        <idno type="inventory">8719</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -89,9 +89,16 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
+                            <handNote xml:id="h1">
                                 <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1"/>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                            <handNote xml:id="h2">
+                                <!-- Based on Glyph table: -->
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"></height>
                                 </dimensions>
@@ -102,12 +109,12 @@
                         <origin>
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462126">Kamarina</placeName>
-                                <placeName type="modern" ref="http://sws.geonames.org/8063309/">Camarina</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/6540853">Santa Croce Camerina</placeName>
                                 <geo>36.8736, 14.4507</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0480" notAfter-custom="-0450">480—450 BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in Camarina, inside a storeroom in the sanctuary of Athena, in contrada Cammarana<geo>36.87316, 14.4415</geo>.</provenance> <!-- double check coordinates -->
+                        <provenance type="found" subtype="discovered">Found in the archaeological area of Kamarina, inside a storeroom in the sanctuary of Athena, in contrada Cammarana<geo>36.87316, 14.4415</geo>.</provenance> <!-- double check coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>Santa Croce Camerina, Museo Archeologico Regionale di Kamarina</acquisition>
                     </history>
@@ -177,33 +184,49 @@
     -->
     </facsimile>
     <text>
-        <body>
+        <body><!-- first suggestion-->
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <div type="textpart" subtype="face" n="a">
-                    <div type="textpart" subtype="use" n="1">
+                    <div type="textpart" subtype="section" n="1">
                         <ab>
-                            <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name>Φάυλλο<supplied reason="lost">ς</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/>                          
+                            <lb n="1"/><handShift new="#h1"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name>Φάυλλο<supplied reason="lost">ς</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/>                          
                         </ab>
                     </div>
-                    <div type="textpart" subtype="use" n="2">
+                    <div type="textpart" subtype="section" n="2">
                         <ab>
-                            <lb n="1"/><unclear>Ο</unclear><num cert="low" value="40">ΔΔΔΔ</num> Ο
+                            <lb n="1"/><handShift new="#h2"/><unclear>Ο</unclear><num cert="low" value="40">ΔΔΔΔ</num> Ο
                             <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">φρ</supplied>άτρα
                         </ab>
                     </div>
                 </div>
                 <div type="textpart" subtype="face" n="b">
-                    <div type="textpart" subtype="use" n="1">
+                    <div type="textpart" subtype="section" n="1">
                         <ab>
-                            <lb n="1"/>hενάτα
+                            <lb n="1"/><handShift new="#h1"/>ͱενάτα
                         </ab>
                     </div>
-                    <div type="textpart" subtype="use" n="2">
+                    <div type="textpart" subtype="section" n="2">
                         <ab>
-                            <lb n="1"/><persName type="attested"><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ς</seg></name> <name type="patronym">Ματρο
-                            <lb n="2" break="no"/>δο̄́ρο̄</name></persName>                      
+                            <lb n="1"/><handShift new="#h2"/><persName type="attested"><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ς</seg></name> <persName type="attested"><name type="patronym">Ματρο
+                            <lb n="2" break="no"/><hi rend="reversed">δο̄́ρο̄</hi></name></persName></persName>                  
                         </ab>
                     </div>
+                </div>
+            </div>
+            <!-- second suggestion-->
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <div type="textpart" subtype="face" n="a">
+                    <ab>
+                        <lb n="1"/><handShift new="#h1"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name>Φάυλλο<supplied reason="lost">ς</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/> <handShift new="#h2"/><add place="overstrike"><hi rend="reversed"><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">φρ</supplied>άτρα</hi></add>
+                        <lb n="2"/><hi rend="reversed"><unclear>Ο</unclear><num cert="low" value="40">ΔΔΔΔ</num> <g ref="#sign_uninterpreted"/></hi>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="face" n="b">
+                    <ab>
+                        <lb n="1"/><handShift new="#h2"/><persName type="attested"><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ς</seg></name> <persName type="attested"><name type="patronym">Ματρο
+                        <lb n="2" break="no"/><add place="overstrike"><hi rend="inverted">δο̄́ρο̄</hi></add></name></persName></persName>
+                        <lb n="3"/><handShift new="#h1"/><hi rend="reversed">ͱενάτα</hi>              
+                    </ab>
                 </div>
             </div>
             <div type="apparatus">
@@ -220,7 +243,14 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>This document is one of several (about 150) lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.</p>
+                <p>This document is one of a large deposit (c. 150) of lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.
+                    The lamina appears to be used twice (see Cordano 1992, pp. 53-54). To the first use would correspond the text Φάυλλο[ς on face a, ͱενάτα on face b. 
+                    The second use is associated with the text <unclear>Ο</unclear>ΔΔΔΔ <g ref="#sign_uninterpreted"/> | φρ]άτρα on face a and the text Ματρο|δο̄́ρο̄ 
+                    on face b. In the second use, face a is used as face b and vice versa, and the writing is upside down on both faces if compared to the first use. The first engraving, 
+                    the one related to the first use, uses smaller letters than the second one. Moreover, the first text has not been erased in order to engrave the second, therefore it is clearly visible.
+                    The uninterpreted sign after the numeral on face a could be, according to Cordano 1992 (p. 54-55), a specific marker. See also 
+                    <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic030200">ISic030200</ref>.
+                    For a similar reuse of the tessera, within the same fratra, see also <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic030198">ISic030198</ref>.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

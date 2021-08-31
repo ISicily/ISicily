@@ -55,7 +55,7 @@
                         <region>Sicily</region>
                         <settlement>Santa Croce Camerina</settlement> 
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/093">Museo Archeologico Regionale di Kamarina</repository>
-                        <idno type="inventory"></idno>
+                        <idno type="inventory">8723</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -89,9 +89,18 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
-                                <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1"/>
+                            <handNote xml:id="h1">
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                            <handNote xml:id="h2">
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"></height>
                                 </dimensions>
@@ -102,12 +111,12 @@
                         <origin>
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462126">Kamarina</placeName>
-                                <placeName type="modern" ref="http://sws.geonames.org/8063309/">Camarina</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/6540853">Santa Croce Camerina</placeName>
                                 <geo>36.8736, 14.4507</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0480" notAfter-custom="-0450">480—450 BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in Camarina, inside a storeroom in the sanctuary of Athena, in contrada Cammarana<geo>36.87316, 14.4415</geo>.</provenance> <!-- double check coordinates -->
+                        <provenance type="found" subtype="discovered">Found in the archaeological area of Kamarina, inside a storeroom in the sanctuary of Athena, in contrada Cammarana<geo>36.87316, 14.4415</geo>.</provenance> <!-- double check coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition>Santa Croce Camerina, Museo Archeologico Regionale di Kamarina</acquisition>
                     </history>
@@ -179,22 +188,16 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
-                <div type="textpart" subtype="face" n="a"><!-- use 2? -->
+                <div type="textpart" subtype="face" n="a">
                     <ab>
-                        <lb n="1"/><persName type="attested"><name type="idionym">Ξενοκράτε̄ς</name> <name type="patronym"><seg part="I"><unclear>Α</unclear></seg><gap reason="lost" extent="unknown" unit="character"/></name></persName>
+                        <lb n="1"/><handShift new="#h1"/><persName type="attested"><name type="idionym">Ξενοκράτε̄ς</name> <persName type="attested"><name type="patronym"><seg part="I"><unclear>Α</unclear></seg><gap reason="lost" extent="unknown" unit="character"/></name></persName></persName>
                     </ab>
                 </div>
                 <div type="textpart" subtype="face" n="b">
-                    <div type="textpart" subtype="use" n="1">
-                        <ab>
-                            <lb n="1"/><orig>ΤΑΚ</orig><gap reason="illegible" quantity="1" unit="character"/><orig>ΔΟΣ</orig>
-                        </ab>
-                    </div>
-                    <div type="textpart" subtype="use" n="2">
-                        <ab>
-                            <lb n="1"/><num value="2">δευτέρας</num> φάτρ<unclear>α</unclear><supplied reason="lost">ς</supplied>
-                        </ab>
-                    </div>
+                    <ab>
+                        <lb n="1"/><handShift new="#h2"/><orig>ΤΑΚ</orig><gap reason="illegible" quantity="1" unit="character"/><orig>ΔΟΣ</orig>
+                        <lb n="1"/><handShift new="#h1"/><num value="2">δευτέρας</num> φάτρ<unclear>α</unclear><supplied reason="lost">ς</supplied>
+                    </ab>
                 </div>
             </div>
             <div type="apparatus">
@@ -211,7 +214,8 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>This document is one of several (about 150) lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.</p>
+                <p>This document is one of a large deposit (c. 150) of lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.
+                    The partially legible text ΤΑΚ[.]ΔΟΣ placed just below line 1 on face b is by another hand and relates to an earlier use of the tessera.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
