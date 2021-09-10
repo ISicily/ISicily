@@ -69,7 +69,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p>Tessera.</p>
+                                    <p>Tessera, reused.</p>
                                     <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                     <objectType ana="#object.tessera" ref="http://www.eagle-network.eu/voc/objtyp/lod/276.html">tessera</objectType>
                                     <dimensions>
@@ -89,9 +89,16 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
+                            <handNote xml:id="h1">
                                 <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1"/>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                            <handNote xml:id="h2">
+                                <!-- Based on Glyph table: -->
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"></height>
                                 </dimensions>
@@ -180,28 +187,16 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <div type="textpart" subtype="face" n="a">
-                    <div type="textpart" subtype="section" n="1">
-                        <ab>
-                            <lb n="1"/><persName type="attested"><name type="idionym">Π<supplied reason="omitted">α</supplied>σίφυγος</name> <persName type="attested"><name type="patronym">Φιντ<supplied reason="lost">ία</supplied></name></persName></persName>                            
-                        </ab>
-                    </div>
-                    <div type="textpart" subtype="section" n="2">
-                        <ab>
-                            <lb n="1"/><num value="14"><supplied reason="lost">τετά</supplied>ρτα ἐπὶ δέκα</num>
-                        </ab>
-                    </div>
+                    <ab>
+                        <lb n="1"/><handShift new="#h1"/><persName type="attested"><name type="idionym">Π<supplied reason="omitted">α</supplied>σίφυγος</name> <persName type="attested"><name type="patronym">Φιντ<supplied reason="lost">ία</supplied></name></persName></persName>                            
+                        <lb n="2"/><handShift new="#h2"/><hi rend="reversed"><num value="14"><supplied reason="lost">τετά</supplied>ρτα ἐπὶ δέκα</num></hi>
+                    </ab>
                 </div>
                 <div type="textpart" subtype="face" n="b">
-                    <div type="textpart" subtype="section" n="1">
-                        <ab>
-                            <lb n="1"/><num value="14">τε<supplied reason="lost">τάρτα</supplied> <supplied reason="lost">ἐπ</supplied>ὶ δέκα</num>
-                        </ab>
-                    </div>
-                    <div type="textpart" subtype="section" n="2">
-                        <ab>
-                            <lb n="1"/><persName type="attested"><name type="idionym"><supplied reason="lost">Πασίφυγ</supplied>ος</name> <persName type="attested"><name type="patronym">Φιντία</name></persName></persName>                            
-                        </ab>
-                    </div>
+                    <ab>
+                        <lb n="1"/><handShift new="#h2"/><persName type="attested"><name type="idionym"><supplied reason="lost">Πασίφυγ</supplied>ος</name> <persName type="attested"><name type="patronym">Φιντία</name></persName></persName>                            
+                        <lb n="2"/><handShift new="#h1"/><hi rend="reversed"><num value="14">τε<supplied reason="lost">τάρτα</supplied> <supplied reason="lost">ἐπ</supplied>ὶ δέκα</num></hi>
+                    </ab>
                 </div>
             </div>
             <div type="apparatus">
