@@ -7,7 +7,7 @@
             <titleStmt>
                 <title>ISic030089</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#TS">Thea Sommerschield</principal>
+                <principal ref="#TS">Savannah Neibart</principal>
                 <funder>John Fell OUP Research Fund</funder>
                 <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
@@ -19,8 +19,12 @@
                     <resp>basic data collection</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="TS" ref="add orcid here">Thea Sommerschield</name><!-- add orcid -->
+                    <name xml:id="TS" ref="https://orcid.org/0000-0002-6965-8105">Thea Sommerschield</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SN" ref="https://orcid.org/0000-0003-2868-9164">Savannah Neibart</name> 
+                    <resp>data collation and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
@@ -42,11 +46,11 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic030089</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
+                <idno type="TM">699095</idno>
+                <idno type="EDR">155795</idno>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDCS">70900061</idno>
+                <idno type="PHI">340318</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030089</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
@@ -57,9 +61,9 @@
                     <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement></settlement>
-                        <repository role="museum"></repository>
-                        <idno type="inventory"></idno>
+                        <settlement>Palermo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/isicily/museums/064">Museo Archeologico Regionale Antonio Salinas</repository>
+                        <idno type="inventory">42572</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -73,22 +77,22 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p>Lamina.</p>
+                                    <p>Rectangular lamina.</p>
                                     <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                     <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <height unit="cm" atMost="5.8">5.8</height>
+                                        <width unit="cm" atMost="2.7">2.7</width> <!-- from Bettarini-->
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/167.html">engraved</rs>
                                     <p></p>
-                                    <damage/>
+                                    <damage ana="#text_condition.incomplete"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -106,15 +110,15 @@
                         <origin>
                             <origPlace>
                                 <placeName/>
-                                <placeName type="ancient" ref=""></placeName><!-- add ancient place name and pleiades ref -->
-                                <placeName type="modern"></placeName><!-- add modern place name and geonames ref -->
-                                <geo></geo> <!-- add geo coordinates -->
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName> 
+                                <geo>37.58337, 12.82522</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
+                            <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0470" notAfter-custom="-0430">mid fifth century BCE (so Bettarini on letters).</origDate> 
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in ...<geo>...</geo>.</provenance> <!-- add specific geo coordinates -->
+                        <provenance type="found" subtype="discovered">Found in the deposits of Selinunte<geo>37.58337, 12.82522</geo>.</provenance> <!-- generic Selinunte coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition></acquisition> <!-- add -->
+                        <acquisition></acquisition> 
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -157,11 +161,12 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-06-09" who="#VM">Valentina Mignosa added basic metadata</change>
+                <change when="2021-08-27" who="#SN">Savannah Neibart encoded inscription using data from ISicDef, supplemented by Bettarini</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -178,14 +183,16 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SN">
                 <ab>
-                    <lb n="1"/>
+                    <lb n="1"/><orig>ΣΡΑΣΕ</orig><gap reason="lost" extent="unknown"/>
+                    <lb n="2"/>ε̄ <persName type="attested"><name type="idionym"><seg part="I">Τατ</seg></name></persName><gap reason="lost" extent="unknown"/>
+                    <lb n="3"/>ΣΥΙΣΟ<gap reason="lost" extent="unknown"/>
+                    <lb n="4"/>γλο͂<supplied reason="lost"><expan><abbr>σ</abbr><ex cert="low">σ</ex></expan></supplied><gap reason="lost" extent="unknown"/>
                 </ab>
             </div>
             <div type="apparatus">
@@ -202,15 +209,19 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p></p>
+                <p>ΣΡΑΣ: Perhaps an indigenous anthroponym Ῥας (of which Σρας may be an orthographic variant). (SEG)</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-                    <bibl type="corpus" n="Defixiones"> <!-- just a suggestion, decide on the best abbreviation here -->
+                    <bibl type="corpus" n="Defixiones">
                         <author>Bettarini</author>
                         <date>2005</date>
                         <citedRange>3</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/SEW88NC7"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>55.1022</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion"><bibl></bibl>
