@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>text encoding, edition and further data</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -57,14 +61,12 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Adrano</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/021">Museo Archeologico
-                            Regionale di Adrano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/021">Museo Archeologico Regionale di Adrano</repository>
                         <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -80,26 +82,43 @@
                                 <support>
                                     <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
                                     <objectType ana="#object.cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85.html">cippus</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">82</height>
+                                        <width unit="cm">54</width>
+                                        <depth unit="cm">50</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <p>Boustrophedon. The inscription runs across the four faces (a, b, c, d) of the block and on the upper edge.</p>
+                                    <dimensions n="a" unit="cm">
+                                        <height unit="cm">38</height>
+                                        <width unit="cm">48</width>
+                                    </dimensions>
+                                    <dimensions n="b" unit="cm">
+                                        <height unit="cm">57</height>
+                                        <width unit="cm">33</width>
+                                    </dimensions>
+                                    <dimensions n="c" unit="cm">
+                                        <height unit="cm">47</height>
+                                        <width unit="cm">36</width>
+                                    </dimensions>
+                                    <dimensions n="d" unit="cm">
+                                        <height unit="cm">57</height>
+                                        <width unit="cm">36</width>
+                                    </dimensions>
+                                    <damage ana="#text_condition.deteriorated"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">7-9.5</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -111,13 +130,13 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462313">Mendolito</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462313"/>		
                                 <placeName type="modern" ref="http://sws.geonames.org/11103527">Mendolito</placeName>
                             	<geo>37.699040, 14.808181</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0500" precision="low">6th century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">proprieta Sanfilippo, Mendolito (Long 14.80968; Lat 37.70611)</provenance>
+                        <provenance type="found" subtype="discovered">proprietà Sanfilippo, Mendolito (Long 14.80968; Lat 37.70611)</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -162,14 +181,15 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	   <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-09-06" who="#VM">Valentina Mignosa added text and further data (object dimensions, letter height, text layout, references, commentary)</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,25 +211,109 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="scx" resp="#VM">
+                <div type="textpart" subtype="face" n="a">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig>ΜΟΓΟΜ</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>ΣΙΕΛΔΟ</orig><gap reason="illegible" quantity="1" unit="character"/>
+                        <lb n="3" style="text-direction:r-to-l"/><orig>ΜΟΙΔΑ</orig>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="face" n="b">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig><unclear>ΝΑ</unclear>ΔΑΡΑ</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>ΚΟΙΤΟΒ</orig><gap reason="illegible" quantity="1" unit="character"/>
+                        <lb n="3" style="text-direction:r-to-l"/><orig><unclear>Ϝ</unclear>Ͱ<unclear>ΕΛ</unclear>Ͱ<unclear>Ο</unclear></orig>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="face" n="c">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig>ΡΟΓΑΥ</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>ΛΤΙΝΑΣ</orig>
+                        <lb n="3" style="text-direction:r-to-l"/><orig>ϜΟΓ</orig><gap reason="lost" quantity="2" unit="character"/>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="face" n="d">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig>ΠΙΣΕΜΒ</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>ΡΟϜΑΣΔΙΣ</orig>
+                        <lb n="3" style="text-direction:r-to-l"/><orig><unclear>Ϝ</unclear></orig><gap reason="lost" quantity="2" unit="character"/><unclear>Σ</unclear>ΑΙΟ
+                    </ab>
+                </div>
+            </div>
+            <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="scx-Latn" resp="#VM">
+                <div type="textpart" subtype="face" n="a">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig>mogom</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>sieldo</orig><gap reason="illegible" quantity="1" unit="character"/>
+                        <lb n="3" style="text-direction:r-to-l"/><orig>moida</orig>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="face" n="b">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig><unclear>na</unclear>dara</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>koitob</orig><gap reason="illegible" quantity="1" unit="character"/>
+                        <lb n="3" style="text-direction:r-to-l"/><orig><unclear>v</unclear>h<unclear>el</unclear>h<unclear>o</unclear></orig>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="face" n="c">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig>rogau</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>ltinas</orig>
+                        <lb n="3" style="text-direction:r-to-l"/><orig>vog</orig><gap reason="lost" quantity="2" unit="character"/>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="face" n="d">
+                    <ab>
+                        <lb n="1" style="text-direction:r-to-l"/><orig>pisemb</orig>
+                        <lb n="2" style="text-direction:l-to-r"/><orig>rovasdis</orig>
+                        <lb n="3" style="text-direction:r-to-l"/><orig><unclear>v</unclear></orig><gap reason="lost" quantity="2" unit="character"/><unclear>s</unclear>aio
+                    </ab>
+                </div>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>Text after Manganaro 1961</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p><!--No translation currently agreed--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--the so-called 'cippo Sanfilippo', found in 1883 in the Sanfilippo property at mendolito, given the to the museum in 1960. Inscribed on all four faces, of uncertain interpretation, main discussion is still Manganaro 1961c.--></p>
+                <p>The document is the so-called 'cippo Sanfilippo' (from the surname of the owner of the land where it was found), 
+                    a lava stone parallelepiped, discovered in 1883, interpreted as a terminus and datable to the 6th century BCE.
+                    The cippus, previously kept in the Villa Sanfilippo, was donated in 1960 to the Museo Archeologico Etneo in Adrano, 
+                    where it is now located. The text is difficult to read due to the poor state of conservation of the stone. 
+                    However, it is clear that the text is boustrophedon and presents, as far as can be read, the alphabet typical of Sikel 
+                    inscriptions from the Etna area. Worthy of note, in particular, is the presence of the arrow-shaped alpha, the digamma 
+                    (with value of v, see also <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003364">ISic003364</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl>
                         <author>Manganaro</author>
-                        <date>1961</date>
+                        <date>1961, pls. L-LIII</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/4356IBUF"/>
+                    </bibl>
+                    <bibl>
+                        <author>Schmoll</author>
+                        <date>1968</date>
+                        <citedRange>201-202</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/CMIJ47JE"/>
+                    </bibl>
+                    <bibl>
+                        <author>Agostiniani</author>
+                        <date>1973</date>
+                        <citedRange>395</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/EAFGZBIB"/>
+                    </bibl>
+                    <bibl>
+                        <author>Zamboni</author>
+                        <date>1978</date>
+                        <citedRange>958</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/3595JHKT"/>
                     </bibl>
                     <bibl>
                         <author>Albanese</author>
@@ -218,7 +322,26 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/IVAU3I2N"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Agostiniani</author>
+	           <date>2009</date>
+	           <citedRange>116</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/63R3F4J2"/>
+	       </bibl>
+	       <bibl>
+	           <author>Pelagatti</author>
+	           <date>2009</date>
+	           <citedRange>22</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/BZEJN9HP"/>
+	       </bibl>
+	       <bibl>
+	           <author>Mignosa</author>
+	           <date>2017-2018</date>
+	           <citedRange>217, no. 1, pls. 2-3</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/2EBZBFTF"/>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>
