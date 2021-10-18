@@ -32,7 +32,7 @@
                 </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>EpiDoc editing</resp>
+                    <resp>EpiDoc editing and addition of metadata</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -80,27 +80,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Upper right part of stele, not very carefully polished. Broken down on the left side, and missing the upper right corner</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">27.8</height>
+                                        <width unit="cm">31.8</width>
+                                        <depth unit="cm">9.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
-		    </supportDesc>
+                                <condition ana="#condition.damaged"/>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <damage ana="#text_condition.partly_illegible"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">40-43</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -117,7 +119,7 @@
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" from="1968" to="1969">Sporadic discovery between 1968-1969 on the Episcopal property<geo>38.467163, 14.957333</geo></provenance><!-- Repesentative coordinates for Castello -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -156,6 +158,11 @@
                 <language ident="scx">Sikel</language>
                 <language ident="sxc">Sikan</language>
             </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
@@ -166,6 +173,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-09-27" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -189,7 +197,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>Αρ<gap reason="illegible" quantity="1" unit="character"/>ετιδ<unclear>ο</unclear><gap reason="lost" quantity="1" unit="character"/>
+                    <lb n="1"/><persName type="attested"><name><seg part="I">Αρ</seg><gap reason="illegible" quantity="1" unit="character"/><seg part="M">ετιδ<unclear>ο</unclear></seg><gap reason="lost" quantity="1" unit="character"/></name></persName>
                 </ab>
             </div>
             <div type="apparatus">
