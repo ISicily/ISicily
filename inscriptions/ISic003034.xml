@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3034</title>
+                <title>I.Sicily inscription 003034</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -61,7 +61,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Ragusa</settlement>
-                        <repository role="museum">in situ</repository>
+                        <repository role="museum"/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -89,8 +89,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -111,31 +110,33 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462252">Hybla Heraea</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462252" corresp="#findspot">Hybla Heraea</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523650">Ragusa</placeName>
                             	<geo>36.92653, 14.74761</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100">Hellenistic</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Nunziata Vecchia</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Ragusa, in situ</acquisition>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">Nunziata Vecchia</provenance>
+                        <provenance type="observed" corresp="#findspot">in situ</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">Nunziata Vecchia</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>

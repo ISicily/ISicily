@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1505</title>
+                <title>I.Sicily inscription 001505</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -29,6 +29,10 @@
                 <respStmt>
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AL" ref="https://orcid.org/0000-0002-0000-7611">Andoni Llamazares</name>
+                    <resp>text edition</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -62,8 +66,7 @@
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"
-                        </repository>
+                            Regionale Eoliano "Luigi Bernabò Brea"</repository>
                         <idno type="inventory">2385</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,8 +85,7 @@
                                     <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">
                                         volcanic (pietra di Fuardo)
                                     </material>
-                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele
-                                    </objectType>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -94,8 +96,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -120,31 +121,30 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0200">C2 AD (Ferrua)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" precision="low">2nd century CE (Ferrua)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found by Orsi in 1928 in contr. Diana, reused in cover of stone
-                            sarcophagus no.8
-                        </provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Lipari, Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea" no. 2385
-                        </acquisition>
+                            sarcophagus no.8</provenance>
+                        <provenance type="transferred" when="1960">transferred from Museo Archeologico Regionale Paolo Orsi in 1960</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">transferred from Museo Archeologico Regionale Paolo Orsi in 1960
-                            </note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -171,7 +171,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -179,6 +179,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-07-19" who="#AL">Andoni Llamazares added text edition</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -200,19 +201,18 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI334854">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AL">
                 <ab>
-                    <lb n="1"/>
-
-
-                    Φλαμενί-
-                    <lb n="2"/>
-                    <supplied reason="omitted">α</supplied>ς καὶ Αὐρη-<lb n="3"/>λίου Ἀντιόχ-<lb n="4"/>ου.
-                    <lb n="5"/>
+                    <lb n="1"/><persName type="attested"><name type="nomen">Φλαμενί
+                    <lb n="2" break="no"/><choice><corr>α</corr><sic>λ</sic></choice>ς</name></persName> <w>καὶ</w> <persName type="attested"><name type="nomen">Αὐρη
+                    <lb n="3" break="no"/>λίου</name> <name type="cognomen">Ἀντιόχ
+                    <lb n="4" break="no"/>ου</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>text according to I.Lipara</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>

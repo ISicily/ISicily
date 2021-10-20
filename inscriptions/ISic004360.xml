@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 4360</title>
+                <title>I.Sicily inscription 004360</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -54,12 +54,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004360</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4390386</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
@@ -78,32 +78,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Fragment of a marble plaque, broken on all sides (and with a break upper left but reattached); thickest upper left, slightly thinner at the base.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">20.3</height>
+                                        <width unit="cm">30</width>
+                                        <depth unit="cm">5.1-5.6</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Remains of three lines of text, of which only the middle line is preserved to full height. Text is laid out between double guidelines.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete #text_condition.legible"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Relatively tall and thin letters, but still of regular square form, of somewhat irregular width, with short basic serifs at the end of strokes; somewhat roughly chiselled. R has an extended tail which does not reach to the lower line; O is tall and narrow; E has slightly shorter middle stroke. M is narrow, with very short middle strokes that join at the midpoint and join  the verticals well below the top.</p>
+                                <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">70-75</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">17-23</height>
+                                </dimensions>
+                                <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">25-30</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -115,27 +120,29 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400">Imperial</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0400" evidence="lettering material-context">later imperial (later 2nd — 4th centuries CE?)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Siracusa, Museo Archeologico Regionale Paolo Orsi no. 255</acquisition>
+                        <provenance type="found" notAfter="1885">Of uncertain provenance, first noted in the first volume of the museum inventory, compiled in 1885</provenance>
+                        <provenance type="observed">Magazzino B, cassetta 16</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2015-01-16" resp="#JP">Prag, 16.05.2015</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">Magazzino B, new cassetta 16</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -158,60 +165,62 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.unknown" ref="https://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</term>
+                    <term ana="#function.building" ref="http://www.eagle-network.eu/voc/typeins/lod/86.html">building</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
-                            <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                   <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	   <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	               <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+	   <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	   <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                            <change when="2021-01-25" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-	</listChange>
+                   <change when="2021-01-25" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2021-03-03" who="#JP">Jonathan Prag edited from autopsy, revising text, adding image, bibliography, metadata</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic004360_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic004360.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic004360_rear_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic004360_rear.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><orig><unclear>RIAM</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><orig>IOREMFACI</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>USUIS</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>RIAM</unclear></orig><gap reason="illegible" unit="character" quantity="3"/><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">in</supplied> <supplied reason="lost">mel</supplied><unclear>i</unclear>orem faci<supplied reason="lost">em</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>USUIS</orig><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app>
-                        <note>Text after Orsi 1889</note>
-                    </app>
-                </listApp>
+                    <app loc="line 1"><note>Orsi (NSA): Riam. . . .; Orsi (Taccuini): RIAMIR .  The first three characters are almost certainly RIA, followed by four verticals grouped in two pairs, either or both of which would be compatible with M as in line 2, followed by two further marks slightly above the line; Orsi's suggestion is entirely plausible.</note></app>
+                    <app loc="line 2"><note>Orsi: IOREMFACI; the top of a vertical is visible at the start of the line</note></app>
+                    <app loc="line 3"><note>The trace of a downward right slanting stroke is visible at the upper right end of the line, compatible with V, X or Y (also noted by Orsi, Taccuini)</note></app>
+                    </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--fragment of thick slab, OREMFACI- - -VSVIS- - -, but note inscribed with large monumental latin letters on reverse also--></p>
+            <div type="commentary" resp="#JP">
+                <p>This text is on the reverse of what was originally a large monumental Latin inscription of the first or second century AD (see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001671">ISic001671</ref>), and so this text is presumably secondary re-use of the stone and the later text from its form. Line 2 can reasonably be restored to suggest that this was a text recording the rebuilding or reconstruction of a structure of some sort. On that basis, the word in line 1 is perhaps most likely to be 'memoria' or 'gloria', and line 3 may contain reference to the individual responsible. The text does not appear to have been republished or discussed since Orsi. Orsi recorded it in the first of his taccuini, prior to publishing it in the NSA. Curiously, in neither case did he note the presence of a text on the reverse, which fact is recorded in the inventory (it is possible that the text was already fixed to the wall for display when he saw it?).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -221,6 +230,12 @@
                         <date>1889</date>
                         <citedRange>386</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>2018</date>
+                        <citedRange>Tacc. 1, p.46</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

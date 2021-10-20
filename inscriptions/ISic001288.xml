@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1288</title>
+                <title>I.Sicily inscription 001288</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -66,9 +66,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania
-                        </repository>
-                        <idno type="inventory">259 + 280 + 305</idno>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -83,8 +81,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
-                                    </material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType/>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -96,8 +93,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -122,28 +118,51 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0350">C3 AD or beginning C4 AD (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0350" precision="low">3rd century CE or beginning 4th century CE (K)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Catania, Museo Civico di Catania no. 259 + 280 + 305</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">(a1) no.259, sala VI.67; (a2) no.280, sala VI.88; (b) no.305, sala VI.113, m.cort
-                            </note>
-                        </adminInfo>
-                    </additional>
+                    <msPart xml:id="frA1">
+                        <msIdentifier>
+                            <idno type="inventory">259</idno>
+                        </msIdentifier>
+                        <history>
+                            <provenance type="observed" corresp="#frA1">sala VI.67</provenance>
+                        </history>
+                    </msPart>
+                    <msPart xml:id="frA2">
+                        <msIdentifier>
+                            <idno type="inventory">280</idno>
+                        </msIdentifier>
+                        <history>
+                            <provenance type="observed" corresp="#frA2">sala VI.88</provenance>
+                        </history>
+                    </msPart>
+                    <msPart xml:id="frB">
+                        <msIdentifier>
+                            <idno type="inventory">305</idno>
+                        </msIdentifier>
+                        <history>
+                            <provenance type="observed" corresp="#frB">sala VI.113, m.cort</provenance>
+                        </history>
+                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -203,9 +222,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ιος <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf"/> Φιλο<gap reason="lost" extent="unknown" unit="character"/> 
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ιος <g ref="#ivy-leaf"/> Φιλο<gap reason="lost" extent="unknown" unit="character"/> 
                     <lb n="2" break="no"/>ζ · ας καὶ Αὐρη
-                    <lb n="3" break="no"/>λια <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf"/> Κλωδία ἡ
+                    <lb n="3" break="no"/>λια <g ref="#ivy-leaf"/> Κλωδία ἡ
                     <lb n="4"/>σύνβιος μου ἐ
                     <lb n="5" break="no"/>κτησάμεθα χώραν
                     <lb n="6"/>καθαρὰν καὶ ἐθεμε<supplied reason="lost">λιώ</supplied> 

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3070</title>
+                <title>I.Sicily inscription 003070</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -50,24 +50,21 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003070</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388065</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Marsala</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/108">Museo archeologico regionale Lilibeo Marsala - Baglio Anselmi</repository>
+                        <idno type="inventory"></idno>
+                        <altIdentifier type="former">
+                            <settlement>Palermo</settlement>
+                            <repository role="museum">Museo Archeologico Regionale Antonino Salinas</repository>
+                            <idno type="old">24369</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -77,27 +74,25 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
-                                        limestone; stucco
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
-                                    </dimensions>
+                                    <material ana="#material.plaster">Plaster on stone</material>
+                                    <objectType ana="#object.funerary_monument.column" ref="http://www.eagle-network.eu/voc/objtyp/lod/100">column</objectType>
+                                    <dimensions><!--Lilibeo 1984-->
+                                        <height unit="cm">87</height>
+                                        <width unit="cm">34</width>
+                                        <depth unit="cm">34</depth>
+                                      </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout>
+                                    <rs type="painted" ref="http://www.eagle-network.eu/voc/writing/lod/10">painted</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Neatly painted square letters with short serifs, painted in the style of stone cut letters. Alpha is broad with straight bar; Epsilon has equal length horizontal strokes; theta is ovoid with a full horizontal bar; kappa has arms that are not quite ful length; mu has vertical first and last, with middle strokes nearly reaching down to the line; pi has equal length verticals; sigma is four-bar, of equal length, top and bottom strokes horizontal.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -108,6 +103,9 @@
                                 </dimensions>
                             </handNote>
                         </handDesc>
+                        <decoDesc>
+                            <decoNote>A togate male figure stands in the middle of the field, his head rising in the middle of line 2 and to the left of line 3 of the text; a pair of raised arms/hands bracket the text.</decoNote>
+                        </decoDesc>
                     </physDesc>
                     <history>
                         <origin>
@@ -116,22 +114,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                             	<geo>37.80355, 12.4379</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0100">C2 BC (Manni Piraino)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0100" evidence="archaeological-context" precision="low">2nd century BCE (Manni Piraino)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Marsala,</acquisition>
+                        <provenance type="found" subtype="discovered" when="1984">Excavated in the via del Fante necropolis in 1984.</provenance>
+                        <provenance type="observed" subtype="autopsied">Photographed, Metcalfe, 2018-08-31</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -158,47 +161,46 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-03-05" who="#JP">Jonathan Prag checked file, edited text and some metadata, added image</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic003070_tiled.tif" height="5789px" width="3861px">
+                <desc>Photo R.J.A. Wilson</desc>
+            </graphic>
+            <graphic n="print" url="ISic003070.jpg" height="5789px" width="3861px">
+                <desc>Photo R.J.A. Wilson</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003070_detail_tiled.tif" height="4000px" width="6000px">
+                <desc>Photo R.J.A. Wilson</desc>
+            </graphic>
+            <graphic n="print" url="ISic003070_detail.jpg" height="4000px" width="6000px">
+                <desc>Photo R.J.A. Wilson</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI331223">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-
-
-                    Ἀχιλλεὺς Προθύμου,<lb n="2"/>χαῖρε καὶ κατὰ<lb n="3"/> χθονός.
-                    <lb n="4"/>
+                    <lb n="1"/>Ἀχιλλεὺς Προθύμου
+                    <lb n="2"/>χαῖρε καὶ κατὰ
+                    <lb n="3"/>χθονός
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text from photograph</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -228,6 +230,12 @@
                         <date>1987</date>
                         <citedRange>25-26 tav.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/5G8I6FZF"/>
+                    </bibl>
+                    <bibl>
+                        <author>Vento</author>
+                        <date>2000</date>
+                        <citedRange>54-56 tav.8-9</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RTAB9A28"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

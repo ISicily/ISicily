@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0787</title>
+                <title>Epitaph for Ti. Claudius Claudianus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -29,6 +29,10 @@
                 <respStmt>
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DEE" ref="http://orcid.org/0000-0002-2337-9047">David Espinosa Espinosa</name>
+                    <resp>editing and EpiDoc encoding</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -61,9 +65,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale
-                            interdisciplinare di Messina
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina</repository>
                         <idno type="inventory">A3580</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -78,37 +80,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
-                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
-                                    </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>A slab of marble broken into three pieces although with the text fully preserved.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!--from IMusMessina 23-->
+                                        <height unit="cm">28</height>
+                                        <width unit="cm">40</width>
+                                        <depth unit="cm">not recorded</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout><p>The text is centered on the stone, with a careful layout (ordinatio) and uniform distribution.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--from IMusMessina 23-->
+                                <locus from="line1" to="line5">Line 1 to 5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">42</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line1" to="line5">Interlineation line 1 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">10-15</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -120,23 +118,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</placeName>
                             	<geo>38.19394, 15.55256</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0250">Beginning C3 AD (Ferrua);
-                                Griffo prefers C1 AD (cf his p.84, n.7)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0225" source="https://www.zotero.org/groups/382445/items/P7QQ9SB6" precision="low">Beginning 3rd century CE (Ferrua)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" source="http://zotero.org/groups/382445/items/4MCP2PVV" precision="low">Griffo prefers 1st century CE (cf his p.84, n.7)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Necropolis at the Orti della Maddalena</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Messina, Museo regionale interdisciplinare di Messina no. A3580</acquisition>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -163,7 +166,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -172,6 +175,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-20" who="#DEE">David Espinosa Espinosa edited and encoded the text division</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -193,97 +197,23 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR078344" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#DEE">
                 <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>D</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>Ti</abbr>
-                        <ex>berius</ex>
-                    </expan>
-                    <expan>
-                        <abbr>Cl</abbr>
-                        <ex>audius</ex>
-                    </expan>
-                    Claudianus
-                    <lb n="3"/>
-                    <expan>
-                        <abbr>vix</abbr>
-                        <ex>it</ex>
-                    </expan>
-                    <expan>
-                        <abbr>ann</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    XIIII
-                    <lb n="4"/>
-                    <expan>
-                        <abbr>Cl</abbr>
-                        <ex>audius</ex>
-                    </expan>
-                    Theseus pater<lb n="5"/>filio dulcissimo.
-                </ab>
-                <!--This EDR text 078344 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI313654">
-                <ab>
-                    <lb n="1"/>
-
-
-                    
-                    <expan>
-                        <abbr>D</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    ❦
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    ❦
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>Ti</abbr>
-                        <ex>berius</ex>
-                    </expan>
-                    ❦
-                    <expan>
-                        <abbr>Cl</abbr>
-                        <ex>audius</ex>
-                    </expan>
-                    Claudianus<lb n="3"/>
-                    <expan>
-                        <abbr>vix</abbr>
-                        <ex>it</ex>
-                    </expan>
-                    ❦
-                    <expan>
-                        <abbr>ann</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    ❦ XIIII.
-                    <lb n="4"/>
-                    <expan>
-                        <abbr>Cl</abbr>
-                        <ex>audius</ex>
-                    </expan>
-                    ❦ Theseus ❦ pater<lb n="5"/> filio ❦ dulcissimo.
-                    <lb n="6"/>
+                    <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <g ref="#ivy-leaf">❦</g> <expan><abbr>M</abbr><ex>anibus</ex></expan> <g ref="#ivy-leaf">❦</g>
+                    <lb n="2"/><expan><abbr>Ti</abbr><ex>berius</ex></expan> <g ref="#ivy-leaf">❦</g> <expan><abbr>Cl</abbr><ex>audius</ex></expan> Claudianus
+                    <lb n="3"/><expan><abbr>vix</abbr><ex>it</ex></expan> <g ref="#ivy-leaf">❦</g> <expan><abbr>ann</abbr><ex>is</ex></expan> <g ref="#ivy-leaf">❦</g> <num value="14">XIIII</num>
+                    <lb n="4"/><expan><abbr>Cl</abbr><ex>audius</ex></expan> <g ref="#ivy-leaf">❦</g> Theseus <g ref="#ivy-leaf">❦</g> pater
+                    <lb n="5"/>filio <g ref="#ivy-leaf">❦</g> dulcissimo
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text according to IMusMessina 23</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#DEE">
+                <p>To the spirits of the departed. Tiberius Claudius Claudianus lived for 14 years. Claudius Theseus, his father, (set this up) to (his) sweetest son.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#DEE">
+                <p>Agli spiriti dei defunti. Tiberius Claudius Claudianus visse per 14 anni. Claudius Theseus, suo padre, (ha predisposto questo) per (il suo) dolcissimo figlio.</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->

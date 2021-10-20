@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0847</title>
+                <title>I.Sicily inscription 000847</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -54,21 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000847</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4339664</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi
-                        </repository>
-                        <!--No inventory number found-->
+                        <repository/>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -83,9 +78,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.unknown" ref="http://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -96,8 +90,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -122,23 +115,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400">Theois Chthoniois, in
-                                full; Chrestos kai amemptos, with ligatures; age in yrs (?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0400">Imperial</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Siracusa, Museo Archeologico Regionale Paolo Orsi</acquisition>
+                        <provenance type="found" subtype="discovered" when="1812-12">Found in December 1812 by Capodieci, alongside the road leading to the convent of the Cappuccini<geo>37.078255, 15.295179</geo></provenance><!-- location of the convent-->
+                        <provenance type="not-observed" subtype="lost">Although donated to the Syracuse museum in 1812 by Capodieci, it does not seem to have been seen since it was observed there by Thorlacius in the 19th cent.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -175,6 +173,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-08-04" who="#JP">Jonathan Prag amended repository and provenance data</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -198,10 +197,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/>Θεοῖς <g type="interpunct">·</g> Χθονίοις
+                    <lb n="1"/>Θεοῖς <g ref="#interpunct">·</g> Χθονίοις
                     <lb n="2"/>Ζώη χ<hi rend="ligature">ρη</hi>σ<hi rend="ligature">τὴ</hi> καὶ
-                    <lb n="3"/>ἄμεμπτος <g type="interpunct">·</g> ἔζησεν
-                    <lb n="4"/>ἔτη <g type="interpunct">·</g> <num value="22">κ <g type="interpunct">·</g> β</num> <g type="interpunct">·</g>
+                    <lb n="3"/>ἄμεμπτος <g ref="#interpunct">·</g> ἔζησεν
+                    <lb n="4"/>ἔτη <g ref="#interpunct">·</g> <num value="22">κ <g ref="#interpunct">·</g> β</num> <g ref="#interpunct">·</g>
                 </ab>
             </div>
             <div type="apparatus">
@@ -220,6 +219,12 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Capodieci</author>
+                        <date>1813</date>
+                        <citedRange>vol. 1, p. 278</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4A4U5FEA"/>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0030</ref>

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3328</title>
+                <title>I.Sicily inscription 003328</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>encoding text division and checking the edition</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -63,8 +67,7 @@
                         <region>Sicily</region>
                         <settlement>Noto</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/100">Museo Civico di
-                            Noto
-                        </repository>
+                            Noto</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -80,12 +83,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">
-                                        sandstone
-                                    </material>
-                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">
-                                        block
-                                    </objectType>
+                                    <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -96,8 +95,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -122,22 +120,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/10402654">Eloro</placeName>
                             	<geo>36.84044, 15.10414</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0300">C4 BC</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0300" precision="low">4th century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Contr. Gioi, 2.5km west of Eloro</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#MM">2015.10.07 Metcalfe</provenance>
-                        <acquisition>Noto, Museo Civico di Noto</acquisition>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -164,15 +167,16 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                            <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+            	   <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		  <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	               <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+            	   <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                            <change when="2021-02-23" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,48 +198,35 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI337252">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/>
-
-
-                    πρᾶτος<lb n="2"/>ποτικε-<lb n="3"/>φαλᾶς.
-                    <lb n="4"/>
-                </ab>
-            </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI337254">
-                <ab>
-                    <lb n="1"/>
-
-
-                    ποτὶ Κε-
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>φαλάς</abbr>
-                        <ex>?</ex>
-                    </expan>
-                    .
-                    <lb n="3"/>
+                    <lb n="1"/>πρᾶτος
+                    <lb n="2"/>ποτὶ κε
+                    <lb n="3" break="no"/>φαλάς
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>Text after Inglese 2014</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--pratos poti kephalas (i.e. first towards the head).  Manganaro interpreted as part of a funerary inscr. (non vidi)--></p>
+                    <!--pratos poti kephalas (i.e. first towards the head). Inscription very similar to ISic003329, found in the same context. These could be two terminal stones indicating two points where land begins and ends or similar. Problematic interpretation. Manganaro interpreted as part of a funerary inscr. (non vidi)--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
-                        <citedRange>57.0903A<!--Failed to convert--></citedRange>
+                        <citedRange>57.0903A</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
                     <bibl type="bulletin" n="SEG">
-                        <citedRange>52.0929.2<!--Failed to convert--></citedRange>
+                        <citedRange>52.0929.2</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
                     <bibl type="corpus" n="IGDS2">

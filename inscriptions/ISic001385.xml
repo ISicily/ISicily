@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1385</title>
+                <title>I.Sicily inscription 001385</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -38,6 +38,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="TNS" ref="https://orcid.org/0000-0003-2684-2030">Timothy Smith</name>
+                    <resp>Epidoc editing</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -62,12 +66,12 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum">Museo S. Nicolai</repository>
+                        <repository/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
+                        <altIdentifier type="former">
                             <settlement/>
-                            <repository/>
+                            <repository role="museum">Museo S. Nicolai</repository>
                             <idno type="old"/>
                         </altIdentifier>
                     </msIdentifier>
@@ -78,9 +82,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -91,8 +93,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -120,25 +121,27 @@
                             <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0600">Ref. to purchase of the
                                 locus / topos? (?)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Catania, Museo S. Nicolai</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="not-observed">Not located.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">not located</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -165,7 +168,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -174,6 +177,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-18" who="#TNS">Epidoc editing</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -195,46 +199,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140891">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TNS">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— — —</supplied>ΚΟΙΠΑϹ
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="2"/>
-                    <supplied reason="lost">— —</supplied>ΛΑ ἠγορ
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="3"/>
-                    <supplied reason="lost">— — —</supplied>ΛΙΟ<supplied reason="lost">— — —</supplied> {²⁷ἠγορ<supplied reason="lost">ά</supplied>|
-                    <supplied reason="lost">σ</supplied>
-                    <supplied reason="omitted">ατ</supplied>ο (Kirchhoff)}²⁷
-                    <lb n="4"/>
-                </ab>
-            </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140892">
-                <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— — —</supplied>
-                    κο<supplied reason="omitted">ῦ</supplied>πας
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="2"/>
-                    <supplied reason="lost">— —</supplied>ΛΑ ἠγόρ
-                    <supplied reason="lost">ασεν — —</supplied>
-                    <lb n="3"/>
-                    <supplied reason="lost">— — ἰ</supplied>
-                    <supplied reason="omitted">δ</supplied>ίο
-                    <supplied reason="lost">ις — — —</supplied>
-                    <lb n="4"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>κο<choice><corr>ῦ</corr><sic>ι</sic></choice>πας<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΛΑ</orig> ἠγορ<supplied reason="lost">ασεν</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἰ</supplied><choice><corr>δ</corr><sic>λ</sic></choice>ίο<supplied reason="lost">ις</supplied><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Ferrua</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag; apparent ref. to pruchase of tomb / locus / topos, Ferrua makes a couple of restorations--></p>
+                <p><!--commented out pending revision--> <!--Follows Ferrua's reconstruction. Kirchoff reconstructs ἠγορ[...] as ἠγοράσατο.--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3810</title>
+                <title>I.Sicily inscription 003810</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -65,9 +69,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
                         <idno type="inventory">11663</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,28 +84,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Small stele with more expanded base bulb, only rough. Surfaces smoothed but currently abraded; slightly chipped along the edges, missing the upper right corner</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">52.6</height>
+                                        <width unit="cm">36.8</width>
+                                        <depth unit="cm">9</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
-		    </supportDesc>
+                                <condition ana="#condition.damaged"/>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
-                                	<damage/>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage ana="#text_condition.partly_illegible"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">42-45</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,20 +123,25 @@
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found" subtype="discovered" when="1969">Found in 1969 in excavation of trench XXXII, zone ε S, on the Episcopal property. Reused in the covering of the lithic sarcophagus tomb 679 (dated to the fourth-quarter of the third century BC, but reused at the end of the first-second century AD)<geo>38.467163, 14.957333</geo></provenance><!-- Repesentative coordinates for Castello -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -154,6 +162,11 @@
                 <language ident="scx">Sikel</language>
                 <language ident="sxc">Sikan</language>
             </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
@@ -164,6 +177,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-10-12" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -187,8 +201,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#EK">
                 <ab>
-                    <lb n="1"/>
-                    <unclear>Ἀ</unclear>ρίστω<supplied reason="lost">νο</supplied>ς
+                    <lb n="1"/><persName type="attested"><name><seg part="I"><unclear>Ἀ</unclear>ρίστω</seg><supplied reason="lost">νο</supplied><seg part="F">ς</seg></name></persName>
                 </ab>
             </div>
             <div type="apparatus">

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 2992</title>
+                <title>I.Sicily inscription 002992</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="FP" ref="https://orcid.org/0000-0003-3326-3475">Francesca Prado</name>
+                    <resp>editing of EpiDoc</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -43,27 +47,24 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic002992</idno>
                 <idno type="TM">645342</idno>
-                <idno type="EDR"/>
+                <idno type="EDR">146667</idno>
                 <idno type="EDH"/>
                 <idno type="EDCS">70900398</idno>
                 <idno type="PHI"/>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002992</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387881</idno>
+                <idno type="DOI" when="2021-07-14">10.5281/zenodo.5104397</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Centuripe</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/002">Museo Archeologico
-                            Regionale di Centuripe
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/002">Museo Archeologico Regionale di Centuripe</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,21 +80,19 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--From Libertini 1949-->
+                                        <height unit="cm">20.6</height>
+                                        <width unit="cm">15.6</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -118,28 +117,29 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
                             	<geo>37.62336, 14.74049</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0300">Not specified, but would
-                                seem to be C2 AD - C3 AD</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" precision="low">Not specified, but would
+                                seem to be 2nd — 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found"/>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed">On display.</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2006.04</provenance>
-                        <acquisition>Centuripe, Museo Archeologico Regionale di Centuripe</acquisition>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">display</note>
-                        </adminInfo>
-                    </additional>
-                </msDesc>
+                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -166,16 +166,18 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2021-07-14" who="#FP">Francesca Prado edited the text, tagged named entities and added English and Italian translation</change>
+	    <change when="2021-07-14" who="#system">Updated Zenodo DOI</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -196,18 +198,28 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#FP">
+                <ab>
+                   <lb n="1"/><persName type="divine"><supplied reason="lost"><name><expan><abbr>Ι</abbr><ex>ησοῦς</ex></expan></name></supplied> <name><expan><abbr>Χ</abbr><ex>ριστός</ex></expan></name></persName>
+                    <lb n="2"/><supplied reason="lost"><w>χρηστά</w></supplied> <persName type="attested"><name>Βασι
+                    <lb n="3" break="no"/><supplied reason="lost">λὼ</supplied></name></persName> <w><supplied reason="lost">χαῖ</supplied>ρε</w> <w>ἔζη
+                    <lb n="4" break="no"/><supplied reason="lost">σες</supplied></w> <w><supplied reason="lost">ἔτ</supplied>η</w> <g ref="#interpunct">·</g> <num value="25">κ<g ref="#interpunct">·</g>ε</num> <g ref="#interpunct">·</g> <w>καὶ</w>
+                    <lb n="5"/><supplied reason="lost"><w>ἔνθα</w></supplied> <w><supplied reason="lost">κ</supplied>ατοικεῖς</w>
+                    <lb n="7"/><supplied reason="lost"><w>εἰς</w></supplied> <w><supplied reason="lost">τ</supplied>οὺς</w> <w>αἰῶ
+                    <lb n="7" break="no"/><supplied reason="lost">νε</supplied>ς</w> <g ref="#ivy-leaf">❦</g>
+               </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text after Libertini 1949</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#FP">
+                <p>Farewell worthy Basilo! You lived for 25 years and you'll live here forever.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#FP">
+                <p>Addio, degna Basilo! Vivesti 25 anni e qui abiti nei secoli.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--left side is missing. Has christian I X header, followed by - - -Basi- - -, all that survives of the name and then the usual age, etc. Libertini cites a couple of parallels. Autopsy.--></p>
+                <p><!--commented out pending revision--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

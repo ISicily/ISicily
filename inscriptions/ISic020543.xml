@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ISic020543</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>Project direction, template development and general editor</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>original data collection and editing, encoding text in Epidoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic020543</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic020543</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Gela</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/10">Museo Archeologico Regionale di Gela</repository> <!-- check this information -->
+                        <idno type="inventory"></idno>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="scx">Sikel<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Greek</desc></certainty></textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Neck of amphora.</p>
+                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <objectType ana="#object.vessel.amphora" ref="http://kerameikos.org/id/amphora">amphora</objectType>
+                                    <dimensions>
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
+                                    <p>The text is placed on the neck of the amphora.</p>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <!-- Based on Glyph table: -->
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462214">Gela</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2524653/">Gela</placeName>
+                                <geo>37.0630925, 14.2584705</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" evidence="lettering" notBefore-custom="-0700" notAfter-custom="-0600">700—600 BCE (so Arena on letters)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found in a grave in Gela<geo>37.0630925, 14.2584705</geo>.</provenance><!-- generic coordinates for Gela -->
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition>Gela, Museo Archeologico Regionale di Gela</acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following EpiDoc guidelines 9.2</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>             
+            <xi:include href="../alists/charDecl.xml">                 
+                <xi:fallback>                     
+                    <p>ISicily glyphs authority list</p>                 
+                </xi:fallback>             
+            </xi:include>         
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/109.html">ownership</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2021-04-27" who="#VM">Valentina Mignosa added metadata, text</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/> 
+        <!--delete empty surface above and uncomment template below if needed-->
+        <!--
+  <surface type="front">
+    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
+      height="4912px" width="7360px">
+      <desc>Add Description Here</desc>
+    </graphic>
+    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
+      <desc>Add Description Here</desc>
+    </graphic>
+  </surface>
+
+    -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="scx-Grek" resp="#VM">
+                <ab>
+                    <lb n="1" style="text-direction:r-to-l"/><persName type="attested"><name>ϙλο̄πετίον<supplied reason="omitted">ο</supplied>ς</name></persName>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text after Arena (IGASM 2)</note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p></p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#VM">
+                <p></p>
+            </div>
+            <div type="commentary" xml:lang="en" resp="#VM">
+                <p></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IGASM2[2]">
+                        <author>Arena</author>
+                        <date>2002</date>
+                        <citedRange>73a</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/65P7AM6N"/>
+                    </bibl>
+                    <bibl>
+                        <author>Zamboni</author>
+                        <date>1978</date>
+                        <citedRange>957, n.23</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/5X372BQX"/>
+                    </bibl>
+                    <bibl type="corpus" n="LSAG">
+                        <author>Jeffery</author>
+                        <date>1961</date>
+                        <citedRange>70, pl. 2.10a</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/V6CGSWPS"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>16.0543</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl></bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

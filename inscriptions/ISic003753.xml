@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3753</title>
+                <title>I.Sicily inscription 003753</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -65,7 +69,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository>Castello</repository>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -79,28 +83,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>The cippus is carefully squared and with well-polished surfaces. Chipped at the left corner of the front face, at the upper corners and along the lower edge of the back face. The right side face has an irregular surface (intentionally chipped?) with remains of mortar</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (probably coming from colata di Fuardo)</material>
+                                    <objectType ana="#object.cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85">cippus</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">30</height>
+                                        <width unit="cm">43</width>
+                                        <depth unit="cm">31</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">35-37</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -117,20 +122,25 @@
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found" subtype="discovered">The stone comes from the Castello, but the exact place, date and circumstances of discovery are not known. Kept inside the bell tower of the Cathedral, currently located in the cloister</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -151,6 +161,11 @@
                 <language ident="scx">Sikel</language>
                 <language ident="sxc">Sikan</language>
             </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
@@ -161,6 +176,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-21" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-23" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>

@@ -63,7 +63,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Adrano</settlement>
-                        <repository>in situ</repository>
+                        <repository/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,8 +79,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>The inscription is engraved on the vertical face of the natural rock, part of a low cliff immediately above a natural spring, on  a terrace above the river Simeto. The text is preserved complete. The height of the inscribed area is 0.29-0.34m; the width of the inscribed area 1.25m.</p>
-                                    <material ana="#material.rock" ref="http://www.eagle-network.eu/voc/material/lod/1.html">natural rock</material>
-                                    <objectType ana="#object.rock" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">rock face</objectType>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.rock-face" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">rock face</objectType>
                                     <dimensions>
                                         <height unit="cm">29-34</height>
                                         <width unit="cm">125</width>
@@ -91,8 +91,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The text maintains a clear left margin, laid out over three lines. The extended spacing in lines 1 and 2 has sometimes suggested to editors that the text divides into columns; however this is probably to compensate for the fact that lines 2 and 3 are shortened by the insertion of a large engraved palm leaf (20 cm high) on the right margin.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -113,31 +112,33 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462074">Adranon</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462074" corresp="#findspot">Adranon</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525769">Adrano</placeName>
                             	<geo>37.66358, 14.83283</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0350">C3 AD or early C4 AD (Manganaro)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0350" precision="low">3rd century CE or early 4th century CE (Manganaro)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">In situ on the natural rock at Fonte delle Favare, contrada Polichello, 3.5 km NW of the centre of Adrano<geo>37.680917, 14.801028</geo></provenance>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">In situ on the natural rock at Fonte delle Favare, contrada Polichello, 3.5 km NW of the centre of Adrano<geo>37.680917, 14.801028</geo></provenance>
+                        <provenance type="observed" corresp="#findspot">On private property, but generally accessible; one must climb into the spring, however, to read it.</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2015.07.03</provenance>
-                        <acquisition>Adrano, in situ</acquisition>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">On private property, but generally accessible; one must climb into the spring, however, to read it.</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>

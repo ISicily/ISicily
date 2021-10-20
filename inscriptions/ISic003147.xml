@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3147</title>
+                <title>I.Sicily inscription 003147</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -62,7 +62,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
-                        <repository role="museum">in situ</repository>
+                        <repository role="museum"/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -90,8 +90,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -112,32 +111,33 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410" corresp="#findspot">Panhormus</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                             	<geo>38.13205, 13.33561</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0500" notAfter-custom="0700">Byanztine (?) C6 AD - C7
-                                AD</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0501" notAfter-custom="0700" precision="low">Byanztine (?) 6th — 7th century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">M. Pellegrino</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Palermo, in situ</acquisition>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">M. Pellegrino</provenance>
+                        <provenance type="observed" corresp="#findspot">in situ</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">Monte Pellegrino, cave</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>

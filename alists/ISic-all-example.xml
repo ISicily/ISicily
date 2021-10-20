@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Template file for EpiDoc viewer</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	<respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>Creation of file and editing of EpiDoc rules</resp>
+                </respStmt>
+                <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>editing of EpiDoc rules</resp>
+ 	   </respStmt>
+	   </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic-all-example</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country></country>
+                        <region></region>
+                        <settlement></settlement>
+                        <repository></repository>
+                        <idno type="inventory"></idno>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="en">English</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p></p>
+                                    <material></material>
+                                    <objectType></objectType>
+                                    <dimensions>
+                                        <height/>
+                                        <width/>
+                                        <depth/>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p></p>
+                                    <rs></rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p></p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                              </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient"></placeName>
+                                <placeName type="modern"></placeName>
+                                <geo></geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian"></origDate>
+                        </origin>
+                        <provenance type="found"/>
+                        <provenance type="observed" subtype="autopsied"></provenance>
+                        <acquisition></acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term></term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="edited">
+            <listChange>
+                    <change when="2021-05-05" who="#JP">Jonathan Prag cleaned up the file for documentation purposes</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+     </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" resp="#JP">
+                <div type="textpart" subtype="section" xml:lang="la" n="1"><!-- Print value of @subtype followed by value of @n as sub-heading, e.g.: 'section A' (other values are possible, e.g. fragment, face, etc.)-->
+                    <ab><!-- this div for content mark-up / named entities, etc. -->
+                    <lb n="1"/>Dis Manibus sacrum
+                    <lb n="2"/><persName><name>Lurius</name> <name>Zosimus</name></persName><!-- no additional display action required -->
+                        <!-- persName will have @ref to external list of all persons; each name will have @ref to external list of all names (understood as names, not as individuals) -->
+                     <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><name><seg part="F">ius</seg></name> <!-- [- - ? - -]ius --> <!-- no additional action required -->
+                        <!-- for incomplete/fragmentary words that are clearly identifiable as parts of names, to enable indexing, etc. Possible values are: I (initial), M (middle), F (final), Y (fragmented, unknown part) --> 
+                    <lb n="4"/>vixit annis <num value="7">VII</num> <!-- VII --><!-- pop-up with Arabic value of numerals, i.e. '7' -->
+                    <lb n="5"/><num atLeast="51" atMost="55">L<gap reason="lost" quantity="1" unit="character"/></num> <!-- L[.] --> <!-- pop-up with Arabic values as range, i.e. '51-55'  -->
+                    <lb n="6"/><choice><orig>Caesare</orig><reg>Caesari</reg></choice> <!-- display the text in "orig"; output text in "reg" in pop-up as: 'Regularised: Caesari' -->
+                    <lb n="7"/><choice><sic>Caesare</sic><corr>Caesari</corr></choice> <!-- display the text in "sic"; output text in "corr" in pop-up as: 'Corrected: Caesari' -->
+                     <lb n="8"/><handShift new="#h2"/>Ὡριγένης <!--display at this point in the text: '((hand 2))', with the number taken from the "#h" value -->
+                        <!-- note that @new in such cases refers to a handNote with @xml:id declared in the header -->
+                     <lb n="9"/>patronus <foreign xml:lang="la-Grek">πατρων</foreign> <!-- no transformation required --> 
+                        <!-- short sections of text which switch language and/or script flagged thus; larger blocks will be separated into seg, ab, or div type=textpart with @xml:lang -->
+                </ab>
+                </div>
+                <div type="textpart" subtype="section" xml:lang="grc" n="2A"><!-- Print value of @subtype followed by value of @n as sub-heading, e.g.: 'section B' -->
+                    <ab><!-- text-layout and text-structure markers-->
+                    <lb n="1"/>Εὐμοίρει Θεοκτίστην Οὐλπία δέξε τεκοῦσα Θεοκτίστην <!-- 1.   Εὐμοίρει ... --> <!-- print line-number, value from @n, before each line, left justified, at a fixed distance-->
+                    <lb n="2"/>Εὐμοίρει Θεοκτίστην Οὐλ<!--  Οὐλ-  --><!-- @break="no" on next <lb/> requires hyphen immediately after final character of this line, no space -->
+                    <lb n="3" break="no"/>πία δέξε τεκοῦσα Θεοκτίστην  <!-- print line-number, start new line, etc. exactly as normal, no change to this line-->
+                     <lb n="4"/>Εὐμοίρει Θεοκτίστην <milestone unit="section" n="1"/>Οὐλπία δέξε  <!-- for milestones output a pipe | with a superscript number taken from the @n -->
+                     <cb n="1"/><!-- output 'Col. 1' on new line of its own, taking the number from the @n -->
+                    <lb n="5"/>στραταγοὶ διὰ πέντε ἐτέων·
+                    <lb n="6"/>ἐπὶ Ἱστιείου
+                    <lb n="7"/>Νυμφόδωρος Σιμίσκου
+                    <cb n="2"/><lb n="8"/>Εὐπόλεμος Εὐάνδρου  <!-- second column starts here; output 'Col. 2' on new line of its own. NB <cb/> can be mid-text, so is independent of / comparable to line numbering-->
+                    <lb n="9"/>Ἡράκλητος Ἀγωνίππου
+                    <lb n="10" style="text-direction:r-to-l"/>Φαίδιμος ἐποίε <!-- 10. ←  Φαίδιμος ἐποίε  --> <!-- to indicate right-to-left direction of text, output ← between the line number and the text-->
+                    <lb n="11" style="text-direction:l-to-r"/>Φαίδιμος ἐποίε <!-- → -->
+                    <lb n="12" style="text-direction:spiral-clockwise"/>Φαίδιμος ἐποίε<!-- ↻ -->
+                    <lb n="13" style="text-direction:circular-clockwise"/>Φαίδιμος ἐποίε<!-- ↻ -->
+                    <lb n="14" style="text-direction:spiral-anticlockwise"/>Φαίδιμος ἐποίε<!-- ↺ -->
+                    <lb n="15" style="text-direction:circular-anticlockwise"/>Φαίδιμος ἐποίε<!-- ↺ -->
+                    <lb n="16" style="text-direction:upwards"/>Φαίδιμος ἐποίε <!-- ↑ -->
+                    <lb n="17" style="text-direction:downwards"/>Φαίδιμος ἐποίε <!-- ↓ -->
+                    </ab>
+                </div>
+                <div type="textpart" subtype="section" xml:lang="la" n="2B">
+                     <ab><!-- visibility or otherwise of text on the inscribed object -->
+                    <lb n="1"/><orig>ΑΒΓ</orig> <!-- ΑΒΓ --><!-- no action, leave content of orig in uppercase -->
+                     <lb n="2"/>D<unclear>io</unclear>cletiano Pio  <!-- all characters in unclear output with an underdot &#x0323; but when xml:lang=xpu-Latn then output with &#x30A; instead (=combining ring above); see the transliteration text division below --> 
+                    <lb n="3"/><gap reason="illegible" quantity="3" unit="character"/> <!-- . . . --> <!-- NB no square brackets, output as dots with space between each, where @quantity = number of dots; used for up to 4 characters-->
+                    <lb n="4"/><gap reason="illegible" quantity="5" unit="character"/> <!-- . . 5 . .  --> <!-- NB no square brackets, used for quantity of 5 or more, alter numeral from @quantity, number of dots unchanged -->
+                    <lb n="5"/><gap reason="illegible" extent="unknown" unit="character"/> <!-- . . ? . . --><!-- NB no square brackets, output with space between each dot -->
+                    <lb n="6"/><gap reason="illegible" quantity="7" unit="character" precision="low"/> <!-- . . ca. 7 . . -->  <!-- NB no square brackets, output with space between each dot, alter numeral from @quantity -->
+                    <lb n="7"/><gap reason="illegible" atLeast="4" atMost="6" unit="character"/> <!-- . . 4-6 . .  -->   <!-- NB no square brackets, output with space between each dot, alter numerals from @atLeast / @atMost -->
+                     <lb n="8"/><gap reason="illegible" atLeast="3" atMost="5" unit="line"/>  <!-- (Traces of 3-5 lines) --> <!-- alter numerals from @atLeast / @atMost or @quantity -->
+                     <lb n="9"/><gap reason="illegible" extent="unknown" unit="line"/>  <!-- (Traces of lines) --> 
+                     <lb n="10"/><gap reason="lost" quantity="2" unit="character"/> <!-- [. .]  --> <!-- NB for quantities of 4 or less, simply print the appropriate number of dots per @quantity -->
+                     <lb n="11"/><gap reason="lost" quantity="5" unit="character"/><!-- [. . 5 . .] --> <!-- used for quantity of 5 or more, alter numeral from @quantity, number of dots unchanged-->
+                     <lb n="12"/><gap reason="lost" quantity="5" unit="cm"/><!-- [- - 5cm - -]   --> <!-- note possible alternative @unit of "cm"-->
+                     <lb n="13"/><gap reason="lost" extent="unknown" unit="character"/>   <!--  [- - ? - -]  --> <!-- dashes are used wherever the precise quantity of lost is uncertain; fixed as here where extent is unknown -->
+                     <lb n="14"/><gap reason="lost" quantity="12" unit="character" precision="low"/> <!-- [- - ca. 12 - -]  --> <!-- dashes remain unchanged, alter numeral per @quantity -->
+                     <lb n="15"/><gap reason="lost" atLeast="1" atMost="3" unit="character"/> <!-- [ - 1-3 - ]  --> <!-- dashes remain unchanged, alter numeral per @atLeast / @atMost -->
+                      <lb n="16"/><gap reason="lost" extent="unknown" unit="line"/> <!--  - - - - - -  -->
+                     <lb n="17"/><gap reason="lost" quantity="1" unit="line"/> <!--  [- - - - - -]  --> <!-- larger numbers possible on @quantity, but would still be displayed thus, and once only -->
+                     <lb n="18"/><gap reason="omitted" extent="unknown" unit="character"/> <!-- <- - ? - -> --> <!-- @unit of line also theoretically possible, but no change in display -->
+                      <lb n="19"/><space quantity="1" unit="character"/> <!-- (vac.) --> <!-- if quantity more than 1, output e.g. '(vac. 3)' with value of @quantity -->
+                     <lb n="20"/><space unit="character" extent="unknown"/> <!-- (vacat) -->
+                     <lb n="21"/><space unit="character" extent="unknown" cert="low"/> <!-- (vac.?) --> <!-- a specific quantity could be placed on this also, theoretically -->
+                     <lb n="22"/><space extent="3" unit="line"/> <!-- '(vacat)' --> <!-- if space is measured in lines, output '(vacat)' on new line -->
+                     <lb n="23"/><del rend="erasure">lio</del> <!-- ⟦lio⟧ --> <!-- text visible but erased in antiquity -->
+                      <lb n="24"/><del rend="erasure"><supplied reason="lost">Ale</supplied>xan<unclear>d</unclear>ro <gap reason="lost" quantity="3" unit="character"/></del> <!-- ⟦[Ale]xandro [. . .]⟧ - and underdot on the d--> <!-- i.e. all of the above - orig, supplied, gap, unclear (and potentially space, etc.) - can occur within del, and so as in those cases but within  ⟦ ⟧ -->    
+                      <lb n="25"/>ἔτ<subst><del rend="corrected">η</del><add place="overstrike">ῶν</add></subst>  <!-- ἔτ«ῶν» --> <!-- i.e. output the text from <add> between « » ; additionally, output text from <del rend="corrected"> in a pop-up: 'deleted: η' -->   
+                      <lb n="26"/>ἔτ<add place="overstrike">ῶ</add>ν <!-- ἔτ«ῶ»ν --> <!-- similar to previous, but for a case where whatever was underneath is unrecoverable (so no pop-up) -->  
+                     </ab>
+                </div>
+                <div type="textpart" subtype="section" xml:lang="la" n="2C">
+                     <ab> <!-- editorial restorations -->
+                     <lb n="1"/><supplied reason="lost">In</supplied>comparabilis <!-- [In]comparabilis -->
+                     <lb n="2"/><supplied reason="lost" cert="low">ὁμο</supplied>λογῶ  <!-- [ὁμο(?)]λογῶ -->
+                     <lb n="3"/><w><supplied reason="lost">diui</supplied></w> <name><supplied reason="lost">Tra</supplied>iani</name>  <!-- [diui Tra]iani --> <!-- supplied across two words or equivalent-->
+                     <lb n="4"/><supplied reason="lost"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></supplied> <num><supplied reason="lost">I</supplied>V</num> <!-- [co(n)s(uli) I]V --> <!-- supplied across multiple elements with abbreviation -->
+                     <lb n="5"/>dis m<supplied reason="lost">an <!--  dis m[an-  -->
+                     <lb n="6" break="no"/>ibu</supplied>s sacrum <!-- ibu]s sacrum --> <!-- supplied can cross a linebreak for a specific/individual word (we encode at word level for supplied); specifically in these cases, the square bracket will remain unclosed at line-end and  not be needed at the following line-beginning, in contrast to gap in the next two lines -->
+                     <lb n="7"/>dis m<gap reason="lost" unit="character" quantity="2"/><!-- dis m[..] --> <!-- NB notwithstanding that gap follows at the start of the next line, do not elide the square brackets: i.e. stop any eliding of brackets when you meet an lb or cb -->
+                     <lb n="8"/><gap reason="lost" unit="character" quantity="3"></gap>s sacrum <!-- [...]s sacrum -->
+                     <lb n="9"/><supplied reason="undefined" evidence="previouseditor">ὑπ</supplied>ὲρ  <!-- underline the content of the supplied when @evidence is 'previouseditor'; reason can also be "lost", but action is the same and no [ ] are used -->
+                     <lb n="10"/>Ἰουλιανὴ<surplus>ν</surplus> <!-- Ἰουλιανὴ{ν} -->   
+                     <lb n="11"/>Valent<supplied reason="omitted">in</supplied>iani <!-- Valent<in>iani -->
+                     <lb n="12"/><gap reason="lost" quantity="4" unit="character"><desc>personal name</desc></gap>  <!-- [. . . . (personal name)]  --> <!-- used for addition of an editorial comment within a gap -->
+                       <lb n="13"/><note>editor's note here</note>  <!-- (editor's note here) --> <!-- used for general editorial comments in the text -->
+                        <!-- extended or complex gap/supplied etc. examples -->
+                      <lb n="101"/>dis <supplied reason="lost">manibus</supplied> <gap reason="lost" unit="character" quantity="5"/> <!-- dis [manibus .. 5 ..] --> <!-- i.e. supplied followed by gap will both be within single elided set of [ ] -->
+                     </ab>
+                </div>
+                <div type="textpart" subtype="section" xml:lang="la" n="2D">
+                     <ab><!-- abbreviations,  symbols, text features -->
+                     <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>M</abbr><ex>anibus</ex></expan> <!-- D(is) M(anibus)-->
+                     <lb n="2"/><expan><abbr>Iul</abbr><ex cert="low">ius</ex></expan> <!-- Iul(ius?) -->
+                     <lb n="3"/><w part="I"><expan><abbr>imp</abbr><ex>erator</ex></expan></w> <!-- Imp(erator-) --> <!-- i.e. cases where final termination is unknown, but most of the abbreviation can be expanded; the rule could be formulated as: for any expanded abbreviation where the word part="I" (i.e. 'initial'), add a hyphen after the final supplied letter of the word, inside the concluding parenthesis -->
+                     <lb n="4"/><expan><abbr>Aug<am>g</am></abbr><ex>usti duo</ex></expan> <!-- Aug(usti duo) -->
+                     <lb n="5"/><abbr>στρατηγ</abbr>  <!-- στρατηγ(- - -) --> <!-- i.e. the completion of the abbreviated word is unknown -->
+                     <lb n="6"/><expan><abbr><am><g ref="#sestertius">&#x10198;</g></am></abbr><ex>sestertius</ex></expan> <!-- ((sestertius)) --> 
+                     <lb n="7"/><expan><abbr><am><g ref="#christogram">☧</g></am></abbr><ex>Christo</ex><abbr>s</abbr></expan> <!-- (Christo)s--> 
+                     <lb n="8"/>clarissima <supplied reason="subaudible">femina</supplied> Iulia  <!-- clarissima (scil. femina) Iulia --> <!-- i.e. place the text in supplied within brackets, preceded by 'scil.') -->
+                      <lb n="9"/><g ref="#interpunct">·</g> suo <g ref="#interpunct">·</g>  filio <!-- · suo · filio --> <!-- display the dot or other unicode element whenever present; the reference is to charDecl.xml [separate file, here included via xi:include in the Encoding Desc], which includes a fall-back for rendering without unicode if necessary; the g element will be an empty one with ref where no unicode exists: ((interpunct)) suo ((interpunct)) filio -->
+                      <lb n="10"/><hi rend="apex">a</hi> <!-- á --> <!-- i.e. the letter is rendered with an acute accent (&#769;) for display purposes only -->
+                      <lb n="11"/><hi rend="intraline">abc</hi> <!-- abc with a single line of strikethrough (not reproduceable iin the xml) -->
+                      <lb n="12"/><hi rend="supraline">θε</hi> <!--  θε with a line above (not reproduceable in the xml) -->
+                      <lb n="13"/><hi rend="underline">abc</hi> <!-- abc underlined (not reproduceable in the xml) -->
+                     <lb n="14"/>ab<hi rend="superscript">c</hi> <!-- normal superscript rendering; same logic for subscript (not reproduceable in the xml) --> 
+                     <lb n="15"/>Εὐα<hi rend="reversed">ν</hi>τήτῳ <!-- Εὐα((ν))τήτῳ -->  
+                     <lb n="16"/>Claud<hi rend="tall">i</hi>us <!-- Claudius --> <!-- no action: Krummery-Panciera suggest addition of grave (&#768;) on to letter 'i' in Latin texts; we conclude that it is better to take no action at this point, and use this mark-up only for indexing -->
+                     <lb n="17"/><hi rend="ligature">Th</hi>eodoulos <!-- T̂heodoulos --> <!-- for each letter within the hi rend=ligature apply a circumflex (&#770;), except the final letter  (note: this reflects the revised Krummery-Panciera guidelines for Leiden style) -->
+                      <lb n="18"/>Cla<hi rend=" small">u</hi>dius <!-- no action required (although this could lead to a note in the apparatus) -->
+                      <lb n="19"/>Cla<hi rend="stacked">u</hi>dius <!-- no action required (although this could lead to a note in the apparatus) -->
+                      <lb n="20"/>ἑ<add place="above">κ</add>κέδεκα <!-- ἑ`κ´κέδεκα --> <!-- output `  ´ (&#96; and &#180;) around the added character(s) --> <!-- other values on @place are possible, but the output is always the same--> 
+                     </ab>
+               </div>
+                  <div type="textpart" subtype="section" xml:lang="grc" n="3A">
+                    <ab><!-- DIPLOMATIC RULES-->
+                        <!-- Basic rule: All letters become upper case (note that in Latin upper case 'u' is 'V'), and all diacritics are removed (including subscript iota); all white space between words is also removed -->
+                        <!-- DIPLOMATIC: text-layout and text-structure markers -->
+                    <lb n="1"/>Εὐμοίρει <!-- ΕΥΜΟΙΡΕΙ --> <!-- print line-number, value from @n, before each line, left justified, at a fixed distance--><!-- no change -->
+                    <lb n="2"/>Εὐμοίρει Οὐλ<!-- ΕΥΜΟΡΕΙΟΥΛ --><!-- @break="no" on next <lb/> is simply ignored, and normal line-break rules applied -->
+                    <lb n="3" break="no"/>πία δέξε   <!-- ΠΙΑΔΕΞΕ --> <!-- print line-number, start new line, etc. exactly as normal, no change -->
+                     <lb n="4"/>Εὐμοίρει Θεοκτίστην <milestone unit="section" n="1"/>Οὐλπία δέξε τεκοῦσα Θεοκτίστην  <!-- for milestones output a pipe | with a superscript number taken from the @n --> <!-- no change -->
+                     <cb n="1"/><!-- output 'Col. 1' on new line of its own, taking the number from the @n --> <!-- no change -->
+                    <lb n="5"/>στραταγοὶ διὰ πέντε ἐτέων·
+                    <lb n="6"/>ἐπὶ Ἱστιείου
+                    <lb n="7"/>Νυμφόδωρος Σιμίσκου
+                    <cb n="2"/><lb n="8"/>Εὐπόλεμος Εὐάνδρου  <!-- second column starts here; output 'Col. 2' on new line of its own. NB it can be mid-text, so is independent of / comparable to line numbering--><!-- no change -->
+                    <lb n="9"/>Ἡράκλητος Ἀγωνίππου
+                    <lb n="10" style="text-direction:r-to-l"/>Φαίδιμος ἐποίε <!-- 2. ←  ΦΑΙΔΙΜΟΣΕΠΟΙΕ --> <!-- to indicate right-to-left direction of text, output ← between the line number and the text --> <!-- no change -->
+                    <lb n="11" style="text-direction:l-to-r"/>Φαίδιμος ἐποίε <!-- → -->
+                    <lb n="12" style="text-direction:spiral-clockwise"/>Φαίδιμος ἐποίε<!-- ↻ -->
+                    <lb n="13" style="text-direction:circular-clockwise"/>Φαίδιμος ἐποίε<!-- ↻ -->
+                    <lb n="14" style="text-direction:spiral-anticlockwise"/>Φαίδιμος ἐποίε<!-- ↺ -->
+                    <lb n="15" style="text-direction:circular-anticlockwise"/>Φαίδιμος ἐποίε<!-- ↺ -->
+                    <lb n="16" style="text-direction:upwards"/>Φαίδιμος ἐποίε <!-- ↑ -->
+                    <lb n="17" style="text-direction:downwards"/>Φαίδιμος ἐποίε <!-- ↓ -->
+                        </ab>
+                      </div>
+                <div type="textpart" subtype="section" xml:lang="grc" n="3B">
+                    <ab><!-- DIPLOMATIC: visibility or otherwise of text -->
+                    <lb n="1"/><orig>ΑΒΓ</orig>  <!-- leave content of orig in uppercase --> <!-- no change / can be ignored in diplomatic -->
+                     <lb n="2"/>D<unclear>io</unclear>cletiano Pio  <!-- all characters in unclear output with an underdot &#x0323; but when xml:lang=xpu-Latn then output with &#x30A; instead (=combining ring above)--> <!-- no change -->
+                    <lb n="3"/><gap reason="illegible" quantity="3" unit="character"/> <!-- . . . --> <!-- NB no square brackets, output as dots with space between each, where @quantity = number of dots; used for up to 4 characters--><!-- no change -->
+                    <lb n="4"/><gap reason="illegible" quantity="5" unit="character"/> <!-- . . 5 . .  --> <!-- NB no square brackets, used for quantity of 5 or more, alter numeral from @quantity, number of dots unchanged --><!-- no change -->
+                    <lb n="5"/><gap reason="illegible" extent="unknown" unit="character"/> <!-- . . ? . . --><!-- NB no square brackets, output with space between each dot --><!-- no change -->
+                    <lb n="6"/><gap reason="illegible" quantity="7" unit="character" precision="low"/> <!-- . . ca. 7 . . -->  <!-- NB no square brackets, output with space between each dot, alter numeral from @quantity --><!-- no change -->
+                    <lb n="7"/><gap reason="illegible" atLeast="4" atMost="6" unit="character"/> <!-- . . 4-6 . .  -->   <!-- NB no square brackets, output with space between each dot, alter numerals from @atLeast / @atMost --><!-- no change -->
+                     <lb n="8"/><gap reason="illegible" atLeast="3" atMost="5" unit="line"/>  <!-- (Traces of 3-5 lines) --> <!-- alter numerals from @atLeast / @atMost or @quantity --><!-- no change -->
+                     <lb n="9"/><gap reason="illegible" extent="unknown" unit="line"/>  <!-- (Traces of lines) --> <!-- no change -->
+                     <lb n="10"/><gap reason="lost" quantity="2" unit="character"/> <!-- [. .]  --> <!-- NB for quantities of 4 or less, simply print the appropriate number of dots per @quantity --><!-- no change -->
+                     <lb n="11"/><gap reason="lost" quantity="5" unit="character"/><!-- [. . 5 . .] --> <!-- used for quantity of 5 or more, alter numeral from @quantity, number of dots unchanged--><!-- no change -->
+                     <lb n="12"/><gap reason="lost" quantity="5" unit="cm"/><!-- [- - 5cm - -]   --> <!-- note possible alternative @unit of "cm"--><!-- no change -->
+                     <lb n="13"/><gap reason="lost" extent="unknown" unit="character"/>   <!--  [- - ? - -]  --> <!-- dashes are used wherever the precise quantity of lost is uncertain; fixed as here where extent is unknown --><!-- no change -->
+                     <lb n="14"/><gap reason="lost" quantity="12" unit="character" precision="low"/> <!-- [- - ca. 12 - -]  --> <!-- dashes remain unchanged, alter numeral per @quantity --><!-- no change -->
+                     <lb n="15"/><gap reason="lost" atLeast="1" atMost="3" unit="character"/> <!-- [ - 1-3 - ]  --> <!-- dashes remain unchanged, alter numeral per @atLeast / @atMost --><!-- no change -->
+                      <lb n="16"/><gap reason="lost" extent="unknown" unit="line"/> <!--  - - - - - -  --><!-- no change -->
+                     <lb n="17"/><gap reason="lost" quantity="1" unit="line"/> <!--  [- - - - - -]  --> <!-- larger numbers possible on @quantity, but would still be displayed thus, and once only --><!-- no change -->
+                     <lb n="18"/><gap reason="omitted" extent="unknown" unit="character"/> <!-- <- - ? - -> --> <!-- @unit of line also theoretically possible, but no change in display --><!-- no change -->
+                      <lb n="19"/><space quantity="1" unit="character"/> <!-- (vac.) --> <!-- if quantity more than 1, output e.g. '(vac. 3)' with value of @quantity --><!-- no change -->
+                     <lb n="20"/><space unit="character" extent="unknown"/> <!-- (vacat) --><!-- no change -->
+                     <lb n="21"/><space unit="character" extent="unknown" cert="low"/> <!-- (vac.?) --> <!-- a specific quantity could be placed on this also, theoretically --><!-- no change -->
+                     <lb n="22"/><space extent="3" unit="line"/> <!-- if space is measured in lines, output '(vacat)' on new line --><!-- no change -->
+                     <lb n="23"/><del rend="erasure">lio</del> <!-- ⟦LIO⟧ --> <!-- text visible but erased in antiquity --><!-- no change other than capitalisation -->
+                      <lb n="24"/><del rend="erasure"><supplied reason="lost">Ale</supplied>xan<unclear>d</unclear>ro <gap reason="lost" quantity="3" unit="character"/></del> <!-- ⟦[. . .]XANDRO[. . .]⟧ - and underdot on the d--> <!-- in other words, all of the above, orig, supplied, gap, unclear (and potentially space, etc.) can all occur within del, and so as in those cases but within  ⟦ ⟧ -->    <!-- NB see rules below on supplied in diplomatic -->
+                      <lb n="25"/>ἔτ<subst><del rend="corrected">η</del><add place="overstrike">ῶν</add></subst>  <!-- ΕΤΩΝ  --> <!-- i.e. output the text from <add>; text from <del rend="corrected"> should go in apparatus, which for now will be done manually, not with pop-up, in contrast to intepreted --> 
+                      <lb n="26"/>ἔτ<add place="overstrike">ῶ</add>ν <!-- ΕΤΩΝ  --> <!-- i.e. output the text from within <add>, as with previous case; here whatever was underneath is unrecoverable -->
+                    </ab>
+                </div>
+                <div type="textpart" subtype="section" xml:lang="la" n="3C">
+                    <ab> <!--DIPLOMATIC: editorial restoration -->
+                     <lb n="1"/><supplied reason="lost">In</supplied>comparabilis <!-- [. .]COMPARABILIS --> <!-- for any supplied, count the number of characters in the supplied and replace with equivalent number of space-separated periods, as if a precise 'gap' -->
+                     <lb n="2"/><supplied reason="lost" cert="low">ὁμο</supplied>λογῶ  <!-- [. . .]ΛΟΓΩ --> <!-- as previous, and the certainty element is irrelevant/ignored --> 
+                     <lb n="3"/><w><supplied reason="lost">diui</supplied></w> <name><supplied reason="lost">Tra</supplied>iani</name>  <!-- [. . . . . . .]IANI --> <!-- supplied across two words or equivalent; as previous, reduce to gap equivalent with dots; NB no need to add a dot for the space between words, as that is editorial edition, so still only count the characters in each supplied element and replace with dots-->
+                     <lb n="4"/><supplied reason="lost"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></supplied> <num><supplied reason="lost">I</supplied>V</num> <!-- [. . . .]V --> <!-- cf. below for abbreviations; only abbr is printed, and anything supplied is replace as gap; so four characters were supplied as missing, and are now replaced by '.' simply -->
+                      <lb n="5"/>dis m<supplied reason="lost">an <!--  DISM[. .]  -->
+                     <lb n="6" break="no"/>ibu</supplied>s sacrum <!-- [. . . .]SSACRVM --> <!-- supplied can cross a linebreak for a specific/individual word (we encode at word level for supplied); in contrast to the interpreted version above, where the brackets remain open at line-end/-beginning, this requires that the square brackets be closed at line-end and re-opened at line-beginning, in parallel with the treatment of the supplied text as if it were a gap of known length; supplied characters replaced each by '.' -->
+                     <lb n="7"/>dis m<gap reason="lost" unit="character" quantity="2"/><!-- DISM[. .] --> <!-- no elision with following line, supplied characters replaced by '.' -->
+                     <lb n="8"/><gap reason="lost" unit="character" quantity="3"></gap>s sacrum <!-- [. . .]SSACRVM -->
+                     <lb n="9"/><supplied reason="lost" evidence="previouseditor">ὑπ</supplied>ὲρ  <!--  [. .]ΕΡ --> <!-- all supplied content replaced by '.' -->
+                     <lb n="10"/>Ἰουλιανὴ<surplus>ν</surplus> <!-- ΙΟΥΛΙΑΝΗΝ --> <!-- print content of surplus without discrimination -->   
+                     <lb n="11"/>Valent<supplied reason="omitted">in</supplied>iani <!-- VALENTIANI --> <!-- simply omit/ignore anything in supplied reason="omitted" without any indication -->
+                     <lb n="12"/><gap reason="lost" quantity="4" unit="character"><desc>personal name</desc></gap>  <!-- [. . . . ]  --> <!-- omitignore any editorial description or note -->
+                      <lb n="13"/><note>editor's note here</note>  <!-- (omit/ignore any editorial descripiton or note) -->
+                        <!-- extended gap/supplied etc. examples -->
+                      <lb n="101"/>dis <supplied reason="lost">manibus</supplied> <gap reason="lost" unit="character" quantity="5"/> <!-- DIS[. . 12 . .] --> <!-- i.e. supplied followed by gap will both be within single elided set of [ ], and in diplomatic the supplied characters are counted and added to the gap -->
+                    </ab>
+                </div>
+                <div type="textpart" subtype="section" xml:lang="la" n="3D">
+                     <ab><!--DIPLOMATIC: abbreviations,  symbols, text features -->
+                     <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>M</abbr><ex>anibus</ex></expan> <!-- DM --> <!-- print only text in abbr -->
+                     <lb n="2"/><expan><abbr>Iul</abbr><ex cert="low">ius</ex></expan> <!-- IVL --> <!-- print only text in abbr -->
+                     <lb n="3"/><w part="I"><expan><abbr>imp</abbr><ex>erator</ex></expan></w> <!-- IMP --> <!-- print only text in abbr -->
+                     <lb n="4"/><expan><abbr>Aug<am>g</am></abbr><ex>usti duo</ex></expan> <!-- AVGG --> <!-- print text in abbr, including text in 'am' -->
+                     <lb n="5"/><abbr>στρατηγ</abbr>  <!-- ΣΤΡΑΤΗΓ --> <!-- simply print text in abbr -->
+                     <lb n="6"/><expan><abbr><am><g ref="#sestertius">&#x10198;</g></am></abbr><ex>sestertius</ex></expan> <!-- ((sestertius)) --> <!-- Simply print what is in abbr, so either unicode symbol in the am / g, or the fallback text from chardecl in (( ))-->
+                     <lb n="7"/><expan><abbr><am><g ref="#christogram">☧</g></am></abbr><ex>Christo</ex><abbr>s</abbr></expan> <!-- ☧S--> <!-- simply print what is in abbr and am, i.e. the symbol in am and the text in the second abbr-->
+                     <lb n="8"/>clarissima <supplied reason="subaudible">femina</supplied> Iulia  <!-- CLARISSIMAIVLIA --> <!--  omit/ignore any supplied reason="subaudible") -->
+                      <lb n="9"/><g ref="#interpunct">·</g> suo <g ref="#interpunct">·</g>  filio <!-- ·SVO·FILIO --> <!-- display the dot or other unicode element whenever present; and keep the reference to charDecl.xml as a fall-back for rendering, as ((interpunct)); the rest as per standard rules, closing gaps and capitalising -->
+                      <lb n="10"/><hi rend="apex">a</hi> <!-- A --> <!-- i.e. ignore -->
+                      <lb n="11"/><hi rend="intraline">abc</hi> <!-- ABC --> <!-- i.e. ignore -->
+                      <lb n="12"/><hi rend="supraline">θε</hi> <!--  ΘΕ --> <!-- i.e. ignore -->
+                      <lb n="13"/><hi rend="underline">abc</hi> <!-- ABC --> <!-- i.e. ignore -->
+                     <lb n="14"/>ab<hi rend="superscript">c</hi> <!-- C --> <!-- i.e. ignore -->
+                     <lb n="15"/>Εὐα<hi rend="reversed">ν</hi>τήτῳ <!-- ΕΥΑΝΤΗΤΩ -->  
+                     <lb n="16"/>Claud<hi rend="tall">i</hi>us <!-- CLAVDIVS --> <!-- i.e. ignore -->
+                     <lb n="17"/><hi rend="ligature">Th</hi>eodoulos <!-- THEODOVLOS --> <!-- i.e. ignore -->
+                      <lb n="18"/>Cla<hi rend="small">u</hi>dius  <!--  ignore -->
+                      <lb n="19"/>Cla<hi rend="stacked">u</hi>dius <!--  ignore  -->
+                      <lb n="20"/>ἑ<add place="above">κ</add>κέδεκα <!-- ΕΚΚΕΔΕΚΑ --> <!-- i.e. simply print the added letter in sequence --> 
+                     </ab>
+               </div>
+            </div>
+            <div type="edition" subtype="transliteration" xml:space="preserve" xml:lang="xpu-Latn"><!-- when subtype = transliteration insert a sub-heading above the text "Transliteration"; this will apply for a variety of language combinations, and may sometimes exist in series with a 'normal' div type="edition" (as here), and both should be displayed in sequence if so -->
+                <ab>
+                    <lb n="1" style="text-direction:r-to-l"/>wzḥṭyklmnsʾpṣqršt
+                    <lb n="2" style="text-direction:r-to-l"/>l<unclear>z</unclear>yṣnqṭʾq<!-- lz̊yṣnqṭʾq --> <!-- when xml:lang=xpu-Latn then output 'unclear' with &#x30A;  (=combining ring above), and not the underdot employed in all other languages as above --> 
+                    <lb n="3" style="text-direction:r-to-l"/><gap reason="lost" extent="unknown" unit="character"/>bqtq<gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="Line 1">
+                        <note></note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p></p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#JP">
+                <p></p>
+            </div>
+            <div type="commentary" resp="#JP">
+                <p>This file contains the documentation for the develpoment of the EpiDoc TEI viewer used in I.Sicily and available for re-use on GitHub in the <ref target="https://github.com/ISicily/epidoc-viewer">ISicily/epidoc-viewer</ref> repository. The file is an empty copy of the I.Sicily template, with only the text-division populated with the rules for Leiden-style transformation of EpiDoc encoding. Although the rules detailed here are nominally specific to the <ref target="http://sicily.classics.ox.ac.uk/">I.Sicily project</ref>, they are based almost without exception upon the standard <ref target="https://epidoc.stoa.org/gl/latest/">EpiDoc guidelines</ref> and therefore should be readily applicable to other projects.  All the encoding employed follows the standard epidoc guidelines. The exact choices made in the transformation for display are occasionally more idiosyncratic, reflecting the multi-lingual needs of I.Sicily and the occasional limitations or ambiguities of 'Leiden' conventions. The rules are presented in the form of an encoded line of epidoc, followed by an xml comment which details the desired transformation, and often a second xml comment containing additional explanation.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl/>
+                 </listBibl>
+	   <listBibl type="discussion">
+	       <bibl/>
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

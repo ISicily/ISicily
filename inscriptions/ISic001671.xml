@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragment of a monumental Latin inscription</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>original development of EpiDoc template</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+               <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001671</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic0016710</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">255</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Fragment of a marble plaque, broken on all sides (and with a break upper right but reattached); thickest upper right, slightly thinner at the base.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">20.6</height>
+                                        <width unit="cm">28.5</width>
+                                        <depth unit="cm">5.1-5.6</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Remains of two lines of text, broken off top and bottom, neither complete in height</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage ana="#text_condition.incomplete #text_condition.legible"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Neatly carved large v-cut letters, with light serifs. The tail of the R has an extended serif along the line; N is close to square in form. Traces of red paint are visible.</p>
+                                <locus from="line1" to="line2">Line 1-2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">greater than 100</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">30-33</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150" evidence="lettering material-context" precision="low">High imperial in date, 1st or earlier 2nd century CE</origDate>
+                        </origin>
+                        <provenance type="found" notAfter="1885">Of uncertain provenance, first noted in the first volume of the museum inventory, compiled in 1885</provenance>
+                        <provenance type="observed">Magazzino B, cassetta 16</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2015-01-16" resp="#JP">Prag, 16.05.2015</provenance>
+                        <acquisition/>
+                    </history>
+                    
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.unknown" ref="https://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="edited">
+            <listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-01-25" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2021-03-03" who="#JP">Jonathan Prag edited from autopsy, revising text, adding image, bibliography, metadata</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001671_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic001671.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic001671_rear_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic001671_rear.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/><orig>R<unclear>O</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>NO</orig><gap reason="lost" extent="unknown" unit="character"/>
+                 </ab>
+            </div>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app loc="line 1"><note>Remains of a vertical at the start of the line; the final character could theoretically also be a C</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary" resp="#JP">
+                <p>Part of a clearly later text, apparently recording building restoration, is on the reverse of this fragment (see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004360">ISic004360</ref>). Although the later text on the reverse was recorded and published by Orsi in 1888/1889, this original seems to have gone unpublished, although its existence, and the traces of red paint still faintly visible, was noted in the museum inventory in 1885 (it is possible that the text was already fixed to the wall for display when Orsi saw it). The text clearly comes from a monumental public inscription, given that the letters were substantially over 10 cm in height, on a high quality piece of marble, perhaps therefore belong to the early construction phases of the Augustan colonia.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                   <bibl/>
+                </listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

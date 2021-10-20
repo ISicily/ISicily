@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1655</title>
+                <title>I.Sicily inscription 001655</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -61,13 +61,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">14439</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -83,12 +81,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
-                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">
-                                        plaque
-                                    </objectType>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -99,8 +93,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -128,24 +121,26 @@
                             <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0600" cert="low">Christian</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Catacomb of S.Giovanni</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Siracusa, Museo Archeologico Regionale Paolo Orsi no. 14439</acquisition>
+                        <provenance type="observed">Display Sector F</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">Display Sector F</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -204,15 +199,15 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="0"/><expan><abbr><am><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#chi-rho">☧</g></am></abbr><ex>Χρίστο</ex><abbr>ς</abbr></expan>
+                    <lb n="0"/><expan><abbr><am><g ref="#christogram">☧</g></am></abbr><ex>Χρίστο</ex><abbr>ς</abbr></expan>
                     <lb n="1"/>Χρισιάνης 
                     <lb n="2"/>σεμ<unclear>ν</unclear>ῆς ἀγανό
                     <lb n="3" break="no"/>φρονο<unclear>ς</unclear> <supplied reason="lost">ἠδ</supplied>ὲ φιλάν
                     <lb n="4" break="no"/>δρ<hi rend="ligature">ου Ν</hi>α<unclear>σσι</unclear>ανῆς τύμ
                     <lb n="5" break="no"/>βον εἰσορᾶς φίλε κίμενον
                     <lb n="6"/><supplied reason="lost">ὥδε</supplied> <supplied reason="lost">ἥ</supplied><unclear>τ</unclear>ις σεμνοσύνησιν
-                    <lb n="7"/><supplied reason="lost">ἐρίζε</supplied>το Πηνελοπίη <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#palmbranch">⸙</g>
-                    <lb n="7a"/><g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#chi-rho">☧</g>
+                    <lb n="7"/><supplied reason="lost">ἐρίζε</supplied>το Πηνελοπίη <g ref="#palm">⸙</g>
+                    <lb n="7a"/><g ref="#christogram">☧</g>
                     <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/> ἐνθάδε κῖτε
                     <lb n="9"/><supplied reason="lost">Νασσ</supplied>ιανὴ ζήσασα
                     <lb n="10"/><supplied reason="lost">ἐν Θεῷ</supplied> καλῶς καὶ ἀμέμ
@@ -242,11 +237,12 @@
                         <citedRange>no.102</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
                     </bibl>
-                    <bibl>
+                    <bibl type="bulletin" n="NSA">
                         <author>Orsi</author>
+                        <title>NSA</title>
                         <date>1895</date>
                         <citedRange>509 no.234</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/M7C8KM46"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
                     <bibl>
                         <author>Orsi</author>

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1502</title>
+                <title>I.Sicily inscription 001502</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -29,6 +29,10 @@
                 <respStmt>
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AL" ref="https://orcid.org/0000-0002-0000-7611">Andoni Llamazares</name>
+                    <resp>text edition</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -62,8 +66,7 @@
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"
-                        </repository>
+                            Regionale Eoliano "Luigi Bernabò Brea"</repository>
                         <idno type="inventory">12334</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,8 +85,7 @@
                                     <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">
                                         volcanic (pietra di Fuardo)
                                     </material>
-                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele
-                                    </objectType>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -94,8 +96,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -120,30 +121,29 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0200">End C2 AD</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0200" precision="low">End 2nd century CE</origDate>
                         </origin>
-                        <provenance type="found">Exact findspot not known</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Lipari, Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea" no. 12334
-                        </acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="transferred" when="1965">Transferred from Museo Archeologico Regionale Antonino Salinas (inv.8009) in 1965</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">Transferred from Museo Archeologico Regionale Antonino Salinas
-                                (inv.8009) in 1965
-                            </note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -170,7 +170,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -178,6 +178,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-07-19" who="#AL">Andoni Llamazares added text edition</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -199,23 +200,18 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI334823">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AL">
                 <ab>
-                    <lb n="1"/>
-
-
-                    
-                    <expan>
-                        <abbr>Θ</abbr>
-                        <ex>εοῖς</ex>
-                    </expan>
-                     Ἐ(πιτυμβίοις vel sim.)<lb n="2"/>Νεαρχίας Λειβέρας<lb n="3"/>ἐπόησε Νεαρχία<lb n="4"/>Γνωστὴ
-                    ἀδελφῇ.
-                    <lb n="5"/>
+                    <lb n="1"/><w><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <w><expan><abbr>Ἐ</abbr><ex cert="low">πιτυμβίοις</ex></expan></w>
+                    <lb n="2"/><persName type="attested"><name>Νεαρχίας</name> <name>Λειβέρας</name></persName>
+                    <lb n="3"/><w>ἐπόησε</w> <persName type="attested"><name>Νεαρχία</name>
+                    <lb n="4"/><name>Γνωστὴ</name></persName> <w>ἀδελφῇ</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>text according to I.Lipara</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>

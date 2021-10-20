@@ -50,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000002</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333725</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -75,33 +73,41 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque, damaged on the right side</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType/>
-                                    <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!-- from ILPalermo -->
+                                        <height unit="cm">19</height>
+                                        <width unit="cm">24.5</width>
+                                        <depth unit="cm">3.5-4</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"></condition>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILPalermo-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">20</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">15-18</height>
+                                </dimensions>
+                                <locus from="line3" to="line4">Line 3-4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">10-15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -113,22 +119,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                                 <geo>37.49223, 15.07041</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0300">C3 AD ?</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0300" evidence="lettering" precision="low">3rd century CE</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Palermo, Museo Archeologico Regionale Antonino Salinas no. 3502</acquisition>
+                        <provenance type="found" subtype="discovered" notAfter="1833">From the Convento del Carmine, reported by Alessi as one of several find in the years preceding 1833<geo cert="medium">37.509637, 15.088925</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -166,48 +177,45 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-02-16" who="#JP">Jonathan Prag revised file from publications</change>
+                <change when="2021-06-30" who="#JP">Jonathan Prag modified the text and tagged named entities and added image</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic000002_tiled.tif" height="2440px" width="3409px">
+                <desc>Photo Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+            <graphic n="print" url="ISic000002.jpg" height="2440px" width="3409px">
+                <desc>Photo Museo Archeologico Regionale Antonino Salinas</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <g type="interpunct">·</g> <expan><abbr>M</abbr><ex>anibus</ex></expan> <g type="interpunct">·</g> <expan><abbr>s</abbr><ex>acrum</ex></expan>
-                    <lb n="2"/><persName><name>Lurius</name> <g type="interpunct">·</g> <name>Zosimus</name></persName>
-                    <lb n="3"/><expan><abbr>vix</abbr><ex>it</ex></expan> <g type="interpunct">·</g> annis <g type="interpunct">·</g> <num value="7">VII</num>
-                    <lb n="4"/><persName><name>Luria</name> <g type="interpunct">·</g> <name><expan><abbr>Melanth</abbr><ex>e</ex></expan></name></persName> i
-                    <lb n="5" break="no"/>n <g type="interpunct">·</g> suo <g type="interpunct">·</g> filio <g type="interpunct">·</g> fecit
+                    <lb n="1"/><w><expan><abbr>D</abbr><ex>is</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>M</abbr><ex>anibus</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>s</abbr><ex>acrum</ex></expan></w>
+                    <lb n="2"/><persName type="attested"><name type="nomen">Lurius</name> <g ref="#interpunct">·</g> <name type="cognomen">Zosimus</name></persName>
+                    <lb n="3"/><w><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct">·</g> <w>annis</w> <g ref="#interpunct">·</g> <num value="7">VII</num>
+                    <lb n="4"/><persName type="attested"><name type="nomen">Luria</name> <g ref="#interpunct">·</g> <name type="cognomen"><expan><abbr>Melant<supplied reason="undefined" evidence="previouseditor">h</supplied></abbr><supplied reason="undefined" evidence="previouseditor"><ex>e</ex></supplied></expan></name></persName> <w><supplied reason="undefined" evidence="previouseditor">i</supplied> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">·</g></supplied>
+                    <lb n="5" break="no"/><g ref="#interpunct">·</g> n</w> <g ref="#interpunct">·</g> <w>suo</w> <g ref="#interpunct">·</g> <w>filio</w> <g ref="#interpunct">·</g> <w>fecit</w> <g ref="#interpunct">·</g>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app loc="Line 4-5">
-                        <note>Mommsen rejects the alternative reading of 'Melanthin(a) suo'</note>
+                    <app loc="Line 4">
+                        <note>Alessi reported the text as intact and read MELANTHI· ; the text seems to have suffered damaged to the right margin since discovery</note>
                     </app>
+                    <app loc="Line 4-5"><note>Mommsen: 'potius Melanth(e) in suo, quam Melanthin(a) suo'</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Sacred to the shades of the underworld. Luris Zosimus lived for 7 years. Luria Melanthe made it for her son.</p>
             </div>
             <div type="commentary">
-                <p><!--commentary--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -221,7 +229,18 @@
                         <citedRange>2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
                     </bibl>
-                    <bibl/>
+                    <bibl>
+                        <author>Alessi</author>
+                        <date>1833</date>
+                        <citedRange>230</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/SRZQ4DSI"/>
+                    </bibl>
+                    <bibl>
+                        <author>Alessi</author>
+                        <date>1833</date>
+                        <citedRange>174</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F986DASI"/>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

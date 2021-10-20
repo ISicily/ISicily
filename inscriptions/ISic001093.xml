@@ -5,11 +5,11 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1093</title>
+                <title>I.Sicily inscription 001093</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -30,13 +30,17 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AR" ref="https://orcid.org/0000-0001-5677-4679">Alessandra Rocchetti</name>
+                    <resp>Epidoc editing</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -50,18 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001093</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385465</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Mazara del Vallo</settlement>
-                        <repository role="museum">Cathedral</repository>
+                        <repository role="other">Cathedral</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,11 +79,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
-                                    <objectType ana="#object.sarcophagus" ref="http://www.eagle-network.eu/voc/objtyp/lod/214.html">sarcophagus
-                                    </objectType>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.sarcophagus" ref="http://www.eagle-network.eu/voc/objtyp/lod/214.html">sarcophagus</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -89,13 +88,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
-                                	<damage/>
-			</layout>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -116,25 +114,30 @@
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
-                            	<geo>37.80355, 12.4379</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0300" notAfter-custom="0350">early C4 AD</origDate>
+                                <geo>37.80355, 12.4379</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0350" precision="low">early 4th century CE</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Mazara del Vallo, Cathedral</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -160,16 +163,17 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-11" who="#AR">edited text division</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -185,36 +189,21 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR107930" xml:lang="grc">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AR #JP">
                 <ab>
-                    <lb n="1"/>
-                    Κάνθιε Μαρκιανὲ πᾶσι ποθινότατε
-                </ab>
-                <!--This EDR text 107930 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140577">
-                <ab>
-                    <lb n="1"/>
-
-
-                    Λ<supplied reason="lost">․</supplied>․ϹΟΙϹ<supplied reason="lost">— — —</supplied> Μαικιανὸ
-                    <supplied reason="lost">ς</supplied>
-                    <surplus>²⁷Μαρ̣κιανὸ[ς]</surplus>²⁷ <supplied reason="lost">— — —</supplied> πᾶσι ∙ πο
-                    <unclear>θε</unclear>
-                    <supplied reason="lost">ι</supplied>
-                    <supplied reason="omitted">ν</supplied>
-                    <supplied reason="lost">ὸς — δια</supplied>νοίαις
-                    <supplied reason="lost" cert="low">—</supplied>
-                    <lb n="2"/>
+                    <lb n="1"/><gap reason="illegible" unit="character" quantity="4"/><orig>ΣΟΙΣ</orig><gap reason="lost" unit="character" quantity="6"/> <name>Μαικιανὸ<supplied reason="lost">ς</supplied></name> <gap reason="lost" unit="character" quantity="4"/><gap reason="illegible" quantity="1" unit="character"/> <choice><orig>φᾶσι</orig><reg>πᾶσι</reg></choice>  <g ref="#interpunct">·</g> π<unclear>οθε</unclear><supplied reason="lost">ι</supplied><unclear>ν</unclear><supplied reason="lost">ός</supplied> <supplied reason="lost">δια</supplied>νοίαις <gap reason="illegible" unit="character" quantity="6"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app>
+                        <note>text of IG</note>
+                       </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -242,7 +231,7 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/MKRMHRK2"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>
     </text>

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1478</title>
+                <title>epitaph of Brachidas</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>encoding text division and checking the edition</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -43,28 +47,25 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001478</idno>
                 <idno type="TM">644988</idno>
-                <idno type="EDR"/>
+                <idno type="EDR">150843</idno>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
+                <idno type="EDCS">39102196</idno>
                 <idno type="PHI">140521</idno>
                 <idno type="PHI">175430</idno>
+                <idno type="PHI">195555</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001478</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385950</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">6823</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,22 +80,21 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.tuff" ref="http://www.eagle-network.eu/voc/material/lod/30.html">tuff
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Probably the upper part of a cippus, intact across the top, but damaged on the other three sides and rough behind.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.cippus" ref="http://www.eagle-network.eu/voc/objtyp/lod/85.html">cippus</objectType>
+                                    <dimensions>
+                                        <height unit="cm">18</height>
+                                        <width unit="cm">42.5</width>
+                                        <depth unit="cm">9.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
-                                	<damage/>
+                                <layout><p>The text fills the available/surviving width of the stone and is close to the upper margin; the text runs boustrophedon, beginning left-to-right.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -102,11 +102,11 @@
                             <handNote><!--Default value and requires editing-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">100</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -115,27 +115,30 @@
                         <origin>
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>		
-                                <offset>near
-                                    <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
-                                </offset>
-                            	<geo>37.05780, 14.89346</geo>
+                               <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                               <geo>37.05780, 14.89346</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0550" notAfter-custom="-0500">End C6 BC</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0550" notAfter-custom="-0500" precision="low" evidence="lettering">later 6th century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Necropolis of la Pinita</provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#JP">02.10.13</provenance>
-                        <acquisition>Siracusa, Museo Archeologico Regionale Paolo Orsi no. 6823</acquisition>
+                        <provenance type="found" subtype="discovered" when="1888-12-29">Found by Orsi, 29 December 1888, within a previously pillaged rock-cut sarcophagus, together with other stone fragments, in the Necropolis of la Pinita, to the south-east of the ancient city</provenance><!-- geo needed! -->
+                        <provenance type="observed" subtype="autopsied" resp="#JP" when="2013-10-02">02.10.13</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -162,79 +165,84 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+            	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+	  <change when="2021-03-02" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change> 	
+                <change when="2021-07-07" who="#JP">Jonathan Prag revised the edition, adding metadata, bibliography and images</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic001478_tiled.tif" height="4912px" width="7360px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic001478.jpg" height="4912px" width="7360px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001478_front_lowerright_tiled.tif" height="3888px" width="6414px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic001478_front_lowerright.jpg" height="3888px" width="6414px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001478_front_upperleft_tiled.tif" height="3756px" width="5526px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic001478_front_upperleft.jpg" height="3756px" width="5526px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic001478_rear_lowerright_tiled.tif" height="4002px" width="5982px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic001478_rear_lowerright.jpg" height="4002px" width="5982px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001478_rear_upperleft_tiled.tif" height="4206px" width="6288px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic001478_rear_upperleft.jpg" height="4206px" width="6288px">
+                <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140521">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-
-
-                    Βραχί-
-                    <lb n="2"/>
-                    <unclear>δα</unclear>
-                    εἰμί. <surplus>²⁷Βραχύ̣|λ̣α̣? (Jeffery, LSAG)</surplus>²⁷.
-                    <lb n="3"/>
+                    <lb n="1" style="text-direction:l-to-r"/><persName type="attested"><name>Βραχύ
+                    <lb n="2" style="text-direction:r-to-l" break="no"/><unclear>δα</unclear></name></persName> <w>εἰμί</w>
                 </ab>
             </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI175430">
-                <ab>
-                    <lb n="1"/>
-
-
-                    Βραχύ-
-                    <lb n="2"/>
-                    <unclear>λα</unclear>
-                    εἰμί.
-                    <lb n="3"/>
-                </ab>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app><note>Text after Orsi, Dubois, Guarducci, Brugnone</note></app>
+                    <app loc="line 2"><note>Pugliese Carratelli: <unclear>ΛΑ</unclear></note></app>
+                </listApp>
             </div>
-            <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
-            </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>I am (the marker) of Brachidas</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--cippus, part of; Probably reads 'I am of Brachidas'--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">
-                                14.0221a<!--Failed to convert--></ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0221a</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     </bibl>
-                    <bibl type="corpus" n="IGDS">
+                    <bibl type="corpus" n="IGDS1">
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">106</ref>
                         </citedRange>
@@ -257,12 +265,37 @@
                         <author>Jeffery</author>
                         <date>1990</date>
                         <citedRange>275 no.12</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QUWGZA84"/>
+                    </bibl>
+                    <bibl>
+                        <author>Guarducci</author>
+                        <date>1949-1951</date>
+                        <citedRange>103</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/UG26WH3A"/>
+                    </bibl>
+                    <bibl>
+                        <author>Guarducci</author>
+                        <date>1959-1960</date>
+                        <citedRange>258-259 fig. 4</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GPUF5NUH"/>
                     </bibl>
                     <bibl>
                         <author>Guarducci</author>
                         <date>1964</date>
                         <citedRange>146</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/UBAN6Q95"/>
+                    </bibl>
+                    <bibl>
+                        <author>Guarducci</author>
+                        <date>1967-1978</date>
+                        <citedRange>vol. 1, p. 347 no. 5 fig. 176</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ENQ4AGD6"/>
+                    </bibl>
+                    <bibl>
+                        <author>Brugnone</author>
+                        <date>1995</date>
+                        <citedRange>1315 tav. 298.2 (dr)</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JV5W86A5"/>
                     </bibl>
                     <bibl>
                         <author>Arena</author>

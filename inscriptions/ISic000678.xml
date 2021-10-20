@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0678</title>
+                <title>I.Sicily inscription 000678</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -30,13 +30,17 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+        	    <respStmt>
+         	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+         	       <resp>standardisation of template and tidying up encoding</resp>
+         	   </respStmt>
+        	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>EpiDoc editing</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -62,8 +66,7 @@
                         <region>Sicily</region>
                         <settlement>Tindari</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/052">Antiquarium di
-                            Tindari
-                        </repository>
+                            Tindari</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,12 +82,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
-                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">
-                                        plaque
-                                    </objectType>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -95,8 +94,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -122,22 +120,27 @@
                             	<geo>38.14227, 15.04385</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0250">Commodus or Caracalla,
-                                i.e. 176-217</origDate>
+                                i.e. 176—217</origDate>
                         </origin>
-                        <provenance type="found"/>
+                        <provenance type="found">Original discovery not recorded.</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2006.04</provenance>
-                        <acquisition>Tindari, Antiquarium di Tindari</acquisition>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -164,15 +167,16 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+		        <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+        	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-05-06" who="#AA">Epidoc editing</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,56 +198,20 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR081487" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="0"/>
-                    <gap reason="lost" extent="unknown" unit="line"/>
-                    <lb n="1"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    di
-                    <supplied reason="lost">vi
-                        <expan>
-                            <abbr>M</abbr>
-                            <ex>arci</ex>
-                        </expan>
-                        <expan>
-                            <abbr>Aur</abbr>
-                            <ex>eli</ex>
-                        </expan>
-                    </supplied>
-                    <lb n="2"/>
-                    <supplied reason="lost">Anton</supplied>ini Pii
-                    <expan>
-                        <abbr>Germ</abbr>
-                        <ex>anici</ex>
-                    </expan>
-                    <supplied reason="lost">
-                        <expan>
-                            <abbr>m</abbr>
-                            <ex>atici</ex>
-                        </expan>
-                    </supplied>
-                    <lb n="3"/>
-                    <supplied reason="lost">
-                        <expan>
-                            <abbr>fil</abbr>
-                            <ex>ii</ex>
-                        </expan>
-                        divi A
-                    </supplied>
-                    ntonini P
-                    <supplied reason="lost">ii
-                        <expan>
-                            <abbr>nep</abbr>
-                            <ex>otis</ex>
-                        </expan>
-                    </supplied>
-                    <gap reason="lost" extent="unknown" unit="character"/>.
+                    <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> di<supplied reason="lost">vi</supplied> <supplied reason="lost"><name><expan><abbr>M</abbr><ex>arci</ex></expan></name></supplied> <supplied reason="lost"><name><expan><abbr>Aur</abbr><ex>eli</ex></expan></name></supplied>
+                    <lb n="2"/><name><supplied reason="lost">Anton</supplied>ini</name> Pii <expan><abbr>Germ</abbr><ex>anici</ex></expan> <supplied reason="lost"><expan><abbr>Sarm</abbr><ex>atici</ex></expan></supplied>
+                    <lb n="3"/><supplied reason="lost" cert="low"><expan><abbr>fil</abbr><ex>ii</ex></expan></supplied> <supplied reason="lost">divi</supplied> <name><supplied reason="lost">A</supplied>ntonini</name> P<supplied reason="lost">ii</supplied> <supplied reason="lost"><expan><abbr cert="low">nep</abbr><ex>otis</ex></expan></supplied> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
                 </ab>
-                <!--This EDR text 081487 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text: Fasolo 2013</note></app>
+                    <app loc="line 2"><note>Manganaro 1989 notes fil(ii) could be nep(oti), and nep(oti) could be pronep(oti) if the dedication is Caracalla</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>

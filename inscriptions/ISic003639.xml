@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3639</title>
+                <title>I.Sicily inscription 003639</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -30,13 +30,17 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+	            <respStmt>
+     	           <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	           <resp>standardisation of template and tidying up encoding</resp>
+ 	           </respStmt>
+	            <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>EpiDoc Editing and English translation</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -61,7 +65,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Valletta, Malta</settlement>
-                        <repository role="museum">National Archaeological Museum</repository>
+                        <repository role="museum">National Museum of Archaeology</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,11 +81,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
-                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
-                                    </objectType>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -92,8 +93,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -120,20 +120,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Valletta, Malta, National Archaeological Museum</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -160,15 +165,16 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+		        <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	            <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-02-28" who="#AA">Epidoc editing and English translation</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,33 +196,22 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR113464" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="1"/>
-                    (
-                    <expan>
-                        <ex>luna crescente</ex>
-                    </expan>
-                    )
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>D</abbr>
-                        <ex>iis</ex>
-                    </expan>
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    .<lb n="3"/>Elvius Titus<lb n="4"/>vixit annos<lb n="5"/>LV, cives be<lb n="6" break="no"/>ne
-                    merenti<lb n="7"/>fecerunt.
+                    <lb n="1"/> <g type="#moon_crescent"/>
+                    <lb n="2"/> <g ref="#ivy_leaf">❦</g> <expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>M</abbr><ex>anibus</ex></expan> <g ref="#ivy-leaf">❦</g>
+                    <lb n="3"/><name>Elvius Titus</name> <g ref="#interpunct">·</g>
+                    <lb n="4"/>vixit annos <g ref="#interpunct">·</g>
+                    <lb n="5"/><num value="55">LV</num> <g ref="#interpunct">·</g> cives be
+                    <lb n="6" break="no"/>ne merenti
+                    <lb n="7"/>fecerunt <g ref="#ivy_leaf">❦</g>
                 </ab>
-                <!--This EDR text 113464 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Following CIL</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>Sacred to the shades of the underworld. Elvius Titus lived for 55 years. The citizens built this for this well deserving man.</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->

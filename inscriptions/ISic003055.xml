@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3055</title>
+                <title>I.Sicily inscription 003055</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -41,6 +41,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Addition of metadata</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -80,33 +84,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">
-                                        volcanic (pietra di Fuardo / Pulera)
-                                    </material>
-                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele
-                                    </objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>This large stone is squared and carefuly polished, with a base plinth worked separately, less regular and not very smooth. Missing the right margin and the top and bottom corners of the left side or the front</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo / Pulera)</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions><!--ILipara -->
+                                        <height unit="cm">30.5</height>
+                                        <width unit="cm">59.5</width>
+                                        <depth unit="cm">45</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">87-90</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -122,22 +122,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0300">c. 350 BC</origDate>
+                            <origDate datingMethod="#julian" when-custom="-0350" precision="medium">c. 350 BCE</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Lipari,</acquisition>
+                        <provenance type="found" subtype="discovered" when="1985">Found in excavation XXIII, on the Meteleone property, in its original position, probably in reference to the tomb of the Capuchin 2198</provenance> 
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -173,6 +178,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-23" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>

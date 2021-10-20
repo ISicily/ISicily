@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1491</title>
+                <title>I.Sicily inscription 001491</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -51,18 +51,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001491</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385964</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <settlement>Enna</settlement>
+                        <repository/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,35 +75,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
-                                        limestone
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>A large irregular mass of coarse stone, which Orsi concluded was 'uno spuntone di roccia, ancora in posto', and not part of a block fallen from above as originally suggested. The left side is lost, and the whole is heavily weathered.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.rock-face" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">rock face</objectType>
+                                    <dimensions><!--from Orsi NSA-->
+                                        <height unit="cm">200</height>
+                                        <width unit="cm">160</width>
+                                        <depth unit="cm">not recorded</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
-                                	<damage/>
+                                <layout><p>Orsi suggested the text was probably originally centred on the rock, but only the right part of three lines now preserved.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete #text_condition.deteriorated"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Large letters, rendered somewhat crude and deep due to the coarse stone. Sigma is four-bar with slightly open upper and lower strokes; omega is large, rounded and open with short tails; alpha has straight bar; epsilon has shorter middle bar; nu has three full length strokes, first and last vertical; mu has vertical first and last, but shorter middle strokes descending only half-way; omicron is full-size; rho has fairly large rounded, closed eye.</p>
+                                <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">100</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -117,22 +113,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524819">Enna</placeName>
                             	<geo>37.5655, 14.27433</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0200">C3 BC</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0350" notAfter-custom="-0201" evidence="lettering" precision="low">Later 4th or 3rd century BCE on the basis of the letter forms</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Lost,</acquisition>
+                        <provenance type="found" subtype="first-recorded" when="1931">Fully documented in situ by Orsi in 1931, on the slopes below the 'Rocca di Cerere', on the west side (c.250 m down the slope)<geo cert="high">37.569808, 14.286365</geo></provenance><!-- geo is based on orsi's map in NSA 1931, specifically marking the location -->
+                        <provenance type="not-observed">Manganaro (1965) was unable to locate it and other editors do not seem to have attempted to do so.</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -159,15 +160,16 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+              <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+              <change when="2021-03-01" who="#JP">Jonathan Prag edited file from publications</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -188,53 +190,29 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI329723">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-
-
-                    ἀρχὸς
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>Δαμ</abbr>
-                        <ex>ατριαστᾶν</ex>
-                    </expan>
-                    <lb n="3"/>Ἐνναίων.<lb n="4"/>
-                    <lb n="5"/>
-                    <supplied reason="lost">ὁ δεῖνα</supplied>
-                    ἀρχὸς
-                    <lb n="6"/>
-                    <supplied reason="lost">τοῦ κοινοῦ τῶν</supplied>
-                    Δαμ-
-                    <lb n="7"/>
-                    <supplied reason="lost">ατριαστᾶν</supplied>
-                    Ἐνναίων.
-                    <lb n="8"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ἀρχὸς<space extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>Δαμ<space extent="unknown" unit="character" cert="low"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><unclear>ͱ</unclear>ενναίων<space extent="unknown" unit="character"/>
                 </ab>
             </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI336905">
-                <ab>
-                    <lb n="1"/>
-
-
-                    Ἄρχος<lb n="2"/>Δάμ
-                    <unclear>α</unclear>
-                    <supplied reason="lost">τρι</supplied>
-                    <lb n="3"/>Ἐνναίων.
-                    <lb n="4"/>
-                </ab>
-            </div>
-            <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app><note>Text after Orsi and Guarducci (and photograph NSA 1931)</note></app>
+                    <app loc="line 1"><note>Guarducci: [Σό?]αρχος</note></app>
+                    <app loc="line 2"><note>Guarducci: Δάμ(ατρι); Segre: δαμ[όσιος]; Vollgraff, Dubois: Δαμ(ατριαστᾶν); Manganaro: Δάμ<unclear>α</unclear>(τρι)</note></app>
+                    <app loc="line 3"><note>Guarducci: [ͱπὲρ] ͱενναίων or [τᾶι] ͱενναίων; Manganaro: [---]Ἐνναίων</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--on three lines, records archos of the Damatriastes of the Ennaians [?is that Masson's interpretation, or Dubois'?]. It's understood by Guarducci, ap. Orsi and Manganaro as a dedication to Demeter; Guarducci suggested 'huper Ennaion', but M suggests simply Demeter of the Ennaians, which seems reasonably. M summarises the wide range of alternative suggstions.--></p>
+                <p>Of all past editors, only Orsi, directed to the text by local knowledge, has seen and fully documented the inscription, which he concluded was on a much eroded outcrop of natural rock, perhaps part of an extra-mural sanctuary. The text is damaged on the left, but from the surviving photograph it is difficult to confirm all aspects of Orsi's reading, such as whether the vacat at the end of line 2 is certain (e.g. Manganaro believed he could see another letter in the photograph after ΔΑΜ), and this has encouraged speculation on the likely expansion or restoration of those letters. It is notable that most later editors seem to have ignored the fact that the left margin is not necessarily the original one. Guarducci and others have speculated on line 1 as a personal name, that of the dedicant, if line two is to be restored/expanded as the dative of the divinity Demeter; the alternative, assuming nothing is missing from the left, is that it stands for 'chief (magistrate)' (so Masson). This latter reading in turn tends to take line 2 as referring to an association of worshippers of Demeter (so first Vollgraff), a group of Damatriastes. The interpretation of line 3 (clearly the genitive plural ethnic of the people of Enna) depends in turn on the alternatives proposed for lines 1 and 2, so variously Demeter of the Ennaians or by/on behalf of the Ennaians (both suggested by Guarducci), or the Demeter association of the people of Enna. Notwithstanding the multiple attestations of the cult of Demeter/Ceres at Enna, such asn association is not otherwise attested and is a hypothetical restoration in this text. Any resolution of the reading must depend upon the possibility of fresh study of the stone, if it can be located (Manganaro speculated that it may have been damaged during the Second World War).</p>
+                <p>The letter forms, as Guarducci noted, seem to place this text in the early part of the Hellenistic period, rather than later. The use of the aspirate, which would certainly speak to an earlier date, is paralleled in the earlier coinage of Enna, but we remain agnostic, without autopsy, of the presence of the sign on the stone (which Orsi believed to be present, followed by Guarducci).</p>
             </div>
-            <div type="bibliography">
+            <div type="bibliography"><!-- bibliography to check/add: S. Ferri, in Riv. Fil. Cl. 1933: 78; cf. P. Roussel, REG 1932, p.232; M. Segre, Il Mondo classico (1934), pp. 234-238; P. Orsi, Bibliografia sicil. 1934, p.20; P. Griffo, Boll. St. Catan.1940, p.105); and reference (?) in De Agostino, Studi sulla topografia di Henna, boll. St. Catan. 1942-43, pp. 122-124 -->
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>53.0991</citedRange>
@@ -244,7 +222,7 @@
                         <citedRange>14.0598</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
-                    <bibl type="corpus" n="IGDS">
+                    <bibl type="corpus" n="IGDS1">
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">198</ref>
                         </citedRange>

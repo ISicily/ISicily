@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0505</title>
+                <title>I.Sicily inscription 000505</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -50,15 +50,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000505</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4384819</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <!--Default country and region-->
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Marsala</settlement>
@@ -78,8 +75,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.mosaic" ref="http://www.eagle-network.eu/voc/material/lod/134.html">mosaic
-                                    </material>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.mosaic" ref="http://www.eagle-network.eu/voc/objtyp/lod/184">mosaic</objectType>
                                     <dimensions>
                                         <!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -90,10 +87,8 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout>
-                                    <!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout><p>Text is set out at the head of the mosaic, in smaller red tesserae on a white field</p>
+                                    <rs ana="#execution.mosaic" ref="https://www.eagle-network.eu/voc/writing/lod/16.html">mosaic</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -119,23 +114,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                             	<geo>37.80355, 12.4379</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial
-                                (?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found" subtype="discovered" when="1867-08">Found outside the Porta Nuova in construction of a road to the marina<geo cert="medium">37.801708, 12.431114</geo><!-- very approx location, near Porta Nuova --></provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -162,20 +161,17 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from
-                    database
-                </change>
-                <change when="2017-11-10" who="#JP">Jonathan Prag edited the bibl element and added partly encoded
-                    edition div
-                </change>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2017-11-10" who="#JP">Jonathan Prag edited the bibl element and added partly encoded edition div</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-04-21" who="#JP">Jonathan Prag completed edition div and made minor edits to metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -197,13 +193,13 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/>Salvis Plotino et
-                    <lb n="2"/>Rufae Logus serv(us)
-                    <lb n="3"/>act(or) port(us) Lilybit[a]ni
+                    <lb n="1"/>Salvis <g ref="#interpunct">·</g> Plotino <g ref="#interpunct">·</g> et <g ref="#ivy-leaf">❦</g>
+                    <lb n="2"/>Rufae <g ref="#interpunct">·</g> Logus <g ref="#interpunct">·</g> <expan><abbr>serv</abbr><ex>us</ex></expan> <g ref="#interpunct">·</g>
+                    <lb n="3"/><expan><abbr>act</abbr><ex>or</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>port</abbr><ex>us</ex></expan> <g ref="#interpunct">·</g> Lilybit<supplied reason="omitted">a</supplied>ni
                     <lb n="4"/>hoc sacrarium
-                    <lb n="5"/>ex voto exornavit
+                    <lb n="5"/>ex voto exornavit <g ref="#ivy-leaf">❦</g>
                 </ab>
             </div>
             <div type="apparatus">

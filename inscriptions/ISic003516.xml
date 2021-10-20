@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3516</title>
+                <title>I.Sicily inscription 003516</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -65,11 +65,10 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina</repository>
                         <idno type="inventory">A3566</idno>
                         <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
+                        <altIdentifier type="former">
                             <settlement>Messina</settlement>
                             <repository>Museo regionale interdisciplinare di Messina</repository>
                             <idno type="old">2491</idno>
@@ -84,8 +83,7 @@
                                 <support>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
-                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
-                                    </objectType>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -96,8 +94,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -122,27 +119,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</placeName>
                             	<geo>38.19394, 15.55256</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0200">C2 AD</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" precision="low">2nd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Necropolis of San Placido, sep.87</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Messina, Museo regionale interdisciplinare di Messina no. A3566</acquisition>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location"/>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -202,15 +200,15 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="1"/><supplied reason="lost" evidence="previouseditor"><expan><abbr>D</abbr><ex>is</ex></expan></supplied> <supplied reason="lost" evidence="previouseditor"><g type="interpunct">·</g></supplied> <supplied reason="lost" evidence="previouseditor"><expan><abbr>M</abbr><ex>anibus</ex></expan></supplied> <supplied reason="lost" evidence="previouseditor"><g type="interpunct">·</g></supplied>
-                    <lb n="2"/>Ofiliae <g type="interpunct">·</g> <supplied reason="lost" evidence="previouseditor"><expan><abbr>M</abbr><ex>arci</ex></expan></supplied> <supplied reason="lost" evidence="previouseditor"><g type="interpunct">·</g></supplied> <supplied reason="lost" evidence="previouseditor"><expan><abbr>f</abbr><ex>iliae</ex></expan></supplied>
-                    <lb n="3"/>Sabinae <g type="interpunct">·</g> <expan><abbr>M</abbr><ex>arcus</ex></expan> <g type="interpunct">·</g> Sau
-                    <lb n="4" break="no"/>feius <g type="interpunct">·</g> Sabinus <g type="interpunct">·</g><expan><abbr>p</abbr><ex>osuit</ex></expan>
-                    <lb n="5"/><expan><abbr>fil</abbr><ex>iae</ex></expan><g type="interpunct">·</g> piissimae <g type="interpunct">·</g> et
-                    <lb n="6"/>Ofiliae <g type="interpunct">·</g> Ursae <g type="interpunct">·</g>
-                    <lb n="7"/>coniugi <g type="interpunct">·</g> et <g type="interpunct">·</g> sibi
-                    <lb n="8"/><expan><abbr>libert</abbr><ex>is</ex></expan> <g type="interpunct">·</g> <expan><abbr>libertab</abbr><ex>usque</ex></expan>
-                    <lb n="9"/><expan><abbr>post</abbr><ex>erisque</ex></expan> <g type="interpunct">·</g> eorum<expan><abbr>omn</abbr><ex>ium</ex></expan>
+                    <lb n="1"/><supplied reason="lost" evidence="previouseditor"><expan><abbr>D</abbr><ex>is</ex></expan></supplied> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">·</g></supplied> <supplied reason="lost" evidence="previouseditor"><expan><abbr>M</abbr><ex>anibus</ex></expan></supplied> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">·</g></supplied>
+                    <lb n="2"/>Ofiliae <g ref="#interpunct">·</g> <supplied reason="lost" evidence="previouseditor"><expan><abbr>M</abbr><ex>arci</ex></expan></supplied> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">·</g></supplied> <supplied reason="lost" evidence="previouseditor"><expan><abbr>f</abbr><ex>iliae</ex></expan></supplied>
+                    <lb n="3"/>Sabinae <g ref="#interpunct">·</g> <expan><abbr>M</abbr><ex>arcus</ex></expan> <g ref="#interpunct">·</g> Sau
+                    <lb n="4" break="no"/>feius <g ref="#interpunct">·</g> Sabinus <g ref="#interpunct">·</g><expan><abbr>p</abbr><ex>osuit</ex></expan>
+                    <lb n="5"/><expan><abbr>fil</abbr><ex>iae</ex></expan><g ref="#interpunct">·</g> piissimae <g ref="#interpunct">·</g> et
+                    <lb n="6"/>Ofiliae <g ref="#interpunct">·</g> Ursae <g ref="#interpunct">·</g>
+                    <lb n="7"/>coniugi <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> sibi
+                    <lb n="8"/><expan><abbr>libert</abbr><ex>is</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>libertab</abbr><ex>usque</ex></expan>
+                    <lb n="9"/><expan><abbr>post</abbr><ex>erisque</ex></expan> <g ref="#interpunct">·</g> eorum<expan><abbr>omn</abbr><ex>ium</ex></expan>
                 </ab>
             </div>
             <div type="apparatus">

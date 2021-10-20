@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 0494</title>
+                <title>I.Sicily inscription 000494</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="GC" ref="https://orcid.org/0000-0003-1030-5679">Giorgia Capra</name>
+                    <resp>Epidoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -77,9 +81,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble
-                                    </material>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.ash_chest" ref="http://www.eagle-network.eu/voc/objtyp/lod/79.html">
                                         ash chest
                                     </objectType>
@@ -93,8 +95,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -121,20 +122,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -170,6 +176,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-03-06" who="#GC">edited text, translation</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,14 +198,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+           <div type="edition" xml:space="preserve" xml:lang="la" resp="#GC">
+                <ab>
+                    <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>m</abbr><ex>anibus</ex></expan> <name>Claudiae</name> <g ref="#interpunct">·</g> <name>Sabinae</name>
+                    <lb n="2"/><name><expan><abbr>L</abbr><ex>ucius</ex></expan></name> <g ref="#interpunct">·</g> <name>Metilius</name> <name>Proculus</name>
+                    <lb n="3"/>coniugi <g ref="#interpunct">·</g> <choice><orig>karissimae</orig><reg>carissimae</reg></choice> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ecit</ex></expan>
+               </ab>    
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#GC">
+                <p>To the spirits of the dead. Lucius Metilius Proculus made (this) for Claudia Sabina, dearly beloved spouse.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#GC">
+                <p>Agli spiriti dei defunti. Lucius Metilius Proculus fece (questo) per Claudia Sabina, amatissima consorte.</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->

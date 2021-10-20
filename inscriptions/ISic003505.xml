@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3505</title>
+                <title>I.Sicily inscription 003505</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -29,6 +29,10 @@
                 <respStmt>
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AL" ref="https://orcid.org/0000-0002-0000-7611">Andoni Llamazares</name>
+                    <resp>text edition</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -78,12 +82,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
-                                    <objectType ana="#object.pavement" ref="http://www.eagle-network.eu/voc/objtyp/lod/190.html">
-                                        pavement
-                                    </objectType>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.pavement" ref="http://www.eagle-network.eu/voc/objtyp/lod/190.html">pavement</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -94,8 +94,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -120,23 +119,38 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0250">early C3 BC</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0250" precision="low">early 3rd century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" n="1">Pavement of bouleuterion, Segesta; excavation SAS 3.</provenance> <!-- split provenance according to msParts -->
-                        <provenance type="found" subtype="discovered" n="2">fr.a found much earlier</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Segesta, exacavation stores</acquisition>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
+                    <msPart xml:id="frA">
+                        <msIdentifier/> <!-- Do we have different descritions for both fragments? -->
+                        <history>
+                            <provenance type="found" subtype="discovered" corresp="#frA">Pavement of bouleuterion, Segesta; excavation SAS 3.</provenance>
+                        </history>
+                    </msPart>
+                    <msPart xml:id="frB">
+                        <msIdentifier/>
+                        <history>
+                            <provenance type="found" subtype="discovered" corresp="#frB">fr.a found much earlier</provenance>
+                        </history>
+                    </msPart>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -163,7 +177,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-09-23" who="#JP">Jonathan Prag added ISegesta ref</change>
@@ -173,6 +187,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-07-12" who="#AL">Andoni Llamazares added text edition</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,29 +209,18 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140596">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AL">
                 <ab>
-                    <lb n="1"/>
-
-
-                    Ἀσκλαπὸς
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="2"/> ΕΠΠ
-                    <supplied reason="lost">— — —</supplied>
-                    <lb n="3"/>
-                </ab>
-            </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI336567">
-                <ab>
-                    <lb n="1"/>
-
-
-                    Ἄσκλαπος Διοδώρου Ταυρέας<lb n="2"/> ἐπιστάτας,<lb n="3"/>Βίβακος Τιττέλου Ποσθαῖος<lb n="4"/> ἀρχιτεκτόνησε.
-                    <lb n="5"/>
+                    <lb n="1"/><persName type="attested"><name>Ἄσκλαπος</name> <persName type="attested"><name type="patronym">Διοδώρου</name></persName> <name type="secondName">Ταυρέας</name></persName>
+                    <lb n="2"/><roleName><w>ἐπιστάτας</w></roleName>
+                    <lb n="3"/><persName type="attested"><name>Βίβακος</name> <persName type="attested"><name type="patronym">Τιττέλου</name></persName> <name type="secondName">Ποσθαῖος</name></persName>
+                    <lb n="4"/><roleName><w>ἀρχιτεκτόνησε</w></roleName>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>text according to Nenci in SEG 50.1020</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>

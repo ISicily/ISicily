@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3604</title>
+                <title>I.Sicily inscription 003604</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -63,7 +63,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Priolo Gargallo</settlement>
-                        <repository role="museum">in situ</repository>
+                        <repository role="museum"/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -80,7 +80,7 @@
                             <supportDesc>
                                 <support>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <objectType ana="#object.rock" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">rock face</objectType>
+                                    <objectType ana="#object.rock-face" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">rock face</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -112,31 +112,33 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503" corresp="#findspot">Syracusae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0400" notAfter-custom="0450">408 or 423 AD</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0400" notAfter-custom="0450">408 or 423 CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Priolo Gargallo hypogeum A, contrada Monachella</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Priolo Gargallo, in situ</acquisition>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">Priolo Gargallo hypogeum A, contrada Monachella</provenance>
+                        <provenance type="observed" corresp="#findspot">in situ</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">contrada Monachella, hypogeum A</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -204,7 +206,7 @@
                     <lb n="7"/><supplied reason="lost">Μονί</supplied>κα π<supplied reason="lost">ρὸ</supplied> <supplied reason="lost"><expan><abbr>καλ</abbr><ex>ανδῶν</ex></expan></supplied>
                     <lb n="8"/><supplied reason="lost">Ἰαν</supplied>ουα<supplied reason="lost">ρίων</supplied>
                     <lb n="9"/><gap reason="lost" quantity="2" unit="character"/> ἡμέρᾳ σ<supplied reason="lost">ελή</supplied>
-                    <lb n="10" break="no"/><supplied reason="lost">ν</supplied>ης ω <g type="staurogram">&#65952;</g> α ἐπ’ <expan><abbr>ἰν</abbr><ex>δικτίωνος</ex></expan> <num value="7">ζ</num> 
+                    <lb n="10" break="no"/><supplied reason="lost">ν</supplied>ης ω <g ref="#staurogram">&#65952;</g> α ἐπ’ <expan><abbr>ἰν</abbr><ex>δικτίωνος</ex></expan> <num value="7">ζ</num> 
                 </ab>
             </div>
             <div type="apparatus">

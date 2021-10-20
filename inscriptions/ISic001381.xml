@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1381</title>
+                <title>I.Sicily inscription 001381</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -38,6 +38,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="TNS" ref="https://orcid.org/0000-0003-2684-2030">Timothy Smith</name>
+                    <resp>Epidoc editing</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -61,12 +65,12 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum">Museo Paterniano</repository>
+                        <repository/><!-- Museum of Catania? -->
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
+                        <altIdentifier type="former">
                             <settlement/>
-                            <repository/>
+                            <repository role="museum">Museo Paterniano</repository>
                             <idno type="old"/>
                         </altIdentifier>
                     </msIdentifier>
@@ -77,9 +81,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -90,8 +92,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -116,28 +117,30 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0600">Enthade keitai; age in
+                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0600">Enthade keitai; age in
                                 years; date of death; cross (?)</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Catania, Museo Paterniano</acquisition>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="not-observed">Not located.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">not located</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -164,7 +167,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -173,6 +176,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-11" who="#TNS">Epidoc editing</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,32 +198,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140887">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TNS">
                 <ab>
-                    <lb n="1"/>
-
-
-                    ☩ ἐνθάδε κῖ
-                    <supplied reason="lost">τε — —</supplied>
-                    <lb n="2"/>
-                    <supplied reason="lost">ζή</supplied>σας ἔτη <supplied reason="lost">—ʹ. τελευ</supplied>-
-                    <lb n="3"/>
-                    <supplied reason="lost">τᾷ</supplied>
-                    τῇ
-                    <unclear>π</unclear>
-                    <supplied reason="lost">ρὸ —ʹ — — —</supplied>.
-                    <lb n="4"/>
+                    <lb n="1"/><g ref="#latincross">✝</g> ἐνθάδε κῖ<supplied reason="lost">τε</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/> <supplied reason="lost">ζή</supplied>σας ἔτη <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">τελευ
+                    <lb n="3" break="no"/>τᾷ</supplied> τῇ <unclear>π</unclear><supplied reason="lost">ρὸ</supplied> <gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>IG 14</note></app></listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--enthade keitai; age in years; date of death--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 1114</title>
+                <title>I.Sicily inscription 001114</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="GC" ref="https://orcid.org/0000-0003-1030-5679">Giorgia Capra</name>
+                    <resp>Epidoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -50,14 +54,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001114</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385510</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Alcamo</settlement>
@@ -77,9 +79,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        stone
-                                    </material>
+                                    <material ana="#material.clay" ref="http://www.eagle-network.eu/voc/material/lod/131.html">clay</material>
+                                    <objectType ana="#object.tile" ref="http://www.eagle-network.eu/voc/objtyp/lod/951.html">tile</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -90,8 +91,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -112,26 +112,31 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient"/>
-                                <placeName type="modern" ref="http://sws.geonames.org/2525755">Alcamo</placeName>		
-                            	<geo>37.9779, 12.96473</geo>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462258" cert="low">Ietas</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2524540">Monte Iato</placeName>
+                                <geo>37.967050, 13.198199</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0001">Hellenistic</origDate>
                         </origin>
-                        <provenance type="found"/>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <provenance type="found">Original discovery not recorded</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -158,7 +163,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -167,6 +172,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-06-11" who="#GC">edited text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -188,32 +194,33 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140597">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#GC">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— —</supplied>ΙΕΡΑΙ
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="2"/>
-                    <supplied reason="lost">— —</supplied>ΚΩΝΟΣ
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="3"/>
-                    <supplied reason="lost">— —</supplied>ΘΕΑΤΡΟΥ
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="4"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ιεραι<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>κωνοσ<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>θεατρου<gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text of IG</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--three short inscriptions...? Reading IERAI, KONOS, THEATROU--></p>
+                    <!--NB 3 tiles from Ietas, not a single inscription from Alcamo; refer to the Gualtherus ed 2 tets numbers 326-328--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310974">49 no.326-328</ref></citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0293</ref>

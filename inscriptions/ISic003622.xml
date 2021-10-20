@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3622</title>
+                <title>I.Sicily inscription 003622</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -62,7 +62,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Rabat</settlement>
-                        <repository role="museum">in situ</repository>
+                        <repository role="museum"/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -78,9 +78,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.rock" ref="http://www.eagle-network.eu/voc/material/lod/1.html">natural rock
-                                    </material>
-                                    <objectType ana="#object.rock" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">painted rock face</objectType>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.rock-face" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">painted rock face</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -112,31 +111,33 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462311">Melita</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462311" corresp="#findspot">Melita</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2562772">Malta</placeName>
                             	<geo>35.91667, 14.43333</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500">late imperial</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Rabat, catacomb of St. Agata, hypogeum of the rupestral church</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Rabat, in situ</acquisition>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">Rabat, catacomb of St. Agata, hypogeum of the rupestral church</provenance>
+                        <provenance type="observed" corresp="#findspot">in situ</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">catacomb of St. Agata, hypogeum of the rupestral church</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>

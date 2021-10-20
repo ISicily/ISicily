@@ -38,6 +38,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="MMohr"></name>
+                    <resp>provision of data</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -50,9 +54,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000080</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334053</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -60,9 +62,8 @@
                     <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Monte Iato</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/069">Antiquarium Case d'Alia e parco archeologico Monte Iato
-                        </repository>
+                        <settlement>San Cipirello</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/192">depot of the Zurich Ietas excavation</repository>
                         <idno type="inventory">I.14</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -78,23 +79,20 @@
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Two joining fragments of a marble slab broken on all sides, and re-used on the less smooth reverse side for a Latin inscription; the upper right corner may be preserved</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
-                                    </material>
-                                    <objectType ana="#object.tabula" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">tabula
-                                    </objectType>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--dimensions from Isler 1994-->
                                         <height unit="cm">30.5</height>
                                         <width unit="cm"/>
                                         <depth unit="cm">2.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Remains of parts of four lines of Latin text, probably the upper right section of the text, with vacat in the upper right</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
-                                	<damage/>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -106,7 +104,7 @@
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -121,19 +119,24 @@
                             <origDate datingMethod="#julian" notBefore-custom="0300" notAfter-custom="0600" cert="low">Palaeochristian</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in the area of mediaeval houses built over the south-east corner of the agora<geo>37.966807, 13.198520</geo></provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Monte Iato, Antiquarium Case d'Alia e parco archeologico Monte Iato</acquisition>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -170,16 +173,17 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-04-28" who="#JP">Jonathan Prag amended storage information and new photograph</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
           <surface type="front">
-                <graphic n="screen" url="ISic000080_tiled.tif" height="383px" width="345px">
-                    <desc>Photo from SicArch 85/86 p.31 fig.13</desc>
+                <graphic n="screen" url="ISic000080_tiled.tif" height="4417px" width="3967px">
+                    <desc>Photo courtesy Zurich Ietas excavations</desc>
                 </graphic>
-                <graphic n="print" url="ISic000080.jpg" height="383px" width="345px">
-                    <desc>Photo from SicArch 85/86 p.31 fig.13</desc>
+                <graphic n="print" url="ISic000080.jpg" height="4417px" width="3967px">
+                    <desc>Photo courtesy Zurich Ietas excavations</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -193,7 +197,7 @@
                     <lb n="4"/><supplied reason="lost">qui</supplied> <supplied reason="lost">vixit</supplied> <supplied reason="lost"><expan><abbr>an</abbr><ex>nos</ex></expan></supplied> <expan><abbr><hi rend="supraline"><unclear>pl</unclear></hi></abbr><ex>us</ex></expan> <supplied reason="lost"><expan><abbr>m</abbr><ex>inus</ex></expan></supplied><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#JP">
                <listApp>
                    <app><note>Text of Rizzone 2009, with minor modification line 4 (after photo)</note></app>
                    <app loc="line 1"><note>Isler: CII; </note></app>

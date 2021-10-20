@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 3456</title>
+                <title>I.Sicily inscription 003456</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -61,7 +61,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Mineo</settlement>
-                        <repository role="museum">in situ</repository>
+                        <repository role="museum"/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,12 +77,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
-                                        limestone
-                                    </material>
-                                    <objectType ana="#object.rock" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">rock
-                                        face
-                                    </objectType>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.rock-face" ref="http://www.eagle-network.eu/voc/objtyp/lod/211">rock face</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -93,8 +89,7 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -115,31 +110,33 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462312">Menae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462312" corresp="#findspot">Menae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524142">Mineo</placeName>
                             	<geo>37.26494, 14.69381</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0400" notAfter-custom="0700">late Roman</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Rock face, contrada Papajanni, territory of Mineo</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Mineo, in situ</acquisition>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">Rock face, contrada Papajanni, territory of Mineo</provenance>
+                        <provenance type="observed" corresp="#findspot">in situ</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
-                    <additional>
-                        <adminInfo>
-                            <note type="location">rock face, contrada Papajanni, territory of Mineo</note>
-                        </adminInfo>
-                    </additional>
+                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>

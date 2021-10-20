@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Caduceus from the city of Syracusae</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>establishment of EpiDoc template</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic030118</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030118</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Sicily</country>
+                        <settlement>Siracusa</settlement>
+                        <repository role="private">private collection</repository>
+                        <idno type="inventory"></idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <country/>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A bronze caduceus (whether intact or not is not recorded)</p>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <objectType ana="#object.caduceus" ref="https://www.eagle-network.eu/voc/objtyp/lod/58.html">caduceus</objectType>
+                                    <dimensions>
+                                        <height unit="cm"></height>
+                                        <width unit="cm"></width>
+                                        <depth unit="cm"/>
+                                        </dimensions>
+                                </support>
+                                <condition ana="#condition.unknown"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>No details known</p>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
+                                	<damage ana="#text-condition.unknown"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>No details known</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"></height>
+                                    <width></width>
+                                    <depth></depth>
+                                    </dimensions>
+                                </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0500" notAfter-custom="-0101" precision="low">5th-1st century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Circumstances of discovery unknown</provenance>
+                        <provenance type="observed" subtype="autopsied">none</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.document.public" ref="http://www.eagle-network.eu/voc/typeins/lod/360.html">public document</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2021-06-21" who="#JP">Jonathan Prag created file from published data</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+        <!-- 
+                <surface type="front">
+                    <graphic n="screen" url="ISic030116_tiled.tif" height="4912px" width="7360px">
+                        <desc>Image from https://www.britishmuseum.org/collection/image/256673001 (c) The Trustees of the British Museum, under a CC-BY-NC-SA 4.0 licence.</desc>
+                    </graphic>
+                    <graphic n="print" url="ISic030116.jpg" height="3680px" width="5520px">
+                        <desc>Image from https://www.britishmuseum.org/collection/image/256673001 (c) The Trustees of the British Museum, under a CC-BY-NC-SA 4.0 licence.</desc>
+    </graphic>
+  </surface>
+ -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+               <ab>
+                    <lb n="1"/><note>No text available</note>
+                </ab>
+           </div>
+            <div type="apparatus">
+                <listApp><app><note></note></app></listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p></p>
+            </div>
+            <div type="commentary">
+                <p>The caduceus is recorded by Hornbostel and Hornbostel in a note to their discussion of ISic030117, and by Manganaro 1996, and is attributed to Syracuse, presumably on the model of δαμόσιον Συρακοσίον</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>56.1077.B8</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Hornbostel and Hornbostel</author>
+                        <date>1988</date>
+                        <citedRange>237</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7ABVBVIQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1996</date>
+                        <citedRange>142 n.68</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/KS57W5TB"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ampolo</author>
+                        <date>2006</date>
+                        <citedRange>186 appendix B no.8</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/LCT7H63L"/>
+                    </bibl>
+                   </listBibl>
+	   <listBibl type="discussion">
+                        <bibl></bibl>	       
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

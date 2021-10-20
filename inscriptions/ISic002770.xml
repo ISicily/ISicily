@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 2770</title>
+                <title>I.Sicily inscription 002770</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -32,7 +32,7 @@
                 </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>EpiDoc editing</resp>
+                    <resp>EpiDoc editing and addition of metadata</resp>
                 </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
@@ -65,9 +65,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"
-                        </repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
                         <idno type="inventory">14494</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,31 +80,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">
-                                        volcanic (from Serra)
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Upper part of stele, well squared and with carefully polished surfaces, broken at the bottom</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Serra)</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">30</height>
+                                        <width unit="cm">29</width>
+                                        <depth unit="cm">8.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
-		    </supportDesc>
+                                <condition ana="#condition.damaged"/>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
-                                	<damage/>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">36-40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -122,23 +118,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100">C3 BC - C2 BC</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100" precision="low">3rd — 2nd century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Contr. Diana</provenance>
-                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>Lipari, Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea" no. 14494
-                        </acquisition>
+                        <provenance type="found" subtype="discovered" when="1982">Found in 1982 in trench XXXVI of the Zagami property, in zone F (extension)<geo>38.467130, 14.953871</geo></provenance> <!-- Repesentative coordinates for contrada Diana -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
+             <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
                  <xi:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -174,6 +174,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-09-27" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -197,7 +198,7 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>Ἀπολλωνίδα
+                    <lb n="1"/><persName type="attested"><name>Ἀπολλωνίδα</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
