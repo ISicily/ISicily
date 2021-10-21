@@ -12,13 +12,9 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
+               <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
                     <resp>site construction and encoding</resp>
                 </respStmt>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004457</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,9 +74,9 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>limestone tympanated aedicule with twisted semi-columns; traces of red color on the moldings</p>
+                                <support><p>Limestone aedicula with tympanum and twisted semi-columns; traces of red color on the moldings.</p>
                                     <material ana= "#material.stone.limestone" ref="https://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType ana="#object.aedicula" ref="https://www.eagle-network.eu/voc/objtyp/lod/6.html">aedicula</objectType> <!-- or https://archwort.dainst.org/de/term/3618  ?? -->
+                                    <objectType ana="#object.aedicula" ref="https://www.eagle-network.eu/voc/objtyp/lod/6.html">aedicula</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -92,9 +86,8 @@
                                 <condition ana="#condition.complete.broken"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>isolated staurogram within the tympanum, text on 4 straight lines, the last of which added on the basis of the aedicule, outside the epigraphic field</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout><p>Isolated staurogram within the tympanum, text on 4 straight lines, the last of which added on the basis of the aedicula, outside the epigraphic field.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage ana="#text_condition.complete #text_condition.legible"/>
 			</layout>
                             </layoutDesc>
@@ -123,23 +116,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0450" notAfter-custom="0550" cert="low">C5 - C6 AD (staurogram)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0450" notAfter-custom="0550" cert="low">Second half C5 - first half C6 AD (staurogram)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">catacomb of S. Giovanni</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <acquisition></acquisition>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -192,19 +190,19 @@
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                    <div type="textpart" subtype="tympanum" n="1">
                       <ab>
-                          <lb n="1"/><g type="staurogram">&#x101a0;</g>
+                          <lb n="1"/><g ref="#staurogram">&#65952;</g>
                       </ab>
                   </div>          
                   <div type="textpart" subtype="central_epigraphic_field" n="2">
                       <ab>
-                          <lb n="1"/> Τατια
+                          <lb n="1"/>Τατια
                           <lb n="2" break="no"/>νὴ εὐ
                           <lb n="3" break="no"/>μοίρι
                      </ab>
                   </div>
                 <div type="textpart" subtype="base" n="3">
                       <ab>
-                          <lb n="1"/> ἐν <expan><abbr><am><g type="chi-rho"/></am></abbr><ex>Χρίσ</ex><abbr>τῷ</abbr></expan>
+                          <lb n="1"/>ἐν <expan><abbr><am><g ref="#christogram">☧</g></am></abbr><ex>Χρίσ</ex><abbr>τῷ</abbr></expan>
                       </ab>
                     </div>
               </div>
@@ -223,7 +221,7 @@
                         <author>Orsi</author>
                         <date>1896</date>
                         <citedRange>336</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/H73GNMU6"></ptr>
+                        <ptr target="http://zotero.org/groups/382445/items/H73GNMU6"/>
                         </bibl>
                     <bibl/>
                 </listBibl>

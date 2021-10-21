@@ -12,13 +12,9 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
+               <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
                     <resp>site construction and encoding</resp>
                 </respStmt>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004458</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,8 +74,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>fragment of marble (?) plaque</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble?</material>
+                                <support><p>Fragment of marble (?) plaque.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html" cert="low">marble (?)</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -92,8 +86,8 @@
                                 <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>text on 5 straight lines, partially preserved.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled?</rs>
+                                <layout><p>Text on 5 straight lines, partially preserved.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage ana="#text_condition.incomplete #text_condition.legible"/>
 			</layout>
                             </layoutDesc>
@@ -117,27 +111,32 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName> <!-- to be changed -->		
-                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Augusta (Siracusa)</placeName> <!-- to be changed -->
-                                <geo>37.08415, 15.27628</geo> <!-- to be changed -->
+                                <placeName type="ancient"/>
+                                <placeName type="modern" ref="https://sws.geonames.org/2525646/">Augusta</placeName>
+                                <geo>37.24065, 15.22121</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0313" notAfter-custom="0500" cert="low">C4 AD - C5 AD</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Mulinello catacomb </provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1902-01">Acquired in January 1902 from the Mulinello catacomb<geo>37.23667, 15.17339</geo></provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <acquisition></acquisition>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -189,15 +188,15 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
-                    <lb n="1"/> <supplied reason="lost" cert="low">Σ</supplied>άτυρε
-                    <lb n="2"/> ἐνθάδε 
-                    <lb n="3"/> <supplied reason="lost">κῖτε</supplied> ζήσας 
-                    <lb n="4"/> <gap reason="lost" extent="unknown" unit="character"/>ΣΥ<gap reason="lost" extent="unknown" unit="character"/> 
-                    <lb n="5"/> <gap reason="lost" extent="unknown" unit="line"/>
+                    <lb n="1"/><supplied reason="lost" cert="low">Σ</supplied>ατυρ<unclear>ί</unclear><supplied reason="lost" cert="low">ων</supplied>
+                    <lb n="2"/><supplied reason="lost">ἐ</supplied>νθάδε 
+                    <lb n="3"/><supplied reason="lost">κῖτε</supplied> <supplied reason="lost">ζ</supplied>ήσας 
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΣΥ</orig><gap reason="lost" extent="unknown" unit="character"/> 
+                    <lb n="4a"/><gap reason="lost" extent="unknown" unit="line"/>
                 </ab>
                </div>
             <div type="apparatus">
-                <listApp><app><note>Text from Führer-Schultze</note></app></listApp>
+                <listApp><app><note>Text after Führer-Schultze and controlled against photograph</note></app></listApp>
             </div>
             <div type="translation">
                 <p></p>
@@ -208,11 +207,11 @@
             <div type="bibliography">
                 <listBibl>
                     <bibl>
-                        <author>J. Führer-V. Schultze</author>
+                        <author>Führer and Schultze</author>
                         <date>1907</date>
                         <citedRange>184</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/52GBQ6AW"></ptr>
-                        </bibl>
+                        <ptr target="http://zotero.org/groups/382445/items/52GBQ6AW"/>
+                      </bibl>
                     <bibl/>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

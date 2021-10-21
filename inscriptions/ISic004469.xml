@@ -12,13 +12,9 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
+               <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
                     <resp>site construction and encoding</resp>
                 </respStmt>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004469</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,7 +74,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>rectangular plaque of "bardiglio" marble with irregular borders. Lower left corner broken in antique</p>
+                                <support><p>Rectangular plaque of "bardiglio" marble with irregular borders. Lower left corner broken in antiquity.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -92,8 +86,7 @@
                                 <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>Big chiselled and rubricated staurogram in central position, surrounded by a red painted circle or stylised wreath and flanched by two red painted Greek crosses. 
-                                    Peraps it is possible to recognise a red painted star within the circle</p>
+                                <layout><p>Large chiselled and rubricated staurogram in central position, surrounded by a red painted circle or stylised wreath and flanked by two red painted Greek crosses. Perhaps it is possible to recognise a red painted star within the circle.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <rs ana="#execution.painted" ref="https://www.eagle-network.eu/voc/writing/lod/10.html">painted</rs>
                                 	<damage ana="#text_condition.complete #text_condition.legible"/>
@@ -123,7 +116,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName> 
                                 <geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0451" notAfter-custom="0550" cert="low">C5 AD C6 (staurogram)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0451" notAfter-custom="0550" cert="low">mid-C5 AD - mid-C6 AD(staurogram)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">San Diego cemetery (catacombs of Vigna Cassia)</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -133,13 +126,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -190,11 +188,11 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
-                    <lb n="1"/><g type="cross"></g> <g type="staurogram">&#x101a0;</g> <g type="cross"></g>
+                    <lb n="1"/><g ref="#cross_greek">&#x1F7A3;</g> <g ref="#staurogram">&#x101a0;</g> <g ref="#cross_greek">&#x1F7A3;</g>
                 </ab> 
                </div>
             <div type="apparatus">
-                <listApp><app><note>Text from Ferrua, checked against photograph.The painted star has been not mentioned by the previous editor</note></app></listApp>
+                <listApp><app><note>Text from Ferrua, checked against photograph. The painted star has been not mentioned by the previous editor</note></app></listApp>
             </div>
             <div type="translation">
                 <p></p>
@@ -205,10 +203,10 @@
             <div type="bibliography">
                 <listBibl>
                     <bibl>
-                        <author>A. Ferrua</author>
+                        <author>Ferrua</author>
                         <date>1989</date>
-                        <citedRange>82, no 330b</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/759ZXHKQ"></ptr>
+                        <citedRange>82 no. 330b</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/759ZXHKQ"/>
                     </bibl>
                     <bibl/>
                 </listBibl>

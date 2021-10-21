@@ -12,13 +12,9 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
+             <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
                     <resp>site construction and encoding</resp>
                 </respStmt>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004461</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,7 +74,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>fragmented marble plaque (5 fragments), broken on the left side</p>
+                                <support><p>Fragmented marble plaque (5 fragments), broken on the left side.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -92,7 +86,7 @@
                                 <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>text on 4 straight lines, partially preserved; ivy leaf interpunctions</p>
+                                <layout><p>Text on 4 straight lines, partially preserved; ivy leaf interpuncts.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage ana="#text_condition.incomplete #text_condition.legible"/>
 			</layout>
@@ -121,7 +115,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                                 <geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0175" notAfter-custom="0250" cert="low">C2 AD - C3 AD (paleography)</origDate> <!-- check archaeological context IG 05/10/21 --> 
+                            <origDate datingMethod="#julian" notBefore-custom="0175" notAfter-custom="0250" cert="low" evidence="lettering">Late C2 AD - mid-C3 AD</origDate> <!-- check archaeological context IG 05/10/21 --> 
                         </origin>
                         <provenance type="found" subtype="discovered">Necropoli Grotticelle</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -131,13 +125,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -189,11 +188,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
-                    <lb n="1"/> <gap reason="lost" extent="unknown" unit="character"/> <g type="leaf" ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf">U+2766</g>
-                    <choice><reg>χρηστὲ</reg><orig>χρησ<hi rend="ligature">τή</hi></orig></choice>
-                    <lb n="2"/> <supplied reason="lost">καὶ ἄ</supplied><unclear>μ</unclear>εμπτε
-                    <lb n="3"/> <supplied reason="lost">χαῖρε</supplied> <g type="leaf" ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#leaf">U+2766</g> ἔζησες
-                    <lb n="4"/> <supplied reason="lost" cert="low">ἡμέρας</supplied> <num value="108">ρη</num>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <g ref="#ivy-leaf">❦</g> <choice><reg>χρηστὲ</reg><orig>χρησ<hi rend="ligature">τή</hi></orig></choice>
+                    <lb n="2"/><supplied reason="lost">καὶ ἄ</supplied><unclear>μ</unclear>εμπτε
+                    <lb n="3"/><supplied reason="lost">χαῖρε</supplied> <g ref="#ivy-leaf">❦</g> ἔζησες
+                    <lb n="4"/><supplied reason="lost" cert="low">ἡμέρας</supplied> <num value="108">ρη</num>
                </ab>
                </div>
             <div type="apparatus">
@@ -208,13 +206,12 @@
             <div type="bibliography">
                 <listBibl>
                     <bibl>
-                        <author>P. Orsi</author>
+                        <author>Orsi</author>
                         <date>1913</date>
                         <citedRange>266</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/E5A7N5IB"></ptr>
-                        </bibl>
-                    <bibl/>
-                </listBibl>
+                        <ptr target="http://zotero.org/groups/382445/items/E5A7N5IB"/>
+                      </bibl>
+                    </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>

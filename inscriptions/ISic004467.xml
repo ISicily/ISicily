@@ -12,11 +12,7 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004467</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,19 +74,19 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>trapezoidal marble plaque</p>
+                                <support><p>Trapezoidal marble plaque.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm">16,5</height>
-                                        <width unit="cm">28,3</width>
+                                    <dimensions>
+                                        <height unit="cm">16.5</height>
+                                        <width unit="cm">28.3</width>
                                         <depth unit="cm">1</depth>
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>text on 4 straight lines, elegant letters with serifs, interpuncts regularly used</p>
+                                <layout><p>Text on 4 straight lines, elegant letters with serifs, interpuncts regularly used.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage ana="#text_condition.complete #text_condition.legible"/>
 			</layout>
@@ -100,7 +94,7 @@
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                              <locus from="line1" to="line1">Line 1</locus>
+                              <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">15-20</height>
                                 </dimensions>
@@ -121,7 +115,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                                 <geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0175" notAfter-custom="0250" cert="low">C2 AD - C3 AD (paleography)</origDate> <!-- check archaeological context IG 05/10/21 --> 
+                            <origDate datingMethod="#julian" notBefore-custom="0175" notAfter-custom="0250" cert="low" evidence="lettering">late C2 AD - mid-C3 AD</origDate> <!-- check archaeological context IG 05/10/21 --> 
                         </origin>
                         <provenance type="found" subtype="discovered" when="1945">Ipogeo I Arangio</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -131,13 +125,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -189,14 +188,17 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
-                    <lb n="1"/>Ὕσπληξ <g type="interpunct">U+00B7</g> χρηστὲ <g type="interpunct">U+00B7</g> καὶ
-                    <lb n="2"/>ἄμεμπτε <g type="interpunct">U+00B7</g> χαίρε
-                    <lb n="3"/>ἔζησες <g type="interpunct">U+00B7</g> ἔτη
+                    <lb n="1"/>Ὕσπληξ <g ref="#interpunct">·</g> χρηστὲ <g ref="#interpunct">·</g> καὶ
+                    <lb n="2"/>ἄμεμπτε <g ref="#interpunct">·</g> χαίρε
+                    <lb n="3"/>ἔζησες <g ref="#interpunct">·</g> ἔτη
                     <lb n="4"/><hi rend="supraline"><num value="3">γ</num></hi>
                </ab>
                </div>
             <div type="apparatus">
-                <listApp><app><note>Text after Lo Faro, checked against photograph. Line 3 ἔζεσεν Lo Faro</note></app></listApp>
+                <listApp>
+                    <app><note>Text after Lo Faro, checked against photograph.</note></app>
+                    <app loc="3"><note>Lo Faro: ἔζεσεν</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p></p>
@@ -211,10 +213,10 @@
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
                     <bibl>
-                        <author>M. D. Lo Faro</author>
+                        <author>Lo Faro</author>
                         <date>2010</date>
-                        <citedRange>44, no 1</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/Z65UR7TX"></ptr>
+                        <citedRange>44 no. 1</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/Z65UR7TX"/>
                         </bibl>
                     <bibl/>
                 </listBibl>

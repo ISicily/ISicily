@@ -12,13 +12,9 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
+               <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
                     <resp>site construction and encoding</resp>
                 </respStmt>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004466</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,7 +74,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>rectangular marble plaque broken in 11 fragments</p>
+                                <support><p>Rectangular marble plaque broken in 11 fragments.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -92,7 +86,7 @@
                                 <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>text on 5 straight lines; rubricates letters, guide lines visible.</p>
+                                <layout><p>Text on 5 straight lines; rubricates letters, guidelines visible.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage ana="#text_condition.incomplete #text_condition.legible"/>
 			</layout>
@@ -117,11 +111,11 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503"></placeName> 		
-                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Sortino</placeName> 
-                                <geo>37.08415, 15.27628</geo> <!-- change with Sortino ref -->
+                                <placeName type="ancient"/> 		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523049">Sortino</placeName> 
+                                <geo>37.15881, 15.02998</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" when="0434" cert="high" evidence="consulship">434 AD (consulship)</origDate>
+                            <origDate datingMethod="#julian" when="0434" evidence="internal-date">434 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">ipogeo contrada Lardia</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -131,13 +125,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -188,21 +187,21 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
-                    <lb n="1"/> <unclear>Ἐ</unclear><supplied reason="lost">ν</supplied><unclear>θ</unclear>άδε κῖτε 
-                    <lb n="2"/> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>γλος ὀ καλῆς
-                    <lb n="3" /> μ<unclear>ν</unclear>ή<supplied reason="lost">μη</supplied>ς <unclear>ζ</unclear><supplied reason="lost">ήσ</supplied>ας ἔτη <num value="70">ο</num>
-                    <lb n="4"/> <supplied reason="lost">ἀ</supplied>ν<unclear>επ</unclear>αύσατο <expan><abbr>καλ</abbr><ex>ήνδας</ex></expan>
-                    <lb n="5"/>  <expan><abbr><supplied reason="lost">Ἀυ</supplied>γ</abbr><ex>ούστας</ex></expan> <expan><abbr>ὐπ</abbr><ex>ὸ</ex></expan> <unclear>Ἄσ</unclear>περος <expan><abbr>Ἀριο</abbr><ex>βίνδος</ex></expan>
+                    <lb n="1"/><unclear>Ἐ</unclear><supplied reason="lost">ν</supplied><unclear>θ</unclear>άδε κῖτε 
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>γλος ὀ καλῆς
+                    <lb n="3" />μ<unclear>ν</unclear>ή<supplied reason="lost">μη</supplied>ς <unclear>ζ</unclear><supplied reason="lost">ήσ</supplied>ας ἔτη <num value="70">ο</num>
+                    <lb n="4"/><supplied reason="lost">ἀ</supplied>ν<unclear>επ</unclear>αύσατο <expan><abbr>καλ</abbr><ex>ήνδας</ex></expan>
+                    <lb n="5"/> <expan><abbr><supplied reason="lost">Ἀυ</supplied>γ</abbr><ex>ούστας</ex></expan> <expan><abbr>ὐπ</abbr><ex>ὸ</ex></expan> <unclear>Ἄσ</unclear>περος <expan><abbr>Ἀριο</abbr><ex>βίνδος</ex></expan>
                  </ab> 
                </div>
             <div type="apparatus">
-                <listApp><app><note></note></app></listApp>
+                <listApp><app><note>Text from autopsy</note></app></listApp>
             </div>
             <div type="translation">
                 <p></p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p>Previously unpublished</p><!-- text to be withheld for now -->
             </div>
             <div type="bibliography">
                 <listBibl>
