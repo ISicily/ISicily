@@ -12,13 +12,9 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
+               <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
                     <resp>site construction and encoding</resp>
                 </respStmt>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004455</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,7 +74,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>semicircular limestone plaque. Same support as <ref target="ISic004456.xml">ISic004456</ref></p>
+                                <support><p>Semicircular limestone plaque. Same support as <ref target="ISic004456.xml">ISic004456</ref>.</p>
                                     <material ana= "#material.stone.limestone" ref="https://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -92,9 +86,8 @@
                                 <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>text on 7 straight lines, pronounced guidelines, horizontal and vertical, also used for framing the epigraphic field. On the right side of the plaque, a staurogram at the end of the fourth line and a palm branch closes the text at the end of the seventh line.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout><p>Text on 7 straight lines, pronounced guidelines, horizontal and vertical, also used for framing the epigraphic field. On the right side of the plaque, a staurogram at the end of the fourth line and a palm branch closes the text at the end of the seventh line.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage ana="#text_condition.complete #text_condition.legible"/>
 			</layout>
                             </layoutDesc>
@@ -113,7 +106,7 @@
                             </handNote>
                         </handDesc>
                         <decoDesc>
-                            <decoNote><g ana="#decoration.figure">palm branch</g></decoNote>
+                            <decoNote><g ana="#decoration.figure.vegetation">palm branch</g></decoNote>
                         </decoDesc>
                     </physDesc>
                     <history>
@@ -123,7 +116,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0450" notAfter-custom="0550" cert="low">C5 AD - C6 AD (staurogram)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0450" notAfter-custom="0550" cert="low">Second half C5 AD - first half C6 AD (staurogram)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">catacomb of S. Giovanni</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -133,13 +126,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -191,17 +189,20 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
-                    <lb n="1"/> Ἐνθάδε κῖντε
-                    <lb n="2"/> οἱ τῆς <choice><reg>μακαρίας</reg><orig>μακα
+                    <lb n="1"/>Ἐνθάδε κῖντε
+                    <lb n="2"/>οἱ τῆς <choice><reg>μακαρίας</reg><orig>μακα
                     <lb n="3" break="no"/>ρείας</orig></choice> μνήμης      
-                    <lb n="4"/> Βονιφατία <g type="staurogram">&#65952;</g>, 
-                    <lb n="5"/> Ἐπιφανία, Κυρι
+                    <lb n="4"/>Βονιφατία, <g ref="#staurogram">&#65952;</g>
+                    <lb n="5"/>Ἐπιφανία, Κυρι
                     <lb n="6" break="no"/>ακὴ, Βονιφάτις 
-                    <lb n="7"/> <expan><abbr>κ</abbr><ex>αὶ</ex></expan> Παυλῖνα <g ana="#decoration.figure">palm branch</g>
+                    <lb n="7"/><expan><abbr>κ</abbr><ex>αὶ</ex></expan> Παυλῖνα <g ref="#palm">⸙</g>
                  </ab>
                </div>
             <div type="apparatus">
-                <listApp><app><note>Text from Orsi checked and improved against photograph. Line 7: Βονιφάτης Orsi</note></app></listApp>
+                <listApp>
+                    <app><note>Text from Orsi checked and improved against photograph.</note></app>
+                    <app loc="7"><note>Orsi: Βονιφάτης</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p></p>
@@ -214,8 +215,8 @@
                     <bibl>
                         <author>Orsi</author>
                         <date>1896</date>
-                        <citedRange>291</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/H73GNMU6"></ptr>
+                        <citedRange>no. 291</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/H73GNMU6"/>
                         </bibl>
                     <bibl/>
                 </listBibl>

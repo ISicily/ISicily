@@ -12,13 +12,9 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
+             <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
                     <resp>site construction and encoding</resp>
                 </respStmt>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004448</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,7 +74,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>rectangular fragment of plaster, from the tomb-cover. Four nacreous shells preserved on the left side</p>
+                                <support><p>Rectangular fragment of plaster, from the tomb-cover. Four nacreous shells preserved on the left side.</p>
                                     <material ana= "#material.plaster">plaster</material>
                                     <objectType ana="#object.funerary_monument.tomb_cover" ref="https://archwort.dainst.org/de/term/1628">tomb cover</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -92,8 +86,8 @@
                                 <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>text on one straight line, gap on the right, etched on the fresh plaster. Before the inscription, along the left side, two big letters in column, made of colored glass paste mosaic tiles. Impressions of other tiles between the 2nd and 3rd letter of the inscription, within the 4th and between the 5th and the 6th. Letters and the random mosaic tiles, fixed on the fresh plaster and therefore contemporary to the etched inscription, perhaps represent a rough decoration, also repeating the first two letters of the deceased's name. </p>
-                                    <rs ana="#execution.etched" ref="https://www.eagle-network.eu/voc/writing/lod/14.html">etched</rs>
+                                <layout><p>Text on one straight line, gap on the right, etched on the fresh plaster. Before the inscription, along the left side, two big letters in column, made of colored glass paste mosaic tiles. Impressions of other tiles between the 2nd and 3rd letter of the inscription, within the 4th and between the 5th and the 6th. Letters and the random mosaic tiles, fixed on the fresh plaster and therefore contemporary to the etched inscription, perhaps represent a rough decoration, also repeating the first two letters of the deceased's name.</p>
+                                    <rs ana="#execution.incised" ref="https://www.eagle-network.eu/voc/writing/lod/14.html">incised</rs>
                                     <rs ana="#execution.mosaic" ref="https://www.eagle-network.eu/voc/writing/lod/16.html">mosaic</rs>
                                 	<damage ana="#text_condition.incomplete #text_condition.legible"/>
 			</layout>
@@ -124,7 +118,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0330" notAfter-custom="0370" cert="medium">C4 AD (context)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0330" notAfter-custom="0370" cert="medium" evidence="archaeological-context">mid-C4 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Fuehrer catacomb</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
@@ -134,13 +128,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -191,21 +190,21 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
-                <div type="textpart" subtype="epigraphic_field" n="1">
+                <div type="textpart" subtype="section" n="1">
                 <ab>
                     <lb n="1"/>Καλωνά<supplied reason="undefined" evidence="previouseditor">ς</supplied>
                     </ab>
                     </div>
-                    <div type="textpart" subtype="epigraphic_field" n="2">
+                    <div type="textpart" subtype="section" n="2">
                     <ab>
-                    <lb n="1"/>KA <!-- text orientation? column? IG -->
+                    <lb n="1" style="text-direction:vertical-downwards"/>KA
                   </ab>
                </div>
                   </div>
             <div type="apparatus">
                 <listApp><app><note>Text from Orsi checked against photograph</note></app></listApp>
             </div>
-            <div type="translation">
+            <div type="translation" xml:lang="en" resp="#IG">
                 <p>Kalonas</p>
             </div>
             <div type="commentary">
@@ -217,9 +216,8 @@
                         <author>Orsi</author>
                         <date>1895</date>
                         <citedRange>475</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/UHDXHJ9M"></ptr>
+                        <ptr target="http://zotero.org/groups/382445/items/UHDXHJ9M"/>
                     </bibl>
-                 <bibl/>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

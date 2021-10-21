@@ -12,11 +12,7 @@
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
+                    <resp>project direction, template development, original data gathering, and general editor</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
@@ -54,9 +50,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004449</idno>
                 <idno type="DOI"></idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,7 +74,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>rectangular gray marble plaque, walled up in an inclined position (as a bookstand) on the tomb-cover, consisting of tiles and a thick layer of mortar</p>
+                                <support><p>Rectangular gray marble plaque, walled up in an inclined position (like a bookstand) on the tomb-cover, consisting of tiles and a thick layer of mortar.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -92,9 +86,8 @@
                                 <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>text on 3 straight lines, guide lines. Below the text two ivy leaves.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled
-                                    </rs>
+                                <layout><p>Text on 3 straight lines, guide lines. Below the text two ivy leaves.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage ana="#text_condition.complete #text_condition.legible"/>
                                 </layout>
                             </layoutDesc>
@@ -112,7 +105,7 @@
                             </handNote>
                         </handDesc>
                         <decoDesc>
-                           <decoNote><g ana="#decoration.figure">ivy leaf</g></decoNote>
+                           <decoNote><g ana="#decoration.figure.vegetation">ivy leaf</g></decoNote>
                         </decoDesc>
                     </physDesc>
                     <history>
@@ -122,23 +115,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0330" notAfter-custom="0370" cert="medium">C4 AD (context)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0330" notAfter-custom="0370" cert="medium" evidence="archaeological-context">mid-C4 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Fuehrer catacomb</provenance>
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition>,</acquisition>
+                        <acquisition></acquisition>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -190,16 +188,16 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#IG">
                 <ab>
-                    <lb n="1"/> Πρεῖμος οἰκονόμος
-                    <lb n="2"/> ἔζησε ἔτη <num value="70"><hi rend="supraline">ο</hi></num>
-                    <lb n="3"/> καὶ τρ<supplied reason="omitted">ε</supplied>ῖς ὥ<del rend="erasure">ν</del>ρας. <expan><abbr><hi rend="supraline">Θ</hi></abbr><ex>άνατος</ex></expan>
-                   <lb n="4"/> <g ana="#decoration.figure">ivy leaf</g> <g ana="#decoration.figure">ivy leaf</g>   
+                    <lb n="1"/>Πρεῖμος οἰκονόμος
+                    <lb n="2"/>ἔζησε ἔτη <num value="70"><hi rend="supraline">ο</hi></num>
+                    <lb n="3"/>καὶ τρ<supplied reason="omitted">ε</supplied>ῖς ὥ<del rend="erasure">ν</del>ρας. <expan><abbr><hi rend="supraline">Θ</hi></abbr><ex>άνατος</ex></expan>
+                   <lb n="4"/><g ref="#ivy-leaf">❦</g> <g ref="#ivy-leaf">❦</g>
                  </ab>
                   </div>
             <div type="apparatus">
                 <listApp><app><note>Text from Orsi checked against photograph</note></app></listApp>
             </div>
-            <div type="translation">
+            <div type="translation" xml:lang="en" resp="#IG">
                 <p>Preimos, household manager, lived seventy years and three hours. Deceased. </p>
             </div>
             <div type="commentary">
