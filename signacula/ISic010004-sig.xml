@@ -123,17 +123,18 @@
                             <objectDesc>
                                 <supportDesc>
                                     <support>
-                                        <p><rs type="shape">rectangular</rs> lamina with raised border<!-- keep terms consistent --></p>
-                                        <dimensions></dimensions>
+                                        <p><rs ana="#shape.rectangular">rectangular</rs> lamina with raised border</p>
+                                        <dimensions>
                                         <height unit="mm">26</height>
                                         <width unit="mm">62</width>
                                         <depth unit="mm">5</depth>
+                                        </dimensions>
                                         <measure type="weight"></measure>
                                     </support>
-                                    <condition></condition>
+                                    <condition ana="#condition.complete"/>
                                 </supportDesc>
                                 <layoutDesc>
-                                    <layout>3 lines inscription on a <rs ana="#shape.rectangular">rectangular</rs> lamina with raised borders 
+                                    <layout>3 straight lines inscription  
                                         <rs ana="#execution.relief" ref="https://www.eagle-network.eu/voc/writing/lod/7.html">relief letters</rs>                                                            
                                         <damage ana="#text_condition.complete #text_condition.legible"/>                             
                                     </layout>
@@ -156,7 +157,7 @@
                             </decoDesc>
                         </physDesc>
                     </msPart>
-                    <msPart type="handle" xml:id="part2">  <!-- can put a reference pointing to the text division for this text -->
+                    <msPart type="handle" xml:id="part2">  
                         <msIdentifier>
                             <idno/>
                         </msIdentifier>
@@ -167,7 +168,7 @@
                                         <dimensions></dimensions>
                                         <measure type="weight"></measure>
                                     </support>
-                                    <condition></condition>
+                                    <condition ana="#condition.complete"/>
                                 </supportDesc>
                                 <layoutDesc>
                                     <layout><p>palmette on the bezel</p> 
@@ -176,7 +177,7 @@
                                 </layoutDesc>
                             </objectDesc>
                             <handDesc>
-                                <handNote><!--Default value and requires editing-->
+                                <handNote>
                                     <locus from="line1" to="line1">Line 1</locus>
                                     <dimensions type="letterHeight">
                                         <height unit="mm"/>
@@ -185,9 +186,7 @@
                             </handDesc>
                             <decoDesc>
                                 <decoNote>
-                                    <figure>
-                                        <figDesc>palmette</figDesc>
-                                    </figure>
+                                    <g ref="#palm">palmette</g>
                                 </decoNote>
                             </decoDesc>
                         </physDesc>
@@ -229,7 +228,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/105.html">ownership</term><!-- ref not entirely satisfactory or even wrong -->
+                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/105.html" cert="low">ownership</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -239,7 +238,7 @@
         </revisionDesc>
       </teiHeader>
       <facsimile>
-              <surface> <!-- we can put @type with main or handle, to be decided -->
+              <surface> 
                   <desc></desc>
                   <graphic url="">
                       <desc>Digital reproduction ....</desc>
@@ -254,7 +253,7 @@
       </facsimile>
       <text>
           <body>
-              <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG"></div>
+              <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG">
                       <div type="textpart" subtype="lamina" corresp="#part1">
                              <ab>
                                       <lb n="1"/> <expan><abbr>P</abbr><ex>ubli</ex></expan> <g ref="#ivy-leaf"/> Aeli Sy
@@ -263,8 +262,9 @@
                             </ab>
                       </div>
                    <div type="textpart" subtype="handle" corresp="#part2">
-                      <ab><g ref="#palmette"/></ab>
+                      <ab><g ref="#palm"/></ab>
                   </div>
+              </div>
               <div type="apparatus">
                   <listApp>
                       <app><note>Text from autopsy</note></app>
@@ -281,8 +281,7 @@
               </div>
               <div type="bibliography">
                   <listBibl>
-                      <!-- bibliography taken from Zotero -->
-                      <bibl>
+                       <bibl>
                           <author>Manganaro Perrone</author>
                           <date>2006</date>
                           <citedRange>18 no. 1</citedRange>
