@@ -50,14 +50,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003679</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388942</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Halaesa</settlement>
@@ -76,30 +74,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
-                                    </material>
+                                <support><p>Fragment of a marble plaque</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                    <dimensions><!--Carettoni-->
+                                        <height unit="cm">8</height>
+                                        <width unit="cm">12</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Remains of a single line of large letters</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">52</height><!-- Carettoni -->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -117,14 +114,13 @@
                                 </offset>
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0050">Augustan?</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0031" notAfter-custom="0014">Augustan? (so Carettoni, but on what grounds is unclear)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Trench 31 (1956, 5-10m east of the 'east portico', see fig.8</provenance>
-                        <provenance type="observed" cert="low">in store</provenance>
+                        <provenance type="found" subtype="discovered">Found in summer 1956 in trench 31 (5-10m east of the 'east portico', see Carettoni, NSA 1959, fig.8)<geo>37.998108, 14.263053</geo></provenance>
+                        <provenance type="not-observed">Not yet located, but should be in store</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -166,14 +162,15 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+            	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-11-22" who="#JP">Jonathan Prag revised file from publication</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -195,18 +192,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ab>
+                <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><unclear>A</unclear>ug<gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text as reported by Carettoni</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--'frammento d'iscrizione romana su lastra marmorea (eta augustea?) (m. 0,12 x 0,08): ..AVG.. (altessa delle lettere cm. 5,2)'--></p>
+                <p>Carettoni suggests that the fragment is perhaps Augustan, but without sight of the piece it is hard to know if this is simply due to the apparent presence of the word Augustus, or also the form of the letters.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -214,7 +214,7 @@
                         <author>Carettoni</author>
                         <title>NSA</title>
                         <date>1961</date>
-                        <citedRange>311 no.12c</citedRange>
+                        <citedRange>311 no. 12c</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
                 </listBibl>
