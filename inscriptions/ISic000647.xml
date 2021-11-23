@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000647</title>
+                <title>Fragmentary Christian epitaph</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -41,6 +41,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -82,14 +86,13 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
-                                    </material>
+                                <support><p>Marble plaque, intact on the right, set in plaster in modern times.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">27</height>
+                                        <width unit="cm">32</width>
+                                        <depth unit="cm">1-4.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -102,14 +105,15 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Regular letters with apices: Ε, Σ have square form (square-bottomed Ω), Ξ is cursive.</p>
+                                <!--measurements from Korhonen-->
+                                <locus from="line1" to="line10">Lines 1-10</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">15-22</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -124,7 +128,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" cert="low" precision="low">4th century CE</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.119, mag. del cort.</provenance>
+                        <provenance type="observed">Observed by Libertini in sala VI.119, magazzino del cortile, Castello Ursino</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -179,6 +183,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-09-22" who="#martaf">Marta Fogagnolo added markup, dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -200,28 +205,56 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
-                <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τὸ</supplied><unclear>ν</unclear> κόσμον ἃπαντα ε<gap reason="illegible" quantity="1" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">βασιλ</supplied>έως καὶ βασιλίδος
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἀμέμ</supplied><unclear>π</unclear>τως καὶ ἀκαταγνώ
-                    <lb n="4" break="no"/><supplied reason="lost">στως</supplied> <supplied reason="lost">ἒζη</supplied>σαν μοι ἒτη <hi rend="supraline">ι</hi>δ ἐν
-                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/>ασα ἒτη <hi rend="supraline">κη</hi> ὀρκί
-                    <lb n="6" break="no"/><supplied reason="lost">ζω</supplied> <supplied reason="lost">τὸν</supplied> <supplied reason="lost">παντο</supplied>κράτορα καὶ
-                    <lb n="7"/><supplied reason="lost">τὸν</supplied> <supplied reason="lost">ἒτι</supplied> <supplied reason="lost">μέλ</supplied>λοντα αἰῶνα
-                    <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>εν ἀνῦξαι
-                    <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἐκεί</supplied>νων κατ<supplied reason="lost">ά</supplied>
-                    <lb n="10" break="no"/><supplied reason="lost">θεσιν</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+            <div type="edition" xml:space="preserve" resp="#martaf">
+                <ab xml:lang="grc">
+                    <lb/><gap reason="lost" extent="unknown" unit="line"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τὸ</supplied><unclear>ν</unclear> <w>κόσμον</w> <w>ἅπαντα</w> ἐ<gap reason="illegible" quantity="1" unit="character"/>
+                    <lb n="2"/><persName><gap reason="lost" extent="unknown" unit="character"/>έως</persName> καὶ <persName type="attested"><name>Βασιλίδος</name></persName>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἀμέμ</supplied><unclear>π</unclear>τως</w> καὶ <w>ἀκαταγνώ<lb n="4" 
+                        break="no"/><supplied reason="lost">στως</supplied></w> <w><supplied reason="lost">ἔζησ</supplied>αν</w> <w>μοι</w> <w>ἔτη</w> <space quantity="1" unit="character"/> <num value="14"><hi rend="supraline">ιδ</hi></num> <space quantity="1" unit="character"/> ἐν
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ζήσ</supplied>ασα</w> <w>ἔτη</w> <space quantity="1" unit="character"/> <num value="28"><hi rend="supraline">κη</hi></num> <space quantity="1" unit="character"/> <w>ὁρκί<lb n="6" 
+                        break="no"/><supplied reason="lost">ζω</supplied></w> <supplied reason="lost">τὸν</supplied> <w><supplied reason="lost">Παντο</supplied>κράτορα</w> καὶ
+                    <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τὸν</supplied> <w><supplied reason="lost">μέλλ</supplied>οντα</w> <w>α<hi rend="ligature">ἰῶ</hi>να</w>
+                    <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">μη</supplied><unclear>δ</unclear>ὲν'</w> <w>ἀνῦξαι</w>
+                    <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost" cert="low">ἐκεί</supplied>νων</w> <w>κατ<supplied reason="lost">ά</supplied><lb n="10" 
+                        break="no"/><supplied reason="lost" cert="low">θεσιν</supplied></w><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Text of Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Manganaro adds <supplied reason="lost">ὁ δεῖνα <gap reason="lost" extent="unknown" unit="character"/> ἐποίησα</supplied> before l. 1</note></app>        
+                    <app loc="line 1"><note>Manganaro: <gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τ</supplied>ὸν̣ κόσμον ἐ<unclear>ν</unclear>. After ε, Korhonen reads a vertical or slightly slanted stroke and a straight one (Α, Η, Ρ, less likely Κ, Ν)</note></app>
+                    <app loc="line 2"><note>Libertini, Ferrua, Korhonen: <supplied reason="lost">βασιλ</supplied>έως καὶ βασιλίδος; Manganaro: <supplied reason="lost">τύμβῳ</supplied> <supplied reason="subaudible">name</supplied>εως καὶ βασιλίδος</note></app>
+                    <app loc="line 3"><note>Libertini, Ferrua, Korhonen: <supplied reason="lost">ἀμεμπ</supplied>τως; Manganaro: <supplied reason="lost" cert="low">oὗτοι</supplied> <supplied reason="lost">ἀμέμπ</supplied>τως</note></app>       
+                    <app loc="lines 3-4"><note>Ferrua: ἀκαταγνώ-|<supplied reason="lost">στως ἦ</supplied>σαν; Manganaro, Korhonen: ἀκαταγνώ-|<supplied reason="lost">στως</supplied><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἔζη</supplied>σαν</note></app>
+                    <app loc="lines 4-5"><note>Libertini: ἐν | <supplied reason="lost">ζήσ</supplied>ασα; Ferrua: ἐν | <supplied reason="lost">γάμῳ ἅπ</supplied>ασα; Manganaro: ἕν, (?) | <supplied reason="lost">ἑτέρα πληρώσ</supplied>ασα. Another possibility can be ἐν | <supplied reason="lost"><expan><abbr>Χ</abbr><ex>ριστ</ex><abbr>ῷ</abbr></expan> ζήσ</supplied>ασα or ἐν | <supplied 
+                        reason="lost"><expan><abbr>Χρ</abbr><ex>ιστ</ex><abbr>ῷ</abbr></expan> ζήσ</supplied>ασα (for this formula, see e.g. IMC Catania 192 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003290">ISic003290</ref>, IG 14.535 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001354">ISic001354</ref> and Korhonen 2004: 263).</note></app>
+                    <app loc="lines 5-6"><note>Libertini: <expan><abbr>ὅρκι</abbr><ex>ον</ex></expan> | <supplied reason="lost">αὐτο</supplied>κράτορα; Ferrua: ὀρκί-|<supplied reason="lost">ζω (sic) <expan><abbr>θ</abbr><ex>εὸν</ex></expan> παντο</supplied>κράτορα; Manganaro: ὁρκί-|<supplied reason="lost">ζω τὸν Παντο</supplied>κρατορα; Korhonen: ὀρκί-|<supplied reason="lost">ζω (sic) τὸν παντο</supplied>κράτορα</note></app>
+                    <app loc="line 7"><note>Libertini, Manganaro: <supplied reason="lost">τὸν μέλ</supplied>λοντα; Ferrua, Korhonen: <supplied reason="lost">τὸν ἔτι μέλ</supplied>λοντα</note></app>
+                    <app loc="line 8"><note>Ferrua: <supplied reason="lost">τὴν σορὸν μη</supplied>δέν'; Manganaro: <supplied reason="lost">κληρονόμων μη</supplied>δέν'. Korhonen reads a vertical stroke before ΕΝ (Η, Ι, Ν, Ω)</note></app>
+                    <app loc="lines 9-10"><note>Ferrua: <supplied reason="lost">ἐγεννήθη τῇ <expan><abbr>πρ</abbr><ex>ὸ</ex></expan></supplied><gap reason="lost" quantity="1" unit="character"/> <expan><abbr>νων</abbr><ex>ῶν</ex></expan>, κατ<supplied reason="lost">ε</supplied>|<supplied reason="lost">τέθη</supplied><gap reason="lost" extent="unknown" 
+                        unit="character"/>; Manganaro: <supplied reason="lost">ἢ σκυλήσαι</supplied><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἐκεί</supplied>νων κατ<supplied reason="lost">ά</supplied>|<supplied reason="lost">θεσιν</supplied> (or κατ<supplied reason="lost">ά|γειον μνημίον</supplied>)<gap reason="lost" extent="unknown" unit="character"/>; Korhonen: <gap 
+                        reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" cert="low">ἐκεί</supplied>νων κατ<supplied reason="lost">ά</supplied>|<supplied reason="lost" cert="low">θεσιν</supplied><gap reason="lost" extent="unknown" unit="character"/></note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p><gap reason="lost"/>all the world <gap reason="lost"/><supplied reason="subaudible">of so and so</supplied> and of Basilis. They lived perfectly and blamelessly with me fourteen years <gap reason="lost"/>lived twenty-eight years. I beseech in the name of the Almighty <gap reason="lost"/>for all eternity <gap reason="lost"/>let no one open <supplied reason="lost">the tomb</supplied><gap reason="lost"/></p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p><gap reason="lost"/>tutto il mondo <gap reason="lost"/><supplied reason="subaudible">del tale</supplied> e di Basilis. Essi vissero in modo perfetto e irreprensibile con me quattordici anni <gap reason="lost"/>avendo vissuto ventotto anni. Scongiuro in nome dell’Onnipotente <gap reason="lost"/>per l’eternità <gap reason="lost"/>che nessuno apra <supplied reason="lost">la tomba</supplied><gap reason="lost"/></p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>Due to the largely fragmentary condition, it is difficult to reconstruct the text of this Christian epitaph, which could have hexametrical form at least in the first two lines, if one admits with Korhonen a metrical lengthening of the third syllable of <foreign xml:lang="grc">βασιλίδος</foreign>. 
+                    The clause <foreign xml:lang="grc">τὸν κόσμον ἅπαντα</foreign> recurs in a Christian inscription from Phrygia of the 3rd cent. CE (SEG 6.159 = SGOst Vol. 3 nr. 16/31/85). The word <foreign xml:lang="grc">κόσμος</foreign> might allude to the world (left by the deceased), rather than to the ornament of the tomb (Manganaro suggests both possibilities). 
+                    <foreign xml:lang="grc">Βασιλίς</foreign> is frequently a proper name or an adjective (often referring to Rome, see e.g. IG 14.830 ll. 17, 31, 41): another example of the use of <foreign xml:lang="grc">Βασιλίς</foreign> as a personal name from Catania is IG 14.450 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001275">ISic001275</ref>, corrected by Manganaro (1988: 68 n. 346 = SEG 38.942, see also LGPN 3A: 89), although probably belonging to the high imperial period. 
+                    On the contrary, Ferrua understands <foreign xml:lang="grc">βασιλίς</foreign> as a noun, synonymous of <foreign xml:lang="grc">βασιλίσσα</foreign>, and he suggests the integration at l. 2 <foreign xml:lang="grc">βασιλ]έως καὶ βασιλίδος</foreign>: Korhonen (2004: 272) accepts the integration, but excludes the possibility that this formula refers to sovereigns (“non siamo ancora ai tempi delle regine bizantine”), assuming an allusion to a theological concept. 
+                    In this sense, <foreign xml:lang="grc">βασιλίς</foreign> perhaps occurs in a Byzantine inscription from Ikaria of 5th-6th cent. CE (SEG 53.904), which refers to the transformation of a temple into a church dedicated to Mary, to which the expression in B l. 2 <foreign xml:lang="grc">ἀγαθὴ ἡμν βασιλίς καὶ δέσποινα</foreign> refers. 
+                    However, there do not seem to be any other evidences of this expression in combination with <foreign xml:lang="grc">βασιλεύς</foreign>.
+                    Manganaro's interpretation, who reads <foreign xml:lang="grc">Βασιλίς</foreign> as a proper name, seems more advisable. The scholar assumed that the funerary inscription names two deceased, the first (whose name was originally in the lacuna) would have died at the age of 14, the second, <foreign xml:lang="grc">Βασιλίς</foreign>, would have died at the age of 28: the likely integrationto at l. 4 <foreign xml:lang="grc">ἔζησ]αν</foreign> refers indeed to two persons. 
+                    Manganaro's integration of ll. 4-5 <foreign xml:lang="grc">ἕν (?) | [ἑτέρα]</foreign>, however, is unacceptable, since the neuter cannot refer to a male individual (unless one assumes an original error of the stonecutter). Ferrua, on the contrary, believed that the epitaph mentions only one deceased woman, of whom it first indicates the years, 14, that she lived ἐν γάμῳ (integration of ll. 4-5) with her husband, and then the total number of years she lived, 28. 
+                    The second part of the epitaph was supposed to contain a curse formula against a possible violation of the tomb (for Christian curse formulas, see Feissel 1980: 464-470). The invocation to <foreign xml:lang="grc">Παντοκράτωρ</foreign> at l. 6 can be eventually preceded by <foreign xml:lang="grc">τὸν θεόν</foreign>, depending on the space in the gap, which cannot be easily quantified. 
+                    An admonition not to violate the tomb follows: Manganaro’s integration of <foreign xml:lang="grc">κληρονόμων</foreign> (or <foreign xml:lang="grc">κληρονομήσῃ</foreign>) is based on a frequent formula in Christian inscriptions, which associates the verb with the expression <foreign xml:lang="grc">τὸν μέλλοντα αἰῶνα</foreign> (see IG 14.1563 ll. 2-4). 
+                    The integration of Manganaro and Korhonen at ll. 9-10, <foreign xml:lang="grc">κατ[ά-|θεσιν ---]</foreign>, is based on the vocabulary of Christian inscriptions, since in these texts <foreign xml:lang="grc">κατάθεσις</foreign> recurs often referred to the tomb. According to Ferrua instead, the last line contained the date of death, <foreign xml:lang="la">dies natales</foreign> for Christians: <foreign xml:lang="grc">τῇ πρ(ὸ) . ] νων(ῶν)</foreign>.
                     <!--Basilis (female) and one other (perhaps Basileus), younger (14 yrs). presence of word Kosmos slightly tricky (world, or ornament?). M proposes a fresh restoration of the text.--></p>
             </div>
             <div type="bibliography">
@@ -232,28 +265,45 @@
                     </bibl>
                     <bibl type="corpus" n="IMusCatania">
                         <citedRange>212</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://zotero.org/groups/382445/items/2EUC82DH"/>
                     </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1989</date>
                         <citedRange>no.426</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
+                        <ptr target="https://zotero.org/groups/382445/items/759ZXHKQ"/>
                     </bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1930</date>
                         <citedRange>317 no.3</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/SKUU2R8X"/>
+                        <ptr target="https://zotero.org/groups/382445/items/SKUU2R8X"/>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1994</date>
                         <citedRange>88-89 no.6 fig.9</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/532NF7SV"/>
+                        <ptr target="https://zotero.org/groups/382445/items/532NF7SV"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl type="corpus" n="IMusCatania">
+                        <citedRange>263</citedRange>
+                        <ptr target="https://zotero.org/groups/382445/items/2EUC82DH"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1988</date>
+                        <citedRange>68 n. 346</citedRange>
+                        <ptr target="https://zotero.org/groups/382445/items/RZSFKACR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Feissel</author>
+                        <date>1980</date>
+                        <citedRange>464-470</citedRange>
+                        <ptr target=""/>
+                    </bibl>
+                </listBibl>
             </div>
         </body>
     </text>
