@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ISic030027</title>
+                <title>ISic020753</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#VM">Valentina Mignosa</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -16,7 +16,7 @@
                 </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
-                    <resp>original data collection and editing</resp>
+                    <resp>original data collection and editing, encoding text in Epidoc</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
@@ -37,13 +37,13 @@
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
-                <idno type="filename">ISic030027</idno>
+                <idno type="filename">ISic020753</idno>
                 <idno type="TM"/>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
                 <idno type="EDCS"/>
-                <idno type="PHI">329512</idno>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030027</idno>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic020753</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
@@ -53,27 +53,29 @@
                     <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement></settlement> 
-                        <repository role="museum"></repository>
+                        <settlement>Agrigento</settlement> <!-- and/or Deposito della Soprintendenza di Enna a Piazza Armerina (Palazzo Trigona) -->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/130">Museo Regionale Archeologico Pietro Griffo</repository> <!-- and/or http://sicily.classics.ox.ac.uk/museum/6, Biblioteca Comunale / Museo Archeologico ??? -->
                         <idno type="inventory"></idno>
                         <altIdentifier>
-                            <settlement/>
+                            <settlement>Montagna di Marzo</settlement>
                             <repository/>
                             <idno type="old"/>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="scx">Sikel<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Ancient Greek</desc></certainty></textLang>    
+                        <textLang mainLang="scx">Sikel</textLang>    
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p>Greaves.</p>
-                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
-                                    <objectType ana="#object.greave" ref="???">greave</objectType>
+                                    <p>Cup.</p>
+                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
+                                    <objectType ana="#object.vessel.cup" ref="http://kerameikos.org/id/cup">cup</objectType>
                                     <dimensions>
-                                        <height unit="cm"/>
+                                        <height unit="cm"></height>
+                                        <dim type="diameter" subtype="base" unit="cm"></dim>
+                                        <dim type="diameter" subtype="foot" unit="cm"></dim>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
                                     </dimensions>
@@ -82,35 +84,34 @@
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
-                                    <p>The text is placed at the top above the knee of each greave.</p>
+                                    <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
+                                    <p>The text is arranged in a clockwise spiral and there is a letter chi (or a commercial mark) at the center of the inscription that does not seem part of the text.</p>
                                     <damage ana="#text_condition.complete"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1"/>
+                                <!-- Based on Glyph table: alpha09; alpha26; gamma04; epsilon06; lambda08; mu01; omicron(?)12; sigma03; upsilon03; chi04 or commercial mark?. -->
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"></height>
                                 </dimensions>
-                            </handNote>                       
+                            </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName/>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462239">Herbessus (?)</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/11102431">Montagna di Marzo</placeName>
-                                <geo>37.42658,14.30061</geo>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462239">Herbessus (?)</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/11102431/">Montagna di Marzo</placeName>
+                                <geo>37.42658, 14.30061</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="lettering" notBefore-custom="-0500" notAfter-custom="-0480">500—480 BCE</origDate>
+                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0500" notAfter-custom="-0450">500—450 BCE</origDate><!-- check Mussinano -->
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in Montagna di Marzo<geo></geo>.</provenance><!-- add more information from Agostiniani 1976-1977 -->
-                        <provenance type="observed" subtype="autopsied">No autopsy</provenance>
-                        <provenance></provenance>
+                        <provenance type="found">Found during the excavations (Soprintendenza alle Antichità di Siracusa, 1966—1968) in the area of the archaic necropolis, grave 169<geo>37.42658, 14.30061<!-- add more accurate coordinates here, these are the generic ones --></geo>.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -121,12 +122,12 @@
                 <xi:fallback>
                     <p>Taxonomies for ISicily controlled values</p>
                 </xi:fallback>
-            </xi:include>             
-            <xi:include href="../alists/charDecl.xml">                 
-                <xi:fallback>                     
-                    <p>ISicily glyphs authority list</p>                 
-                </xi:fallback>             
-            </xi:include>         
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
         </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -149,7 +150,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/104.html">ownership</term>
+                    <term ana="#function.production-ownership" ref="http://vocab.getty.edu/page/aat/300195926">ownership (?)</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -157,7 +158,7 @@
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2021-07-24" who="#VM">Valentina Mignosa added metadata and text</change>
+                <change when="2021-10-14" who="#VM">Valentina Mignosa added metadata, text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -179,22 +180,37 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="scx-Grek" resp="#VM">
                 <div type="textpart" subtype="section" n="a">
-                    <ab>
-                        <lb n="1"/>Δενδᾶ
+                    <ab>    
+                       <lb n="1"/>γασμυσαελ<unclear>ο</unclear>ς
+                   </ab>
+                 </div>
+                <div type="textpart" subtype="section" n="b">
+                    <ab>    
+                       <lb n="1"/><g ref="#sign_uninterpreted"/>
+                   </ab>
+                 </div>
+            </div>
+            <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="scx-Latn">                 
+                <div type="textpart" subtype="section" n="a">
+                    <ab>    
+                        <lb n="1"/>gasmusaelos
                     </ab>
                 </div>
                 <div type="textpart" subtype="section" n="b">
-                    <ab>
-                        <lb n="1"/>Δενδᾶ
+                    <ab>    
+                      <lb n="1"/><g ref="#sign_uninterpreted"/>
                     </ab>
                 </div>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text after Arena (IGASM II)</note>
+                        <note>Text after apograph.</note>
+                    </app>
+                    <app>
+                        <note>Agostiniani 2018: γασμυσχελος</note>
                     </app>
                 </listApp>
             </div>
@@ -204,53 +220,26 @@
             <div type="translation" xml:lang="it">
                 <p></p>
             </div>
-            <div type="commentary" xml:lang="en">
-                <p></p>
+            <div type="commentary" xml:lang="en" resp="#VM">
+                <p>According to the editor, this would be an imitation of a Greek name, with the Greek masculine nominative ending in -ος 
+                    (as in <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic020754">ISic020754</ref>, Agostiniani 2018, p. 192, n. 144).
+                    The letter in the centre of the inscription should not be read as an integral part of the inscription, but could be interpreted as one 
+                    of the well-known and recurrent signs placed on ceramics, both local and imported, in the form of a cross and perhaps as a trademark.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IAS2">
                         <author>Agostiniani</author>
                         <date>Forthcoming</date>
-                        <citedRange>MMA 86a-b</citedRange>
+                        <citedRange>MMA 52</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/UE7VX29V"/>
-                    </bibl>
-                    <bibl type="corpus" n="IGASM2[2]">
-                        <author>Arena</author>
-                        <date>2002</date>
-                        <citedRange>123, pl. XXXIV.1</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/65P7AM6N"/>
-                    </bibl>
-                    <bibl>
-                        <author>Agostiniani in Agostiniani and Prosdocimi</author>
-                        <date>1976-1977</date>
-                        <citedRange>229-330</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/CVY2ZP7C"/>
-                    </bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1976-1977</date>
-                        <citedRange>254</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SEHVSNZG"/>
-                    </bibl>
-                    <bibl>
-                        <author>Guarducci</author>
-                        <date>1967-1987</date><!-- vol. 3, 1974 -->
-                        <citedRange>349, fig. 120</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/ENQ4AGD6"/>
-                    </bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1968-1969</date>
-                        <citedRange>200, note 18, pl. 17.2</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/WGKVC9MZ"/>
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
                     <bibl>
                         <author>Agostiniani, Albanese Procelli</author>
                         <date>2018</date>
-                        <citedRange>183, 192, figs. 117-118</citedRange>
+                        <citedRange>188, n. 125; 192, n. 144; fig. 115</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/RASC3AR5"/>
                     </bibl>
                 </listBibl>
