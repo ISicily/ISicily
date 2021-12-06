@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 004275</title>
+                <title>Epitaph of Caius Clodius Capito</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -30,6 +30,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="DEE" ref="http://orcid.org/0000-0002-2337-9047">David Espinosa Espinosa</name>
+                    <resp>editing, EpiDoc encoding, and full name and word tagging</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -42,10 +46,10 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic004275</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
+                <idno type="TM">493816</idno>
+                <idno type="EDR">159450</idno>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
+                <idno type="EDCS">25601309</idno>
                 <idno type="PHI">334873</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004275</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4390277</idno>
@@ -76,27 +80,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Stele of volcanic stone</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
+                                    <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
+                                    <dimensions><!--from EDR159450-->
+                                        <height unit="cm">100</height>
+                                        <width unit="cm">40</width>
+                                        <depth unit="cm">13</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>The text is not very well cared for</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--from EDR159450-->
+                                <locus from="line1" to="line2">Line 1 to 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">90-105</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -112,8 +118,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100">1st century BCE — 1st century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Found in 1981 in the Castle, in an accumulation of stones at the base of the cathedral bell tower</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -153,7 +160,7 @@
                 <language ident="sxc">Sikan</language>
             </langUsage>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -161,6 +168,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-12-03" who="#DEE">David Espinosa Espinosa tagged full name and word</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -182,22 +190,20 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI334873">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#DEE">
                 <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>C</abbr>
-                        <ex>ai</ex>
-                    </expan>
-                    Clodi<lb n="2"/>Capitonis.
-                    <lb n="3"/>
+                    <lb n="1"/><persName type="attested"><name type="praenomen"><expan><abbr>C</abbr><ex>ai</ex></expan></name> <name type="nomen">Clodi</name>
+                    <lb n="2"/><name type="cognomen">Capitonis</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text according to ILipara 765</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#DEE">
+                <p>(Monumentum) of Caius Clodius Capito.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#DEE">
+                <p>(Monumentum) di Caius Clodius Capito.</p>
             </div>
             <div type="commentary">
                 <p><!--commentary--></p>

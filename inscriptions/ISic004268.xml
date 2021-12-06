@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 004268</title>
+                <title>Inscription naming Augustus (?)</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -30,6 +30,10 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="DEE" ref="http://orcid.org/0000-0002-2337-9047">David Espinosa Espinosa</name>
+                    <resp>editing, EpiDoc encoding, and full name and word tagging</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -42,10 +46,10 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic004268</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
+                <idno type="TM">493807</idno>
+                <idno type="EDR">158481</idno>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
+                <idno type="EDCS">25601300</idno>
                 <idno type="PHI">334860</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004268</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4390263</idno>
@@ -76,11 +80,13 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Volcanic stone block with the text cut in half</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
+                                    <objectType ana="#object.block" ref="https://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <dimensions><!--from ILipara 752-->
+                                        <height unit="cm">17</height>
+                                        <width unit="cm">155</width>
+                                        <depth unit="cm">25</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -93,12 +99,12 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--from ILipara 752-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line1" to="line1">Interlineation line 1 to 1</locus>
                                 <dimensions type="interlinear">
                                     <height unit="mm"/>
                                 </dimensions>
@@ -112,8 +118,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0027" notAfter-custom="0014">Augustan</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">The block was reused together with ISic004269 on a doorpost in the semi-destroyed house of the priest F. Belsito in Serro Belvedere (Salina), according to P. Orsi, who learned of it during a visit to the island in June 1928</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -153,7 +160,7 @@
                 <language ident="sxc">Sikan</language>
             </langUsage>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -161,6 +168,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-11-26" who="#DEE">David Espinosa Espinosa tagged full name and word</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -182,28 +190,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI334860">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#DEE">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— — — — — — —</supplied>
-                    <lb n="2"/>vac.
-                    <expan>
-                        <abbr>C</abbr>
-                        <ex>ai</ex>
-                    </expan>
-                    <expan>
-                        <abbr>f</abbr>
-                        <ex>ilio</ex>
-                    </expan>
-                    Augusto
-                    <lb n="3"/>
+                    <lb n="1"/><gap reason="illegible" extent= "unknown" unit="line"></gap>
+                    <lb n="2"/><space extent="unknown" unit="character"/> <persName type="attested" subtype="imperial"><name type="patronym"><expan><abbr>C</abbr><ex>ai</ex></expan></name> <w><expan><abbr>f</abbr><ex>ilio</ex></expan></w> <name type="cognomen">Augusto</name></persName>
+                    <lb n="3"/><gap reason="illegible" extent= "unknown" unit="line"></gap>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text according to ILipara 752</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#DEE">
+                <p>[...] Augustus, son of Caius [...].</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#DEE">
+                <p>[...] Augustus, figlio di Caius [...].</p>
             </div>
             <div type="commentary">
                 <p><!--commentary--></p>
