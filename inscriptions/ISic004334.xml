@@ -57,13 +57,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <repository/>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -77,7 +75,8 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <p>Epitaph of Nikolaos and Theodosia, recorded only in a manuscript.</p>
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
@@ -86,14 +85,16 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
+                                    <p>Several lines of illegible text at the end.</p>
+                                    <p></p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -114,7 +115,7 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0600">Christian</origDate>
                         </origin>
-                        <provenance type="observed" subtype="recorded">Only known from copy in MS in Biblioteca Civica di Palermo</provenance>
+                        <provenance type="observed" subtype="recorded">Only known from copy in MS in Biblioteca Civica di Palermo (Qq. E. 136, 751). Reported as set in one of the arches of Santa Maria.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
@@ -157,6 +158,9 @@
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
                     <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
+                <keywords scheme="#ISicily-cult_domain">
+                    <term ana="#cult_domain.christian">Christian</term>
+                </keywords>
             </textClass>
         </profileDesc>
         <revisionDesc status="unchecked">
@@ -167,6 +171,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-11-30" who="#SS">encoded text and supplemented metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -188,18 +193,29 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SS">
+                <ab>
+                    <lb n="1"/><g ref="#cross_uninterpreted"/> Μνήστητη <expan><hi rend="supraline"><abbr>Κ</abbr></hi><ex>ύρι</ex><hi rend="supraline"><abbr>ε</abbr></hi></expan>
+                    <lb n="2"/>τοῦ δούλου σου Ν
+                    <lb n="3" break="no"/>ικολάου κὲ Θεοδ
+                    <lb n="4" break="no"/>οσίας τῆς συμβίου αυτοῦ <note>uncertain restoration</note>
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/> Α
+                    <lb n="6" break="no"/>ρκαδίου <gap reason="illegible" extent="unknown" unit="character"/>
+                    <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/> 
+                </ab>
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="it" source="https://www.zotero.org/groups/382445/isicily/items/T5E638KA">
+                <p>Ricordati, Signore, del tuo servo Nikolaos e di Theodosia (?) sua moglie...</p>
+            </div>
+            <div type="translation" xml:lang="en" resp="#SS">
+                <p>Remember, Lord, your servant Nikolaos and his wife Theodosia (?) ...</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Epitaph for Nikolaos and Theodosia--></p>
+                <p><!--commented out pending revision--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -217,6 +233,7 @@
                         <author>Rizzone</author>
                         <date>2010-2011</date>
                         <citedRange>277-278 dr</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/isicily/items/T5E638KA"/>
                     </bibl>
                     <bibl>
                         <author>Rizzone</author>

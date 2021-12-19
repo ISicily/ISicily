@@ -51,19 +51,16 @@
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4390332</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                        Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <repository></repository>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -77,25 +74,28 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
+                                    <p>Fragment broken on the left- and right-hald sides.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
+                                    <p>Fragmentary text on four lines. Below them a line in about half the size of the previous lines, followed by an outline of a hand.</p>
+                                    <p>Lunate sigma in lines 1 and 3, lunate episilon in lines 3 and 5.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -116,8 +116,7 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st — 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">From excavations in the necropolis area to south of main habitation
-                        </provenance>
+                        <provenance type="found" subtype="discovered">From excavations in the necropolis area to south of main habitation.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -170,6 +169,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-11-30" who="#SS">encoded text and supplemented metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,8 +191,14 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SS">
+                <ab>
+                    <lb n="1"/><name><gap reason="lost" extent="unknown" unit="character"/></name> <orig></orig> ναυ
+                    <lb n="2" break="no" cert="low"/><supplied reason="lost">κλήρος</supplied> <supplied reason="lost">ἔνθαδ</supplied>ε ἱκόμη
+                    <lb n="3" break="no" cert="low"/><supplied reason="lost">ν</supplied> <gap reason="lost" extent="unknown" unit="character"/> ἔζησεν
+                    <lb n="4"/><supplied reason="lost">ἔτη</supplied> <num value="43">ΜΓ</num> <g ref="#ivy-leaf"/>
+                    <lb n="5"/><supplied reason="lost">ἀπο</supplied>λέπει
+                </ab>
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
@@ -201,8 +207,7 @@
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--fragmentary text on four lines: - - -S NAY - - -E IKOME - - -EZESEN - - -MG and in smaller letters below [- - -]LEPEI. Outline of a hand below.--></p>
+                <p>The text in combination with the image of a hand below suggest a threat aimed at preventing desecration of the grave.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -212,7 +217,8 @@
                     </bibl>
                     <bibl>
                         <author>Bitto</author>
-                        <date>2011</date>
+                        <date>2012</date>
+                        <ptr target="http://zotero.org/groups/382445/items/IR9ATAGW"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
