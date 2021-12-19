@@ -30,7 +30,7 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
+                <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
@@ -52,9 +52,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001174</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4351707</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -75,15 +73,16 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html" cert="low">limestone</material>
+                                <support><p>A monumental inscription on at least two large 'tabulae', presumably free-standing stelae; fragments both lost and preserved are recorded of at least two.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
                                     <dimensions><!--based upon the measurements of Gualtherus-->
                                         <height unit="cm">95</height>
                                         <width unit="cm">7</width>
                                         <depth unit="cm">61</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.non-contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
@@ -114,11 +113,9 @@
                                 </offset>
                             	<geo>37.99907, 14.26197</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" precision="low">2nd — 1st century BCE (Kaibel
-                                simply 'post-Roman conquest'; Calderone argues 2nd — 1st on letter forms etc. of his frag.;
-                                but, 1998, for c. 300 BCE, which Nenci too believes; Manganaro 2nd century BCE).</origDate> <!-- needs tidying before we add more origDates with alternative values -->
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" precision="low">2nd — 1st century BCE (Kaibel simply 'post-Roman conquest'; Calderone argues 2nd — 1st on letter forms etc. of his frag.; but, 1998, for c. 300 BCE, which Nenci too believes; Manganaro 2nd century BCE).</origDate> <!-- needs tidying before we add more origDates with alternative values -->
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1558">The principal fragment was found in the area of the church of Santa Maria dei Palazzi, on the site of Halaesa, in 1558.<geo cert="medium">37.996420, 14.261944</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
@@ -175,6 +172,7 @@
                 <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-08-18" who="#JP">Jonathan Prag made initial cleaning of text epidoc and amended bibliography</change>
+                <change when="2021-11-23" who="#JP">Jonathan Prag added fragments c and d from Arena 2020, and amended commentary and metadata</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -197,8 +195,8 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <div type="textpart" subtype="fragment" n="a">
-                    <div type="textpart" subtype="column" n="1">
-                     <ab>
+                    <ab>
+                        <cb n="1"/>
                          <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>τὸν ὑπὸ κα
                          <lb n="2" break="no"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">κα</supplied>τὰ τοῦ ὁρίου ἐς τὸν πο
                          <lb n="3" break="no"/><supplied reason="lost">ταμὸν</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">καὶ κατ</supplied>ὰ τοῦ ποταμοῦ ἕστε ποτὶ
@@ -270,11 +268,8 @@
                          <lb n="69"/>ἐλαιοκόμιον δίκλαρον
                          <lb n="70"/>περίστασις τῷ ἐλαιοκομίῳ εἴ τίς ἐστι ἱερά, ἕπεται· οὐ ποιησοῦν
                          <lb n="71" break="no"/>τι δὲ βυρσοδέψιον οὐδὲ μαγειρικὸν οἱ μισθωσάμενοι τὸ ἐλαιοκόμιον
-                     </ab>
-                    </div>
-                    <div type="textpart" subtype="column" n="2">
-                        <ab>
-                            <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ου κα<supplied reason="lost">ὶ</supplied>
+                        <cb n="2"/>
+                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ου κα<supplied reason="lost">ὶ</supplied>
                             <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>ν τὰν ὑπὸ τὸ
                             <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> ἐς τὸν τέρμονα
                             <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">τὸ ὅρ</supplied>ιον τοῦ <g ref="#interpunct">·</g> θʹ <g ref="#interpunct">·</g> κλάρου καὶ
@@ -364,10 +359,9 @@
                             <lb n="88"/>τὸν τέρμονα καὶ ὡς ὁ τέρμων ἄχρι ποτὶ τὸν ῥοίσκον.
                 </ab>
                 </div>
-                </div>
-               <div type="edition" subtype="fragment" n="b">
-                <div type="textpart" subtype="column" n="1">
-                   <ab>
+               <div type="textpart" subtype="fragment" n="b">
+                <ab>
+                    <cb n="1"/>
                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ὁ</supplied>δὸς
                        <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">π</supplied>όλει
                        <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>ου
@@ -392,10 +386,7 @@
                        <lb n="22" break="no"/><supplied reason="lost">ον</supplied> <gap reason="lost" extent="unknown" unit="character"/> πρῶτον <expan><abbr>τέ</abbr><ex>ρμονα</ex></expan> καὶ
                        <lb n="23"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ῥ</supplied>άχαν τὸν ὑπ<supplied reason="lost">ὸ</supplied>
                        <lb n="24"/><gap reason="lost" extent="unknown" unit="character"/> <unclear>γ</unclear>ι ἀπὸ <gap reason="lost" extent="unknown" unit="character"/>
-                   </ab>
-                </div>
-                   <div type="textpart" subtype="column" n="2">
-                       <ab>
+                <cb n="2"/>
                            <lb n="1"/> <orig>Χ</orig><gap reason="lost" extent="unknown" unit="character"/>
                            <lb n="2"/><orig>Ν</orig><gap reason="illegible" unit="character" quantity="1"/><orig>Σ</orig> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἐς πέ</supplied>
                            <lb n="3" break="no"/>τρον ε<gap reason="lost" extent="unknown" unit="character"/>
@@ -415,11 +406,34 @@
                            <lb n="17"/>τὸ μι<supplied reason="lost">κρὸν</supplied> <gap reason="lost" extent="unknown" unit="character"/>
                            <lb n="18"/>το<unclear>υ</unclear><gap reason="lost" extent="unknown" unit="character"/>
                        </ab>
-                   </div>
-               </div>
+                 </div>
+                 <div type="textpart" subtype="fragment" n="c">
+                     <ab>
+                         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" unit="character" quantity="1" cert="low"/><gap reason="illegible" unit="character" quantity="1"/><orig>ΗΚ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τ</supplied>ᾶς ῥαχίας<gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>Σ</orig> ὑπὸ τὸν <unclear>Κ</unclear><supplied reason="lost" cert="low">άνησσον</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΝΑ</orig> ἐν ᾧ <expan><abbr><hi rend="ligature">Τέ</hi></abbr><ex>ρμων</ex></expan> <gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τᾶ</supplied><unclear>ς</unclear> ὁδοῦ τᾶ<supplied reason="lost">ς</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><unclear>ΥΝΙΟ</unclear><gap reason="lost" extent="unknown" unit="character"/>
+                     </ab>
+                 </div>
+                <div type="textpart" subtype="fragment" n="d">
+                     <ab>
+                         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἐς</supplied> <supplied reason="lost">τὸ</supplied>ν πέτρ<unclear>ο</unclear><supplied reason="lost">ν</supplied> <supplied reason="lost">ἐν</supplied> <supplied reason="lost">ᾧ</supplied> <supplied reason="lost"><expan><abbr>τέ</abbr><ex>ρμων</ex></expan></supplied><gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">α</supplied>̓́νω δ’ ἐς Κά<supplied reason="lost" cert="low">νησσον</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>ἕστε κ<supplied reason="lost">ατὰ</supplied> <supplied reason="lost">τὸν</supplied> <supplied reason="lost" cert="low"><expan><abbr>τέ</abbr><ex>ρμονα</ex></expan></supplied><gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ε</unclear>ΙΚΟ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                         <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">τ</supplied><unclear>ὰ</unclear>ν ὁ<unclear>δ</unclear><supplied reason="lost">ὸν</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                        </ab>
+                 </div>
             </div>
             <div type="apparatus" resp="#JP">
-                <listApp><app><note>Holding text for working purposes; Fragment A text IG XIV.352 via PHI 140657 and Fragment B text SEG 4.45 (after Arangio-Ruiz) via PHI329609</note></app></listApp>
+                <listApp>
+                    <app loc="frA"><note>Text of IG XIV.352</note></app>
+                    <app loc="frB"><note>Text of SEG 4.45</note></app>
+                    <app loc="frC"><note>Text of Arena 2020: 5 no. 1</note></app>
+                    <app loc="frD"><note>Text of Arena 2020: 15 no. 2</note></app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>
@@ -557,8 +571,9 @@
                     boundary marker, and where the boundary is as far as the rill.</p>
             </div>
             <div type="commentary">
-                <p>The translation of Fragment A is based upon the text of Dubois, IGDS no.196.
-                    <!--The main frag., in IG, is long-since lost; the second frag, clearly integrated, publ'd by Di Giovanni in 1885, is also lost; the third, publ'd by Calderone in 1961, survives; the integration of the three is v.likely - prob. that the original frag. is reported as 'marble', whereas Calderone's piece is 'calcare marnoso', but C argues that the 1885 frag was of the same material as his, it clearly fits the original, and his, from the surviving photo of the 1885, clearly matches that. The rock type is a sort easily confused with marble. This integration seems generally accepted. The text is concerned with local land division. IGDS separates the Calderone frag. out as 197. Manganaro 1977, p.150 mentions in passing other evidence for cont. of cult of Zeus Meilichios in C3-2 BC, with reference to the appearance of a Meilichieion in this inscr. Giallombardo 1992 presents a new C16 MS copy of the inscr. from Madrid. SEG 40.796 notes Prestianni's intention to produce a new edn of all three known frr.--></p>
+                <p>(Note that the translation of Fragment A is based upon the text of Dubois, IGDS no.196.)</p>
+                <p>The main fragment A, is long-since lost, in the course of the 17th century; the second fragment, B, found in 1885 and published the same year by Di Giovanni is also now lost. Two further fragments, sporadic finds on the site of Halaesa (fragment c in 2007, fragment d undated), were published in 2020 by Arena. The original reports of discovery of the principal fragment reference the existence of a second very mutilated and damaged stele that was therefore not recovered or recorded further. It is most commonly reckoned that Fragment B probably derives from this second stele. Arena argues cogently that fragments C and D belong to this text, and explores the possible hypotheses regarding whether they should be associated with the first stele / fragment A, or with the second and fragment B, concluding with a speculative integration of fragment C into the right hand side of column 2 of fragment B. Fragment D is too small to warrant such speculation.</p>
+                <p>A further substantial fragment (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003651">ISic003651</ref>) of similar type, but slightly divergent content was published by Calderone in 1961, and is generally considered to belong to a separate but probably associated text. Arena 2020 offers the most detailed consideration of the relationship, concluding that the stone and text are distinct, but belong within the same socio-economic and political context and is most likely associated to, if separate from, the cadastral text itself.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -757,6 +772,12 @@
                         <date>2012</date>
                         <citedRange>265-267</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/M5NPN3MF"/>
+                    </bibl>
+                    <bibl>
+                        <author>Arena</author>
+                        <date>2020</date>
+                        <citedRange>5-24 nos. 1-2</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/KAIR5ZLR"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion">
