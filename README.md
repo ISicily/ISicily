@@ -1,6 +1,9 @@
 # ISicily
-I.Sicily is a project to build and maintain a TEI-XML EpiDoc corpus of the inscriptions of ancient Sicily. The public data can be accessed through a web interface at http://sicily.classics.ox.ac.uk.
-More information on the project and the data can be found at http://isicily.org.
+*I.Sicily* is a project to build and maintain a TEI-XML EpiDoc corpus of the inscriptions of ancient Sicily. The public data can be accessed through a web interface at http://sicily.classics.ox.ac.uk.
+More information on the project and the data can be found at http://isicily.org, as well as on the [wiki](https://github.com/ISicily/ISicily/wiki) of this repository. *I.Sicily* is now part of the ERC-funded [*Crossreads* project](http://crossreads.web.ox.ac.uk), contributing to wide-ranging study of the epigraphic culture of ancient Sicily.
 The EpiDoc files in this repository constitute the core public dataset of the project and are subject to continuous update and revision.
 If you would like to contribute or collaborate on the project, please contact the repository owner, Jonathan Prag (jonathan.prag@merton.ox.ac.uk).
-I.Sicily files are currently archived at irregular intervals at Zenodo: https://doi.org/10.5281/zenodo.2556743.
+*I.Sicily* files are currently archived at irregular intervals at Zenodo: https://doi.org/10.5281/zenodo.2556743; individual files are also archived on Zenodo following major revisions; the DOI of individual deposits can be found within the individual XML files.
+*I.Sicily* is supported by the University of Oxford, the ERC (*Crossreads*), Merton College Oxford, and the Assessorato regionale dei beni culturali e dell'identità siciliana.
+
+![Oxford logo_w=100px](https://user-images.githubusercontent.com/25080386/149907786-54db5a8f-8484-41ac-93f2-7c8c3dcc3e19.jpg)  ![crossreads_logo3_w=200px](https://user-images.githubusercontent.com/25080386/149907916-55168363-58b4-4202-9459-c9651d35e5d4.jpg)  ![LOGO_ERC-FLAG_EU_cropped_w=200px](https://user-images.githubusercontent.com/25080386/149907944-dd9c0c84-1233-4945-b234-f22421951a00.jpg)  ![RegioneSiciliana_w=100px](https://user-images.githubusercontent.com/25080386/149907854-e06ba000-8a6d-4f99-a3dd-f2e871b1ae07.jpg)
