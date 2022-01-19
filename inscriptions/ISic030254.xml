@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ISic030199</title>
+                <title>ISic030254</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#VM">Valentina Mignosa</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -37,13 +37,13 @@
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
-                <idno type="filename">ISic030199</idno>
+                <idno type="filename">ISic030254</idno>
                 <idno type="TM"/>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
                 <idno type="EDCS"/>
-                <idno type="PHI">175327</idno>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030199</idno>
+                <idno type="PHI">175385</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030254</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
@@ -55,7 +55,7 @@
                         <region>Sicily</region>
                         <settlement>Santa Croce Camerina</settlement> 
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/093">Museo Archeologico Regionale di Kamarina</repository>
-                        <idno type="inventory">8721</idno>
+                        <idno type="inventory">8798</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -73,27 +73,41 @@
                                     <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                     <objectType ana="#object.tessera" ref="http://www.eagle-network.eu/voc/objtyp/lod/276.html">tessera</objectType>
                                     <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <height unit="cm">2-1.8</height>
+                                        <width unit="cm">7.5</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.complete"/>
+                                <condition ana="#condition.incomplete"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
-                                    <p>The text is placed on both sides of the lamina. On side b the text is deliberately erased and cannot be read.</p>
+                                    <p>The text is placed on both sides of the lamina.</p>
                                     <damage ana="#text_condition.partly_illegible"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
-                                <!-- Based on Glyph table: -->
-                                <locus from="line1" to="line1"/>
+                            <handNote xml:id="h1">
+                                <!-- Based on Glyph table: alpha10. -->
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"></height>
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                            <handNote xml:id="h2">
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
                                 </dimensions>
                             </handNote>                       
                         </handDesc>
@@ -156,7 +170,7 @@
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2021-07-30" who="#VM">Valentina Mignosa added metadata and text</change>
+                <change when="2022-01-18" who="#VM">Valentina Mignosa added metadata and text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -181,13 +195,13 @@
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <div type="textpart" subtype="face" n="a">
                     <ab>
-                        <lb n="1"/><persName type="attested"><name type="idionym">Στράτο̄ν</name> <persName type="attested"><name type="idionym">Ἐρά
-                        <lb n="2" break="no"/>το̄ν</name> <w>ͱυιός</w></persName></persName>
+                        <lb n="1"/><handShift new="#h1"/><persName><name type="idionym"><gap reason="lost" extent="unknown" unit="character"/><seg part="F">ις</seg></name> <persName><name type="patronym"><gap reason="lost" extent="unknown" unit="character"/>Πυρρία</name></persName></persName>
+                        <lb n="2" style="text-direction:r-t-l"/><handShift new="#h2"/><persName><name type="idionym"><seg part="I"><hi rend="inverted">Ὀπε</hi></seg><gap reason="illegible" quantity="5" unit="character"/></name> <persName><name type="patronym"><seg part="I"><hi rend="inverted">Σιμ</hi></seg><gap reason="lost" extent="unknown" unit="character"/></name></persName></persName>
                     </ab>
                 </div>
                 <div type="textpart" subtype="face" n="b">
                     <ab>
-                        <lb n="1"/><del rend="erasure"><gap reason="lost" extent="unknown" unit="character"/></del>
+                        <lb n="1"/><handShift new="#h1"/><gap reason="lost" extent="unknown" unit="character"/> φρά<supplied reason="lost">τρα</supplied>
                     </ab>
                 </div>
             </div>
@@ -205,22 +219,15 @@
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p>This document is one of a large deposit (c. 150) of lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.
-                        The structure of this tessera can be compared to others from the same deposit in which the onomastic formula features the word ͱυιός preceded by a 
-                        double nominative, which Masson (quoted by Cordano 1992, p. 55) assumed to be a form of asyndeton (see also <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic030259">ISic030259</ref>)
-                        and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic030236">ISic030236</ref>).</p>
+                <p>This document is one of a large deposit (c. 150) of lead tesserae found in a storeroom of Athena's sanctuary at the archaeological site of Kamarina.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl>
                         <author>Cordano</author>
                         <date>1992</date>
-                        <citedRange>72</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/XTMUJ38N"/>
-                    </bibl>
-                    <bibl type="bulletin" n="SEG">
-                        <citedRange>42.0846</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <citedRange>127</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/XTMUJ38N"/> 
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
