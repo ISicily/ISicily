@@ -50,21 +50,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003424</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388550</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">25253</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -77,29 +73,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Rectangular off-white marble plaque broken down the middle and reconnected. Seemingly intact, but chipped along the left and top edges. The rear is smooth.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">21.6</height>
+                                        <width unit="cm">29.5</width>
+                                        <depth unit="cm">1.7-2.0</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete.broken"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Five lines of Greek text, centred on the stone, with a consistent left margin, and final line (numerals) centred between ivy leaves.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Letters are deeply v-cut, somewhat elongated, and showing some tendency towards curvature in e.g. the M. Minial use of serifs. Lunate omega, but rectilinear epsilon and sigma. Alpha with broken bar; mu with four full-length, slanting strokes; kappa with short ams; omicron ovoid but full height; epsilon tall and thin, all bars of equal length; zeta an equal length Z. Use of interpunct to mark off the names, and hedera around the numeral.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">29-38</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">25-30</height>
+                                </dimensions>
+                                <locus from="line3" to="line5">Line 3-5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">30-34</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -117,12 +121,12 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st — 3rd century CE</origDate>
                         </origin>
-                        <provenance type="transferred" subtype="purchased">Purchased</provenance>
-                        <provenance type="observed">Depositi, Mag B, new cass.4</provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#JP">2014.09.10</provenance>
+                        <provenance type="observed" subtype="discovered" notAfter="1906">Exact details not recorded, found in Centuripe prior to 1906.</provenance>
+                        <provenance type="transferred" subtype="purchased" when="1906-01-24">Purchased for the Siracusa museum by Paolo Orsi, 1906-01-24.</provenance>
+                        <provenance type="observed" subtype="recorded">Depositi, Magazzino B, cassa 4</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP" when="2014-09-10">Prag 2014-09-10</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -164,47 +168,55 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+            	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-02-01" who="#JP">Jonathan Prag made initial edit from autopsy records and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic003424_tiled.tif" height="2454px" width="3220px">
+                <desc>Photo J. Prag, 2014-09-10, by permission of Museo Archeologico Regionale Paolo Orsi</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003424.jpg" height="2454px" width="3220px">
+                <desc>Photo J. Prag, 2014-09-10, by permission of Museo Archeologico Regionale Paolo Orsi</desc>
+            </graphic>
+        </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic003424_rear_tiled.tif" height="2395px" width="3131px">
+                <desc>Photo J. Prag, 2014-09-10, by permission of Museo Archeologico Regionale Paolo Orsi</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003424_rear.jpg" height="2395px" width="3131px">
+                <desc>Photo J. Prag, 2014-09-10, by permission of Museo Archeologico Regionale Paolo Orsi</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/>Λαμνα <g ref="#interpunct">·</g> Κορ
+                    <lb n="2" break="no"/>νηλι <g ref="#interpunct">·</g> Ἀλκίνων
+                    <lb n="3"/>χρηστὲ χαῖρε
+                    <lb n="4"/>ἔζησεν <g ref="#interpunct">·</g> ἔτη
+                    <lb n="5"/><g ref="#ivy-leaf">❦</g> <num value="32">λβ</num> <g ref="#ivy-leaf">❦</g>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text from autopsy</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Two joined fragments. Lamna Kornelia Alkinon, chreste kaire ezesen ete LB. Not seemingly republished?--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -215,14 +227,15 @@
                         <citedRange>494</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
-                    <bibl>
-                        <author>Libertini</author>
-                        <date>1926</date>
-                        <citedRange>17</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VJZRAI26"/>
-                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Libertini</author>
+	           <date>1926</date>
+	           <citedRange>17</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/VJZRAI26"/>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>
