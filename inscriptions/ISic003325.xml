@@ -50,18 +50,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003325</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388408</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Segesta</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/196">Parco archeologico di Segesta</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -76,28 +74,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                <support><p>Three quadrangular slabs originally from the crepidoma of the west side of the great north stoa, but reused for the crepidoma of the annex to the podium temple on the west side of the agora, and inscribed in that context.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.arch_element.crepidoma" ref="https://www.eagle-network.eu/voc/objtyp/lod/1876.html">crepidoma</objectType>
                                     <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
+                                        <height unit="cm"></height>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Regular letters with triangular interpuncts.</p>
+                                <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">72-78</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -113,9 +112,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" precision="low">1st century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0050" notAfter-custom="-0001" evidence="archaeological-context lettering">second half of the 1st century BCE (Ampolo - Erdas)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" xml:id="findspot">Agora, isa Excavations, SAS 4</provenance>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">Agora, Found during excavations in 1995, US 4558<geo>37.939716, 12.842467</geo></provenance>
                         <provenance type="observed" corresp="#findspot">in situ</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
@@ -161,16 +160,17 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-09-23" who="#JP">Jonathan Prag added ISegesta ref</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-05-10" who="#JP">Jonathan Prag made initial edits from ISegesta edition</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -192,11 +192,16 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name type="praenomen"><expan><abbr>L</abbr><ex>ucius</ex></expan></name> <g ref="#interpunct">·</g> <name type="nomen">Caecilius</name>  <g ref="#interpunct">·</g> <persName type="attested"><name type="patronym"><expan><abbr>A</abbr><ex>uli</ex></expan></name></persName> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilius</ex></expan> <g ref="#interpunct">·</g> <name type="cognomen">Martiales</name>
+                    <lb n="2"/><name type="cognomen"><choice><orig>Apetaius</orig><reg>Aretaius</reg></choice></name></persName> <g ref="#interpunct">·</g> praefectus
+                    <lb n="3"/>deos <g ref="#interpunct">·</g> forenses <g ref="#interpunct">·</g> reposuit templum
+                    <lb n="4" break="no"/>que <g ref="#interpunct">·</g> eis <g ref="#interpunct">·</g> sua <g ref="#interpunct">·</g> <choice><orig>pequnia</orig><reg>pecunia</reg></choice> <g ref="#interpunct">·</g> adornavit
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>text of ISegesta l1 (checked against photograph for interpuncts)</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -219,11 +224,12 @@
                         <author>Michelini</author>
                         <date>1999</date>
                         <citedRange>441-442 ph</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/DI69MHYJ"/>
                     </bibl>
                     <bibl>
                         <author>Nenci</author>
                         <date>2000</date>
-                        <citedRange>811-813 tav.155.4</citedRange>
+                        <citedRange>811-813 tav. 155.4</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/V2NMCFNB"/>
                     </bibl>
                     <bibl>
