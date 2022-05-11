@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>italian translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -55,9 +59,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000361</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4335476</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -81,7 +83,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Two joining fragments preserving the upper left portion of the text (top left corner is intact); the right hand fragment is more poorly preserved with the surface more degraded. The rear of the stone is very rough and uneven</p>
+                                <support><p>Two joining fragments preserving the upper left portion of the text (top left corner is intact); the right hand fragment is more poorly preserved with the surface more degraded. The rear of the stone is very rough and uneven.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--measurements from Korhonen-->
@@ -90,24 +92,24 @@
                                         <depth unit="cm">2.2-4.4</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>Remains of two lines of Latin letters across the stone, with traces of a third line below</p>
+                                <layout><p>Remains of two lines of Latin letters across the stone, with traces of a third line in Greek below</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Thinly incised letters with terminal points/serifs to the strokes. The M tends lightly towards the cursive form, and some letters join at the foot; A in the Latin text has an upward sloping cross-bar; Greek text appears to have lunate epsilon.</p>
+                            <handNote><p>Thinly incised letters with terminal points/serifs to the strokes. Greek letters are much smaller than Latin letters. The M tends lightly towards the cursive form, and some letters join at the foot; A in the Latin text has an upward sloping cross-bar; Greek text appears to have lunate epsilon.</p>
                                 <locus from="line1" to="line2">Lines 1-2</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">30-35</height><!--measurement of Korhonen-->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -122,12 +124,11 @@
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0125" precision="low">1st century or beginning of 2nd century CE (Korhonen)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Apparently from Catania</provenance>
-                        <provenance type="observed">Formerly sala IX.89, now mag. sup.</provenance>
+                        <provenance type="observed">Observed by Mommsen in the Collezione Biscari. Formerly in sala IX.89, now in magazzino superiore</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2016.10.14 and 2016.05.13 (Prag)</provenance>
                         <acquisition/>
                     </history>
-                    
-                </msDesc>
+                    </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -177,9 +178,10 @@
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-09-21" who="#martaf">Marta Fogagnolo revised the text encoding, added the italian translation and integrated the commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -215,28 +217,35 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" resp="#WS">
-                  <ab xml:lang="la">
-                    <lb n="1"/>· <expan><abbr>M</abbr><ex cert="low">arcia</ex></expan> · Marylla
-                    <lb n="2"/>vixit · <expan><abbr>ann</abbr><ex>is</ex></expan> <num atLeast="50" atMost="59"><supplied reason="lost">L</supplied><gap reason="lost" unit="character" extent="unknown"/></num>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#martaf">
+                  <ab>
+                    <lb n="1"/><g ref="#interpunct">·</g> <persName type="attested"><name><expan><abbr>M</abbr><ex cert="low">arcia</ex></expan></name> <g ref="#interpunct">·</g> <name>Marylla</name></persName>
+                    <lb n="2"/><w>vixit</w> <g ref="#interpunct">·</g> <w><expan><abbr>ann</abbr><ex>is</ex></expan></w> <num atLeast="50" atMost="59"><supplied reason="lost">L</supplied><gap reason="lost" unit="character" extent="unknown"/></num>
                 </ab>
                  <ab xml:lang="grc">
-                        <lb n="3"/><expan><abbr><supplied reason="undefined" evidence="previouseditor">Μ</supplied></abbr><ex>αρκία</ex></expan> <supplied reason="undefined" evidence="previouseditor">Μά</supplied><unclear>ρυ</unclear><supplied reason="lost">λ</supplied><supplied reason="undefined" evidence="previouseditor">λα</supplied> <supplied reason="undefined" evidence="previouseditor">ἔζ</supplied><supplied reason="lost">ησεν</supplied>
-                    <lb n="4"/><supplied reason="undefined" evidence="previouseditor">ἔτη</supplied> <supplied reason="undefined" evidence="previouseditor"><num atLeast="50" atMost="59">ν<gap reason="lost" extent="unknown" unit="character"/></num></supplied>
+                        <lb n="3"/><persName type="attested"><name><expan><abbr><supplied reason="undefined" evidence="previouseditor">Μ</supplied></abbr><ex>αρκία</ex></expan></name> <name><supplied 
+                            reason="undefined" evidence="previouseditor">Μάρυλλ</supplied><unclear>α</unclear></name></persName> <w>ἔ<unclear>ζ</unclear><supplied reason="lost">ησεν</supplied></w>
+                    <lb n="4"/><w><supplied reason="undefined" evidence="previouseditor">ἔτη</supplied></w> <supplied reason="undefined" evidence="previouseditor"><num atLeast="50" atMost="59">ν<gap reason="lost" extent="unknown" unit="character"/></num></supplied>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#martaf">
                 <listApp>
                     <app>
-                        <note>Text revised after Mommsen and Korhonen, using new photographs</note>
+                        <note>Text based on photographs. The Greek fragment has not been observed: Mommsen was the last editor to observe it.</note>
                     </app>
+                    <app loc="line 2"><note>Mommsen, Kaibel: ann(os); Korhonen: ann(is)</note></app>
+                    <app loc="line 3"><note>Mommsen read Μ·ΜΑΡΥΛΜ·ΕΖ[---]. On the surviving fragment (a) are visible the top of an Α followed by a lunate Ε and the top of a Ζ.</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#WS">
                 <p>Marcia Marylla lived 5- years. Markia Marulla lived 5- years.</p>
             </div>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Marcia Marylla visse 5- anni. Markia Marylla visse 5- anni.</p>
+            </div>
             <div type="commentary">
-                <p>Provenance is uncertain, but likely Catania (for another such bilingual compare IMusCat 74 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000348">ISic000348</ref>. The Greek text is now almost wholly lost, partially reported by Mommsen in <ref target="http://arachne.uni-koeln.de/item/buchseite/650761">CIL 10.7078</ref>. Mommsen was unable to read the name on line 3 in full, but the traces printed in CIL appear compatible with the name in line 1. The surviving traces of line 3 on the left-hand fragment are clearly compatible with Α ΕΖ (the epsilon being lunate).</p>
+                <p>Provenance is uncertain, but likely Catania (for another such bilingual compare IMusCat 74 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000348">ISic000348</ref>). The Greek text is now almost wholly lost, partially reported by Mommsen in <ref target="http://arachne.uni-koeln.de/item/buchseite/650761">CIL 10, no.7078</ref>.  Mommsen was unable to read the name on line 3 in full, but the traces printed in CIL appear entirely compatible with the name in line 1. The surviving traces of line 3 on the left-hand fragment are clearly compatible with <foreign xml:lang="grc">Α ΕΖ</foreign> (the epsilon being lunate). Korhonen observed that the visible traces were seemingly not compatible with ΡΥ, but failed to recognise, seemingly, that they are in fact compatible with letters later in the same line, and that the letters of line 3 are therefore much smaller than those in lines 1-2.</p>
+                <p>The name <foreign xml:lang="grc">Μάρυλλα</foreign> is found in another inscription from Catania (IG 14, no.465 l. 2 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001289">ISic001289</ref>: see LGPN 3A: 289) and in the masculine form in an inscription from Megara Iblea (Arena 4). According to Korhonen, <foreign xml:lang="la">Marcia</foreign> is the gentilicium or praenomen of the woman.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -244,23 +253,23 @@
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0491</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                        <ptr target="https://zotero.org/groups/382445/items/Q2SBPG9F"/>
                     </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650761">10.7078</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://zotero.org/groups/382445/items/GQN8UZSI"/>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
-                        <citedRange>49 n.243</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <citedRange>49 n. 243</citedRange>
+                        <ptr target="https://zotero.org/groups/382445/items/RZSFKACR"/>
                     </bibl>
                     <bibl type="corpus" n="IMusCatania">
                         <citedRange>109</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://zotero.org/groups/382445/items/2EUC82DH"/>
                     </bibl>
                     <bibl/>
                 </listBibl>
