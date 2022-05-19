@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001300</title>
+                <title>Epitaph for Threptylos</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -41,6 +41,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -82,32 +86,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque damaged on the right, set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">16</height>
+                                        <width unit="cm">27</width>
+                                        <depth unit="cm">1-5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Lunate Ε, Θ, Σ, cursive Μ, Φ with a long vertical stroke, ΝΗ in ligature. Presence of a triangular dot at l. 4 between Εὐφροσύνη and μήτηρ.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line4">Lines 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">11-14</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -119,11 +124,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0200" precision="low">Second half of 1st — 2nd century CE
-                                (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0200" precision="low">Second half of 1st — 2nd century CE</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.86, mag. del cort.</provenance>
+                        <provenance type="observed">Observed by Kaibel in Museo Biscari, later by Korhonen in magazzino del cortile, Collezione Biscari (formerly sala VI.86).</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -179,6 +183,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-05-17" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -200,22 +205,29 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan> <supplied reason="lost"><expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan></supplied>
-                    <lb n="2"/>Θρεπτύλο<supplied reason="lost">ς</supplied> <supplied reason="lost">ἔζησεν</supplied>
-                    <lb n="3"/>μῆνας <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="4"/>Εὐφροσύνη μήτηρ
+                    <lb n="1"/><w><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <w><supplied reason="lost"><expan><abbr>Κ</abbr><ex>ατακθονίοις</ex></expan></supplied></w>
+                    <lb n="2"/><persName type="attested"><name>Θρεπτύλο<supplied reason="lost">ς</supplied></name></persName> <w><supplied reason="lost">ἔζησεν</supplied></w>
+                    <lb n="3"/><w>μῆνας</w> <num><gap reason="lost" extent="unknown" unit="character"/></num>
+                    <lb n="4"/><persName type="attested"><name>Εὐφροσύνη</name></persName> <g ref="#interpunct">•</g> <w>μήτηρ</w>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs</note></app>
+                    <app loc="line 4"><note>Kaibel: μήτηρ [ἐποίησεν] (but the inscription seems to be intact in the last line)</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>To the subterranean deities. Threptylos who lived for (?) months. [Built by] his mother, Euphrosyne.</p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>To the underworld spirits. Threptylos lived for [---] months. His mother Euphrosyne (made it).</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Agli Dei inferi. Threptylos visse [---] mesi. Sua madre Euphrosyne (realizzò).</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
+                    The epitaph presents the traditional structure recurring in many pagan epitaphs from Catania: a main sentence with the name of the deceased and his/her age, followed by a second sentence with the name of the dedicant with an attribute qualifying his/her relationship with the deceased. The dedication verb is often omitted, as in this case (Korhonen 2004: 85-87). The name <foreign xml:lang="grc">Θρεπτύλος</foreign> is not attested elsewhere, whereas in imperial times <foreign xml:lang="grc">Θρεπτός</foreign> is well attested (<foreign xml:lang="la">Threptus</foreign> in two inscriptions from Lilybaion: CIL 10.7243 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000523">ISic000523</ref>, Silvestrini (2014) 220-223 no.4 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003459">ISic003459</ref>, see LGPN 3a: 213). <foreign xml:lang="grc">Θρεπτύλος</foreign> seems to be a diminutive (with the suffix -<foreign xml:lang="grc">ύλος</foreign>) of the better-known <foreign xml:lang="grc">Θρεπτός</foreign>, considering also the very young age of the deceased (<foreign xml:lang="grc">μῆνας</foreign>). 
                     <!--2 frr, damaged to right. ThK heading (probably: Th[K]). Threptylos, an infant (age in months), buried by Euphrosyne meter. The name Threptylos unattested, Threptos more common.--></p>
             </div>
             <div type="bibliography">
@@ -235,7 +247,10 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion"><bibl type="corpus" n="IMusCatania">
+                    <citedRange>85-87</citedRange>
+                    <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                </bibl></listBibl>
             </div>
         </body>
     </text>
