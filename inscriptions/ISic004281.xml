@@ -54,19 +54,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004281</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4390291</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
+                        <idno type="inventory">11853</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -80,29 +78,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Stele of volcanic stone</p>
+                                <support><p>Stele of volcanic stone (local), broken across the bottom, with minor damage to the margins.</p>
                                     <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
                                     <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
-                                    <dimensions><!--from EDR159455-->
+                                    <dimensions><!--from ILipara-->
                                         <height unit="cm">55</height>
-                                        <width unit="cm">39</width>
+                                        <width unit="cm">38.6-39.5</width>
                                         <depth unit="cm">9.2</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>The text is not very well cared for. The first line with the nomen of the deceased appears in a larger size</p>
+                                <layout><p>Two lines of Latin letters across the middle of the front of the stone, somewhat irregularly laid out.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--from EDR159455-->
-                                <locus from="line1" to="line2">Line 1 to 2</locus>
+                            <handNote><p> The P and R in line 2 are much larger than the other letters.</p><!--from ILipara-->
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">38-55</height>
+                                    <height unit="mm">47-55</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">38-40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -119,7 +121,7 @@
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in 1974 in trench XXXV (bishop's property)</provenance>
+                        <provenance type="found" subtype="discovered" when="1974">Found in 1974 in trench XXXV (bishop's property), in reuse as the northern end of the stone-built sarcophagus 1687 (end C1 or C2 CE)</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -164,10 +166,11 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+            	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-12-06" who="#DEE">David Espinosa Espinosa tagged full name and word</change>
+                <change when="2022-06-17" who="#JP">General editing</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -184,7 +187,6 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
@@ -196,7 +198,10 @@
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text according to ILipara 772</note></app></listApp>
+                <listApp>
+                    <app><note>Text according to ILipara 772</note></app>
+                    <app loc="1"><note>It is unclear if the marks at the end of line 1 are S (so Bernabo-Cavalier in M-L XI.i, p. 294) or a hedera, or just damage.</note></app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#DEE">
                 <p>Lucceia Prima, mother.</p>
