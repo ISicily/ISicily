@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -77,19 +81,21 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
+                                    <p>An ophistographic fragment. Same support as <ref sameAs="ISic000783.xml">ISic000783</ref> </p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <height unit="cm">53</height>
+                                        <width unit="cm">26</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -109,7 +115,7 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName><!--probably from the Via Androne Necropolis.-->		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
@@ -170,6 +176,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#MB">encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,14 +198,25 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#MB">
+                <ab>
+                     <lb n="1"/>Hic re<supplied reason="lost">quiescit</supplied> <supplied reason="lost">in</supplied> <supplied reason="lost">pa</supplied>
+                    <lb n="2" break="no"/>ce bon<supplied reason="lost">ae</supplied> <supplied reason="lost">memoriae</supplied> 
+                   <name><supplied reason="lost">Hono</supplied> 
+                    <lb n="3" break="no"/>rius</name> n<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="4"/><orig>SO</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="5"/><num value="3">III</num><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="6"/><orig>BO</orig><gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="it" resp="#MB">
+                <p>Qui riposa Onorio, nella pace di un buon ricordo [-----]</p>
+            </div>
+            <div type="translation" xml:lang="en"  resp="#MB">
+                <p>Here rests Honorius, in the peace of a good memory [-----]</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
