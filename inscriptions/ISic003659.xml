@@ -9,7 +9,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -30,11 +30,15 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
@@ -80,18 +84,18 @@
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.arch_element.wall #object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/416.html">wall; tabula ansata</objectType>
                                     <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <height unit="cm">45</height>
+                                        <width unit="cm">37</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -112,8 +116,8 @@
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500" cert="low">late
                                 Roman(?)</origDate>
                         </origin>
@@ -125,18 +129,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -165,12 +169,13 @@
         <revisionDesc status="unchecked">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#MB">encoded text</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -191,76 +196,32 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR072804" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#MB">
                 <ab>
-                    <lb n="1"/>
-                    XVII
-                    <expan>
-                        <abbr>K</abbr>
-                        <ex>alendas</ex>
-                    </expan>
-                    <expan>
-                        <abbr>Septemb</abbr>
-                        <ex>res</ex>
-                    </expan>
-                    <lb n="2"/>Feridius Cereris dominae
-                    <supplied reason="lost">
-                        <expan>
-                            <abbr>s</abbr>
-                            <ex>ervus</ex>
-                        </expan>
-                    </supplied>
-                    <lb n="3"/>hic sibi
-                    <choice>
-                        <sic>suabiter</sic>
-                        <corr>suaviter</corr>
-                    </choice>
-                    <expan>
-                        <abbr>fec</abbr>
-                        <ex>it</ex>
-                    </expan>
-                    e
-                    <supplied reason="lost">o</supplied>
-                    <lb n="4" break="no"/>rum tres adulescentes<lb n="5"/>quorum nomina lege<lb n="6"/>Onesimus et
-                    <expan>
-                        <abbr>L</abbr>
-                        <ex>ucius</ex>
-                    </expan>
-                    Valerius<lb n="7"/>Cas
-                    <expan>
-                        <ex>s</ex>
-                        <abbr>ianus</abbr>
-                    </expan>
-                    et Filumenus<lb n="8"/>unus cum
-                    <choice>
-                        <sic>mulierae</sic>
-                        <corr>muliere</corr>
-                    </choice>
-                    ea<lb n="9"/>Taurus multis annis
-                    <choice>
-                        <sic>habe</sic>
-                        <corr>have</corr>
-                    </choice>
-                    <expan>
-                        <abbr>facian</abbr>
-                        <ex>t</ex>
-                    </expan>
-                    <lb n="10"/>co
-                    <expan>
-                        <ex>n</ex>
-                        <abbr>iu</abbr>
-                        <ex>n</ex>
-                        <abbr>ximus</abbr>
-                    </expan>
-                    <lb n="11"/>propitiam.
+                    <lb n="1"/><num value="17">XVII</num> <expan><abbr>K</abbr><ex>alendas</ex></expan>
+                    <expan><abbr>Septemb</abbr><ex>res</ex></expan>
+                    <lb n="2"/><persName><name>Feridius</name></persName> <name>Cereris</name> dominae
+                    <supplied reason="lost"><expan><abbr>s</abbr><ex>ervus</ex></expan></supplied>
+                    <lb n="3"/>hic sibi <choice><sic>suabiter</sic><corr>suaviter</corr></choice>
+                    <expan><abbr>fec</abbr><ex>it</ex></expan> e<supplied reason="lost">o</supplied>
+                    <lb n="4" break="no"/>rum tres adulescentes
+                    <lb n="5"/>quorum nomina lege
+                    <lb n="6"/><persName><name>Onesimus</name></persName> et <persName><name><expan><abbr>L</abbr><ex>ucius</ex></expan></name> <name>Valerius</name>
+                    <lb n="7"/><name>Cas<supplied reason="omitted">s</supplied>ianus</name></persName>
+                    et <persName><name>Filumenus</name></persName>
+                    <lb n="8"/>unus cum <choice><sic>mulierae</sic><corr>muliere</corr></choice> ea
+                    <lb n="9"/><persName><name>Taurus</name></persName> multis annis <choice><sic>habe</sic><corr>have</corr></choice>
+                    <expan><abbr>facian</abbr><ex>t</ex></expan>
+                    <lb n="10"/>co<supplied reason="omitted">n</supplied>iu<supplied reason="omitted">n</supplied>ximus
+                    <lb n="11"/>propitiam
                 </ab>
                 <!--This EDR text 072804 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang= "it">
+                <p> Il 16 Agosto Feridio servo della dea Cerere si unì carnalmente con tre adolescenti dei quali i nomi erano per legge Onesimo, L. Valerio Cassiano e Filomeno. Il solo Tauro (giacque) con quella donna, augurio ----.</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
@@ -280,7 +241,7 @@
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>
     </text>
