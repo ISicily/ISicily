@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -78,15 +82,16 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
+                                    <p>tuffaceous block of two rejoinable fragments, with different dimensions. The first one (a) (H= 59, W= 29); the second one (b) (H=32, W=24).</p>   
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <height unit="cm">91</height>
+                                        <width unit="cm">52</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
@@ -99,7 +104,7 @@
                             <handNote><!--Default value and requires editing-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80-100</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -173,6 +178,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-10-06" who="#MB">encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,8 +200,11 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΡΗΟΝ</orig>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΕΤ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
