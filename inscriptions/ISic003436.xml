@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -80,9 +84,9 @@
                                     <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                        <height unit="cm">0,0102</height>
+                                        <width unit="cm">0,0051</width>
+                                        <depth unit="cm">0,0032</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -112,8 +116,9 @@
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462312" corresp="#findsport">Menae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524142">Mineo</placeName>
-                            	<geo>37.26494, 14.69381</geo>
+                            	<geo>37.26494, 14.69381</geo>   
 		</origPlace>
+                            
                             <origDate datingMethod="#julian" cert="low">(?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" xml:id="findsport">Tombs found 'in un campicello vicino l'antica porta Udienza'.</provenance>
@@ -170,6 +175,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#MB">encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,11 +197,17 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <ab>
+                <lb n="1"/><name><seg part="I"><orig>ΜΑΡΚΙ</orig></seg></name> <orig>Σ</orig><gap reason="illegible" quantity="2" unit="character"/><orig><seg part="F">ΡΒΑΝΕ</seg></orig>
+                     <lb n="2"/>χρηστὲ χαῖρε
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+               <app loc="1">
+                   <rdg>ΜΑΡΚΙΕ <note>add edition</note></rdg>
+                   <rdg>ΜΑΡΚΙΣ <note>Orsi 1901</note></rdg> 
+               </app> 
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
