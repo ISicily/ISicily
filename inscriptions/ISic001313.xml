@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001313</title>
+                <title>Epitaph for Markia Loukilia</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -41,6 +41,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -82,15 +86,16 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Three joining fragments of marble plaque, set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">20.5</height>
+                                        <width unit="cm">25</width>
+                                        <depth unit="cm">0.5-6</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
@@ -100,14 +105,14 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>“Scrittura corsiveggiante alla latina” (Korhonen). Lunate Ε (at l. 5, but squared at l. 4) and Σ, cursive Ω. Α, Λ and Μ with serifs, Κ with short arms. Triangle-shaped dot at l. 3.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line5">Lines 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">3.0-1.5</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -119,11 +124,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150" precision="low">1st century CE or first half of 2nd century CE
-                                (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150" precision="low">1st century CE or first half of 2nd century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.109, mag. del cort.</provenance>
+                        <provenance type="found">Original discovery not recorded. Registered in the anonymous codex Marucellianus A 77 f. 142v: the inscription was “fortasse non Catanensis tamen Siculus” according to Kaibel due to the Doric expression χρηστά. From a palaeographic point of view, the inscription is considered from Catania by Korhonen (see CIL 10.7056).</provenance>
+                        <provenance type="observed">Observed by Torremuzza and Kaibel in Museo del Monastero di San Nicolò l’Arena, later by Korhonen in magazzino del Cortile, Collezione dei Benedettini, formerly sala VI, 109.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -179,6 +183,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -200,27 +205,59 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/>Μαρκία
-                    <lb n="2"/>Λουκιλία
-                    <lb n="3"/>χρηστὰ <g ref="#ivy-leaf"/> καὶ ἄ
-                    <lb n="4" break="no"/>μεμτος · <expan><abbr>αἴζωσ</abbr><ex>εν</ex></expan>
-                    <lb n="5"/>ἔτια <num value="20">εἴκοσι</num>
+                    <lb n="1"/><persName type="attested"><name>Μαρκία</name>
+                    <lb n="2"/><name>Λουκιλία</name></persName>
+                    <lb n="3"/><w>χρηστὰ</w> <g ref="#stop"/> <w>καὶ</w> ἄ<lb 
+                        n="4" break="no"/>μεμτος <g ref="#stop"/> <w><expan><abbr>αἴζωσ</abbr><ex>εν</ex></expan></w>
+                    <lb n="5"/><w>ἔτια</w> <num value="20">εἴκοσι</num>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs</note></app>
+                    <app loc="line 4"><note>Torremuzza, Ferrara, Bertucci, Franz, Kaibel, Collitz-Bechtel: αἴζως (i.e. ἔζης); Korhonen: αἴζωσ(εν)</note></app>
+                    <app loc="line 5"><note>Torremuzza, Ferrara, Bertucci, Franz ἔτι α εἴκοσι; Kaibel, Collitz-Bechtel, Korhonen: ἔτια</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>Markia Loukilia, honest and good. Lived for 20 years.</p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Markia Loukilia, honest and blameless, lived for 20 years.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Markia Loukilia, onesta e irreprensibile, visse 20 anni.</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--Markia Loukilia (marcia Lucilia); chrestos kai amemptos; age in years, number (20) written in full. Oddities of language: aizosen (?from ezosen) and eti (for ete) suggest i.a. a cutter who knew Latin better, for Korhonen.--></p>
+                    <!--Markia Loukilia (marcia Lucilia); chrestos kai amemptos; age in years, number (20) written in full. Oddities of language: aizosen (?from ezosen) and eti (for ete) suggest i.a. a cutter who knew Latin better, for Korhonen.-->
+                    The epitaph has the traditional structure with the name of the deceased, the epithets <foreign xml:lang="grc">χρηστὰ καὶ ἄμεμτος</foreign> (for which, see Korhonen 2004: 84) and the indication of the age, with the verb <foreign xml:lang="grc">ζάω</foreign> in the aorist form. The phonetic reading <foreign xml:lang="grc">αἴζως</foreign> for <foreign xml:lang="grc">ἔζης</foreign> seems to be less probable than <foreign xml:lang="grc">αἴζωσ’</foreign> or <foreign xml:lang="grc">αἴζωσ(εν)</foreign> (from <foreign xml:lang="grc">ζώω</foreign>): for a similar form, see Libertini NSA 1931: 391-392 (<foreign xml:lang="grc">ἔσζω[σ-]</foreign>). Also the reading <foreign xml:lang="grc">ἔτι α εἴκοσι</foreign> seems to be less probable (despite <foreign xml:lang="grc">ἔτι</foreign> of the Christian epitaph Libertini 1931: 45 nr. 10) than the phonetic reading <foreign xml:lang="grc">ἔτια</foreign> (i.g. <foreign xml:lang="grc">ἔτεα</foreign>): see IC IV 168*. The Dorism at l. 3 and the hypercorrection at l. 4 denote the stonecutter’s quest for refinement or poor knowledge of Greek (as also revealed by <foreign xml:lang="grc">ἔτια</foreign> of l. 5).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Torremuzza</author>
+                        <date>1769</date>
+                        <citedRange>175 n. 69</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                    </bibl>
+                    <bibl>
+                        <author>Torremuzza</author>
+                        <date>1784</date>
+                        <citedRange>186 n. 81</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ferrara</author>
+                        <date>1829</date>
+                        <citedRange>352 n. 2</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
+                    </bibl>
+                    <bibl>
+                        <author>Bertucci</author>
+                        <date>1846</date>
+                        <citedRange>31 n. 6</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/Z6A8UGMR"/>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0490</ref>

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001322</title>
+                <title>Epitaph for Saboukis Kallimorphos</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -41,6 +41,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -82,15 +86,16 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque, set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">21</height>
+                                        <width unit="cm">23</width>
+                                        <depth unit="cm">0.5-5.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete.broken"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
@@ -100,14 +105,14 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Letters with apices, rhomboid Ο and Φ, angular Ω at l. 5 (as a flipped Μ); ος at l. 2, τη at l. 3, ος and ρων at l. 5 in ligature. Triangle-shaped dots at ll. 3, 4, 5, 6.</p><!--Default value and requires editing-->
+                                <locus from="line1" to="line6">Lines 1-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">2.6-1.7 </height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -119,10 +124,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" cert="low" precision="low">2nd century CE (probably, K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" cert="low" precision="low">2nd century CE (probably, according to Korhonen)</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.97, mag. del cort.</provenance>
+                        <provenance type="observed">Observed by Torremuzza and Kaibel in Museo Biscari, later by Korhonen in magazzino del Cortile, Collezione Biscari, formerly sala VI, 97.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -178,6 +183,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -199,37 +205,58 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/>Σαβοῦκις
-                    <lb n="2"/>Καλλίμορφος
-                    <lb n="3"/>ἔζησεν ἔτη
-                    <lb n="4"/>·<num value="32">λβ</num>· Σαβούκις
-                    <lb n="5"/>Ζωίλος · πάτρων
-                    <lb n="6"/>ἐποίησε
+                    <lb n="1"/><persName type="attested"><name>Σαβοῦκις</name>
+                    <lb n="2"/><name>Καλλίμορφος</name></persName>
+                    <lb n="3"/><w>ἔζησεν</w> <g ref="#stop"/> <w>ἔτη</w> <g ref="#stop"/>
+                    <lb n="4"/><g ref="#stop"/> <num value="32">λβ</num> <g ref="#stop"/> <persName type="attested"><name>Σαβούκις</name>
+                    <lb n="5"/><name>Ζωίλος</name></persName> <g ref="#stop"/> <w>πάτρων</w>
+                    <lb n="6"/><w>ἐποίησε</w> <g ref="#stop"/>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs</note></app>
+                    <app loc="line 5"><note>Franz: πατρῶνι; Manganaro interpreted Πάτρων as a proper name</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>Saboukis Kallimorphos, lived for 32 years. Saboukis Soilos his patron built this.</p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Saboukis Kallimorphos, lived for 32 years. Saboukis Zoilos, his patron (built this).</p>
             </div>
-            <div type="commentary">
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Saboukis Kallimorphos visse 32 anni. Saboukis Zoilos, suo patrono (realizzò questo).</p>
+            </div>
+            <div type="commentary" resp="#martaf">
                 <p><!--commented out pending revision-->
-                    <!--Saboukis Kallimorphos, age in years; erected by Saboukis Zoilos (Zwilos), patron (patrwn). A rare Catanian instance advertising the libertine status Korhonen rejects Manganaro's C4 AD date and the interpretation of patron as a name (already rejected in BE).--></p>
+                    <!--Saboukis Kallimorphos, age in years; erected by Saboukis Zoilos (Zwilos), patron (patrwn). A rare Catanian instance advertising the libertine status Korhonen rejects Manganaro's C4 AD date and the interpretation of patron as a name (already rejected in BE).-->
+                    The epitaph presents the traditional structure with the name of the deceased, the indication of his age (with the verb <foreign xml:lang="grc">ζάω</foreign> in the aorist form) and a second sentence with the name of the dedicant in the nominative form and the dedication verb (<foreign xml:lang="grc">ποιέω</foreign> in the aorist form). The formulae and the palaeography are characteristic of Catania and of a 2nd century CE dating, according to Korhonen (2004: 229; contra Manganaro 1959: 242, who dated the inscription to the 4th cent. CE). The epitaph was dedicated to a libertus Saboukis Kallimorphos by his patron Saboukis Zoilos (<foreign xml:lang="grc">πάτρων</foreign> is not part of the proper name of the dedicant, as Manganaro suggested: see J. and L. Robert 1961: 268 nr. 861). The patron belonged to the <foreign xml:lang="la">gens Sabucia</foreign>, who seems to have owned several latifundia in Sicily, as numerous toponyms attest: see Manganaro 1959.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Torremuzza</author>
+                        <date>1769</date>
+                        <citedRange>129 n. 43</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                    </bibl>
+                    <bibl>
+                        <author>Torremuzza</author>
+                        <date>1784</date>
+                        <citedRange>137 n. 50</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ferrara</author>
+                        <date>1829</date>
+                        <citedRange>340 n. 1</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0501</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    </bibl>
-                    <bibl type="bulletin" n="BE">
-                        <citedRange>1961.0861</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
                     </bibl>
                     <bibl type="corpus" n="IMusCatania">
                         <citedRange>127</citedRange>
@@ -240,7 +267,22 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Manganaro</author>
+	           <date>1959</date>
+	           <citedRange>242 n. 5</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/8NZ9UDHV"/>
+	       </bibl>
+	       <bibl type="bulletin" n="BE">
+	           <citedRange>1961.0861</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+	       </bibl>
+	       <bibl type="corpus" n="IMusCatania">
+	           <citedRange>229</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+	       </bibl>
+	       <bibl/></listBibl>
             </div>
         </body>
     </text>
