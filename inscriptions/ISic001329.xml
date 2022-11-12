@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001329</title>
+                <title>Epitaph</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -41,6 +41,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -84,15 +88,16 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Two joining fragments of marble plaque.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">(10)</height>
+                                        <width unit="cm">(10.5)</width>
+                                        <depth unit="cm">1.7</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
@@ -102,14 +107,14 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Cursive Μ, Ο in smaller size. The second line is indented.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line5">Lines 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">15-22</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -121,11 +126,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0250" notAfter-custom="0400" precision="low">Second half of 3rd century CE or 4th century CE
-                                (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0250" notAfter-custom="0400" precision="low">Second half of 3rd century CE or 4th century CE</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">mag. sup</provenance>
+                        <provenance type="observed">Observed by Amico in Museo Biscari, later by Korhonen in magazzino superiore, Collezione Biscari.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -181,6 +185,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-10-31" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translation and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -202,24 +207,34 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/>Τίμη <supplied reason="lost">καὶ</supplied>
-                    <lb n="2"/>Ποιμ <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><supplied reason="undefined" evidence="previouseditor">ἑα</supplied>υτ <supplied reason="lost">οῖς</supplied> <supplied reason="lost">καὶ</supplied>
-                    <lb n="4"/><supplied reason="undefined" evidence="previouseditor">το</supplied><supplied reason="lost">ῖς</supplied> <supplied reason="lost">ἰδίοις</supplied>
-                    <lb n="5"/><supplied reason="lost" cert="low">ἐποίησαν</supplied>
+                    <lb n="1"/><persName type="attested"><name>Τίμη</name></persName> <supplied reason="lost">καὶ</supplied>
+                    <lb n="2"/><persName><name>Ποιμ<gap reason="lost" extent="unknown" unit="character"/></name></persName>
+                    <lb n="3"/><w><supplied reason="undefined" evidence="previouseditor">ἑα</supplied>υτ <supplied reason="lost">οῖς</supplied></w> <w><supplied reason="lost">καὶ</supplied></w>
+                    <lb n="4"/><w><supplied reason="undefined" evidence="previouseditor">το</supplied><supplied reason="lost">ῖς</supplied></w> <w><supplied reason="lost">ἰδίοις</supplied></w>
+                    <lb n="5"/><w><supplied reason="lost" cert="low">ἐποίησαν</supplied></w>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs</note></app>
+                    <app loc="line 1"><note>Kaibel: Τίμη; Ferrua: Τιμη[σίθεος; Korhonen: Τιμή</note></app> 
+                    <app loc="lines 1-2"><note>Kirchhoff read ΠΟΙΩ which Ferrua (1941) corrected in ΠΟΙΗ (ἐ|ποίη[σε) but a Μ is clearly legible. Later, Ferrua (1989) suggested the supplement Ποιμ[ένιος]</note></app>
+                    <app loc="line 3"><note>Ferrua: ἑαυτ[ῷ]; Kaibel, Korhonen ἑαυτ[οῖς]</note></app>
+                    <app loc="lines 4-5"><note>Kaibel: τὸ[ν τόπον] (scil. ἠγόρασαν)]; Ferrua: το[ῖς ἰδίο]|[ις πᾶσιν]; Korhonen: το[ῖς ἰδίοις]|[ἐποίησαν?]</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Time and Poim--- built (this) for themselves and their relatives.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Time e Poim--- realizzarono (questo) per loro stessi e per i loro familiari.</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--Two joining frr of the upper left corner. Ref. to Time and Poim- - -  (Poimen) for themselves and theirs. Part lost since Kaibel. Ferrua proposes Poimenios, as in IG 14.547.--></p>
+                    <!--Two joining frr of the upper left corner. Ref. to Time and Poim- - -  (Poimen) for themselves and theirs. Part lost since Kaibel. Ferrua proposes Poimenios, as in IG 14.547.-->
+                    The structure of the epitaph is influenced by the Latin epigraphy (<foreign xml:lang="la">fecit sibi et suis</foreign>) and recurs often (but not exclusively) in Christian epitaphs: for this reason, Ferrua believed that the epitaph was Christian. The formula is used to indicate the dedicant, who is not yet dead, but the verb <foreign xml:lang="grc">ζάω</foreign> is often omitted (see Korhonen 2004: 88-89). According to Kaibel, followed by LGPN 3A: 429, <foreign xml:lang="grc">Τίμη</foreign>, attested in the imperial age also in SEG 31.1327A, is the name of the first deceased, whereas <foreign xml:lang="grc">Τιμησίθεος</foreign> suggested by Ferrua is not attested in that age. The second deceased could have been a <foreign xml:lang="grc">Ποιμήν</foreign> or a <foreign xml:lang="grc">Ποιμένιος</foreign> (as Ferrua suggested): the latter is attested in Christian age by literary sources. On the names, see Solin 1982: 1030 and 1256.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
