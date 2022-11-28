@@ -11,8 +11,8 @@
                 <funder>John Fell OUP Research Fund</funder>
                 <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
-                     <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                     <resp>project direction, template development and general editor</resp>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>project direction, template development and general editor</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
@@ -54,8 +54,8 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
-                        <idno type="inventory"></idno>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository><!-- check this information -->
+                        <idno type="inventory">SG1942 SG90</idno><!-- ???check -->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -63,37 +63,39 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="xly">Elymian<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Ancient Greek</desc></certainty></textLang>    
+                        <textLang mainLang="xly">Elymian<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Ancient Greek</desc></certainty></textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p></p>
+                                    <p>Fragment of a black-glazed kylix (?).</p>
                                     <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
-                                    <objectType ana="#object.vessel" ref="https://www.eagle-network.eu/voc/objtyp/lod/305.html">vessel</objectType>
+                                    <objectType ana="#object.vessel.kylix" cert="low" ref="http://kerameikos.org/id/kylix">kylix (?)</objectType>
                                     <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                        <height unit="cm">3-3.3</height>
+                                        <dim type="diameter" unit="cm"/>
+                                        <width unit="cm">3.5</width>
+                                        <depth unit="cm"></depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
-                                    <p></p>
-                                    <damage/>
+                                    <p>The text is placed on the inner surface of the fragment.</p>
+                                    <damage ana="#text_condition.incomplete"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <!-- Based on Glyph table: -->
+                                <!-- Stylised drawing or symbol of a cross. Id: symbol01.-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">22</height>
+                                    <width unit="mm">9</width>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -105,10 +107,10 @@
                                 <placeName type="modern"/>
                                 <geo>37.94171, 12.83649</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0500" notAfter-custom="-0480">500—480 BCE</origDate>
+                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0500" notAfter-custom="-0480">500—480 BCE (Biondi 1992)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" from="1957" to="1977">Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro<geo>37.94240, 12.84509</geo>, 1.9km east of temple of Segesta.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" notBefore="1989" notAfter="1990">Found in the area of Grotta Vanella, on the north-east slope of Monte Barbaro between 1989 and 1990<geo>37.94240, 12.84509</geo>, 1.9km east of temple of Segesta.</provenance>
+                        <provenance type="observed" subtype="autopsied">No autopsy</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -121,11 +123,11 @@
                     <p>Taxonomies for ISicily controlled values</p>
                 </xi:fallback>
             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
         </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -154,9 +156,8 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2021-02-16" who="#VM">Valentina Mignosa added metadata, text</change>
+                <change when="2021-02-16" who="#VM">Valentina Mignosa created preliminary blank file</change>
+                <change when="2022-03-31" who="#VM">Valentina Mignosa added metadata, text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -179,15 +180,17 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="xly-Grek" resp="#VM">
-                <ab></ab>
+                    <ab>
+                        <lb n="1"/><g ref="#cross_uninterpreted"/>
+                    </ab>
             </div>
-            <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="xly-Latn">                 
+            <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="xly-Latn">
                 <ab></ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text after Agostiniani (Appendix to IAS II, forthcoming)</note>
+                        <note>Text after Biondi 1992</note>
                     </app>
                 </listApp>
             </div>
@@ -198,18 +201,43 @@
                 <p><!--No translation currently agreed--></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p></p>
+                <p>Cross-shaped sign recurrent as a mark throughout the ancient world. Cf. Agostiniani 1977, p.11, which reports some parallels with Attic ceramic: Graef, Langlotz 1933, p.128, no.1523, N 456; Milne 1936, fig. 34, no.14; F.Xanthos IV, p.174, nos. 400-401.
+                    The sign is very common in the Elymian corpus from Grotta Vanella (see records from <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic020008">ISic020008</ref> to <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic020035">ISic020035</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-                    <bibl type="corpus" n="IAS2">
+                    <bibl type="corpus" n="IAS I, App.">
                         <author>Agostiniani</author>
-                        <date></date>
+                        <date>2021</date>
                         <citedRange>380</citedRange>
-                        <ptr/>
+                        <ptr target="http://zotero.org/groups/382445/items/VQEP8IPT"/>
+                    </bibl>
+                    <bibl>
+                        <author>Biondi</author>
+                        <date>1992</date>
+                        <citedRange>117, no. 2, pl. III.2</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/I5EWGXSI"/>
                     </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl></bibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Metzger</author>
+                        <date>1972</date>
+                        <citedRange>p.174, nos. 400-401</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/KG5M5D44"/>
+                    </bibl>
+                    <bibl>
+                        <author>Milne</author>
+                        <date>1936</date>
+                        <citedRange>fig. 34, no.14</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/FW7W6HTJ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Graef, Langlotz</author>
+                        <date>1933</date>
+                        <citedRange>p.128, no.1523, N 456</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/MAEBB7ZT"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>
