@@ -54,17 +54,15 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003438</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388580</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Lost</settlement>
+                        <settlement>Mineo</settlement>
                         <repository><!--Add Repository Here--></repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
@@ -80,10 +78,10 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>No description is preserved other than 'a stone found in Mineo'.</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
@@ -92,7 +90,7 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
@@ -118,9 +116,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524142">Mineo</placeName>
                             	<geo>37.26494, 14.69381</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0001" cert="low">Hellenistic (?)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">'portion of a stone found in Mineo'</provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1841">'portion of a stone found in Mineo', first reported by Merlini in 1841.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
@@ -161,9 +159,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.list.priests" ref="http://www.eagle-network.eu/voc/typeins/lod/33.html">list of priests
-                        (?)
-                    </term>
+                    <term ana="#function.list" ref="http://www.eagle-network.eu/voc/typeins/lod/108.html">list of names with numbers</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -181,52 +177,56 @@
     </teiHeader>
     <facsimile>
         <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
                 <ab>
                 <lb n="1"/>ἐπί ἱεροπόλου
-                    <lb n="2"/><gap reason="illegible" quantity="8" unit="character"/><w part="F"><orig>ΤΟΣ</orig></w>
-                    <lb n="3"/><persName><name type="patronym">ἀπολλόνιου</name></persName>
-                   <lb n="4"/><gap reason="illegible" quantity="12" unit="character"/><num type="acrophonic"><orig>Νbb</orig></num>
-                    <lb n="5"/><persName><name>Θεόδωρος</name></persName>
-                     <lb n="6"/><persName><name type="patronym"><supplied reason="lost">Ἀ</supplied>πολλόδρου</name></persName>
-                     <lb n="7"/><gap reason="illegible" quantity="9" unit="character"/><num type="acrophonic"><orig>ΝΝb</orig></num>
-                     <lb n="8"/>κράτυστος
-                     <lb n="9"/><w part="I"><orig>ΕΥΚ</orig></w><gap reason="illegible" quantity="2" unit="character"/>
+                    <lb n="2"/><persName><gap reason="lost" extent="unknown" unit="character"/><w part="F"><orig>ΤΟΣ</orig></w>
+                    <lb n="3"/><name type="patronym">Ἀπολλωνίου</name></persName>
+                   <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><num type="acrophonic"><orig>Νbb</orig></num>
+                    <lb n="5"/><persName><name>Θεόδωρος</name>
+                     <lb n="6"/><persName><name type="patronym"><supplied reason="lost">Ἀ</supplied>πολλόδρου</name></persName></persName>
+                     <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><num type="acrophonic"><orig>ΝΝb</orig></num>
+                     <lb n="8"/>Κράτυλος
+                     <lb n="9"/><w part="I">Εὐκ</w><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text of Orsi 1900</note></app></listApp>
+                <listApp>
+                    <app><note>Text after Merlini 1841</note></app>
+                    <app loc="4"><rdg>Merlini reports a small circle upper right of the N, and traces of what might be a capital T after the second b</rdg></app>
+                    <app loc="7"><rdg>Merlini reports a small circle upper right of the first N</rdg></app>
+                    <app loc="8"><rdg>ΚΡΑΤΓΣΤΟΣ <note>Merlini 1841</note></rdg> <rdg>Κράτυλος <note>Messina 1992</note></rdg></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
+                <p>Orsi's transcription and editing of the original report of Merlini is not entirely faithful, and Messina's reading of lines 8-9 as another name seems preferable. The symbols left uninterpreted by Orsi must be numerals and find approximate parallels (even if not certain interpretation) among other later Hellenistic Sicilian texts (see e.g. the gallery texts from the Euryalos fortifications).
                     <!--a text reported in antiquarian tradition as 'epi hieropolou ...tos Apolloniou .... Nbb Theodoros Pollodorou ... NNb Kratystos euk...; Orsi trieds to improve the reading, noting implication of a sanctuary and college of priests.--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl>
+                        <author>Tamburino Merlini</author>
+                        <date>1841</date>
+                        <citedRange>195</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ULIV8JRI"/>
+                    </bibl>
+                    <bibl>
                         <author>Orsi</author>
                         <date>1900</date>
                         <citedRange>57 no.35</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/UE3VRJA7"/>
+                    </bibl>
+                    <bibl>
+                        <author>Messina</author>
+                        <date>1992</date>
+                        <citedRange>146</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QWEK6HU4"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
