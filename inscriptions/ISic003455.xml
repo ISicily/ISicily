@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -57,7 +61,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Mineo</settlement>
@@ -78,28 +82,29 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
+                                    <p>Thick tufa plaque in three fragments (Cordano says two, but photographs and display in museum show three), of which at least two join together.  The right edge may be preserved, but otherwise broken on all sides. The largest fragment (a) (W= 59, H= 29); the second  (b) (W=32, H=24).</p>   
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--Cordano-->
+                                        <height unit="cm"></height>
+                                        <width unit="cm"></width>
+                                        <depth unit="cm">15</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--Cordano-->
+                                <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80-100</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -115,12 +120,11 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524142">Mineo</placeName>
                             	<geo>37.26494, 14.69381</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400">Roman</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400" cert="low">Roman in date? (Cordano)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Territory of Mineo, probably contrada Favarotta (37.307741,
-                            14.710805)
-                        </provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#MM">2014.10.30 Metcalfe</provenance>
+                        <provenance type="found" subtype="discovered">Territory of Mineo, probably contrada Favarotta <geo>37.307741, 14.710805</geo></provenance>
+                        <provenance type="observed" subtype="seen" resp="#MM">2014.10.30 Metcalfe</provenance>
+                        <provenance type="observed" subtype="autopsied">none</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -164,7 +168,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -173,6 +177,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-10-06" who="#MB">encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,21 +199,36 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="2"/><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>Ρ<unclear>ΗΩ</unclear>Ν</orig><gap reason="lost" extent="unknown" unit="character" cert="low"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΕΤ</orig><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character" cert="low"/>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text based upon poor quality photograph</note></app>
+                    <app loc="1"><rdg>omitted <note>Cordano 2005/2014</note></rdg></app>
+                    <app loc="2"><rdg>PHON<note>Cordano 2014</note></rdg></app>
+                    <app loc="3"><rdg><note>Cordano 2005 notes a horizontal line after the T, visible on photograph</note></rdg></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
+                <p>Autopsy is required.<!--commented out pending revision-->
                     <!--slab in 3 joining fragments, of which visible is RHWN | ET. Seen by Metcalfe, in Mineo Museum 2014.--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Cordano</author>
+                        <date>2005</date>
+                        <citedRange>125</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/WECDMWG9"/>
+                    </bibl>
                     <bibl>
                         <author>Cordano</author>
                         <date>2014</date>

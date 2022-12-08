@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -50,19 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003445</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388594</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Mineo</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/023">Museo Civico Corrado
-                            Tamburino Merlini</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/023">Museo Civico Corrado Tamburino Merlini</repository>
                         <idno type="inventory">8563</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,13 +78,12 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.tuff" ref="http://www.eagle-network.eu/voc/material/lod/30.html">tuff
-                                    </material>
+                                <support><p>Slab of local tuff, damaged below.</p>
+                                    <material ana="#material.stone.tuff" ref="http://www.eagle-network.eu/voc/material/lod/30.html">tuff</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                    <dimensions><!--Cordano-->
+                                        <height unit="cm">40</height>
+                                        <width unit="cm">30</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
@@ -97,10 +97,10 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--Cordano-->
+                                <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -116,8 +116,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524142">Mineo</placeName>
                             	<geo>37.26494, 14.69381</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0001" cert="low">
-                                hellenistico-romana</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0001" cert="low" evidence="archaeological-context">Generically dated to the Hellenistic/Roman period, from the context of the necropolis (Cordano)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Necropolis of S. Ippolito</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -164,7 +163,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -173,6 +172,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-10-03" who="#MB">encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,11 +194,15 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΠΑ</orig>
+                    <lb n="2"/><orig>ΚΑ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><orig>Α</orig><gap reason="illegible" quantity="1" unit="character"/><orig>ΑΙΕ</orig>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Cordano 2014</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
