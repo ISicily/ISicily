@@ -38,6 +38,10 @@
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,7 +62,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement></settlement>
-                        <repository role="museum"></repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory"></idno>
                         <altIdentifier>
                             <settlement/>
@@ -82,7 +86,7 @@
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
@@ -106,9 +110,9 @@
                         <origin>
                             <origPlace>
                                 <placeName/>
-                                <placeName type="ancient" ref=""></placeName><!-- add ancient place name and pleiades ref -->
-                                <placeName type="modern"></placeName><!-- add modern place name and geonames ref -->
-                                <geo></geo> <!-- add geo coordinates -->
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName> 
+                                <geo>37.58337, 12.82522</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
                         </origin>
@@ -157,11 +161,12 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-06-09" who="#VM">Valentina Mignosa added basic metadata</change>
+                <change when="2022-11-29" who="#MB">Maria Barbieri encoded text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -183,17 +188,17 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
                 <ab>
-                    <lb n="1"/>
+                    <lb n="1"/><persName type="attested"><name><seg part="I"><unclear>Π</unclear>ύρ<supplied reason="omitted">ρ</supplied>ο</seg><gap reason="lost" extent="unknown" unit="character"/></name></persName>
+                    <lb n="2"/><orig>ΔΑΓΑ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><persName type="attested"><name><seg part="I">Εὔδα<unclear>μ</unclear></seg><supplied reason="lost" cert="low">ος</supplied></name></persName><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="4"/><persName type="attested"><name><seg part="I">Πυρ<supplied reason="omitted">ρ</supplied>ί<unclear>α</unclear></seg><gap reason="lost" extent="unknown" unit="character"/></name></persName>
+                    <lb n="5"/><orig>ΙΙ</orig> <persName type="attested"><name><seg part="I">Ἀσκλ</seg><gap reason="lost" extent="unknown" unit="character"/></name></persName>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp>
-                    <app>
-                        <note>Text after ...</note><!-- ISicDef no. 52 -->
-                    </app>
-                </listApp>
+                <listApp><app><note>Text of Bettarini 2005 n.10</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p></p>
