@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -50,18 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003392</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388494</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Solanto</settlement>
-                        <repository role="museum">private house</repository>
+                        <repository role="private">private house</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,16 +81,16 @@
                                 <support>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--Giannobile-->
+                                        <height unit="cm">17</height>
+                                        <width unit="cm">56</width>
+                                        <depth unit="cm">7</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
@@ -98,7 +100,7 @@
                             <handNote><!--Default value and requires editing-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">50-70</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -114,15 +116,12 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/8951582">Solanto</placeName>
                             	<geo>38.09296, 13.53147</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0100" precision="low">Late 2nd century BCE (letter form
-                                dating of Giannobile)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0100" precision="low" evidence="lettering">Late 2nd century BCE (letter form dating of Giannobile)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Plaque in a wall of a house on via Castello 7, Solanto</provenance>
-                        <provenance type="observed">in wall of house on via Castello 7 (38.076501, 13.542245)</provenance>
+                        <provenance type="found" subtype="discovered">Found in re-use in a wall of a house on via Castello 7, Solanto<geo>38.076501, 13.542245</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition>Solanto, private house</acquisition>
-                    </history>
-                    
+                    </history>                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -164,7 +163,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -173,6 +172,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-10-12" who="#MB">Maria Barbieri encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -194,23 +194,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR137139" xml:lang="grc">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
                 <ab>
-                    <lb n="1"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>ονιε Ποπλίο
-                    <supplied reason="lost">υ ? ---</supplied>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ονιε <persName><name>Ποπλίο<supplied reason="lost" cert="low">υ</supplied></name></persName><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="0"/><gap reason="lost" quantity="1" unit="line"/>
                 </ab>
-                <!--This EDR text 137139 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Giannobile 2003</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
-                    <!--[- - -]onie poplio[u -?- -]. Giannobile assumes type name of deceased in vocative, plus patrony, plus chreste chaire, dates to late C2 on basis of letter-forms (and frankly the spurious association with the Thermae honorifics for Scipio Aemilianus!--></p>
+                    <!--[- - -]onie poplio[u -?- -]. Giannobile assumes type name of deceased in vocative, plus patronym, plus chreste chaire, dates to late C2 on basis of letter-forms (and a spurious association with the Thermae honorifics for Scipio Aemilianus. Giannobile suggests that this text might belong to the inscription ISic003393, the latter probably referring to a monumental structure.--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -219,13 +217,14 @@
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                     </bibl>
                     <bibl type="bulletin" n="SEG">
-                        <citedRange>58.1055.6<!--Failed to convert--></citedRange>
+                        <citedRange>58.1055.6</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                     </bibl>
                     <bibl>
                         <author>Giannobile</author>
                         <date>2003</date>
                         <citedRange>119 no.6 tav.XXf</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/UKG6NGTC"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

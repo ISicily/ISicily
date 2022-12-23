@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -50,18 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003152</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388227</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <settlement>Catania</settlement>
+                        <repository></repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -78,26 +80,28 @@
                             <supportDesc>
                                 <support>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
+                                    <p></p>
+                                    <dimensions><!--Korhonen after Stephenson-->
+                                        <height unit="cm">22</height>
+                                        <width unit="cm">21</width>
+                                        <depth unit="cm"></depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"></condition>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--Korhonen after Stephenson-->
+                                <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">53-57</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -109,15 +113,15 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150" precision="low">1st century CE or beginning 2nd century CE
-                                (Korhonen)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0150" precision="low">1st century CE or beginning 2nd century CE (Korhonen)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">Reported by C. Stevenson in Cod. Vat. lat. 10574, f. 171r, but unpublished. He saw it in the early 1880s in the corridor of the former Museum
+                            of the Benedictines, by then the Municipal Antiquarium.</provenance>
+                        <provenance type="observed" subtype="autopsied">none</provenance>
                         <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
                 </msDesc>
@@ -161,7 +165,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -169,35 +173,33 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#MB">encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
-    </facsimile>
+       </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#MB">
+                <ab>
+                    <lb n="0a"/><gap reason="lost" extent="unknown" unit="line"/>
+                      <lb n="2"/><persName><name><supplied reason="lost"><expan><abbr>L</abbr><ex>ucius</ex></expan></supplied></name> <name><supplied reason="lost">Cael</supplied>ius</name>
+                    <persName><name type="patronym"><expan><abbr>L</abbr><ex>uci</ex></expan></name></persName> <expan><abbr>f</abbr><ex>ilius</ex></expan>
+                     <lb n="3"/><supplied reason="lost"><orgName><expan><abbr>Cla</abbr><ex>udia</ex></expan></orgName></supplied> <name><supplied reason="lost">M</supplied>acer</name></persName>
+                    <lb n="4"/><supplied reason="lost"><roleName><expan><abbr><num value="2"><hi rend="supraline"><am>II</am></hi></num></abbr><ex>duum</ex><abbr>vir</abbr></expan></roleName> </supplied> <gap reason="lost" extent="unknown" unit="character"/>
+<lb n="0b"/><gap reason="lost" extent="unknown" unit="line"/>
+                </ab>
             </div>
             <div type="apparatus">
                 <p><!--external apparatus criticus (if applicable)--></p>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#MB">
+                <p>Lucius Caelius Macer, son of Lucius?, of the Claudian tribe, duumvir</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#MB"> 
+                <p>Lucius Caelius Macer, figlio di Lucius?, della tribù Claudia, duumviro ----</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
@@ -208,12 +210,12 @@
                     <bibl>
                         <author>Korhonen</author>
                         <date>2004</date>
-                        <citedRange>161</citedRange>
+                        <citedRange>163 commentary to no.18</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
-            </div>
+       </div>
         </body>
-    </text>
+    </text> 
 </TEI>
