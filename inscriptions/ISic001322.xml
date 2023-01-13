@@ -15,6 +15,10 @@
                     <resp>original data collection and editing</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
@@ -42,10 +46,6 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
-                    <resp>editing, translation and commentary</resp>
-                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -59,19 +59,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001322</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4353449</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">289</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -95,20 +92,20 @@
                                         <depth unit="cm">0.5-5.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.complete.broken"/>
+                                <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Letters with apices, rhomboid Ο and Φ, angular Ω at l. 5 (as a flipped Μ); ος at l. 2, τη at l. 3, ος and ρων at l. 5 in ligature. Triangle-shaped dots at ll. 3, 4, 5, 6.</p><!--Default value and requires editing-->
+                            <handNote><p>Letters with serifs, rhomboid Ο and Φ, angular cursive Ω at l. 5 (as a flipped Μ); ος at l. 2, τη at l. 3, ος and ρων at l. 5 in ligature. Triangle-shaped interpuncts at ll. 3, 4, 5, 6.</p>
                                 <locus from="line1" to="line6">Lines 1-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">26-17 </height>
+                                    <height unit="mm">17-26</height><!-- Korhonen -->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -126,12 +123,11 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" cert="low" precision="low">2nd century CE (probably, according to Korhonen)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Ferrara states 'found at Catania', but this remains uncertain</provenance>
                         <provenance type="observed">Observed by Torremuzza and Kaibel in Museo Biscari, later by Korhonen in magazzino del Cortile, Collezione Biscari, formerly sala VI, 97.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -200,7 +196,6 @@
       <desc>Add Description Here</desc>
     </graphic>
   </surface>
-
     -->
     </facsimile>
     <text>
@@ -208,11 +203,11 @@
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
                     <lb n="1"/><persName type="attested"><name>Σαβοῦκις</name>
-                    <lb n="2"/><name>Καλλίμορφος</name></persName>
-                    <lb n="3"/><w>ἔζησεν</w> <g ref="#stop"/> <w>ἔτη</w> <g ref="#stop"/>
-                    <lb n="4"/><g ref="#stop"/> <num value="32">λβ</num> <g ref="#stop"/> <persName type="attested"><name>Σαβούκις</name>
-                    <lb n="5"/><name>Ζωίλος</name></persName> <g ref="#stop"/> <w>πάτρων</w>
-                    <lb n="6"/><w>ἐποίησε</w> <g ref="#stop"/>
+                    <lb n="2"/><name>Καλλίμορφ<hi rend="ligature">ος</hi></name></persName>
+                    <lb n="3"/><w>ἔζησεν</w> <g ref="#interpunct">·</g> <w>ἔ<hi rend="ligature">τη</hi></w> <g ref="#interpunct">·</g>
+                    <lb n="4"/><g ref="#interpunct">·</g> <num value="32">λβ</num> <g ref="#interpunct">·</g> <persName type="attested"><name>Σαβούκις</name> <g ref="#interpunct">·</g>
+                    <lb n="5"/><name>Ζωίλ<hi rend="ligature">ος</hi></name></persName> <g ref="#interpunct">·</g> <w>πάτ<hi rend="ligature">ρων</hi></w> <g ref="#interpunct">·</g>
+                    <lb n="6"/><w>ἐποίησε</w> <g ref="#interpunct">·</g>
                 </ab>
             </div>
             <div type="apparatus" resp="#martaf">
@@ -222,34 +217,32 @@
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#martaf">
-                <p>Saboukis Kallimorphos, lived for 32 years. Saboukis Zoilos, his patron (built this).</p>
+                <p>Saboukis Kallimorphos, lived for 32 years. Saboukis Zoilos, his patron (made this).</p>
             </div>
             <div type="translation" xml:lang="it" resp="#martaf">
                 <p>Saboukis Kallimorphos visse 32 anni. Saboukis Zoilos, suo patrono (realizzò questo).</p>
             </div>
             <div type="commentary" resp="#martaf">
-                <p><!--commented out pending revision-->
-                    <!--Saboukis Kallimorphos, age in years; erected by Saboukis Zoilos (Zwilos), patron (patrwn). A rare Catanian instance advertising the libertine status Korhonen rejects Manganaro's C4 AD date and the interpretation of patron as a name (already rejected in BE).-->
-                    The epitaph presents the traditional structure with the name of the deceased, the indication of his age (with the verb <foreign xml:lang="grc">ζάω</foreign> in the aorist form) and a second sentence with the name of the dedicant in the nominative form and the dedication verb (<foreign xml:lang="grc">ποιέω</foreign> in the aorist form). The formulae and the palaeography are characteristic of Catania and of a 2nd century CE dating, according to Korhonen (2004: 229; contra Manganaro 1959: 242, who dated the inscription to the 4th cent. CE). The epitaph was dedicated to a libertus Saboukis Kallimorphos by his patron Saboukis Zoilos (<foreign xml:lang="grc">πάτρων</foreign> is not part of the proper name of the dedicant, as Manganaro suggested: see J. and L. Robert 1961: 268 nr. 861). The patron belonged to the <foreign xml:lang="la">gens Sabucia</foreign>, who seems to have owned several latifundia in Sicily, as numerous toponyms attest: see Manganaro 1959.</p>
+                <p>The epitaph presents the traditional structure with the name of the deceased, the indication of his age (with the verb <foreign xml:lang="grc">ζάω</foreign> in the aorist form) and a second sentence with the name of the dedicant in the nominative form and the dedication verb (<foreign xml:lang="grc">ποιέω</foreign> in the aorist form). The formulae and the palaeography are characteristic of Catania and of a 2nd-century CE dating, according to Korhonen (2004: 229; contra Manganaro 1959: 242, who dated the inscription to the 4th cent. CE). The epitaph was dedicated to a libertus Saboukis Kallimorphos by his patron Saboukis Zoilos (<foreign xml:lang="grc">πάτρων</foreign> is not part of the proper name of the dedicant, as Manganaro suggested: see J. and L. Robert, BE 1961: 268 nr. 861). The patron belonged to the <foreign xml:lang="la">gens Sabucia</foreign>, who seems to have owned several latifundia in Sicily, as numerous toponyms attest: see Manganaro 1959.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl>
                         <author>Torremuzza</author>
                         <date>1769</date>
-                        <citedRange>129 n. 43</citedRange>
+                        <citedRange>129 no.43</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
                     </bibl>
                     <bibl>
                         <author>Torremuzza</author>
                         <date>1784</date>
-                        <citedRange>137 n. 50</citedRange>
+                        <citedRange>137 no.50</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
                     </bibl>
                     <bibl>
                         <author>Ferrara</author>
                         <date>1829</date>
-                        <citedRange>340 n. 1</citedRange>
+                        <citedRange>340 no.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
                     </bibl>
                     <bibl type="corpus" n="IG">
