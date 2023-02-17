@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003284</title>
+                <title>Epitaph for Kyriake</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -54,9 +58,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003284</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4358045</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -65,8 +67,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">297</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,15 +82,16 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Three joining fragments damaged above and perhaps on the left, set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">16</height>
+                                        <width unit="cm">32</width>
+                                        <depth unit="cm">1-6</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
@@ -99,14 +101,14 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Irregular letters, A with serifs and straight bar.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line2">Lines 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">37-42</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -118,10 +120,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" precision="low">4th — 5th century CE (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" precision="low">4th — 5th century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.105, mag. del cort.</provenance>
+                        <provenance type="found">Found in the necropolis of Via Androne.</provenance>
+                        <provenance type="observed">Observed by Ferrua in sala VI of Castel Ursino and later by Korhonen in Magazzino del cortile, Museo Civico.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -176,6 +178,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -197,21 +200,27 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
+                    <lb/><gap reason="lost" extent="unknown" unit="line"/>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>Α<gap reason="illegible" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>Α
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" cert="low"/> <expan><abbr>κ</abbr><ex>αὶ</ex></expan> Κυριακή
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" cert="low"/> <w><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <persName type="attested"><name>Κυριακή</name></persName>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photograph</note></app>
+                    <app loc="line 2"><note>Korhonen: κ(αὶ)</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="eng" resp="#martaf">
+                <p>… and Kyriake.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--3 frr. little recoverable except the word kyriake, perhaps the name of the deceased?--></p>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>... e Kyriake.</p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>The fragment is probably part of a Christian epitaph: <foreign xml:lang="grc">Κυριακή</foreign> must have been the name of the deceased (perhaps not the only one mentioned in the epitaph if <foreign xml:lang="grc">κ</foreign> is an abbreviation for <foreign xml:lang="grc">καί</foreign> as in IMusCatania 167 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001648">ISic001648</ref>) and not the indication of the day of Sunday (<foreign xml:lang="grc">κυριακὴ [ἡμήρα]</foreign>), as Ferrua believed. This is the only occurrence of this name in Catania, whereas it is more widespread in Christian inscriptions from Syracuse (see LGPN 3A: 262).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -235,8 +244,14 @@
                     <bibl>
                         <author>Ferrua</author>
                         <date>1989</date>
-                        <citedRange>no.420</citedRange>
+                        <citedRange>110 no.420</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ferrua</author>
+                        <date>1938</date>
+                        <citedRange>70</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/BPRRV8SB"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

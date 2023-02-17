@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003224</title>
+                <title>Epitaph for Katylleinos</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -54,9 +58,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003224</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4357304</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -81,32 +83,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Two joining fragments of marble plaque, slightly damaged in the middle.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">18</height>
+                                        <width unit="cm">24</width>
+                                        <depth unit="cm">1.6</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Letters with small apices, lunate Ε and Σ, cursive Μ. Four ivy-leaves and a palmette.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line5">Lines 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">11-15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -118,11 +121,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0250" precision="low">2nd century CE or first half of 3rd century CE
-                                (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0250" precision="low">2nd century CE or first half of 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VII.188, mag. sup.</provenance>
+                        <provenance type="found">Original discovery not recorded. Kaibel thought this inscription was ‘urbanae fortasse originis’, but the structure of the epitaph is in line with other epitaphs from Catania and this led Korhonen to consider it to be from Catania.</provenance>
+                        <provenance type="observed">Observed by Castelli in Monastero di San Nicolò l’Arena, later by Korhonen in Magazzino superiore, Collezione dei Benedettini (formerly sala VII 188).</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -178,6 +180,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -199,24 +202,29 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/><g ref="#ivy-leaf"/> Κατυλλεῖνος <g ref="#ivy-leaf"/>
-                    <lb n="2"/>ἒζη<supplied reason="lost">σε</supplied>ν ἒτη
-                    <lb n="3"/><num value="13">ιγ</num> <g ref="#ivy-leaf"/> ἐποίησεν
-                    <lb n="4"/>Εὐοδία μνήμης
-                    <lb n="5"/>χάριν <g ref="#ivy-leaf"/> <g ref="#palm"/>
+                    <lb n="1"/><g ref="#ivy-leaf">❦</g> <persName type="attested"><name>Κατυλλεῖνος</name></persName> <g ref="#ivy-leaf">❦</g>
+                    <lb n="2"/><w>ἒζη<supplied reason="lost">σε</supplied>ν</w> <w>ἔτη</w>
+                    <lb n="3"/><num value="13">ιγ</num> <g ref="#ivy-leaf">❦</g> <w>ἐποίησεν</w>
+                    <lb n="4"/><persName type="attested"><name>Εὐοδία</name></persName> <w>μνήμης</w>
+                    <lb n="5"/><w>χάριν</w> <space quantity="1" unit="character"/> <g ref="#ivy-leaf">❦</g> <g ref="#palmbranch">⸙</g>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photograph</note></app>
+                    <app loc="line 2"><note>Castelli read the text without the lacuna, but according to Korhonen, this is a not recorded supplement by the previous editors</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="eng" resp="#AA">
-                <p>Katulleinos lived for 13 years. Eudoia built this for his memory</p>
+            <div type="translation" xml:lang="eng" resp="#martaf">
+                <p>Katylleinos lived for 13 years. Eudoia made (this) for his memory</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--two frr. Katulleinos ezesen ete ig'. epoiesen Euodia mnemes charin. (formula cf. IMusCat 94).--></p>
+            <div type="translation" xml:lang="eng" resp="#martaf">
+                <p>Katylleinos visse per 13 anni. Euodia fece (questo) in sua memoria.</p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>According to Korhonen, the form of this epitaph is one of the most common in Catania, with two main sentences, the first containing the name of the deceased and his age, the second the indication of the dedicant with the aorist of <foreign xml:lang="grc">ποιέω</foreign>, which in this case precedes the name of the dedicant, as in IG 14.467 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001291">ISic001291</ref>. For this reason, Korhonen rejects Kaibel’s classification (adopted by Moretti in IGUR) of this inscription among the urban inscriptions. The expression <foreign xml:lang="grc">μνήμης χάριν</foreign> occurs in many epitaphs from Catania: e.g. IG 14.485 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001308">ISic00001308</ref>, IG 14.509 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001330">ISic001330</ref>, IG 14.511 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001332">ISic001332</ref>. The name of the deceased, <foreign xml:lang="grc">Κατυλλεῖνος</foreign>, recurs also in an inscription from Syracuse: SEG 36.862 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001650">ISic001650</ref>. <foreign xml:lang="grc">Εὐοδία</foreign> could be the mother of the young deceased: the name is possibly found in an inscription from Syracuse (Agnello 1960: no.39 + Ferrua 1989: no.243).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
