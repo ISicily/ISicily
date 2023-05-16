@@ -38,6 +38,10 @@
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,7 +62,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement></settlement>
-                        <repository role="museum"></repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory"></idno>
                         <altIdentifier>
                             <settlement/>
@@ -73,16 +77,16 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p>Lamina.</p>
+                                    <p>An opistographic fragment.</p>
                                     <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                     <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <height unit="cm">7.1</height>
+                                        <width unit="cm">6.2</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
@@ -97,7 +101,7 @@
                                 <!-- Based on Glyph table: -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">30</height>
                                 </dimensions>
                             </handNote>                       
                         </handDesc>
@@ -106,13 +110,13 @@
                         <origin>
                             <origPlace>
                                 <placeName/>
-                                <placeName type="ancient" ref=""></placeName><!-- add ancient place name and pleiades ref -->
-                                <placeName type="modern"></placeName><!-- add modern place name and geonames ref -->
-                                <geo></geo> <!-- add geo coordinates -->
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName> 
+                                <geo>37.58337, 12.82522</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in ...<geo>...</geo>.</provenance> <!-- add specific geo coordinates -->
+                        <provenance type="found" subtype="discovered">Provenance unknown, probably Selinunte</provenance> <!-- add specific geo coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition></acquisition> <!-- add -->
                     </history>
@@ -157,11 +161,12 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-06-09" who="#VM">Valentina Mignosa added basic metadata</change>
+                <change when="2022-11-29" who="#MB">Maria Barbieri encoded text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -177,17 +182,32 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <div type="textpart" subtype="recto">
                 <ab>
-                    <lb n="1"/>
+                    <lb n="1" style="text-direction:r-to-l"/><persName type="attested"><name>Πίθα<supplied reason="lost">ϙος</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/><unclear>ο</unclear>ς <persName type="attested"><name>Ἀφαι
+                    <lb n="2" break="no" style="text-direction:r-to-l"/>στίο<unclear>ν</unclear></name></persName> <persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/>σ<unclear>α</unclear><gap reason="illegible" quantity="1" unit="character"></gap>τας</name></persName>
+                    <lb n="3" style="text-direction:r-to-l"/><persName type="attested"><name>Ἐρίφιλος</name> <persName type="attested"><name type="patronymic">Τ<unclear>ε</unclear>ρπε
+                    <lb n="4" break="no" style="text-direction:r-to-l"/>φίλο</name></persName></persName> <persName type="attested"><name><unclear>Ματυ</unclear>λας</name> <persName type="attested"><name type="patronymic"><choice><reg>Κα<unclear>λ</unclear>λέ
+                    <lb n="5" break="no" style="text-direction:r-to-l"/>ος</reg><orig>Κα<unclear>λ</unclear>έος</orig></choice></name></persName></persName> <space extent="unknown" unit="character"/>
+                    <lb n="6" style="text-direction:r-to-l"/><persName type="attested"><name>Θοπύλος</name> <persName type="attested"><name type="patronymic">Ξένονος</name></persName></persName>
+                    <lb n="7" style="text-direction:r-to-l"/><persName type="attested"><name><unclear>Ἄ</unclear>θανις</name> <persName type="attested"><name type="patronymic">Ἀντάνδρο</name></persName></persName>
+                    <lb n="8" style="text-direction:r-to-l"/><persName type="attested"><name><unclear>Χ</unclear>άρον</name> <persName type="attested"><name type="patronymic">Ηαγ<supplied reason="lost">εσ</supplied>άρχο</name></persName></persName>
+                    <lb n="9" style="text-direction:r-to-l"/><persName type="attested"><name><unclear>Σιλ</unclear>ανος</name> <persName type="attested"><name type="patronymic">Ηαγεσάρχο</name></persName></persName>
+                    <lb n="10" style="text-direction:r-to-l"/><persName type="attested"><name><unclear>Ἄθαν</unclear><supplied reason="lost" cert="low">ις</supplied></name></persName> <space extent="unknown" unit="character"/>
+                    <lb n="11" style="text-direction:r-to-l"/><persName type="attested"><name>Ξένον</name> <persName type="attested"><name type="patronymic">Ηινύϙο</name></persName></persName>
+                    <lb n="12" style="text-direction:r-to-l"/><persName type="attested"><name>Ηαγίας</name> <persName type="attested"><name type="patronymic">Φιλοδάμο</name></persName></persName>
+                    <lb n="13" style="text-direction:r-to-l"/><persName type="attested"><name>Δεινίας</name> <persName type="attested"><name type="patronymic">Σφυρᾶ</name></persName></persName>
                 </ab>
             </div>
+            <div type="textpart" subtype="verso">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name type="patronymic">Φιλονο<supplied reason="lost">ς</supplied></name> <persName type="attested"><name>Ναϙοι</name></persName></persName>
+                </ab>
+            </div>
+            </div>
             <div type="apparatus">
-                <listApp>
-                    <app>
-                        <note>Text after ...</note><!-- ISicDef no. 54 -->
-                    </app>
-                </listApp>
+                <listApp><app><note>Text of Bettarini 2005 n.12</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p></p>
@@ -200,7 +220,7 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-                    <bibl type="corpus" n="Defixiones"> <!-- just a suggestion, decide on the best abbreviation here -->
+                    <bibl>
                         <author>Bettarini</author>
                         <date>2005</date>
                         <citedRange>12</citedRange>
