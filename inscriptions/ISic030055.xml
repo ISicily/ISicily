@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                              
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Contract for the sale of property</title>
-            <editor ref="#RDS">Randall Souza</editor>
+            <editor ref="#JP">Jonathan Prag</editor>
 	<principal ref="#RDS">Randall Souza</principal>
             <funder>John Fell OUP Research Fund</funder>
             <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
@@ -61,9 +61,9 @@
                   <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository><!-- aka Museo Regionale Interdisciplinare di Ragusa -->
                   <idno type="inventory">8020</idno>
                   <altIdentifier>
-                     <settlement></settlement>
-                     <repository></repository>
-                     <idno></idno>
+                     <settlement/>
+                     <repository/>
+                     <idno/>
                   </altIdentifier>
                 </msIdentifier>
                <msContents>
@@ -113,7 +113,7 @@
 			<placeName type="modern" ref="http://sws.geonames.org/8063309">Kamarina</placeName>
                         <geo>36.8718784874, 14.4483234195</geo>
                      </origPlace>
-                     <origDate notBefore-custom="-0350" notAfter-custom="-0250" evidence="lettering">ca. 300 BCE</origDate>
+                     <origDate datingMethod="#julian" notBefore-custom="-0350" notAfter-custom="-0250" evidence="lettering">ca. 300 BCE</origDate>
                   </origin>
                   <provenance type="found" subtype="discovered" when="1971">Discovered in 1971 in systematic excavations on the south side of Platea C in the intersection where it passes between block C43 and C44.</provenance>
                   <acquisition>Ragusa, Museo Regionale Interdisciplinare di Ragusa</acquisition>
@@ -162,22 +162,19 @@
       <revisionDesc status="draft">
          <listChange>
             <change when="2022-03-08" who="#RDS">Randall Souza created the draft file from template</change>
+            <change when="2023-06-21" who="#JP">minor editing</change>
          </listChange>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface >
-         <graphic>
-            <desc></desc>
-         </graphic>
-      </surface>
+      <surface/>
    </facsimile>
    <text>
       <body>
          <div type="edition" xml:space="preserve" xml:lang="grc" resp="#RDS">
          <ab>
          <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>δα<gap reason="lost" extent="unknown" unit="character"/>
-         <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>ος<gap reason="lost" atLeast="1" atMost="2" unit="character"/> Ἄμ<supplied reason="lost">ποχοι</supplied><gap reason="lost" extent="unknown" unit="character"/>
+         <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>ος <gap reason="lost" atLeast="1" atMost="2" unit="character"/> Ἄμ<supplied reason="lost">ποχοι</supplied> <gap reason="lost" extent="unknown" unit="character"/>
          <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><unclear>α</unclear> Φ<choice><reg>ι</reg><orig>υ</orig></choice>λάγρο <gap reason="lost" extent="unknown" unit="character"/>
          <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">Ἐ</supplied>πα<choice><reg>ί</reg><orig>υ</orig></choice>νετο<unclear>υ</unclear><gap reason="lost" extent="unknown" unit="character"/>
          <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><unclear>θ</unclear><gap reason="illegible" extent="1" unit="character"/>νικα<gap reason="lost" extent="unknown" unit="character"/>
@@ -186,11 +183,11 @@
          <div type="apparatus" resp="#RDS">
            <listApp>
               <app><note>Text based on Manganaro in Parola del Passato 1989 and the drawing of G. Foglia in Cordano 1984.</note></app>
-              <app loc="Line 1">These letters, documented in the drawing of G. Foglia in Cordano 1984, are not transcribed by any previous editor of the text.</app>
-              <app loc="Line 2"><gap reason="lost" extent="unknown" unit="character"/>Ἄμ<supplied reason="lost" cert="low">ποχοι</supplied>, M.</app>
-              <app loc="Line 3"><gap reason="lost" extent="unknown" unit="character"/><unclear>Φ</unclear>ιλάγρο<supplied reason="lost">υ</supplied><gap reason="lost" extent="unknown" unit="character"/>, M.; φυλά, Dubois in IGDS 1 (this is the only text D. prints for this inscription).</app>
-              <app loc="Line 4"><gap reason="lost" extent="unknown" unit="character"/>Αἰνέτο<unclear>υ</unclear><gap reason="lost" extent="unknown" unit="character"/>, M.</app>
-              <app loc="Line 5"><gap reason="lost" extent="unknown" unit="character"/>Νικά<supplied reason="lost" cert="low">ρετος</supplied> <note>vel Νικα<supplied reason="lost">σίων</supplied>, M.</note> </app>
+              <app loc=" 1"><note>These letters, documented in the drawing of G. Foglia in Cordano 1984, are not transcribed by any previous editor of the text.</note></app>
+              <app loc="2"><note><gap reason="lost" extent="unknown" unit="character"/>Ἄμ<supplied reason="lost" cert="low">ποχοι</supplied>, M.</note></app>
+              <app loc="3"><note><gap reason="lost" extent="unknown" unit="character"/><unclear>Φ</unclear>ιλάγρο<supplied reason="lost">υ</supplied><gap reason="lost" extent="unknown" unit="character"/>, M.; φυλά, Dubois in IGDS 1 (this is the only text D. prints for this inscription).</note></app>
+              <app loc="Line 4"><note><gap reason="lost" extent="unknown" unit="character"/>Αἰνέτο<unclear>υ</unclear><gap reason="lost" extent="unknown" unit="character"/>, M.</note></app>
+              <app loc="Line 5"><note><gap reason="lost" extent="unknown" unit="character"/>Νικά<supplied reason="lost" cert="low">ρετος</supplied> vel Νικα<supplied reason="lost">σίων</supplied>, M.</note> </app>
            </listApp>
          </div>
          <div type="translation" xml:lang="en" resp="#RDS">

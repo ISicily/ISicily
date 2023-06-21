@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                              
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Contract for the sale of a vinyard and equipment</title>
-            <editor ref="#RDS">Randall Souza</editor>
+            <editor ref="#JP">Jonathan Prag</editor>
 	<principal ref="#RDS">Randall Souza</principal>
             <funder>John Fell OUP Research Fund</funder>
             <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
@@ -57,9 +57,10 @@
                <msIdentifier>
                   <country>Italy</country>
                   <region>Sicily</region>
-		<settlement>unknown</settlement>
-		       <repository role="private">In a private collection</repository>
+                  <settlement>unknown</settlement>
+	     <repository role="private">In a private collection</repository>
                   <altIdentifier>
+                     <idno/>
                   </altIdentifier>
                 </msIdentifier>
                <msContents>
@@ -109,7 +110,7 @@
 			<placeName type="modern" ref="http://sws.geonames.org/2524052">Morgantina</placeName>
                         <geo>37.430596, 14.479485</geo>
                      </origPlace>
-                     <origDate notBefore-custom="-0250" notAfter-custom="-0200" evidence="lettering">ca. 250-200 BCE</origDate>
+                     <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0200" evidence="lettering">ca. 250-200 BCE</origDate>
                   </origin>
                   <provenance type="discovery">Original discovery not recorded; in a private collection.</provenance>
                   <acquisition>Private collection.</acquisition>
@@ -158,25 +159,22 @@
       <revisionDesc status="draft">
          <listChange>
             <change when="2022-04-08" who="#RDS">Randall Souza created the draft file from template</change>
+            <change when="2023-06-21" who="#JP">minor editing</change>
          </listChange>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface >
-         <graphic>
-            <desc></desc>
-         </graphic>
-      </surface>
+      <surface/>
    </facsimile>
    <text>
       <body>
          <div type="edition" xml:space="preserve" xml:lang="grc" resp="#RDS">
          <ab>
-         <lb n="1"/><expan><abbr>Ἐπ</abbr><ex>ὶ</ex></expan> ἱαραπόλου Ὄρθωνος Θευδα<supplied reason="lost">ισίου</supplied> <gap reason="lost extent="unknown" unit="character"><note>numeral indicating the day of the month</note></gap> ὠνεῖτα<supplied reason="lost">ι ἀμπέ</supplied>
+         <lb n="1"/><expan><abbr>Ἐπ</abbr><ex>ὶ</ex></expan> ἱαραπόλου Ὄρθωνος Θευδα<supplied reason="lost">ισίου</supplied> <gap reason="lost" extent="unknown" unit="character"><desc>numeral indicating the day of the month</desc></gap> ὠνεῖτα<supplied reason="lost">ι</supplied> <supplied reason="lost">ἀμπέ</supplied>
          <lb n="2" break="no"/>λους καὶ τὰ ἑπόμενα πάντα ταῖς <supplied reason="lost">ἀμ</supplied>πέλοις κα<unclear>ὶ</unclear> <supplied reason="lost">τᾶς</supplied> <supplied reason="lost">λα</supplied>
          <lb n="3" break="no"/>νοῦ δύο μέρεα τῶν δ’ ἄλλων τὰ ἥμισσα τοῦ στα<supplied reason="lost">θ</supplied><unclear>μ</unclear>ο<supplied reason="lost">ῦ</supplied>
          <lb n="4"/>παντὸς ὅ κ’ ἦ <supplied reason="lost">ἐ</supplied>μ βασίεσσιν καὶ τῶν ἄλλων ἐντ<supplied reason="lost">ὸς</supplied>
-         <lb n="5"/>τὰ ἥμισσα Λύσων Ἱππία <num>ΠΔΗΤ<unclear>Δ</unclear>Δ</num> πὰρ Θέστωνος <!--unclear how to encode the numeral "closed" eta with top and bottom horizontal bars, deltas have bars above, not clear how to encode that either-->
+         <lb n="5"/>τὰ ἥμισσα Λύσων Ἱππία <num value="115">ΠΔΗ</num> <num value="21">Τ<unclear>Δ</unclear>Δ</num> πὰρ Θέστωνος <!--unclear how to encode the numeral "closed" eta with top and bottom horizontal bars, deltas have bars above, not clear how to encode that either-->
          <lb n="6"/>Δαμάρχου καὶ <surplus>παι</surplus> πὰρ Σατύρου Δάμωνος ὀρφο
          <lb n="7" break="no"/>βωτᾶν ἐόντων πλὰν τῶν ἱερῶν Ἄμποχοι Νικίας Κρατί<supplied reason="lost">α</supplied>
          <lb n="8"/>Ἐμμενίδας Δάμωνος Θεύδωρος Εὐπολέμου

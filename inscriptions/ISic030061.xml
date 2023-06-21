@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Contract for the mortgage of land and equipment</title>
-            <editor ref="#RDS">Randall Souza</editor>
+            <editor ref="#JP">Jonathan Prag</editor>
 	<principal ref="#RDS">Randall Souza</principal>
             <funder>John Fell OUP Research Fund</funder>
             <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
@@ -61,6 +61,7 @@
 		<repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
 		  <idno type="inventory">30811</idno>     
                   <altIdentifier>
+                     <idno/>
                   </altIdentifier>
                 </msIdentifier>
                <msContents>
@@ -71,8 +72,8 @@
                      <supportDesc>
                         <support>
                            <p>A lead sheet in eight fragments, damaged on top and right sides, apparently preserved on left and perhaps bottom sides. Reported in early publications to be silver, but apparently it is a lead object like all other Sicilian real estate contracts.</p>
-                           <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/115.html">Lead</material><!--not sure if the .html is needed; it was in the template file I've been working from, but the taxonomies file doesn't include it in the URL-->
-                           <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
+                           <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/115">Lead</material>
+                           <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145">lamina</objectType>
                            <dimensions>
                               <height unit="cm">5.0</height>
                               <width unit="cm">6.5</width>
@@ -110,7 +111,7 @@
 			<placeName type="modern" ref="http://sws.geonames.org/2524052">Morgantina</placeName>		     
                         <geo>37.430596, 14.479485</geo>
                      </origPlace>
-                     <origDate notBefore-custom="-0250" notAfter-custom="-0200" evidence="lettering">ca. 250-200 BCE</origDate>
+                     <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0200" evidence="lettering">ca. 250-200 BCE</origDate>
                   </origin>
                   <provenance type="found" subtype="first-seen" when="1912">Published in 1912 by Orsi, having been acquired along with other objects by him for the Syracuse museum on 14 February 1910 from Serra Orlando (Morgantina).</provenance>
                   <provenance type="found" subtype="observed" when="1914">Brought to Florence and studied there by D. Comparetti.</provenance>
@@ -159,16 +160,13 @@
       </profileDesc>
       <revisionDesc status="draft">
          <listChange>
-            <change when="2022-04-" who="#RDS">Randall Souza created the draft file from template</change>
+            <change when="2022-04-08" who="#RDS">Randall Souza created the draft file from template</change>
+            <change when="2023-06-21" who="#JP">minor editing</change>
          </listChange>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface >
-         <graphic>
-            <desc></desc>
-         </graphic>
-      </surface>
+      <surface/>
    </facsimile>
    <text>
       <body>
@@ -192,7 +190,7 @@
            <app loc="1"><note><supplied reason="lost">κτῆμα καὶ τ</supplied>ὰ, C.</note></app>
            <app loc="2"><note><supplied reason="lost">ἐπ</supplied>ὶ, C.; ἐνι<supplied reason="lost">αυτῶι</supplied><space unit="character" extent="unknown"/>, C.</note></app>
            <app loc="3"><note><supplied reason="lost">ἢ ἑ</supplied>ξαμήνωι, C.</note></app>
-           <app loc="4"><note>Ἄμ<supplied reason="lost">π</supplied>οχοι, C.; Αἰσχρίων Σίρα, Ἡρ<gap reason="lost" quantity="2" unit="character"/>στ<supplied reason="omitted">υ</supplied>>λ<supplied reason="lost" cert="low">λῖ</supplied>, C.</note></app>
+           <app loc="4"><note>Ἄμ<supplied reason="lost">π</supplied>οχοι, C.; Αἰσχρίων Σίρα, Ἡρ<gap reason="lost" quantity="2" unit="character"/>στ<supplied reason="omitted">υ</supplied>λ<supplied reason="lost" cert="low">λῖ</supplied>, C.</note></app>
            <app loc="5"><note>νος, C.; Ἀριστάρχ<supplied reason="lost">ου</supplied><space unit="character" extent="unknown"/>, C.</note></app>
            <app loc="8"><note>C. interprets the monogram as indicating a connection between the two Aischrions listed one after another; M. follows De Sanctis in considering it an error; Ἀριστά<supplied reason="lost">ρχου</supplied><space unit="character" extent="unknown"/>, C.</note></app>
            </listApp>

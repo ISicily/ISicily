@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                              
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Contract for the sale of property</title>
-            <editor ref="#RDS">Randall Souza</editor>
+            <editor ref="#JP">Jonathan Prag</editor>
 	<principal ref="#RDS">Randall Souza</principal>
             <funder>John Fell OUP Research Fund</funder>
             <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
@@ -61,9 +61,9 @@
                   <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository><!-- aka Museo Regionale Interdisciplinare di Ragusa -->
                   <idno type="inventory">8020</idno>
                   <altIdentifier>
-                     <settlement></settlement>
-                     <repository></repository>
-                     <idno></idno>
+                     <settlement/>
+                     <repository/>
+                     <idno/>
                   </altIdentifier>
                 </msIdentifier>
                <msContents>
@@ -113,7 +113,7 @@
 			<placeName type="modern" ref="http://sws.geonames.org/8063309">Kamarina</placeName>
                         <geo>36.8718784874, 14.4483234195</geo>
                      </origPlace>
-                     <origDate notBefore-custom="-0350" notAfter-custom="-0250" evidence="lettering">ca. 300 BCE</origDate>
+                     <origDate datingMethod="#julian" notBefore-custom="-0350" notAfter-custom="-0250" evidence="lettering">ca. 300 BCE</origDate>
                   </origin>
                   <provenance type="found" subtype="discovered" when="1971">Discovered in 1971 in systematic excavations on the south side of Platea C in the intersection where it passes between block C43 and C44.</provenance>
                   <acquisition>Ragusa, Museo Regionale Interdisciplinare di Ragusa</acquisition>
@@ -162,33 +162,30 @@
       <revisionDesc status="draft">
          <listChange>
             <change when="2022-03-04" who="#RDS">Randall Souza created the draft file from template</change>
+            <change when="2023-06-21" who="#JP">minor editing</change>
          </listChange>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface >
-         <graphic>
-            <desc></desc>
-         </graphic>
-      </surface>
+      <surface/>
    </facsimile>
    <text>
       <body>
          <div type="edition" xml:space="preserve" xml:lang="grc" resp="#RDS">
-		 <div type="textPart" subtype="section" n="a">
+		 <div type="textpart" subtype="section" n="a">
          <ab>
 		 <milestone unit="face" subtype="recto"/>
-         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>α τα<unclear>λ</unclear><supplied reason="lost">άντων </supplied>Ἄ<unclear>μ</unclear><supplied reason="lost">πο</supplied><unclear>χ</unclear><supplied reason="lost">οι</supplied>
+         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>α τα<unclear>λ</unclear><supplied reason="lost">άντων </supplied> Ἄ<unclear>μ</unclear><supplied reason="lost">πο</supplied><unclear>χ</unclear><supplied reason="lost">οι</supplied>
          <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">Εὐ</supplied>θυκλῆς Εὐδόξου δευτ<supplied reason="lost">έρ</supplied>αι
-         <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><expan><abb>πρώ<unclear>τ</unclear></abb><ex>αι</ex></expan> Νῖκις <supplied reason="lost">Σ</supplied>τράτωνος <expan><abb>ἐνά</abb><ex>ται</ex></expan> <expan><abb>δευ</abb><ex>τέραι</ex></expan>
-         <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><expan><abb><supplied reason="lost">ἐν</supplied><unclear>ά</unclear></abb><ex>ται</ex></expan> <expan><abb>πρώ</abb><ex>ται</ex></expan> Σωκρ<supplied reason="lost">ά</supplied>της Σωσικρ<supplied reason="lost">ά</supplied>τεος
-         <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/>Ἡρακλείδα <expan><abb>δεκ</abb><ex>άται</ex></expan> <expan><abb>πρώ</abb><ex></expan>ται Λέοντις
-         <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><unclear>ν</unclear> Γνάθ<supplied reason="lost">ω</supplied>νος <expan><abb>πέμ</abb><ex>πται</ex></expan> <expan><abb>πρώ</abb><ex>ται</ex></expan>
-         <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><unclear>Θ</unclear>εότ<supplied reason="lost">ι</supplied>μος Λαμίσκου <expan><abb>ἐνά</abb><ex>ται</ex></expan> <expan><abb>πρώ<unclear>τ</unclear></abb><ex>αι</ex></expan>
+         <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><expan><abbr>πρώ<unclear>τ</unclear></abbr><ex>αι</ex></expan> Νῖκις <supplied reason="lost">Σ</supplied>τράτωνος <expan><abbr>ἐνά</abbr><ex>ται</ex></expan> <expan><abbr>δευ</abbr><ex>τέραι</ex></expan>
+         <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><expan><abbr><supplied reason="lost">ἐν</supplied><unclear>ά</unclear></abbr><ex>ται</ex></expan> <expan><abbr>πρώ</abbr><ex>ται</ex></expan> Σωκρ<supplied reason="lost">ά</supplied>της Σωσικρ<supplied reason="lost">ά</supplied>τεος
+         <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/>Ἡρακλείδα <expan><abbr>δεκ</abbr><ex>άται</ex></expan> <expan><abbr>πρώ</abbr><ex>ται</ex></expan> Λέοντις
+         <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><unclear>ν</unclear> Γνάθ<supplied reason="lost">ω</supplied>νος <expan><abbr>πέμ</abbr><ex>πται</ex></expan> <expan><abbr>πρώ</abbr><ex>ται</ex></expan>
+         <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><unclear>Θ</unclear>εότ<supplied reason="lost">ι</supplied>μος Λαμίσκου <expan><abbr>ἐνά</abbr><ex>ται</ex></expan> <expan><abbr>πρώ<unclear>τ</unclear></abbr><ex>αι</ex></expan>
          <lb n="8"/><space unit="character" extent="unknown"/> 
          </ab>
 		 </div>
-		 <div type="textPart" subtype="section" n="b"><!--The reverse of the second (middle) fragment is inscribed with the following:-->
+		 <div type="textpart" subtype="section" n="b"><!--The reverse of the second (middle) fragment is inscribed with the following:-->
          <ab>
 		  <milestone unit="face" subtype="verso"/>
          <lb n="1" style="text-direction:downwards"/>Κοράγου
@@ -199,9 +196,9 @@
            <listApp>
               <app><note>Text based on Cordano in Boll. Art. 1984 and Manganaro in Parola del Passato 1989</note></app>
               <app loc="a.1"><note><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">προσ</supplied>άτα<supplied reason="lost">ς</supplied>, C.</note></app>
-              <app loc="a.2"><note><supplied reason="lost">Θ</supplied>ουκλῆς, C.; <supplied reason="lost">Βα</supplied>θυκλῆς, Dubois in IGDS1</note><note><expan><abb>δευ</abb><ex>τέραι</ex></expan> τ<supplied reason="lost">ρίτ</supplied>αι, M.</note></app>
+              <app loc="a.2"><note><supplied reason="lost">Θ</supplied>ουκλῆς, C.; <supplied reason="lost">Βα</supplied>θυκλῆς, Dubois in IGDS1</note><note><expan><abbr>δευ</abbr><ex>τέραι</ex></expan> τ<supplied reason="lost">ρίτ</supplied>αι, M.</note></app>
             <app loc="a.3"><note>πρώ. Ἴνικις, C.</note><note>ἐνά. δευ., C. (Cordano does not expand the tribe/phratry numerals)</note></app>
-            <app loc="a.4"><note><supplied reason="lost">ἐν</supplied>ά. πρώ., C.; <unclear>ά</unclear> <expan><abb>πρώ</abb><ex>ται</ex></expan>, M.</note></app>
+            <app loc="a.4"><note><supplied reason="lost">ἐν</supplied>ά. πρώ., C.; <unclear>ά</unclear> <expan><abbr>πρώ</abbr><ex>ται</ex></expan>, M.</note></app>
             <app loc="a.5"><note>Ἡρακλείδ<supplied reason="lost">α</supplied>, C</note></app>
             <app loc="a.6"><note><gap reason="lost" extent="unknown" unit="character"/>Γνάθωνος, C.; εναθ<gap reason="lost" extent="1" unit="character"/>νος πεμ. πρ., Dubois in IGDS 1</note><note>No omicron is visible at the end of the line in the drawing of G. Foglia in Cordano 1984.</note></app>
             <app loc="a.7"><note><unclear>Θ</unclear>ε<unclear>ό</unclear>τ<supplied reason="lost">ι</supplied>μος, Dubois in IGDS1</note></app>

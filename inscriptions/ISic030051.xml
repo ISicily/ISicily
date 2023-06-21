@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                              
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Contract for the sale of land</title>
-            <editor ref="#RDS">Randall Souza</editor>
+            <editor ref="#JP">Jonathan Prag</editor>
 	<principal ref="#RDS">Randall Souza</principal>
             <funder>John Fell OUP Research Fund</funder>
             <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
@@ -113,7 +113,7 @@
 			<placeName type="modern" ref="http://sws.geonames.org/8063309">Kamarina</placeName>
                         <geo>36.8718784874, 14.4483234195</geo>
                      </origPlace>
-                     <origDate notBefore-custom="-0200" notAfter-custom="-0100" evidence="lettering">2nd century BCE</origDate>
+                     <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0100" evidence="lettering">2nd century BCE</origDate>
                   </origin>
                   <provenance type="found" subtype="first-seen" when="1977">G. Manganaro first published the text from a drawing while it was in the possession of G. Iapichino, who by 1989 had given the object to the Museo Interdisciplinare Regionale di Ragusa in <placeName type="modern" ref="http://www.geonames.org/2523650/ragusa.html">Ragusa</placeName></provenance>
                   <acquisition>Ragusa, Museo Regionale Interdisciplinare di Ragusa</acquisition>
@@ -162,15 +162,12 @@
       <revisionDesc status="draft">
          <listChange>
             <change when="2022-02-15" who="#RDS">Randall Souza created the draft file from template</change>
+            <change when="2023-06-21" who="#JP">minor editing</change>
          </listChange>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface >
-         <graphic>
-            <desc></desc>
-         </graphic>
-      </surface>
+      <surface/>
    </facsimile>
    <text>
       <body>
@@ -196,12 +193,11 @@
               <app loc="Line 1">
                 <note>Μνᾶ<supplied reason="lost" cert="low">σις</supplied><supplied reason="lost">Δίω</supplied>, Manganaro 1989</note>
               </app>
-              <app loc="Line 2"><note>πεμ.πρω., D; τὸν ἐμ π<gap extent="2" unit="character"/>, Manganaro 1989</note></app>
+              <app loc="Line 2"><note>πεμ.πρω., D; τὸν ἐμ π<gap reason="lost" quantity="2" unit="character"/>, Manganaro 1989</note></app>
               <app loc="Line 6"><note><expan><abbr>ἕκτ</abbr><ex>α</ex></expan> <expan><abbr>δ</abbr><ex>εύτερα</ex></expan>, Manganaro 1989; the alpha at the end of the line is clear, however.</note></app>
               <app loc="Line 11"><note><supplied reason="lost" cert="low">Φίλ</supplied><unclear>ω</unclear>ν Αἰνησι<supplied reason="lost">δ</supplied>άμου, Manganaro 1989</note></app>
               <app loc="Line 12"><note>Φ<supplied reason="lost" cert="low">ιλοδά</supplied>μου, Manganaro 1989</note></app>
-		</app>
-           </listApp>
+	</listApp>
          </div>
          <div type="translation" xml:lang="en" resp="#RDS">
             <p>When Archagathos was in office, on the sixteenth (day) of Geloios. --on-- child of ----, fifth (phratry)-first (tribe) bought from Athanios son of Basias the enclosed field in --tuai, two schoinoi in width, and in length from the "Konchokranaios" stream up to the "crooked reeds," for twenty-one talents. Guarantors: Theudosios son of Theudoros, sixth (phratry), Theotimos son of Lamiskos, Ameinon son of Damatrios, Numphodoros son of Damon, Theodoros son of Aristogenes, Artamidoros son of Theodosios, Muskon son of Andron, Prodoxos son of Sosias, Ainesis son of Thallos, Orthon son of --llos.</p>

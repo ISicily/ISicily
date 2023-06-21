@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Contract for the sale of property</title>
-            <editor ref="#RDS">Randall Souza</editor>
+            <editor ref="#JP">Jonathan Prag</editor>
 	<principal ref="#RDS">Randall Souza</principal>
             <funder>John Fell OUP Research Fund</funder>
             <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
@@ -61,9 +61,9 @@
                   <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository><!-- aka Museo Regionale Interdisciplinare di Ragusa -->
                   <idno type="inventory">8013</idno><!--published in IGDS I along with ISic 030051 but does it share the inv. no. in the museum or does it have its own?-->
                   <altIdentifier>
-                     <settlement></settlement>
-                     <repository></repository>
-                     <idno></idno>
+                     <settlement/>
+                     <repository/>
+                     <idno/>
                   </altIdentifier>
                 </msIdentifier>
                <msContents>
@@ -113,7 +113,7 @@
 			<placeName type="modern" ref="http://sws.geonames.org/8063309">Kamarina</placeName>
                         <geo>36.8718784874, 14.4483234195</geo>
                      </origPlace>
-                     <origDate notBefore-custom="-0200" notAfter-custom="-0100" evidence="lettering">2nd century BCE</origDate>
+                     <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0100" evidence="lettering">2nd century BCE</origDate>
                   </origin>
                   <provenance type="found" subtype="first-seen" when="1977">G. Manganaro first published the text from a drawing while it was in the possession of G. Iapichino, who by 1989 had given the object to the Museo Interdisciplinare Regionale di Ragusa in <placeName type="modern" ref="http://www.geonames.org/2523650/ragusa.html">Ragusa</placeName></provenance>
                   <acquisition>Ragusa, Museo Regionale Interdisciplinare di Ragusa</acquisition>
@@ -162,29 +162,26 @@
       <revisionDesc status="draft">
          <listChange>
             <change when="2022-02-17" who="#RDS">Randall Souza created the draft file from template</change>
+            <change when="2023-06-21" who="#JP">minor editing</change>
          </listChange>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface >
-         <graphic>
-            <desc></desc>
-         </graphic>
-      </surface>
+      <surface/>
    </facsimile>
    <text>
       <body>
          <div type="edition" xml:space="preserve" xml:lang="grc" resp="#RDS">
          <ab>
-         <lb n="1"/><supplied reason="lost">Ἐπὶ</supplied><gap reason="lost" quantity="1" unit="character"/>
-         <lb n="2"/><supplied reason="lost">ὁ δεῖνα ἐπρίατο τὸν χῶρον<supplied/><gap reason="lost" quantity="1" unit="character"/>
-         <lb n="3"/><gap reason="lost" quantity="1" unit="character"/><supplied reason="lost">καὶ τῶν ἐνεόντων κοινων<supplied/><gap reason="lost" quantity="1" unit="character"/>
-         <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ποτὶ</supplied>Κότα<supplied reason="lost" cert="low">ν</supplied><gap reason="lost" extent="unknown" unit="character"/>
-         <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/>καὶ τοῦ ὕδατο<supplied reason="lost">ς</supplied><gap reason="lost" extent="unknown" unit="character"/>
-         <lb n="6"/><supplied reason="lost">τὰ ἥμισσα ἐ</supplied>ν τῶι χώρωι γ<gap reason="lost" extent="unknown" unit="character">
-         <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost" cert="low">πὰρ Φι</supplied>ντέα τ<supplied reason="lost">ο</supplied>ῦ Μαχάν<supplied reason="lost">ου</supplied><gap reason="lost" extent="unknown" unit="character"/>
-         <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/>τὰν δ’ Εὐάμερ<supplied reason="lost" cert="low">ος</supplied><gap reason="lost" extent="unknown" unit="character"/>
-         <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ταλάντω</supplied>ν Ἄμποχ<supplied reason="lost">οι </supplied><gap reason="lost" extent="unknown" unit="character"/>
+         <lb n="1"/><supplied reason="lost">Ἐπὶ</supplied> <gap reason="lost" quantity="1" unit="character"/>
+         <lb n="2"/><supplied reason="lost">ὁ δεῖνα ἐπρίατο τὸν χῶρον</supplied><gap reason="lost" quantity="1" unit="character"/>
+         <lb n="3"/><gap reason="lost" quantity="1" unit="character"/><supplied reason="lost">καὶ</supplied> <supplied reason="lost">τῶν</supplied> <supplied reason="lost">ἐνεόντων</supplied> <supplied reason="lost">κοινων</supplied> <gap reason="lost" quantity="1" unit="character"/>
+         <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ποτὶ</supplied> Κότα<supplied reason="lost" cert="low">ν</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+         <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/> καὶ τοῦ ὕδατο<supplied reason="lost">ς</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+         <lb n="6"/><supplied reason="lost">τὰ</supplied> <supplied reason="lost">ἥμισσα</supplied> <supplied reason="lost">ἐ</supplied>ν τῶι χώρωι γ<gap reason="lost" extent="unknown" unit="character"/>
+         <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" cert="low">πὰρ</supplied> <supplied reason="lost">Φι</supplied>ντέα τ<supplied reason="lost">ο</supplied>ῦ Μαχάν<supplied reason="lost">ου</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+         <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/>τὰν δ’ Εὐάμερ<supplied reason="lost" cert="low">ος</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+         <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ταλάντω</supplied>ν Ἄμποχ<supplied reason="lost">οι</supplied> <gap reason="lost" extent="unknown" unit="character"/>
          <lb n="10"/><gap reason="lost" quantity="1" unit="line"/>
          </ab>
          </div>
@@ -212,13 +209,9 @@
          <div type="bibliography"><!--start here-->
             <listBibl type="edition">
                <bibl type="bulletin" n="SEG">
-               <citedRange>27.0651</citedRange>
-               <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                  <citedRange>27.0651</citedRange>
+                  <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                </bibl>
-	<!-- <bibl type="bulletin" n="BE">
-      <citedRange></citedRange>
-	<ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
-	</bibl>-->
 		 <bibl>
 			<author>Manganaro</author>
 			<date>1977</date>
