@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -50,19 +50,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002939</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387765</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Segesta</settlement>
-                        <repository role="museum">exacavation stores</repository>
-                        <idno type="inventory">SG2004</idno>
+                        <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/196">Parco archeologico di Segesta</repository>
+                        <idno type="inventory">SG2004, IG2621</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -76,12 +74,13 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Large block of limestone cut to a rounded tabula ansata.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <dimensions><!--I.Segesta-->
+                                        <height unit="cm">38</height>
+                                        <width unit="cm">109</width>
+                                        <depth unit="cm">22</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -94,10 +93,10 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--ISegesta-->
+                                <locus from="line1" to="line6">Line 1-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">29-50</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -109,14 +108,13 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462487">Segesta</placeName>		
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" when-custom="-0250" precision="medium">c. 250 BCE (Guarducci,
-                                followed by Nenci)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0100" evidence="archaeological-context">On palaeographic grounds, datable to the C3 or C2 BCE; but this inscription, together with several others almost certainly belongs in the context of the monumental stoa of the later second century BCE.</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1927">Found 'tra i ruderi della citta, presso il teatro' according to Marconi.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -161,7 +159,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-09-23" who="#JP">Jonathan Prag added ISegesta ref</change>
@@ -171,49 +169,34 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-12" who="#JP">Jonathan Prag made preliminary draft, text edition etc. from ISegesta</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic002939_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic002939.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI332181">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— — — — — — — — — — — —</supplied>
-                    <lb n="2"/>․νε․․․․α․․ο․ισ
-                    <supplied reason="lost">— —</supplied>
-                    <unclear>Ἀσ</unclear>ωπαί
-                    <supplied reason="lost">ου</supplied>
-                    <lb n="3"/>
-                    <supplied reason="lost">ἱ</supplied>
-                    <unclear>ε</unclear>ρομναμονέοντος
-                    <lb n="4"/>
-                    <supplied reason="lost">Ἀ</supplied>ρτεμιδώρου Δόσσιος Γραδαναίου<lb n="5"/>τὸ δίπυλον, οἱ
-                    ἀνδρεῶνες,<lb n="6"/>ἁ προέδρα ἐστεγάσθεν ἐθυ․․
-                    <lb n="7"/>
-                    <supplied reason="lost">— — — — — — — —</supplied>σδισ
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="8"/>
+                    <lb n="1"/><supplied reason="lost">ἐ</supplied><unclear>π</unclear>ὶ ἱε<supplied reason="lost">ρ</supplied>οθύ<supplied reason="lost">τ</supplied>α <unclear>Δ</unclear>ιο<unclear>ν</unclear>υσ<unclear>ί</unclear><supplied reason="lost">ου</supplied> <unclear>Σ</unclear>ωπάτ<supplied reason="lost">ρου</supplied>
+                    <lb n="2"/><supplied reason="lost">ἱ</supplied><unclear>ε</unclear>ρομναμονέοντος
+                    <lb n="3"/><supplied reason="lost">Ἀ</supplied>ρτεμιδώρου Δόσσιος Γραδαναίου
+                    <lb n="4"/>τὸ δίπυλον, οἱ ἀνδρεῶνες
+                    <lb n="5"/>ἁ προέδρα ἐστεγάσθεν ἐθυ<supplied reason="lost">ρ</supplied><gap reason="lost" unit="character" quantity="2"/>
+                    <lb n="6"/><gap reason="lost" unit="character" extent="unknown"/><orig><unclear>Σ</unclear>ΔΙΣ</orig><gap reason="lost" unit="character" extent="unknown"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Ampolo and Erdas 2019</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -256,6 +239,12 @@
                         <date>2003</date>
                         <citedRange>398-399 no.7</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/33HPA43I"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ampolo and Erdas</author>
+                        <date>2018</date>
+                        <citedRange>114</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/HT7JSBFE"/>
                     </bibl>
                     <bibl>
                         <author>Ampolo and Erdas</author>

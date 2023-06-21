@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -50,18 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000819</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385327</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Noto</settlement>
-                        <repository role="museum">Biblioteca communale</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/100">Museo Civico di Noto</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -76,29 +78,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>A funerary altar, damaged upper right; the text is set out in a simple incised square frame.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--Manganaro-->
+                                        <height unit="cm">74</height>
+                                        <width unit="cm">39</width>
+                                        <depth unit="cm">27</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Lunate sigma, epsilon both quadrate and lunate.</p>
+                                <locus from="line1" to="line8">Line 1-8</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">30-40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -106,6 +108,7 @@
                                 </dimensions>
                             </handNote>
                         </handDesc>
+                        <decoDesc><decoNote>On the left side of the altar, a hammer and pair of compasses.</decoNote></decoDesc>
                     </physDesc>
                     <history>
                         <origin>
@@ -119,7 +122,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200" precision="low">1st — 2nd century CE</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="observed" subtype="photographed" resp="#JP">Observed and photographed, Prag, 02.03.2023; in storage in depositi of the museum in ex-complesso conventuale di Sant'Antonio da Padova.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -163,7 +166,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -171,39 +174,57 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-28" who="#MB">encoded text</change>
+                <change when="2023-03-20" who="#JP">Jonathan Prag added images, amended text.</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic000819_tiled.tif" height="5520px" width="3680px">
+                <desc>Photo J. Prag, 02.03.2023, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic000819.jpg" height="5520px" width="3680px">
+                <desc>Photo J. Prag, 02.03.2023, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
+        <surface type="left">
+            <graphic n="screen" url="ISic000819_left_tiled.tif" height="5520px" width="3680px">
+                <desc>Photo J. Prag, 02.03.2023, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic000819_left.jpg" height="5520px" width="3680px">
+                <desc>Photo J. Prag, 02.03.2023, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#MB">
+                <ab>
+                     <lb n="1"/>Χαρίτω<supplied reason="lost">ν</supplied>
+                 <lb n="2"/>χρηστὸς
+                    <lb n="3"/>καὶ ἄμενπτ<unclear>ο</unclear>
+                    <lb n="4" break="no"/>ς ἒζησε
+                    <lb n="5"/>ν ἔτη <num value="60">ἑξήκο
+                    <lb n="6" break="no"/><supplied reason="omitted">ν</supplied>τα</num> καὶ μῆνες
+                    <lb n="7"/><num value="3">γ</num> ἁμέ
+                    <lb n="8" break="no"/>ρες <num value="1">α</num>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text based upon photograph and rapid autopsy</note></app>
+                    <app loc="7-8"><note>Manganaro 1962 resolved the last two lines as γαμέτρας</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="it" resp="#MB">
+                <p>Chariton, lodevole e irreprensibile, visse sessant'anni, 3 mesi, 1 giorno</p>
+            </div>
+            <div type="translation" xml:lang="en" resp="#MB">
+                <p>Chariton, commendable and irreproachable, lived sixty years, 3 months, 1 day</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Chariton. Has some carved decoration (rare in Sicily, cf. Mang. p.499) - Mang. suggests that what's represented are the tools of an agrimensor, supported by the frag. line 7 which might be a doric form of geometres, viz gametras. M, p.498 observes that althought he Dorixism might seem strand in imperial inscr., nonetheless the images confirm the sense. Contemporary with the other such funerary altar from Netum, publ'd by M in the same place (same BE number). 74 cm high, 39cm wide, 27 thick. fragmentary in upper part. Tools etc. are on the left side. The inscr. is inside a frame: Chariton chrestos kai amenptos ezese eth exekota kai menes T RES GAME- - - AC. Robert in BE has some comments on the text, although not disputing the essential interpretation.--></p>
+                <p>In 1962, Manganaro suggested that the decoration on the side represented the tools of an agrimensor, in support of an attempt to interpret lines 7-8 as a doric form of geometres, viz gametras. As Manganaro 2001 observed, in fact this was an erroneous reading, induced by the very irregular layout of the text.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -218,8 +239,14 @@
                     <bibl>
                         <author>Manganaro</author>
                         <date>1962</date>
-                        <citedRange>fig.5-6</citedRange>
+                        <citedRange>496, fig.5-6</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q7KT855P"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>2001</date>
+                        <citedRange>81 no.X, fig. 11-11a</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/MRSE35A9"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

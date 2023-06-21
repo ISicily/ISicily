@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -65,8 +65,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">121</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -126,7 +125,7 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0050" notAfter-custom="-0001" precision="low">Same dedicant as CIL 7349, so late 1st century BCE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1876">Reported as found 'verso il centro del piano', in the vicinity of the duomo, along with a number of other remains (mosaic pavement and other elements), on or around 22 February 1876.<geo>37.987300, 13.696410</geo></provenance><!-- generic centre of piazza -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -182,28 +181,23 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-11-07" who="#JP">Jonathan Prag added bibl and provenance</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-    <surface type="front">
-      <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-        height="4912px" width="7360px">
-        <desc>Add Description Here</desc>
-      </graphic>
-      <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-        <desc>Add Description Here</desc>
-      </graphic>
-    </surface>
-
-      -->
+        <surface type="front">
+            <graphic n="screen" url="ISic000096_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic000096.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
                     <lb n="1"/><supplied reason="lost"><expan><abbr>Cn</abbr><ex>aeo</ex></expan></supplied> <supplied reason="lost">P</supplied>ollieno
                     <lb n="2"/><expan><abbr><supplied reason="lost">t</supplied>r</abbr><ex>ibuno</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>mil</abbr><ex>itum</ex></expan>
@@ -224,6 +218,20 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl type="bulletin" n="NSA">
+                        <author>Fiorelli</author>
+                        <title>NSA</title>
+                        <date>1876</date>
+                        <citedRange>95 [=261]</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
+                    <bibl type="bulletin" n="NSA">
+                        <author>Fiorelli</author>
+                        <title>NSA</title>
+                        <date>1876</date>
+                        <citedRange>147 =[324]</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650796">10.7350</ref>

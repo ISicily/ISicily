@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -9,7 +9,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -30,11 +30,15 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
@@ -44,20 +48,18 @@
                 <idno type="filename">ISic003659</idno>
                 <idno type="TM"/>
                 <idno type="EDR">072804</idno>
-                <idno type="EDH"/>
+                <idno type="EDH">026748</idno>
                 <idno type="EDCS"/>
                 <idno type="PHI"/>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003659</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388918</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
@@ -76,22 +78,22 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <objectType ana="#object.arch_element.wall #object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/416.html">wall; tabula ansata</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                <support><p>Text is incised in a plaster wall, framed by an incised tabula ansata, within the context of a white painted wall with panels framed in red. Dimensions are for the main frame of the tabula ansata (Orsi).</p>
+                                    <material ana="#material.plaster" ref="https://www.eagle-network.eu/voc/material/lod/126.html">plaster</material>
+                                    <objectType ana="#object.arch_element.wall" ref="http://www.eagle-network.eu/voc/objtyp/lod/416.html">wall</objectType>
+                                    <dimensions>
+                                        <height unit="cm">37</height>
+                                        <width unit="cm">45</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                <layout>
+                                    <rs ana="#execution.scratched" ref="http://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -112,12 +114,11 @@
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500" cert="low">late
-                                Roman(?)</origDate>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500" cert="low">late Roman(?)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Excavation spring 1916, via Vittorio Emanuele, east of Duomo</provenance>
+                        <provenance type="found" subtype="discovered" when="1916">Excavation spring 1916, via Vittorio Emanuele, east of Duomo</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -125,18 +126,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -162,109 +163,53 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#MB">encoded text</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic003659_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic003659.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR072804" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#MB">
                 <ab>
-                    <lb n="1"/>
-                    XVII
-                    <expan>
-                        <abbr>K</abbr>
-                        <ex>alendas</ex>
-                    </expan>
-                    <expan>
-                        <abbr>Septemb</abbr>
-                        <ex>res</ex>
-                    </expan>
-                    <lb n="2"/>Feridius Cereris dominae
-                    <supplied reason="lost">
-                        <expan>
-                            <abbr>s</abbr>
-                            <ex>ervus</ex>
-                        </expan>
-                    </supplied>
-                    <lb n="3"/>hic sibi
-                    <choice>
-                        <sic>suabiter</sic>
-                        <corr>suaviter</corr>
-                    </choice>
-                    <expan>
-                        <abbr>fec</abbr>
-                        <ex>it</ex>
-                    </expan>
-                    e
-                    <supplied reason="lost">o</supplied>
-                    <lb n="4" break="no"/>rum tres adulescentes<lb n="5"/>quorum nomina lege<lb n="6"/>Onesimus et
-                    <expan>
-                        <abbr>L</abbr>
-                        <ex>ucius</ex>
-                    </expan>
-                    Valerius<lb n="7"/>Cas
-                    <expan>
-                        <ex>s</ex>
-                        <abbr>ianus</abbr>
-                    </expan>
-                    et Filumenus<lb n="8"/>unus cum
-                    <choice>
-                        <sic>mulierae</sic>
-                        <corr>muliere</corr>
-                    </choice>
-                    ea<lb n="9"/>Taurus multis annis
-                    <choice>
-                        <sic>habe</sic>
-                        <corr>have</corr>
-                    </choice>
-                    <expan>
-                        <abbr>facian</abbr>
-                        <ex>t</ex>
-                    </expan>
-                    <lb n="10"/>co
-                    <expan>
-                        <ex>n</ex>
-                        <abbr>iu</abbr>
-                        <ex>n</ex>
-                        <abbr>ximus</abbr>
-                    </expan>
-                    <lb n="11"/>propitiam.
+                    <lb n="1"/><num value="17">XVII</num> <expan><abbr>K</abbr><ex>alendas</ex></expan> <expan><abbr>Septemb</abbr><ex>res</ex></expan>
+                    <lb n="2"/><persName><name>Feridius</name> <persName><name>Cereris</name></persName> dominae <supplied reason="lost"><expan><abbr>s</abbr><ex>ervus</ex></expan></supplied></persName>
+                    <lb n="3"/>hic sibi <choice><reg>suaviter</reg><orig>suabiter</orig></choice> <expan><abbr>fec</abbr><ex>it</ex></expan> e<supplied reason="lost">o</supplied>
+                    <lb n="4" break="no"/>rum tres adulescentes
+                    <lb n="5"/>quorum nomina lege
+                    <lb n="6"/><persName><name>Onesimus</name></persName> et <persName><name><expan><abbr>L</abbr><ex>ucius</ex></expan></name> <name>Valerius</name>
+                    <lb n="7"/><name><choice><reg>Cassianus</reg><orig>Casianus</orig></choice></name></persName> et <persName><name>Filumenus</name></persName>
+                    <lb n="8"/>unus cum <choice><reg>muliere</reg><orig>mulierae</orig></choice> ea
+                    <lb n="9"/><persName><name>Taurus</name></persName> multis annis <choice><reg>have</reg><orig>habe</orig></choice> <expan><abbr>facian</abbr><ex>t</ex></expan>
+                    <lb n="10"/><choice><reg>coniunximus</reg><orig>coiuximus</orig></choice>
+                    <lb n="11"/>propitiam
                 </ab>
-                <!--This EDR text 072804 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Orsi 1918</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang= "it" resp="#MB">
+                <p> Il 16 Agosto Feridius servo della dea Cerere si unì carnalmente con tre adolescenti dei quali i nomi erano per legge Onesimus, L. Valerius Cassianus e Filumenus. Il solo Taurus (giacque) con quella donna, augurio ----.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--a substantial text incised in the wall of room of a Roman house (late Rep / early empire acc to Orsi), but in a phase of dereliction after the original use of the house in Orsi's view. The text is incised within an outline of a tabula ansata. In large letters below the main text is the work PROPITIAM.  XVII K Septemb Feridius Cereris Dominae S hic sibi suabiter fecit eorum tres adulescentes quorum nomina lege Onesimus et Lualerius Casianus et Filumenus unus cum mulierae ea taurus multis annis habe faciant coiuximus.--></p>
+                <p>A substantial text incised in the wall of room of a Roman house (late Republican / early Empire according to Orsi), but in a phase of dereliction after the original use of the house in Orsi's view. The text is incised within an outline of a tabula ansata. In large letters below the main text is the word PROPITIAM. Several other graffiti are recorded in the same room.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -280,7 +225,7 @@
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>
     </text>

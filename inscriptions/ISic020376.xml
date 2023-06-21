@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -11,8 +11,8 @@
                 <funder>John Fell OUP Research Fund</funder>
                 <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
-                     <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                     <resp>project direction, template development and general editor</resp>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>project direction, template development and general editor</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
@@ -54,8 +54,8 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
-                        <idno type="inventory"></idno>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository><!-- check this information -->
+                        <idno type="inventory"/>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -63,34 +63,35 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="xly">Elymian<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Ancient Greek</desc></certainty></textLang>    
+                        <textLang mainLang="xly">Elymian<certainty locus="value" match="../@mainLang" assertedValue="grc"><desc>Ancient Greek</desc></certainty></textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p></p>
+                                    <p>Fragment of foot of a black-glaze kylix.</p>
                                     <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/131.html">ceramic</material>
-                                    <objectType ana="#object.vessel" ref="https://www.eagle-network.eu/voc/objtyp/lod/305.html">vessel</objectType>
+                                    <objectType ana="#object.vessel.kylix" ref="http://kerameikos.org/id/kylix">kylix</objectType>
                                     <dimensions>
                                         <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                        <dim type="diameter" unit="cm"/>
+                                        <width unit="cm">3.4</width>
+                                        <depth unit="cm">5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9">scratched</rs>
-                                    <p></p>
-                                    <damage/>
+                                    <p>The text is placed on the underside of the foot.</p>
+                                    <damage ana="#text_condition.incomplete text_condition.legible"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <!-- Based on Glyph table: -->
+                                <!--  Based on Glyph table -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -105,10 +106,10 @@
                                 <placeName type="modern"/>
                                 <geo>37.94171, 12.83649</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0500" notAfter-custom="-0480">500—480 BCE</origDate>
+                            <origDate datingMethod="#julian" evidence="archaeological-context material-context lettering" notBefore-custom="-0500" notAfter-custom="-0400">500—400 BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro<geo>37.94240, 12.84509</geo>, 1.9km east of temple of Segesta.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">Found during the excavations (from 1957 to 1977) by the Soprintendenza alle Antichità della Sicilia Occidentale in the area of Grotta Vanella, on the north-east slope of Monte Barbaro<geo>37.94240, 12.84509</geo>, 1.9km east of temple of Segesta.</provenance><!-- check this information when possible -->
+                        <provenance type="observed" subtype="autopsied">No autopsy</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -121,11 +122,11 @@
                     <p>Taxonomies for ISicily controlled values</p>
                 </xi:fallback>
             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
         </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -154,40 +155,35 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2021-02-16" who="#VM">Valentina Mignosa added metadata, text</change>
+                <change when="2021-02-16" who="#VM">Valentina Mignosa created preliminary blank file</change>
+                <change when="2022-03-31" who="#VM">Valentina Mignosa added metadata, text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/> 
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic020376_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic020376.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="xly-Grek" resp="#VM">
-                <ab></ab>
+            <div type="edition" xml:space="preserve" xml:lang="xly-Grek" resp="#VM"> 
+                    <ab>
+                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>ιεμι<gap reason="illegible" extent="unknown" unit="character"/>
+                    </ab>
             </div>
-            <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="xly-Latn">                 
+            <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="xly-Latn">
                 <ab></ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text after Agostiniani (Appendix to IAS II, forthcoming)</note>
+                        <note>Text after Biondi 2000</note>
                     </app>
                 </listApp>
             </div>
@@ -202,14 +198,21 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-                    <bibl type="corpus" n="IAS2">
+                    <bibl type="corpus" n="IAS I, App.">
                         <author>Agostiniani</author>
-                        <date></date>
+                        <date>2021</date>
                         <citedRange>376</citedRange>
-                        <ptr/>
+                        <ptr target="http://zotero.org/groups/382445/items/VQEP8IPT"/>
+                    </bibl>
+                    <bibl>
+                        <author>Biondi</author>
+                        <date>2000</date>
+                        <citedRange>135-136, pl. XXVII.1</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/NQI2T3HF"/>
                     </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl></bibl>
+                <listBibl type="discussion">
+                    <bibl></bibl>
                 </listBibl>
             </div>
         </body>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -49,24 +49,21 @@
                 <idno type="TM">645352</idno>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
-                <idno type="EDCS"/>
+                <idno type="EDCS">39101985</idno>
                 <idno type="PHI">140306</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003002</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387939</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">6189</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,35 +78,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
-                                        limestone (Taormina)
-                                    </material>
+                                <support><p>A block of a variegated and reasonably compact light pink coloured stone (described as 'pietra di Taormina'). The upper and middle parts of the face are heavily damaged. The base is intact, but some loss to both the left and right sides, as well as along the upper edge, although the original upper face appears largely to be preserved; the rear is broken. The base and other faces are roughly finished, only the front face is finished smooth. It seems likely therefore that the block was one of several in a larger monument or wall. The original depth is unknown.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">21</height>
+                                        <width unit="cm">44</width>
+                                        <depth unit="cm">23</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Remains of four lines of Greek text, of which the preserved traces suggest that lines 1-3 filled the width of the stone, but line 4 is more widely spaced and has a vacat at the right, and below.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Regular widely spaced, finely incised letters, of consistent height throughout. Letters have basic triangular terminations to the strokes. Alpha is broken-bar; epsilon has short middle stroke (whether detached or not is unclear); kappa has equal length short arms; sigma has parallel top and bottom strokes, with the middle strokes extending half-width.</p>
+                                <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">24-25</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line1" to="line4">Interlineation line 1 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">14-15</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -121,16 +116,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100" precision="low">Hellenistic (Manganaro),
-                                i.e. 3rd — 2nd century?</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0100" evidence="lettering" resp="#JP">The letter forms would suggest later third or more likely second century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found on Ortygia, during demolition of 16th cent fortifications at
-                            entrance to island</provenance>
-                        <provenance type="observed">basement corridor</provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#JP">2014.09.12</provenance>
+                        <provenance type="found" subtype="discovered" when="1886-06">Found in June 1886, recovered during the demolition of the 16th century fortifications at the entrance to Ortygia.<geo>37.064543, 15.291693</geo></provenance><!-- geo marks entrance to Ortygia -->
+                        <provenance type="observed" subtype="seen" when="2022-10-22">Currently in the entry corridor to magazzino B, Museo archeologico regionale Paolo Orsi, Siracusa.</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP" when="2014-09-12">Prag 2014.09.12</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -172,7 +164,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                             <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -181,48 +173,80 @@
 	               <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
                             <change when="2021-01-06" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-11-03" who="#JP">Jonathan Prag revised file from autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic003002_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic003002.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003002_scale_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 22-10-2015</desc>
+            </graphic>
+            <graphic n="print" url="ISic003002_scale.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 22-10-2015</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003002_L3Q_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic003002_L3Q.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003002_R3Q_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic003002_R3Q.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic003002_rear_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic003002_rear.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+        </surface>
+        <surface type="base">
+            <graphic n="screen" url="ISic003002_base_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic003002_base.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, 12-09-2014</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ε</unclear></orig>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΤΗΣ</orig><gap reason="lost" extent="unknown" unit="character"/><orig>Υ</orig>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><unclear>α</unclear>δα τὰν α<unclear>ὐτ</unclear><supplied reason="lost">οῦ</supplied> <supplied reason="lost">γ</supplied><unclear>υ</unclear>ναῖκα
-                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> καὶ Ἴσει
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ε</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΤΗΣ</orig><space unit="character" quantity="1"/><gap reason="lost" unit="character" atLeast="7" atMost="8"/><orig>Υ</orig><space unit="character" quantity="1"/><gap reason="lost" unit="character" quantity="3"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>αδα τὰν α<unclear>ὐτ</unclear><supplied reason="lost">οῦ</supplied> <supplied reason="lost">γ</supplied><unclear>υ</unclear>ναῖκα
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/> καὶ <space unit="character" quantity="3"/>Ἴσει <space unit="character" extent="unknown"/>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#JP">
                 <listApp>
                     <app>
-                        <note>Text after Orsi 1889</note>
+                        <note>Text from autopsy</note>
                     </app>
+                    <app loc="1"><note>Manganaro: [----]</note></app>
+                    <app loc="2"><note>Manganaro: [- -]ΤΗΣ (vac.) [- - ] Υ [...]</note></app>
+                    <app loc="3"><note>Manganaro: [- - ? Πυθι]άδα</note></app>
+                    <app loc="4"><note>Manganaro: [Σαράπει (vac.)]</note></app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--45cm wide, 20 cm high, 20 cm thick, damaged on left. Manganaro reads it as referring to ?Pythia, someone's wife, and as to Serapis and Isis (Serapis and the name are restorations). The article discusses further evidence for e.g. Isis cult; the context for M is intro. of things Egyptian under the reign of Hieron II. Lovely photo in Sfameni Gasparro--></p>
+                <p>The interpretation of line 3 as suggesting that this is the dedication of the statue of a man's wife to Isis and at last one other divinity goes back to the first publication of the piece by Orsi, approved by Kaibel in the addenda to IG, and followed by subsequent editors. Manganaro plausibly proposes Serapis as the other deity, followed (for example) by Sfameni Gasparro; Manganaro suggests the form Σαράπει as being the older, to align with the form Ἴσει. In a more ambitious conjectural restoration of the whole, Manganaro (1961: 177 n.9) suggested that the dedication was made by the Syracusans for an individual and his wife: [Ὁ δᾶμος τῶν Συρακοσίων] | [ὑπέρ ... ἀρε]τῆς (vac.) [καἰ δικαιοσ]ύ[νης] | (τὸν δεῖνα τοῦ δεῖνος) καὶ? Πυθιάδα τὰν αὑτ[οῦ γ]υναῖκα | [Σαράπει (vac.) ] καὶ (vac.) Ἴσει. However, this seems to be incompatible with both the apparent trace of an epsilon near the end of line 1, and, more significantly, the vacats after both sigma and upsilon in line 2 (the end of line two can contain at most a three letter word after a word ending in upsilon, assuming that the right side of the stone is only lightly damaged). Assuming the restoration of the name of Serapis in line 4, then either the block itself was essentially the same width again on the left, or a second block joined to the left. It seems likely that only a very small amount is lost from the right side. One could, for instance, alternatively imagine the name of the husband in the nominative in line 2 (---της --[ο]υ) i.e. idionym ending in -της and patronym, but this does not resolve the restoration of line 1 or the first part of lines 2 or 3. It remains likely that -άδα is the accusative ending of the woman's name (alternatives such as παστάδα, and so the dedication of a building, seem implausible given the rest of the line). </p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -235,6 +259,12 @@
                     <bibl type="bulletin" n="BE">
                         <citedRange>1962.0388</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                    </bibl>
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>2018</date>
+                        <citedRange>Tacc. 1, p.45</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
                     </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Orsi</author>
@@ -250,12 +280,6 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/HXK7DASC"/>
                     </bibl>
                     <bibl>
-                        <author>Manganaro</author>
-                        <date>1965</date>
-                        <citedRange>189</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RGTHAFKT"/>
-                    </bibl>
-                    <bibl>
                         <author>Sfameni Gasparro</author>
                         <date>1973</date>
                         <citedRange>165 no.2 tav. 1 fig.1</citedRange>
@@ -268,7 +292,14 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/VDM9D87R"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Manganaro</author>
+	           <date>1965</date>
+	           <citedRange>189</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/RGTHAFKT"/>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>

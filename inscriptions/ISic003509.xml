@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -50,14 +50,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003509</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388692</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative ommons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
@@ -76,29 +74,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>cast only, original lost</p>
+                                <support><p>9 joining fragments of a marble plaque, of which only a small part of the left margin is preserved, with both upper left and lower left lost, fully preserved on the right.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                    <dimensions><!--Orsi-->
+                                        <height unit="cm">21</height>
+                                        <width unit="cm">21</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Text centred on the upper part of the plaque.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Lunate sigma and epsilon.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm"/><!-- not recorded -->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -116,11 +114,11 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st — 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Necropolis of San Placido</provenance>
+                        <provenance type="found" subtype="discovered" when="1914">One of three fragmentary texts recovered by Orsi in 1914 from the 'cortiletto' of 'recinto A', in the Necropolis of San Placido</provenance>
+                        <provenance type="not-observed" subtype="lost">The original appears to be lost, but a cast is preserved in the museum.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -162,74 +160,63 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+            	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-08-15" who="#JP">Jonathan Prag edited file from earlier editions</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic003509_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic003509.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI313623">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">Θ(εοῖς)</supplied>
-                    <expan>
-                        <abbr>Κ</abbr>
-                        <ex>αταχθονίοις</ex>
+                    <lb n="1"/><supplied reason="lost"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></supplied> <expan><abbr>Κ</abbr><ex>αταχθονίοις</ex>
                     </expan>
-                    <lb n="2"/>
-                    <supplied reason="lost">— —</supplied>ΟϹΚΟΙ
-                    <lb n="3"/>
-                    <supplied reason="lost">— —</supplied>
-                    <unclear>Ν</unclear>ΙΚΟϹ
-                    <lb n="4"/>
-                    <supplied reason="lost">— —</supplied>
-                    ἔζηση<lb n="5"/> ἔτη πʹ ∙
-                    <lb n="6"/>
+                    <lb n="2"/><gap reason="lost" unit="character" extent="unknown"/><orig>ΟΣΚΟΙ</orig>
+                    <lb n="3"/><gap reason="lost" unit="character" extent="unknown"/><orig><unclear>Ν</unclear>ΙΚΟΣ</orig>
+                    <lb n="4"/>ἔζηση
+                    <lb n="5"/>ἔτη <num value="70">π</num> <g ref="#interpunct">·</g>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text after Orsi and Bitto</note></app>
+                    <app loc="3"><note>Orsi: -]NΙΚΟΣ; Bitto: -]ΙΙΚΟΣ</note></app>
+                    <app loc="5"><note>Orsi: ΠΟ</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Orsi notes broken in 9 fragments, left half lost: Th K heading, ends -oskoi - -nikos - - - ezese - - -ete po--></p>
+                <p>Orsi seemingly mistakenly reads an omicron at the end of line 5, but as Bitto notes (seemingly confirmed by the photograph in I.Messina, p.21), there is only an interpunct visible. It seems highly likely that there was a parallel interpunct before the numeral Π (since it is common to use interpuncts to highlight numerals in this way), but this is obscured by a break in the stone/plastercast.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IMusMessina">
-                        <citedRange>ii</citedRange>
+                        <citedRange>21 no. ii</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R"/>
                     </bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>1916</date>
-                        <citedRange>129 dr</citedRange>
+                        <citedRange>129</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/P49V3TMD"/>
                     </bibl>
                 </listBibl>

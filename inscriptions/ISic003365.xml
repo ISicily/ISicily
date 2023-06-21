@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -50,19 +50,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003365</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388451</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">22729</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,29 +74,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>A large rectangular block of stone, intact above, and possibly below, but broken on right; perhaps only lightly damaged on left. Previously broken into three pieces, but reconnected. The front face is made up of three horizontal bands, of approximately equal height. The uppermost (18.5-19.5 cm high) is rough finished and uneven, and in places overhangs the middle field, while at other points is shallower; the middle band (17 cm high) is smooth finished and mostly proud of both the upper and lower field, and carries the inscription; the lower band (16.5 cm high) is recessed in relation to the middle band, smooth at the left and right ends, but heavily eroded across much of the width of the stone. The overall thickness of the stone is somewhat variable.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html" cert="low">limestone</material>
                                     <objectType ana="#object.arch_element.architrave" ref="http://www.eagle-network.eu/voc/objtyp/lod/119.html" cert="low">architrave</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">52-53</height>
+                                        <width unit="cm">191</width>
+                                        <depth unit="cm">13-14</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>The text extends across the full surviving width of the middle band of the front face.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Slightly unevenly spaced deeply v-cut letters. Delta has a slight apex; Mu has vertical first and last, middle strokes only descend half-way; Nu has lower right angle slightly above the line; omicron is full size; rhos has small closed, curved eye; sigma has prallel top and bottom strokes, with relatively shallow mid-strokes; phi has large rhomboid body, traversed by the vertical which is extended (120 mm); omega is open, rounded, with long horizontal tails, and is slightly smaller than the full line-height (75-85 mm).</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">90-100</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -117,12 +114,11 @@
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100" cert="low" precision="low">3rd — 2nd century BCE (probably)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Via V. Cordova, in reuse in a Byzantine tomb</provenance>
+                        <provenance type="found" subtype="discovered" when="1903-02">Found in February 1903 during building works on Via V. Cordova, in reuse in late antique tombs.<geo>37.1558337,14.7006416</geo></provenance><!-- representative point on via Cordova -->
                         <provenance type="observed">Depositi, Mag C</provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#JP">02.10.13</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP">Prag 2022-04-26</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -164,7 +160,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -172,39 +168,43 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-04-10" who="#JP">Jonathan Prag edited from autopsy adding image</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic003365_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag 26.04.2022: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic003365.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag 26.04.2022: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic003365_rear_tiled.tif" height="3585px" width="4789px">
+                <desc>Photo J. Prag 02.10.2013: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic003365_rear.jpg" height="3585px" width="4789px">
+                <desc>Photo J. Prag 02.10.2013: Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>Τ <space unit="character" quantity="1"/> Νυμφόδωρος Διόδω<supplied reason="lost">ρου</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text from autopsy</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--rectangular slab, rough above, smooth field across middle, less smooth below (originally stuccoed?), and in the smooth field across the middle, very neat Hellenistic letters (rhomboid phi, but normal omega, latter slightly smaller than rest, but not closed; omicron almost same size as rest; very slight tendency to apices). reading [- - -]T Nymphodoros Diodo[rou?]--></p>
+                <p>It is unclear what the significance of the initial surviving T should be; it is clearly separated from the name that follows by a vacat; the trace preceding appears to be damage to the stone rather than a letter (but if a letter, must be alpha or lambda). Perhaps part of a demotic abbreviation for a preceding name? (the abbreviation of a 'praenomen' seems unlikely). The piece is presumably part of a hellenistic monumental building inscription, re-used in late antiquity in the construction of a tomb.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

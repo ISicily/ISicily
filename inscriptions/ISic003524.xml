@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -50,14 +50,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003524</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388712</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
@@ -76,33 +74,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque, with the upper part of triangular form to create a tympanum. Minor chipping to the edges, and extreme lower right corner missing.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--Bitto-->
+                                        <height unit="cm">59.2</height>
+                                        <width unit="cm">68.5</width>
+                                        <depth unit="cm">4-4.2</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Text set out on centre of stone, below the tympanum (guideline marks the base of the tympanum).</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Regular deeply v-cut letters with some curvature on longer strokes. Lunate sigma and epsilon; kappa has short arms. Elegant hedera at end of line 1. Phi in line 1 and Iota in line 3 are extended.</p>
+                                <locus from="line1" to="line2">Line 1-2</locus><!-- Bitto -->
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">45</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">40</height>
+                                </dimensions>
+                                <locus from="line1" to="line3">Interlineation line 1 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">14-15</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -116,11 +118,10 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" precision="low">2nd — 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Necropolis of San Placido, recinto H, sep.56</provenance>
+                        <provenance type="found" subtype="discovered" when="1914">From excavation in 1914 of necropolis of San Placido, recinto H, sep.56</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -162,54 +163,46 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2022-08-16" who="#JP">Jonathan Prag edited file from earlier editions</change>
+                </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic003524_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic003524.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI313646">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-
-
-                     φίλοι ❦<lb n="2"/>τοῦτο v πᾶσιν v παρά-<lb n="3"/>κειτε. v μὴ κλαίετε.
-                    <lb n="4"/>
+                    <lb n="1"/>φίλοι <g ref="#ivy-leaf">❦</g>
+                    <lb n="2"/>τοῦτο <space unit="character" quantity="1"/> πᾶσιν <space unit="character" quantity="1"/> παρά
+                    <lb n="3"/>κειτε <space unit="character" quantity="1"/> μὴ κλαίετε
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text after Bitto and Orsi.</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Seen as odd, because on the outside of the tympanon shaped stone forming one end of a hypogeum for another family. Elegant Greek letters, with elegant hedera upper right: Philoi touto pasin parakeite me klaiete.--></p>
+                <p><!--commented out pending revision--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -220,7 +213,7 @@
                     <bibl>
                         <author>Orsi</author>
                         <date>1916</date>
-                        <citedRange>176-178 fig.41</citedRange>
+                        <citedRange>176-178 fig. 41</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/P49V3TMD"/>
                     </bibl>
                 </listBibl>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -51,19 +51,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001066</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385429</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico
-                            Regionale Paolo Orsi</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">64</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -79,9 +76,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">
-                                        limestone (local)
-                                    </material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone (local)</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
@@ -99,7 +94,7 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Two texts, the second incised more lightly below the first.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -114,18 +109,17 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462378">Mutyca</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/6541972">Modica</placeName>
-                            	<geo>36.84594, 14.77399</geo>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462147"/>		
+                                <placeName type="modern" ref="http://pleiades.stoa.org/places/462147">Cava d'Ispica</placeName>
+                                <geo>36.851421, 14.837505</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" when-custom="0398">398 CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">Depositi Mag B</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">From 'Grotta della Signora', Cava d'Ispica (although exact location/identification of the cave is no longer known)</provenance>
+                        <provenance type="observed" subtype="seen">Depositi Mag B, rack 9a, 2nd shelf.</provenance>
+                        <provenance type="observed" subtype="autopsied">Prag 2016-06-28</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -167,7 +161,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -176,72 +170,41 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-12-14" who="#JP">Jonathan Prag made draft edits of file from publications</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic001066_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001066.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140546">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <div type="textpart" subtype="section" n="a">
                 <ab>
-                    <lb n="1"/>
-
-
-                    ὑπατίᾳ Ὁνωρίῳ<lb n="2"/>τὸ ∙ δʹ ∙ καὶ Εὐτυχιανῷ<lb n="3"/>ἐτελεύτησεν<lb n="4"/>Εὔσκιος μηνὶ Ἰανο-
-                    <lb n="5"/>υαρίῳ ἀπὸ
-                    <expan>
-                        <abbr>κ</abbr>
-                        <ex>α</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>λ</abbr>
-                        <ex>ανδῶν</ex>
-                    </expan>
-                    ∙ ιαʹ ∙<lb n="6"/> ☩
-                    <lb n="7"/>
-                </ab>
-            </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI331914">
+                    <lb n="1"/>ὑπατίᾳ Ὁνωρίῳ
+                    <lb n="2"/>τὸ <g ref="#interpunct">·</g> <num value="4">δ</num> <g ref="#interpunct">·</g> καὶ Εὐτυχιανῷ
+                    <lb n="3"/>ἐτελεύτησεν
+                    <lb n="4"/>Εὔσκιος μηνὶ Ἰανο
+                    <lb n="5"/>υαρίῳ ἀπὸ <expan><abbr>κ</abbr><ex>α</ex><abbr><am><g ref="#interpunct">·</g></am>λ</abbr><ex>ανδῶν</ex></expan> <g ref="#interpunct">·</g>  <num value="11">ια</num> <g ref="#interpunct">·</g>
+                    </ab>
+                </div>
+                <div type="textpart" subtype="section" n="b">
                 <ab>
-                    <lb n="1"/>
-
-
-                     ὑπατίᾳ Ὁνωρίῳ<lb n="2"/>τὸ ∙ δʹ ∙ καὶ Εὐτυχιανῷ<lb n="3"/>ἐτελεύτησεν<lb n="4"/>Εὔσκιος μηνὶ
-                    Ἰανο-<lb n="5"/>υαρίῳ ἀπὸ
-                    <expan>
-                        <abbr>κ</abbr>
-                        <ex>α</ex>
-                    </expan>
-                    ∙
-                    <expan>
-                        <abbr>λ</abbr>
-                        <ex>ανδῶν</ex>
-                    </expan>
-                    ∙ ιαʹ ∙<lb n="6"/>ὑπατίᾳ 𐆠 <supplied reason="lost">— — —</supplied>ΑΒ
-                    <lb n="7"/>
-                    <supplied reason="lost">— — —</supplied>ΝΠ
-                    <supplied reason="lost">— — — —</supplied>
-                    <lb n="8"/>
+                    <lb n="1"/>ὑπατίᾳ <g ref="#staurogram">&#x101a0;</g> <gap reason="lost" extent="unknown" unit="character"/><orig>ΑΒ</orig>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>Ν</orig><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
+                </div>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text after Griesheimer and Paci</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -273,6 +236,12 @@
                     <bibl type="corpus" n="CIG">
                         <citedRange>4.9516</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    </bibl>
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>2018</date>
+                        <citedRange>Tacc. 1, p.91</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK"/>
                     </bibl>
                     <bibl>
                         <author>Agnello</author>

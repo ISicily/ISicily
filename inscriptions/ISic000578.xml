@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -54,18 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000578</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4384976</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,7 +80,7 @@
                             <supportDesc>
                                 <support>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
@@ -91,14 +89,14 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -119,7 +117,7 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found">First seen by Gualtherus 'Termini domi Laurentii Locaschi'</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
@@ -170,28 +168,23 @@
             	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		        <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	            <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
+	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	<change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-03-12" who="#AA">Epidoc editing and English translation</change>
+                <change when="2023-01-13" who="#JP">Jonathan Prag updated provenance and bibliography</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic000578_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic000578.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
@@ -210,22 +203,42 @@
                 <p>To the shades of the underworld. Cornelius Epaphruitus lived for 8 years.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Cornelius Epaphroditus spelled with Greek 'phi' instead of Latin 'ph'--></p>
+                <p>Korhonen convincingly makes the case that this is a Sicilian inscription, from Termini, not an Urban inscription from Rome. He additionally notes the rarity of linguistic interference as here, in the Termini Latin inscriptions.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange>no. 117</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/GIN6NANU"/>
+                    </bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624 [1625]</date>
+                        <citedRange>no. 280</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
+                    </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7396</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
                     </bibl>
-                    <bibl type="corpus" n="ILMusTermini">
+                    <bibl type="corpus" n="CIL">
+                        <citedRange>6.16196</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/T9UNUAJD"/>
+                    </bibl>
+                   <bibl type="corpus" n="ILMusTermini">
                         <citedRange>B1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
                     </bibl>
-                    <bibl/>
+                    <bibl>
+                        <author>Korhonen</author>
+                        <date>2001</date>
+                        <citedRange>98-102</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/CVTW89H4"/>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

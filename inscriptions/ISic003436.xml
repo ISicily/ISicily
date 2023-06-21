@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -50,18 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003436</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388576</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Mineo</settlement>
-                        <repository role="museum"/>
+                        <repository/>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -76,19 +78,19 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>A sandstone block, one of several forming part of a tomb, which Orsi notes (second hand report) seems to have been set in the interior of the tomb.</p>
                                     <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--Orsi at second hand.-->
+                                        <height unit="cm">102</height>
+                                        <width unit="cm">51</width>
+                                        <depth unit="cm">32</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
@@ -112,13 +114,14 @@
                             <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462312" corresp="#findsport">Menae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/2524142">Mineo</placeName>
-                            	<geo>37.26494, 14.69381</geo>
+                            	<geo>37.26494, 14.69381</geo>   
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100" cert="low">Very late hellenistic or early Imperial?</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" xml:id="findsport">Tombs found 'in un campicello vicino l'antica porta Udienza'.</provenance>
-                        <provenance type="observed" corresp="#findspot">in situ</provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1901">One of several tombs found 'in un campicello vicino l'antica porta Udienza', not later than 1901.</provenance>
+                        <provenance type="observed" subtype="reported" when="1901">Reported by Orsi, at second hand, and checked by him against 'un cattivo apografo cartaceo'</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -162,7 +165,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -170,33 +173,34 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-09-22" who="#MB">encoded text</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
-    </facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic003436_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic003436.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface></facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <ab>
+                <lb n="1"/><persName><name>Μάρκιε</name> <name><supplied reason="lost">Νο</supplied>ρβάνε</name></persName>
+                     <lb n="2"/>χρηστὲ χαῖρε
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
-            </div>
+                <app><note>Text of Messina</note></app>
+                <app loc="1">
+                   <rdg>ΜΑΡΚΙΣ ..ΡΒΑΝΕ <note>Orsi 1901</note></rdg>
+                    <rdg>ΜΑΡΚΙΣ ΙΟΡΒΑΝΕ <note>Guzzanti ap Orsi 1901</note></rdg>
+               </app>
+                </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
@@ -212,6 +216,12 @@
                         <date>1901</date>
                         <citedRange>347</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Messina</author>
+                        <date>1992</date>
+                        <citedRange>146</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QWEK6HU4"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
