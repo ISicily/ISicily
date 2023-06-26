@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001298</title>
+                <title>Funerary inscription of Euporios</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -55,19 +59,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001298</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4352336</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,33 +83,31 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Block of black volcanic lava stone with irregular sides.</p>
                                     <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">24</height>
+                                        <width unit="cm">82</width>
+                                        <depth unit="cm">44</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Lunate Ε.</p><!--measurements from Korhonen-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">60-80</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
+                                <locus from="line1" to="line2"/>
                             </handNote>
                         </handDesc>
                     </physDesc>
@@ -119,14 +118,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">'Piena eta imperiale' (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial age</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">cortile</provenance>
+                        <provenance type="found">Original discovery not recorded, but must be from the Etna region, based upon the material.</provenance>
+                        <provenance type="observed">First seen by Kaibel in Museo Biscari, later by Korhonen in cortile, Collezione Biscari</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -178,41 +176,41 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-05-16" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, apparatus, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic001298_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001298.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/>Εὐπορίου
+                    <lb n="1"/><persName type="attested"><name>Εὐπορίου</name></persName>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photograph</note></app>
+                    <app loc="line 1"><note>Libertini: ΕΥΦΟΡΙΩΝ</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Of Euporios.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--in 'litteris profundis' just the name, in genitive, Euporios, letters 6-8 cm high. A relief also in volcanic rock, of two gladiators, linked by Libertini and Kaibel with the inscr. is thought by both K and Manganaro not to belong with this. The name, Euporios / Euporion is otherwise unattested?--></p>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Di Euporios.</p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>Kaibel and Libertini linked the block to a relief in volcanic rock depicting two armed gladiators, which represented an advertisement for a gladiatorial show, but, as Manganaro notes, any connection between the relief and this funerary inscription must be ruled out. The name <foreign xml:lang="grc">Εὐπόριος</foreign> is not attested elsewhere, while in the female form, <foreign xml:lang="grc">Εὐπορία</foreign>/<foreign xml:lang="la">Euporia</foreign>, is attested in a Latin inscription of the imperial period from Catania (CIL 10.7052 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000336">ISic000336</ref>) and in a Christian inscription from Syracuse (Strazzulla 1897: 183 no. 344 = MARPO inv.15558).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -233,17 +231,18 @@
                     <bibl>
                         <author>Libertini</author>
                         <date>1930</date>
-                        <citedRange>43 no.85 tav.26</citedRange>
+                        <citedRange>43 no. 85 tav. 26</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/SKUU2R8X"/>
                     </bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1988</date>
-                        <citedRange>56 n.281</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Manganaro</author>
+	           <date>1988</date>
+	           <citedRange>56 n.281</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>

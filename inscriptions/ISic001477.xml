@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -50,19 +50,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001477</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385948</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Noto</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/100">Museo Civico di
-                            Noto</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/100">Museo Civico di Noto</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -80,26 +77,26 @@
                                 <support>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--Manganaro-->
+                                        <height unit="cm">21</height>
+                                        <width unit="cm">105</width>
+                                        <depth unit="cm">40</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Wide, slightly irregular in size v-cut letters: alpha wide with straight bar; epsilon has shorter middle bar; omicron is full size; pi has equal length hastae; omega is rhomboid and almost closed; sigma has parallel top and bottom strokes, and slight tendency to curvature in line 2.</p>
+                                <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">35</height><!-- Manganaro -->
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -117,11 +114,11 @@
                                 </offset>
                             	<geo>36.94573, 15.02365</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0200" precision="low">3rd century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0250" notAfter-custom="-0100" precision="low" evidence="lettering">later 3rd or 2nd century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Contrada Cozzo Sisca</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition>Noto, Museo Civico di Noto but may now be in Siracusa at P. Orsi, after the earthquake?</acquisition>
+                        <provenance type="found" subtype="discovered">Contrada Cozzo Sisca, above the Tellaro river</provenance>
+                        <provenance type="observed" subtype="photographed">Observed and photographed in museum, by Prag, 02.03.2023</provenance>
+                        <acquisition>Noto, Museo Civico di Noto</acquisition>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -164,7 +161,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -172,39 +169,37 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-02-06" who="#JP">Jonathan Prag edited draft edition from publications</change>
+                <change when="2023-03-20" who="#JP">Jonathan Prag added image</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic001477_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag 02.03.2023, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001477.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag 02.03.2023, with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name>Ἀγέμαχος</name> <space unit="character" quantity="1"/> <persName type="attested"><name type="patronym">Πολυάρχου</name></persName></persName>
+                    <lb n="2"/><persName type="divine">Ἐλώρωι</persName> καὶ <space unit="character" quantity="1"/> <persName type="divine">Τιμάσσαι</persName>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text of Manganaro 1965 checked against photograph</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Agemachos son of Polymarchos (dedicated this) to Eloros and Timassa</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--altar, dedicated by Agemachos, son of Polymarchos, to Eloros, the river god, and Timassa, 'une nymphe locale inconnue'; perhaps to be linked to the Elorios agon known from Hesychius?--></p>
+                <p>A dedication, to Eloros, presumably the local river god, and to Timassa, perhaps a local nymph (?). Manganaro notes that there are scratched letters/traces visible at the end of the inscription, assumed to be later additions. The letter forms, such as the rhomboid omega, find second-century parallels, for instance, at Segesta.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -221,8 +216,14 @@
                     <bibl>
                         <author>Manganaro</author>
                         <date>1965</date>
-                        <citedRange>198 tav.69.3</citedRange>
+                        <citedRange>198 no.1, tav.69.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RGTHAFKT"/>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>2001</date>
+                        <citedRange>79 no. III, fig. 6</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/MRSE35A9"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001348</title>
+                <title>Epitaph for Aurelios Restoutos and Zosime</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -57,19 +61,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001348</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4353511</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">303</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -84,32 +85,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque damaged on the left corners and set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">20.5</height>
+                                        <width unit="cm">22.5</width>
+                                        <depth unit="cm">0.5-3.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Irregular letters: lunate Ε and Σ; cursive Μ and Ω; Α and Λ with extended serifs.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line6">Lines 1-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">10-25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -121,15 +123,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0450" precision="low">4th century CE or first half of 5th century CE
-                                (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0450" precision="low">4th century CE or first half of 5th century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.111, mag. del cort.</provenance>
+                        <provenance type="found" subtype="discovered" when="1740">Found in 1740 “in via, quae ad S. Agata suburbium ducit” (Amico) and stored in Museo S. Nicolò Arena “ex dono Ignatii Rizzari”.</provenance>
+                        <provenance type="observed">Observed by Kaibel in Museo dei Benedettini, now in Magazzino del Cortile, collezione dei Benedettini (formerly sala VI, 111).</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -181,49 +181,77 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-10-31" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic001348_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001348.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/><supplied reason="lost" cert="low"><g ref="#christogram"/></supplied> <choice><corr>Α</corr><sic>Λ</sic></choice>ὐρήλι
-                    <lb n="2" break="no"/><supplied reason="lost">ο</supplied>ς Ῥεστοῦτος
-                    <lb n="3"/>καὶ Ζωσίμη
-                    <lb n="4"/>ἠγοράσομεν 
-                    <lb n="5"/><supplied reason="lost">ἐ</supplied>κ τῶν ἰ<choice><corr>δ</corr><sic>γ</sic></choice>είων
-                    <lb n="6"/><supplied reason="lost" cert="low">ἡμῖ</supplied>ν ἒνβασιν
+                    <lb n="1"/><supplied reason="lost" cert="low"><g ref="#christogram">☧</g></supplied> <persName type="attested"><name><choice><corr>Α</corr><sic>Λ</sic></choice>ὐρήλι<lb 
+                        n="2" break="no"/><supplied reason="lost">ο</supplied>ς</name> <name>Ῥεστοῦτος</name></persName>
+                    <lb n="3"/><w>καὶ</w> <persName type="attested"><name>Ζωσίμη</name></persName>
+                    <lb n="4"/><w>ἠγοράσομεν</w> 
+                    <lb n="5"/><w><supplied reason="lost">ἐ</supplied>κ</w> <w>τῶν</w> <w>ἰ<choice><corr>δ</corr><sic>γ</sic></choice>είων</w>
+                    <lb n="6"/><w><supplied reason="lost" cert="low">ἡμῖν</supplied></w> <w><supplied reason="lost">τὴ</supplied>ν</w> <w>ἒνβασιν</w>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs</note></app>
+                    <app loc="1"><note>Ferrua, Korhonen: ((Chi-rho)); Kaibel: Μ(ᾶρκος)</note></app>
+                    <app loc="2"><note>Franz: Ῥεστ[ιτ]οῦτος</note></app>
+                    <app loc="4"><note>Franz: ἠγοράσαμεν; Kaibel, Wessel, Korhonen: ἠγοράσομεν (“mixto imperfecto et aoristo ortum” Kaibel, see also IG 14.96)</note></app>
+                    <app loc="5"><note>Franz: ἰ<corr>δ</corr>ίων; Kaibel, Wessel, Korhonen: ἰ<corr>δ</corr>είων</note></app>
+                    <app loc="6"><note>Franz: <corr>τῆ</corr>ν βάσιν; Kaibel suggested in apparatus ἐν πᾶκι? and Wessel ἐν <unclear>p</unclear>ac<corr>e</corr> (see also ἐν πάκης in IGCVO 602); Ferrua [ἠμι]ν ἔνβασιν; Korhonen [ἠμι]ν [?] ἔνβασιν (but also τὴ]ν is possible)</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>Aurelios Restoutos and Zosime, built this sepulchre/sarcophagus at their own expense.</p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>((Chi-Rho)) Aurelios Rhestoutos and Zosime, we purchased this tomb at our expense.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag and a bit garbled; Aurelios Restoutos (Arelius Restutus) and Zosime; idios as poss. pron. purchase of a locus? (embasis).--></p>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>((Chi-Rho)) Aurelios Rhestoutos e Zosime, acquistammo questa tomba a nostre spese.</p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>This is a marble plaque and not a sarcophagus, which must have served to mark a “loculus”, according to the interpretation that J. and L. Robert (BE 1964 nr. 631) gave for a similar inscription from Catania, RAC 8 (1931) 122-25 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001547">ISic001547</ref>. This inscription attests to the purchase of the tomb by the deceased who are buried in it: the names of the deceased are followed by the verb <foreign xml:lang="grc">ἀγοράω</foreign>, an expression indicating that the purchase was made at their own expense (<foreign xml:lang="grc">ἐκ τῶν ἰδίων</foreign>) and by the object (for <foreign xml:lang="grc">ἔνβασις</foreign> as the tomb, see AE 1996.0792 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001423">ISic001423</ref> and Ferrua 1958: 172). It is possible that there was a reflexive pronoun in the lacuna of l. 6, as in other cases where the deceased purchased the grave for himself: IMusCatania 229 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001628">ISic001628</ref>. For the registration of the purchase of the tomb in Christian epitaphs, see Führer and Schultze (1907: 12-15) and Korhonen (2004: 108-110). The cognomen of the deceased must have been Restitutus but for such a form, see ICUR 19782. The name of the woman, <foreign xml:lang="grc">Ζωσίμη</foreign>, is attested in other inscriptions of the city (CIL 10.7016 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000300">ISic000300</ref>, IMusCatania 165 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001649">ISic001649</ref>) and more in general of Sicily (LGPN 3A: 190).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Amico</author>
+                        <date>1741</date>
+                        <citedRange>259 no.15</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
+                    </bibl>
+                    <bibl>
+                        <author>Torremuzza</author>
+                        <date>1769</date>
+                        <citedRange>166 no.19</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                    </bibl>
+                    <bibl>
+                        <author>Torremuzza</author>
+                        <date>1784</date>
+                        <citedRange>173 no.19</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ferrara</author>
+                        <date>1829</date>
+                        <citedRange>349 no.1</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0529</ref>
@@ -249,7 +277,24 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl type="bulletin" n="BE">
+	           <citedRange>1964.0631</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+	           <bibl>
+	               <author>Ferrua</author>
+	               <date>1958</date>
+	               <citedRange>172</citedRange>
+	               <ptr target="http://zotero.org/groups/382445/items/TUW3AZ49"/>
+	           </bibl>
+	           <bibl>
+	               <author>Führer and Schultze</author>
+	               <date>1907</date>
+	               <citedRange>12-15</citedRange>
+	               <ptr target="http://zotero.org/groups/382445/items/52GBQ6AW"/>
+	           </bibl>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>

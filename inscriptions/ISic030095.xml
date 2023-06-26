@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -30,6 +30,7 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
+                
                 <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -37,6 +38,10 @@
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -58,8 +63,8 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement></settlement>
-                        <repository role="museum"></repository>
-                        <idno type="inventory"></idno>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/isicily/museums/064">Museo Archeologico Regionale Antonio Salinas</repository> 
+                        <idno type="inventory">42581</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -80,9 +85,10 @@
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
+                                        <dim type="diameter" unit="cm">4.2</dim>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
@@ -97,7 +103,7 @@
                                 <!-- Based on Glyph table: -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">5</height>
                                 </dimensions>
                             </handNote>                       
                         </handDesc>
@@ -106,15 +112,15 @@
                         <origin>
                             <origPlace>
                                 <placeName/>
-                                <placeName type="ancient" ref=""></placeName><!-- add ancient place name and pleiades ref -->
-                                <placeName type="modern"></placeName><!-- add modern place name and geonames ref -->
-                                <geo></geo> <!-- add geo coordinates -->
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName> 
+                                <geo>37.58337, 12.82522</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in ...<geo>...</geo>.</provenance> <!-- add specific geo coordinates -->
+                        <provenance type="found" subtype="discovered">Found in the deposits of Selinunte.</provenance> <!-- add specific geo coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
-                        <acquisition></acquisition> <!-- add -->
+                        <acquisition/> <!-- add -->
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -157,48 +163,39 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-06-09" who="#VM">Valentina Mignosa added basic metadata</change>
+                <change when="2022-11-29" who="#MB">Maria Barbieri encoded text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/> 
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic030095_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic030095.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
                 <ab>
-                    <lb n="1"/>
+                    <lb n="1"/><orig>ΤΑΘΝΜΑ</orig>
+                    <lb n="2"/><persName type="attested"><name><seg part="I"><expan><abbr>Ἡρακ</abbr><ex cert="low">λείδας</ex></expan></seg></name></persName>
+                    <lb n="3"/><orig><unclear>ΑΜΝ</unclear></orig>
+                    <lb n="4"/><gap reason="illegible" extent="unknown" unit="character"/><orig>ΡΟΣ</orig>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp>
-                    <app>
-                        <note>Text after ...</note><!-- ISicDef no. 51 -->
-                    </app>
-                </listApp>
+                <listApp><app><note>Text of Bettarini 2005 n.9</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en">
-                <p></p>
-            </div>
-            <div type="translation" xml:lang="it">
                 <p></p>
             </div>
             <div type="commentary" xml:lang="en">

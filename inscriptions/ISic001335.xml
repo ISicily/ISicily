@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001335</title>
+                <title>Epitaph</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -55,19 +59,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001335</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4353485</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">279</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,32 +83,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Lower fragment of marble plaque, broken to left, above and right, set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">14.5</height>
+                                        <width unit="cm">12.5</width>
+                                        <depth unit="cm">1-5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Regular letters, Ε and Σ lunate.</p><!--Default value and requires editing-->
+                                <locus from="line1" to="line3">Lines 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">17-20</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -119,14 +121,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0200" precision="low">Second half of 1st — end 2nd century CE (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0200" precision="low">Second half of 1st — end 2nd century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.87, mag. del cort.</provenance>
+                        <provenance type="found">Original discovery not recorded, probably Catania.</provenance>
+                        <provenance type="observed">Observed by Amico in Museo dei Benedettini, later by Korhonen in magazzino del cortile, Collezione dei Benedettini (formerly sala VI 87).</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -178,46 +179,54 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-10-31" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic001335_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001335.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἐ</supplied>ποίη<unclear>σ</unclear><supplied reason="lost">ε</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἐ</supplied>ποίη<unclear>σ</unclear><supplied reason="lost">ε</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ε</supplied>ὐσεβ<gap reason="illegible" quantity="1" unit="character"/> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἒ</supplied>ζησε ἒ<supplied reason="lost">τη</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">ἒ</supplied>ζησε</w> <w>ἒ<supplied reason="lost">τη</supplied></w> <gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs</note></app>
+                    <app loc="line 1"><note>Kirchhoff: ἐ]ποίησ[αν; Korhonen: ἐ]ποίησ[ε</note></app>
+                    <app loc="line 2"><note>Kirchhoff: ε]ὐσεβ[εῖς; Kaibel: ἐ]υσεβ[εστατ---</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>--- made --- lived for --- years ---</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>--- fece --- visse --- anni ---</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--lower frag. remains of epoiese | euseb- | ezese ete only.--></p>
+                <p>The epitaph is fragmentary: Korhonen (2004: 243) suggested two possible formulae, the first with the name of the deceased in dative followed by <foreign xml:lang="grc">[ἐ]ποίησ[εν υἱὸς ε]υσεβή[ς]</foreign> (see also IG 14.527 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001346">ISic001346</ref>), the second with the name of the dedicant in nominative and the dative of the deceased, not named (e.g. <foreign xml:lang="grc">[ὁ δεῖνα ἐ]ποίησ[εν υἱῷ ε]ὐσεβ&lt;ε&gt;ῖ</foreign>, <foreign xml:lang="grc">[ὃς ἔ]ζησε ἔ[τη κτλ.]</foreign>). The Korhonen rejects Kaibel’s reading <foreign xml:lang="grc">ε]ὐσεβ[εστάτ</foreign> because he reads a vertical stroke after <foreign xml:lang="grc">Β</foreign>, which could only have been an <foreign xml:lang="grc">Η</foreign> or a <foreign xml:lang="grc">Ι</foreign>. <foreign xml:lang="grc">ε]ὐσεβ[</foreign> at l. 2 could also be not a form of the adjective but a proper name, such as <foreign xml:lang="grc">Εὐσεβία</foreign> or <foreign xml:lang="grc">Εὐσέβιος</foreign> (LGPN 3A: 176). However, since we are not sure how much space is missing on the left and right, it is also possible that the deceased had a different degree of kinship (<foreign xml:lang="grc">[ὁ δεῖνα ἐ]ποίησ[εν συμβίῳ ε]ὐσεβῖ</foreign>, see also IG 14.492 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001314">ISic001314</ref> or IG 14.495 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001317">ISic001317</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Amico</author>
+                        <date>1741</date>
+                        <citedRange>277</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0515</ref>

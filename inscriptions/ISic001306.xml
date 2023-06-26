@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001306</title>
+                <title>Epitaph for Kassia Benousta</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -42,7 +46,7 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
-            </titleStmt>
+               </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001306</idno>
@@ -55,19 +59,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001306</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4353405</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">242</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,32 +83,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!--masurements from Korhonen-->
+                                        <height unit="cm">20</height>
+                                        <width unit="cm">27.5</width>
+                                        <depth unit="cm">0.5-4</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                   </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Regular letters: rhomboid Θ, Ο, Ω (open); Α with accentuated upper serif, Μ with slanting full-length bars (but irregular), Υ with an extended right arm (line 6), ΗΝΕ at l. 4 and ΤΗ at l. 5 (x2) in ligature. In the last line, some letters are smaller than others for lack of space.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line6">Lines 1-6</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">20-25 </height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not registered</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -119,14 +121,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0200" precision="low">Second half of 1st — end 2nd century CE (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0050" notAfter-custom="0200" precision="low">Second half of 1st — end 2nd century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.50, mag. del cort.</provenance>
+                        <provenance type="found" subtype="discovery">Original discovery not recorded, probably from Catania..</provenance>
+                        <provenance type="observed">Observed by Kaibel in Museo dei Benedettini, later by Korhonen in magazzino del cortile, Collezione dei Benedettini (formerly sala VI.50)</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -178,46 +179,46 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-05-18" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, apparatus, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/>
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic001306_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001306.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/> · <expan><abbr>Θ</abbr><ex>εοῖς</ex></expan> · <expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan> ·
-                    <lb n="2"/>Κασσία Βενοῦστα ἔ
-                    <lb n="3" break="no"/>ζησεν ἔτη · <num value="11">ἕνδεκα</num>
-                    <lb n="4"/>μῆνες <num value="9">θ</num> ἡμέρες · <num value="8">η</num> ·
-                    <lb n="5"/>πατὴρ καὶ μήτηρ τέ<g ref="#ivy-leaf"/>
-                    <lb n="6" break="no"/>κνῳ γλυκυτάτῳ ἐποίησαν
+                    <lb n="1"/><g ref="#interpunct">·</g> <w><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan></w> <g ref="#interpunct">·</g>
+                    <lb n="2"/><persName type="attested"><name>Κασσία</name> <name>Βενοῦστα</name></persName> <w>ἔ<lb 
+                        n="3" break="no"/>ζησεν</w> <w>ἔτη</w> <g ref="#interpunct">·</g> <num value="11">ἔνδεκα</num> 
+                    <lb n="4"/><w>μ<hi rend="ligature">ῆνε</hi>ς</w> <g ref="#interpunct">·</g> <num value="9">θ</num> <w>ἡμέρες</w> <g ref="#interpunct">·</g> <num value="8">η</num> <g ref="#interpunct">·</g>
+                    <lb n="5"/><w>πα<hi rend="ligature">τὴ</hi>ρ</w> <w>καὶ</w> <w>μή<hi rend="ligature">τη</hi>ρ</w> <w>τέ <g ref="#interpunct">·</g><lb 
+                        n="6" break="no"/>κνῳ</w> <w>γλυκυτάτῳ</w> <w>ἐποίησαν</w>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photographs</note></app>
+                    <app loc="line 5"><note>Kaibel saw an ivy leaf at the end of the line, but it rather seems to be a triangle-shaped interpunct.</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>To the subterranean divinities. Kassia Benousta, lived for 11 years, 9 months, and 8 days. Her father and mother built this for their sweetest child.</p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>To the underworld spirits. Kassia Benousta, lived for 11 years, 9 months, and 8 days. Her father and mother made this for their sweetest child.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Th.K. heading; Kassia Benousta (Cassia Venusta); age in years, months, days zesen ete endeka | menes th', hemeres h' [note the muddle of nominative and accusative forms in age]; pater kai meter teknwi glukutatwi epoiesan.--></p>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Agli Dei inferi. Kassia Benousta visse 11 anni, 9 mesi e 8 giorni. Suo padre e sua madre realizzarono questo per la loro dolce figlia.</p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>The structure of the epitaph is the most frequent in pagan epitaphs, with the invocation to the underworld spirits, the name of the deceased in the nominative form, his/her age, the name of the dedicants (in this case, the parents) and the dedication verb in aorist (Korhonen 2004: 85-86). An interesting linguistic detail is the indication of months and days in the nominative and not in the accusative form (<foreign xml:lang="grc">μῆνες, ἡμέρες</foreign>), which seems to be due to confusion with Latin where the nominative and accusative plural of <foreign xml:lang="la">mensis</foreign> and <foreign xml:lang="la">dies</foreign> correspond: for a similar confusion, see also SEG 44.0762 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000641">ISic000641</ref>. On the name <foreign xml:lang="grc">Βενοῦστα</foreign>, see SEG 29.931-3 (from Morgantina, 1st century CE). Note too the spelling out of the first numeral in full, rather than using the standard alphabetic notation.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -227,14 +228,25 @@
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     </bibl>
+                    <bibl>
+                        <author>Spuches</author>
+                        <date>1864</date>
+                        <citedRange>13 no.3</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/NBACXKXQ"/>
+                    </bibl>
                     <bibl type="corpus" n="IMusCatania">
                         <citedRange>67</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl type="corpus" n="IMusCatania">
+	           <citedRange>85-86</citedRange>
+	           <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>
-</TEI>
+</TEI>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

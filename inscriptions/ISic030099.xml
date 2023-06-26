@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -38,6 +38,10 @@
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="MB" ref="https://orcid.org/0000-0003-3673-587X">Maria Barbieri</name>
+                    <resp>EpiDoc editing</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,8 +62,8 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement></settlement>
-                        <repository role="museum"></repository>
-                        <idno type="inventory"></idno>
+                        <repository role="museum" ref="https://www.martinvonwagner-museum.com/">Martin von Wagner Museum der Universität Würzurbg</repository>
+                        <idno type="inventory">K2100</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -73,12 +77,12 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p>Lamina.</p>
+                                    <p>Opisthographic lead sheet.</p>
                                     <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
                                     <objectType ana="#object.lamina" ref="https://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
                                     <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <height unit="cm">6.4</height>
+                                        <width unit="cm">8.21</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
@@ -106,13 +110,13 @@
                         <origin>
                             <origPlace>
                                 <placeName/>
-                                <placeName type="ancient" ref=""></placeName><!-- add ancient place name and pleiades ref -->
-                                <placeName type="modern"></placeName><!-- add modern place name and geonames ref -->
-                                <geo></geo> <!-- add geo coordinates -->
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName> 
+                                <geo>37.58337, 12.82522</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" evidence="lettering archaeological-context" notBefore-custom="-0499" notAfter-custom="-0400">499—400 BCE (so Arena on letters).</origDate> <!-- check date and evidence -->
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in ...<geo>...</geo>.</provenance> <!-- add specific geo coordinates -->
+                        <provenance type="found" subtype="discovered">Provenance unknown, but assumed to be Selinunte</provenance> <!-- add specific geo coordinates -->
                         <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
                         <acquisition></acquisition> <!-- add -->
                     </history>
@@ -157,43 +161,67 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2021-06-09" who="#VM">Valentina Mignosa added basic metadata</change>
+                <change when="2022-11-29" who="#MB">Maria Barbieri encoded text</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/> 
-        <!--delete empty surface above and uncomment template below if needed-->
-        <!--
-  <surface type="front">
-    <graphic n="screen" url="{concat('ISic', $num, '_tiled.tif')}"
-      height="4912px" width="7360px">
-      <desc>Add Description Here</desc>
-    </graphic>
-    <graphic n="print" url="{concat('ISic', $num, '.jpg')}" height="3680px" width="5520px">
-      <desc>Add Description Here</desc>
-    </graphic>
-  </surface>
-
-    -->
+        <surface type="front">
+            <graphic n="screen" url="ISic030099_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic030099.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#TS">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MB">
+                <div type="textpart" subtype="section" n="a">
                 <ab>
-                    <lb n="1"/>
+                    <milestone unit="face" subtype="recto"/>
+                    <lb n="1"/>τὰν <persName type="attested"><name>Εὐκλέος</name></persName> τὀδειμάν<unclear>τ</unclear>ο
+                    <lb n="2"/><unclear>τ</unclear>ὰν <choice><orig>γλλο͂σαν</orig><reg>γλο͂σσαν</reg></choice> καταγ<supplied reason="omitted">ρ</supplied>άφο hὸς μ<unclear>ε</unclear>
+                    <lb n="3" break="no"/>δὲν <orig><unclear>ϘΦΗ</unclear></orig> <persName type="attested"><name><unclear>Μ</unclear>έστορι</name></persName> ὀφελεσ<supplied reason="omitted">ε</supplied>ῖ
+                    <lb n="4"/><unclear>τ</unclear>ὰν <persName type="attested"><name>Σιμία</name></persName> το͂ <persName type="attested"><name>Μι<unclear>ϙ</unclear>ύθο</name></persName> <choice><orig>γλο͂σα
+                    <lb n="5" break="no"/>ν</orig><reg>γλο͂σσαν</reg></choice> καταγράφο hὸς μεδὲν <persName type="attested"><name><unclear>Μ</unclear>έ
+                    <lb n="6" break="no"/><unclear>σ</unclear>τορι</name></persName> ὀφελεσεῖ τὰν <persName type="attested"><name>Πιθαϙο</name></persName> τ
+                    <lb n="7" break="no"/><unclear>ο͂</unclear> <orig>Λ</orig><gap reason="illegible" quantity="3" unit="character"/>όο τὰν <choice><orig>γλο͂σαν</orig><reg>γλο͂σσαν</reg></choice> κατ
+                    <lb n="8" break="no"/>αγράφο hὸς μεδὲν <persName type="attested"><name><unclear>Μ</unclear>έστ<unclear>ο</unclear>
+                    <lb n="9" break="no"/>ρι</name></persName> ὀφελεσ<unclear>ε</unclear><supplied reason="lost">ῖ</supplied> τὰν <gap reason="illegible" quantity="3" unit="character"/><unclear>φ</unclear>ο τό <orig><unclear>ΡΛΙΛ</unclear></orig>
+                    <lb n="10" break="no"/>πο τὰν <choice><orig>γλο͂σαν</orig><reg>γλο͂σσαν</reg></choice> καταγρά<unclear>φο</unclear>
+                    <lb n="11"/>hὸς μεδὲν <persName type="attested"><name>Μ<unclear>έ</unclear>στορι</name></persName> ὀφ<unclear>ε</unclear>λ<unclear>εσεῖ</unclear>
+                    <lb n="12"/><persName type="attested"><name>Φιλόνδαν</name></persName> τὸν <persName type="attested"><name><unclear>Χ</unclear>οιρίνα</name></persName> <unclear>κα</unclear><surplus><unclear>ιχ</unclear></surplus>τ<unclear>α</unclear>
+                    <lb n="13" break="no"/><surplus><unclear>α</unclear></surplus>γράφο καὶ <persName type="attested"><name><supplied reason="lost">Π</supplied>ο<supplied reason="lost">λυ</supplied>κλ<supplied reason="lost">έ</supplied><unclear>α</unclear></name></persName> <unclear>h</unclear>οὶ μ
+                    <lb n="14" break="no"/><supplied reason="lost">ε</supplied><unclear>δὲν</unclear> <persName type="attested"><name><unclear>Μέσ</unclear>τορ<unclear>ι</unclear></name></persName> <unclear>ὀφ</unclear><supplied reason="lost">ελεσέ</supplied>
+                    <lb n="15" break="no"/><unclear>ον</unclear><supplied reason="lost">τι</supplied>
                 </ab>
             </div>
+                <div type="textpart" subtype="section" n="b">
+                <ab>
+                    <milestone unit="face" subtype="verso"/>
+                    <lb n="1"/>τὰν <persName type="attested"><name>Μέστορος</name></persName> το͂ <persName type="attested"><name>Ϝ
+                    <lb n="2" break="no"/>ικέλο</name></persName> τὰν <choice><reg>γλο͂σσαν</reg><orig>γλο͂σαν</orig></choice> <unclear>κ</unclear>
+                    <lb n="3" break="no"/>αταγράφο τὸς <unclear>φιλ</unclear><supplied reason="lost">ος</supplied>
+                    <lb n="4"/><persName type="attested"><name><unclear>Ϝ</unclear>ι<unclear>κ</unclear>έλο</name></persName> πάντας <choice><reg>γλόσσ
+                    <lb n="5" break="no"/>ας</reg><orig>γλόσας</orig></choice> καταγράφο τὰ<surplus>ι</surplus><supplied reason="omitted">ς</supplied> <choice><orig>γλόσ
+                    <lb n="6" break="no"/><unclear>ας</unclear></orig><reg>γλόσσ<unclear>ας</unclear></reg></choice> hος μ<supplied reason="omitted">εδ</supplied>ὲν <persName type="attested"><name>Μέστορι</name></persName> ὀ
+                    <lb n="7" break="no"/>φε<unclear>λ</unclear>έσ<unclear>ο</unclear>ντι κἀρχέστρα
+                    <lb n="8" break="no"/>το<supplied reason="omitted">ν</supplied> τὸν <persName type="attested"><name>Αἰσχίνα</name></persName> καταγ
+                    <lb n="9" break="no"/>ράφο ἀντ' <unclear>h</unclear>ο͂ν <choice><orig>γλ<unclear>όσα</unclear>
+                    <lb n="10" break="no"/><unclear>ι</unclear>ς</orig><reg>γλόσσαις</reg></choice> <persName type="attested"><name><unclear>Μέστο</unclear>ρι</name></persName> <unclear>ὀ</unclear><supplied reason="lost">φ</supplied><unclear>εί</unclear>
+                    <lb n="11" break="no"/>λ<supplied reason="lost">ε</supplied>σα<unclear>ν</unclear>
+                </ab>
+            </div>
+                </div>
             <div type="apparatus">
-                <listApp>
-                    <app>
-                        <note>Text after ...</note><!-- ISicDef no. 55 -->
-                    </app>
-                </listApp>
+                <listApp><app><note>Text of Bettarini 2005 n.13</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p></p>
@@ -206,7 +234,7 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-                    <bibl type="corpus" n="Defixiones"> <!-- just a suggestion, decide on the best abbreviation here -->
+                    <bibl>
                         <author>Bettarini</author>
                         <date>2005</date>
                         <citedRange>13</citedRange>

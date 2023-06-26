@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Inscription recording the municipium of Halaesa</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+               <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+             <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	</titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001705</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001705</idno>
+              <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Lost</settlement>
+                        <repository/>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Described by Torremuzza as inscribed on 'un grande intaglio di marmo'</p>
+                                    <material ana="#material.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <dimensions>
+                                        <height unit="cm">unknown</height>
+                                        <width unit="cm">unknown</width>
+                                        <depth unit="cm">unknown</depth>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>no description is preserved</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>'scritto a grosse lettere'</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">unknown</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm">unknown</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>		
+                                <offset>near
+                                    <placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
+                                </offset>
+                            	<geo>37.99907, 14.26197</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0021" notAfter-custom="0014">Assumed to be Augustan, but could be later.</origDate>
+                        </origin>
+                        <provenance type="found" subtype="first-recorded">First recorded by Torremuzza in 1749 and 1753 'fra le ruine' of Halaesa</provenance> 
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost.</provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.unknown" ref="http://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="edited">
+            <listChange>
+               <change when="2023-01-12" who="#JP">Jonathan Prag created file</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001705_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001705.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ab>
+                    <lb n="1"/>municipium Alaesinum
+                  </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text of Torremuzza</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p></p>
+            </div>
+            <div type="commentary">
+                <p>The text was first recorded by Gabriele Lancillotto Castelli, principe di Torremuzza, alongside <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000582">ISic000582</ref>, in 1749 and again with slightly more detail in 1753. His is the only report, and he presents it explicitly as a second text in addition to that previously recorded by Gualtherus (ISic000582), and describes it in different terms, suggesting that it is a monumental text in marble (but whether intact or not is uncertain). Mommsen noted it in his apparatus to CIL 10.7458 (ISic000582) and implied some scepticism ('venit sin dubio ex narrationibus eorum qui lapidem videssent memoriter traditis'). It was also noted by Prestianni Giallombardo (but omitted from Prag and Tigano 2017). As Ampolo and Erdas note (2019, p.112), the more recent discovery of a statue base reading simply 'municipium' at Segesta (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000666">ISic000666</ref>) should encourage some credibility in Torremuzza's report. It remains unclear if this is e.g. a statue base or part of a building. The reference to marble is notable, since marble only comes in to use for inscriptions at Halaesa in the Augustan period.</p> 
+                <p>This is one of several texts from Sicily erected simply in the name of the municipium (compare CIL 10, no.7463=<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000587">ISic000587</ref> and 7464=<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000588">ISic000588</ref> from Haluntium; AE 1945 no.64=<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000622">ISic000622</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000666">ISic000666</ref> from Segesta). The formulation is unusual, with occasional south Italian examples (Prag 2008: 78 nn.80-82), most likely reflecting Greek traditions of erecting honours, e.g., in the name of the polis (this possibility is made more likely by the example in Greek from Haluntium (IG 14, no.367 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001190">ISic001190</ref>, honours set up by τὸ μουνικίπιον τῶν Ἁλοντίνων). The text provides important evidence, alongside the Augustan coinage from Halaesa, that the town had the status of a Latin municipium by the later Augustan period.</p>
+             </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="CIL">
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650802">10 p.768 comm. ad no. 7458</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1749</date>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/363718">xxi</ref></citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/542PCSHF"/>
+                    </bibl>
+                   <bibl>
+                        <author>Castelli</author>
+                        <date>1753</date>
+                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/280761">72 and 149 no.7</ref></citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/U7S4ZAG3"/>
+                    </bibl>
+                   <bibl>
+                        <author>Prestianni Giallombardo</author>
+                        <date>2012</date>
+                        <citedRange>173 with n.31</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/CJISRIUV"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ampolo and Erdas</author>
+                        <date>2019</date>
+                        <citedRange>111-112</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/3PK3JKXR"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
