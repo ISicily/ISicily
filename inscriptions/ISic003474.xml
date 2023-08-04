@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -175,6 +173,7 @@
 	            <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                         <change when="2022-01-27" who="#VM">check text edition and encoding in Epidoc</change>
+                <change when="2023-07-06" who="#VM">Valentina Mignosa added name tokenisation</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -192,10 +191,13 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/>Το͂ι <persName type="attested"><name type="patronym">Πυτίκα</name>
-                    <lb n="2"/><persName type="attested"><name type="idionym">Πυρίνο̄ι</name></persName></persName>
-                    <lb n="3"/>ἐποίε̄σε
-                    <lb n="4"/><persName type="attested"><name type="idionym">Σϙύλος</name></persName>
+                    <lb n="1" xml:id="EnDhG"/><w xml:id="EnDhQ">Το͂ι</w> <persName type="attested" xml:id="EnDha"><persName type="attested" xml:id="EnDhk"><name type="patronymic" xml:id="EnDhu">Πυτίκα</name> 
+                    
+                    <lb n="2" xml:id="EnDiE"/><name type="idionym" xml:id="EnDiO">Πυρίνο̄ι</name></persName></persName> 
+                    
+                    <lb n="3" xml:id="EnDiY"/><w xml:id="EnDii">ἐποίε̄σε</w> 
+                    
+                    <lb n="4" xml:id="EnDis"/><persName type="attested" xml:id="EnDjC"><name type="idionym" xml:id="EnDjM">Σϙύλος</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
@@ -253,7 +255,7 @@
                         <author>Manganaro</author>
                         <date>2001</date>
                         <citedRange>63-65</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/94USEJ4Z"/>
+                        <ptr target="http://zotero.org/groups/382445/items/EF6BSAQP"/>
                     </bibl>
                     <bibl type="corpus" n="IGDS2">
                         <citedRange>44</citedRange>
@@ -279,7 +281,7 @@
                         <author>Heilmeyer</author>
                         <date>2009</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/T7WPHAX2"/>
-                    </bibl>
+                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

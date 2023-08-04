@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,7 +7,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#VM">Valentina Mignosa</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                      <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                      <resp>project direction, template development and general editor</resp>
@@ -55,7 +53,7 @@
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
-                        <idno type="inventory"></idno>
+                        <idno type="inventory"/>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -164,10 +162,10 @@
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic020323_tiled.tif" height="3680px" width="5520px">
+            <graphic n="screen" url="ISic020323b_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-            <graphic n="print" url="ISic020323.jpg" height="3680px" width="5520px">
+            <graphic n="print" url="ISic020323b.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
@@ -175,29 +173,35 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="xly-Grek">
-                <div type="textpart" subtype="fragment" n="a">
+                <div type="textpart" subtype="fragment-physical" n="a">
                     <ab>
-                        <lb n="1" rend="spiral-clockwise"/><gap reason="lost" extent="unknown" unit="character"/>ΦΙΒΝΥΝΝ<gap reason="lost" extent="unknown" unit="character"/>
-                        <lb n="2" rend="spiral-clockwise"/><gap reason="lost" extent="unknown" unit="character"/><unclear>Ν</unclear>ΥΗΑΝ<unclear>Ε</unclear><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" rend="spiral-clockwise" xml:id="bpTBg"/><gap reason="lost" extent="unknown" unit="character" xml:id="bpTBq"/><w xml:id="bpTCA">ΦΙΒΝΥΝΝ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="bpTCK"/>
+                        
+                        <lb n="2" rend="spiral-clockwise" xml:id="bpTCU"/><gap reason="lost" extent="unknown" unit="character" xml:id="bpTCe"/><w xml:id="bpTCo"><unclear xml:id="bpTCy">Ν</unclear>ΥΗΑΝ<unclear xml:id="bpTDI">Ε</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="bpTDS"/>
                     </ab>
-               </div>
-               <div type="textpart" subtype="fragment" n="b">
-                   <ab>
-                       <lb n="1"/>ΣΑΡΙΧ<unclear>Υ</unclear><gap reason="lost" extent="unknown" unit="character"/>
-                       <lb n="2"/>ΠΕΙΗΙΕΙ<gap reason="lost" extent="unknown" unit="character"/>
-                       <lb n="3"/>ΚΙΜΥΤ<gap reason="lost" extent="unknown" unit="character"/>
-                       <lb n="4"/>ΣΑΡΙ<gap reason="lost" extent="unknown" unit="character"/>
-                   </ab>
-               </div>
+                </div>
+               
+                
+                <div type="textpart" subtype="fragment-physical" n="b">
+                    <ab>
+                        <lb n="1" xml:id="bpTDw"/><w xml:id="bpTEG">ΣΑΡΙΧ<unclear xml:id="bpTEQ">Υ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="bpTEa"/>
+                        
+                        <lb n="2" xml:id="bpTEk"/><w xml:id="bpTEu">ΠΕΙΗΙΕΙ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="bpTFE"/>
+                        
+                        <lb n="3" xml:id="bpTFO"/><w xml:id="bpTFY">ΚΙΜΥΤ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="bpTFi"/>
+                        
+                        <lb n="4" xml:id="bpTFs"/><w xml:id="bpTGC">ΣΑΡΙ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="bpTGM"/>
+                    </ab>
+                </div>
             </div>
             <div type="edition" xml:space="preserve" subtype="transliteration" xml:lang="xly-Latn">
-                <div type="textpart" subtype="fragment" n="a">
+                <div type="textpart" subtype="fragment-physical" n="a">
                     <ab>
                         <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/>phibnynn<gap reason="lost" extent="unknown" unit="character"/>
                         <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><unclear>n</unclear>yhan<unclear>e</unclear><gap reason="lost" extent="unknown" unit="character"/>
                     </ab>
                </div>
-               <div type="textpart" subtype="fragment" n="b">
+               <div type="textpart" subtype="fragment-physical" n="b">
                    <ab>
                        <lb n="1"/>sarich<unclear>u</unclear><gap reason="lost" extent="unknown" unit="character"/>
                        <lb n="2"/>peihiei<gap reason="lost" extent="unknown" unit="character"/>
@@ -220,7 +224,7 @@
                 <p><!--No translation currently agreed--></p>
             </div>
             <div type="commentary" xml:lang="en">
-                <p></p>
+                <p/>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

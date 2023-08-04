@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -74,8 +74,8 @@
                                     <objectType ana="#object.tessera" ref="http://www.eagle-network.eu/voc/objtyp/lod/276.html">tessera</objectType>
                                     <dimensions>
                                         <height unit="cm">1.8</height>
-                                        <width xml:id="folded" unit="cm">2.4</width><!-- not sure is he right way to flag these -->
-                                        <width xml:id="unfolded" unit="cm">4.2</width>
+                                        <width scope="folded" unit="cm">2.4</width><!-- not sure is he right way to flag these -->
+                                        <width scope="unfolded" unit="cm">4.2</width>
                                         <depth unit="cm">0.2-0.3</depth>
                                     </dimensions>
                                 </support>
@@ -174,14 +174,16 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
-                <div type="textpart" subtype="face" n="a">
+                <div type="textpart" subtype="section" n="a">
                     <ab>
+                        <milestone unit="face" n="a"/>
                         <lb n="1"/>Ͱερακλ<supplied reason="lost">ίδας</supplied>
                         <lb n="2"/><orig>ΜΕ</orig><gap reason="lost" extent="unknown" unit="character"/>
                     </ab>
                 </div>
-                <div type="textpart" subtype="face" n="b">
+                <div type="textpart" subtype="section" n="b">
                     <ab>
+                        <milestone unit="face" n="b"/>
                         <lb n="1"/><orig>ͰΕ</orig><gap reason="lost" extent="unknown" unit="character"/>
                         <lb n="2"/><num value="7">Ͱέκτα</num>
                     </ab>

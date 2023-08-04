@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -62,7 +62,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lost</settlement>
@@ -81,8 +81,9 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>A "marble" base, damaged in the upper part</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+				    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -122,7 +123,7 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100" precision="low">3rd — 2nd century BCE(Kaibel)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found">Original discovery not recorded; observed in the Iudica collection.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
@@ -193,13 +194,10 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
-                <div type="textpart" subtype="section" n="a">
                     <ab>
                         <lb n="1"/><supplied reason="lost">ἐπὶ</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" cert="low">Ἀφροδίται</supplied>
-                    </ab>
-                </div>
-                <div type="textpart" subtype="column" n="1">
-                    <ab>                        
+                           
+                        <cb n="1"/>
                         <lb n="2"/>ἀγορανόμοι
                         <lb n="3"/>Ἀπολλόδωρος Νυμφοδώρου
                         <lb n="4"/>Ἡράκλειος Ἡρακλείου <abbr>Σαλ</abbr>
@@ -211,24 +209,21 @@
                         <lb n="10"/>Ἕλωρις Ἡρακλείδα
                         <lb n="11"/>Θεόδωρος Εὐφραίου
                         <lb n="12"/>Εὐκλῆς Φιλάρχου
-                    </ab>
-                </div>
-                <div type="textpart" subtype="column" n="2">
-                    <ab>
-                        <lb n="2"/>Ἀριστόμαχος <gap reason="lost" extent="unknown" unit="character"/><orig>ΙΙΥ</orig><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΙ</orig>
-                        <lb n="3"/>Νίκων Νυμφοδώρου
-                        <lb n="4"/>γραμματεὺς
-                        <lb n="5"/>καὶ φραδατὴρ
-                        <lb n="6"/>Ἀρχάγαθος Ἀρχαγάθου
-                        <lb n="7"/>ὑπογραφέες
-                        <lb n="8"/><supplied reason="lost">Σ</supplied>ῶσις Παυσανία
-                        <lb n="9"/>Ἀντικράτης Ἀρτέμωνος
-                        <lb n="10"/>κᾶρυξ
-                        <lb n="11"/>Εὐφραῖος Εὐφραίου
-                        <lb n="12"/>ὑπηρέτας
-                        <lb n="13"/><gap reason="lost" quantity="1" unit="line"/>
+                    
+                        <cb n="2"/>
+                        <lb n="13"/>Ἀριστόμαχος <gap reason="lost" extent="unknown" unit="character"/><orig>ΙΙΥ</orig><gap reason="lost" extent="unknown" unit="character"/><orig>ΙΙ</orig>
+                        <lb n="14"/>Νίκων Νυμφοδώρου
+                        <lb n="15"/>γραμματεὺς
+                        <lb n="16"/>καὶ φραδατὴρ
+                        <lb n="17"/>Ἀρχάγαθος Ἀρχαγάθου
+                        <lb n="18"/>ὑπογραφέες
+                        <lb n="19"/><supplied reason="lost">Σ</supplied>ῶσις Παυσανία
+                        <lb n="20"/>Ἀντικράτης Ἀρτέμωνος
+                        <lb n="21"/>κᾶρυξ
+                        <lb n="22"/>Εὐφραῖος Εὐφραίου
+                        <lb n="23"/>ὑπηρέτας
+                        <lb n="24"/><gap reason="lost" quantity="1" unit="line"/>
                 </ab>
-            </div>
             </div>
             <div type="apparatus">
                 <listApp>

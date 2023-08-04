@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -37,6 +37,10 @@
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Addition of metadata</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -94,7 +98,7 @@
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <locus from="line1" to="line1">Line 1</locus>
+                                <locus from="line1" to="line4">Lines 1-4</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">55-65</height>
                                 </dimensions>
@@ -169,6 +173,7 @@
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-08-25" who="#SS">encoded text and supplemented metadata</change>
+                <change when="2023-03-20" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -186,13 +191,14 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#SS">
                 <ab>
-                    <lb n="1"/><gap reason="lost" atLeast="1" atMost="2" unit="character"/><choice><orig><supplied reason="lost">Ἀπολ</supplied>λονίου</orig><reg>Ἀπολλωνίου</reg></choice>
+                    <lb n="1"/><gap reason="lost" atLeast="1" atMost="2" unit="character"/><persName type="attested"><name><choice><orig><supplied reason="lost">Ἀπολ</supplied>λονίου</orig><reg>Ἀπολλωνίου</reg></choice></name></persName>
                     <lb n="2"/>ἐζώ<supplied reason="lost">κ</supplied><unclear>ε</unclear>ι
                     <lb n="3"/>ἐνιαυτο<unclear>ὺ</unclear>ς
                     <lb n="4"/><num value="7">ζ</num>
                 </ab>
             </div>
             <div type="apparatus">
+                <listApp><app><note>Meligunìs Lipára XII</note></app></listApp>
                 <app loc="2">
                     <rdg>ΕΖΩΚΕΙ <note>Libertini</note></rdg>
                 </app>

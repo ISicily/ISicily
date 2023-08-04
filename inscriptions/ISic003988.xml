@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -38,6 +38,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -57,13 +61,12 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
+                        <idno type="inventory">11632</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -76,27 +79,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
-                                    </dimensions>
-                                </support>
-                                <condition/>
-		    </supportDesc>
-                            <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
-                            </layoutDesc>
+                                    <support>
+                                        <p>Large stele with poorly polished surfaces, rougher on the back; missing corner on the left</p>
+                                        <p>The slab bears two distinct inscriptions on the front, relating to two different phases of use: the first (a) placed in the upper part, the second (b) on a projecting band at the base of the same face. Here is the text of (a)</p>
+                                        <p>The surface of the upper part of the front face shows clear traces of gradine work and seems to have been lowered with respect to the original surface, probably to erase an older text and to engrave the inscription (a). This could therefore be attributed to the reused of the slab as a funerary stele. The inscription (b) should instead belong to a first use of the stone; the position at the lower end of the forehead leads us to believe that the slab was originally not a stele – in which case the base would have been buried – but a slab covering an unidentifiable struture (funerary monument? enclosure?)</p>
+                                        <p>On same support as <ref sameAs="ISic004283">ISic004283</ref></p>
+                                        <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                        <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                        <dimensions>
+                                            <height unit="cm">108</height>
+                                            <width unit="cm">42.5</width>
+                                            <depth unit="cm">14</depth>
+                                        </dimensions>
+                                    </support>
+                                    <condition ana="#condition.damaged"/>
+                                </supportDesc>
+                                <layoutDesc>
+                                    <layout>
+                                        <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                        <damage ana="#text_condition.complete"/>
+                                    </layout>
+                                </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">35-70</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -113,7 +122,7 @@
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1971">Discovered in 1971 during the excavation of trench XXXI, face O (Bishop's property). It was reused in masonry tomb no. 1225 (dated to the 2nd century CE)<geo>38.467130, 14.953871</geo></provenance><!-- representative geo for contrada Diana -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -152,8 +161,13 @@
                 <language ident="scx">Sikel</language>
                 <language ident="sxc">Sikan</language>
             </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -161,6 +175,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-04-06" who="#AA">Alex Antoniou Epidoc editing and addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -176,18 +191,21 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI334476">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>
-
-
-                    Γ<unclear>α</unclear>μικῆς<lb n="2"/>Γνωστοῦ.<lb n="3"/>Εὐφ<supplied reason="omitted">ρ</supplied>ωσύνα <surplus>
-                    ²⁶Εὐφροσύνα</surplus>²⁶.
-                    <lb n="4"/>
+                    <lb n="1"/>Γ<unclear>α</unclear>μικῆς
+                    <lb n="2"/>Γνωστοῦ
+                    <lb n="3"/>Εὐφ<supplied reason="omitted">ρ</supplied>ωσύνα
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Meligunìs Lipára XII</note></app></listApp>
+                <app loc="1">
+                    <rdg><unclear>Γ</unclear>ΑΜΙΚΗC<note>Bernabò Brea - Cavalier</note></rdg>
+                </app>
+                <app loc="3">
+                    <rdg>ΕΥΦCΨΥΝΑ<note>Stone</note></rdg>
+                </app>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>

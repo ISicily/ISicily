@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,7 +7,7 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#VM">Valentina Mignosa</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder><ref  target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>project direction, template development and general editor</resp>
@@ -176,10 +174,11 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
-                    <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>Π<unclear>ΑΡΒ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
-                        <lb n="2"/><supplied reason="lost">Δ</supplied>άνκλας ἐ<unclear>μ</unclear><supplied reason="lost">ί</supplied><gap reason="lost" extent="unknown" unit="character"/>
-                    </ab>
+                <ab>
+                    <lb n="1" xml:id="cIsRm"/><gap reason="lost" extent="unknown" unit="character" xml:id="cIsRw"/><orig xml:id="cIsSG">Π<unclear xml:id="cIsSQ">ΑΡΒ</unclear></orig><gap reason="lost" extent="unknown" unit="character" xml:id="cIsSa"/>
+                    
+                    <lb n="2" xml:id="cIsSk"/><persName cert="low" xml:id="cIsSu"><name xml:id="cIsTE"><supplied reason="lost" xml:id="cIsTO">Δ</supplied>άνκλας</name></persName> <w xml:id="cIsTY">ἐ<unclear xml:id="cIsTi">μ</unclear><supplied reason="lost" xml:id="cIsTs">ί</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="cIsUC"/>
+                </ab>
             </div>
             <div type="apparatus" resp="#VM">
                 <listApp>
@@ -331,7 +330,7 @@
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl></bibl>
+                    <bibl/>
                 </listBibl>
             </div>
         </body>

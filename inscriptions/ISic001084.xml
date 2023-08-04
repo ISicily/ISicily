@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -57,12 +57,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Agrigento</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/130">Museo Regionale
-                            Archeologico Pietro Griffo</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/130">Museo Regionale Archeologico Pietro Griffo</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -77,25 +76,26 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Described by Picone as fragment of a small marble funerary stone, 10 cm wide, of which the final line is clear. It is unclear exactly which parts of the stone are broken, but Kaibel implies that the left and upper parts of the text are broken, with the right margin preserved for lines 3-6.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
-                                        <width unit="cm"/>
+                                        <width unit="cm">10</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Picone claims to try to reproduce the letter forms, explicitly noting lunate sigma and lunate epsilon, while also representing what looks like cursive mu.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -114,9 +114,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
                             	<geo>37.32084, 13.58876</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0200" notAfter-custom="0500">Appears to be of a form belonging to the later Roman period.</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">prope sepulcrum Theronis</provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1866">Said by Picone to have been found 'vicinissimo al sepolcro detto di Terone'<geo>37.288916, 13.585988</geo>. Subsequently said by Kaibel to be in the museum at Agrigento, where he saw it, but it does not seem to have been observed subsequently.</provenance><!-- point immediately north of the Tomb -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -161,7 +161,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -170,10 +170,12 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-06-13" who="#JP">Jonathan Prag revised from publications.</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
+    <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic001084_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -181,60 +183,32 @@
             <graphic n="print" url="ISic001084.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR136235" xml:lang="grc">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="0"/>
-                    <gap reason="lost" extent="unknown" unit="line"/>
-                    <lb n="1"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    καὶ
-                    <lb n="2"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>ατθο
-                    <lb n="3"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    μητρὶ
-                    <lb n="4"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    ψας
-                    <lb n="5"/>
-                    <gap reason="lost" extent="unknown" unit="character"/>
-                    τὸ τέλος
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>κα<unclear>ὶ</unclear><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/>ατθο
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/>μητρὶ
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/>ψας
+                    <lb n="6"/>βίου τὸ τέλος
                 </ab>
-                <!--This EDR text 136235 originally came via the Europeana EAGLE project, http://www.eagle-network.eu/-->
-            </div>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI140567">
-                <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— — — — — — — — — — — —</supplied>․
-                    <supplied reason="lost">—</supplied>
-                    <lb n="2"/>
-                    <supplied reason="lost">— — — — — — — — — — —</supplied>#⁷Α․
-                    <lb n="3"/>
-                    <supplied reason="lost">— — — — — — — — — — —</supplied>ΑΤΘΟ
-                    <lb n="4"/>
-                    <supplied reason="lost">— — — — — — — — — — —</supplied>
-                    μητρὶ
-                    <lb n="5"/>
-                    <supplied reason="lost">— — — — — στοναχὰς λεί</supplied>ψας
-                    <lb n="6"/>
-                    <supplied reason="lost">— — κοινὸν πᾶσι μένει</supplied>
-                    τὸ τέλος.
-                    <lb n="7"/>
-                </ab>
-            </div>
-            <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+          </div>
+          <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app><note>text after Picone and Kaibel</note></app>
+                    <app loc="5"><note>Kaibel suggests: [στοναχὰς λεί]ψας</note></app>
+                    <app loc="6"><note>Kaibel reads: -]ΓΟΤΕΛΟΣ, and suggests [κοινὸν πᾶσι μ1νει] τὸ τέλος; Picone asserts that the last line is complete and clear and reads as above.</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--A fragmentary epigram, with lunate letters, so, late hellenistic?--></p>
+                <p>Kaibel suggests this is an epigram, but it is unclear if Picone's reading supports this, since his reading of line 6 implies a small tablet. The palaeographic evidence of Picone/Kaibel suggests a later Roman date, rather than Hellenistic.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -244,7 +218,12 @@
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
                     </bibl>
-                    <bibl/>
+                    <bibl>
+                        <author>Picone</author>
+                        <date>1866</date>
+                        <citedRange>140-141 n.4</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/AVMJI6YU"/>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
