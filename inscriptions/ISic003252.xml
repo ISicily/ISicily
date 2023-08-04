@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003252</title>
+                <title>Epitaph for Rhoskia Nike</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -54,19 +58,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003252</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4357923</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">236</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,32 +82,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">31</height>
+                                        <width unit="cm">35</width>
+                                        <depth unit="cm">1-4.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Α and Δ with serifs, lunate Ε and Ο, cursive Ω, Μ with slanting external strokes. Ligature between Τ and Η at l. 3, diaeresis above Ι at l. 4.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line5">Lines 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">14-25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -118,14 +120,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" cert="low" precision="low">2nd century CE (probably, K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" cert="low" precision="low">2nd century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.44, mag. del cort.</provenance>
+                        <provenance type="found">Original discovery not recorded, “ex urbe fortasse” according to Kaibel, but the structure and the onomastics are characteristic of Catania for Korhonen.</provenance>
+                        <provenance type="observed">Observed by Kaibel in Museo dei Benedettini, later by Korhonen in Magazzino del Cortile, Collezione dei Benedettini (formerly sala VI 44).</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -177,6 +178,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, the Italian translation and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -192,24 +194,29 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
                 <ab>
-                    <lb n="1"/><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan> <expan><abbr>Κ</abbr><ex>ατα</ex><abbr>χ</abbr><ex>θονίοις</ex></expan>
-                    <lb n="2"/>Ῥωσκία Νίκη
-                    <lb n="3"/>ἔζησεν ἔτη <num value="43">μγ</num>
-                    <lb n="4"/>Οὐρβικὸς ἰδίᾳ
-                    <lb n="5"/>γυναικί
+                    <lb n="1"/><w><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <w><expan><abbr>Κ</abbr><ex>ατα</ex><abbr>χ</abbr><ex>θονίοις</ex></expan></w>
+                    <lb n="2"/><persName type="attested"><name>Ῥωσκία</name> <name>Νίκη</name></persName>
+                    <lb n="3"/><w>ἔζησεν</w> <w>ἔτη</w> <g ref="#interpunct">·</g> <num value="43">μ <g ref="#interpunct">·</g> γ</num>
+                    <lb n="4"/><persName type="attested"><name>Οὐρβικὸς</name></persName><w> ἰδίᾳ</w>
+                    <lb n="5"/><w>γυναικί</w>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photograph</note></app>
+                    <app loc="line 2"><note>Kaibel: Ῥωσκίᾳ Νίκῃ</note></app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="eng" resp="#AA">
                 <p>To the underworld deities. Rhoskia Nike lived for 43 years. Ourbikos for his wife.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--ThKX header, 'potrebbe indicare l'interferenza dell'epigrafia latina', cf. DMS, (K, p.228). Rhoskia Nike (Roscia) age in years; Ourbikos for his wife.--></p>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Alle divinità infere. Rhoskia Nike visse 43 anni. Ourbikos per sua moglie.</p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>The epitaph presents the invocation to the underworld deities (<foreign xml:lang="grc">Θ Κ Χ</foreign> could be an interference with the Latin formula <foreign xml:lang="la">D M S</foreign>), the name of the deceased, the age and, in an independent sentence, the name of the dedicant and the name of the deceased in dative (here expressed in his degree of kinship) occasionally with the dedication verb (here implied). This inscription is strictly linked to IG 14.1919 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003260">ISic003260</ref>, an epitaph for Ourbana, daughter of Ourbikos and Nike, who are to be identified respectively in the dedicant and in the deceased named in this epitaph, which must therefore be later than that for their daughter. The deceased must have been a Roman citizen, as revealed by the gentilicium <foreign xml:lang="grc">Ῥωσκία</foreign> (also attested in other inscriptions from Catania, such as IG 14.486 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001309">ISic001309</ref> and IMusCatania 179 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003283">ISic003283</ref>): the name <foreign xml:lang="grc">Νίκη</foreign> is widely attested in Sicily (see LGPN 3A: 320). The name of the husband and dedicant, <foreign xml:lang="grc">Οὐρβικός</foreign>, on the contrary, is not attested elsewhere in Sicily (a <foreign xml:lang="grc">Οὔρβικα</foreign> is attested in Syracuse in IG 14.156 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000977">ISic000977</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -223,7 +230,12 @@
                         <citedRange>124</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
                     </bibl>
-                    <bibl>IGUR 923</bibl>
+                    <bibl type="corpus" n="IGUR">
+			    <author>Morettie</author>
+			    <date>1968</date>
+			    <citedRange>923</citedRange>
+			     <ptr target="https://www.zotero.org/groups/382445/items/MCBAPQH7"/>
+			</bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
