@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003286</title>
+                <title>Epitaph for Eutychis</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -54,19 +58,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003286</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4358053</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">313</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,32 +82,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque recomposed by 13 fragments, set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">31.5</height>
+                                        <width unit="cm">46</width>
+                                        <depth unit="cm">1-6</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>A, Δ and Λ with serifs, A with broken bar, squared Ε and Σ (but cursive E at l. 4), Ρ at l. 4 with extended upright.</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line4">Lines 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">35-50</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -118,14 +120,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" precision="low">4th — 5th century CE (K)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" precision="low">4th — 5th century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.121, mag. del cort.</provenance>
+                        <provenance type="found" subtype="discovered">Found by Prof. Gioacchino Basile in the vicinity of the now destroyed Church of S. Clemente, likely site of an early christian cemetery.</provenance>
+                        <provenance type="observed">Observed by Ferrua in sala VI Castel Ursino, later by Korhonen in Magazzino del cortile, Museo Civico.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -176,6 +177,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,23 +193,30 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
                 <ab>
-                    <lb n="1"/>Ἐνθάδε κῖτε
-                    <lb n="2"/>Εὐτυχὶς ζή<supplied reason="omitted">σα</supplied>
-                    <lb n="3" break="no"/>σα ἒτη <hi rend="supraline"><num value="50">ν</num></hi> τελε<supplied reason="omitted">υ</supplied>
-                    <lb n="4" break="no"/>τᾷ τῇ πρὸ <hi rend="supraline"><num value="5">ε</num></hi> <expan><abbr><unclear>ἰδ</unclear></abbr><ex>ῶν</ex></expan> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><w>Ἐνθάδε</w> <w>κῖτε</w>
+                    <lb n="2"/><persName type="attested"><name>Εὐτυχὶς</name></persName> <w>ζή<supplied reason="omitted">σα</supplied><lb 
+                        n="3" break="no"/>σα</w> <w>ἒτη</w> <hi rend="supraline"><num value="50">ν</num></hi> <w>τελε<supplied reason="omitted">υ</supplied><lb 
+                        n="4" break="no"/>τᾷ</w> <w>τῇ</w> <w>πρὸ</w> <hi rend="supraline"><num value="5">ε</num></hi> <w><expan><abbr><unclear>ἰδ</unclear></abbr><ex>ῶν</ex></expan></w> <gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photograph</note></app>
+                    <app loc="lines 2-3"><note>Orsi: ΖΗ|ΣΑ; Ferrua; Wessel: ζή|σα<supplied reason="omitted">ς</supplied>; Korhonen: ζή<supplied reason="omitted">σα</supplied>|σα</note></app>
+                    <app loc="line 3"><note>Orsi: ΜΝ in ligature; Wessel: μ(η)ν.; Ferrua, Korhonen: ν</note></app>
+                    <app loc="line 4"><note>Orsi; Wessel: ΠΡO ΕΙΔ(ΩΝ) ΙΑ[νουαρίου]; Ferrua: πρὸ θ ἰδ(ῶν); Korhonen: πρὸ ε ἰδ(ῶν) (after ιδ are scratches, not letters). After ιδ a long stroke is visible (perhaps the first letter of Ἰανουαρίων, Ἰουνίων or Ἰουλίων)</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="eng" resp="#AA">
-                <p>Here lies Eutychis, having lived for 50 years, died 5 days before the ides of...</p>
+            <div type="translation" xml:lang="en" resp="#martaf #AA">
+                <p>Here lies Eutychis, who lived for 50 years. She died 5 days before the Ides of ...</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--13 frr. Enthade kite Eutychis (Eutuchis) age in years, day of death.--></p>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Qui giace Eutykis, che visse 50 anni. Morì 5 giorni prima delle Idi di ...</p>
+            </div>
+            <div type="commentary" resp="#martaf">
+                <p>The epitaph has the clause <foreign xml:lang="grc">ἐνθάδε κεῖται</foreign> followed by the name of the deceased and her age. In another sentence is the day of death: the text seems to be complete, but the stonecutter does not mention the month (or mentions it in a very abbreviated form) and at ll. 2 and 3 he does not engrave some characters most probably due to an error in calculating the space left on the right. The name <foreign xml:lang="grc">Εὐτυχίς</foreign> is found in two other inscriptions of Catania from the imperial period: Ferrua 1989: 119 no.456, CIL 10.7072 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000356">ISic000356</ref> (LGPN 3A: 179 strangely has two different entries, one for <foreign xml:lang="grc">Εὐτύχις</foreign> of this inscription, another for <foreign xml:lang="grc">Εὐτυχίς</foreign>).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -222,10 +231,14 @@
                         <citedRange>223</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
+                    <bibl type="corpus" n="IGCVO">
+                        <citedRange>1362</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK"/>
+                    </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1989</date>
-                        <citedRange>no.415</citedRange>
+                        <citedRange>109 no.415</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
                     </bibl>
                 </listBibl>

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001648</title>
+                <title>Epitaph for Theodoule (?)</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -13,6 +13,10 @@
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>editing, translation and commentary</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
@@ -55,19 +59,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001648</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4354718</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di
-                            Catania</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">312</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -82,32 +83,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque damaged on the right, traces of reuse on the rear. The text is inside an engraved tabula ansata.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--measurements from Korhonen-->
+                                        <height unit="cm">40</height>
+                                        <width unit="cm">37</width>
+                                        <depth unit="cm">3.2</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Squared Ε, cursive Ω, Α, Δ and Λ with extended serifs. At l. 6, the stigma has an extended upper stroke, at l. 8 the kappa has an extended lower arm (perhaps to indicate the abbreviation)</p><!--measurements from Korhonen-->
+                                <locus from="line1" to="line8">Lines 1-8</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">20-30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">not recorded</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -119,15 +121,13 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" when-custom="0418">418 CE (Ferrua 1982—83,
-                                rejecting his earlier 274 CE sugg.)</origDate>
+                            <origDate datingMethod="#julian" when-custom="0418">418 CE (Ferrua 1982-83, rejecting his earlier 274 CE suggestion)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed">sala VI.120, mag. del cort.</provenance>
+                        <provenance type="found" subtype="discovered">Found in a cemetery close to the now-demolished Chiesa di San Clemente.</provenance>
+                        <provenance type="observed">Observed by Orsi in Museo Civico, later by Korhonen in Magazzino del cortile, Museo Civico (formerly sala VI 123).</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -178,6 +178,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -193,27 +194,39 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
                 <ab>
-                    <lb n="1"/>Ἐν<supplied reason="lost">θάδε</supplied> <supplied reason="lost">κεῖται</supplied> <supplied reason="lost">Θεο</supplied>
-                    <lb n="2" break="no"/>δούλη <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/>τελευτο<supplied reason="lost">ῦσα</supplied> <supplied reason="lost">ἐτῶν</supplied><gap reason="lost" quantity="2" unit="character"/> <supplied reason="lost">ἐγεννήθη</supplied>
-                    <lb n="4"/>μὲν τῇ <expan><abbr>ὑπ</abbr><ex>ατείᾳ</ex></expan> <supplied reason="lost">Αὐρηλιανοῦ</supplied> <supplied reason="lost"><expan><abbr>Αὐγ</abbr><ex>ούστου</ex></expan></supplied> <supplied reason="lost">τὸ</supplied> <supplied reason="lost"><num value="2">β</num></supplied> <supplied reason="lost">καὶ</supplied> <supplied reason="lost">Κλαυδί</supplied>
-                    <lb n="5" break="no"/>ου Καπιτω<supplied reason="lost">λείνου</supplied> <supplied reason="lost">τῶν</supplied> <supplied reason="lost"><expan><abbr>λαμπ</abbr><ex>ροτάτων</ex></expan></supplied> <supplied reason="lost" cert="low">ἐτελεύτησε</supplied> <supplied reason="lost">δὲ</supplied>
-                    <lb n="6"/>τῇ <expan><abbr>πρ</abbr><ex>ὸ</ex></expan> <num value="6">ϛ</num> νων<supplied reason="lost">ῶν</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">με</supplied>
-                    <lb n="7" break="no"/>τὰ τὴν ὑπα<supplied reason="lost">τείαν</supplied> <supplied reason="lost">Ὁνωρίου</supplied> <supplied reason="lost"><expan><abbr>Αὐγ</abbr><ex>ούστου</ex></expan></supplied>
-                    <lb n="8"/><expan><abbr>τ</abbr><ex>ὸ</ex></expan> <num value="11">ια</num> <expan><abbr>κ</abbr><ex>αὶ</ex></expan> Κου<unclear>σ</unclear><supplied reason="lost">ταντίου</supplied> <supplied reason="lost">τὸ</supplied> <supplied reason="lost"><num value="2">β</num></supplied>
+                    <lb n="1"/><w>Ἐν<supplied reason="lost">θάδε</supplied></w> <w><supplied reason="lost">κεῖται</supplied></w> <persName type="attested"><name><supplied reason="lost">Θεο</supplied><lb 
+                        n="2" break="no"/>δούλη</name></persName> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><w>τελευτο<supplied reason="lost">ῦσα</supplied></w> <w><supplied reason="lost">ἐτῶν</supplied></w> <gap reason="lost" quantity="2" unit="character"/> <w><supplied reason="lost">ἐγεννήθη</supplied></w>
+                    <lb n="4"/><w>μὲν</w> <w>τῇ</w> <w><expan><abbr>ὑπ</abbr><ex>ατείᾳ</ex></expan></w> <persName type="attested" subtype="imperial"><name><supplied reason="lost">Αὐρηλιανοῦ</supplied></name> <name><supplied reason="lost"><expan><abbr>Αὐγ</abbr><ex>ούστου</ex></expan></supplied></name></persName> <w><supplied reason="lost">τὸ</supplied></w> <supplied reason="lost"><num value="2">β</num></supplied> <w><supplied reason="lost">καὶ</supplied></w> <persName type="attested" subtype="imperial"><name><supplied reason="lost">Κλαυδί</supplied><lb 
+                        n="5" break="no"/>ου</name> <name>Καπιτω<supplied reason="lost">λείνου</supplied></name></persName> <w><supplied reason="lost">τῶν</supplied></w> <w><supplied reason="lost"><expan><abbr>λαμπ</abbr><ex>ροτάτων</ex></expan></supplied></w> <w><supplied reason="lost" cert="low">ἐτελεύτησε</supplied></w> <w><supplied reason="lost">δὲ</supplied></w>
+                    <lb n="6"/><w>τῇ</w> <w><expan><abbr>πρ</abbr><ex>ὸ</ex></expan></w> <num value="6">ς</num> <w>νων<supplied reason="lost">ῶν</supplied></w> <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost">με</supplied>
+                    <lb n="7" break="no"/>τὰ</w> <w>τὴν</w> <w>ὑπα<supplied reason="lost">τείαν</supplied></w> <persName type="attested" subtype="imperial"><name><supplied reason="lost">Ὁνωρίου</supplied></name> <name><supplied reason="lost"><expan><abbr>Αὐγ</abbr><ex>ούστου</ex></expan></supplied></name></persName>
+                    <lb n="8"/><w><expan><abbr>τ</abbr><ex>ὸ</ex></expan></w> <num value="11">ια</num> <w><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <persName type="attested" subtype="imperial"><name>Κου<unclear>σ</unclear><supplied reason="lost">ταντίου</supplied></name></persName> <w><supplied reason="lost">τὸ</supplied></w> <supplied reason="lost"><num value="2">β</num></supplied>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Korhonen 2004</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app><note>Text based on photograph and on Korhonen's edition</note></app>
+                    <app loc="line 1"><note>Agnello: ἔν[θαδε κῖτε]</note></app>
+                    <app loc="lines 1-2"><note>Agnello: δούλη [τοῦ Θεοῦ]; Ferrua: [Θεο-]|δούλη [ζήσασα ἔτη κ]; Korhonen: [Θεο-]|δούλη [---]; also ἡ δούλη τοῦ [θεοῦ] (short name) is possible, such as in IG 14.549 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001368">ISic001368</ref></note></app>
+                    <app loc="line 3"><note>Ferrua 1982-83: [γεννηθεῖσα]; Ferrua 1989: τελευτᾶι [γεννηθεῖσα]; Korhonen: τελευτο[ῦσα ἐτῶν ---· ἐγεννήθη]</note></app>
+                    <app loc="line 4"><note>Ferrua 1938, Agnello, Korhonen: μὲν τῆι ὑπ(ατείαι) [Ἀυρηλιανοῦ Αὐγ(ούστου) τὸ β καὶ Κλαυδί-]|ου Καπιτω[λείνου τῶν λαμπ(ροτάτων); Ferrua 1982-83, 1989: μὲν τῆι ὑπ[ατίαι Κεσαρί]ου κ. Ἀττικοῦ</note></app>
+                    <app loc="line 5"><note>Agnello: [ἀποθανοῦσα δὲ]; Ferrua 1989: [κυμιθῖσα δὲ]; Korhonen: ἐτελεύτησε (?) δὲ (ἐκοιμήθη δὲ is also possible)</note></app>
+                    <app loc="line 6"><note>Orsi: Νω[εμβρίων]; Ferrua 1989: τῆι πρ(ὸ) ς Νων[ῶν Μαείων]</note></app> 
+                    <app loc="lines 7-8"><note>Ferrua 1938: [με]τὰ τὴν ὑπα[τίαν Διοκλη]τια(νοῦ) κ. Κουσ[ταντίου τὸ β]; Agnello: [Διοκλη-]|τια(νοῦ) κ(αὶ) Κου[σταντίου; De Grassi (ap. Ferrua); Ferrua 1982-83, 1989, Korhonen: [με]τὰ τῆν ὑπα[τ. Ὁνωριου Αὐγ.] τὸ ια κ(αὶ) Κουσ[ταντίου τὸ β]</note></app>
+                </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>Here lies Theodoule, having died, after [?] years, born in the 2nd consulate of Aurelianus Augustus and Claudius Capitolinus of the most illustrious, but having died 6 days before...after the 11th consulate of Honorious Augustus and the 2nd of Constantius.</p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Here lies Theodoule ..., who died at the age of ... She was born in the second consulate of Aurelianus Augustus and Claudius Capitolinus, the illustrious. She died six days before the Nonae of ..., after the eleventh consulate of Honorius Augustus and the second of Costantius.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#martaf">
+                <p>Qui giace Theodule ..., che morì all’età di ... Nacque durante il secondo consolato di Aureliano Augusto e Claudio Capitolino, gli illustri. Morì sei giorni prima delle None di ..., dopo l’undicesimo consolato di Onorio Augusto e il secondo di Costanzo.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--doubly dated, with birth (397) and death (418), the oldest consular dated inscr. of Sicily; the name of the deceased does not survive; Korhonen has problems with the 397 AD date restoration, but accepts 418 for death and the inscr.--></p>
+                <p>The epitaph is extremely damaged, so the identification of the deceased is doubtful. According to Ferrua and Korhonen, the deceased is a woman named Theodoule, a frequent name in Christian inscriptions from Sicily and from Catania in particular (see also SEG 46.1261 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001423">ISic001423</ref> and Korhonen 2004: 80). Another possibility is to read at l. 2 <foreign xml:lang="grc">δούλη [τοῦ θ(εο)ῦ</foreign>, as Agnello did, and hypothesize a short name after the epithet as in IG 14.549 = <foreign xml:lang="grc">ISic001368</foreign>. <foreign xml:lang="grc">Δοῦλος / δούλη τοῦ Θεοῦ</foreign> is an epithet that frequently recurs in Christian inscriptions from Sicily, see e.g. ILipara 788 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic002833">ISic002833</ref> and ILipara 789 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic002876">ISic002876</ref>.</p>
+                <p>Another problem is raised by the presence of a double date, which is indeed not uncommon in Christian inscriptions, see IG 14.525 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000964">ISic000964</ref>. Ferrua in 1938 assumed a date of birth during the second consulate of Aurelian and Claudius Capitolinus (274 CE) and a date of death during the second consulate of Diocletianus and Constantius (297 CE). Thus, this would be the oldest dated inscription in Sicily. If the first supplement at ll. 4-5 is quite convincing (at l. 5 <foreign xml:lang="grc">Καπιτω</foreign> is certain), the last supplement is more dubious, because of the unusual abbreviation of the name <foreign xml:lang="grc">Διοκλη]τια(νοῦ)</foreign> and the omission of the number of his consulate. Furthermore, the consular date, not typical in the paleo-Christian inscriptions, and palaeography do not argue in favour of dating the inscription to the 3rd cent. CE. Therefore, Korhonen (whose text is adopted here) accepts the supplement at ll. 7-8 proposed by Ferrua himself later in 1982-83 and suggested to him already in 1938 by De Grassi, establishing the date of death of the deceased at the eleventh consulship of Honorius and the second of Constantius. However, the best supplement at ll. 4-5 still remains the one suggested by Ferrua in 1938, which sets the date of birth in 274 CE: the scholar, therefore, hypothesises an error by the stonecutter, who would have mistaken the date of birth of the deceased.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -253,7 +266,7 @@
                     <bibl>
                         <author>Ferrua</author>
                         <date>1989</date>
-                        <citedRange>no.415a</citedRange>
+                        <citedRange>109-110 no.415a</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
                     </bibl>
                 </listBibl>
