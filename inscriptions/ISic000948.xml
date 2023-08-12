@@ -54,18 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000948</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4340160</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <repository>Catacomb of Vigna Cassia</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -80,8 +78,9 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                <support><p>Text incised in the mortar used to close the sarcophagus.</p>
+                                    <material ana="#material.mortar" ref="https://www.eagle-network.eu/voc/material/lod/128">mortar</material>
+                                    <objectType ana="#object.funerary_monument" ref="http://www.eagle-network.eu/voc/objtyp/lod/230.html">tomb</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -91,8 +90,8 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                <layout>
+                                    <rs ana="#execution.incised" ref="https://www.eagle-network.eu/voc/writing/lod/14.html">incised</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -117,9 +116,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                             	<geo>37.08415, 15.27628</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0250" notAfter-custom="0400" cert="low" precision="low">3rd — 4th century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Crypta D. Ioannis</provenance>
+                        <provenance type="found" subtype="discovered">Catacomb of Vigna Cassia</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -174,6 +173,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-08-12" who="#JP">Jonathan Prag revised from Orsi 1893</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -189,27 +189,39 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <ab>
-                    <lb n="1"/>Καπιτο
+                    <lb n="1"/><persName type="attested"><name>Καπι
+                    <lb n="2" break="no"/>τω</name></persName>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#JP">
                 <listApp>
                     <app>
-                        <note>Text of IG</note>
+                        <note>Text of Orsi</note>
                     </app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Kapito</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Kapito (only)--></p>
+                <p>Orsi notes that Kaibel wrongly attributes this inscription to S. Giovanni, following Torremuzza</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1769</date>
+                        <citedRange>cl.17 no.68</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1784</date>
+                        <citedRange>cl.17 no.80</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0131</ref>
@@ -219,6 +231,12 @@
                     <bibl type="corpus" n="CIG">
                         <citedRange>4.9456d</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                    </bibl>
+                    <bibl type="bulletin" n="NSA">
+                        <author>Orsi</author>
+                        <date>1893</date>
+                        <citedRange>307 no. 115</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/V7HNHTAG"/>
                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
