@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001150</title>
+                <title>Funerary inscription to Olos Papios Agatharchos</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Edition on basis of autopsy and photographs</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,19 +58,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001150</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4351647</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.
                     </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">145</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,30 +83,38 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone
-                                        (grey)
+                                <support><p>Rectangular plaque of grey stone. Left and right edges square and complete. Top right corner broken. Large protrusion on rear face.</p>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone(grey)
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">37.5</height>
+                                        <width unit="cm">19</width>
+                                        <depth unit="cm">10 (to sharp edge, not including protrusion)</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Three lines of Greek text. Text is not aligned with centre of stone, with a more significant vacat on right side of the stone than the left. End of line 1 obscured by damaged top right corner.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Some serifs are used, particularly on the epsilons. Spacing, especially in line 1, is irregular. Teardrop shaped omega in line 1. All alphas have a broken mid-bar.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">25-29</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">26-30</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">24-29</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,10 +130,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                             	<geo>37.98365, 13.69555</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" precision="low">1st century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" precision="low">1st century CE</origDate> <!-- Date suggested by Brugnone -->
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown. While the piece is assumed to have come from Termini Imerese, the antiquarian tradition records the transport of the inscription to and from Rome. Korhonen (2001, 100) suggests that this narrative is incorrect.</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2022-07-06" resp="#AA">Antoniou, 2022-07-06. On display in Museo Civico Baldassare Romano</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -167,7 +177,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                    <change when="2020-10-05" who="#VM">Valentina Mignosa encoded text division</change>
@@ -177,6 +187,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-08-21" who="#AA">edition on basis of autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -192,24 +203,24 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/>Ὦλε<space quantity="1" unit="character"/>Πά<unclear>π</unclear><supplied reason="lost">ιε</supplied>
-                    <lb n="2"/>Ἀγάθαρχε
+                    <lb n="1"/><persName type="attested"><name>Ὦλε</name> <name>Πά<unclear>π</unclear><supplied reason="undefined" evidence="previouseditor">ιε</supplied></name>
+                    <lb n="2"/><name>Ἀγάθαρχε</name></persName>
                     <lb n="3"/>χαῖρε
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#AA">
                 <listApp>
-                    <app><note>Text of IGTermini</note></app>
+                    <app><note>Text from autopsy</note></app>
+                    <app loc="1"><note>The damage to the top right of line 1, might be reconstructed as pi, or tau (with a short crossbar) followed by another letter (perhaps iota). That the final two letters were iota and epsilon is recorded in IG as extant on the stone.</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>Olos Papios Agatharchos, farewell.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--To Olos Papios Agatharchos, viz. Olos, derived from Aulus, Papios 'the first inst. in an inscr. of Papius in Gr. form; Agatharchos a common Gr. name. 'La presenza dei tria nomina fa pensare che il defunto per cui l'epitafio e stato composto fosse un non-romano naturalizzato o un liberto.'--></p>
+            <div type="commentary" resp="#AA">
+                <p>The praenomen Olos, derived from the Latin Aulus, is attested elsewhere epigraphically (but not in Sicily). If the restoration is correct, Papios is the first epigraphic instance of the transcription of Papius into Greek. Agatharcos is a common Greek name. Korhonen notes that this inscription was never transported and sent back from Rome, as recorded in IG (with bibliography).</p>         
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
