@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001140</title>
+                <title>Fragmentary funerary inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Edition on basis of autopsy and photographs</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,21 +58,18 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001140</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4351621</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">19</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <!--NI140-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,30 +82,41 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">
-                                        marble (white)
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Fragment of a small white marble plaque. Original edges at top and bottom, but missing fragment to left, and bottom right. Rear is flat.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble (white)</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">16</height>
+                                        <width unit="cm">13</width>
+                                        <depth unit="cm">2.6</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Four lines of fragmentary Greek text.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Letters are very thin, and chiselling is rough and uneven. Letters are unevenly spaced. Small serifs on letters. Use of cursive omega; line 2 xi in plaster cast has a mid-line which slopes upwards; upsilon in lines 2 and 4 are shaped like a lower-case alphabetic 'Y'.</p> <!--> Autopsied letter heights only from surviving fragment <-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">24</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">17-27</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">20-31</height>
+                                </dimensions>
+                                <locus from="line4" to="line4">Line 4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">24-27</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -122,9 +134,9 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" precision="low">4th century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1879">Reportedly found in 1879 'one hundred meters from the city walls' of Termini Imerese, in 'the house of Mr. Sinibaldi Oddo'. It was placed 'above a brick-covered tomb'. (Brugnone 1974, quoting Fiorelli).</provenance>
                         <provenance type="found">only part preserved, with cast of rest</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2022-07-13" resp="#AA">Antoniou, 2022-07-13. Brugnone (1974) saw in the Museo Civico Baldassare Romano both the original fragment, and a plaster cast of the whole. Remaining in the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 1, shelf 4, is now only the original fragment.</provenance>
                         <acquisition/>
                     </history>
                     
@@ -169,7 +181,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                    <change when="2020-10-05" who="#VM">Valentina Mignosa encoded text division</change>
@@ -179,6 +191,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-09-07" who="#AA">edition on basis of autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -210,9 +223,9 @@
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Make no sense; B wonders whether it's a mason's exercise, on model of layout of a funerary inscr., or apprentice's practice, with supporting bibliography. Punic??? Header, on format of D.M. or Th.K. is A.P. ?!--></p>
+            <div type="commentary" resp="#AA">
+                <p>Brugnone (1974) notes that the vague details of discovery are insufficient to establish whether the this tombstone was related to the tomb near which it was found, or whether it was re-used. The text itself makes no sense. Brugnone (1974) wonders whether the text is intended to call to mind a funerary inscription with the dedication Th. K., and with an indication of the age of the deceased at the end. Brugnone posits that this text was a mason's exercise or the work of an apprentice.</p>
+                    <!-- Punic???-->
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
