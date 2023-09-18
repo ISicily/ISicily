@@ -7,9 +7,13 @@
             <titleStmt>
                 <title>I.Sicily inscription 002816</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
+                <principal ref="#KMcD">Katherine McDonald</principal>
                 <funder>John Fell OUP Research Fund</funder>
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="KMcD" ref="http://orcid.org/0000-0002-0721-3303">Katherine McDonald</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -50,18 +54,19 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002816</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387441</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.
                     </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Messina</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina</repository>
+                        <idno type="inventory">Accascina 239</idno>
+                        <idno type="inventory">Accascina 241</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -70,13 +75,14 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="xx">Oscan</textLang>
+                        <textLang mainLang="osc">Oscan</textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>One of two limestone blocks (the other lost), this the right hand block, subsequently sawn into two halves horizontally, for re-use as a doorstep. Upper half (inv. 239) H 34cm x W 79 cm x D 16-17 cm; Lower half (inv. 241) H 35 cm x W 94 cm x D 19 cm.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">Block</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -86,17 +92,17 @@
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>The inscription originally consisted of five lines of text, inscribed on two blocks set side by side. The left-hand block has been lost, and the right-hand block has been sawn horizontally into two pieces. There is a large vacat to the right-hand side of each of the five lines, and a vacat above the first line. </p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>The inscription is written in the adapted Ionic Greek alphabet which was usually employed to write Oscan in Lucania and Bruttium from around the fourth to the first centuries BC. Letters are cut in deep square channels.</p>
+                                <locus from="line1" to="line5">Line 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80-110</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -114,21 +120,11 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0200" precision="low">3rd century BCE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1658">The left-hand block was seen and recorded in 1658, in a ruined octagonal tower belonging to the College of Jesuits, which was being torn down for building work. The surviving right-hand block of the inscription was found shortly before 1815, cut into two pieces and being used as a doorstep.</provenance>
+                        <provenance type="observed" subtype="autopsied">2014-09-20 McDonald</provenance>
                         <acquisition/>
                     </history>
-                    <msPart xml:id="frA">
-                        <msIdentifier>
-                            <idno type="inventory">239</idno>
-                        </msIdentifier>
-                    </msPart>
-                    <msPart xml:id="frB">
-                        <msIdentifier>
-                            <idno type="inventory">241</idno>
-                        </msIdentifier>
-                    </msPart>
-                </msDesc>
+                    </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
@@ -169,7 +165,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -177,6 +173,7 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-09-18" who="#JP">Jonathan Prag incorporated edits of Katherine McDonald</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -192,18 +189,34 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" xml:space="preserve" xml:lang="osc-Grek" resp="#KMcD">
+                <ab>
+               <lb n="1"/><persName type="attested"><name><supplied reason="undefined" evidence="parallel">στενις</supplied></name> <name><supplied reason="undefined" evidence="parallel">καλινις</supplied></name> <persName type="attested"><name type="patronym"><supplied reason="undefined" evidence="parallel">σ</supplied>ταττιηις</name></persName></persName>
+               <lb n="2"/><persName type="attested"><name><supplied reason="undefined" evidence="parallel">μαρασ</supplied></name> <name><supplied reason="undefined" evidence="parallel">πομπτιες</supplied></name> <persName type="attested"><name type="patronym">νιυμσδιηις</name></persName></persName>
+               <lb n="3"/><supplied reason="undefined" evidence="parallel">μεδδειξ</supplied> <supplied reason="undefined" evidence="parallel">ο</supplied><unclear>υ</unclear><supplied reason="undefined" evidence="parallel">π</supplied><unclear>σ</unclear>ενς
+               <lb n="4"/><supplied reason="undefined" evidence="parallel">εινειμ</supplied> <supplied reason="undefined" evidence="parallel">τωϝτo</supplied> <placeName type="ethnic"><unclear>μ</unclear>αμερτινο</placeName>
+               <lb n="5"/><persName type="divine"><name><supplied reason="undefined" evidence="parallel">αππελλο</supplied><unclear>υ</unclear>νηι</name></persName> σακορο
+                </ab>
             </div>
-            <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+            <div type="apparatus" resp="#KMcD">
+                <listApp>
+                    <app><note>The left-hand side was partially recorded in the C17th, but can be confirmed using the parallel copy <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001620">ISic001620</ref>.</note></app>
+                    <app loc="3"><note>upright hasta of upsilon just visible; bottom stroke of sigma visible</note></app>
+                    <app loc="4"><note>Right-hand hasta of mu visible</note></app>
+                    <app loc="5"><note>Tip of right-hand hasta of upsilon visible</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#KMcD">
+                <p>SStenis Kalinis (son) of Stattis (and) Maras Pompiis (son) of Niumdis, meddices, and the Mamertine people built (this). Sacred to Apollo.</p>
+                <p>[Latinised] Stenius Calinius (son) of Stattius (and) Maras Pompius (son) of Niumidius, meddices, and the Mamertine people built (this). Sacred to Apollo.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Two frags., from the right hand side of an inscription which is v. similar to, but not the same as, Ve. 196 (=Parlangeli 1.A). The left hand side is now lost, but survives in a transcript MS copy by Reina of 1658. There is quite possibly a third (now lost) stone containing another v. similar inscr. again, a ded. to Apollo, by the same two meddices, but it is possible that that is merely another report of Ve.196/ Parlangeli A (but P considers it distinct, numbering it C). Photos of this in Parlangeli 1956 ?only?--></p>
+            <div type="commentary" resp="#KMcD">
+                <p>The original inscription was on two limestone blocks, set side by side. The left-hand block is lost, and the right-hand block has been sawn horizontally into two halves. The left-hand block was seen and recorded in 1658, in a ruined octagonal tower belonging to the College of Jesuits, which was being torn down for building work. The surviving right-hand block of the inscription was found shortly before 1815, cut into two pieces and being used as a doorstep.</p>
+                <p> There is a parallel copy of this inscription (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001620">ISic001620</ref>). The other copy survives in more complete condition, though it too shows damage. The text of ISic002816 therefore needs to be restored partly from a seventeeth-century record of the text, and partly from comparsion with ISic001620. Crawford (2011) states that the two inscriptions the two copies were ‘probably from a wall, perhaps either side of a gate’. Rix (2002) indicates a third copy of this text, Me 3, but this third inscription does not exist: the text of Rix’s Me 3 has its origins in a faulty recording of ISic 1620.</p>
+                <p> The names are written in the normal Oscan style, with a praenomen and nomen, plus the genitive of the father’s praenomen (without a word for ‘son’). Cf. the syntax of <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001623">ISic001623</ref>.</p>
+                <p> The spelling of <foreign xml:lang="osc-Grek">ουπσενς</foreign> (which does not use psi) may be indicative of orthographic differences between Oscan at Messana and Oscan written in the Greek alphabet in Lucania and Bruttium. (McDonald 2015: 91). The spelling νιυ- (rather than νυ-, as ususually found in Lucania and Bruttium) in the personal name <foreign xml:lang="osc-Grek">νιυμδιηις</foreign> may also show different orthographic practices at Messina, and may show influence from spelling norms in Oscan alphabet used in Campania and Samnium (Zair 2016 138-9). Cf. ISic 1621.</p>
+                <p> The Greek god name Apollo is borrowed into Oscan as <foreign xml:lang="osc-Grek">αππελλουνηι</foreign>, as elsewhere in Oscan – cf. <foreign xml:lang="osc-Latn">appelluneís</foreign> at Pompeii. This indicates a borrowing of the Doric form <foreign xml:lang="grc">Απελλων</foreign> rather than the Ionic <foreign xml:lang="grc">Απολλων</foreign>.
+                </p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -214,6 +227,24 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/2BHFHCRR"/>
                     </bibl>
                     <bibl>
+                        <author>Crawford</author>
+                        <date>2006</date>
+                        <citedRange>521-525 figs. 258-259</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/G82KT6YE"/>
+                    </bibl>
+                    <bibl>
+                        <author>Vetter</author>
+                        <date>1953</date>
+                        <citedRange>no. 196</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/6C5ZKCF2"/>
+                    </bibl>
+                    <bibl>
+                        <author>Morandi</author>
+                        <date>1982</date>
+                        <citedRange>141</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5U63BQIP"/>
+                    </bibl>
+                    <bibl>
                         <author>Parlangèli</author>
                         <date>1956</date>
                         <citedRange>no.1.B</citedRange>
@@ -222,10 +253,30 @@
                     <bibl>
                         <author>Orioles</author>
                         <date>1992</date>
+                        <citedRange>331-345</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GGJG3JCZ"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Clackson</author>
+	           <date>2012</date>
+	           <citedRange>138-141</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/3R4Q36I8"/>
+	       </bibl>
+	       <bibl>
+	           <author>McDonald</author>
+	           <date>2015</date>
+	           <citedRange>91</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/2RCYDL7W"/>
+	       </bibl>
+	       <bibl>
+	           <author>Zair</author>
+	           <date>2016</date>
+	           <citedRange>138-139</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/HR3I2FMB"/>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>
