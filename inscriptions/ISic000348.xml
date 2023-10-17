@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -55,9 +55,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000348</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4335155</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -75,7 +73,7 @@
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
-                        <textLang mainLang="la" otherLangs="grc">Latin and Ancient Greek</textLang>
+                        <textLang mainLang="la" otherLangs="grc" ana="#bilingualism.biversion.duplicating">Latin and Ancient Greek</textLang>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -94,6 +92,7 @@
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <rs ana="#execution.rubrication.red">Rubrication, red coloured</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
@@ -126,7 +125,6 @@
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -180,33 +178,52 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-09-24" who="#JP">Jonathan Prag added pilot bilingualism annotation and images</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic000348_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            <graphic n="screen" url="ISic000348_tiled.tif" height="2856px" width="4272px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo by students of Liceo Lazzaro</desc>
             </graphic>
-            <graphic n="print" url="ISic000348.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            <graphic n="print" url="ISic000348.jpg" height="2856px" width="4272px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo by students of Liceo Lazzaro</desc>
+            </graphic>
+            <graphic n="screen" url="ISic000348_copy2_tiled.tif" height="2856px" width="4272px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo by students of Liceo Lazzaro</desc>
+            </graphic>
+            <graphic n="print" url="ISic000348_copy2.jpg" height="2856px" width="4272px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo by students of Liceo Lazzaro</desc>
             </graphic>
          </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic000348_rear_tiled.tif" height="2856px" width="4272px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo by students of Liceo Lazzaro</desc>
+            </graphic>
+            <graphic n="print" url="ISic000348_rear.jpg" height="2856px" width="4272px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo by students of Liceo Lazzaro</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" resp="#JP">
-                <ab xml:lang="la">
-                    <lb n="1"/><expan><abbr>Q</abbr><ex>uinte</ex></expan> Domitei <g ref="#interpunct">·</g> pei<unclear>e</unclear>
+                <div type="textpart" subtype="section" n="a" xml:lang="la">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name><expan><abbr>Q</abbr><ex>uinte</ex></expan></name> <name>Domitei</name></persName> <g ref="#interpunct">·</g> pei<unclear>e</unclear>
                     <lb n="2"/>salve
                 </ab>
-                <ab xml:lang="grc">
-                    <lb n="3"/>Κόϊντε <g ref="#interpunct">·</g> Δομίτιε
+            </div>
+            <div type="textpart" subtype="section" n="b" xml:lang="grc">
+                <ab>
+                    <lb n="3"/><persName type="attested"><name>Κόϊντε</name> <g ref="#interpunct">·</g> <name>Δομίτιε</name></persName>
                     <lb n="4"/>εὐσεβῆ <g ref="#interpunct">·</g> χαῖ<space quantity="1" unit="character"/>ρε
                 </ab>
             </div>
+            </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Text from autopsy</note></app></listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Quintus Domitius, pious, farewell!
@@ -232,29 +249,29 @@
                     <bibl type="corpus" n="CIG">
                         <citedRange>3.5705</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0472</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7064</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>49 n.243</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                     <bibl type="corpus" n="IMusCatania">
                         <citedRange>74</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
