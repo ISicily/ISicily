@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -43,26 +43,24 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic002942</idno>
                 <idno type="TM">644851</idno>
-                <idno type="EDR"/>
+                <idno type="EDR">136603</idno>
                 <idno type="EDH"/>
                 <idno type="EDCS">70900016</idno>
                 <idno type="PHI">332185</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002942</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387771</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Segesta</settlement>
-                        <repository role="museum">exacavation stores</repository>
-                        <idno type="inventory">SG2003</idno>
+                        <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/196">Parco archeologico di Segesta</repository>
+                        <idno type="inventory">SG2003, IG2620</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -76,29 +74,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Fragment of a block with cornice, broken on the lower side, left and right. Nenci suggested a funerary stele, but the traces on the upper surface suggest rather a base.</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html" cert="low">base</objectType>
+                                    <dimensions><!--ISEgesta-->
+                                        <height unit="cm">20</height>
+                                        <width unit="cm">25</width>
+                                        <depth unit="cm">25</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Remains of a single line of Greek letters below the moulding.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p></p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">19-21</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -114,9 +112,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0200" precision="low">3rd century BCE (Nenci)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0200" cert="low" evidence="lettering">3rd century BCE (?)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Original discovery not recorded; previously noted in storage at Marsala, now in Casa Barbaro store.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -161,7 +159,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-09-23" who="#JP">Jonathan Prag added ISegesta ref</change>
@@ -171,6 +169,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-10-02" who="#JP">Jonathan Prag revised from publication</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -186,55 +185,53 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI332185">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">Τιττ</supplied>έλου ἀγ
-                    <supplied reason="lost">ορανόμου</supplied>
-                    <surplus>²⁷Ἁγη̣[σίππου] (vel sim., Lazzarini)</surplus>²⁷.
-                    <lb n="2"/>
-                </ab>
+                    <lb n="1"/><gap reason="illegible" unit="character" quantity="1"/><unclear>π</unclear>πελου ἀγ<unclear>ο</unclear><gap reason="lost" extent="unknown" unit="character"/>
+                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text of I.Segesta G26</note></app>
+                    <app loc="1"><note>Nenci: [Τιττ]ελου ἀγ[ορανόμου]</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--small tympanon funerary cippus, with inscr. on lower section. The name Tittelos is known as a hieromnamon from IG 14.291; Lazzarini suggests instead a patronymic for the second word, e.g. Agesippou, vel sim.--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>41.0829</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Nenci</author>
                         <date>1991</date>
                         <citedRange>927 no.4 tav.300.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ERHMXBDJ"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001413">https://biblio.inscriptiones.org/epig10001413</ref></bibl>
                     <bibl>
                         <author>De Vido</author>
                         <date>1991</date>
                         <citedRange>974</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/KMKJH2E8"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001409">https://biblio.inscriptiones.org/epig10001409</ref></bibl>
                     <bibl>
                         <author>De Vido</author>
                         <date>2003</date>
                         <citedRange>399 no.10</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/33HPA43I"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10002041">https://biblio.inscriptiones.org/epig10002041</ref></bibl>
                     <bibl>
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>G26</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
