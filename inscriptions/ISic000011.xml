@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -54,19 +54,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000011</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333759</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico
-                            Regionale Antonino Salinas</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
                         <idno type="inventory">3511</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -83,26 +80,43 @@
                             <supportDesc>
                                 <support>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--ILPal-->
+                                        <height unit="cm">94</height>
+                                        <width unit="cm">59</width>
+                                        <depth unit="cm">10</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILPal-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">75</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">70</height>
+                                </dimensions>
+                                <locus from="line3" to="line5">Line 3-5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">55</height>
+                                </dimensions>
+                                <locus from="line6" to="line6">Line 6</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">45</height>
+                                </dimensions>
+                                <locus from="line7" to="line8">Line 7-8</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -180,10 +194,10 @@
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic000011_tiled.tif" height="3680px" width="5520px">
+            <graphic n="screen" url="ISic000011_tiled.tif" height="3090px" width="2788px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-            <graphic n="print" url="ISic000011.jpg" height="3680px" width="5520px">
+            <graphic n="print" url="ISic000011.jpg" height="3090px" width="2788px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
@@ -192,14 +206,14 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1"/><persName type="attested" subtype="imperial"><roleName><w><supplied reason="lost"><expan><abbr>Imp</abbr><ex>eratori</ex></expan></supplied></w></roleName> <g ref="#interpunct">·</g> <roleName><name><expan><abbr>Caes</abbr><ex>ari</ex></expan></name></roleName> <g ref="#interpunct">·</g> <name type="praenomen"><expan><abbr>M</abbr><ex>arco</ex></expan></name>
+                    <lb n="1"/><persName type="attested" subtype="imperial"><roleName type="supracivic" subtype="imperator"><w><supplied reason="lost"><expan><abbr>Imp</abbr><ex>eratori</ex></expan></supplied></w></roleName> <g ref="#interpunct">·</g> <roleName><name><expan><abbr>Caes</abbr><ex>ari</ex></expan></name></roleName> <g ref="#interpunct">·</g> <name type="praenomen"><expan><abbr>M</abbr><ex>arco</ex></expan></name>
                     <lb n="2"/><name type="nomen"><supplied reason="lost">A</supplied><unclear>u</unclear>relio</name> <g ref="#interpunct">·</g> <name type="cognomen">An<hi rend="superscript">t</hi>o
                     <lb n="3" break="no"/><supplied reason="lost">n</supplied>ino</name> <g ref="#interpunct">·</g> <name type="supernomen"><expan><abbr>Aug</abbr><ex>usto</ex></expan></name> <g ref="#interpunct">·</g> <persName type="attested" subtype="imperial"><w>divi</w>
                     <lb n="4"/><name type="patronym"><supplied reason="lost">A</supplied>ntonin<hi rend="superscript">i</hi></name> <g ref="#interpunct">·</g> <w><expan><abbr>f</abbr><ex>ilio</ex></expan></w></persName> <g ref="#interpunct">·</g> <persName type="attested" subtype="imperial"><w>divi</w> <g ref="#interpunct">·</g> <name type="papponym">Hadri<supplied reason="omitted">ani</supplied></name>
                     <lb n="5"/><w><expan><abbr><supplied reason="lost">n</supplied>ep</abbr><ex>oti</ex></expan></w></persName> <g ref="#interpunct">·</g> <persName type="attested" subtype="imperial"><w>divi</w> <g ref="#interpunct">·</g> <name type="papponym">Traiani</name> <g ref="#interpunct">·</g> <name type="papponym"><expan><abbr>Parth</abbr><ex>ici</ex></expan></name>
                     <lb n="6"/><w><supplied reason="lost">pr</supplied>onepoti</w></persName> <g ref="#interpunct">·</g> <persName type="attested" subtype="imperial"><w>divi</w> <g ref="#interpunct">·</g> <name type="papponym">Nervae</name>
-                    <lb n="7"/><w><expan><abbr><supplied reason="lost">a</supplied>bnep</abbr><ex>oti</ex></expan></w></persName></persName> <g ref="#interpunct">·</g> <roleName><w><expan><abbr>pont</abbr><ex>ifici</ex></expan></w></roleName> <g ref="#interpunct">·</g> <roleName><w><expan><abbr>max</abbr><ex>imo</ex></expan></w></roleName> <g ref="#interpunct">·</g> <w><expan><abbr>trib</abbr><ex>unicia</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>p</abbr><ex>otestate</ex></expan></w> <g ref="#interpunct">·</g> <num value="17">XVII</num>
-                    <lb n="8"/><roleName><w><expan><abbr><supplied reason="lost">c</supplied>o</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></w></roleName> <g ref="#interpunct">·</g> <num value="3"><hi rend="supraline">III</hi></num> <g ref="#interpunct">·</g> <w><expan><abbr>r</abbr><ex>es</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>p</abbr><ex>ublica</ex></expan></w> <g ref="#interpunct">·</g> <placeName type="ethnic"><expan><abbr>Panhormit</abbr><ex>anorum</ex></expan></placeName>
+                    <lb n="7"/><w><expan><abbr><supplied reason="lost">a</supplied>bnep</abbr><ex>oti</ex></expan></w></persName></persName> <g ref="#interpunct">·</g> <roleName type="supracivic.religious" subtype="pontifex.maximus"><w><expan><abbr>pont</abbr><ex>ifici</ex></expan></w><g ref="#interpunct">·</g><w><expan><abbr>max</abbr><ex>imo</ex></expan></w></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="tribunicia.potestas"><w><expan><abbr>trib</abbr><ex>unicia</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>p</abbr><ex>otestate</ex></expan></w></roleName> <g ref="#interpunct">·</g> <num value="17">XVII</num>
+                    <lb n="8"/><roleName type="supracivic" subtype="consul"><w><expan><abbr><supplied reason="lost">c</supplied>o</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></w></roleName> <g ref="#interpunct">·</g> <num value="3"><hi rend="supraline">III</hi></num> <g ref="#interpunct">·</g> <w><expan><abbr>r</abbr><ex>es</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>p</abbr><ex>ublica</ex></expan></w> <g ref="#interpunct">·</g> <placeName type="ethnic"><expan><abbr>Panhormit</abbr><ex>anorum</ex></expan></placeName>
                 </ab>
             </div>
             <div type="apparatus">
@@ -223,11 +237,11 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650787">10.7270</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="ILMusPalermo">
                         <citedRange>11</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
                     <bibl/>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>

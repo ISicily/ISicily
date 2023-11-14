@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -54,9 +54,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000013</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333767</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -65,8 +63,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico
-                            Regionale Antonino Salinas</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
                         <idno type="inventory">3513</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -83,11 +80,11 @@
                             <supportDesc>
                                 <support>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--ILPal-->
+                                        <height unit="cm">84.5</height>
+                                        <width unit="cm">72.5</width>
+                                        <depth unit="cm">5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -100,10 +97,22 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILPal-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80</height>
+                                </dimensions>
+                                <locus from="line2" to="line8">Line 2-8</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">40-45</height>
+                                </dimensions>
+                                <locus from="line9" to="line9">Line 9</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">35</height>
+                                </dimensions>
+                                <locus from="line10" to="line10">Line 10</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -119,7 +128,7 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
                             	<geo>38.13205, 13.33561</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" when-custom="0195">Summer 195 CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0195" notAfter-custom="0196" >Summer 195 CE</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
@@ -182,26 +191,26 @@
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic000013_tiled.tif" height="3680px" width="5520px">
+            <graphic n="screen" url="ISic000013_tiled.tif" height="3264px" width="2448px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-            <graphic n="print" url="ISic000013.jpg" height="3680px" width="5520px">
+            <graphic n="print" url="ISic000013.jpg" height="3264px" width="2448px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
                     <lb n="1"/>Iuliae <g ref="#ivy-leaf"/> <expan><abbr>Aug</abbr><ex>ustae</ex></expan>
-                    <lb n="2"/><expan><abbr>Imp</abbr><ex>eratoris</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>Caes</abbr><ex>aris</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>L</abbr><ex>uci</ex></expan> Septi
+                    <lb n="2"/><roleName type="supracivic" subtype="imperator"><expan><abbr>Imp</abbr><ex>eratoris</ex></expan></roleName> <g ref="#interpunct">·</g> <expan><abbr>Caes</abbr><ex>aris</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>L</abbr><ex>uci</ex></expan> Septi
                     <lb n="3" break="no"/>mi <g ref="#interpunct">·</g> Severi <g ref="#interpunct">·</g> Pertina
                     <lb n="4" break="no"/>cis <g ref="#interpunct">·</g> <expan><abbr>Aug</abbr><ex>usti</ex></expan> <g ref="#interpunct">·</g> Pii <g ref="#interpunct">·</g> Parthi
                     <lb n="5" break="no"/>ci <g ref="#interpunct">·</g> Arabici <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> Par
                     <lb n="6" break="no"/>thici <g ref="#interpunct">·</g> Adiabeni
-                    <lb n="7" break="no"/>ci <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>ontificis</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>m</abbr><ex>aximi</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>tr</abbr><ex>ibunicia</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>pot</abbr><ex>estate</ex></expan> <g ref="#interpunct">·</g> <num value="3"><hi rend="supraline">III</hi></num>
-                    <lb n="8"/><expan><abbr>imp</abbr><ex>eratoris</ex></expan> <g ref="#interpunct">·</g> <num value="5"><hi rend="supraline">V</hi></num> <g ref="#interpunct">·</g> <expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulis</ex></expan> <g ref="#interpunct">·</g> <num value="2"><hi rend="supraline">II</hi></num> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>atris</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>atriae</ex></expan>
+                    <lb n="7" break="no"/>ci <g ref="#interpunct">·</g> <roleName type="supracivic.religious" subtype="pontifex.maximus"><expan><abbr>p</abbr><ex>ontificis</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>m</abbr><ex>aximi</ex></expan></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="tribunicia.potestas"><expan><abbr>tr</abbr><ex>ibunicia</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>pot</abbr><ex>estate</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="3"><hi rend="supraline">III</hi></num>
+                    <lb n="8"/><roleName type="supracivic" subtype="imperator"><expan><abbr>imp</abbr><ex>eratoris</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="5"><hi rend="supraline">V</hi></num> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="consul"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulis</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="2"><hi rend="supraline">II</hi></num> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="pater.patriae"><expan><abbr>p</abbr><ex>atris</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>atriae</ex></expan></roleName>
                     <lb n="9"/>res <g ref="#interpunct">·</g> <expan><abbr>publ</abbr><ex>ica</ex></expan> <g ref="#interpunct">·</g> Panhormi
                     <lb break="no" n="10"/>tanorum <g ref="#palm"/>
                 </ab>
@@ -214,7 +223,7 @@
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#TA">
-                <p>To Julia Augusta, (wife) of Emperor Caesar Lucius Septimius Severus Pertinax Augustus Pius, victor in Parthia, Arabia and Parthia Adiabene, <hi rend="italic">pontifex maximus</hi>, holding tribunician power for the third time, <hi rend="italic">imperator</hi> for the fifth, consul for the second, Father of Fatherland. (Erected by) the citizens of Panhormus.</p>
+                <p>To Julia Augusta, (wife) of Emperor Caesar Lucius Septimius Severus Pertinax Augustus Pius, victor in Parthia, Arabia and Parthia Adiabene, pontifex maximus, holding tribunician power for the third time, imperator for the fifth, consul for the second, Father of Fatherland. (Erected by) the citizens of Panhormus.</p>
             </div>
             <div type="commentary">
                 <p><!--commented out pending revision-->
@@ -227,11 +236,11 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650788">10.7272</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="ILMusPalermo">
                         <citedRange>13</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
-                    </bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
                     <bibl/>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
