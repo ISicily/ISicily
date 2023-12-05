@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000198</title>
+                <title>Funerary Epitaph for Maevia Faustin[---]</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,21 +58,18 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000198</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334518</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">94</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <!--Red 15 on front of larger fragment-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,28 +82,45 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Two fragments of whiteish marble, break roughly halfway down plaque, that join together. The larger fragment has two original edges on top and left. All other sides broken. Back of both fragments is flat.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">Fragment A: 19, Fragment B: 10.5</height>
+                                        <width unit="cm">Fragment A: 18, Fragment B: 8</width>
+                                        <depth unit="cm">4.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Five lines of fragmentary Latin text. Lacuna on right is approximately 1 character.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Letters are wide and well-defined. Pronounced serifs on all letters. Cross-bar on 'As' in lines 3-4 are short. Hederae used in lines 1 and 4. The hedera in line 1 is large (the size of the other characters) and in outline only. The hederae in line 4 are small. Most letters are straight, except line three where they slope to the right.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">26-29</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">26</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">26-31</height>
+                                </dimensions>
+                                <locus from="line4" to="line4">Line 4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">25-27</height>
+                                </dimensions>
+                                <locus from="line5" to="line5">Line 5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">28</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,8 +138,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1879">The larger fragment was discovered in 1879 in the ruins of the castle. It is unknown where and when the smaller fragment was found, but it is assumed to be in Termini Imerese</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-04" resp="#AA">Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 7, shelf 3.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -165,7 +183,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -175,6 +193,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-12-05" who="#AA">edition on basis of autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,27 +209,26 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="EDR" n="EDR127470" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
                     <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <g ref="#ivy-leaf"/> <supplied reason="lost"><expan><abbr>M</abbr><ex>anibus</ex></expan></supplied>
-                    <lb n="2"/>Mevi<unclear>a</unclear><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/>Fausti<unclear>n</unclear><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="4"/><expan><abbr>v</abbr><ex>ixit</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>a</abbr><ex>nnis</ex></expan> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><num value="20">XX</num><gap reason="lost" extent="unknown" unit="character"/>   
+                    <lb n="2"/><persName type="attested"><name>Mevi<unclear>a</unclear></name><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><name>Fausti<unclear>n</unclear></name></persName><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="4"/><g ref="#ivy-leaf"/> <expan><abbr>v</abbr><ex>ixit</ex></expan> <g ref="#ivy-leaf"/> <expan><abbr>a</abbr><ex>nnis</ex></expan> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><num atLeast="21" atMost="29">XXI</num><gap reason="lost" extent="unknown" unit="character"/>   
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini and photograph</note></app>
-                    <app><note>triangle-shaped interpunct</note></app>
+                    <app><note>Text after autopsy</note></app>
+                    <app loc="4"><note>Bivona (1994) records a triangular interpunct at the beginning of line 4. Autopsy reveals it is a hedera, comparable (although higher on the line) with the hedera later in the same line.</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>To the shades of the underworld. Mevia Faustin[---], lived for 21(?) years.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--D [M] Mevia- - Faustin- - ... - 'could' be a woman, Mevia Faustina; cf. IG XIV 348 - IGLPa 119 for a Gr. version of the name; instances in Verrines of Maevius and in epig. of Sic.; CIL only has the main fr; inscr. incl's a second small fr.;--></p>
+            <div type="commentary" resp="#AA">
+                <p>Despite the lacuna on the right, it is likely that the epitaph is for a woman, Mevia Faustina. The gens Mevia is well-attested in Thermae Himeraeae, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000119">ISic000119</ref> and elsewhere in Sicily, notably at Tauromenium <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000282">ISic000282</ref>, Halaesa <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000767">ISic000767</ref> and Lilybaeum <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000625">ISic000625</ref>. Cicero also attests to Maeviae in Sicily, notably a Maevius, the scribe of Verres, who is named at Cic. Verr. 2.3.175). There is a Greek version of the name (Μηβία) also attested at Thermae Himeraeae, <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001168">ISic001168</ref>.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
