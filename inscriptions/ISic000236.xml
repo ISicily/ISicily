@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000236</title>
+                <title>Funerary inscription for Marcus Voluscius Felix</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Edition on basis of autopsy and photographs</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,21 +58,18 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000236</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334678</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <!--Red 37 on front, inv. number illegible on tope edge. -->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,28 +82,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Grey-stone marble plaque, sides rough but not broken. Rear is flat. Front surface is smooth and polished. Modern red paint on sides.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">31</height>
+                                        <width unit="cm">36.5</width>
+                                        <depth unit="cm">8.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Two lines of Latin text, not centred on stone. Three different interpuncts used: L1 triangular, L2 comma and dash.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Text is straight and well-carved. Serifs used on most letters, pronounced tails on most letters. Letters are not evenly spaced. Cs are distinctive in shape, with a high rounded bulge. Whilst Bivona (1994) attested that the text is included within guidelines, no traces of these were apparent on the stone in autopsy.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">59-63</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">48-52</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,8 +126,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown, but the piece is assumed to come from Termini Imerese</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-04" resp="#AA">Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 4, shelf 3.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -165,7 +171,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -175,6 +181,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2023-10-24" who="#AA">edition on basis of autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,23 +197,22 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/><expan><abbr>M</abbr><ex>arco</ex></expan> <g ref="#interpunct">·</g> Voluscio
-                    <lb n="2"/><expan><abbr>M</abbr><ex>arci</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilio</ex></expan> <g ref="#interpunct">·</g> Felici
+                    <lb n="1"/><persName type="attested"><name><expan><abbr>M</abbr><ex>arco</ex></expan></name> <g ref="#interpunct">·</g> <name>Voluscio</name>
+                    <lb n="2"/><persName><name type="patronym"><expan><abbr>M</abbr><ex>arci</ex></expan></name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>f</abbr><ex>ilio</ex></expan></w> <g ref="#interpunct">·</g> <name>Felici</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini and photograph</note></app>
+                    <app><note>Text after autopsy</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>To Marcus Voluscius Felix, son of Marcus.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--M.Volucius M.f.Felix - gens Voluscia is v. rare, and in this form in 2 other inscr. only (CIL VI.29511 and X.5150).--></p>
+            <div type="commentary" resp="#AA">
+                <p>The gens Voluscius is rare across the empire, found only in Italy (CIL 10.5150), Rome, (CIL 6.29511), Spain (Olisipo 14), and Sardinia (AE 2003, 805). A tribune of the plebs by the name of M. Volscius Fictor is also recorded by Livy (3.13.1) and Dionysius of Halicarnassus (Ant. Rom. 10.7.1).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

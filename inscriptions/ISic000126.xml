@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000126</title>
+                <title>Funerary epitaph for P. Alfesius Salvus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -65,7 +69,7 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">105</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <!--Black 7PP on top. Red 16 on face.-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -78,28 +82,41 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Rectangular grey plaque, very well squared, all sides original. Rear is flat. Traces of modern red paint. There is a thin horizontal crack in the upper part of the stone.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">23.5</height>
+                                        <width unit="cm">28.5</width>
+                                        <depth unit="cm">8.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><p>Four lines of Latin text. First two lines are roughly centred, but final two are right-aligned on stone leaving a large vacat on left. Triangular interpuncts of different shapes: lines 1-2, interpuncts are outlines only, line 4, interpuncts are hollowed out.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Carving of letters is rough, getting rougher and more inconsistent. Text is angular and haphazard, more pronounced in line 4. Letter heights and depths are inconsistent. Use of serifs and the apex on the 'A' in line 4 is particularly pronounced.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">29-33</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">26-32</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">42-47</height>
+                                </dimensions>
+                                <locus from="line4" to="line4">Line 4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">40-42</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -115,10 +132,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                             	<geo>37.98365, 13.69555</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="-0001">Bivona: 'L'iscrizione, per le caratteristiche paleografiche, sembra attribuibile al I sec. a.C.'</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0050" evidence="lettering">Bivona attributed to C1 BCE on palaeographic grounds, but it could also be slightly later</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">Found in Termini Imerese outside the porta di Caccamo (Porta di Girgenti), in a burial ground.</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-05" resp="#AA">Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 6.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -162,7 +179,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-02-08" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus and translation</change>
@@ -173,6 +190,7 @@
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-23" who="#JP">Jonathan Prag added image</change>
+                <change when="2023-12-05" who="#AA">edition on basis of autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -196,24 +214,24 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
-                    <lb n="1"/><expan><abbr>P</abbr><ex>ubli</ex></expan> <g ref="#interpunct">·</g> Alfesi
-                    <lb n="2"/><expan><abbr>P</abbr><ex>ubli</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ili</ex></expan> <g ref="#interpunct">·</g> Salvii
+                    <lb n="1"/><persName type="attested"><name><expan><abbr>P</abbr><ex>ubli</ex></expan></name> <g ref="#interpunct">·</g> <name>Alfesi</name>
+                    <lb n="2"/><persName><name type="patronym"><expan><abbr>P</abbr><ex>ubli</ex></expan></name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>f</abbr><ex>ili</ex></expan></w> <g ref="#interpunct">·</g> <name>Salvi</name></persName>
                     <lb n="3"/>have
                     <lb n="4"/><expan><abbr>v</abbr><ex>ixit</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>a</abbr><ex>nnis</ex></expan> <g ref="#interpunct">·</g> <num value="19">XIX</num>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini</note></app>
+                    <app><note>Text on basis of autopsy</note></app>
                 </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#TA">
-                <p>O Publius Alfesius Salvius, son of Publius, farewell! He lived nineteen years.</p>
+            <div type="translation" xml:lang="en" resp="#TA #AA">
+                <p>Publius Alfesius Salvus, son of Publius, farewell! He lived nineteen years.</p>
             </div>
-            <div type="commentary">
-                <p><!-- Bivona's proposed date of C1 BC is probably too early, but it is likely to be Augustan or C1 AD. --></p>
+            <div type="commentary" resp="#AA">
+                <p>Whilst the nomen Alfesius is unique, Salvus (or Salvius) is extremely common among freedpersons and enslaves persons.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
