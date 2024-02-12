@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000157</title>
+                <title>Funerary epitaph for Coponia</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,9 +58,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000157</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334360</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -65,10 +67,9 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">68</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <!--Pencil 714 on front, red 42 on front-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,28 +82,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Large rectalinear plaque in brown/grey marble. Left corner missing, obscuring the beginning of lines 2-3. Traces of likely modern mortar and paint on sides. Stone is polishes on front face, but is not uniformly flat on the front surface. Black is almost perfectly flat and polished.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">23.5</height>
+                                        <width unit="cm">36.5</width>
+                                        <depth unit="cm">3</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><p>Three lines of Latin text, beginning of lines 2-3 obscured by break. Interpuncts only used in final line, and do not follow a consistent pattern (first visible interpunct is shaped like a tight comma, second like a diagonal slash, third like a larger comma, final like a downwards slash).</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Letters are tall and precise. There are simple, but standard, serifs on all letters.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">39-40</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">39-41</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">39-44</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,8 +130,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0150" notAfter-custom="0200" precision="low">End of 2nd century CE (Ferrua)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown, but the fragment is assumed to come from Termini Imerese</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-05" resp="#AA">Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 1</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -165,7 +175,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-05-24" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus and a translation.</change>
@@ -175,6 +185,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-02-12" who="#AA">edition on basis of autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,24 +201,23 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
                     <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>M</abbr><ex>anibus</ex></expan>
-                    <lb n="2"/>Coponia Am
-                    <lb n="3" break="no"/><supplied reason="lost">em</supplied>ta <g ref="#interpunct">·</g> <expan><abbr>v</abbr><ex>ixit</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>an</abbr><ex>nis</ex></expan> <g ref="#interpunct">·</g> <num value="50">L</num>
+                    <lb n="2"/><persName type="attested"><name>Coponia</name> <name>Am
+                    <lb n="3" break="no"/><supplied reason="lost">em</supplied>ta</name></persName> <g ref="#interpunct">·</g> <expan><abbr>v</abbr><ex>ixit</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>an</abbr><ex>nis</ex></expan> <g ref="#interpunct">·</g> <num value="50">L</num> <g ref="#interpunct">·</g>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini</note></app>
+                    <app><note>Text on basis of autopsy</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#TA">
                 <p>To the Shades of the Underworld. Coponia Ameta lived 50 years.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Coponia Am[em]ta - gens Coponia is gen. rare. Amemta, if that's how it should be restored (Ferrua)  'deve essere il greco amemptos' suggests Ferrua.--></p>
+            <div type="commentary" resp="#AA">
+                <p>Ferrua suggests that the full restoration of the missing cognomen from lines 2-3 is Amemta, which is of Greek origin, and which is rare, but is more commonly found in the masculine form (Amemptos). There are two other attestations of members of the gens Coponia from Thermae Himeraeae, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000156">ISic000156</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000158">ISic000158</ref>, and another attestation from Messana, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000273">ISic000273</ref>. As Bivona (1994) stresses, the gens Coponia is represented by a handful of republican senators and one equestrian procurator of Judaea under Augustus.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
