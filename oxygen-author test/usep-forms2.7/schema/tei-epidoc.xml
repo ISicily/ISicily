@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="xml"?>
+
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"
+    xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+      <schemaSpec ident="tei-epidoc" docLang="en" prefix="tei_" start="TEI" xml:lang="en">
+                
+                <!--       MODULES USED BY THE EPIDOC SCHEMA       -->
+                <moduleRef key="core"/>
+                <moduleRef key="tei"/>
+                <moduleRef key="header" except="appInfo"/>
+                <moduleRef key="textstructure" except="argument byline closer div1 div2 div3 div4 div5 div6 div7 imprimatur
+                    opener postscript salute signed titlePage titlePart trailer"/>
+                <moduleRef key="transcr" except="damageSpan restore"/>
+                <moduleRef key="verse" except="caesura metDecl metSym rhyme"/>
+                <moduleRef key="analysis" except="cl span spanGrp"/>
+                <moduleRef key="certainty" except="respons"/>
+                <moduleRef key="gaiji" except="char charName unicodeName"/>
+                <moduleRef key="linking" except="alt altGrp joinGrp timeline when"/>
+                <moduleRef key="msdescription"/>
+                <moduleRef key="namesdates" except="affiliation age climate education faith geoFeat langKnowledge
+                    langKnown nameLink nationality occupation population relationGrp residence sex socecStatus terrain trait"/>
+                <moduleRef key="textcrit" except="lacunaEnd lacunaStart listWit witDetail witEnd witStart witness"/>
+                <moduleRef key="figures" except="cell formula row table"/>
+                <moduleRef key="spoken" except="broadcast equipment incident kinesic pause recording recordingStmt
+                    scriptStmt shift u vocal writing"/>
+                <moduleRef key="corpus" except="activity channel constitution derivation domain factuality interaction locale
+                    preparedness purpose setting textDesc"/>
+                
+                <!--        CHANGED ELEMENT SPECS        -->
+                <elementSpec ident="add" module="core" mode="change">
+                    <attList>
+                        <!-- constraining values of add/@place -->
+                        <attDef ident="place" mode="replace">
+                            <valList type="closed">
+                                <valItem ident="above"/>
+                                <valItem ident="below"/>
+                                <valItem ident="bottom"/>
+                                <valItem ident="inline"/>
+                                <valItem ident="interlinear"/>
+                                <valItem ident="left"/>
+                                <valItem ident="margin"/>
+                                <valItem ident="mixed"/>
+                                <valItem ident="opposite"/>
+                                <valItem ident="overleaf"/>
+                                <valItem ident="overstrike"/>
+                                <valItem ident="right"/>
+                                <valItem ident="top"/>
+                                <valItem ident="unspecified"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+                <!-- constraining values of div/@type -->
+                <elementSpec ident="div" mode="change" module="textstructure">
+                    <attList>
+                        <attDef ident="type" mode="replace" usage="req">
+                            <valList type="closed">
+                                <valItem ident="apparatus">
+                                    <desc>to contain apparatus criticus or textual notes</desc>
+                                </valItem>
+                                <valItem ident="bibliography">
+                                    <desc>to contain bibliographical information, previous
+                                        publications, etc.</desc>
+                                </valItem>
+                                <valItem ident="commentary">
+                                    <desc>to contain all editorial commentary,
+                                        historical/prosopographical discussion, etc.</desc>
+                                </valItem>
+                                <valItem ident="edition">
+                                    <desc>to contain the text of the edition itself; may include
+                                        multiple text-parts</desc>
+                                </valItem>
+                                <valItem ident="textpart">
+                                    <desc>used to divide a div[type=edition] into multiple parts
+                                        (fragments, columns, faces, etc.)</desc>
+                                </valItem>
+                                <valItem ident="translation">
+                                    <desc>to contain a translation of the text into one or more
+                                        modern languages</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+                <elementSpec ident="ex" module="transcr" mode="change">
+                <!-- testing for <ex> outside of <expan> -->
+                    <constraintSpec scheme="isoschematron" ident="ex">
+                        <constraint>
+                            <sch:rule context="tei:ex">
+                                <sch:report test="not(ancestor::tei:expan)">ex should only appear inside expan</sch:report>
+                                <sch:report test="parent::tei:abbr">ex should not be a child of abbr</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                </elementSpec>
+                
+                <elementSpec ident="expan" module="transcr" mode="change">
+                <!-- testing for <expan> with no descendant <ex> -->
+                    <constraintSpec scheme="isoschematron" ident="expan">
+                        <constraint>
+                            <sch:rule context="tei:expan">
+                                <sch:report test="not(descendant::tei:ex)">expan should contain ex</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                </elementSpec>
+                
+                <elementSpec ident="gap" module="core" mode="change">
+                <!-- testing for <gap> with both quantity/extent, no unit, or contained in supplied -->
+                    <constraintSpec ident="gap" scheme="isoschematron">
+                        <constraint>
+                            <sch:rule context="tei:gap">
+                                <sch:report test="@quantity and @extent">gap 
+                                    may have @quantity (a figure) or @extent (a descriptive text value) but not both</sch:report>
+                                <sch:report test="@quantity and not(@unit)">If gap has @quantity then
+                                @unit is required</sch:report>
+                                <sch:report test="not(@reason='ellipsis') and ancestor::tei:supplied[not(@reason='undefined')]">gap
+                                may not appear within supplied text</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <!-- constraining values of gap/@reason -->
+                    <attList>
+                        <attDef ident="reason" mode="replace" usage="req">
+                            <valList type="closed">
+                                <valItem ident="lost">
+                                    <desc>Text completely lost from the surface and
+                                        unrecoverable</desc>
+                                </valItem>
+                                <valItem ident="illegible">
+                                    <desc>Traces of text remains on the surface but cannot be
+                                        interpreted</desc>
+                                </valItem>
+                                <valItem ident="omitted">
+                                    <desc>Text erroneously omitted from the surface by the
+                                        scribe/cutter</desc>
+                                </valItem>
+                                <valItem ident="ellipsis">
+                                    <desc>Text omitted from the edition by the editor, for whatever
+                                        reason (brevity, context, language, etc.)</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <!-- removing gap/@dur (not needed in EpiDoc) -->
+                        <attDef ident="dur" mode="delete"/>
+                    </attList>
+                </elementSpec>
+                
+                <!-- suggesting but not constraining values of hi/@rend -->
+                <elementSpec ident="hi" module="core" mode="change">
+                    <attList>
+                        <attDef ident="rend" mode="replace" usage="req">
+                            <datatype maxOccurs="5">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            <valList type="semi">
+                                <valItem ident="acute">
+                                    <desc>ancient acute (oxia, tonos) diacritic</desc>
+                                </valItem>
+                                <valItem ident="apex">
+                                    <desc/>
+                                </valItem>
+                                <valItem ident="asper">
+                                    <desc>ancient asper (rough breathing) diacritic</desc>
+                                </valItem>
+                                <valItem ident="circumflex">
+                                    <desc>ancient circumflex (perispomeni) diacritic</desc>
+                                </valItem>
+                                <valItem ident="diaeresis">
+                                    <desc>ancient diaeresis</desc>
+                                </valItem>
+                                <valItem ident="grave">
+                                    <desc>ancient grave (varia) diacritic</desc>
+                                </valItem>
+                                <valItem ident="intraline">
+                                    <desc>characters scored or struck through at the mid-line level</desc>
+                                </valItem>
+                                <valItem ident="inverted">
+                                    <desc>character(s) inverted or rotated with respect to the rest of the text</desc>
+                                </valItem>
+                                <valItem ident="italic">
+                                    <desc/>
+                                </valItem>
+                                <valItem ident="lenis">
+                                    <desc>ancient lenis (smooth breathing) diacritic</desc>
+                                </valItem>
+                                <valItem ident="ligature">
+                                    <desc>two (or more) letters ligatured, monogrammed, or therwise joined</desc>
+                                </valItem>
+                                <valItem ident="normal">
+                                    <desc/>
+                                </valItem>
+                                <valItem ident="reversed">
+                                    <desc>characters reversed (backward-facing) with respect to the rest of the line of text</desc>
+                                </valItem>
+                                <valItem ident="sling-above">
+                                    <desc/>
+                                </valItem>
+                                <valItem ident="sling-below">
+                                    <desc/>
+                                </valItem>
+                                <valItem ident="small">
+                                    <desc>Letter(s) smaller than those around them</desc>
+                                </valItem>
+                                <valItem ident="subscript">
+                                    <desc>characters written lower than the surrounding text</desc>
+                                </valItem>
+                                <valItem ident="superscript">
+                                    <desc>characters written higher than the surrounding text</desc>
+                                </valItem>
+                                <valItem ident="supraline">
+                                    <desc>characters written with a supralinear line above (e.g. for
+                                        abbreviation or numerals)</desc>
+                                </valItem>
+                                <valItem ident="tall">
+                                    <desc>Letter(s) taller than those around it, e.g. I-longa</desc>
+                                </valItem>
+                                <valItem ident="underline">
+                                    <desc>text written with solid line beneath</desc>
+                                </valItem>
+                                <valItem ident="stacked">
+                                    <desc>a character written directly above another character (as opposed to superscript)</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+                <!-- change definition of <lb> to "line beginning" -->
+                <elementSpec ident="lb" mode="change" module="core">
+                    <gloss>line-beginning</gloss>
+                    <desc>marks the start of each line of the transcribed text, including the first</desc>
+                    <!-- offer value "no" for lb/@break -->
+                    <attList>
+                        <attDef ident="break" mode="replace" usage="opt">
+                            <datatype>
+                                <rng:ref name="data.enumerated"/>
+                            </datatype>
+                            <valList type="semi">
+                                <valItem ident="no">
+                                    <desc>this line-beginning should not be taken as a word-break, i.e. word would be
+                                        hyphenated in a printed text</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+                <!-- adding temporary customization of <m> (2015-06-16), to be removed once TEI have implemented this -->
+                <elementSpec ident="m" module="analysis" mode="change">
+                    <content>
+                        <zeroOrMore xmlns="http://relaxng.org/ns/structure/1.0">
+                            <choice>
+                                <text/>
+                                <ref name="model.gLike"/>
+                                <ref name="model.hiLike"/>
+                                <ref name="seg"/>
+                                <ref name="m"/>
+                                <ref name="c"/>
+                                <ref name="model.global"/>
+                            </choice>
+                        </zeroOrMore>
+                    </content>
+                </elementSpec>
+                
+                
+                <!-- suggested attribute values for origDate/@evidence -->
+                <elementSpec ident="origDate" module="msdescription" mode="change">
+                    <attList>
+                        <attDef ident="evidence" mode="replace" usage="opt">
+                            <datatype maxOccurs="6">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            <valList type="semi">
+                                <valItem ident="lettering">
+                                    <desc>Text dated palaeographically</desc>
+                                </valItem>
+                                <valItem ident="nomenclature">
+                                    <desc>Text dated by nomenclature or onomastics</desc>
+                                </valItem>
+                                <valItem ident="prosopography">
+                                    <desc>Text dated by known persons named or implied within it</desc>
+                                </valItem>
+                                <valItem ident="reign">
+                                    <desc>Text dated by the reign of an emperor or other ruler</desc>
+                                </valItem>
+                                <valItem ident="titulature">
+                                    <desc>Text dated by the use of official titles</desc>
+                                </valItem>
+                                <valItem ident="internal-date">
+                                    <desc>Text dated by explicit internal date</desc>
+                                </valItem>
+                                <valItem ident="context">
+                                    <desc>Archaeological, epigraphic, iconographic or other context of the text support</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+                <elementSpec ident="space" module="transcr" mode="change">
+                    <!-- testing for <space> with both quantity/extent or no unit -->
+                    <constraintSpec ident="space" scheme="isoschematron">
+                        <constraint>
+                            <sch:rule context="tei:space">
+                                <sch:report test="@quantity and @extent">space 
+                                    may have @quantity (a figure) or @extent (a descriptive text value) but not both</sch:report>
+                                <sch:report test="@quantity and not(@unit)">If space has @quantity then
+                                    @unit is required</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                </elementSpec>
+                
+                <elementSpec ident="supplied" module="transcr" mode="change">
+                    <attList>
+                        <!-- suggested attribute list for supplied/@evidence -->
+                        <attDef ident="evidence" mode="replace" usage="opt">
+                            <datatype maxOccurs="1">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            <valList type="semi">
+                                <valItem ident="parallel">
+                                    <desc>Characters supplied from a parallel version of this text, absent from this one</desc>
+                                </valItem>
+                                <valItem ident="previouseditor">
+                                    <desc>Characters visible to a previous editor, now lost/unclear due to damage</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <!-- constrained attribute list for supplied/@reason -->
+                        <attDef ident="reason" mode="replace" usage="req">
+                            <valList type="closed">
+                                <valItem ident="lost">
+                                    <desc>Restoration of text completely lost from the
+                                        surface</desc>
+                                </valItem>
+                                <valItem ident="omitted">
+                                    <desc>Supplement of text erroneously omitted from the surface by
+                                        the scribe/cutter</desc>
+                                </valItem>
+                                <valItem ident="subaudible">
+                                    <desc>Editorial supplement of words subaudible to the native
+                                        reader</desc>
+                                </valItem>
+                                <valItem ident="explanation">
+                                    <desc>Editorial explanation of oblique text in original</desc>
+                                </valItem>
+                                <valItem ident="undefined">
+                                    <desc>Text restored (e.g. from earlier witness or alternate
+                                        copy) without specification of current state of this
+                                        text</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+                <!-- modifying <unclear> because in EpiDoc it should not contain anything but text and <g/> -->
+                <elementSpec ident="unclear" module="core" mode="change">
+                    <content>
+                        <rng:ref name="macro.xtext"/>
+                    </content>
+                </elementSpec>
+
+                <!--       CHANGING ATTRIBUTE CLASSES         -->
+                
+                <!--<classSpec type="atts" ident="att.datable.custom" mode="change">
+                    <constraintSpec scheme="isoschematron" ident="datable.custom">
+                         <constraint>
+                             <sch:rule context="tei:*[contains(@datingMethod,'julian')]">
+                                 <sch:report test="@when-custom[not(matches(.,'-?(\d{4})(-\d{2}(-\d{2})?)?'))]">
+                                     in Julian dating method @when-custom must be a date in the form [-]YYYY[-MM[-DD]]</sch:report>
+                                 <sch:report test="@notBefore-custom[not(matches(.,'-?(\d{4})(-\d{2}(-\d{2})?)?'))]">
+                                     in Julian dating method @notBefore-custom must be a date in the form [-]YYYY[-MM[-DD]]</sch:report>
+                                 <sch:report test="@notAfter-custom[not(matches(.,'-?(\d{4})(-\d{2}(-\d{2})?)?'))]">
+                                     in Julian dating method @notAfter-custom must be a date in the form [-]YYYY[-MM[-DD]]</sch:report>
+                             </sch:rule>
+                         </constraint>
+                     </constraintSpec>
+                </classSpec>-->
+                
+                <classSpec type="atts" ident="att.dimensions" mode="change">
+                    <attList>
+                        <attDef ident="precision" mode="replace">
+                            <valList type="closed">
+                                <valItem ident="low"/>
+                                <valItem ident="medium"/>
+                                <valItem ident="high"/>
+                            </valList>
+                        </attDef>
+                        <attDef ident="unit" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="character"/>
+                                <valItem ident="line"/>
+                                <valItem ident="metre"/>
+                                <valItem ident="cm"/>
+                                <valItem ident="mm"/>
+                            </valList>
+                        </attDef>
+                        <attDef ident="extent" mode="change">
+                            <valList type="semi" mode="replace">
+                                <valItem ident="unknown"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </classSpec>
+                
+                <classSpec type="atts" ident="att.responsibility" mode="change">
+                    <attList>
+                        <attDef ident="cert" mode="replace">
+                            <valList type="closed">
+                                <valItem ident="low"/>
+                                <valItem ident="high"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </classSpec>
+            </schemaSpec>
+</div>

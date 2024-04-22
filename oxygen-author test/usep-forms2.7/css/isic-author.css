@@ -1,0 +1,927 @@
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+@namespace xml url('http://www.w3.org/XML/1998/namespace');
+@namespace xi url('http://www.w3.org/2001/XInclude');
+@namespace url('http://www.tei-c.org/ns/1.0');
+
+ /* ******* elements and features that should be hidden **** */
+
+   oxy|comment {
+    display:none !important;
+    content: "";
+   }
+
+   respStmt, xi|include, include, encodingDesc, oxy|doctype, handNote height, scriptDesc, profileDesc, authority {
+        display:none;
+          visibility: -oxy-collapse-text ;
+    }
+
+    fileDesc, titleStmt,  titleStmt title {
+    -oxy-display-tags: none;
+    }
+
+/* **************** start to handle display  **************** */
+
+   TEI {
+    display:block;
+    margin:2em;
+    line-height:175%;
+    width: 75%;
+    margin-left: 50px;
+   }
+
+   TEI:before {
+   font-weight:bold;
+        font-size: 150%;
+        display:block;
+        background-color: rgb(22, 83, 126);
+        color:white;
+        text-align:center;
+        content: "ISicily Encoding Form";
+        display:block;
+   }
+
+   teiHeader {
+       border-bottom:solid;
+       border-bottom-width:5px;
+}
+
+   /* **************** Block Display  **************** */
+
+
+    titleStmt {
+        visibility: -oxy-collapse-text ;
+       background-color: rgb(41, 134, 204);
+    }
+
+    msContents, textLang, msItem, dimensions, listBibl,  div[type="commentary"],
+    div[type="edition"], div[type="translation"], lb   {
+        display:block;
+    }
+
+    lb {
+        content:none;
+    }
+
+  /* **************** idno  **************** */
+    title:before {
+        content: "Title: "
+        oxy_editor(
+           type, text,
+           edit, "#text"
+           columns, 40);
+           display:block;
+    }
+
+    publicationStmt {
+        visibility: -oxy-collapse-text;
+        background-color: rgb(41, 134, 204);
+    }
+
+    publicationStmt idno:before {
+        content:
+        "ISicily ID: "
+        oxy_editor(
+           type, text,
+           edit, "@xml:id"
+           columns, 40);
+           display:block;
+
+    }
+   msIdentifier {
+        background-color: rgb(207, 226, 243);
+   }
+
+   msIdentifier:before {
+       content: "ID Information:";
+       font-weight:bold;
+       font-size: 120%;
+   }
+
+   region:before {
+       content: "State Abbreviation: "
+          oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 4);
+        visibility: -oxy-collapse-text ;
+        display:block;
+   }
+
+   settlement:before {
+       content: "City/Town Abbreviation: "
+          oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 10);
+        visibility: -oxy-collapse-text ;
+        display:block;
+   }
+
+   institution:before {
+       content: "Institution Abbreviation: "
+          oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 10);
+        visibility: -oxy-collapse-text ;
+        display:block;
+   }
+
+   repository:before {
+       content: "Repository Abbreviation (optional): "
+          oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 10);
+        visibility: -oxy-collapse-text ;
+        display:block;
+   }
+
+    idno:before {
+        content: "Accession number (if needed): "
+          oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 10);
+        visibility: -oxy-collapse-text ;
+        display:block;
+    }
+
+    region, institution, settlement, repository, idno {
+        visibility: -oxy-collapse-text;
+    }
+
+ /* **************** Language  **************** */
+
+    msContents:before {
+       font-weight:bold;
+       font-size: 120%;
+
+        content: "Summary";
+    }
+
+    msContents {
+        background-color: rgb(41, 134, 204);
+    }
+
+    textLang:before {
+         content: "Select a Language: "
+          oxy_editor(
+             type, combo,
+             edit, "@mainLang",
+             editable, false,
+             values, "grc, lat, he, phn, xpu, osc, xly, scx, sxc",
+             labels, "Greek, Latin, Hebrew, Phoenician, Punic, Oscan, Elymian, Sikel")
+             "Select Another Language (if necessary): "
+             oxy_editor(
+             type, combo,
+             edit, "@otherLangs",
+             editable, false,
+             values, "grc, lat, he, phn, xpu, osc, xly, scx, sxc",
+             labels, "Greek, Latin, Hebrew, Phoenician, Punic, Oscan, Elymian, Sikel");
+        }
+
+   /* **************** Genre and Materials  **************** */
+
+msItem:before {
+        content: "Genre (Click blue text; check one or more boxes from list.): "
+        oxy_editor(
+             type, popupSelection,
+             edit, "@class",
+             columns 20,
+             editable, false,
+             values, oxy_concat("#", oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Function"]//category/@xml:id, ",#")'))),
+             labels, oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Function"]//category/catDesc, ",")' ))
+);}
+
+    msItem p:before {
+        content: 'Summary description of form: ';
+        display:block;
+    }
+
+    msItem p {
+    content:
+        oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 50);
+        visibility: -oxy-collapse-text ;
+        display:block;
+    }
+
+ physDesc:before {
+     font-weight:bold;
+     content: "Physical Description";
+     font-size: 130%;
+ }
+
+ physDesc {
+     background-color: rgb(207, 226, 243);
+ }
+
+ objectDesc:before {
+        content: "Type of Object (Click blue text; check one or more boxes.): "
+        oxy_editor(
+             type, popupSelection,
+             edit, "@ana",
+             columns 20,
+             editable, false,
+             values, oxy_concat("#", oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Object_type"]//category/@xml:id, ",#")'))),
+             labels, oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Object_type"]//category/catDesc, ",")' ))
+             );
+        display:block;
+    }
+
+  supportDesc:before {
+        content: "Material (Click blue text; check one or more boxes.): "
+        oxy_editor(
+             type, popupSelection,
+             edit, "@ana",
+             columns 20,
+             editable, false,
+             values, oxy_concat("#", oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Material"]//category/@xml:id, ",#")'))),
+             labels, oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Material"]//category/catDesc, ",")' ))
+             );
+        display:block;
+    }
+
+    support p, support {
+        visibility: -oxy-collapse-text;
+        display: block;
+    }
+
+    support p {
+        content: "Short summary of material and support: "
+        oxy_editor(
+            type, text,
+            edit, "#text",
+            columns, 50);
+        visibility: -oxy-collapse-text;
+    }
+
+
+
+       /* **************** Dimensions  **************** */
+
+     support dimensions:before {
+       font-weight:bold;
+       content: "Dimensions (Unit=cm)";
+       display:block;
+    }
+
+   support dimensions, condition {
+          border-top-style:solid;
+          border-top-width:3px;
+          border-top-color: rgb(153, 153, 143);;
+   }
+
+    support height {
+        content: "Height (Top to Bottom): "
+        oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 10);
+        visibility: -oxy-collapse-text ;
+        display:block;
+    }
+
+    support width {
+        content: "Width (Left to Right Across): "
+        oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 10);
+        visibility: -oxy-collapse-text ;
+        display:block;
+        }
+
+    support depth {
+        content: "Depth (Front to Back): "
+        oxy_editor(
+          type, text,
+          edit, "#text",
+          columns, 10);
+        visibility: -oxy-collapse-text ;
+        display:block;
+       }
+
+       /* **************** Condition  **************** */
+
+    condition:before {
+           content: "Condition: "
+           oxy_editor(
+             type, combo,
+             edit, "@ana",
+             columns 20,
+             editable, false,
+             values, oxy_concat("#", oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Condition"]//category/@xml:id, ",#")' ))),
+             labels, oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Condition"]//category/catDesc, ",")' ))
+             );
+           display:block;        ;
+    }
+    
+   /* Text condition */ 
+   /* added new */
+   
+    text-condition:before {
+           content: "Text condition: "
+           oxy_editor(
+             type, combo,
+             edit, "@ana",
+             columns 20,
+             editable, false,
+             values, oxy_concat("#", oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Text-condition"]//category/@xml:id, ",#")' ))),
+             labels, oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Text-condition"]//category/catDesc, ",")' ))
+             );
+           display:block;        ;
+    }
+
+       /* **************** Layout **************** */
+
+    layoutDesc:before {
+        content: "Layout of Writing on the Surface";
+        font-weight:bold;
+       font-size: 120%;
+        display:block;
+    }
+
+    layoutDesc, handDesc, history {
+        background-color: rgb(41, 134, 204);
+    }
+
+    layout:before {
+        content: "Columns: "
+          oxy_editor(
+             type, text,
+             edit, "@columns"
+             columns, 5)
+             "  Written Lines: "
+             oxy_editor(
+             type, text,
+             edit, "@writtenLines",
+             columns, 5);
+    }
+
+       /* **************** Hand / Writing  **************** */
+
+      handDesc:before {
+        content: "Writing \A Number of hands: "
+        oxy_editor(
+        type, combo,
+        edit, "@hands"
+        values, "1, 2, 3");
+        font-weight:bold;
+       font-size: 120%;
+        display:block;
+    }
+
+      handDesc:after {
+          content: oxy_editor(
+          type, button,
+          actionID, "insert_handNote");
+      }
+
+      handNote:before {
+           content: "How was this written: "
+           oxy_editor(
+             type, combo,
+             edit, "@ana",
+             columns, 20,
+             editable, false,
+             values, oxy_concat("#", oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Execution"]//category/@xml:id, ",#")'))),
+             labels, oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/ISicily_taxonomies.xml'), '")//taxonomy[@xml:id="ISicily-Execution"]//category/catDesc, ",")' ))
+            )
+              '\A Detail about this writing: '
+           oxy_editor(
+             type, text,
+             edit, "#text"
+             columns, 40);
+           display:block;
+
+           }
+
+      handNote dimensions:before {
+           content: "Average dimensions of the letters in cm. At least: "
+           oxy_editor(
+             type, text,
+             edit, "@atLeast",
+             columns, 10)
+             " At most: "
+             oxy_editor(
+             type, text,
+             edit, "@atMost",
+             columns, 10);
+           display:block;
+      }
+
+
+       /* **************** Decoration **************** */
+
+
+       decoDesc:before {
+       display:block;
+       content: "Decorations:";
+        font-weight:bold;
+        font-size: 120%;
+      }
+
+       decoDesc:after {
+       display:block;
+       content:
+        oxy_editor(
+            type, button,
+            actionID, "insert_decoNote");
+        font-weight:bold;
+        font-size: 120%;
+      }
+
+      decoNote:before {
+          content: "Decoration: ";
+             display:block;
+      }
+
+      decoNote {
+          border-style:solid;
+          border-width:2px;
+          border-color: rgb(153, 153, 143); ;
+      }
+
+      decoNote p:before {
+          content: "Description of this decoration: "
+          oxy_editor(
+             type, text,
+             edit, "#text",
+             columns, 40);
+             visibility: -oxy-collapse-text ;
+             display:block;
+      }
+
+      decoNote ab {
+          content: "Brief description: "
+           oxy_editor(
+             type, text,
+             edit, "#text",
+             columns, 40);
+             visibility: -oxy-collapse-text ;
+             display:block;
+      }
+
+      decoNote locus {
+          content: "Location of decoration: "
+           oxy_editor(
+             type, text,
+             edit, "#text",
+             columns, 40);
+             visibility: -oxy-collapse-text ;
+             display:block;
+      }
+
+       /* **************** History  **************** */
+
+       history:before {
+           content: "History and Provenance";
+           display:block;
+           font-weight:bold;
+           font-size: 130%;
+       }
+
+
+       history:after {
+       display:block;
+       content:
+        oxy_editor(
+            type, button,
+            actionID, "insert_provenance");
+        font-weight:bold;
+        font-size: 120%;
+      }
+
+      origin:before {
+           content: "Place and Date of Origin";
+           display:block;
+           font-weight:bold;
+       }
+
+       origin {
+          background-color: rgb(207, 226, 243);
+          border-top-style:solid;
+          border-top-width:3px;
+          border-top-color: rgb(153, 153, 143);;
+
+       }
+
+       origin placeName {
+           visibility: -oxy-collapse-text;
+       }
+
+/* include epidoc dating criteria into the ISic taxonomies document, change url here */
+       origin date:before {
+          content: "Dates (4 digit dates, BCE is negative). Dating Criteria:"
+          oxy_editor(
+             type, combo,
+             edit, "@evidence",
+             columns 20,
+             editable, false,
+             values, oxy_concat("#", oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/include_taxonomies.xml'), '")//taxonomy[@xml:id="USEp-DatingCriteria"]//category/@xml:id, ",#")' ))),
+             labels, oxy_xpath(oxy_concat('string-join(doc("', oxy_url('${framework}/', 'resources/include_taxonomies.xml'), '")//taxonomy[@xml:id="USEp-DatingCriteria"]//category/catDesc, ",")' ))
+              )
+             " Not Before: "
+             oxy_editor(
+             type, text,
+             edit, "@notBefore"
+             columns, 7)
+             "  Not After: "
+             oxy_editor(
+             type, text,
+             edit, "@notAfter",
+             columns, 7);
+             display:block;
+       }
+
+       origin date {
+           content: "Display date: "
+           oxy_editor(
+             type, text,
+             edit, "#text"
+             columns, 25);
+             display:block;
+             visibility: -oxy-collapse-text ;
+       }
+
+/* Remove regions? Split between ancient and modern, add fields for coordinates? */
+       placeName:before {
+           content: "Select Region: "
+           oxy_editor(
+             type, combo,
+             edit, "@ref"
+             columns, 25,
+             editable, false,
+             values, "africa, africa.egypt, asia, asia.asia_minor, asia.near_east, asia.syria.damascus, europe, europe.greece, europe.greece.athens, europe.greece.attica, europe.italy, europe.italy.rome, europe.italy.tarentum, unknown")
+           "\ASpecific Location: "
+           oxy_editor(
+             type, text,
+             edit, "#text"
+             columns, 25);
+           display: block;
+           visibility: -oxy-collapse-text;
+       }
+
+/* modify these as per our Wiki */
+       provenance:before {
+       content: "Subsequent Provenance Information\AType: "
+       oxy_editor(
+             type, combo,
+             edit, "@type"
+             columns, 25,
+             editable, false,
+             values, "found, observed, not-observed, transferred")
+           "\ASubtype: "
+           oxy_editor(
+             type, combo,
+             edit, "@type"
+             columns, 25,
+             editable, false,
+             values, "--If 'found', discovered, rediscovered, first-recorded, --If 'observed', seen, recorded, reported, --If 'transferred', moved, sold, given, loaned, purchased, acquired, donated, ")
+           oxy_editor(
+             type, text,
+             edit, "#text"
+             columns, 25);
+           display: block;
+           visibility: -oxy-collapse-text;
+       }
+       
+       provenance p {
+        border:1px solid rgb(153, 153, 143);
+        background-color:rgb(245, 243, 221);
+        margin:10px 20px 15px 20px;
+        display:block;
+        -oxy-placeholder-content: 'Provenance information here. Tag persons, places and dates.';
+    }
+    
+
+       /*acquisition:before {
+       Content: "Information about current acquisition";
+           display:block;
+           font-weight:bold;
+           font-size: 100%;
+       }*/
+
+
+
+       /* **************** Explanatory Paragraphs  **************** */
+
+       origin p, layout p, condition p, handNote p {
+           content: "More detail if necessary: "
+           oxy_editor(
+             type, text,
+             edit, "#text"
+             columns, 40);
+             display:block;
+             visibility: -oxy-collapse-text ;
+
+       }
+
+
+       /* **************** Revision  **************** */
+
+      revisionDesc:before {
+          content: "Revision Log";
+          font-weight:bold;
+          font-size: 130%;
+      }
+
+      revisionDesc {
+           background-color: rgb(207, 226, 243);
+       }
+
+       revisionDesc:after {
+       display:block;
+       content:
+        oxy_editor(
+            type, button,
+            actionID, "insert_revision");
+        font-weight:bold;
+        font-size: 120%;
+      }
+
+      change:before {
+          content: "When: "
+          oxy_editor(
+          type, datePicker,
+            columns, 16,
+            edit, "@when",
+            format, "yyyy-MM-dd"
+          )
+        "Who"
+        oxy_editor(
+             type, text,
+             edit, "@who",
+             columns, 20);
+             display:block;
+      }
+
+      change {
+          content: "Type of change (supply additional info if needed): "
+          oxy_editor(type, combo,
+             edit, "#text",
+             editable, true,
+             columns, 25,
+             values, "Initial Entry, Edited");
+             border-style:solid;
+          border-width:2px;
+          border-color: rgb(153, 153, 143);
+          visibility: -oxy-collapse-text ;
+          display:block;
+      }
+
+
+      /* **************** Body and full text  **************** */
+
+   body:before {
+       content: "Transcription, Translation and Commentary";
+       font-weight:bold;
+        font-size: 130%;
+        display:block;
+        border-color: rgb(153, 153, 143);
+          background-color: rgb(238, 238, 238);
+   }
+   
+   body {
+       border-top-style : solid ;
+       border-top-width : 5px ;
+   }
+
+     div[type="edition"]:before {
+        font-weight:bold;
+        content: "Transcription";
+        display:block;
+        visibility: -oxy-collapse-text ;
+    }
+
+        div[type="commentary"]:before {
+        font-weight:bold;
+        content: "Commentary";
+        display:block;
+        visibility: -oxy-collapse-text ;
+    }
+    
+        div[type="translation"]:before {
+        font-weight:bold;
+        content: "Translation";
+        display:block;
+        visibility: -oxy-collapse-text ;
+    }
+/*
+        div[type="apparatus"]:before {
+        font-weight:bold;
+        content: "Apparatus (optional)";
+        display:block;
+        visibility: -oxy-collapse-text ;
+    }*/
+
+
+/*
+    div[subtype="transcription"]:after {
+       display:block;
+       content:
+        oxy_editor(
+            type, button,
+            actionID, "Hebrew");
+        font-weight:bold;
+        font-size: 120%;
+      }
+ */
+
+    div[type="edition"] ab {
+        border:2px solid rgb(153, 153, 143);
+        background-color:rgb(245, 243, 221);
+        margin:10px 20px 15px 20px;
+        display:block;
+        -oxy-placeholder-content: 'text here';
+    }
+
+        div[type="commentary"] p {
+        border:2px solid rgb(153, 153, 143);
+        background-color:rgb(245, 243, 221);
+        margin:10px 20px 15px 20px;
+        display:block;
+        -oxy-placeholder-content: 'text here';
+    }
+    
+        div[type="translation"] p {
+        border:2px solid rgb(153, 153, 143);
+        background-color:rgb(245, 243, 221);
+        margin:10px 20px 15px 20px;
+        display:block;
+        -oxy-placeholder-content: 'text here';
+    }
+
+ /*      div[type="apparatus"] p {
+        border:2px solid rgb(153, 153, 143);
+        background-color:rgb(245, 243, 221);
+        margin:10px 20px 15px 20px;
+        display:block;
+        -oxy-placeholder-content: 'text here';
+    }*/
+
+
+
+    div[type="edition"]  {
+          border-style:solid;
+          border-width:3px;
+          border-color: rgb(153, 153, 143);
+          background-color: rgb(238, 238, 238);
+    }
+
+     div[type="commentary"]  {
+          border-style:solid;
+          border-width:3px;
+          border-color: rgb(153, 153, 143);
+          background-color: rgb(238, 238, 238);
+    }
+    
+     div[type="translation"]  {
+          border-style:solid;
+          border-width:3px;
+          border-color: rgb(153, 153, 143);
+          background-color: rgb(238, 238, 238);
+    }
+    
+/*     div[type="apparatus"]  {
+          border-style:solid;
+          border-width:3px;
+          border-color: rgb(153, 153, 143);
+          background-color: rgb(41, 134, 204);
+    }*/
+
+
+
+
+
+    /* ******************   Images   ******************* */
+
+    facsimile:before {
+        content: "Images";
+        visibility: -oxy-collapse-text;
+        font-size: 130%;
+        font-weight: bold;
+    }
+    facsimile {
+        border:2px solid rgb(153, 153, 143);
+        background-color: rgb(41, 134, 204);
+        font-size: 110%;
+    }
+
+    graphic:before {
+        content: "Filename: "
+        oxy_editor(
+           type, text,
+           edit, "@url"
+           columns, 40);
+           display: block;
+        font-size: 90%;
+    }
+
+    surface desc:before {
+        content: "Caption (optional): "
+        oxy_editor(
+           type, text,
+           edit, "#text"
+           columns, 40);
+           display: block;
+    }
+    surface desc {
+        display:block;
+
+    }
+
+    facsimile:after {
+        content:
+        oxy_editor(
+            type, button,
+            actionID, "insert_image");
+    }
+
+     /* **************** Bibliography  **************** */  /* check and change as per our structure */
+
+    listBibl:before {
+        font-size: 130%;
+        font-weight:bold;
+        content: "Bibliography";
+        display:block;
+
+    }
+
+    listBibl {
+           background-color: rgb(207, 226, 243);
+           }
+
+   listBibl:after {
+       display:block;
+       content:
+        oxy_editor(
+            type, button,
+            actionID, "insert_bib")
+            oxy_editor(
+            type, button,
+            actionID, "insert_external_bib");
+        font-weight:bold;
+        font-size: 120%;
+      }
+
+ bibl {
+        display:block;
+    }
+
+    text body div[type=bibliography] {
+        display: none;
+    }
+
+    ptr:before {
+        content: "Bibliography ID: "
+        oxy_editor(
+             type, combo,
+             edit, "@target",
+             values, oxy_concat('#',oxy_xpath('string-join(/TEI/text/body/div[@type="bibliography"]/xi:include/doc(@href)/listBibl/bibl/@xml:id , ", #") ')));
+             display: block;
+    }
+
+     biblScope:before {
+        content: "Unit: "
+        oxy_editor(
+             type, combo,
+             edit, "@type",
+             editable, false,
+             values, "page, item",
+             labels, "pp., num.");
+             visibility: -oxy-collapse-text ;
+    }
+   biblScope {
+        content: "Reference: "
+        oxy_editor(type, text,
+             edit, "#text",
+             columns, 15);
+             visibility: -oxy-collapse-text ;
+    }
+
+   bibl ref:before {
+        content: "URL: "
+        oxy_editor(
+             type, text,
+             edit, "@target",
+             columns, 25);
+             visibility: -oxy-collapse-text ;
+    }
+  bibl ref {
+        content: "Title: "
+        oxy_editor(type, text,
+             edit, "#text",
+             columns, 25);
+             visibility: -oxy-collapse-text ;
+    }
+    /*  Text Boxes */
+
+ lb {
+ content: " \A ";
+  visibility: -oxy-collapse-text ;
+ }
