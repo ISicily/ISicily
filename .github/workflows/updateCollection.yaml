@@ -1,0 +1,19 @@
+name: update DTS collection file
+on:
+  schedule: 
+      - cron: '50 1 * * *'
+jobs:
+  update-collection:
+    runs-on: ubuntu-latest
+    name: Updates collection file
+    steps:
+      - name: Update files
+        uses: ISicily/dts-rebuild-action@main
+        with:
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          token: ${{ github.token }}
+          collectionFile: dts/collection.json
+          permanentBaseInscriptionURI: http://sicily.classics.ox.ac.uk/inscription/
+          permanentBaseInscriptionDownloadURL: http://sicily.classics.ox.ac.uk/inscription/
+          errorFile: dts/error.json

@@ -54,9 +54,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000109</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334162</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -80,9 +78,10 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <dimensions><!--Default values and requires editing-->
+                                <support><p>No information about the object is recorded other than Gualtherus' description of this and two others as 'in marmoribus'</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.unknown" ref="https://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</objectType>
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
@@ -98,7 +97,7 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -117,11 +116,11 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                             	<geo>37.98365, 13.69555</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Roman imperial period</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Original discovery not recorded, noted in Termini already in 1624, described by Gualtherus (ed.1) as 'in domo Laur. Lo Caschi', and subsequently (ed.2) as 'apud Petrum Rubeum proconservatorem'.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <provenance type="not-observed" subtype="lost">Lost.</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
                     </history>
                 </msDesc>
             </sourceDesc>
@@ -174,10 +173,12 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-09" who="#JP">Jonathan Prag revised from publication</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic000109_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -185,40 +186,56 @@
             <graphic n="print" url="ISic000109.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">c</supplied>ura vic<gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> per <expan><abbr>sing</abbr><ex>ulos</ex></expan> <expan><abbr>mens</abbr><ex>es</ex></expan> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1" xml:id="AKοAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKοAU"/><w xml:id="AKοAe"><supplied reason="lost" xml:id="AKοAo">c</supplied>ura</w> <w xml:id="AKοAy">vic</w> <gap reason="lost" extent="unknown" unit="character" xml:id="AKοAΙ"/>
+                    <lb n="2" xml:id="AKοAΤ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKοAε"/><w xml:id="AKοAο">per</w> <w xml:id="AKοBA"><expan xml:id="AKοBK"><abbr xml:id="AKοBU">sing</abbr><ex xml:id="AKοBe">ulos</ex></expan></w> <w xml:id="AKοBo"><expan xml:id="AKοBy"><abbr xml:id="AKοBΙ">mens</abbr><ex xml:id="AKοBΤ">es</ex></expan></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AKοBε"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini</note></app>
+                    <app><note>Text from Gualtherus</note></app>
+                    <app loc="2"><note>Mommsen: PER · SING · MENS (but there is no basis for the interpunctuation)</note></app>
                 </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--v. frag., poss. referring to action of 'curavit', and 'per sing.mens.'--></p>
+                <p>Mommsen speculated that line 1 might be "cura(vit)", and that the fragment might be part of the same inscription as the two fragments united under CIL 10.7360 = ISic000111 (also lost) (Bivona's suggestion that this is plausible because the graphical representation in Gualtherus is analogous is of little value, since this is a very generic type of representation in Gualtherus' edition).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624</date>
+                        <citedRange>no. 115</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/GIN6NANU"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624 [1625]</date>
+                        <citedRange>no. 272</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">10.7359</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                         <citedRange>27</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
