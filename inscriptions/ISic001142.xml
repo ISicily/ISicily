@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,21 +58,18 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001142</idno>
                 <idno type="DOI" when="2020-12-18">10.5281/zenodo.4351629</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
-                        <idno type="inventory">142</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
+                        <idno type="inventory">142</idno> <!--Stone is clearly marked in black with inv. 141 on side-->
+                        <!--155 pencil on front face x2-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,29 +82,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Plaque of veiny grey-white marble. Large section of stone missing at bottom left. Front face is polished, back is flat.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">23.8</height>
+                                        <width unit="cm">20</width>
+                                        <depth unit="cm">1.8</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Three lines of Greek text</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Letters are extremely thin, and curved. The first vertical stem of the eta in line 2 appears to join the vertical stem of the kappa in line 1, thus making it difficult to be precise about letter heights in lines 1-2. The orthography is extremely strange, particularly in the tail of the tau in line 3 which gives the impression of the letter 'J'.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">35-50</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">55-59</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">30-48</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -119,11 +128,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                             	<geo>37.98365, 13.69555</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">Brugnone doubts authenticity, on grounds of type of marble, and
-                                letter forms (?)</origDate>
+                            <origDate datingMethod="#julian" cert="low">Brugnone doubts authenticity, on grounds of type of marble, and letter forms (?)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown, but the inscription is known to come from Termini Imerese</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-07" resp="#AA">Antoniou, 2023-07-07. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 3, shelf 2</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -167,7 +175,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-10-05" who="#VM">Valentina Mignosa encoded text division</change>
@@ -178,6 +186,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-29" who="#AA">edition on basis of autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -193,24 +202,24 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/>Κ<supplied reason="omitted">α</supplied>νυλ
-                    <lb n="2" break="no"/>ηία
+                    <lb n="1"/><persName type="attested"><name>Κ<supplied reason="omitted">α</supplied>νυλ
+                    <lb n="2" break="no"/>ηία</name></persName>
                     <lb n="3"/><gap reason="lost" quantity="1" unit="character" precision="low"/><unclear>ω</unclear>τη
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of IGTermini</note></app>
+                    <app><note>Text of autopsy</note></app>
+                    <app loc="line 3"><note>Kaibel reads <supplied reason="lost">Βι</supplied>ότη in line 3, but as Brugnone (1974) notes, the first visible letter is more likely an italic omega than an omicron.</note></app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Possibly reads Kanuleia, i.e. Canuleius, but frag. and of doubtful authenticity.--></p>
+            <div type="commentary" resp="#AA">
+                <p>Brugnone (1974) doubts the authenticity of the stone based on its marble and orthography, and recent of autopsy would tend to suggest that Brugnone is likely correct. If it is genuine, than the name rendered in lines 1-2 is likely Kanuleia, but the mason has not rendered the first alpha. Kanuleia must be related to the Latin Canuleius, attested as a plebeian gens. Brugnone speculates that Kanuleia is a freedwoman, as the surviving fragments of cognomen, likely ending 'ote', suggests that she is Greek, but that she assumed the nomen (Canuleius/Canuleia) of her Roman patron.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

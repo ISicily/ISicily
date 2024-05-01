@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000183</title>
+                <title>Funerary epitaph for Marcus Hortesius Primus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -38,6 +38,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -50,9 +54,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000183</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334460</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.s</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -63,7 +65,7 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">100</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <!--Pencil 628. T(??) in black on top.-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -76,29 +78,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Large slab of dark grey stone. Left and top edges are intact, straight and square. The bottom and right are broken, and heavily abraded. The rear is almost completely flat, although there is a slight wave in the stone.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--from ILTermini-->
+                                    <dimensions>
                                         <height unit="cm">22</height>
-                                        <width unit="cm">29</width>
+                                        <width unit="cm">29.5</width>
                                         <depth unit="cm">11.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><p>Three lines of Latin text, with triangular interpuncts</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Letter shapes and orientation are slightly erratic, but the letters are extremely thin and with exaggerated serif tails. The long legs of the "R"s are particularly distinctive.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">40-49</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">30-34</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">41-50</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -116,8 +126,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found outside the city gates of Termini Imerese (together with ISic001143) in 1824</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1824">Found outside the city gates of Termini Imerese (together with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001143">ISic001143</ref>) in 1824</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-06" resp="#AA">Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 6</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -161,7 +171,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-08-27" who="#JP">Jonathan Prag made draft revisions based on ILTermini</change>
@@ -171,6 +181,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-24" who="#AA">edition on basis of autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -186,25 +197,24 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP #AA">
                 <ab>
-                    <lb n="1"/><expan><abbr>M</abbr><ex>arcus</ex></expan> Hortes<supplied reason="lost">ius</supplied>
-                    <lb n="2"/>Pr<hi rend="tall">i</hi>mus
-                    <lb n="3"/><expan><abbr>vix</abbr><ex>it</ex></expan> <expan><abbr>an</abbr><ex>nis</ex></expan> <num><supplied reason="lost" evidence="previouseditor">V</supplied></num>
+                    <lb n="1"/><persName type="attested"><name><expan><abbr>M</abbr><ex>arcus</ex></expan></name> <g ref="#interpunct">·</g> <name>Hortes<supplied reason="lost">ius</supplied></name>
+                    <lb n="2"/><name>Primus</name></persName>
+                    <lb n="3"/><w><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>an</abbr><ex>nis</ex></expan></w> <g ref="#interpunct">·</g> <num><supplied reason="lost" evidence="previouseditor">V</supplied></num>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text after ILTermini</note></app>
+                    <app><note>Text after autopsy</note></app>
                     <app loc="line 3"><note>Mommsen was able to read part of the final V</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Marcus Hortesius Primus, lived for 5 years</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--M. Hortes[ius] Primus - only inscr. instance, but common on tile and brick stamps, esp from Soluntum; cf. also Rep pr. of pre-108 BC.--></p>
+            <div type="commentary" resp="#AA">
+                <p>The form Hortesius is much rarer than Hortensius, which is extremely common across the empire. As Bivona (1994) notes, there does not seem to have been a shift from one form to the other, as both are attested contemporaneously. For the prevalence of Hortesius on Sicilian tile and brick stamps, see Bivona (1994).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

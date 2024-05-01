@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000212</title>
+                <title>Funerary epitaph for Publicia Euplea</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,21 +58,18 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000212</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334600</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">106</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <!--Red 43, Pencil 670-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,28 +82,40 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Large slab of grey stone. Top is intact with fine moulding. Sides and bottom are broken. Top is rounded, and back is flat.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">33</height>
+                                        <width unit="cm">42</width>
+                                        <depth unit="cm">11 (at top, with moulding), 9 (at bottom, without moulding)</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Four lines of complete Latin text. L1 is centered within the stone, whereas lines 2-4 lean towards the right. Interpuncts are inconsistent.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Text is has been shakily inscribed onto stone. Letters are well defined, but shapes and sizes are irregular and inconsistent. Serifs are used. Middle 'I' in XII line 4 is tall, stretching above other digits forming a supraline</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">57-66</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">39-48</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">40-46</height>
+                                </dimensions>
+                                <locus from="line4" to="line4">Line 4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">38-39 (I with long top-bar, 45 mm)</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,8 +133,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1902">Found in Termini Imerese outside the porta di Caccamo (= Porta di Girgenti), south of the city, during excavation for the installation of water pipes.<geo>37.9834352,13.6923962</geo></provenance><!-- location of Porta Girgenti -->
+                        <provenance type="observed" subtype="autopsied" when="2023-07-05" resp="#AA">Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 4</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -165,7 +178,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -175,6 +188,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-23" who="#AA">edition on basis of autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,25 +204,24 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/><hi rend="tall">Publicia</hi> <g ref="#interpunct">·</g>
-                    <lb n="2"/>Euplea <g ref="#interpunct">·</g> mo
-                    <lb n="3" break="no"/>rtua <g ref="#interpunct">·</g> anno
-                    <lb n="4" break="no"/>rum <g ref="#interpunct">·</g> <num value="12"><hi rend="ligature">XII</hi></num>
+                    <lb n="1"/><persName type="attested"><name><hi rend="tall">Publicia</hi></name> <g ref="#interpunct">·</g>
+                    <lb n="2"/><name>Euplea</name></persName> <g ref="#interpunct">·</g> <w>mo
+                    <lb n="3" break="no"/>rtua</w> <g ref="#interpunct">·</g> <w>anno
+                    <lb n="4" break="no"/>rum</w> <g ref="#interpunct">·</g> <num value="12"><hi rend="supraline">X<hi rend="tall">I</hi>I</hi></num>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini and photograph</note></app>
+                    <listApp><app><note>Text based on autopsy</note></app></listApp>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>Publicia Euplea, having died at 12 years.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Publicia Euplea mortua annorum XII - unique type of formula for TI; prob. a liberta; Gr.cognom, known elsewhere.--></p>
+            <div type="commentary" resp="#AA">
+                <p>As emphasised by Bivona (1994), the funerary formula ('mortua annorum') is unique for Thermae Himeraeae, and indeed Sicily generally. Bivona (1994) suggests that Euplea was probably a freedwoman, having been a public slave. A variation of the name Euplea appears in Thermae Himeraeae, namely Euplia, <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000174">ISic000174</ref>, as well as the masculine Euplus elsewhere in Sicily, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003233">ISic003233</ref>. The names Publicia and Publicius appear elsewhere in Thermae Himeraeae, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000059">ISic000059</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000211">ISic000211</ref>, as well as in a variety of other places across Sicily.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
