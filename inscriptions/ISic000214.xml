@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000214</title>
+                <title>Funerary marker for Rufeius Laetus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,19 +58,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000214</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334608</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">58</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,33 +82,49 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Large grey limestone cippus. Rounded top. Missing top left corner. Sides abraded. Left side tapers slightly, and is narrower at the base. Rear is mostly flat. Traces of modern red paint.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">49</height>
+                                        <width unit="cm">39 (at widest)</width>
+                                        <depth unit="cm">12</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Five lines of Latin text. The beginning of lines 1-2 are damaged, and several letters in line 2 are obscured by chips in the front face.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Text is uneven, and drifts upwards to the right. Letter spacing is inconsistent. Serifs used on some letters. First line is significantly larger than the rest of the text. Top bar of 'NT' in 'front' in line 4 are joined.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">78-85</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">49-58</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">41-52</height>
+                                </dimensions>
+                                <locus from="line4" to="line4">Line 4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">45-58</height>
+                                </dimensions>
+                                <locus from="line5" to="line5">Line 5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">33-46</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm"></height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -121,8 +138,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0100" precision="low">1st century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown, but the inscription is known to come from Termini Imerese</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-07" resp="#AA">Antoniou, 2023-07-07. In the Depositi of Museo Civico Baldassare Romano, room 1, floor besides scaffold 11</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -166,7 +183,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -176,6 +193,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-30" who="#AA">edition on basis of autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,26 +209,27 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/><supplied reason="lost">Ex</supplied> <expan><abbr>d</abbr><ex>ecreto</ex></expan> <roleName type="civic" subtype="decurio"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName>
-                    <lb n="2"/><supplied reason="lost" cert="low"><expan><abbr>L</abbr><ex>ucio</ex></expan></supplied> Rufeio <expan><abbr>L</abbr><ex>uci</ex></expan> <expan><abbr>f</abbr><ex>ilio</ex></expan> <expan><abbr>Qui</abbr><ex>rina tribu</ex></expan>
-                    <lb n="3"/>Laeto
-                    <lb n="4"/>in <expan><abbr>front</abbr><ex>e</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>edes</ex></expan> <g ref="#interpunct">·</g> <num value="25">XXV</num>
-                    <lb n="5"/>in <expan><abbr>agr</abbr><ex>o</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>edes</ex></expan> <g ref="#interpunct">·</g> <num value="30">XXX</num>   
+                    <lb n="1"/><w><supplied reason="lost">Ex</supplied></w> <w><expan><abbr>d</abbr><ex>ecreto</ex></expan></w> <roleName type="civic" subtype="decurio"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName>
+                    <lb n="2"/><persName type="attested"><name><supplied reason="lost" cert="low"><expan><abbr>L</abbr><ex>ucio</ex></expan></supplied></name> <name>Rufeio</name> <persName type="attested"><name type="patronym"><expan><abbr>L</abbr><ex>uci</ex></expan></name></persName> <w><expan><abbr><unclear>f</unclear></abbr><ex>ilio</ex></expan></w> <orgName type="tribus"><expan><abbr><hi rend="ligature">Qui</hi></abbr><ex>rina tribu</ex></expan></orgName>
+                    <lb n="3"/><name>Laeto</name></persName>
+                    <lb n="4"/><w>in</w> <w><expan><abbr>front</abbr><ex>e</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>p</abbr><ex>edes</ex></expan></w> <g ref="#interpunct">·</g> <num value="25">XXV</num>
+                    <lb n="5"/><w>in</w> <w><expan><abbr>agr</abbr><ex>o</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>p</abbr><ex>edes</ex></expan></w> <g ref="#interpunct">·</g> <num value="30">XXX</num>   
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini and photograph</note></app>
+                    <app><note>Text of autopsy</note></app>
+                    <app loc="line 2"><note>Bivona (1994) tentatively suggests a praenomen of Lucius, presumably following the praenomen of his father.</note></app>
+                    <app loc="line 4"><note>The 'F' in 'front' in line 4 has a long foot, which gives the impression of being an 'E'.</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>By decree of the decurions, to Lucius(?) Rufeius Laetus, son of Lucius, of the tribe Quirina. 25 feet in front. 30 feet in depth.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Ex d.d. L.Rufeio L.f.Qui.Laeto. In fronte... - R. citizen (although Rufeius not otherwise attested and poss. is error for Rufreius); note full trad. formulaic style.--></p>
+            <div type="commentary" resp="#AA">
+                <p>Rufeius Laetus is here recorded as a Roman citizen, of the tribe Quirina, although the name Rufeius is not otherwise attested. As Bivona (1994) notes, it is possibly an error for Rufreius or Rufrius, but need not be.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

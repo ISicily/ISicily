@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,19 +58,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000192</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334496</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">60</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -81,28 +82,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Large rounded cippus of pale-grey stone. Broken right, rounded top. Tapers both left and right to the base. Bottom edge is original. The rear is inaccessible.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions>
+                                        <height unit="cm">61</height>
+                                        <width unit="cm">44</width>
+                                        <depth unit="cm">9.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Three lines of Latin text (end of line 2 is obscured by break in stone).  Use of roughly triangular interpuncts.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Text is deeply and broadly incised into the stone, except for the interpuncts. Letters do not uniformly follow the line, and are of varying sizes. O at end of line 2 is much smaller than the rest of the text. Spacing is inconsistent, with the Xs on line three touching. Light serifs used on letters.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">85-98</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">52-70 (O=36)</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">46-53</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,8 +130,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Necropolis di S.Antonino</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="2014-09-25">Discovered by chance in the Necropolis di S.Antonino in Sep 1914, together with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000211">ISic000211</ref>, <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000222">ISic000222</ref>, and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000231">ISic000231</ref>, and moved to the Museum on the 25th of that month.</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-06" resp="#AA">Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 12, shelf 5</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -165,7 +175,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -175,6 +185,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-24" who="#AA">edition on basis of autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,24 +201,23 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/>Ex <g ref="#interpunct">·</g> <expan><abbr>d</abbr><ex>ecreto</ex></expan> <g ref="#interpunct">·</g> <roleName type="civic" subtype="decurio"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName>
-                    <lb n="2"/><expan><abbr>l</abbr><ex>ocus</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>ublice</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>d</abbr><ex>atus</ex></expan> <expan><abbr>P</abbr><ex>ublio</ex></expan> Lo<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><w>ex</w> <g ref="#interpunct">·</g> <w><expan><abbr>d</abbr><ex>ecreto</ex></expan></w> <g ref="#interpunct">·</g> <roleName type="civic" subtype="decurio"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName>
+                    <lb n="2"/><w><expan><abbr>l</abbr><ex>ocus</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>p</abbr><ex>ublice</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>d</abbr><ex>atus</ex></expan></w> <persName type="attested"><name><expan><abbr>P</abbr><ex>ublio</ex></expan></name> <name>Lo<gap reason="lost" extent="unknown" unit="character"/></name></persName>
                     <lb n="3"/><num value="35">XXXV</num>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini and photograph</note></app>
+                    <app><note>Text of autopsy</note></app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Ex d.d.l.p.d.P(ublio) Lo- - - XXXV.--></p>
+            <div type="commentary" resp="#AA">
+                <p>Bivona (1994) hypothetically suggests that the missing name, in the dative case, at the end of line to, is a member of the gens Lollia, known elsewhere in Termini, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000058">ISic000058</ref>.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

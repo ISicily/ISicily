@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000160</title>
+                <title>Funerary epitaph for Cornelius Acathobus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,9 +58,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000160</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334370</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -65,10 +67,9 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <!--inv. 57?-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,28 +82,41 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Small white/yellow marble plaque. Whole, but missing top left corner, and sides abraded. Plaque is not square. Rear is flat.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">13</height>
+                                        <width unit="cm">20</width>
+                                        <depth unit="cm">2.3</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><p>Four complete lines of Latin text.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Text is shallowly incised, messy and rough. Letters are not straight, nor in line with each other. Very basic serifs, on occasional letters. Long tail on "L" in line 4.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">19</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">16-21</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">16-25</height>
+                                </dimensions>
+                                <locus from="line4" to="line4">Line 4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">15-25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -118,11 +132,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                             	<geo>37.98365, 13.69555</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" cert="low" precision="low">4th century CE
-                                (Ferrua)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" cert="low" precision="low">4th century CE (Ferrua)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered">Found in Termini Imerese in the 18th century, on the hill of S. Lucia, afterwards kept in the Palazzo Municipale.</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-06" resp="#AA">Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 13, shelf 5</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -166,7 +179,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-05-31" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus and a translation.</change>
@@ -176,6 +189,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-26" who="#AA">edition on basis of autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -191,25 +205,24 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
-                    <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <expan><abbr>M</abbr><ex>anibus</ex></expan>
-                    <lb n="2"/>Cornelius
-                    <lb n="3"/>Acathobu
-                    <lb n="4" break="no"/>s <expan><abbr>vix</abbr><ex>it</ex></expan> <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="55">LV</num>
+                    <lb n="1"/><persName type="divine"><name><expan><abbr>D</abbr><ex>is</ex></expan></name> <name><expan><abbr>M</abbr><ex>anibus</ex></expan></name></persName>
+                    <lb n="2"/><persName type="attested"><name>Cornelius</name>
+                    <lb n="3"/><name>Acathobu
+                    <lb n="4" break="no"/>s</name></persName> <w><expan><abbr>vix</abbr><ex>it</ex></expan></w> <w><expan><abbr>ann</abbr><ex>is</ex></expan></w> <num value="55">LV</num>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini</note></app>
+                    <app><note>Text of autopsy</note></app>
                 </listApp>
             </div>  
             <div type="translation" xml:lang="en" resp="#TA">
                 <p>To the Shades of the Underworld. Cornelius Acathobus lived 55 years.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--judged false by Mommsen, but authentic  by Ferrua; Cornelius Acathobus - Agathopus is v. common in Roma latin epig.--></p>
+            <div type="commentary" resp="#AA">
+                <p>Whilst Mommsen judged the inscription to be fake, whereas Ferrua (1941) and Bivona (1994) consider it to be authentic. Whilst Acathobus is rendered here, Agathobus is more common across the empire, with another attestation in Termini Imerese, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000235">ISic000235</ref>. Members of the gens Cornelia are extremely common in Termini Imerese.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

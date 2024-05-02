@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,21 +58,18 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000208</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334587</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
-                            Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <!--Inv. 96-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,28 +82,37 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Three fragments of small, yellow/white marble plaque. Bivona's photo and edition records the plaque as being in two pieces, with missing text to the right and bottom. Since then, the plaque has been broken into three pieces, with two fragments now missing (a sizeable part of the 'D' in line 1 is now missing, as is most of the 'S' and the interpunct in line 3). Green discolouration due to application of modern inventory numbers. Rear is flat, face is polished. Top edge tapers upwards towards centre.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">11</height>
+                                        <width unit="cm">13</width>
+                                        <depth unit="cm">0.8</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Three lines of fragmentary Latin text. Large + shaped interpunct in line 1 (Bivona classifies this as a hedera). Bivona's photo shows an interpunct in line 3, in comma shape.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Extremely neat, well-formed and evenly spaced letters. Letters have serifs.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">24</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">29-30</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">At least 24</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,8 +130,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1889">Found with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000246">ISic000246</ref> in Termini Imerese in the piano di Si. Antonio, during the works for the construction of new buildings.</provenance>
+                        <provenance type="observed" subtype="autopsied" when="2023-07-07" resp="#AA">Antoniou, 2023-07-07. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 13, shelf 3</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -165,7 +175,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -175,6 +185,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-04-30" who="#AA">edition on basis of autopsy</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -190,24 +201,23 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/><expan><abbr>D</abbr><ex>is</ex></expan> <g ref="#ivy-leaf"/> <expan><abbr>M</abbr><ex>anibus</ex></expan>
-                    <lb n="2"/>Prim<gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3" break="no"/>ius <g ref="#interpunct">·</g> <unclear>v</unclear><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><persName type="divine"><name><expan><abbr>D</abbr><ex>is</ex></expan></name> <g ref="#interpunct">·</g> <name><expan><abbr>M</abbr><ex>anibus</ex></expan></name></persName>
+                    <lb n="2"/><persName type="attested"><name>Prim<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3" break="no"/>ius</name></persName> <g ref="#interpunct">·</g> <unclear>v</unclear><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini and photograph</note></app>
+                    <app><note>Text of autopsy compared with earlier edition and photographs of ILTermini</note></app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--D M Prim- - -ius... - p'haps Primigenius, but then single name only.--></p>
+            <div type="commentary" resp="#AA">
+                <p>It is possible that we might restore Prim[igen]ius in lines 2-3, followed by the dedicatee's age in years (vixit), but it is impossible to know given the condition of the plaque.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
