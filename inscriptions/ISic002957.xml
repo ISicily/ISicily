@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 002957</title>
+                <title>Fragment of a Latin inscription (funerary?)</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -54,14 +54,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002957</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387797</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Taormina</settlement>
@@ -80,25 +78,26 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>A fragment of a Latin text, presumably a plaque, but with no description beyond the presentation in CIL, which suggests possibly intact on the left side, but broken on the other three.</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259" cert="low">plaque</objectType>
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>The CIL text suggests use of both hedera and interpuncts.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -119,8 +118,9 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1883">Seen by Dessau in a courtyard of the Hotel Bellevue (later Metropole) at a date before 1883, and not seen since.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -160,7 +160,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html" cert="low">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -174,10 +174,12 @@
 	            <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-03-05" who="#AA">Epidoc editing</change>
+                <change when="2024-08-13" who="#JP">Jonathan Prag revised from publication</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic002957_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -185,26 +187,25 @@
             <graphic n="print" url="ISic002957.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="1"/><g ref="#leaf">❦</g> <orig>SI</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><g ref="#ivy-leaf">❦</g> <orig>SI</orig><gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="2"/>Drus<gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><expan><abbr>an</abbr><ex>nos</ex></expan> <num atLeast="5">V<gap reason="lost" extent="unknown" unit="character"/></num>
+                    <lb n="3"/><expan><abbr>an</abbr><ex>nos</ex></expan> <g ref="#interpunct">·</g> <num atLeast="5">V</num><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>CIL</note></app></listApp>
+                <listApp><app><note>Text of CIL based upon autopsy by Dessau</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--CIL simply comments: 'Tauromenii in curte diversorii Bellevue', i.e. in the courtyard of the building called Bellevue. The fr. on three lines simply reads: SI[- | DRUS[- | AN.V[- --></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
