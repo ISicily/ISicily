@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001271</title>
+                <title>Dedication of a pavement by Klodianus and Mousa</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -74,10 +74,10 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Ferrua reports that it appears to have been a mosaic</p>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <objectType ana="#object.mosaic" ref="http://www.eagle-network.eu/voc/objtyp/lod/184">mosaic</objectType>
-                                    <dimensions><!--Default values and requires editing-->
+                                <support><p>Del Muto refers in intial report to a mosaic found together with an inscription; Carnazza (a Taormina antiquarian) in a contemporary report writes of 'una lapide di marmo in cui sono incise delle lettere greche', found in two rooms adorned with mosaics and marble elements. No further elements of description are provided, but it seems that it constituted part of the pavement. Ferrua's statement that it appears to have been executed in mosaic as part of a pavement is erroneous.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
@@ -87,13 +87,13 @@
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <rs ana="#execution.mosaic" ref="https://www.eagle-network.eu/voc/writing/lod/16.html">mosaic</rs>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>apographs record lunate epsilon and sigma, and minuscule omega (it is unclear why Muscolino refers to rhomboid omicron (p.111), since neither apograph presents such a form).</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -112,10 +112,11 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
                             	<geo>37.85358, 15.28851</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0300" notAfter-custom="0500" evidence="textual-context">later Roman/early Christian on the basis of the formulae.</origDate>
                         </origin>
-                        <provenance type="found" notAfter="1823">Ferrua reports Morso as recording that it was found some time before 1823 in the baths of Taormina</provenance>
+                        <provenance type="found" subtype="discovered" when="1810">Found in spring 1810 (prior to 3 April) in excavations conducted by Fagan and Del Muto in Taormina, in the context of ancient baths in 'via Crucis', assumed to be in the area of via Bagnoli Croci, below and to the south of the ancient theatre. Kaibel's statement that it was found in 1823 is a misreading of Morso. Found in two rooms decorated with mosaics and marble decorative elements. Not seen more recently.<geo>37.8512371,15.2907767</geo></provenance><!-- representative location on via Bagnoli Croci -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -155,7 +156,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">honorific</term>
+                    <term ana="#function.votive" ref="http://www.eagle-network.eu/voc/typeins/lod/83.html">votive</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -169,10 +170,12 @@
 	    <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-04-21" who="#JP">Jonathan Prag edited text and checked basic metadata</change>
+                <change when="2024-08-13" who="#JP">Jonathan Prag revised from publications.</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic001271_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -180,28 +183,30 @@
             <graphic n="print" url="ISic001271.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>Κλωδιανὸς
-                    <lb n="2"/><choice><orig>κὲ</orig><reg>καὶ</reg></choice> Μοῦσα
-                    <lb n="3"/>σὺν πεδίοις
+                    <lb n="1"/><persName type="attested"><name>Κλωδι<supplied reason="lost">αν</supplied>ὸς</name></persName>
+                    <lb n="2"/><choice><orig>κὲ</orig><reg>καὶ</reg></choice> <persName type="attested"><name>Μοῦσα</name></persName>
+                    <lb n="3"/>σὺν πεδί<unclear>ο</unclear><supplied reason="lost">ις</supplied>
                     <lb n="4"/>ὑπὲρ εὐχῆς
-                    <lb n="5"/>ἐπέθηκαν
+                    <lb n="5"/> ἐπ<supplied reason="lost">οίησ</supplied>αν
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text of Muscolino</note></app>
+                    <app loc="6"><note>Kaibel after Morso: ἐπέθηκαν</note></app>
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Klodianos and Mousa, together with their offspring, made this on account of a prayer/vow</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Klodianos and Mousa; sun pediois huper euches epethekan ?--></p>
+                <p>Muscolino offers a revised reading, based upon a newly discovered apograph of 1810 from the time of the discovery, which diverges from that, based upon a separate apograph, of Morso 1823. Muscolino concludes that the text was incised on a marble plaque as part of a decorative stone floor, rather than being a mosaic text.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -217,7 +222,19 @@
                         <citedRange>no.485</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref></bibl>
-                    <!-- need to check Morso in Giornale di sicenze, lettere ed arti per la Sicilia, vol. 4, 1823, p.166 -->
+                    <bibl>
+                        <author>Muscolino</author>
+                        <date>2017</date>
+                        <citedRange>107-116</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/AJ7ER4XD"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002808">https://biblio.inscriptiones.org/epig10002808</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Morso</author>
+                        <date>1823</date>
+                        <citedRange>166-168</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JWQQZ697"/>
+                        </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
