@@ -75,7 +75,7 @@
         <!-- in Oxygen: Options > Preferences > XML > XML Parser > Schematron -->
         <rule context="//t:div[@type='apparatus']">
             <report test="descendant::t:note[matches(.,'&#x0323;|&#xE1C0;')]">Underdots in apparatus</report>
-            <report test="descendant::t:note[matches(.,'&lt;|&gt;')]">Angle brackets in apparatus</report>
+            <!--<report test="descendant::t:note[matches(.,'&lt;|&gt;')]">Angle brackets in apparatus</report>--> <!-- we're not actioning the apparatus entreis, so using entities for <> is fine for the time being -->
         </rule>
     </pattern>
     
