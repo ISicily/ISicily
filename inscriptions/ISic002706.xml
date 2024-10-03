@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -54,21 +58,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002706</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387295</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"</repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
+                        <idno type="inventory">141</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,29 +81,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
+                                <support><p>Fragmentary stele, irregularly broken at the top and bottom. Meligunìs Lipára XII notes that the inscription is engraved in a lowered surface, probably due to the erasure of an older text, of which two letters remain on the left margin of the slab: a tau on a first line, a sigma on a second line.</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">21</height>
+                                        <width unit="cm">32</width>
+                                        <depth unit="cm">60-80</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">50-60 (omicron 45)</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -119,10 +119,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0500" precision="low">3rd century CE or later (?) (letter
-                                forms - lunate)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" precision="low">2nd or 1st century BCE? (lunate sigma?)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Contr. Diana</provenance>
+                        <provenance type="found" subtype="discovered" when="1948">Chance find in 1948 in the excavation of the cistern of the Scuole Elementari at the beginning of the road to Piano Conte<geo>38.467130, 14.953871</geo></provenance><!-- representative geo for contrada Diana -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -176,10 +175,11 @@
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-07-19" who="#AL">Andoni Llamazares added text edition</change>
+                <change when="2024-07-09" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic002706_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -187,7 +187,7 @@
             <graphic n="print" url="ISic002706.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface>-->
     </facsimile>
     <text>
         <body>
@@ -200,7 +200,9 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>text according to I.Lipara</note></app>
+                    <listApp><app><note>Meligunìs Lipára XII</note></app></listApp>
+                    <app loc="1-2"><note>Stone (according to Meligunìs Lipára XII): ΗΔΥΧΡΟ; Calderone, Manganaro (1999a): Ἡδυχρώ</note></app>
+                    <app loc="3"><note>Calderone: ΛΙΟ[Σ]</note></app>
                 </listApp>
             </div>
             <div type="translation">

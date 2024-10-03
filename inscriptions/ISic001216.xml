@@ -42,6 +42,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -55,21 +59,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001216</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385605</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico
-                            Regionale Eoliano "Luigi Bernabò Brea"</repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
+                        <idno type="inventory">13670</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -82,29 +82,38 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Upper part of stele, irregularly broken at the bottom</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">33</height>
+                                        <width unit="cm">45</width>
+                                        <depth unit="cm">12.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Letter heights on obscured line 4 cannot be determined</p><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">65 (phi and rho: 80)</height>
                                 </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">70-75 (omicron and epsilon: 50)</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">50-58</height>
+                                </dimensions>    
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
                                     <height unit="mm"/>
@@ -121,7 +130,8 @@
 		</origPlace>
                             <origDate datingMethod="#julian" cert="low">(?)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">The stele was found in Lipari, but the exact place, circumstances, and date of its discovery are not known.<geo>38.467130, 14.953871</geo></provenance><!-- representative geo for contrada Diana -->
+                        <provenance type="transferred" when="1952">It was located in the Archaeological Museum of Palermo, from where it was later transferred to Museo Archeologico Regionale Eoliano in 1965</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -176,10 +186,12 @@
 	            <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-04" who="#MH">transcribed text and provided translation</change>
+                <change when="2024-06-25" who="#AA">Alex Antoniou addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
+	    <surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001216_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -187,16 +199,16 @@
             <graphic n="print" url="ISic001216.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface>-->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MH">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MH #AA">
                 <ab>
-                    <lb n="1"/><name>Ἐπαφρᾶ</name>
-                    <lb n="2"/><name>Ἱρτιανο<unclear>ῦ</unclear></name>
-                    <lb n="3"/><unclear>ἀπ</unclear>ελευ
-                    <lb n="4" break="no"/><supplied reason="lost">θέρ</supplied><unclear>ου</unclear>
+                    <lb n="1"/><persName type="attested"><name>Ἐπαφρᾶ</name>
+                    <lb n="2"/><persName type="attested"><name type="libertinatio">Ἱρτιανο<unclear>ῦ</unclear></name></persName></persName>
+                    <lb n="3"/><w><unclear>ἀπ</unclear>ελευ
+                    <lb n="4" break="no"/><supplied reason="lost">θέρ</supplied><unclear>ου</unclear></w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -204,6 +216,8 @@
                     <app>
                         <note>Text according to I.Lipara</note>
                     </app>
+                    <app loc="2"><note>Kaibel, Libertini: ΙΡΤΙΑΝΟΥ, Bernabò Brea - Cavalier: ΙΣΤΙΑΝΟΥ</note></app>
+                    <app loc="2"><note>Kaibel, Libertini: ΑΠΕΛΕΤ[ΘΕΡΟΥ], Bernabò Brea - Cavalier: ΑΠΕΛΕΥΘΕΡΑ</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#MH">

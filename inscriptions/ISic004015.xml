@@ -38,6 +38,10 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
+                    <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -50,20 +54,17 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004015</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4389583</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Lipari</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
+                        <idno type="inventory">11614</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -76,27 +77,45 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                <support><p>Sarcophagus head, reused as a funerary stele. The front face, smooth, is delimited above and below by two smooth protruding bands, on the upper face, by the lateral ends, two deep quadrangular recesses, of which the one on the left still retains part of an iron grappa. Lower corners missing, with chips on the front face. The inscription, on five lines, is placed in the central part of the slab, except for the first line, engraved on the upper projecting band.</p>
+                                    <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic (pietra di Fuardo)</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions><!--ILipara-->
+                                        <height unit="cm">59.2</height>
+                                        <width unit="cm">56.8</width>
+                                        <depth unit="cm">72-78</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.complete"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.complete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><!--ILipara-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">42-48 (rho 54, second epsilon 56)</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">55-64 (first alpha 71)</height>
+                                </dimensions>
+                                <locus from="line3" to="line3">Line 3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">56-60 (kappa 63, iota 66)</height>
+                                </dimensions>
+                                <locus from="line4" to="line4">Line 4</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">45-50</height>
+                                </dimensions>
+                                <locus from="line5" to="line5">Line 5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">40-43</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -113,7 +132,7 @@
                             	<geo>38.48333, 14.93333</geo>
 		</origPlace>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1969">Found in 1969 in the excavation of trench XXXI (episcopal property); it was reused as the N head of masonry tomb 1004 (dated to the late 1st century CE).<geo>38.467130, 14.953871</geo></provenance><!-- representative geo for contrada Diana -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -152,8 +171,13 @@
                 <language ident="scx">Sikel</language>
                 <language ident="sxc">Sikan</language>
             </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -161,10 +185,11 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2024-07-09" who="#AA">Alex Antoniou Epidoc editing and addition of metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic004015_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -172,28 +197,28 @@
             <graphic n="print" url="ISic004015.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface>-->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI334518">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>
-
-
-                    Ἡδυχροῦν ἁ<lb n="2"/>Ἀναδενδρὰς<lb n="3"/> χρηστὴ καὶ<lb n="4"/> ἄμεμπτε<lb n="5"/>
-                    χαῖρε.
-                    <lb n="6"/>
+                    <lb n="1"/><persName type="attested"><name>Ἡδυχροῦν</name> <w>ἁ</w>
+                    <lb n="2"/><name>Ἀναδενδρὰς</name></persName>
+                    <lb n="3"/><w>χρηστὴ</w> <w>καὶ</w>
+                    <lb n="4"/><w>ἄμεμπτε</w>
+                    <lb n="5"/><w>χαῖρε</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>Meligunìs Lipára XII</note></app></listApp>
+                <app loc="1"><note>Bernabò Brea - Cavalier omits the alpha at the end of line 1</note></app>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#AA">
+                <p>Hedychroun Anadendras, worthy and blameless, farewell.</p>
             </div>
             <div type="commentary">
-                <p><!--commentary--></p>
+                <p>The formula <foreign xml:lang="grc">χρηστὴ καὶ ἄμεμπτε</foreign> is almost entirely restricted to the southeast of Sicily (Syracusae and Catina).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
