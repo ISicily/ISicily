@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -30,11 +32,11 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
@@ -79,23 +81,25 @@
                                 <support>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.unknown" ref="http://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</objectType>
-                                    <dimensions><!--Default values and requires editing-->
+                                    <dimensions>
+                                        <!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
+                                <!--Default value and requires editing-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -110,13 +114,15 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0400">Imperial</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">"nel cimitero de' Cappucini"<geo>37.078240, 15.295153</geo></provenance>
+                        <provenance type="found" subtype="discovered">
+                            "nel cimitero de' Cappucini"<geo>37.078240, 15.295153</geo>
+                        </provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -124,18 +130,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -165,13 +171,13 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-09-10" who="#JP">Jonathan Prag made preliminary revision of epidoc from IG</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -182,27 +188,51 @@
             <graphic n="print" url="ISic000857.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface></facsimile>
+        </surface>
+    </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>Λεο<supplied reason="omitted">σ</supplied>θένης
-                    <lb n="2"/>Λέπιδος
-                    <lb n="3"/>καὶ Ἐράσμιος
-                    <lb n="4"/>ἔζησες ἔτ<supplied reason="omitted">η</supplied> <num value="20"><hi rend="supraline">κ</hi></num>
-                    <lb n="5"/><expan><abbr>μῆν</abbr><ex>ας</ex></expan> · <num value="4">δ</num> · <expan><abbr>ἡμέρ</abbr><ex>ας</ex></expan> <num value="8">η</num>
-              </ab>
+                    <lb n="1"/><w n="5">Λεο<supplied reason="omitted">σ</supplied>θένης</w>
+                    <lb n="2"/><w n="10">Λέπιδος</w>
+                    <lb n="3"/><w n="15">καὶ</w> <w n="20">Ἐράσμιος</w>
+                    <lb n="4"/><w n="25">ἔζησες</w> <w n="30">ἔτ<supplied reason="omitted">η</supplied></w> <num value="20"><w n="35"><hi rend="supraline">κ</hi></w></num>
+                    <lb n="5"/><w n="40"><expan><abbr>μῆν</abbr><ex>ας</ex></expan></w> <g ref="#interpunct">·</g> <num value="4"><w n="45">δ</w></num> <g ref="#interpunct">·</g> <w n="50"><expan><abbr>ἡμέρ</abbr><ex>ας</ex></expan></w> <num value="8"><w n="55">η</w></num>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized">
+                <ab>
+                    <w n="5" lemma="Λεοσθένης">Λεοσθένης</w>
+                    <w n="10" lemma="Λέπις">Λέπιδος</w>
+                    <w n="15" lemma="καί">καὶ</w>
+                    <w n="20" lemma="Ἐράσμιος">Ἐράσμιος</w>
+                    <w n="25" lemma="ζάω">ἔζησες</w>
+                    <w n="30" lemma="ἔτος">ἔτη</w>
+                    <w n="35" lemma="κ">κ</w>
+                    <w n="40" lemma="μείς">μῆνας</w>
+                    <w n="45" lemma="δ">δ</w>
+                    <w n="50" lemma="ἡμέρα">ἡμέρας</w>
+                    <w n="55" lemma="η">η</w>
+                </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text of IG</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text of IG</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p>
+                    <!--translation(s) - add @xml:lang for 'en' or 'it' to div-->
+                </p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Leothenes, commemorated by Lepidos (latin name) and Erasmius (gr. name); age in yrs, months, days.--></p>
+                <p>
+                    <!--commented out pending revision-->
+                    <!--Leothenes, commemorated by Lepidos (latin name) and Erasmius (gr. name); age in yrs, months, days.-->
+                </p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -211,24 +241,30 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0040</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <citedRange>3.5403</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>49 n.244</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
+                    </bibl>
                     <bibl>
                         <author>Korhonen</author>
                         <date>2007</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/PTW9C3GD"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001485">https://biblio.inscriptiones.org/epig10001485</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001485">https://biblio.inscriptiones.org/epig10001485</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
