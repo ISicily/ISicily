@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragment of a Latin inscription</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001897</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001897</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <region>England</region>
+                        <settlement>London</settlement>
+                        <repository role="museum" ref="https://www.britishmuseum.org/">The British Museum</repository>
+                        <idno type="inventory">1863,0728.238</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>A small fragment of white marble, possibly intact along the lower edge, but broken on the other three sides</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!-- BM measurements -->
+                                        <height unit="cm"></height>
+                                        <width unit="cm">6.3</width>
+                                        <depth unit="cm">2.5</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Single line of Latin letters visible</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Tall narrow letters with serifs</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"></height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"></height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
+                            	<geo>37.32084, 13.58876</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="lettering">C2-C3 CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" notAfter="1863">Obtained by George Dennis from Agrigento and given to the British Museum in 1863.</provenance>
+                        <provenance type="observed" subtype="autopsied">No autopsy</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.unknown" ref="http://www.eagle-network.eu/voc/typeins/lod/143.html">unknown</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2025-02-25" who="#JP">Jonathan Prag created file from information on BM website</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001897_tiled.tif" height="1235px" width="1776px">
+                <desc>© The Trustees of the British Museum. Shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence.</desc>
+            </graphic>
+            <graphic n="print" url="ISic001897.jpg" height="1235px" width="1776px">
+                <desc>© The Trustees of the British Museum. Shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence.</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w part="I"><unclear>f</unclear>ec</w><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
+                </ab>
+             </div>
+            <div type="apparatus">
+               <listApp>
+                   <app><note>Text from photograph</note></app>
+                   <app loc="1"><note>The BM website transcribes: [-]FEC[-]; there appears to be the trace of a vertical stroke on the right edge of the stone, perhaps FECI[t?] therefore?</note></app>
+               </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p></p>
+            </div>
+            <div type="commentary">
+                <p>The fragment appears unpublished, beyond the presentation on the British Museum website, at: <ref target="https://www.britishmuseum.org/collection/object/G_1863-0728-238?selectedImageId=1391232001">https://www.britishmuseum.org/collection/object/G_1863-0728-238?selectedImageId=1391232001</ref></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl/>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
