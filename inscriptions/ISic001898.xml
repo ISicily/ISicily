@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragment of a Greek funerary inscription</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001898</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001898</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>United Kingdom</country>
+                        <region>England</region>
+                        <settlement>London</settlement>
+                        <repository role="museum" ref="https://www.britishmuseum.org/">The British Museum</repository>
+                        <idno type="inventory">1863,0728.235</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Fragment of a white marble plaque, intact on the right edge, and probably below, broken above and to the left.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!-- BM measurements -->
+                                        <height unit="cm">14.25</height>
+                                        <width unit="cm">6.95</width>
+                                        <depth unit="cm"></depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>The right end of up to six lines of Greek letters preserved with an irregular right margin.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Letters of uneven width, simple wedge serifs and a thick rounded groove, rather than v-cut; some use of ligatures and small letters at line-end.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"></height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"></height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
+                            	<geo>37.32084, 13.58876</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="lettering">C2-C3 CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" notAfter="1863">Obtained by George Dennis from Agrigento and given to the British Museum in 1863.</provenance>
+                        <provenance type="observed" subtype="autopsied">No autopsy</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2025-02-27" who="#JP">Jonathan Prag created file from edition by Marshall and photograph</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001898_tiled.tif" height="1615px" width="1093px">
+                <desc>© The Trustees of the British Museum. Shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence.</desc>
+            </graphic>
+            <graphic n="print" url="ISic001898.jpg" height="1615px" width="1093px">
+                <desc>© The Trustees of the British Museum. Shared under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) licence.</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>θ</unclear>ις</w> αὐ<hi rend="ligature">τῆ</hi><hi rend="small">ς</hi>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> ἔ<hi rend="ligature">τη</hi> <g ref="#interpunct">·</g> <num value="74" cert="low">δο</num>
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">η</w> <name>Ἀφρικανὴ</name>
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">σε</supplied><unclear>μ</unclear>νοτά<hi rend="ligature">τη</hi>
+                    <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/> <g ref="#interpunct">·</g> Η
+                </ab>
+             </div>
+            <div type="apparatus" resp="#JP">
+               <listApp>
+                   <app><note>Text from photograph</note></app>
+                   <app loc="1"><note>Marshall: [---]ι</note></app>
+                   <app loc="3"><note>Marshall: [---]στη · δο</note></app>
+                   <app loc="6"><note>Marshall: [ἐτῶ]ν · η</note></app>
+               </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p></p>
+            </div>
+            <div type="commentary">
+                <p>The fragment is only published in the British Museum catalogue, by Marshall based on autopsy between 1909 and 1916. I diverge from Marshall at line 3, where from the photograph it appears better to read ἔτη in ligature. It appears that the numeral in line 3 is written in reverse, i.e. pseudo-ascending. The inscription is online on the BM website, at:  <ref target="https://www.britishmuseum.org/collection/object/G_1863-0728-235">https://www.britishmuseum.org/collection/object/G_1863-0728-235</ref></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Marshall</author>
+                        <date>1874-1916</date>
+                        <citedRange>vol. 4, p.218, no.1103 </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GYATLCPD"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
