@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 002906</title>
+                <title>Fragmentary Latin text</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="AT" ref="https://orcid.org/0009-0009-2753-4014">Alfredo Tosques</name>
+                    <resp>Text encoding</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -50,14 +54,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002906</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387727</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Agrigento</settlement>
@@ -76,25 +78,26 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>fragment of left side of a thin plaque of marble</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--Brea-->
+                                        <height unit="cm">16.5</height>
+                                        <width unit="cm">9.7</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Beginnings of six lines preserved; in Bernabo Brea's transcription the left margin is irregular, suggesting the lines were centred.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Brea notes that the letters tend towards cursive.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -112,9 +115,9 @@
                                 <placeName type="ancient"/>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523796">Piazza Armerina</placeName>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low" precision="low">1st — 3rd century CE (?) (roman, imperial, official, tending to the 'cursive'</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="lettering">2nd — 3rd century CE (?) (roman, imperial, official, tending to the 'cursive')</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" notBefore="1942" notAfter="1944">Found during works to consolidate mosaics at the villa, 1942-1944, when excavation also took place to uncover the xistus in front of the triabsidal hall, during which this fragment was found.<geo>37.3644861,14.3336433</geo></provenance><!-- point in front of the triabsidal hall -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -159,7 +162,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -168,11 +171,12 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                <change when="2025-04-10" who="#AT">Alfredo Tosques added the text reproducing the edition of Manganaro 1980 (no autopsy)</change>
+                <change when="2025-04-10" who="#AT">Alfredo Tosques added the text reproducing the edition of Manganaro 1982 (no autopsy)</change>
+                <change when="2025-04-22" who="#JP">Jonathan Prag revised and updated metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic002906_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -180,22 +184,26 @@
             <graphic n="print" url="ISic002906.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AT" source="https://www.zotero.org/groups/382445/items/VG592RBX">
                 <ab>
-                    <lb n="1"/>C<g ref="#interpunct">·</g><gap reason="lost" extent="unknown" unit="character"></gap>
-                 <lb n="2"/>QUO<gap reason="lost" extent="unknown" unit="character"></gap>
-                    <lb n="3"/>PVF<gap reason="lost" extent="unknown" unit="character"></gap>
-                    <lb n="4"/>MV<gap reason="lost" extent="unknown" unit="character"></gap>
-                    <lb n="5"/>CIN<gap reason="lost" extent="unknown" unit="character"></gap>
-                    <lb n="6"/>EXT<gap reason="lost" extent="unknown" unit="character"></gap>
+                    <lb n="1"/><persName type="attested"><name><expan><abbr>C</abbr><ex>aio</ex></expan></name></persName> <g ref="#interpunct">·</g> <gap reason="lost" extent="unknown" unit="character"/>
+                 <lb n="2"/><orig>QUO</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><orig>PVF</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="4"/><orig>MV</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="5"/><orig>CIN</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="6"/><orig>EXT</orig><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text of Manganaro 1982 following Bernabo Brea's transcription</note></app>
+                    <app loc="1"><note>Given the annotation of an interpunct after the C, this must be a praenomen, most likely in the dative, an honorific or funerary text.</note></app>
+                    <app loc="6"><note>Bernabo Brea: ex t(estamento)</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
