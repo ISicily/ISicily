@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 002907</title>
+                <title>Fragmentary dedication to the Diva Poppaea</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,6 +34,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                    <name xml:id="AT" ref="https://orcid.org/0009-0009-2753-4014">Alfredo Tosques</name>
+                    <resp>Text encoding</resp>
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -74,22 +78,22 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Seven joining fragments of a marble plaque from the vertical middle of the text, and a further upper right corner fragment</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions>
-                                        <!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!--Gentili-->
+                                        <height unit="cm">greater than 59</height>
+                                        <width unit="cm">greater than 14</width>
+                                        <depth unit="cm">3.2</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragments.contiguous"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout>
+                                <layout><p>Text decreases in size</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <rs ana="#execution.rubrication.red">Rubrication, red colour</rs>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -113,9 +117,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523796">Piazza Armerina</placeName>		
                             	<geo>37.38417, 14.36921</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0065" notAfter-custom="0066">65/66 CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0065" notAfter-custom="0066" evidence="prosopography">65/66 CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Recovered during excavations at the villa del Casale</provenance>
+                        <provenance type="found" subtype="discovered" when="1950">Recovered during excavations in 1950 at the villa del Casale from the grand hunt corridor<geo>37.36476, 14.33502</geo></provenance><!-- hunt corridor -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -125,7 +129,7 @@
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
              <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+                 <xi:fallback>37.36475387638254, 14.335015059154212
                      <p>Taxonomies for ISicily controlled values</p>
                  </xi:fallback>
              </xi:include>
@@ -156,11 +160,11 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2017-11-10" who="#JP">Jonathan Prag added geo and bibl elements</change>
@@ -170,10 +174,12 @@
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-08-05" who="#JP">Jonathan Prag amended repository information</change>
+                <change when="2025-04-10" who="#AT">Alfredo Tosques added the text (reproducing Manganaro 1982) and an apparatus</change>
+                <change when="2025-04-22" who="#JP">Jonathan Prag revised and updated metadata</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic002907_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -181,23 +187,36 @@
             <graphic n="print" url="ISic002907.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la">
-                <ab>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
+                <ab> 
+                    <lb n="1"/><persName type="attested" subtype="imperial"><supplied reason="lost">Divae</supplied> <name type="supernomen"><unclear>A</unclear>ugu<supplied reason="lost">s</supplied>tae</name>
+                     <lb n="2"/><name type="nomen"><supplied reason="lost">Popp</supplied><unclear>a</unclear>ea<unclear>e</unclear></name></persName>
+                    <lb n="3"/><persName type="attested" subtype="imperial"><name type="cognomen"><supplied reason="lost">Neroni</supplied></name> <name type="nomen"><supplied reason="lost">Cl</supplied>aud<supplied reason="lost">io</supplied></name>
+                     <lb n="4"/><name type="cognomen"><supplied reason="lost">Caesari</supplied></name> <name type="supernomen"><supplied reason="lost">A</supplied>ugu<supplied reason="lost">sto</supplied></name>
+                     <lb n="5"/><name type="supernomen"><supplied reason="lost">Germ</supplied><unclear>a</unclear>nic<supplied reason="lost">o</supplied></name></persName>
+                      <lb n="6"/><roleName type="supracivic.religious" subtype="pontifex.maximus"><supplied reason="lost"><expan><abbr>p</abbr><ex>ontifici</ex></expan></supplied> <supplied reason="lost"><expan><abbr>m</abbr><ex>aximo</ex></expan></supplied></roleName> <supplied reason="lost"><expan><abbr>tr</abbr><ex>ibunicia</ex></expan></supplied> <supplied reason="lost"><expan><abbr>pot</abbr><ex>estate</ex></expan></supplied> <gap reason="lost" unit="character" quantity="2"/> <roleName type="supracivic" subtype="imperator"><supplied reason="lost"><expan><abbr>imp</abbr><ex>eratori</ex></expan></supplied></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="consul"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></roleName> <roleName type="supracivic" subtype="pater.patriae"><supplied reason="lost"><expan><abbr>p</abbr><ex>ater</ex></expan> <expan><abbr>p</abbr><ex>atriae</ex></expan></supplied></roleName>
+                      <lb n="7"/><persName type="attested"><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><expan><abbr>f</abbr><ex>ilius</ex></expan></supplied> <name><supplied reason="lost">H</supplied>onor<unclear>a</unclear><supplied reason="lost">tus</supplied></name></persName>
+                      <lb n="8"/><roleName type="civic.religious" subtype="sacerdos"><supplied reason="lost">sacerdos</supplied></roleName> <name><supplied reason="lost">Augusti</supplied></name> a <g ref="#interpunct">·</g> po<supplied reason="lost">pulo</supplied>
+                      <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">qui</supplied> <supplied reason="lost">dedic</supplied>atio<supplied reason="lost">ne</supplied> <supplied reason="lost">epu</supplied>
+                   <lb n="10" break="no"/><supplied reason="lost">lum</supplied> <supplied reason="lost"><expan><abbr>sing</abbr><ex>ulis</ex></expan></supplied> <roleName type="civic" subtype="decurio"><supplied reason="lost">decurioni</supplied>bus</roleName> <g ref="#interpunct">·</g> <num><supplied reason="lost">x</supplied><gap reason="lost" extent="unknown" unit="character"/></num>
+                      <lb n="11"/><supplied reason="lost"><roleName type="civic.religious" subtype="sevir">sexviris</roleName></supplied> <num><supplied reason="lost">X</supplied><gap reason="lost" extent="unknown" unit="character"/></num> <supplied reason="lost">populo</supplied> <num value="11.5"><supplied reason="lost">X</supplied><unclear>I</unclear>S</num> <g ref="#interpunct">·</g> et <supplied reason="lost">gladia</supplied>
+                     <lb n="12" break="no"/><supplied reason="lost">torum</supplied> <supplied reason="lost" cert="low">paria</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">d</supplied>edit <gap reason="lost" extent="unknown" unit="character"/>
+                     <lb n="13"/><supplied reason="lost" cert="low">templum</supplied> <supplied reason="lost">terrae</supplied> <supplied reason="lost">m</supplied>otibu<supplied reason="lost">s</supplied> <supplied reason="lost">conla</supplied>
+                     <lb n="14" break="no"/><supplied reason="lost">psum</supplied> <supplied reason="lost" cert="low">sua</supplied> <supplied reason="lost" cert="low">pecunia</supplied> <supplied reason="lost" cert="low">restituit</supplied>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp><app><note>The text follows the edition proposed in Manganaro 1982, p. 500, which was itself derived from a proposal of Degrassi (so Manganaro 2005: 186 no.2), with the only modification being the expansion of the abbreviation sing. However, it is worth noting that the same publication includes a handwritten sketch of the inscription (fig. 4, p. 498), which suggests some alternative readings: the numeral restored at the end of line 10 is XIIIS, not X[-]; in line 11, the numeral following sexviris is restored as XIII, not X[-]; and in line 12, the restoration amplius is proposed at the end of the line instead of leaving a gap.</note></app></listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--multiple frr., with a reconstr. drawing in Mang's ed. Set up to the Diva Poppaea and to Nero, by (after the restorations) Honoratus, priest of Augustus...? The fr. itself reads only ]Augus[- | -]aeae[- |-]aud[- | -]ugu[- | -]anic[- |-]cos[- | -]onora[- |-]a po[- | -]atio[- | -]bus [- | -]IS et[- | -]edit[- | -]otibu[-. However, M manages: Divae Augustae Poppaeae Neroni Claudio Caesari Augusto Germanico p.m.tr.pot.- imp.cos.p.p. - - -f. Honoratus sacerdos Augusti a populo - -, qui dedicatione epulum sing. decurionbus. X- seviris. X-, populo XIS et gladiatorum paria (??) -dedit - - templum (?) terrae motibus conlapsum sua pecunia restituit (?).--></p>
+                <p></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
