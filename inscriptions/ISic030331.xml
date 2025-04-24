@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Phylacterion on bronze</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+           <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	</titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic030331</idno>
+                <idno type="TM">285036 </idno>
+                <idno type="EDR">112329</idno>
+                <idno type="EDH"/>
+                <idno type="EDCS">38000222</idno>
+                <idno type="PHI">178083</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030331</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">82071</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Bronze lamina, damaged on the right hand edge and along the lower edge.</p>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145">lamina</objectType>
+                                    <dimensions><!--Sciacca-->
+                                        <height unit="cm">9.5</height>
+                                        <width unit="cm">3</width>
+                                        <depth unit="cm"></depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.damaged"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Text over 32 lines</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>lunate epsilon and sigma, uncial omega, alpha tending to cursive.</p>
+                                <locus from="line1" to="line32">Line 1-32</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">2</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462423">Philosophiana</placeName>		
+                                <offset>near
+                                    <placeName type="modern" ref="http://sws.geonames.org/2524200">Mazzarino</placeName>
+                                </offset>
+                            	<geo>37.30188, 14.20959</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0401" notAfter-custom="0500" evidence="lettering textual-context">4th-5th century CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" notAfter="1978">From the area of Sofiana, but not more precisely located (although the site includes a synagogue)<geo>37.3192272,14.2931146</geo></provenance><!-- representative point in the ancient site -->
+                        <provenance type="observed" subtype="autopsied">none</provenance>
+                        <acquisition/>
+                    </history>                    
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.prayer" ref="http://www.eagle-network.eu/voc/typeins/lod/85.html">prayer</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2025-04-24" who="#JP">Jonathan Prag created draft from publication</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/><!-- 
+        <surface type="front">
+            <graphic n="screen" url="ISic030331_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic030331.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface> -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <ab>
+                        <lb n="1"/>Δελκω ια Δικών ια Εσκα <gap extent="unknown" reason="lost" unit="character"/>
+                        <lb n="2"/>σεαρα ια Μιχαήλ ια Γαβριήλ
+                        <lb n="3"/>ι<unclear>α</unclear> Ἰήλ ια Ραφαήλ ια Οὐριήλ
+                        <lb n="4"/>σὺ Εἰλιήλ ια Τεδχιήλ ια
+                        <lb n="5"/>Οὐνιήλ ια <unclear>Ε</unclear>ιστραήλ ια Φονι
+                        <lb n="6" break="no"/>φναήλ ια ια ὠθ ια τ<supplied reason="lost">ι</supplied>βαώ<supplied reason="lost">θ</supplied>
+                        <lb n="7"/><unclear>ια</unclear> Οὐριήλ ια Τεδχιήλ ια <w>Σει<supplied reason="lost">λαμ</supplied>
+                        <lb n="8" break="no"/>φιήλ</w> ια Τεδχιήλ ια <w>Κρου<gap extent="unknown" reason="lost" unit="character"/>
+                        <lb n="9" break="no"/>θιήλ</w> ια γιβιτίβα ια <w>Χρουθ<gap extent="unknown" reason="lost" unit="character"/>
+                        <lb n="10" break="no"/>ια</w> Σεραφὶμ μσωρθωμ ια̣
+                        <lb n="11"/>Ἀρφελλίμ ια Μαών ια <w>Ρα<gap extent="unknown" reason="lost" unit="character"/>
+                        <lb n="12" break="no"/>ζβουλ</w> ια Ἀρφελιήμ ια Σετ<unclear>ν</unclear>
+                        <lb n="13"/>Ἄρτεμης φεῦγε ἀπὸ τοῦ
+                        <lb n="14"/>Ἰούδα καὶ πᾶς πονερε<gap extent="unknown" reason="lost" unit="character"/>
+                        <lb n="15"/><unclear>ἐ</unclear>ν τὸ<unclear>ν</unclear> δόξα τοῦ ἁγίου θ<supplied reason="lost">εοῦ</supplied>
+                        <lb n="16"/><gap reason="illegible" unit="character" quantity="1"/><orig>ψυιθς</orig> <gap reason="illegible" unit="character" quantity="5"/>
+                        <lb n="17"/>Ἴ<unclear>θ</unclear>ρος ψη ζωοθ υαψ
+                        <lb n="18"/><unclear>υ</unclear>κόυπερα Σαβαὼθ Μιχα<supplied reason="lost">ήλ</supplied>
+                        <lb n="19"/>Γαβριὴλ αεβαχα πε<gap reason="illegible" unit="character" quantity="1"/><gap extent="unknown" reason="lost" unit="character"/>
+                        <lb n="20"/><gap reason="illegible" unit="character" quantity="1"/>αβαδι αυαν αβρα<unclear>σ</unclear>αξ<supplied reason="lost"> φύ</supplied>
+                        <lb n="21" break="no"/>λαξον Θυβες τὸν φορο<unclear>ῦ</unclear><supplied reason="lost">ντα</supplied>
+                        <lb n="22"/>Ἰούδα τὸ ἅγιον νόμον
+                        <lb n="23"/>σου βς ιδαα <orig>ΖΗ<g/>Ι</orig>
+                        <lb n="24"/>αβρσαξ <g/>
+                        <lb n="25"/>Σαβαὼθ σφραγεῖς ἐπὶ
+                        <lb n="26"/>Ἀδωνέα<gap reason="illegible" unit="character" quantity="1"/>ς ααβαμ
+                        <lb n="27"/>Aἰλωαί <space unit="character" atLeast="2" atMost="4"/><unclear>ι</unclear>μα<unclear>χ</unclear>
+                        <lb n="28"/>ι <gap reason="illegible" unit="character" quantity="4"/> <gap reason="illegible" unit="character" quantity="9"/>
+                        <lb n="29"/>Μιχαή<supplied reason="omitted">λ</supplied> <gap reason="illegible" unit="character" quantity="5"/>
+                        <lb n="30"/>τιβιωθ
+                        <lb n="31"/>σερβιθ <gap reason="illegible" unit="character" quantity="4"/> σετι
+                        <lb n="32"/><gap reason="illegible" unit="character" quantity="3"/> τ <gap reason="lost" extent="unknown" unit="character"/><unclear>να</unclear>λ
+                    </ab>
+               </ab>
+            </div>
+            <div type="apparatus" resp="#JP">
+                <listApp><app><note>preliminary text following Sciacca 1982-1983</note></app>
+                    <app loc="16"><note>Sciacca reads the final 5 characters as poorly formed Hebrew letters</note></app>
+                    <app loc="23"><note>penultimate symbol is a crossed circle</note></app>
+                    <app loc="24"><note>final symbol is a rectangle with horizontal crossbar</note></app>
+                    <app loc="28"><note>Sciacca reads the final 9 characters as poorly formed Hebrew letters (line misnumbered as 29 in Sciacca's edition)</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p></p>
+            </div>
+            <div type="commentary">
+                <p></p>
+            </div>
+            <div type="bibliography"><!-- to add Sciacca in Kokalos 1981 and R. Kotansky, Greek Magical Amulets, I, Opladen 1994, p. 155 sgg., Bulletin of Judaeo-Greek Studies, 18, 1996, p. 33 sgg., (G. Veltri), Gli Ebrei in Sicilia dal tardoantico al medioevo. Studi in onore di Monsignor Benedetto Rocco, Palermo 1998, p. 294 sgg. (G. Lacerenza) -->
+                <listBibl type="edition">
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>31.0844</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>33.0754</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>36.0886</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                    <bibl>
+                        <author>Noy</author>
+                        <date>1993</date>
+                        <citedRange>no.159</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/IBA4JMAN"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000166">https://biblio.inscriptiones.org/epig10000166</ref></bibl>
+                   <bibl>
+                        <author>Sciacca</author>
+                        <date>1982-1983</date>
+                        <citedRange>87-104</citedRange>
+                       <ptr target="https://www.zotero.org/groups/382445/items/MLIPZSQP"/>
+                   </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
