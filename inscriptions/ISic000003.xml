@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -30,13 +32,17 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>Lemmatization</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -50,9 +56,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000003</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333729</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -76,29 +80,36 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
+                                    <p>Rectangular marble plaque, somewhat uneven along the upper edge. Borken in two down the middle, but rejoined. Slight chipping to the lower edge.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <objectType/>
-                                    <dimensions>
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions><!-- IL Palermo -->
+                                        <height unit="cm">14</height>
+                                        <width unit="cm">31</width>
+                                        <depth unit="cm">2-3</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
-		    </supportDesc>
+                                <condition ana="#condition.complete.broken"/>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
+                                    <p>Horizontal guidelines between lines, but almost no interlineation. The text maintains left and right margins (with guideline indicating an outer right margin), with words broken across lines or abbreviated to maintain the margins. Interpuncts mark the ends of lines 2 and 3.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
+                                <p>Tall narrow letters with pronounced serifs and curved horizontal feet to vertical strokes.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="28" atMost="28">28</height>
+                                </dimensions>
+                                <locus from="line2" to="line3">Line 2-3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="30" atMost="30">30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -110,13 +121,13 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Variously dated between the first and third centuries CE by different scholars</origDate>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="lettering">second or third century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in area of Piazza Stesicoro (area of a Roman necropolis)<geo>37.507453, 15.085762</geo></provenance>
+                        <provenance type="found" subtype="discovered">Found in area of Piazza Stesicoro (area of a Roman necropolis), Catania <geo>37.507453, 15.085762</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -124,18 +135,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -166,14 +177,15 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2017-07-31" who="#JP">Jonathan Prag checked the EpiDoc</change>
                 <change when="2020-03-07" who="#JP">Jonathan Prag added image and made minor edits</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>             	   
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-30" who="#JP">Jonathan Prag edited text and tagged named entities</change>
-	</listChange>
+                <change when="2025-05-01" who="#RC">Robert Crellin added ids and lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -188,23 +200,41 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP" source="#JP">
                 <ab>
-                        <lb n="1"/><w>Dis</w> <g ref="#interpunct">·</g> <w><expan><abbr>man</abbr><ex>ibus</ex></expan></w> <g ref="#interpunct">·</g> <persName type="attested"><name>Culuc
-                        <lb n="2" break="no"/>uitas</name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct">·</g> <w><expan><abbr>an</abbr><ex>nis</ex></expan></w> <g ref="#interpunct">·</g> <num value="2">II</num> <g ref="#interpunct">·</g>
-                        <lb n="3"/><persName type="attested"><name>Tyche</name></persName> <g ref="#interpunct">·</g> <w>et</w>  <g ref="#interpunct">·</g> <persName type="attested"><name><expan><abbr>Herm</abbr><ex>es</ex></expan></name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>fe</abbr><ex>cerunt</ex></expan></w> <g ref="#interpunct">·</g>
+                    <lb n="1"/><w n="5">Dis</w> <g ref="#interpunct" n="10">·</g> <w n="15"><expan><abbr>man</abbr><ex>ibus</ex></expan></w> <g ref="#interpunct" n="20">·</g> <persName type="attested"><name><w n="25">Culuc
+                    <lb n="2" break="no"/>uitas</w></name></persName> <g ref="#interpunct" n="30">·</g> <w n="35"><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct" n="40">·</g> <w n="45"><expan><abbr>an</abbr><ex>nis</ex></expan></w> <g ref="#interpunct" n="50">·</g> <num value="2"><w n="55">II</w></num> <g ref="#interpunct" n="60">·</g>
+                    <lb n="3"/><persName type="attested"><name><w n="65">Tyche</w></name></persName> <g ref="#interpunct" n="70">·</g> <w n="75">et</w> <g ref="#interpunct" n="80">·</g> <persName type="attested"><name><w n="85"><expan><abbr>Herm</abbr><ex>es</ex></expan></w></name></persName> <g ref="#interpunct" n="90">·</g> <w n="95"><expan><abbr>fe</abbr><ex>cerunt</ex></expan></w> <g ref="#interpunct" n="100">·</g>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="deus">Dis</w>
+                    <w n="15" lemma="Manes">manibus</w>
+                    <w n="25" lemma="Culucuitas">Culucuitas</w>
+                    <w n="35" lemma="vivo">vixit</w>
+                    <w n="45" lemma="annus">annis</w>
+                    <w n="55" lemma="II">II</w>
+                    <w n="65" lemma="Tyche">Tyche</w>
+                    <w n="75" lemma="et">et</w>
+                    <w n="85" lemma="Hermes">Hermes</w>
+                    <w n="95" lemma="facio">fecerunt</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app><note>Text controlled against photograph</note></app>
-                    <app loc="line 3"><note>Mommsen (after Alessi): IYCHE·FHER·M·FE; Ferrua: Tyche et Herm(es) fec(erunt); Bivona: Tyche et Her(mes) fe(cerunt); Manganaro: Tyche et Herm̂a fec(erunt).</note></app>
+                    <app>
+                        <note>Text controlled against photograph</note>
+                    </app>
+                    <app loc="line 3">
+                        <note>Mommsen (after Alessi): IYCHE·FHER·M·FE; Ferrua: Tyche et Herm(es) fec(erunt); Bivona: Tyche et Her(mes) fe(cerunt); Manganaro: Tyche et Herm̂a fec(erunt).</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>To the shades of the underworld.  Culucuitas lived for 2 years. Tyche and Hermes made this.</p>
             </div>
-            <div type="commentary">
+            <div type="commentary" resp="#JP">
                 <p>Despite the good preservation of the stone, not one editor has so far correctly reported the final line. Mommsen did not see the stone and was only able to report the garbled reading of Alessi, in Giornale del gab. lett. dell' Acc. Gioenia 3 (1834), p.18 (non vidi). Ferrua and Manganaro both mistakenly reported the presence of a final C on the line; Bivona mistakenly reported the final name as only HER on the stone; Manganaro argued that the final M of Herm(es) in fact is MA in ligature and so Herma, but the supposed trace of a possible cross-bar on the second half of the M, to give A, appears to be part of adjacent damage on the stone, besides the implausibility of the female name in context, and the original reading of Herm(es) seems far preferable.</p>
             </div>
             <div type="bibliography">
@@ -214,25 +244,31 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650762">10.7097</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusPalermo">
                         <citedRange>3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref>
+                    </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1941</date>
                         <citedRange>268 no.39</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/P7QQ9SB6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002655">https://biblio.inscriptiones.org/epig10002655</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002655">https://biblio.inscriptiones.org/epig10002655</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1989</date>
                         <citedRange>171 no.37(tris) fig.41</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/EZMBJ6GN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001831">https://biblio.inscriptiones.org/epig10001831</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001831">https://biblio.inscriptiones.org/epig10001831</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
