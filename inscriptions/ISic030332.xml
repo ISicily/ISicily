@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A lead lamina with Christian text in Greek</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                     <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                     <resp>project direction, template development and general editor, data gathering</resp>
+                </respStmt>
+               <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic030332</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030332</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Catania</settlement>
+                        <repository/>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>    
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>A lead lamina</p>
+                                    <material ana="#material.metal.lead" ref="https://www.eagle-network.eu/voc/material/lod/108.html">lead</material>
+                                    <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
+                                    <dimensions>
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.complete"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3">Engraved</rs>
+                                    <p></p>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p></p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                    <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                    <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
+                                    <geo>37.49223, 15.07041</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0600" evidence="textual-context">4th - 6th century CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" notAfter="1927">Found int he area of San Giovanni Galermo, on the outskirts of Catania<geo>37.545035,15.043948</geo>.</provenance><!-- representative point for San Giovanni Galermo -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.prayer" ref="https://www.eagle-network.eu/voc/typeins/lod/85.html">prayer</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2025-05-07" who="#JP">Jonathan Prag created draft file from publication</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/><!-- 
+        <surface type="front">
+            <graphic n="screen" url="ISic030332_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic030332.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface> -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/9QAG5NVA">
+                <ab>
+                    <lb n="1"/>Μακάριως ἀνὴρ ὥς οὐ
+                    <lb n="2" break="no"/>κ αἰπορεύθ<supplied reason="omitted">η</supplied> ἐν βουλῆ ἀσε
+                    <lb n="3" break="no"/>βῶν καὶ ἐν ὡδῷ ἁμαρ
+                    <lb n="4" break="no"/>τολν ο<supplied reason="lost">ὐ</supplied>κ ἔστην καἰ ἐπὶ
+                    <lb n="5"/>καθέδρᾳ λυμῶν οὐκ αἰκά
+                    <lb n="6" break="no"/>θισε ἀλλὰ ἐν νόμοͅ <expan><abbr>Κ</abbr><ex>υρίο</ex><abbr>υ</abbr></expan>
+                    <lb n="7"/>τὸ θέλη<supplied reason="lost">μ</supplied>α αὐτοῦ καὶ ἐν τ νό
+                    <lb n="8" break="no"/>μοͅ αὐτο<supplied reason="omitted">ῦ</supplied> μελ<supplied reason="lost">ε</supplied>τᾷ ἡμέρας καἰ
+                    <lb n="9"/>νυκτός καἰ ἔστε ὡ<supplied reason="lost">ς</supplied> τὸ ξύλον τὸ
+                    <lb n="10"/>πεφυ<supplied reason="lost">τευ</supplied>μέν<supplied reason="lost">ον</supplied> τὸ παρὰ τὰς διεξόδο<supplied reason="omitted">υ</supplied>ς
+                    <lb n="11"/>τῶν ὑδάτων <gap reason="lost" extent="unknown" unit="character"/> τὼν καρπὸν αὐ
+                    <lb n="12" break="no"/>τοῦ δό<supplied reason="lost">σ</supplied>ει ἐν κερῷ αὐτοῦ καὶ πά<supplied reason="lost">ν</supplied>τα
+                    <lb n="13"/>ἄν πυͅ κατευδοτίσετε <supplied reason="lost">οὐχ</supplied>
+                    <lb n="14"/>οὕτο<supplied reason="lost">ς</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="15"/>ἀναλυτικὸν καἰ ἀ
+                    <lb n="16" break="no"/>ποδιοκτικὸν
+                    <lb n="17"/>πρὸς πᾶσαν
+                    <lb n="18"/>φαρμακίαν
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text of Rizzone 2023 after Libertini 1927</note>
+                    </app>
+                    </listApp>
+            </div>
+            <div type="translation" xml:lang="en">
+                <p><!--No translation currently agreed--></p>
+            </div>
+            <div type="translation" xml:lang="it">
+                <p><!--No translation currently agreed--></p>
+            </div>
+            <div type="commentary" xml:lang="en">
+                <p>Rizzone notes that lines 1-14 are a quotation of the book of Psalms, 1.1-4</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Libertini</author>
+                        <date>1927</date>
+                        <citedRange>105-109</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/YW76PZNK"/>
+                    </bibl>
+                    <bibl>
+                      <author>Rizzone</author>
+                        <date>2023</date>
+                        <citedRange>501-502 no.1</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9QAG5NVA"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
