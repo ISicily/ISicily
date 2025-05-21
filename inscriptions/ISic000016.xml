@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -34,13 +36,17 @@
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>Lemmatization</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -78,7 +84,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Large tablet of limestone, broken into nine joining fragments, with a small fragment missing from the upper left part of the field. The tablet has a moulded frame.</p>
+                                <support>
+                                    <p>Large tablet of limestone, broken into nine joining fragments, with a small fragment missing from the upper left part of the field. The tablet has a moulded frame.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions><!--ILPalermo-->
@@ -88,12 +95,12 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragments.contiguous"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.deteriorated"/>
-			</layout>
+                                    <damage ana="#text_condition.deteriorated"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -114,10 +121,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
-                            	<geo>38.13205, 13.33561</geo>
-		</origPlace>
+                                <geo>38.13205, 13.33561</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0198" notAfter-custom="0198" source="https://www.zotero.org/groups/382445/items/PZHQV5MN" evidence="office">1st July—9th December 198 CE</origDate>
                         </origin>
                         <provenance type="found">The text is among those originally displayed in the Palazzo delle Aquile</provenance>
@@ -128,18 +135,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -170,16 +177,18 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2017-11-16" who="#JP">Jonathan Prag edited a bibl element</change>
                 <change when="2018-03-27" who="#TA">Tuuli Ahlholm revised the Epidoc and added an apparatus</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-05-21" who="#RC">Robert Crellin added ids and lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
+    <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic000016_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -193,19 +202,93 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><roleName type="supracivic" subtype="imperator"><expan><abbr><unclear>Imp</unclear></abbr><ex>eratori</ex></expan></roleName> <expan><abbr><unclear>Ca</unclear><supplied reason="lost">es</supplied></abbr><supplied reason="lost"><ex>ari</ex></supplied></expan> <supplied reason="lost"><expan><abbr>L</abbr><ex>ucio</ex></expan></supplied> <unclear>S</unclear>eptimio <g ref="#interpunct">·</g> Severo                    
-                    <lb n="2"/><unclear>Pio</unclear> <unclear>P</unclear><supplied reason="lost">ertinaci</supplied> <expan><abbr><supplied reason="lost">A</supplied><unclear>u</unclear>g</abbr><ex>usto</ex></expan> <expan><abbr>Arab</abbr><ex>ico</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>Adiabe</abbr><ex>nico</ex></expan>
-                    <lb n="3"/><expan><abbr><supplied reason="lost">Pa</supplied><unclear>rth</unclear></abbr><ex>ico</ex></expan> <g ref="#interpunct">·</g> <supplied reason="lost"><expan><abbr>max</abbr><ex>imo</ex></expan></supplied> <roleName type="supracivic.religious" subtype="pontifex.maximus"><supplied reason="lost"><expan><abbr>pont</abbr><ex>ifici</ex></expan></supplied> <expan><abbr>max</abbr><ex>imo</ex></expan></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="tribunicia.potestas"><expan><abbr>tr</abbr><ex>ibunicia</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>pot</abbr><ex>estate</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="6">VI</num> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="imperator"><expan><abbr>imp</abbr><ex>eratori</ex></expan></roleName>
-                    <lb n="4"/><num value="11"><unclear>XI</unclear></num> <roleName type="supracivic" subtype="consul"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="2">II</num> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="pater.patriae"><expan><abbr>p</abbr><ex>atri</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex>atriae</ex></expan></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="proconsul"><expan><abbr>pro<supplied reason="lost">co</supplied></abbr><ex>n</ex><abbr><unclear>s</unclear></abbr><ex>uli</ex></expan></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="imperator"><expan><abbr>imp</abbr><ex>eratoris</ex></expan></roleName> <g ref="#interpunct">·</g> <expan><abbr>Caes</abbr><ex>aris</ex></expan> <g ref="#interpunct">·</g> divi
-                    <lb n="5"/><expan><abbr>M</abbr><ex>arci</ex></expan> <g ref="#interpunct">·</g> Antonini <g ref="#interpunct">·</g> Pii <g ref="#interpunct">·</g> <expan><abbr>G<supplied reason="lost">e</supplied>rm</abbr><ex>anici</ex></expan> Sarmatic<supplied reason="omitted">i</supplied> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilio</ex></expan>
-                    <lb n="6"/>divi Commodi frat<unclear>r</unclear>i divi Antoni
-                    <lb n="7" break="no"/>ni Pii nepoti <g ref="#interpunct">·</g> divi <g ref="#interpunct">·</g> Hadriani prone
-                    <lb n="8" break="no"/><supplied reason="lost">p</supplied>oti  divi <g ref="#interpunct">·</g> Traiani Parthici <expan><abbr>ab<supplied reason="lost">n</supplied></abbr><supplied reason="lost"><ex>epoti</ex></supplied></expan>
-                    <lb n="9"/><supplied reason="lost">d</supplied>ivi <g ref="#interpunct">·</g> Nervae <g ref="#interpunct">·</g> adnepoti indulgen
-                    <lb break="no" n="10"/><supplied reason="lost">tis</supplied>simo et clementissimo <roleName type="supracivic" subtype="princeps">principi</roleName>
-                    <lb n="11"/><roleName type="supracivic" subtype="dominus"><supplied reason="lost">dom</supplied>ino</roleName> nostro <g ref="#interpunct">·</g> res <expan><abbr>p</abbr><ex>ublica</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>Panhorm</abbr><ex>itanorum</ex></expan>
-                    <lb n="12"/><roleName type="civic" subtype="duumvir"><supplied reason="lost"><num value="2">II</num></supplied> <supplied reason="lost">v</supplied><expan><abbr>ir</abbr><ex>orum</ex></expan></roleName> <g ref="#interpunct">·</g> <expan><abbr>P</abbr><ex>ubli</ex></expan> Satyri Donati et <expan><abbr>M</abbr><ex>arci</ex></expan> Ma<unclear>e</unclear>ci
-                    <lb n="13"/><supplied reason="lost">R</supplied>ufini <expan><abbr>d</abbr><ex>ecreto</ex></expan> <roleName type="civic" subtype="decurio"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></roleName>
+                    <lb n="1"/><roleName type="supracivic" subtype="imperator"><w n="5"><expan><abbr><unclear>Imp</unclear></abbr><ex>eratori</ex></expan></w></roleName> <name><w n="10"><expan><abbr><unclear>Ca</unclear><supplied reason="lost">es</supplied></abbr><supplied reason="lost"><ex>ari</ex></supplied></expan></w></name> <name><w n="15"><supplied reason="lost"><expan><abbr>L</abbr><ex>ucio</ex></expan></supplied></w></name> <name><w n="20"><unclear>S</unclear>eptimio</w></name> <g ref="#interpunct" n="25">·</g> <name><w n="30">Severo</w></name>
+                    <lb n="2"/><name><w n="35"><unclear>Pio</unclear></w></name> <name><w n="40"><unclear>P</unclear><supplied reason="lost">ertinaci</supplied></w></name> <name><w n="45"><expan><abbr><supplied reason="lost">A</supplied><unclear>u</unclear>g</abbr><ex>usto</ex></expan></w></name> <name><w n="50"><expan><abbr>Arab</abbr><ex>ico</ex></expan></w></name> <g ref="#interpunct" n="55">·</g> <name><w n="60"><expan><abbr>Adiabe</abbr><ex>nico</ex></expan></w></name>
+                    <lb n="3"/><name><w n="65"><expan><abbr><supplied reason="lost">Pa</supplied><unclear>rth</unclear></abbr><ex>ico</ex></expan></w></name> <g ref="#interpunct" n="70">·</g> <w n="75"><supplied reason="lost"><expan><abbr>max</abbr><ex>imo</ex></expan></supplied></w> <roleName type="supracivic.religious" subtype="pontifex.maximus"><w n="80"><supplied reason="lost"><expan><abbr>pont</abbr><ex>ifici</ex></expan></supplied></w> <w n="85"><expan><abbr>max</abbr><ex>imo</ex></expan></w></roleName> <g ref="#interpunct" n="90">·</g> <roleName type="supracivic" subtype="tribunicia.potestas"><w n="95"><expan><abbr>tr</abbr><ex>ibunicia</ex></expan></w> <g ref="#interpunct" n="100">·</g> <w n="105"><expan><abbr>pot</abbr><ex>estate</ex></expan></w></roleName> <g ref="#interpunct" n="110">·</g> <num value="6"><w n="115">VI</w></num> <g ref="#interpunct" n="120">·</g> <roleName type="supracivic" subtype="imperator"><w n="125"><expan><abbr>imp</abbr><ex>eratori</ex></expan></w></roleName>
+                    <lb n="4"/><num value="11"><w n="130"><unclear>XI</unclear></w></num> <roleName type="supracivic" subtype="consul"><w n="135"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></w></roleName> <g ref="#interpunct" n="140">·</g> <num value="2"><w n="145">II</w></num> <g ref="#interpunct" n="150">·</g> <roleName type="supracivic" subtype="pater.patriae"><w n="155"><expan><abbr>p</abbr><ex>atri</ex></expan></w> <g ref="#interpunct" n="160">·</g> <w n="165"><expan><abbr>p</abbr><ex>atriae</ex></expan></w></roleName> <g ref="#interpunct" n="170">·</g> <roleName type="supracivic" subtype="proconsul"><w n="175"><expan><abbr>pro<supplied reason="lost">co</supplied></abbr><ex>n</ex><abbr><unclear>s</unclear></abbr><ex>uli</ex></expan></w></roleName> <g ref="#interpunct" n="180">·</g> <roleName type="supracivic" subtype="imperator"><w n="185"><expan><abbr>imp</abbr><ex>eratoris</ex></expan></w></roleName> <g ref="#interpunct" n="190">·</g> <name><w n="195"><expan><abbr>Caes</abbr><ex>aris</ex></expan></w></name> <g ref="#interpunct" n="200">·</g> <w n="205">divi</w>
+                    <lb n="5"/><name><w n="210"><expan><abbr>M</abbr><ex>arci</ex></expan></w></name> <g ref="#interpunct" n="215">·</g> <name><w n="220">Antonini</w></name> <g ref="#interpunct" n="225">·</g> <name><w n="230">Pii</w></name> <g ref="#interpunct" n="235">·</g> <name><w n="240"><expan><abbr>G<supplied reason="lost">e</supplied>rm</abbr><ex>anici</ex></expan></w></name> <name><w n="245">Sarmatic<supplied reason="omitted">i</supplied></w></name> <g ref="#interpunct" n="250">·</g> <w n="255"><expan><abbr>f</abbr><ex>ilio</ex></expan></w>
+                    <lb n="6"/><w n="260">divi</w> <name><w n="265">Commodi</w></name> <w n="270">frat<unclear>r</unclear>i</w> <w n="275">divi</w> <name><w n="280">Antoni
+                    <lb n="7" break="no"/>ni</w></name> <name><w n="285">Pii</w></name> <w n="290">nepoti</w> <g ref="#interpunct" n="295">·</g> <w n="300">divi</w> <g ref="#interpunct" n="305">·</g> <name><w n="310">Hadriani</w></name> <w n="315">prone
+                    <lb n="8" break="no"/><supplied reason="lost">p</supplied>oti</w> <w n="320">divi</w> <g ref="#interpunct" n="325">·</g> <name><w n="330">Traiani</w></name> <name><w n="335">Parthici</w></name> <w n="340"><expan><abbr>ab<supplied reason="lost">n</supplied></abbr><supplied reason="lost"><ex>epoti</ex></supplied></expan></w>
+                    <lb n="9"/><w n="345"><supplied reason="lost">d</supplied>ivi</w> <g ref="#interpunct" n="350">·</g> <name><w n="355">Nervae</w></name> <g ref="#interpunct" n="360">·</g> <w n="365">adnepoti</w> <w n="370">indulgen
+                    <lb break="no" n="10"/><supplied reason="lost">tis</supplied>simo</w> <w n="375">et</w> <w n="380">clementissimo</w> <roleName type="supracivic" subtype="princeps"><w n="385">principi</w></roleName>
+                    <lb n="11"/><roleName type="supracivic" subtype="dominus"><w n="390"><supplied reason="lost">dom</supplied>ino</w></roleName> <w n="395">nostro</w> <g ref="#interpunct" n="400">·</g> <w n="405">res</w> <w n="410"><expan><abbr>p</abbr><ex>ublica</ex></expan></w> <g ref="#interpunct" n="415">·</g> <name><w n="420"><expan><abbr>Panhorm</abbr><ex>itanorum</ex></expan></w></name>
+                    <lb n="12"/><roleName type="civic" subtype="duumvir"><supplied reason="lost"><num value="2"><w n="425">II</w></num></supplied> <w n="430"><supplied reason="lost">v</supplied><expan><abbr>ir</abbr><ex>orum</ex></expan></w></roleName> <g ref="#interpunct" n="435">·</g> <name><w n="440"><expan><abbr>P</abbr><ex>ubli</ex></expan></w></name> <name><w n="445">Satyri</w></name> <name><w n="450">Donati</w></name> <w n="455">et</w> <name><w n="460"><expan><abbr>M</abbr><ex>arci</ex></expan></w></name> <name><w n="465">Ma<unclear>e</unclear>ci</w></name>
+                    <lb n="13"/><name><w n="470"><supplied reason="lost">R</supplied>ufini</w></name> <w n="475"><expan><abbr>d</abbr><ex>ecreto</ex></expan></w> <roleName type="civic" subtype="decurio"><w n="480"><expan><abbr>d</abbr><ex>ecurionum</ex></expan></w></roleName>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="Imperator">Imperatori</w>
+                    <w n="10" lemma="Caesar">Caesari</w>
+                    <w n="15" lemma="Lucius">Lucio</w>
+                    <w n="20" lemma="Septimius">Septimio</w>
+                    <w n="30" lemma="Severus">Severo</w>
+                    <w n="35" lemma="Pius">Pio</w>
+                    <w n="40" lemma="Pertinax">Pertinaci</w>
+                    <w n="45" lemma="Augustus">Augusto</w>
+                    <w n="50" lemma="Arabicus">Arabico</w>
+                    <w n="60" lemma="Adiabenicus">Adiabenico</w>
+                    <w n="65" lemma="Parthicus">Parthico</w>
+                    <w n="75" lemma="magnus">maximo</w>
+                    <w n="80" lemma="pontifex">pontifici</w>
+                    <w n="85" lemma="magnus">maximo</w>
+                    <w n="95" lemma="tribunicia">tribunicia</w>
+                    <w n="105" lemma="potestas">potestate</w>
+                    <w n="115" lemma="VI">VI</w>
+                    <w n="125" lemma="imperator">imperatori</w>
+                    <w n="130" lemma="XI">XI</w>
+                    <w n="135" lemma="consul">consuli</w>
+                    <w n="145" lemma="II">II</w>
+                    <w n="155" lemma="pater">patri</w>
+                    <w n="165" lemma="patria">patriae</w>
+                    <w n="175" lemma="proconsul">proconsuli</w>
+                    <w n="185" lemma="imperator">imperatoris</w>
+                    <w n="195" lemma="Caesar">Caesaris</w>
+                    <w n="205" lemma="divus">divi</w>
+                    <w n="210" lemma="Marcus">Marci</w>
+                    <w n="220" lemma="Antoninus">Antonini</w>
+                    <w n="230" lemma="Pius">Pii</w>
+                    <w n="240" lemma="Germanicus">Germanici</w>
+                    <w n="245" lemma="Sarmaticus">Sarmatici</w>
+                    <w n="255" lemma="filius">filio</w>
+                    <w n="260" lemma="divus">divi</w>
+                    <w n="265" lemma="Commodus">Commodi</w>
+                    <w n="270" lemma="frater">fratri</w>
+                    <w n="275" lemma="divus">divi</w>
+                    <w n="280" lemma="Antoninus">Antonini</w>
+                    <w n="285" lemma="Pius">Pii</w>
+                    <w n="290" lemma="nepos">nepoti</w>
+                    <w n="300" lemma="divus">divi</w>
+                    <w n="310" lemma="Hadrianus">Hadriani</w>
+                    <w n="315" lemma="pronepos">pronepoti</w>
+                    <w n="320" lemma="divus">divi</w>
+                    <w n="330" lemma="Traianus">Traiani</w>
+                    <w n="335" lemma="Parthicus">Parthici</w>
+                    <w n="340" lemma="abnepos">abnepoti</w>
+                    <w n="345" lemma="divus">divi</w>
+                    <w n="355" lemma="Nerva">Nervae</w>
+                    <w n="365" lemma="adnepos">adnepoti</w>
+                    <w n="370" lemma="indulgens">indulgentissimo</w>
+                    <w n="375" lemma="et">et</w>
+                    <w n="380" lemma="clemens">clementissimo</w>
+                    <w n="385" lemma="princeps">principi</w>
+                    <w n="390" lemma="dominus">domino</w>
+                    <w n="395" lemma="noster">nostro</w>
+                    <w n="405" lemma="res">res</w>
+                    <w n="410" lemma="publicus">publica</w>
+                    <w n="420" lemma="Panhormitanus">Panhormitanorum</w>
+                    <w n="425" lemma="II">II</w>
+                    <w n="430" lemma="vir">virorum</w>
+                    <w n="440" lemma="Publius">Publi</w>
+                    <w n="445" lemma="Satyrus">Satyri</w>
+                    <w n="450" lemma="Donatus">Donati</w>
+                    <w n="455" lemma="et">et</w>
+                    <w n="460" lemma="Marcus">Marci</w>
+                    <w n="465" lemma="Maecus">Maeci</w>
+                    <w n="470" lemma="Rufinus">Rufini</w>
+                    <w n="475" lemma="decretum">decreto</w>
+                    <w n="480" lemma="decurio">decurionum</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -229,25 +312,31 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650788">10.7274</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusPalermo">
                         <citedRange>16</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref>
+                    </bibl>
                     <bibl>
                         <author>Raepsaet-Charlier</author>
                         <date>1974</date>
                         <citedRange>125</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/PZHQV5MN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001648">https://biblio.inscriptiones.org/epig10001648</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001648">https://biblio.inscriptiones.org/epig10001648</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>43</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
