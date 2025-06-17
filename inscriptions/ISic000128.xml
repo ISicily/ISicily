@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -34,17 +36,21 @@
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Edition on basis of autopsy and photographs</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>Lemmatization</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -83,7 +89,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Grey plaque in local limestone, extremely square and in good condition, although chips at bottom left and bottom right. Rear is mostly flat, but with a slight protusion roughly in the centre</p>
+                                <support>
+                                    <p>Grey plaque in local limestone, extremely square and in good condition, although chips at bottom left and bottom right. Rear is mostly flat, but with a slight protusion roughly in the centre</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
@@ -93,16 +100,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Three lines of Latin letters. First line is centred on stone, but lines 2-3 off centre. Text drifts upwards to the top right. Large vacat at bottom of stone.</p>
+                                <layout>
+                                    <p>Three lines of Latin letters. First line is centred on stone, but lines 2-3 off centre. Text drifts upwards to the top right. Large vacat at bottom of stone.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Letters chiselled roughly, but with an attempt at serifs on most letters. All letters at irregular heights and widths. Both circular and triangular interpunts used between words in line 1 (none used at the end of the line).</p>
+                            <handNote>
+                                <p>Letters chiselled roughly, but with an attempt at serifs on most letters. All letters at irregular heights and widths. Both circular and triangular interpunts used between words in line 1 (none used at the end of the line).</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">29-46</height>
@@ -125,10 +134,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown, but the piece is assumed to come from Termini Imerese</provenance>
@@ -139,18 +148,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -180,14 +189,15 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-02-22" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus and translation</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-17" who="#AA">edition on basis of autopsy and photographs</change>
-	</listChange>
+                <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -198,20 +208,33 @@
             <graphic n="print" url="ISic000128.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
-                    <lb n="1" xml:id="AMεAK"/><persName type="attested" xml:id="AMεAU"><name xml:id="AMεAe"><expan xml:id="AMεAo"><abbr xml:id="AMεAy">P</abbr><ex xml:id="AMεAΙ">ublius</ex></expan></name> <g ref="#interpunct" xml:id="AMεAΤ">·</g> <name xml:id="AMεAε">Antistius</name> <g ref="#interpunct" xml:id="AMεAο">·</g> <persName xml:id="AMεBA"><name type="patronym" xml:id="AMεBK"><expan xml:id="AMεBU"><abbr xml:id="AMεBe">P</abbr><ex xml:id="AMεBo">ubli</ex></expan></name></persName> <g ref="#interpunct" xml:id="AMεBy">·</g> <w xml:id="AMεBΙ"><expan xml:id="AMεBΤ"><abbr xml:id="AMεBε">f</abbr><ex xml:id="AMεBο">ilius</ex></expan></w> 
-                    <lb n="2" xml:id="AMεCA"/><orgName type="tribus" xml:id="AMεCK"><w xml:id="AMεCU"><expan xml:id="AMεCe"><abbr xml:id="AMεCo">Cla</abbr><ex xml:id="AMεCy">udia</ex></expan></w> <w xml:id="AMεCΙ"><supplied reason="subaudible" xml:id="AMεCΤ">tribu</supplied></w></orgName> 
-                    <lb n="3" xml:id="AMεCε"/><name xml:id="AMεCο"><expan xml:id="AMεDA"><abbr xml:id="AMεDK">Cavar</abbr><ex xml:id="AMεDU">ianus</ex></expan></name></persName>
+                    <lb n="1" xml:id="AMεAK"/><persName type="attested" xml:id="AMεAU"><name xml:id="AMεAe"><w n="5"><expan xml:id="AMεAo"><abbr xml:id="AMεAy">P</abbr><ex xml:id="AMεAΙ">ublius</ex></expan></w></name> <g ref="#interpunct" xml:id="AMεAΤ" n="10">·</g> <name xml:id="AMεAε"><w n="15">Antistius</w></name> <g ref="#interpunct" xml:id="AMεAο" n="20">·</g> <persName xml:id="AMεBA"><name type="patronym" xml:id="AMεBK"><w n="25"><expan xml:id="AMεBU"><abbr xml:id="AMεBe">P</abbr><ex xml:id="AMεBo">ubli</ex></expan></w></name></persName> <g ref="#interpunct" xml:id="AMεBy" n="30">·</g> <w xml:id="AMεBΙ" n="35"><expan xml:id="AMεBΤ"><abbr xml:id="AMεBε">f</abbr><ex xml:id="AMεBο">ilius</ex></expan></w>
+                    <lb n="2" xml:id="AMεCA"/><orgName type="tribus" xml:id="AMεCK"><name xml:id="AMεCU"><w n="40"><expan xml:id="AMεCe"><abbr xml:id="AMεCo">Cla</abbr><ex xml:id="AMεCy">udia</ex></expan></w></name> <w xml:id="AMεCΙ" n="45"><supplied reason="subaudible" xml:id="AMεCΤ">tribu</supplied></w></orgName>
+                    <lb n="3" xml:id="AMεCε"/><name xml:id="AMεCο"><w n="50"><expan xml:id="AMεDA"><abbr xml:id="AMεDK">Cavar</abbr><ex xml:id="AMεDU">ianus</ex></expan></w></name></persName>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="Publius">Publius</w>
+                    <w n="15" lemma="Antistius">Antistius</w>
+                    <w n="25" lemma="Publius">Publi</w>
+                    <w n="35" lemma="filius">filius</w>
+                    <w n="40" lemma="Claudia">Claudia</w>
+                    <w n="45" lemma="tribus">tribu</w>
+                    <w n="50" lemma="Cavarianus">Cavarianus</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#AA">
                 <listApp>
-                    <app><note>Text from autopsy</note></app>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#TA">
@@ -225,19 +248,24 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>1980.0513</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                         <citedRange>47</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                    </bibl>
                     <bibl>
                         <author>Bivona</author>
                         <date>1975-1976</date>
                         <citedRange>535 no.1 tav.1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/3JCJI9JF"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002140">https://biblio.inscriptiones.org/epig10002140</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002140">https://biblio.inscriptiones.org/epig10002140</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
