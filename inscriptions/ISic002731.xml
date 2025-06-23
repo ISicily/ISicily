@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 002731</title>
+                <title>Fragment of a monumental Greek inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -43,16 +43,14 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic002731</idno>
                 <idno type="TM">644831</idno>
-                <idno type="EDR"/>
+                <idno type="EDR">136560</idno>
                 <idno type="EDH"/>
                 <idno type="EDCS">64400338</idno>
                 <idno type="PHI">333218</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002731</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387321</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -63,6 +61,7 @@
                         <settlement>Segesta</settlement>
                         <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/196">Parco archeologico di Segesta</repository>
                         <idno type="inventory">SG652</idno>
+                        <idno type="inventory">IG2604</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -76,28 +75,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Fragment of trabeation with part of the upper moulded cornice, with inscribed face below, most likely from the external frieze of the north side of the portico of the bouleuterion.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.arch_element.architrave">architrave</objectType>
+                                    <dimensions><!--ISegesta-->
+                                        <height unit="cm">20.5</height>
+                                        <width unit="cm">30.5</width>
+                                        <depth unit="cm">22.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Part of a single line of large Greek letters</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Kappa with short arms, v-cut letters</p><!--Default value and requires editing-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">60</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -113,9 +113,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
                             	<geo>37.94171, 12.83649</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" evidence="lettering">2nd — 1st century BCE (if part of the bouleterion, then later C2 BCE)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" when="1990">Found in 1990 in SAS 3 (amb. 1, collapse layer US 3096), in the vicinity of the bouleuterion<geo>37.9397711,12.8414853</geo></provenance><!-- Findspot placed on googlemaps., following ISegesta fig.138 -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -156,11 +156,11 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.unknown" ref="https://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</term>
+                    <term ana="#function.building" ref="https://www.eagle-network.eu/voc/objtyp/lod/86.html">building</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-09-23" who="#JP">Jonathan Prag added ISegesta ref</change>
@@ -170,10 +170,11 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-06-22" who="#JP">Jonathan Prag revised based upon publications</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic002731_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -181,30 +182,26 @@
             <graphic n="print" url="ISic002731.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="PHI" n="PHI333218">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    <supplied reason="lost">— —</supplied>κ
-                    <unclear>λ</unclear>
-                    <supplied reason="lost">— —</supplied>
-                    <lb n="2"/>
-                    <supplied reason="lost">— — — — —</supplied>
-                    <lb n="3"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>Κ<unclear>Λ</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text of ISegesta</note></app>
+                    <app loc="1"><note>As noted in I.Segesta, the second letter seems unlikely to be an alpha in comparison to other fragments from the same area.</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag. of cornice with 'kl' visible. (found in a mediaeval 'crollo', but looks ancient.--></p>
+                <p>One of five fragments from the area of the bouleuterion, which are highly likely to belong to the same monumental text from the facade of the bouleuterion portico. See also ISic002732, ISic002733, ISic002734, and ISic002943.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

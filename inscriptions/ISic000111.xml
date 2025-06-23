@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -34,13 +36,17 @@
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>Lemmatization</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -78,7 +84,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Two fragments of a large, thick plaque(?) of limestone; joined together with plaster when seen by Bivona, but seemingly not actually joining, with a gap of at least 2-3 letters in between (as proposed by Mommsen). Fragment A (left) is H 29 x W 47 x D 18 cm; Fragment B (right) is H 31 x W 68 x D 20 (measurements by Bivona).</p>
+                                <support>
+                                    <p>Two fragments of a large, thick plaque(?) of limestone; joined together with plaster when seen by Bivona, but seemingly not actually joining, with a gap of at least 2-3 letters in between (as proposed by Mommsen). Fragment A (left) is H 29 x W 47 x D 18 cm; Fragment B (right) is H 31 x W 68 x D 20 (measurements by Bivona).</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--ILTermini-->
@@ -88,16 +95,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>twolines of Latin letters fill the available space, with the first line much larger than the second.</p>
+                                <layout>
+                                    <p>two lines of Latin letters fill the available space, with the first line much larger than the second.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Large v-cut letters relatively wide in the module, with simple terminal serifs.</p><!-- measurements from ILTermini -->
+                            <handNote>
+                                <p>Large v-cut letters relatively wide in the module, with simple terminal serifs.</p><!-- measurements from ILTermini -->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">150</height>
@@ -116,10 +125,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513" cert="low">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low" evidence="lettering">Imperial</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1624">Already affixed to the town hall when seen by Gualtherus in or before 1624; subsequently transferred to the museum, where last seen by Bivona prior to 1994.</provenance>
@@ -131,18 +140,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -172,14 +181,15 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-11-30" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-04-10" who="#JP">Jonathan Prag revised from publications</change>
-	</listChange>
+                <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -190,19 +200,39 @@
             <graphic n="print" url="ISic000111.jpg" height="1225px" width="3676px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; scanned from ILTermini.</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
-                    <lb n="1" xml:id="ALKAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="ALKAU"/><w xml:id="ALKAe">is</w> <w xml:id="ALKAo">mo<supplied reason="lost" xml:id="ALKAy">rie</supplied>ntis</w> <w xml:id="ALKAΙ">avi</w> <gap reason="lost" extent="unknown" unit="character" xml:id="ALKAΤ"/>
-                    <lb n="2" xml:id="ALKAε"/><gap reason="lost" extent="unknown" unit="character" xml:id="ALKAο"/><w xml:id="ALKBA">ntis</w> <g ref="#interpunct" xml:id="ALKBK">·</g> <w xml:id="ALKBU">legavi<supplied reason="lost" xml:id="ALKBe">t</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="ALKBo"/><w xml:id="ALKBy">ut</w> <g ref="#interpunct" xml:id="ALKBΙ">·</g> <w xml:id="ALKBΤ">ex</w> <g ref="#interpunct" xml:id="ALKBε">·</g> <w xml:id="ALKBο">usuris</w> <g ref="#interpunct" xml:id="ALKCA">·</g> <w xml:id="ALKCK">eiu<supplied reason="lost" xml:id="ALKCU">s</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="ALKCe"/>
+                    <lb n="1" xml:id="ALKAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="ALKAU"/><w xml:id="ALKAe" n="5" part="F">is</w> <w xml:id="ALKAo" n="10">mo<supplied reason="lost" xml:id="ALKAy">rie</supplied>ntis</w> <w xml:id="ALKAΙ" n="15" part="I">avi</w><gap reason="lost" extent="unknown" unit="character" xml:id="ALKAΤ"/>
+                    <lb n="2" xml:id="ALKAε"/><gap reason="lost" extent="unknown" unit="character" xml:id="ALKAο"/><w xml:id="ALKBA" n="20" part="F">ntis</w> <g ref="#interpunct" xml:id="ALKBK" n="25">·</g> <w xml:id="ALKBU" n="30">legavi<supplied reason="lost" xml:id="ALKBe">t</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="ALKBo"/> <w xml:id="ALKBy" n="35">ut</w> <g ref="#interpunct" xml:id="ALKBΙ" n="40">·</g> <w xml:id="ALKBΤ" n="45">ex</w> <g ref="#interpunct" xml:id="ALKBε" n="50">·</g> <w xml:id="ALKBο" n="55">usuris</w> <g ref="#interpunct" xml:id="ALKCA" n="60">·</g> <w xml:id="ALKCK" n="65">eiu<supplied reason="lost" xml:id="ALKCU">s</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="ALKCe"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="character"><desc>[-?-]</desc></gap>
+                    <w n="5" lemma="NOLEMMA">is</w>
+                    <w n="10" lemma="morior">morientis</w>
+                    <w n="15" lemma="NOLEMMA">avi</w>
+                    <gap reason="lost" extent="unknown" unit="character"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character"><desc>[-?-]</desc></gap>
+                    <w n="20" lemma="NOLEMMA">ntis</w>
+                    <w n="30" lemma="lego">legavit</w>
+                    <gap reason="lost" extent="unknown" unit="character"><desc>[-?-]</desc></gap>
+                    <w n="35" lemma="ut">ut</w>
+                    <w n="45" lemma="ex">ex</w>
+                    <w n="55" lemma="usura">usuris</w>
+                    <w n="65" lemma="is">eius</w>
+                    <gap reason="lost" extent="unknown" unit="character"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini</note></app>
+                    <app>
+                        <note>Text of ILTermini</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -253,16 +283,18 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">10.7360</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                         <citedRange>29</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
                     </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
