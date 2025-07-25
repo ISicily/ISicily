@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -38,11 +40,15 @@
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	</titleStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic000340</idno>
@@ -93,14 +99,14 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                     <p>Latin text over seven lines. Line 1 is centred, lines 2-7
+                                    <p>Latin text over seven lines. Line 1 is centred, lines 2-7
                                         maintain the left margin. There is some compression of the letters lower right.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -121,10 +127,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0075" notAfter-custom="0200" precision="low">End 1st century CE or 2nd century CE (so Korhonen)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1736">Found, together with <ref target="ISic000378.xml">ISic000378</ref> (inv.393), in 1736 in a Roman tomb in the area of Porta Aci / Porta di Jaci, now Piazza Stesicoro<geo>37.507408, 15.085606</geo>.</provenance>
@@ -132,23 +138,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2017.03.20</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -183,13 +188,14 @@
                 <change when="2017-07-06" who="#JP">Jonathan Prag added elements for parallel Italian</change>
                 <change when="2017-07-11" who="#JP">Jonathan Prag added additional metadata and edited the text</change>
                 <change when="2020-09-10" who="#system">Updated Zenodo DOI</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -200,76 +206,39 @@
             <graphic n="print" url="ISic000340.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>D</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    ·
-                    <expan>
-                        <abbr>M</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    ·
-                    <expan>
-                        <abbr>s</abbr>
-                        <ex>acrum</ex>
-                    </expan>
-                    ·
-                    <lb n="2"/>
-                    <expan>
-                        <abbr>L</abbr>
-                        <ex>ucius</ex>
-                    </expan>
-                    ·
-                    Cassius
-                    <lb n="3"/>
-                    Hermes ·
-                    <lb n="4"/>
-                    optimus ·
-                    <lb n="5"/>
-                    virorum ·
-                    <lb n="6"/>
-                    <expan>
-                        <abbr>vix</abbr>
-                        <ex>it</ex>
-                    </expan>
-                    ·
-                    <expan>
-                        <abbr>ann</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    ·
-                    <num value="60">LX</num>
-                    <lb n="7"/>
-                    <num value="4">IIII</num>
-                    ·
-                    <expan>
-                        <abbr>f</abbr>
-                        <ex>ilii</ex>
-                    </expan>
-                    ·
-                    <expan>
-                        <abbr>p</abbr>
-                        <ex>osuerunt</ex>
-                    </expan>
-                    ·
-                    <expan>
-                        <abbr>p</abbr>
-                        <ex>atri</ex>
-                    </expan>
-                    ·
-                    <expan>
-                        <abbr>m</abbr>
-                        <ex>erenti</ex>
-                    </expan>
-                    ·
+                    <lb n="1"/><w n="5"><expan><abbr>D</abbr><ex>is</ex></expan></w> <g ref="#interpunct" n="10">·</g> <name><w n="15"><expan><abbr>M</abbr><ex>anibus</ex></expan></w></name> <g ref="#interpunct" n="20">·</g> <w n="25"><expan><abbr>s</abbr><ex>acrum</ex></expan></w> <g ref="#interpunct" n="30">·</g>
+                    <lb n="2"/><name><w n="35"><expan><abbr>L</abbr><ex>ucius</ex></expan></w></name> <g ref="#interpunct" n="40">·</g> <name><w n="45">Cassius</w></name>
+                    <lb n="3"/><name><w n="50">Hermes</w></name> <g ref="#interpunct" n="55">·</g>
+                    <lb n="4"/><w n="60">optimus</w> <g ref="#interpunct" n="65">·</g>
+                    <lb n="5"/><w n="70">virorum</w> <g ref="#interpunct" n="75">·</g>
+                    <lb n="6"/><w n="80"><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct" n="85">·</g> <w n="90"><expan><abbr>ann</abbr><ex>is</ex></expan></w> <g ref="#interpunct" n="95">·</g> <num value="60"><w n="100">LX</w></num>
+                    <lb n="7"/><num value="4"><w n="105">IIII</w></num> <g ref="#interpunct" n="110">·</g> <w n="115"><expan><abbr>f</abbr><ex>ilii</ex></expan></w> <g ref="#interpunct" n="120">·</g> <w n="125"><expan><abbr>p</abbr><ex>osuerunt</ex></expan></w> <g ref="#interpunct" n="130">·</g> <w n="135"><expan><abbr>p</abbr><ex>atri</ex></expan></w> <g ref="#interpunct" n="140">·</g> <w n="145"><expan><abbr>m</abbr><ex>erenti</ex></expan></w> <g ref="#interpunct" n="150">·</g>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="dis">Dis</w>
+                    <w n="15" lemma="manes">Manibus</w>
+                    <w n="25" lemma="sacrum">sacrum</w>
+                    <w n="35" lemma="Lucius">Lucius</w>
+                    <w n="45" lemma="Cassius">Cassius</w>
+                    <w n="50" lemma="Hermes">Hermes</w>
+                    <w n="60" lemma="bonus">optimus</w>
+                    <w n="70" lemma="vir">virorum</w>
+                    <w n="80" lemma="vivo">vixit</w>
+                    <w n="90" lemma="annus">annis</w>
+                    <w n="100" lemma="LX">LX</w>
+                    <w n="105" lemma="IIII">IIII</w>
+                    <w n="115" lemma="filius">filii</w>
+                    <w n="125" lemma="pono">posuerunt</w>
+                    <w n="135" lemma="pater">patri</w>
+                    <w n="145" lemma="mereor">merenti</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -301,14 +270,18 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650759">10.7056</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="IMusCatania">
                         <citedRange>66</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
