@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -30,17 +32,21 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-        <respStmt>
-                <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
-            <resp>encoding text division and checking the edition</resp>
-        </respStmt>                
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -89,12 +95,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -113,10 +119,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
@@ -127,18 +133,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -166,15 +172,16 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                   <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-10-09" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -185,23 +192,48 @@
             <graphic n="print" url="ISic000227.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
                 <ab>
-                    <lb n="1"/>Dis <g ref="#ivy-leaf"/> <expan><abbr>Manib</abbr><ex>us</ex></expan>
-                    <lb n="2"/>Trebonia <expan><abbr>C</abbr><ex>ai</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilia</ex></expan> Modia
-                    <lb n="3"/>vixit <g ref="#interpunct">·</g> <expan><abbr>ann</abbr><ex>is</ex></expan> <num value="11">XI</num> <expan><abbr>m</abbr><ex>ensibus</ex></expan> <num value="3">III</num> <g ref="#ivy-leaf"/>
-                    <lb n="4"/><expan><abbr>C</abbr><ex>aius</ex></expan> Trebonius <unclear><g ref="#ivy-leaf"/></unclear> Zmaragdus <g ref="#ivy-leaf"/>
-                    <lb n="5"/>et Modia Hesione <g ref="#ivy-leaf"/>
-                    <lb n="6"/>piissimae <g ref="#ivy-leaf"/> filiae <g ref="#ivy-leaf"/>
+                    <lb n="1"/><w n="5">Dis</w> <g ref="#ivy-leaf" n="10"/> <name><w n="15"><expan><abbr>Manib</abbr><ex>us</ex></expan></w></name>
+                    <lb n="2"/><name><w n="20">Trebonia</w></name> <name><w n="25"><expan><abbr>C</abbr><ex>ai</ex></expan></w></name> <g ref="#interpunct" n="30">·</g> <w n="35"><expan><abbr>f</abbr><ex>ilia</ex></expan></w> <name><w n="40">Modia</w></name>
+                    <lb n="3"/><w n="45">vixit</w> <g ref="#interpunct" n="50">·</g> <w n="55"><expan><abbr>ann</abbr><ex>is</ex></expan></w> <num value="11"><w n="60">XI</w></num> <w n="65"><expan><abbr>m</abbr><ex>ensibus</ex></expan></w> <num value="3"><w n="70">III</w></num> <g ref="#ivy-leaf" n="75"/>
+                    <lb n="4"/><name><w n="80"><expan><abbr>C</abbr><ex>aius</ex></expan></w></name> <name><w n="85">Trebonius</w></name> <unclear><g ref="#ivy-leaf" n="90"/></unclear> <name><w n="95">Zmaragdus</w></name> <g ref="#ivy-leaf" n="100"/>
+                    <lb n="5"/><w n="105">et</w> <name><w n="110">Modia</w></name> <name><w n="115">Hesione</w></name> <g ref="#ivy-leaf" n="120"/>
+                    <lb n="6"/><w n="125">piissimae</w> <g ref="#ivy-leaf" n="130"/> <w n="135">filiae</w> <g ref="#ivy-leaf" n="140"/>
                 </ab> 
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="dis">Dis</w>
+                    <w n="15" lemma="manes">Manibus</w>
+                    <w n="20" lemma="Trebonia">Trebonia</w>
+                    <w n="25" lemma="Caius">Cai</w>
+                    <w n="35" lemma="filia">filia</w>
+                    <w n="40" lemma="Modia">Modia</w>
+                    <w n="45" lemma="vivo">vixit</w>
+                    <w n="55" lemma="annus">annis</w>
+                    <w n="60" lemma="XI">XI</w>
+                    <w n="65" lemma="mensis">mensibus</w>
+                    <w n="70" lemma="III">III</w>
+                    <w n="80" lemma="Caius">Caius</w>
+                    <w n="85" lemma="Trebonius">Trebonius</w>
+                    <w n="95" lemma="Zmaragdus">Zmaragdus</w>
+                    <w n="105" lemma="et">et</w>
+                    <w n="110" lemma="Modia">Modia</w>
+                    <w n="115" lemma="Hesione">Hesione</w>
+                    <w n="125" lemma="pius">piissimae</w>
+                    <w n="135" lemma="filia">filiae</w>
+                </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of ILTermini with slight changes based on the photograph</note></app>
+                    <app>
+                        <note>Text of ILTermini with slight changes based on the photograph</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -216,20 +248,25 @@
                     <bibl type="corpus" n="ILMusTermini">
                         <citedRange>152</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Ciofalo</author>
                         <title>NSA</title>
                         <date>1889</date>
                         <citedRange>139</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl type="bulletin" n="EphEp">
                         <citedRange>VIII 707</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
