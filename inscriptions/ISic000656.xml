@@ -5,9 +5,9 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000656</title>
+                <title>Honorific inscription for Sextus Pompeius Priscus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
+                <principal ref="#FP">Francesca Prado</principal>
                 <funder>John Fell OUP Research Fund</funder>
 	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
@@ -38,6 +38,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt>
+                <name xml:id="FP" ref="https://orcid.org/0000-0003-3326-3475">Francesca Prado</name>
+                <resp>editing of EpiDoc</resp> <!-- correct? -->
+                </respStmt>
 	    <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
@@ -66,8 +70,7 @@
                         <region>Sicily</region>
                         <settlement>Centuripe</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/002">Museo Archeologico Regionale di Centuripe</repository>
-                        <idno type="inventory">KA846 + KA861</idno>
-                        <!--Adding location for old id numbers if available-->
+                        <idno type="inventory">KA0846 + KA0850 + KA0861</idno>
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -80,33 +83,38 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support> <p>Marble plaque made up of nine joining fragments, with internal and lower marginal gaps. Surface and back smooth and polished.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">63</height>
+                                        <width unit="cm">82</width>
+                                        <depth unit="cm">2-4</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Three lines of Latin text in straight alignment. Line 1 has a larger module than Line 2, and Line 2 has a larger module than Line 3. Furthermore, the lack of space in the final line resulted in a greater compression between the letters compared to the other lines.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                    <damage ana= "text_condition.partly_illegible"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote>
+                                <p>Elegant square capital letters, slightly verticalized, with serifs. P has an open loop; O and Q are ovoid; A has a vertical crossbar. Spacing in line 2 between the words Quir(ina) and Prisc[o]. A comma-shaped punctuation mark appears in line 1, between Q(uinto) and Pompeio.</p>
+                                <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">10-12</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">6</height>
+                                </dimensions>
+                                    <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
+                                    <dimensions type="interlinear">
+                                        <height unit="mm">7</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -118,10 +126,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
                             	<geo>37.62336, 14.74049</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0140" notAfter-custom="0160" evidence="prosopography" cert="low">Uncle of cos. of 149 CE (?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0140" notAfter-custom="0160" evidence="prosopography">Uncle of cos. of 149 CE (?)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1925">The various fragments were discovered at different times within the complex of spaces near the so-called former Barbagallo Mill, i.e. the area of the so-called «Edificio degli Augustales» <geo>37.62257, 14.74099</geo>, in a zone overlooking the Vallata Difesa, near the Church of the Crucifix. The find circumstances are known for some of them. The upper left corner fragment and the lower right marginal fragment were discovered by Guido Libertini during the excavation campaigns conducted starting in 1925. The archaeologist did not realize that the two fragments – though not directly joining – belonged to the same document, and published them separately in 1926. The contextual information is not very clear. Specifically, the author states that the fragments, and others, were found either «nelle immediate vicinanze dell'edificio rettangolare» or in small rooms «a sud dell'edificio, tra esso e il mulino». The upper right corner fragment was later found inside the rectangular building by Libertini, and published in 1953. However, the archaeologist did not connect the fragment with the pieces discovered twenty-five years earlier. Currently on display on the ground floor in the Antiquarium, Room III</provenance> <!--  location of the Augustalia  -->
+                        <provenance type="observed" subtype="autopsied" xml:id="autopsy">Prado 2023-05-09</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -176,6 +184,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2021-01-06" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-08-05" who="#FP">Francesca Prado tagged named entities, added title, commentary, translation and info about support, layout, letters, dimensions, provenance</change>
 	</listChange> 
         </revisionDesc>
     </teiHeader>
@@ -191,21 +200,25 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA" source="autopsy"> <!-- other things? -->
                 <ab>
-                    <lb n="1"/><expan><abbr>Q</abbr><ex>uinto</ex></expan> · Pompeio <expan><abbr>Sex</abbr><ex>ti</ex></expan> ·  <expan><abbr>f</abbr><ex>ilio</ex></expan> · 
-                    <lb n="2"/><expan><abbr>Quir</abbr><ex>ina</ex></expan> <space unit="character" quantity="3"/> Pr<unclear>i</unclear><supplied reason="lost">s</supplied><unclear>c</unclear>o
-                    <lb n="3"/> Sosiu<unclear>s</unclear><supplied reason="lost">Pr</supplied>iscus pa<supplied reason="lost">truo</supplied>
+                    <lb n="1"/><persName type="attested"><name type="praenomen"><expan><abbr>Q</abbr><ex>uinto</ex></expan></name> <g ref="#interpunct">·</g> <name type="nomen">Pompeio</name> <persName type="attested"><name type="praenomen"><expan><abbr>Sex</abbr><ex>ti</ex></expan></name></persName> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilio</ex></expan> <g ref="#interpunct">·</g>
+                    <lb n="2"/><orgName type="tribus"><expan><abbr>Quir</abbr><ex>ina</ex></expan></orgName> <space unit="character" quantity="3"/> <name type="cognomen">Pr<unclear>i</unclear><supplied reason="lost">s</supplied><unclear>c</unclear>o</name></persName>
+                    <lb n="3"/> <persName type="attested"><name type="nomen">Sosiu<unclear>s</unclear></name> <name type="cognomen"><supplied reason="lost">Pr</supplied>iscus</name></persName> pa<supplied reason="lost">truo</supplied>
                 </ab>
             </div>
             <div type="apparatus">
-               <listApp><app><note>Text after Eck 1996 / AE 1996.790 and controlled against photograph</note></app></listApp>
+               <listApp><app><note>Text after Eck 1996 / AE 1996.790 and controlled against autopsy</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#FP">
+                <p>To Quintus Pompeius Priscus, son of Sextus, a member of the Quirina tribe. Sosius Priscus for his paternal uncle (built).</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#FP">
+                <p>Per Quintus Pompeius Priscus, figlio di Sextus, della tribù Quirina. Sosius Priscus per lo zio paterno (fece).</p>
             </div>
             <div type="commentary">
-                <p/>
+                <p>The document is linked to <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000655">I.Sicily000655</ref>through the same dedicant, Sosius Priscus, a member of the Pompeii Sosii Prisci Falcones, a family very likely originating from Centuripe. The inscription likely came from a context of dedications made for members of this family. 
+                    Manganaro reported the inscription, relating it to another fragmentary one preserved in the Museo Civico Castello Ursino in Catania (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000305">I.Sicily000305</ref>), which very likely mentions a member of the same family. However, both the integration proposed by Manganaro and the published photograph make it clear that Manganaro did not have access to all the pieces of the Centuripe inscription, but only to the fragments from the left side. In order to identify the dedicatee (Q. Pompeius Priscus) within the complex tree of Pompeii Sosii Prisci Falcones family, the deductions of Eck are undoubtedly fundamental. He was the first to reconstruct the various fragments of the inscription and to relate it to <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000655">I.Sicily000655</ref>.  According to Eck, Clodia Falconilla, mentioned in <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000655">I.Sicily000655</ref>, might have been the paternal grandmother of the dedicator Sosius Priscus, consul in 169 CE and son of Q. Pompeius Falco, consul suffectus in 108 CE, and of Sosia Polla, daughter of the consul of 99 CE Q. Sosius Senecio. Eck also supposed that Q. Pompeius Falco was the younger son of Clodia Falconilla and a certain Sex. Pompeius Priscus, and that he inherited the cognomen Falco from his mother. An elder brother must have existed: this would be Q. Pompeius Priscus, the dedicatee of the inscription in question and otherwise unknown. He would then be the paternal uncle of the dedicator Sosius Priscus.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
