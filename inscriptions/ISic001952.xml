@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragment of a list of names</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001952</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001952</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/201">Soprintendenza Beni Culturali e Ambientali di Siracusa</repository>
+                        <idno type="inventory"/>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Fragment of a limestone stele, of which the right margin is preserved, and possibly part of the top edge (although damaged across the front face of the top); broken on the left and below. The right edge is bevelled (i.e. cut back from the front face towards the rear).</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions>
+                                        <height unit="cm">23</height>
+                                        <width unit="cm">23</width>
+                                        <depth unit="cm">9.5</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>The right hand end of eight of ancient Greek, with irregular right margin depending on name length.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Plainly cut letters, somewhat worn, of fairly regular size; sigma appears slightly open, phi with extended vertical; mu with vertical first and last; overall few diagnostic forms preserved.</p>
+                                <locus from="line1" to="8">Line 1-8</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">11-16</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                <geo>37.05780, 14.89346</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0100" evidence="lettering">3rd or 2nd century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="2009">Found during excavations in 2008-2009 on the mediaeval castle of Palazzolo Acreide, in the proximity of foundations of a building on the summit of the rock, attributed to an extra-mural sanctuary of the Greek period<geo>37.0654451,14.9011583</geo></provenance><!-- high point of the mediaeval castle -->
+                        <provenance type="observed" subtype="autopsied">none</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.list" ref="http://www.eagle-network.eu/voc/typeins/lod/108.html">list</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2025-07-07" who="#JP">Jonathan Prag created draft from initial publication</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001952_tiled.tif" height="2720px" width="2856px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001952.jpg" height="2720px" width="2856px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+           </surface>
+        <surface type="left">
+            <graphic n="screen" url="ISic001952_left_tiled.tif" height="3532px" width="2236px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001952_left.jpg" height="3532px" width="2236px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+        </surface>
+        </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/9RD2X88G">
+                <ab>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name type="patronym"><supplied reason="lost">Νυ</supplied>μφοδώρου</name></persName> 
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name type="patronym"><w part="F">οδώρου</w></name></persName>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name type="patronym"><w part="F">α</w></name></persName>
+                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name type="patronym"><w part="F">κλείου</w></name></persName>
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><persName type="attested"><name type="patronym"><w part="F">ο<unclear>τ</unclear>ίου</w></name></persName> <name type="demotic"><w><abbr>Περ</abbr></w></name></persName>
+                    <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name type="patronym"><w part="F">κράτεος</w></name></persName>
+                    <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><persName type="attested"><name type="patronym"><w part="F">ώρου</w></name></persName> <name type="demotic"><w><abbr>Σαλ</abbr></w></name></persName>
+                    <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/> <persName type="attested"><name type="patronym"><unclear>Μ</unclear>άμου</name></persName>
+                </ab>
+            </div>
+            <div type="apparatus" resp="#JP">
+                <listApp>
+                    <app>
+                        <note>Text of Vinci 2022, controlled against photograph</note>
+                    </app>
+                    <app loc="5"><note>The second letter (Τ) is impossible to see in the photograph</note></app>
+                    </listApp>
+            </div>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            </div>
+            <div type="commentary">
+                <p>One of three fragments found in the area of the mediaeval castle. The three fragments may or may not belong to the same inscription. See also <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001951">ISic001951</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001950">ISic001950</ref>. The difference of the form of theta in fragment 2 (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001951">ISic001951</ref>), compared to fragment 1 (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001950">ISic001950</ref>) suggests that the two are from different inscriptions; this could theoretically belong to either. Vinci (2022: 231) suggests that the top margin of this stone is preserved, but the upper part of the face is damaged and a line of text may be lost at the start. The text presumably continued below. The stone appears to become thinner towards the top.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Vinci</author>
+                        <date>2022</date>
+                        <citedRange>231 fr.3</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9RD2X88G"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion">
+	       <bibl/>
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

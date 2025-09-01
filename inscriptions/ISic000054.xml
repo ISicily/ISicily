@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -34,17 +36,21 @@
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division</resp>
                 </respStmt>
-	    <respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -82,7 +88,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A marble plaque, intact above, below and left, broken lower right.</p>
+                                <support>
+                                    <p>A marble plaque, intact above, below and left, broken lower right.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--ILTermini/ILPalermo-->
@@ -92,12 +99,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Text is approximately centered on the stone with five lines of varying length and spacing.</p>
+                                <layout>
+                                    <p>Text is approximately centered on the stone with five lines of varying length and spacing.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -128,10 +136,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200">first or second century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1873">Found in Termini Imerese by one Giuseppe Di Giorgi, and acquired from him by Palermo Museum in 1873, along with several others (incl. ISic000055)</provenance>
@@ -142,18 +150,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -183,16 +191,17 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-05-10" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus and translation</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
                 <change when="2020-10-06" who="#VM">Valentina Mignosa encoded text division</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-30" who="#JP">Jonathan Prag tagged named entities</change>
                 <change when="2024-05-02" who="#JP">Jonathan Prag revised from publication and photograph and added image.</change>
-	</listChange>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -203,29 +212,46 @@
             <graphic n="print" url="ISic000054.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-05-23.</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name type="nomen">Clovatia</name> <g ref="#interpunct">·</g> <persName type="attested"><name type="libertinatio"><expan><abbr>C</abbr><ex>ai</ex></expan></name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>l</abbr><ex>iberta</ex></expan></w>
-                    <lb n="2"/><name type="cognomen">Tertia</name></persName>
-                    <lb n="3"/><persName type="attested"><name type="nomen">Clovatiae</name> <g ref="#interpunct">·</g> <persName type="attested"><name type="libertinatio"><expan><abbr>C</abbr><ex>ai</ex></expan></name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>l</abbr><ex>ibertae</ex></expan></w>
-                    <lb n="4"/><name type="cognomen">Optatae</name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>f</abbr><ex>iliae</ex></expan></w> <g ref="#interpunct">·</g> <w>et</w>
-                    <lb n="5"/><w>sibi</w>
+                    <lb n="1"/><persName type="attested"><name type="nomen"><w n="5">Clovatia</w></name> <g ref="#interpunct" n="10">·</g> <persName type="attested"><name type="libertinatio"><w n="15"><expan><abbr>C</abbr><ex>ai</ex></expan></w></name></persName> <g ref="#interpunct" n="20">·</g> <w n="25"><expan><abbr>l</abbr><ex>iberta</ex></expan></w>
+                    <lb n="2"/><name type="cognomen"><w n="30">Tertia</w></name></persName>
+                    <lb n="3"/><persName type="attested"><name type="nomen"><w n="35">Clovatiae</w></name> <g ref="#interpunct" n="40">·</g> <persName type="attested"><name type="libertinatio"><w n="45"><expan><abbr>C</abbr><ex>ai</ex></expan></w></name></persName> <g ref="#interpunct" n="50">·</g> <w n="55"><expan><abbr>l</abbr><ex>ibertae</ex></expan></w>
+                    <lb n="4"/><name type="cognomen"><w n="60">Optatae</w></name></persName> <g ref="#interpunct" n="65">·</g> <w n="70"><expan><abbr>f</abbr><ex>iliae</ex></expan></w> <g ref="#interpunct" n="75">·</g> <w n="80">et</w>
+                    <lb n="5"/><w n="85">sibi</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="Clovatia">Clovatia</w>
+                    <w n="15" lemma="Caius">Cai</w>
+                    <w n="25" lemma="liberta">liberta</w>
+                    <w n="30" lemma="Tertia">Tertia</w>
+                    <w n="35" lemma="Clovatia">Clovatiae</w>
+                    <w n="45" lemma="Caius">Cai</w>
+                    <w n="55" lemma="liberta">libertae</w>
+                    <w n="60" lemma="Optata">Optatae</w>
+                    <w n="70" lemma="filia">filiae</w>
+                    <w n="80" lemma="et">et</w>
+                    <w n="85" lemma="se">sibi</w>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text from photograph</note></app>
+                    <app>
+                        <note>Text from photograph</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#TA">
                 <p>Clovatia Tertia, freedwoman of Gaius, (set this up) for Clovatia Optata, freedwoman of Gaius, her daughter, and for herself.</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p/>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -234,18 +260,23 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650798">10.7393</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusPalermo">
                         <citedRange>57</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                         <citedRange>75</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

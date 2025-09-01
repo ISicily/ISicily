@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -34,13 +36,17 @@
                     <name xml:id="SA">Serena Agodi</name>
                     <resp>Italian translation</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -87,12 +93,12 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -111,10 +117,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0125">1st century CE or beginning of 2nd century CE (Korhonen)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1832">Found in 1832 at a depth of c.16 palms on property belonging to the Duke of Carcaci outside the Porta Ferdinanda near the hill of D. Clarae; currently on display on the ground floor of the Museo Civico.</provenance>
@@ -125,18 +131,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -168,14 +174,15 @@
                 <change when="2017-06-11" who="#JP">Jonathan Prag made initial revisions of the EpiDoc</change>
                 <change when="2017-06-28" who="#JP">Jonathan Prag revised the text, added translation and draft commentary, and further metadata</change>
                 <change when="2017-07-06" who="#JP">Jonathan Prag added Italian elements to template for parallel text</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-02-06" who="#JP">Jonathan Prag revised file including text encoding, added images</change>
-	</listChange>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -198,87 +205,47 @@
             <graphic n="print" url="ISic000307_leftthreequarter.jpg" height="5520px" width="3680px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2018-07-06</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP" source="#autopsy">
                 <ab>
-                    <lb n="1"/>
-                    <expan>
-                        <abbr>D</abbr>
-                        <ex>is</ex>
-                    </expan>
-                    <g ref="#interpunct">·</g>
-                    <expan>
-                        <abbr>m</abbr>
-                        <ex>anibus</ex>
-                    </expan>
-                    <g ref="#interpunct">·</g>
-                    <expan>
-                        <abbr>s</abbr>
-                        <ex>acrum</ex>
-                    </expan>
-                    <g ref="#interpunct">·</g>
-                    <lb n="2"/>
-                    <persName type="attested">
-                        <name>
-                            <expan>
-                                <abbr>Q</abbr>
-                                <ex>uinto</ex>
-                            </expan>
-                        </name>
-                        <g ref="#interpunct">·</g> <name>Atilio</name> <g ref="#interpunct">·</g>
-                       <persName type="attested"> <name>
-                            <expan>
-                                <abbr>Q</abbr>
-                                <ex>uinti</ex>
-                            </expan>
-                        </name></persName>
-                        <g ref="#interpunct">·</g>
-                        <expan>
-                            <abbr>f</abbr>
-                            <ex>ilio</ex>
-                        </expan>
-                        <g ref="#interpunct">·</g>
-                        <lb n="3"/>
-                        <expan>
-                            <abbr>Cla</abbr>
-                            <ex>udia</ex>
-                        </expan>
-                        <g ref="#interpunct">·</g>
-                        <name>Severo</name>
-                    </persName>
-                    <lb n="4"/>
-                    <roleName type="military" subtype="praefectus.fabrum"><expan>
-                        <abbr>praef</abbr>
-                        <ex>ecto</ex>
-                    </expan>
-                    <g ref="#interpunct">·</g>
-                    <expan>
-                        <abbr>fabr</abbr>
-                        <ex>um</ex>
-                    </expan></roleName>
-                    <g ref="#interpunct">·</g>
-                    <lb n="5"/>
-                    <roleName type="civic" subtype="duumvir"><expan><abbr><hi rend="supraline">II</hi>vir</abbr><ex>o</ex></expan></roleName>
-                    <g ref="#interpunct">·</g>
-                    <expan>
-                        <abbr>suf</abbr>
-                        <ex>fragiis</ex>
-                    </expan>
-                    <g ref="#interpunct">·</g>
-                    <lb n="6"/>
-                    <expan>
-                        <abbr>popul</abbr>
-                        <ex>i</ex>
-                    </expan>
-                    <g ref="#interpunct">·</g> cre
-                    <lb n="7" break="no"/>ato
+                    <lb n="1"/><w n="5"><expan><abbr>D</abbr><ex>is</ex></expan></w> <g ref="#interpunct" n="10">·</g> <w n="15"><expan><abbr>m</abbr><ex>anibus</ex></expan></w> <g ref="#interpunct" n="20">·</g> <w n="25"><expan><abbr>s</abbr><ex>acrum</ex></expan></w> <g ref="#interpunct" n="30">·</g>
+                    <lb n="2"/><persName type="attested"><name><w n="35"><expan><abbr>Q</abbr><ex>uinto</ex></expan></w></name> <g ref="#interpunct" n="40">·</g> <name><w n="45">Atilio</w></name> <g ref="#interpunct" n="50">·</g> <persName type="attested"><name><w n="55"><expan><abbr>Q</abbr><ex>uinti</ex></expan></w></name></persName> <g ref="#interpunct" n="60">·</g> <w n="65"><expan><abbr>f</abbr><ex>ilio</ex></expan></w> <g ref="#interpunct" n="70">·</g>
+                    <lb n="3"/><orgName type="tribe"><w n="75"><expan><abbr>Cla</abbr><ex>udia</ex></expan></w></orgName> <supplied reason="subaudible"><w n="77">tribu</w></supplied> <g ref="#interpunct" n="80">·</g> <name><w n="85">Severo</w></name></persName>
+                    <lb n="4"/><roleName type="military" subtype="praefectus.fabrum"><w n="90"><expan><abbr>praef</abbr><ex>ecto</ex></expan></w> <g ref="#interpunct" n="95">·</g> <w n="100"><expan><abbr>fabr</abbr><ex>um</ex></expan></w></roleName> <g ref="#interpunct" n="105">·</g>
+                    <lb n="5"/><roleName type="civic" subtype="duumvir"><w n="110"><expan><abbr><hi rend="supraline"><am>II</am></hi></abbr><ex>duum</ex><abbr>vir</abbr><ex>o</ex></expan></w></roleName> <g ref="#interpunct" n="115">·</g> <w n="120"><expan><abbr>suf</abbr><ex>fragiis</ex></expan></w> <g ref="#interpunct" n="125">·</g>
+                    <lb n="6"/><w n="130"><expan><abbr>popul</abbr><ex>i</ex></expan></w> <g ref="#interpunct" n="135">·</g> <w n="140">cre
+                    <lb n="7" break="no"/>ato</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="dis">Dis</w>
+                    <w n="15" lemma="manes">manibus</w>
+                    <w n="25" lemma="sacrum">sacrum</w>
+                    <w n="35" lemma="Quintus">Quinto</w>
+                    <w n="45" lemma="Atilius">Atilio</w>
+                    <w n="55" lemma="Quintus">Quinti</w>
+                    <w n="65" lemma="filius">filio</w>
+                    <w n="75" lemma="Claudius">Claudia</w>
+                    <w n="77" lemma="tribus">tribu</w>
+                    <w n="85" lemma="Severus">Severo</w>
+                    <w n="90" lemma="praefectus">praefecto</w>
+                    <w n="100" lemma="faber">fabrum</w>
+                    <w n="110" lemma="duovir">IIviro</w>
+                    <w n="120" lemma="suffragium">suffragiis</w>
+                    <w n="130" lemma="populus">populi</w>
+                    <w n="140" lemma="creo">creato</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text from autopsy</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Sacred to the shades of the underworld. (Set up for) Quintus Atilius Severus, son of Quintus, of the
@@ -307,35 +274,43 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650757">10.7023</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="IMusCatania">
                         <citedRange>17</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILS">
                         <citedRange>6771</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/XHMS9K6S"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000352">https://biblio.inscriptiones.org/epig10000352</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000352">https://biblio.inscriptiones.org/epig10000352</ref>
+                    </bibl>
                     <bibl>
                         <author>Asheri</author>
                         <date>1982-1983</date>
                         <citedRange>464</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/NPFIPDDV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001372">https://biblio.inscriptiones.org/epig10001372</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001372">https://biblio.inscriptiones.org/epig10001372</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>53</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
+                    </bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1990</date>
                         <citedRange>359 n.60</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

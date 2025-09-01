@@ -5,9 +5,9 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 000655</title>
+                <title>Honorific inscription for Clodia Falconilla</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
+                <principal ref="#FP">Francesca Prado</principal>
                 <funder>John Fell OUP Research Fund</funder>
                 <funder>
                     <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
@@ -37,7 +37,7 @@
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="FP">Francesca Prado</name>
+                    <name xml:id="FP" ref="https://orcid.org/0000-0003-3326-3475">Francesca Prado</name>
                     <resp>editing of EpiDoc</resp>
                 </respStmt>
                 <respStmt>
@@ -68,7 +68,6 @@
                         <settlement>Centuripe</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/002">Museo Archeologico Regionale di Centuripe</repository>
                         <idno type="inventory">KA0858</idno>
-                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -81,37 +80,38 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Marble plaque made up of multiple joining fragments, of which both the top and the bottom are lost.</p>
+                                <support><p>Marble plaque made up of nine joining fragments, of which both the top and the bottom are lost. Surface and back smooth and polished.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm">63</height>
+                                        <width unit="cm">80</width>
+                                        <depth unit="cm">2</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.damaged"/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Five lines of Latin text, in straight alignment and shifted toward the right, with a wider left margin.The letters in the first line, which is partially legible, are of slightly greater module than those in the following lines, and are more widely spaced. The last line – of which only parts of one or more letters are preserved (perhaps an A and and the left apex of a V; an M is also possible) are preserved – appears more centered, with both left and right margins wider.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
+                                    <damage ana= "text_condition.partly_illegible"/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote>
+                                <p>Elegant square capital letters, slightly verticalized, with serifs. The O in l. 1 is square in shape compared to the O in the other lines; A has a vertical crossbar, P has an open loop. In l. 2, a triple nexus links the letters T, R, and I, with the I rising above. In l. 4, there is spacing between the words Sosius and Priscus. Comma-shaped punctuation marks appear in ll. 1 and 3. A damaged ivy leaf appears at the end of l. 1.</p>
+                                <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm">80</height>
                                 </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line1" to="line5">Interlineation line 1 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm">30-35</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
-                    </physDesc>
+                    </physDesc>  
                     <history>
                         <origin>
                             <origPlace>
@@ -119,11 +119,11 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
                                 <geo>37.62336, 14.74049</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0120" evidence="prosopography">Mother of cos. 108 CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0100" notAfter-custom="0120" evidence="prosopography">Early 2nd century, mother of cos. 108 CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="identified">Noted on display on the ground floor 2017-03-25.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1925">Discovered by Guido Libertini during the excavation campaigns conducted starting in 1925, within the complex of spaces near the so-called former Barbagallo Mill, i.g. the area of the so-called "Edificio degli Augustales" <geo>37.62257, 14.74099</geo>, in a zone overlooking the Vallata Difesa, near the Church of the Crucifix. The contextual information is not very clear. Specifically, the author states that he found the inscription “a sei o sette metri più a nord del Mulino, [dove] si trovava un’ampia costruzione, una parte della quale, di forma rettangolare e non inferiore agli 11 m di lunghezza, era pavimentata in marmo e circondata, sembra, da una platea in pietra". Currently on display on the ground floor in the Antiquarium, Room III</provenance>
+                        <!--  location of the Augustalia  -->
+                       <provenance type="observed" subtype="autopsied" xml:id="autopsy">Prado 2023-05-09</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -163,11 +163,11 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -179,32 +179,36 @@
                 <change when="2021-06-14" who="#FP">Francesca Prado edited the text</change>
                 <change when="2021-07-08" who="#FP">Francesca Prado tagged named entities and added English and Italian translation</change>
                 <change when="2021-07-14" who="#system">Updated Zenodo DOI</change>
+                <change when="2025-07-31" who="#FP">Francesca Prado added title, commentary, and info about support (part), layout, letters, dimensions, provenance</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000655_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09</desc>
             </graphic>
             <graphic n="print" url="ISic000655.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09</desc>
             </graphic>
          </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#FP">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#FP" source="#autopsy">
                 <ab> 
                 <lb n="1"/><persName type="attested"><name type="nomen"><supplied reason="lost">Cl</supplied>odi<supplied reason="lost">ae</supplied></name> <persName type="attested"><name type="praenomen"><expan><abbr>P</abbr><ex>ubli</ex></expan></name></persName> <g ref="#interpunct">·</g> <w><expan><abbr>F</abbr><ex>iliae</ex></expan></w> <g ref="#ivy-leaf">❦</g>
                     <lb n="2"/><name type="cognomen">Falconillae</name></persName> <w>ma<hi rend="ligature">tri</hi></w>
                     <lb n="3"/><persName type="attested"><name type="nomen">Pompei</name> <g ref="#interpunct">·</g> <name type="cognomen">Falconis</name></persName>
                     <lb n="4"/><persName type="attested"><name type="nomen">Sosius</name> <space unit="character" quantity="1"/> <name type="cognomen">Priscus</name></persName>
-                    <lb n="5"/><space unit="character" quantity="3"/> <unclear>M</unclear> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="5"/><space unit="character" quantity="3"/> <w part="I"><unclear>AV</unclear></w><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>text based on photograph</note></app></listApp>
+                <listApp><app><note>Text from autopsy</note></app>
+                    <app loc="5">
+                        <note>Eck: a[viae]</note>
+                    </app></listApp>
      </div>
             <div type="translation" xml:lang="en" resp="#FP">
                 <p>To Clodia Falconilla, daughter of Publius, mother of Pompeius Falco, Sosius Priscus (built this?)...</p>
@@ -213,8 +217,7 @@
                 <p>Per Clodia Falconilla, figlia di Publius, madre di Pompeius Falco, Sosius Priscus (fece?)...</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Clodia P. f. Falconilla-->
+                <p>The document is linked to <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000656">I.Sicily000656</ref> through the same dedicant, Sosius Priscus, a member of the Pompeii Sosii Prisci Falcones, a family very likely originating from Centuripe. The inscription likely came from a context of dedications made for members of this family. Libertini hypothesized that the inscription originally accompanied a statue dedicated by a certain Sosius Priscus to his mother, Falconilla, whom he believed could perhaps be identified with Sosia Falconilla, daughter of Q. Pompeius Sosius Priscus, consul in 169 CE, and already known from an inscription from Iulia Cirta (CIL 8.7066), or possibly with another, slightly later, Falconilla. On the basis of the letterforms, he dated the inscription to the beginning of the 3rd century CE.Manganaro mentioned the text in 1989, proposing the restoration [Cl]odi[ae] P. f(iliae) in the first line and noting the letter A in line 5, which had been overlooked by Libertini. According to Eck, Clodia Falconilla, mater Pompei Falconis, honorand of the inscription, should be identified as the mother of Q. Pompeius Falco, consul suffectus in 108 CE and husband of Sosia Polla, daughter of the consul Q. Sosius Senecio and Iulia Frontina, herself daughter of the cos. III Sex. Iulius Frontinus. The dedicant Sosius Priscus, consul ordinarius in 149 CE, son of Falco and Polla, would thus have been Clodia’s grandson. On these grounds, Eck proposed restoring the final A in the inscription as a[viae].
                 </p>
             </div>
             <div type="bibliography">
@@ -222,17 +225,41 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>1996.0789</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+		    </bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1993.0828</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+		    </bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1926</date>
                         <citedRange>42</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VJZRAI26"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001874">https://biblio.inscriptiones.org/epig10001874</ref></bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001874">https://biblio.inscriptiones.org/epig10001874</ref>
+		    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1989</date>
+                        <citedRange>168</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/EZMBJ6GN"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001831">https://biblio.inscriptiones.org/epig10001831</ref>
+		    </bibl>
+                    <bibl>
+                        <author>Eck</author>
+                        <date>1996</date>
+                        <citedRange>114-116</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4HE5CIGJ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001475">https://biblio.inscriptiones.org/epig10001475</ref>
+		    </bibl>
+                    <bibl>
+                        <author>Eck</author>
+                        <date>1996</date>
+                        <citedRange>244</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7T8K8ATA"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002014">https://biblio.inscriptiones.org/epig10002014</ref>
+		    </bibl>
                 </listBibl>
                 <listBibl type="discussion">
                     <bibl/>
