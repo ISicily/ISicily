@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -30,13 +32,17 @@
                     <name xml:id="MM">Michael Metcalfe</name>
                     <resp>museum data collection</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	    <respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="system">system</name>
                     <resp>automated or batch processes</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -76,7 +82,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Fazellus lists this as one of a number of ancient marble tablets to be found in private houses in Termini</p>
+                                <support>
+                                    <p>Fazellus lists this as one of a number of ancient marble tablets to be found in private houses in Termini</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
@@ -86,16 +93,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout>Three lines of Latin letters, if Fazellus' layout is reliable
+                                <layout>
+                                    <p>Three lines of Latin letters, if Fazellus' layout is reliable</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>No information is preserved</p>
+                            <handNote>
+                                <p>No information is preserved</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm">unknown</height>
@@ -110,32 +119,32 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">Presumably of imperial date, 1st — 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="first-recorded">The text is reported in Fazellus' De Rebus Siculis (1558) as being in a private house in Termini ('In domo Garfofali')</provenance>
-                        <provenance type="not-observed" subtype="lost">It was already either unfindable or illegible ('litera abolita') by the time of Gualtherus (1624)</provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1558">The text is reported in Fazellus' De Rebus Siculis (1558) as being in a private house in Termini ('In domo Garfofali'); it was already either unfindable or illegible ('litera abolita') by the time of Gualtherus (1624)</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -166,39 +175,61 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-02-12" who="#JP">Jonathan Prag edited the file on the basis of prior publications</change>
                 <change when="2020-09-14" who="#JP">Jonathan Prag added bibl ref</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-          <surface type="transcription">
-                     <graphic n="screen" url="ISic000218_tiled.tif" height="7483px" width="5132px">
-                         <desc>Page from Fazellus 1558 (Rome copy on Google Books)</desc>
-                    </graphic>
-                <graphic n="print" url="ISic000218.jpg" height="7483px" width="5132px">
-                    <desc>Page from Fazellus 1558 (Rome copy on Google Books)</desc>
-                        </graphic>
-                  </surface>
+        <surface type="transcription">
+            <graphic n="screen" url="ISic000218_tiled.tif" height="7483px" width="5132px">
+                <desc>Page from Fazellus 1558 (Rome copy on Google Books)</desc>
+            </graphic>
+            <graphic n="print" url="ISic000218.jpg" height="7483px" width="5132px">
+                <desc>Page from Fazellus 1558 (Rome copy on Google Books)</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><expan><abbr><hi rend="reversed"><am>Ↄ</am></hi></abbr><ex>mulieris</ex></expan> <g ref="#interpunct">·</g> Sempronio
-                    <lb n="2"/>7 <g ref="#interpunct">·</g> L <g ref="#interpunct">·</g> Primioni <g ref="#interpunct">·</g>
-                    <lb n="3"/>annorum <g ref="#interpunct">·</g> XIIII <g ref="#interpunct">·</g>
-                  </ab>
+                    <lb n="1"/><w n="5"><expan><abbr><hi rend="reversed"><am>Ↄ</am></hi></abbr><ex>mulieris</ex></expan></w> <g ref="#interpunct" n="10">·</g> <name><w n="15">Sempronio</w></name>
+                    <lb n="2"/><orig n="20">7</orig> <g ref="#interpunct" n="25">·</g> <name><w n="30"><expan><abbr>L</abbr><ex>ucio</ex></expan></w></name> <g ref="#interpunct" n="35">·</g> <name><w n="40">Primioni</w></name> <g ref="#interpunct" n="45">·</g>
+                    <lb n="3"/><w n="50">annorum</w> <g ref="#interpunct" n="55">·</g> <w n="60">XIIII</w> <g ref="#interpunct" n="65">·</g>
+                </ab>
               </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="mulier">mulieris</w>
+                    <w n="15" lemma="Sempronius">Sempronio</w>
+                    <orig n="20">7</orig>
+                    <w n="30" lemma="Lucius">L</w>
+                    <w n="40" lemma="Primio">Primioni</w>
+                    <w n="50" lemma="annus">annorum</w>
+                    <w n="60" lemma="XIIII">XIIII</w>
+                </ab>
+            </div>
             <div type="apparatus">
-                <listApp><app><note>Text of Fazellus 1558</note></app>
-                    <app loc="Line 1"><note>Mommsen: [---]Sempronio</note></app>
-                    <app loc="Line 2"><note>Mommsen: ((mulieris)) L Primioni</note></app>
-                <app loc="Line 3"><note>Gualtherus 1624, Torremuzza 1769, 1784 (ex Gualt.): XVIII</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text of Fazellus 1558</note>
+                    </app>
+                    <app loc="Line 1">
+                        <note>Mommsen: [---]Sempronio</note>
+                    </app>
+                    <app loc="Line 2">
+                        <note>Mommsen: ((mulieris)) L Primioni</note>
+                    </app>
+                    <app loc="Line 3">
+                        <note>Gualtherus 1624, Torremuzza 1769, 1784 (ex Gualt.): XVIII</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -213,7 +244,7 @@
                         <date>1558</date>
                         <citedRange>Decade 1, Liber 9, p.194</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/UKMEHMF4"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002606">https://biblio.inscriptiones.org/epig10002606</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002606">https://biblio.inscriptiones.org/epig10002606</ref>
                     </bibl>
                     <bibl>
                         <author>Gualtherus</author>
@@ -225,35 +256,41 @@
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310971">no.292</ref></citedRange>
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/310971">no.292</ref>
+                        </citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
                     </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1769</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/501422">p.130, cl.10, no.48</ref></citedRange>
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/501422">p.130, cl.10, no.48</ref>
+                        </citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
                     </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/501841">p.138, cl.10, no.55</ref></citedRange>
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/501841">p.138, cl.10, no.55</ref>
+                        </citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
                     </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7437</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                         <citedRange>143</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
@@ -262,7 +299,7 @@
                         <date>1988</date>
                         <citedRange>50</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
                     </bibl>
                 </listBibl>
             </div>
