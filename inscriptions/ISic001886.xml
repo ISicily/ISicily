@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Funerary epitaph for ḥṭ’lm</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#RDS">Rossana De Simone</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RDS" ref="https://orcid.org/0000-0002-7393-1952">Rossana De Simone</name>
+                    <resp>data collection and file preparation</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001886</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001886</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Mozia</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/107">Museo Whitaker</repository>
+                        <idno type="inventory">MO 11202</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="xpu">Punic</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A limestone funerary cippus capped by a pyramidion at the top; broken into three perfectly joinable fragments. Awaiting restoration.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions>
+                                        <height unit="cm">104</height>
+                                        <width unit="cm"></width>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.complete"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Text over five lines on the plinth, with traces of rubrication.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <rs ana="#execution.rubrication">Rubrication</rs>
+                                	<damage ana="#text_condition.complete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <locus from="line1" to="line5">Line 1-5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">58-105</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462373">Motya</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2524039">Mozia</placeName>
+                            	<geo>37.86503, 12.46798</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0525" notAfter-custom="-0475">End of 6th or early 5th century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="2014">Found in 2014, in the Motya necropolis; it was reemployed inside the West Wall of Tower B8.1<geo>37.8703771,12.4678083</geo></provenance><!-- coordinates for tower B8 -->
+                        <provenance type="observed" subtype="autopsied" xml:id="autopsy" resp="#RDS">De Simone, 2014-07</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="edited">
+            <listChange>
+                <change when="2025-09-02" who="#JP">Jonathan Prag created file based upon scheda provided by Rossana De Simone</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001886_tiled.tif" height="982px" width="1472px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic001886.jpg" height="982px" width="1472px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="transliteration" xml:space="preserve" xml:lang="xpu-Latn" resp="#JP" source="#autopsy">
+                <ab>
+                    <lb n="1" style="text-direction:r-to-l"/>mnṣpt
+                    <lb n="2" style="text-direction:r-to-l"/><persName type="attested"><name>ḥṭʾlm</name>
+                    <lb n="3" style="text-direction:r-to-l"/><name>mms</name>
+                    <lb n="4" style="text-direction:r-to-l"/>bn <name>bʿ
+                    <lb n="5" style="text-direction:r-to-l"/>lytn</name></persName>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>Text of De Simone</note></app></listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#RDS">
+                <p>Stele of ḥṭʾlm mms son of bʿlytn.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#RDS">
+                <p>Stele di ḥṭʾlm mms figlio di bʿlytn.</p>
+            </div>
+            <div type="commentary" resp="#RDS">
+                <p>ḥṭʾlm: a hapax in phoenician onomastics. mms: punic personal name, unexplained. bʿlytn: phoenician personal name “Baal has given”, Latin transcription attested in various inscriptions, e.g.: BALITHONIS (CIL V 4920), BALIATON (CIL VIII 16011, 27491), BALIATHO (CIL VIII 68, AE 1992 1781).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                   <bibl>
+                        <author>De Simone</author>
+                        <date>2023</date>
+                        <citedRange>55 fig.1</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/YNRMMBXA"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002543">https://biblio.inscriptiones.org/epig10002543</ref>
+                    </bibl>
+                  </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
