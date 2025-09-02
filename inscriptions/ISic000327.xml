@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -41,6 +43,10 @@
                 <respStmt>
                     <name xml:id="AR" ref="https://orcid.org/0000-0001-5677-4679">Alessandra Rocchetti</name>
                     <resp>edited text division and added English and Italian translations</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -113,7 +119,7 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                                 <geo>37.49223, 15.07041</geo>
                             </origPlace>
@@ -174,6 +180,7 @@
                 <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-03-03" who="#AR">edited text division and added English and Italian translation</change>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -185,22 +192,34 @@
             <graphic n="print" url="ISic000327.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#AR">
                 <ab>
-                    <lb n="1"/>
-                    <expan><abbr>d</abbr><ex>is</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>m</abbr><ex>anibus</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>s</abbr><ex>acrum</ex></expan>
-                    <lb n="2"/><name>Aemilius</name>
-                    <lb n="3"/><name>Priscus</name>
-                    <lb n="4"/>
-                    <expan><abbr>vix</abbr><ex>it</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>ann</abbr><ex>os</ex></expan> <g ref="#interpunct">·</g> <num value="2">II</num> 
-                    <lb n="5"/>
-                    mensis <g ref="#interpunct">·</g> <num value="2">II</num>
-                    <lb n="6"/> 
-                    dies <g ref="#interpunct">·</g> <num value="4">IV</num> 
+                    <lb n="1"/><w n="5"><expan><abbr>d</abbr><ex>is</ex></expan></w> <g ref="#interpunct" n="10">·</g> <w n="15"><expan><abbr>m</abbr><ex>anibus</ex></expan></w> <g ref="#interpunct" n="20">·</g> <w n="25"><expan><abbr>s</abbr><ex>acrum</ex></expan></w>
+                    <lb n="2"/><persName type="attested"><name><w n="30">Aemilius</w></name>
+                    <lb n="3"/><name><w n="35">Priscus</w></name></persName>
+                    <lb n="4"/><w n="40"><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct" n="45">·</g> <w n="50"><expan><abbr>ann</abbr><ex>os</ex></expan></w> <g ref="#interpunct" n="55">·</g> <num value="2"><w n="60">II</w></num>
+                    <lb n="5"/><w n="65">mensis</w> <g ref="#interpunct" n="70">·</g> <num value="2"><w n="75">II</w></num>
+                    <lb n="6"/><w n="80">dies</w> <g ref="#interpunct" n="85">·</g> <num value="4"><w n="90">IV</w></num>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="dis">dis</w>
+                    <w n="15" lemma="manes">manibus</w>
+                    <w n="25" lemma="sacrum">sacrum</w>
+                    <w n="30" lemma="Aemilius">Aemilius</w>
+                    <w n="35" lemma="Priscus">Priscus</w>
+                    <w n="40" lemma="vivo">vixit</w>
+                    <w n="50" lemma="annus">annos</w>
+                    <w n="60" lemma="II">II</w>
+                    <w n="65" lemma="mensis">mensis</w>
+                    <w n="75" lemma="II">II</w>
+                    <w n="80" lemma="dies">dies</w>
+                    <w n="90" lemma="IV">IV</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -223,10 +242,13 @@
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7043</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-                <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
