@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,10 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division</resp>
@@ -29,6 +31,10 @@
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Edition on basis of autopsy and photographs</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -66,7 +72,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Rectangular plaque in grey stone. Edges are precise and straight, without chips or breaks. Edges slightly rounded. Rear edge is flat.</p>
+                                <support>
+                                    <p>Rectangular plaque in grey stone. Edges are precise and straight, without chips or breaks. Edges slightly rounded. Rear edge is flat.</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone(grey)</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions>
@@ -76,12 +83,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Three lines of Greek text. Text is left justified.</p>
+                                <layout>
+                                    <p>Three lines of Greek text. Text is left justified.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -150,33 +158,32 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" precision="low">2nd — 3rd century CE</origDate> <!-- Brugnone dates the inscription to the 2nd-3rd centuries AD. -->
                         </origin>
                         <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown, but the piece is assumed to come from Termini Imerese</provenance>
                         <provenance type="observed" subtype="autopsied" when="2022-07-06" resp="#AA">Antoniou, 2022-07-06. On display in Museo Civico Baldassare Romano</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -206,15 +213,16 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-10-05" who="#VM">Valentina Mignosa encoded text division</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-10-27" who="#JP">Jonathan Prag added image</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-21" who="#AA">edition on basis of autopsy and photographs</change>
-	</listChange>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -231,21 +239,35 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #AA">
                 <ab>
-                    <lb n="1" xml:id="BPKAK"/><persName type="attested" xml:id="BPKAU"><name xml:id="BPKAe">Ὀπετρηία</name> <name xml:id="BPKAo">Λητώι</name></persName> <persName type="attested" xml:id="BPKAy"><name type="gamonym" xml:id="BPKAΙ">Μου
-                    <lb n="2" break="no" xml:id="BPKAΤ"/>σαίου</name></persName> <w xml:id="BPKAε">γυνήι</w> <w xml:id="BPKAο">χαῖρε</w> <w xml:id="BPKBA">χρησ
-                    <lb n="3" break="no" xml:id="BPKBK"/>τὴ</w> <w xml:id="BPKBU">καὶ</w> <w xml:id="BPKBe">εὐσεβής</w>
+                    <lb n="1" xml:id="BPKAK"/><persName type="attested" xml:id="BPKAU"><name><w xml:id="BPKAe" n="5">Ὀπετρηία</w></name> <name><w xml:id="BPKAo" n="10">Λητώι</w></name></persName> <persName type="attested" xml:id="BPKAy"><name type="gamonym"><w xml:id="BPKAΙ" n="15">Μου
+                    <lb n="2" break="no" xml:id="BPKAΤ"/>σαίου</w></name></persName> <w xml:id="BPKAε" n="20">γυνήι</w> <w xml:id="BPKAο" n="25">χαῖρε</w> <w xml:id="BPKBA" n="30">χρησ
+                    <lb n="3" break="no" xml:id="BPKBK"/>τὴ</w> <w xml:id="BPKBU" n="35">καὶ</w> <w xml:id="BPKBe" n="40">εὐσεβής</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="Ὀπετρηία">Ὀπετρηία</w>
+                    <w n="10" lemma="Λητώ">Λητώι</w>
+                    <w n="15" lemma="Μουσαῖος">Μουσαίου</w>
+                    <w n="20" lemma="γυνή">γυνήι</w>
+                    <w n="25" lemma="χαίρω">χαῖρε</w>
+                    <w n="30" lemma="χρηστός">χρηστὴ</w>
+                    <w n="35" lemma="καί">καὶ</w>
+                    <w n="40" lemma="εὐσεβής">εὐσεβής</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#AA">
                 <listApp>
-                    <app><note>Text from autopsy</note></app>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#AA">
                 <p>Opetreia Letois, wife of Mousaios, worthy and pious, farewell.</p>
             </div>
             <div type="commentary" resp="#AA">
-                <p>The opening of the inscription is disputed. Kaibel (IG) assumes the omega opening line 1 is an error of the stonecutter, for theta, whereas Brugnone believes Opetreia is a transcription of the Latin nomen, the feminine form of Opetreius, both of which are attested epigraphically (outside of Sicily). In relation to Letois (here in the vocative), Brugnone believes the deceased to have been a freedwoman who adopted the nomen of the person who had freed her. The name Mousaios is common, although not necessarily in Sicily.</p>            
+                <p>The opening of the inscription is disputed. Kaibel (IG) assumes the omega opening line 1 is an error of the stonecutter, for theta, whereas Brugnone believes Opetreia is a transcription of the Latin nomen, the feminine form of Opetreius, both of which are attested epigraphically (outside of Sicily). In relation to Letois (here in the vocative), Brugnone believes the deceased to have been a freedwoman who adopted the nomen of the person who had freed her. The name Mousaios is common, although not necessarily in Sicily.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -254,16 +276,20 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0332</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusTermini">
-                         <author>Brugnone</author>
-                         <date>1974</date> 
+                        <author>Brugnone</author>
+                        <date>1974</date>
                         <citedRange>13</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/9WZ7KU5C"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001397">https://biblio.inscriptiones.org/epig10001397</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001397">https://biblio.inscriptiones.org/epig10001397</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
