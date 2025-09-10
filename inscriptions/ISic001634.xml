@@ -1,229 +1,226 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>funerary inscription of Chrysiphoros</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
-                <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic001634</idno>
-                <idno type="TM">645085</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001634</idno>
-                <idno type="DOI" when="2020-12-22">10.5281/zenodo.4386242</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Ragusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier type="former">
-                            <settlement>Siracusa</settlement>
-                            <repository>Museo Archeologico Regionale Paolo Orsi</repository>
-                            <idno type="old">no.47571</idno>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="grc">Ancient Greek</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support><p>Limestone slab cut out from the original wall of a rock-cut tomb.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType ana="#object.funerary_monument.rock-cut_tomb" ref="http://vocab.getty.edu/aat/300120624">rock-cut tomb</objectType>
-                                    <dimensions><!--Rizzone-->
-                                        <height unit="cm">42</height>
-                                        <width unit="cm">27</width>
-                                        <depth unit="cm">5-14</depth>
-                                    </dimensions>
-                                </support>
-                                <condition/>
-		    </supportDesc>
-                            <layoutDesc>
-                                <layout><p>Text over nine lines</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote>
-                                <locus from="line1" to="line9">Line 1-9</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">35</height><!-- Rizzone -->
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462378">Mutyca</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/6541972">Modica</placeName>
-                            	<geo>36.84594, 14.77399</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" cert="low" precision="low">4th — 5th century CE (?) (after Orsi)</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered" when="1932-07">Found in Catacomb Treppiedi A<geo>36.834753,14.776013</geo></provenance><!-- representative point location for the complex -->
-                        <provenance type="observed" subtype="identified">Observed on display in the Ragusa museum 2015-01-13</provenance>
-                        <acquisition/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Ancient Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="draft">
-            <listChange>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                <change when="2025-03-25" who="#JP">Jonathan Prag made preliminary encoding of text</change>
-	</listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic001634_tiled.tif" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-13</desc>
-            </graphic>
-            <graphic n="print" url="ISic001634.jpg" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-13</desc>
-            </graphic>
-         </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/8ENX9UZ5">
-                <ab>
-                    <lb n="1"/>ὄτε ἀποθ<supplied reason="lost">ν</supplied>ήσ
-                    <lb n="2" break="no"/>κει Χρυσ<unclear>ι</unclear>φώρο<supplied reason="lost">ς</supplied>
-                    <lb n="3"/>ν<unclear>εώ</unclear>φω<supplied reason="lost">τ</supplied>ος
-                    <lb n="4"/>ἔζησεν ἔ<supplied reason="explanation">τ</supplied>η
-                    <lb n="5"/><num value="60"><choice><orig>ἑξήκοτα</orig><reg>ἑξήκοντα</reg></choice></num> ἐτε
-                    <lb n="6" break="no"/>λ<supplied reason="omitted">εύ</supplied>τησεν π<supplied reason="lost">ρὸ</supplied>
-                    <lb n="7"/><num value="13">ιγ</num> <expan><abbr>καλ</abbr><ex>ανδῶν</ex></expan> ἀπ<supplied reason="lost">ρι</supplied>
-                    <lb n="8" break="no"/>λιών <supplied reason="omitted">ἡ</supplied><unclear>μ</unclear><supplied reason="lost">ερᾳ</supplied> 
-                    <lb n="9"/>Ἀφροδ<unclear>ί</unclear><supplied reason="lost">της</supplied>
-                 </ab>
-            </div>
-            <div type="apparatus">
-                <listApp><app><note>Text of Rizzone</note></app></listApp>
-            </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
-            </div>
-            <div type="commentary">
-                <p></p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl>
-                        <author>Agnello</author>
-                        <date>1953</date>
-                        <citedRange>no.69</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref></bibl>
-                    <bibl>
-                        <author>Orsi</author>
-                        <date>1934</date>
-                        <citedRange>152-153 no.4</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JKHW55K5"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001697">https://biblio.inscriptiones.org/epig10001697</ref></bibl>
-                    <bibl>
-                        <author>Orsi</author>
-                        <date>1942</date>
-                        <citedRange>224 no.4</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/XXUZUPJI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001696">https://biblio.inscriptiones.org/epig10001696</ref></bibl>
-                    <bibl>
-                        <author>Ferrua</author>
-                        <date>1943-1944</date>
-                        <citedRange>99 tav.2.4</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/3TJW6Z56"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002000">https://biblio.inscriptiones.org/epig10002000</ref></bibl>
-                    <bibl>
-                        <author>Rizzone</author>
-                        <date>2009</date>
-                        <citedRange>54 no.3</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/8ENX9UZ5"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001633">https://biblio.inscriptiones.org/epig10001633</ref></bibl>
-                </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>funerary inscription of Chrysiphoros</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#JP">Jonathan Prag</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+	   <ns0:funder><ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref></ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</ns0:name>
+                    <ns0:resp>conversion to EpiDoc</ns0:resp>
+                </ns0:respStmt>
+	    <ns0:respStmt>
+     	       <ns0:name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</ns0:name>
+     	       <ns0:resp>standardisation of template and tidying up encoding</ns0:resp>
+ 	   </ns0:respStmt>
+            </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic001634</ns0:idno>
+                <ns0:idno type="TM">645085</ns0:idno>
+                <ns0:idno type="EDR" />
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS" />
+                <ns0:idno type="PHI" />
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001634</ns0:idno>
+                <ns0:idno type="DOI" when="2020-12-22">10.5281/zenodo.4386242</ns0:idno>
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Ragusa</ns0:settlement>
+                        <ns0:repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</ns0:repository>
+                        
+                        
+                        <ns0:altIdentifier type="former">
+                            <ns0:settlement>Siracusa</ns0:settlement>
+                            <ns0:repository>Museo Archeologico Regionale Paolo Orsi</ns0:repository>
+                            <ns0:idno type="old">no.47571</ns0:idno>
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="grc">Ancient Greek</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support><ns0:p>Limestone slab cut out from the original wall of a rock-cut tomb.</ns0:p>
+                                    <ns0:material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</ns0:material>
+                                    <ns0:objectType ana="#object.funerary_monument.rock-cut_tomb" ref="http://vocab.getty.edu/aat/300120624">rock-cut tomb</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">42</ns0:height>
+                                        <ns0:width unit="cm">27</ns0:width>
+                                        <ns0:depth unit="cm">5-14</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition />
+		    </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout><ns0:p>Text over nine lines</ns0:p>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                	<ns0:damage />
+			</ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote>
+                                <ns0:locus from="line1" to="line9">Line 1-9</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="35" atMost="35">35</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line1" to="line2">Interlineation line 1 to 2</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" />
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                    </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462378">Mutyca</ns0:placeName>		
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/6541972">Modica</ns0:placeName>
+                            	<ns0:geo>36.84594, 14.77399</ns0:geo>
+		</ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" cert="low" precision="low">4th &#8212; 5th century CE (?) (after Orsi)</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered" when="1932-07">Found in Catacomb Treppiedi A<ns0:geo>36.834753,14.776013</ns0:geo></ns0:provenance>
+                        <ns0:provenance type="observed" subtype="identified">Observed on display in the Ragusa museum 2015-01-13</ns0:provenance>
+                        <ns0:acquisition />
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+             <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
+                     <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
+	       <ns0:p>ISicily glyphs authority list</ns0:p>
+	     </ns1:fallback>
+	   </ns1:include>
+         </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language>
+                <ns0:language ident="it">Italian</ns0:language>
+                <ns0:language ident="grc">Ancient Greek</ns0:language>
+                <ns0:language ident="la">Latin</ns0:language>
+                <ns0:language ident="he">Hebrew</ns0:language>
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language>
+                <ns0:language ident="xly">Elymian</ns0:language>
+                <ns0:language ident="scx">Sikel</ns0:language>
+                <ns0:language ident="sxc">Sikan</ns0:language>
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="draft">
+            <ns0:listChange>
+                <ns0:change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</ns0:change>
+            	   <ns0:change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</ns0:change>
+            	   <ns0:change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</ns0:change>
+            		<ns0:change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</ns0:change>
+	    <ns0:change when="2020-12-22" who="#JP">Updated Zenodo DOI</ns0:change>
+            	<ns0:change when="2021-01-19" who="#SS">renumbered files, uris and references</ns0:change>
+                <ns0:change when="2025-03-25" who="#JP">Jonathan Prag made preliminary encoding of text</ns0:change>
+	</ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic001634_tiled.tif" height="5520px" width="3680px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2015-01-13</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001634.jpg" height="5520px" width="3680px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2015-01-13</ns0:desc>
+            </ns0:graphic>
+         </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/8ENX9UZ5">
+                <ns0:ab>
+                    <ns0:lb n="1" />&#959;&#787;&#769;&#964;&#949; &#7936;&#960;&#959;&#952;<ns0:supplied reason="lost">&#957;</ns0:supplied>&#942;&#963;
+                    <ns0:lb n="2" break="no" />&#954;&#949;&#953; &#935;&#961;&#965;&#963;<ns0:unclear>&#953;</ns0:unclear>&#966;&#974;&#961;&#959;<ns0:supplied reason="lost">&#962;</ns0:supplied>
+                    <ns0:lb n="3" />&#957;<ns0:unclear>&#949;&#974;</ns0:unclear>&#966;&#969;<ns0:supplied reason="lost">&#964;</ns0:supplied>&#959;&#962;
+                    <ns0:lb n="4" />&#949;&#787;&#769;&#950;&#951;&#963;&#949;&#957; &#949;&#787;&#769;<ns0:supplied reason="explanation">&#964;</ns0:supplied>&#951;
+                    <ns0:lb n="5" /><ns0:num value="60"><ns0:choice><ns0:orig>&#7953;&#958;&#942;&#954;&#959;&#964;&#945;</ns0:orig><ns0:reg>&#7953;&#958;&#942;&#954;&#959;&#957;&#964;&#945;</ns0:reg></ns0:choice></ns0:num> &#7952;&#964;&#949;
+                    <ns0:lb n="6" break="no" />&#955;<ns0:supplied reason="omitted">&#949;&#973;</ns0:supplied>&#964;&#951;&#963;&#949;&#957; &#960;<ns0:supplied reason="lost">&#961;&#8056;</ns0:supplied>
+                    <ns0:lb n="7" /><ns0:num value="13">&#953;&#947;</ns0:num> <ns0:expan><ns0:abbr>&#954;&#945;&#955;</ns0:abbr><ns0:ex>&#945;&#957;&#948;&#8182;&#957;</ns0:ex></ns0:expan> &#7936;&#960;<ns0:supplied reason="lost">&#961;&#953;</ns0:supplied>
+                    <ns0:lb n="8" break="no" />&#955;&#953;&#974;&#957; <ns0:supplied reason="omitted">&#7969;</ns0:supplied><ns0:unclear>&#956;</ns0:unclear><ns0:supplied reason="lost">&#949;&#961;&#945;&#837;</ns0:supplied> 
+                    <ns0:lb n="9" />&#7944;&#966;&#961;&#959;&#948;<ns0:unclear>&#943;</ns0:unclear><ns0:supplied reason="lost">&#964;&#951;&#962;</ns0:supplied>
+                 </ns0:ab>
+            </ns0:div>
+            <ns0:div type="apparatus">
+                <ns0:listApp><ns0:app><ns0:note>Text of Rizzone</ns0:note></ns0:app></ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation">
+                <ns0:p />
+            </ns0:div>
+            <ns0:div type="commentary">
+                <ns0:p />
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl>
+                        <ns0:author>Agnello</ns0:author>
+                        <ns0:date>1953</ns0:date>
+                        <ns0:citedRange>no.69</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Orsi</ns0:author>
+                        <ns0:date>1934</ns0:date>
+                        <ns0:citedRange>152-153 no.4</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/JKHW55K5" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001697">https://biblio.inscriptiones.org/epig10001697</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Orsi</ns0:author>
+                        <ns0:date>1942</ns0:date>
+                        <ns0:citedRange>224 no.4</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/XXUZUPJI" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001696">https://biblio.inscriptiones.org/epig10001696</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Ferrua</ns0:author>
+                        <ns0:date>1943-1944</ns0:date>
+                        <ns0:citedRange>99 tav.2.4</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/3TJW6Z56" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002000">https://biblio.inscriptiones.org/epig10002000</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Rizzone</ns0:author>
+                        <ns0:date>2009</ns0:date>
+                        <ns0:citedRange>54 no.3</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/8ENX9UZ5" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001633">https://biblio.inscriptiones.org/epig10001633</ns0:ref></ns0:bibl>
+                </ns0:listBibl>
+	   <ns0:listBibl type="discussion"><ns0:bibl /></ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>

@@ -1,196 +1,193 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Fragment of an epitaph</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
-                <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-             </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic001856</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001856</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
-                        <idno type="inventory">34733b</idno>
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="grc">Ancient Greek</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support><p>Fragment of a white marble plaque, discoloured on the front. Intact on the right side, preserving part of a raised moulding along the edge; broken on the other three sides. Finished on the reverse.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions>
-                                        <height unit="cm">12.8</height>
-                                        <width unit="cm">15.1</width>
-                                        <depth unit="cm">2.2-2.6</depth>
-                                    </dimensions>
-                                </support>
-                                <condition ana="#condition.fragment"/>
-		    </supportDesc>
-                            <layoutDesc>
-                                <layout><p>Remains of right end of two lines of Greek letters, traces of a third line below; uneven right margin.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote><p>Simple v-cut lunate letters with terminal serifs, of regular size.</p>
-                                <locus from="line1" to="line2">Line 1-2</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">21-23</height>
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">18</height>
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
-                            	<geo>37.62336, 14.74049</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st — 3rd century CE</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered" notAfter="1914">One of 8 epigraphic fragments acquired from Centuripe by the museum, 19 February 1914 (and Orsi was unable to confirm more precisely the locale in which they were found). Currently in storage, magazzino B, cassette 13</provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#JP" xml:id="autopsy">Prag  2014-09</provenance>
-                        <acquisition/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Ancient Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="edited">
-            <listChange>
-                <change when="2025-08-13" who="#JP">Jonathan Prag created file from autopsy</change>
-	</listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic001856_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
-            </graphic>
-            <graphic n="print" url="ISic001856.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
-            </graphic>
-         </surface>
-        <surface type="rear">
-            <graphic n="screen" url="ISic001856_rear_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
-            </graphic>
-            <graphic n="print" url="ISic001856_rear.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
-            </graphic>
-        </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="#autopsy">
-                <ab>
-                    <lb n="1"/><persName type="attested"><name><gap reason="lost" unit="character" atLeast="4" atMost="6"/><w part="F">ικη</w></name></persName> χρησ
-                    <lb n="2"/><supplied reason="lost">τά</supplied> <supplied reason="lost">χαῖ</supplied>ρε ἔζη
-                    <lb n="3"/><supplied reason="lost">σες</supplied> <supplied reason="lost">ἔτη</supplied> <hi rend="supraline"><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" unit="character" quantity="1"/></hi>
-                </ab>
-            </div>
-            <div type="apparatus" resp="#JP">
-                <listApp>
-                    <app><note>text from autopsy</note></app>
-                </listApp>
-            </div>
-            <div type="translation" xml:lang="en" resp="#JP">
-                <p>Farewell, worthy [---]ike, you lived [--] years.</p>
-            </div>
-            <div type="commentary" resp="#JP">
-                <p>On the parallel of other imperial period Greek epitaphs from Centuripe, this is likely to be the upper right part of a simple funerary epitaph, for a female individual, with a name ending in -ike. If it follows the common χρηστά χαῖρε pattern, then no more than 4-6 letters are missing from the name. Orsi proposed a name such as Εὐριδικη. The length of the supraline, which would have stood over the numeral recording the age in line 3, together with the surviving letter trace, suggests that the numeral was made up of two letters, so an age of at least 11. Orsi omitted the supraline from his published edition.</p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl type="bulletin" n="NSA">
-                        <author>Orsi</author>
-                        <title>NSA</title>
-                        <date>1915</date>
-                        <citedRange>231</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
-                    </bibl>
-                   </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>Fragment of an epitaph</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#JP">Jonathan Prag</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+	   <ns0:funder><ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref></ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+             </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic001856</ns0:idno>
+                <ns0:idno type="TM" />
+                <ns0:idno type="EDR" />
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS" />
+                <ns0:idno type="PHI" />
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001856</ns0:idno>
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Siracusa</ns0:settlement>
+                        <ns0:repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</ns0:repository>
+                        <ns0:idno type="inventory">34733b</ns0:idno>
+                        
+                        <ns0:altIdentifier>
+                            <ns0:settlement />
+                            <ns0:repository />
+                            <ns0:idno type="old" />
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="grc">Ancient Greek</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support><ns0:p>Fragment of a white marble plaque, discoloured on the front. Intact on the right side, preserving part of a raised moulding along the edge; broken on the other three sides. Finished on the reverse.</ns0:p>
+                                    <ns0:material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</ns0:material>
+                                    <ns0:objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">12.8</ns0:height>
+                                        <ns0:width unit="cm">15.1</ns0:width>
+                                        <ns0:depth unit="cm">2.2-2.6</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition ana="#condition.fragment" />
+		    </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout><ns0:p>Remains of right end of two lines of Greek letters, traces of a third line below; uneven right margin.</ns0:p>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                	<ns0:damage ana="#text_condition.incomplete" />
+			</ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote><ns0:p>Simple v-cut lunate letters with terminal serifs, of regular size.</ns0:p>
+                                <ns0:locus from="line1" to="line2">Line 1-2</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="21" atMost="23">21-23</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line1" to="line2">Interlineation line 1 to 2</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="18" atMost="18">18</ns0:height>
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                    </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</ns0:placeName>		
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</ns0:placeName>
+                            	<ns0:geo>37.62336, 14.74049</ns0:geo>
+		</ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st &#8212; 3rd century CE</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered" notAfter="1914">One of 8 epigraphic fragments acquired from Centuripe by the museum, 19 February 1914 (and Orsi was unable to confirm more precisely the locale in which they were found). Currently in storage, magazzino B, cassette 13</ns0:provenance>
+                        <ns0:provenance type="observed" subtype="autopsied" resp="#JP" xml:id="autopsy">Prag  2014-09</ns0:provenance>
+                        <ns0:acquisition />
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+             <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
+                     <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
+	       <ns0:p>ISicily glyphs authority list</ns0:p>
+	     </ns1:fallback>
+	   </ns1:include>
+         </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language>
+                <ns0:language ident="it">Italian</ns0:language>
+                <ns0:language ident="grc">Ancient Greek</ns0:language>
+                <ns0:language ident="la">Latin</ns0:language>
+                <ns0:language ident="he">Hebrew</ns0:language>
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language>
+                <ns0:language ident="xly">Elymian</ns0:language>
+                <ns0:language ident="scx">Sikel</ns0:language>
+                <ns0:language ident="sxc">Sikan</ns0:language>
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="edited">
+            <ns0:listChange>
+                <ns0:change when="2025-08-13" who="#JP">Jonathan Prag created file from autopsy</ns0:change>
+	</ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic001856_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001856.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</ns0:desc>
+            </ns0:graphic>
+         </ns0:surface>
+        <ns0:surface type="rear">
+            <ns0:graphic n="screen" url="ISic001856_rear_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001856_rear.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</ns0:desc>
+            </ns0:graphic>
+        </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="#autopsy">
+                <ns0:ab>
+                    <ns0:lb n="1" /><ns0:persName type="attested"><ns0:name><ns0:gap reason="lost" unit="character" atLeast="4" atMost="6" /><ns0:w part="F">&#953;&#954;&#951;</ns0:w></ns0:name></ns0:persName> &#967;&#961;&#951;&#963;
+                    <ns0:lb n="2" /><ns0:supplied reason="lost">&#964;&#940;</ns0:supplied> <ns0:supplied reason="lost">&#967;&#945;&#8150;</ns0:supplied>&#961;&#949; &#949;&#787;&#769;&#950;&#951;
+                    <ns0:lb n="3" /><ns0:supplied reason="lost">&#963;&#949;&#962;</ns0:supplied> <ns0:supplied reason="lost">&#949;&#787;&#769;&#964;&#951;</ns0:supplied> <ns0:hi rend="supraline"><ns0:gap reason="illegible" unit="character" quantity="1" /><ns0:gap reason="lost" unit="character" quantity="1" /></ns0:hi>
+                </ns0:ab>
+            </ns0:div>
+            <ns0:div type="apparatus" resp="#JP">
+                <ns0:listApp>
+                    <ns0:app><ns0:note>text from autopsy</ns0:note></ns0:app>
+                </ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation" xml:lang="en" resp="#JP">
+                <ns0:p>Farewell, worthy [---]ike, you lived [--] years.</ns0:p>
+            </ns0:div>
+            <ns0:div type="commentary" resp="#JP">
+                <ns0:p>On the parallel of other imperial period Greek epitaphs from Centuripe, this is likely to be the upper right part of a simple funerary epitaph, for a female individual, with a name ending in -ike. If it follows the common &#967;&#961;&#951;&#963;&#964;&#940; &#967;&#945;&#8150;&#961;&#949; pattern, then no more than 4-6 letters are missing from the name. Orsi proposed a name such as &#917;&#8016;&#961;&#953;&#948;&#953;&#954;&#951;. The length of the supraline, which would have stood over the numeral recording the age in line 3, together with the surviving letter trace, suggests that the numeral was made up of two letters, so an age of at least 11. Orsi omitted the supraline from his published edition.</ns0:p>
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl type="bulletin" n="NSA">
+                        <ns0:author>Orsi</ns0:author>
+                        <ns0:title>NSA</ns0:title>
+                        <ns0:date>1915</ns0:date>
+                        <ns0:citedRange>231</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ns0:ref>
+                    </ns0:bibl>
+                   </ns0:listBibl>
+	   <ns0:listBibl type="discussion"><ns0:bibl /></ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>

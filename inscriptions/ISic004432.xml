@@ -1,198 +1,195 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Epitaph of Drakon</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#AA">Alex Antoniou</principal>
-                <funder>John Fell OUP Research Fund</funder>
-                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name> 
-                    <resp>Project direction, template development, general editing</resp> 
-                </respStmt> 
-                <respStmt> 
-                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name> 
-                    <resp>standardisation of template and tidying up encoding</resp> 
-                </respStmt>
-                <respStmt>
-                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>File added and Epidoc encoding</resp>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic004432</idno>
-                <idno type="TM">698378</idno>
-                <idno type="EDR">150060</idno>
-                <idno type="EDH"/>
-                <idno type="EDCS">68800042</idno>
-                <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004432</idno>
-                <idno type="DOI"/>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Tyndaris</settlement>
-                        <repository role="store" ref="http://sicily.classics.ox.ac.uk/museum/197">Soprintendenza Beni Culturali e Ambientali di Messina</repository>
-                        <!--Prot. n.6485 del 14.06.2011-->
-                        <!--No inventory number found--> 
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="grc">Ancient Greek</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
-                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
-                                    <dimensions>
-                                        <height unit="cm">9</height>
-                                        <width unit="cm">31</width>
-                                        <depth unit="cm">17</depth>
-                                    </dimensions>
-                                </support>
-                                <condition ana="#condition.complete"/>
-                            </supportDesc>
-                            <layoutDesc>
-                                <layout>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage ana="text_condition.complete"/>
-                                </layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote>
-                                <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">20-30</height><!--Measurement from Fasolo 2013 -->
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462527">Tyndaris</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/10282151">Tindari</placeName>
-                                <geo>38.1453639, 15.020175</geo>
-                            </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="0100" precision="low">2nd century BCE to the 1st century CE</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered" when="2011">Found in the district of SS. Salvatore di Patti (ME), near the Cedro stream on the edge of a path<geo>38.145361, 15.020167<!-- coordinates of findspot from Fasolo 2013 --></geo></provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
-                        <provenance/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
-                    <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
-                    <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
-        </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Ancient Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="draft">
-            <listChange>
-                <change when="2021-06-02" who="#AA">Creation of file and Epidoc encoding</change>
-            </listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic004432_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic004432.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
-                <ab>
-                    <lb n="1"/><name>Δράκων</name>
-                </ab>
-                 </div>
-            <div type="apparatus">
-                <listApp>
-                    <app><note>Text: Fasolo 2013</note></app>
-                </listApp>
-            </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>Drakon</p>
-            </div>
-            <div type="commentary">
-                <p><!--commented out pending revision--></p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl type="bulletin" n="AE">
-                        <citedRange>2017.0536</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
-                    <bibl type="bulletin" n="SEG">
-                        <citedRange>64.0838</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
-                    <bibl>
-                        <author>Fasolo</author>
-                        <date>2013</date>
-                        <citedRange>64-65 no.16, fig.29</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/X2SEXMRX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002011">https://biblio.inscriptiones.org/epig10002011</ref></bibl>
-                </listBibl>
-                <listBibl type="discussion"><bibl/></listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>Epitaph of Drakon</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#AA">Alex Antoniou</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+                <ns0:funder><ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref></ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name> 
+                    <ns0:resp>Project direction, template development, general editing</ns0:resp> 
+                </ns0:respStmt> 
+                <ns0:respStmt> 
+                    <ns0:name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</ns0:name> 
+                    <ns0:resp>standardisation of template and tidying up encoding</ns0:resp> 
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</ns0:name>
+                    <ns0:resp>File added and Epidoc encoding</ns0:resp>
+                </ns0:respStmt>
+            </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic004432</ns0:idno>
+                <ns0:idno type="TM">698378</ns0:idno>
+                <ns0:idno type="EDR">150060</ns0:idno>
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS">68800042</ns0:idno>
+                <ns0:idno type="PHI" />
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004432</ns0:idno>
+                <ns0:idno type="DOI" />
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Tyndaris</ns0:settlement>
+                        <ns0:repository role="store" ref="http://sicily.classics.ox.ac.uk/museum/197">Soprintendenza Beni Culturali e Ambientali di Messina</ns0:repository>
+                        
+                         
+                        
+                        <ns0:altIdentifier>
+                            <ns0:settlement />
+                            <ns0:repository />
+                            <ns0:idno type="old" />
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="grc">Ancient Greek</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support>
+                                    <ns0:material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</ns0:material>
+                                    <ns0:objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">9</ns0:height>
+                                        <ns0:width unit="cm">31</ns0:width>
+                                        <ns0:depth unit="cm">17</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition ana="#condition.complete" />
+                            </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                    <ns0:damage ana="text_condition.complete" />
+                                </ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote>
+                                <ns0:locus from="line1" to="line1">Line 1</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="20" atMost="30">20-30</ns0:height>
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                    </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462527">Tyndaris</ns0:placeName>		
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/10282151">Tindari</ns0:placeName>
+                                <ns0:geo>38.1453639, 15.020175</ns0:geo>
+                            </ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="0100" precision="low">2nd century BCE to the 1st century CE</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered" when="2011">Found in the district of SS. Salvatore di Patti (ME), near the Cedro stream on the edge of a path<ns0:geo>38.145361, 15.020167</ns0:geo></ns0:provenance>
+                        <ns0:provenance type="observed" subtype="autopsied">None</ns0:provenance>
+                        <ns0:provenance />
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+            <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+            <ns1:include href="../alists/ISicily-taxonomies.xml">
+                <ns1:fallback>
+                    <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                </ns1:fallback>
+            </ns1:include>
+            <ns1:include href="../alists/charDecl.xml">
+                <ns1:fallback>
+                    <ns0:p>ISicily glyphs authority list</ns0:p>
+                </ns1:fallback>
+            </ns1:include>
+        </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language>
+                <ns0:language ident="it">Italian</ns0:language>
+                <ns0:language ident="grc">Ancient Greek</ns0:language>
+                <ns0:language ident="la">Latin</ns0:language>
+                <ns0:language ident="he">Hebrew</ns0:language>
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language>
+                <ns0:language ident="xly">Elymian</ns0:language>
+                <ns0:language ident="scx">Sikel</ns0:language>
+                <ns0:language ident="sxc">Sikan</ns0:language>
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="draft">
+            <ns0:listChange>
+                <ns0:change when="2021-06-02" who="#AA">Creation of file and Epidoc encoding</ns0:change>
+            </ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic004432_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic004432.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</ns0:desc>
+            </ns0:graphic>
+         </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+                <ns0:ab>
+                    <ns0:lb n="1" /><ns0:name>&#916;&#961;&#940;&#954;&#969;&#957;</ns0:name>
+                </ns0:ab>
+                 </ns0:div>
+            <ns0:div type="apparatus">
+                <ns0:listApp>
+                    <ns0:app><ns0:note>Text: Fasolo 2013</ns0:note></ns0:app>
+                </ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation" xml:lang="en" resp="#AA">
+                <ns0:p>Drakon</ns0:p>
+            </ns0:div>
+            <ns0:div type="commentary">
+                <ns0:p />
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl type="bulletin" n="AE">
+                        <ns0:citedRange>2017.0536</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ns0:ref></ns0:bibl>
+                    <ns0:bibl type="bulletin" n="SEG">
+                        <ns0:citedRange>64.0838</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Fasolo</ns0:author>
+                        <ns0:date>2013</ns0:date>
+                        <ns0:citedRange>64-65 no.16, fig.29</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/X2SEXMRX" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002011">https://biblio.inscriptiones.org/epig10002011</ns0:ref></ns0:bibl>
+                </ns0:listBibl>
+                <ns0:listBibl type="discussion"><ns0:bibl /></ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>

@@ -1,331 +1,328 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>The municipium of the Haluntini honours Gnaeus Pollienus</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
-                <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-                    <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
-                    <resp>encoding text division and checking the edition</resp>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic001190</idno>
-                <idno type="TM">491448</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS">39101554</idno>
-                <idno type="PHI">140674</idno>
-                <idno type="PHI">175639</idno>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001190</idno>
-                <idno type="DOI" when="2020-12-18">10.5281/zenodo.4351755</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence. </licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Palermo</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
-                        <idno type="inventory">8814</idno>
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="grc">Ancient Greek</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support><p>A large square base of the "breccia di San Marco". Mouldings around the top and bottom. Damage to the lower right front corner, the upper right front corner, the upper left corner moulding and ther rear upper left corner. The front face is somewhat eroded, with what appears to be a small patch of grey mortar in the centre. The upper surface has two large footholes, left foot forward, right foot to the rear, each c.8 cm from the front/back edge of the stone and c.25 cm long and 4-9 cm wide. The inscribed front face is 39 cm high x 64 cm wide.</p>
-                                    <material ana="#material.stone.breccia" ref="http://www.eagle-network.eu/voc/material/lod/73.html">breccia (local)</material>
-                                    <objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">statue base</objectType>
-                                    <dimensions>
-                                        <height unit="cm">70</height>
-                                        <width unit="cm">77.5</width>
-                                        <depth unit="cm">69</depth>
-                                    </dimensions>
-                                </support>
-                                <condition ana="#condition.damaged"/>
-		    </supportDesc>
-                            <layoutDesc>
-                                <layout><p>The text occupies five lines over the upper part of the front face.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.deteriorated"/>
-			</layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote><p>Regular letters with a fairly square module, simply engraved without serifs. Alpha has broken bar; Kappa has full length arms; Mu has vertical first and last, with mid-strokes only descending half-way; omicron is full size; Pi has full length verticals, and slightly overlapping horizontal bar; omega is slightly open and nearly circular, with horizontal tails/feet.</p>
-                                <locus from="line1" to="line5">Line 1-5</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">30</height>
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2 </locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462228">Haluntium</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/2523425">San Marco d'Alunzio</placeName>
-                            	<geo>38.07261, 14.70093</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0046" notAfter-custom="-0001" evidence="textual-context">The use of the term 'municipium' in Greek places this text almost certainly after the grant of Latin rights to Sicily by Julius Caesar (probably 46 BCE), but equally the use of Greek implies a date not later than the early Augustan period. The lettering is compatible with a late Hellenistic date.</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered" notAfter="1624">First recorded observation is in Gualtherus 1624, where it was seen in the arch of an acqueduct near the Church of S. Antonio. It was observed there still by Salinas in 1880, prior to being removed to the Palermo Museum.</provenance>
-                        <provenance type="observed" subtype="autopsied" when="2024-12-03" resp="#JP">Prag 2024-12-03, on the north side of the second courtyard of the Museo archeologico regionale A. Salinas, Palermo.</provenance>
-                        <acquisition/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="edited">
-            <listChange>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-                <change when="2017-11-10" who="#JP">Jonathan Prag added a bibl element</change>
-                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2020-10-20" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                <change when="2024-12-18" who="#JP" >Jonathan Prag revised on the basis of autopsy</change>
-	</listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic001190_tiled.tif" height="3264px" width="2448px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21</desc>
-            </graphic>
-            <graphic n="print" url="ISic001190.jpg" height="3264px" width="2448px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21</desc>
-            </graphic>
-            <graphic n="screen" url="ISic001190_detail_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-            <graphic n="print" url="ISic001190_detail.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-            <graphic n="screen" url="ISic001190_detail2_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-            <graphic n="print" url="ISic001190_detail2.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-            <graphic n="screen" url="ISic001190_leftthreequarter_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-            <graphic n="print" url="ISic001190_leftthreequarter.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-            <graphic n="screen" url="ISic001190_rightthreequarter_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-            <graphic n="print" url="ISic001190_rightthreequarter.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2021-09-27</desc>
-            </graphic>
-         </surface>
-        <surface type="top">
-            <graphic n="screen" url="ISic001190_top_tiled.tif" height="2928px" width="2636px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2024-12-03</desc>
-            </graphic>
-            <graphic n="print" url="ISic001190_top.jpg" height="2928px" width="2636px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2024-12-03</desc>
-            </graphic>
-        </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
-                <ab>
-                    <lb n="1" xml:id="BTAAK"/><w xml:id="BTAAU">Τὸ</w> <w xml:id="BTAAe">μουνικίπιο<unclear>ν</unclear></w> <space unit="character" quantity="2"/> <w xml:id="BTAAo">τῶ<supplied reason="lost" xml:id="BTAAy">ν</supplied></w> 
-                    <lb n="2" xml:id="BTAAΙ"/><w xml:id="BTAAΤ">Ἀλοντίνων</w> <space unit="character" quantity="1"/> <persName type="attested"><name><w xml:id="BTAAε">Γναῖον</w></name> 
-                    <lb n="3" xml:id="BTAAο"/><name><w xml:id="BTABA">Πολλιηνὸ<unclear>ν</unclear></w></name> <name><w xml:id="BTABK"><orig><unclear>Π</unclear>ΟΛΛΕ<unclear>Α</unclear></orig><gap reason="lost" unit="character" extent="unknown"/></w></name> 
-                    <lb n="4" xml:id="BTABe"/><w xml:id="BTABo">υἱὸν</w></persName> <roleName type="paracivic" subtype="euergetes" xml:id="BTABy"><w xml:id="BTABΙ">εὐεργ<supplied reason="lost">έ</supplied>τ<unclear>ω</unclear>ν</w></roleName> <w xml:id="BTABο">ἀ<supplied reason="lost">π</supplied>ό
-                    <lb n="5" break="no" xml:id="BTACA"/>γονον</w> <w xml:id="BTACK"><unclear>ε</unclear>ὐνο<supplied reason="lost" xml:id="BTACo">ίας</supplied></w> <w xml:id="BTACy">ἕνεκ<unclear>ε</unclear>ν</w>
-                </ab>
-            </div>
-            <div type="apparatus" resp="#JP">
-                <listApp>
-                    <app><note>Text from autopsy</note></app>
-                    <app loc="1"><note>Gualtherus: μουνικίπιο[ν];  Kaibel, Manni-Piraino: μουνικίπιον; Korhonen-Soraci: μουνικίπιον τῶν̲</note></app>
-                    <app loc="2"><note>Gualtherus: ΙΙΙΝΑΙΟΝ...</note></app>
-                    <app loc="3"><note>Gualtherus: ΠΟΛΛΕΙΝΟΙΠΥ..Ε...ΑΕΩΧΟΕ; Kaibel: ΠΟΛΛΙΗΝΟΝ ΕΥΜΑΡΕΑ; Manni Piraino: Πολλιηνὸν Πολλιηνο[ῦ]; Korhonen-Soraci: Πολλιηνὸν Γ̣να̣ίο̣υ̣</note></app>
-                    <app loc="4"><note>Gualtherus: ΝΟΜΟΥΕΡΠΡΛ ...Τ..ΤΑΛΟ...; Kaibel: ΕΥΕΡΓ/Τ///ΑΓ/Ο; Manni Piraino: εὐεργέτη̣ν̣  ἀπο; Korhonen-Soraci: εὐεργετῶν̲ ἀπο</note></app>
-                    <app loc="5"><note>Gualtherus: .ΟΝΟΝ ΕΥΝΟΙ[ας] ΕΝΕΚΕΝ; Kaibel: ΓΟΝΟΝ ΓΝΟΙΑ//ΝΕΚ/Ν; Manni Piraino: ε̣ὐν̣οία[ς] ἕνεκ[εν]; Korhonen-Soraci: εὐνοία[ς] ἕνεκε̲ν̲ </note></app>
-                </listApp>
-            </div>
-            <div type="translation" xml:lang="en" resp="#JP">
-                <p>The municipium of the Haluntini (honours) Gnaios Pollienos son of [?], descendant of benefactors, for the sake of goodwill</p>
-            </div>
-            <div type="commentary">
-                <p>The stone is extremely difficult to read, consequent firstly upon the type of stone, a very variegated breccia, and secondly upon the fact, as noted by Salinas, that it was preserved in reuse in the arch of an acqueduct and so exposed to water and the elements for an extended period of centuries. Autopsy based readings have been attempted seemingly by Gualtherus in 1624, by Dessau as reported in Kaibel 1890, by Manni Piriano 1974, and by Korhonen and Soraci 2019; additionally Salinas reports the reading of Gualtherus but with minor variation consequent upon his interpretation of what Gualtherus printed. Previous readings are not consistently presented (and Korhonen-Soraci report with underlining, as if read by previous editors, letters which in a number of cases were never read, only conjecturally restored by those authors [when Gualtherus prints italic lower case, these are conjectural restorations, not readings]). The stone has presumably deteriorated since seen by Gualtherus, but he already clearly struggled to read it. The reading presented here is based upon c.2 hours of study under raking light on a late  December afternoon / evening. It is quite possible that the application of RTI or SfM could produce a better reading. The previous readings present considerable variety as can be seen in the apparatus, but it will be apparent that the essential crux is the second half of line 3. Given <foreign xml:lang="grc">υἱὸν</foreign> in line 4, the second half of the line must contain the individual's patronymic. Gualtherus saw something similar to the nomen Pollienos in the first half of the line, but his reading of the rest of the line is very uncertain; Kaibel/Dessau interpreted the angular strokes in the second half of the line as ΜΑ, reading Eumarea, whereas Manni Piraino took it to be ΛΛ, and read a repetition of the nomen Pollienos. The latter would be very unusual for a Roman filiation, as Korhonen-Soraci observed. Korhonen-Soraci claimed to be able to read the letters ΝΑΙΟ followed tentatively by Υ at line end, and so, on the basis of ΓΝΑΙΟΝ in line 2, read Γ̣να̣ίο̣υ̣.  They argued that the four oblique lines visible in this part of the line (read as Μ by Kaibel/Dessau, and as ΛΛ by Manni Piraino) should be read so, but that the final of these on the right was part of a Ν. The problem with this reading is that it simply ignores the remaining oblique lines, and these are undeniably present and incompatible with N, in the absence of vertical strokes. I print above what I believe to be legible on the stone, although with limited confidence, and without any easy solution, while noting that it aligns partially with the readings of both Kaibel and Manni Piraino. The very end of the line is entirely illegible. It is not easy to resolve these traces as a Roman praenomen, and yet it is obviously tempting to associate this Gnaios Pollieonos with the Gnaeus Pollienus Cn.f. attested at Thermae Himeraeae in <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000095">ISic000095</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000096">ISic000096</ref>, as noted by previous scholars. If the patronymic is something else, then this potentially becomes a first generation Roman citizen, presumably with some relationship to the Pollienus family at Termini.</p>
-                <p>The formula <foreign xml:lang="grc">εὐεργέτων ἀπόγονον</foreign> is somewhat curious, assuming that the reading is correct: the penultimate letter of the first word is far from clear, Manni Piraino read instead εὐεργέτη̣ν, but it is difficult to make sense of two accusatives in sequence. Parallels for the formulation here can be found in inscriptions from Samos (e.g. IG XII.6.1.296) and Didyma (I.Didyma 259). The implication, in turn, is that Pollienos presumably had a longer familial relationship with the community, and perhaps aligns therefore with the possibility that he is a first generation Roman citizen, of local birth, rather than identical with the individual from Thermae Himeraeae, given that this inscription surely dates no later than the Augustan period, and therefore cannot be later than the first generation of colonial settlers at Thermae Himeraeae of whom Cn. Pollienus Cn.f. must be a part.</p>
-                <p>The inscription's principal point of interest however lies in the use of the calque <foreign xml:lang="grc">μουνικίπιον</foreign>. This is usually assumed to reflect the town's assumption of municipal status following upon the grant of Latin rights by Caesar, although whether to be dated therefore narrowly to the period between Caesar's grant c.46 BCE and the conquest of the island by Octavian in 36 BCE, as argued e.g. by Giacomo Manganaro, or rather to reflect the continuation or resumption of that status under Augustus is unclear (municipal status being attested in a number of other Sicilian towns in the Augustan period, and that status is normally assumed to be Latin, not full Roman status). The shift towards the use of Latin in inscriptions is rapid in the Augustan period, but as this text indicates, by no means certain or universal in the first generation or so of the transition. For general discussion, see Prag, J.R.W. 2024. The transition from Republic to Principate in Sicily: an epigraphic perspective. In L.M. Caliò, L. Campagna, G.M. Gerogiannis, E.C. Portale, L. Sole (eds), La Sicilia fra le guerre civili e l’epoca giulio-claudia, Atti del I Convegno Internazionale, Palermo, 19-21 maggio 2022, Museo Archeologico Regionale “Antonino Salinas”, 2 vols, Rome: Quasar, vol. 1, 71-94, at p.83ff.[<ref target="https://ora.ox.ac.uk/objects/uuid:3e9af99c-1ad0-4948-9b30-d643df336817">online copy</ref>]</p>
-                <p>It is clear from the inscription that the base bore a statue above. However, the visible footprints on the upper surface of the base are for a barefoot bronze statue facing in the opposite direction to the preserved inscription, left foot advanced and right foot trailing. The rear of the base is chiselled plain and shows no trace of an associated inscription. Henzel (Honores inauditi, p.305 no. Halu2 with 306 Halu3) assumes that the visible footprints are for a later statue and use of the base (Halu3), reflecting re-use, with the surviving inscription reflecting the original use (Halu2). However, the lack of any inscription for that hypothesised second use (Halu3), and the preservation of the inscription from the hypothesised original use (Halu2), surely speak against this, and it is easier to assume that the visible footprints belonged to an earlier statue, for which the inscription on what is now the rear has been removed, and that instead perhaps a later stone statue was set up over footholes, to accompany the surviving inscription. Henzel appears to be the first to have noted and discussed the orientation of the footholes.</p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl>
-                        <author>Gualtherus</author>
-                        <date>1624 [1625]</date>
-                        <citedRange>no.312</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Castelli</author>
-                        <date>1769</date>
-                        <citedRange>cl.5, no.31</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Castelli</author>
-                        <date>1784</date>
-                        <citedRange>cl.5, no.32</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Muratori</author>
-                        <date>1740</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/books/Muratori1740Vol2">p.1099, no.2</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/9S5VIRWZ"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001395">https://biblio.inscriptiones.org/epig10001395</ref>
-                    </bibl>
-                    <bibl type="corpus" n="IG">
-                        <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0367 </ref>
-                        </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
-                    <bibl type="bulletin" n="SEG">
-                        <citedRange>38.0919</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
-                    <bibl type="corpus" n="IGMusPalermo">
-                         <author>Manni Piraino</author>
-                         <date>1973</date> 
-                        <citedRange>44</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
-                    <bibl type="corpus" n="CIG">
-                        <citedRange>3.5608</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
-                    <bibl type="bulletin" n="NSA">
-                        <author>Salinas</author>
-                        <title>NSA</title>
-                        <date>1880</date>
-                        <citedRange>193 no.1</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
-                    <bibl type="corpus" n="IGRR">
-                        <citedRange>509</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/KSH4D9GK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001116">https://biblio.inscriptiones.org/epig10001116</ref></bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1988</date>
-                        <citedRange>19</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RZSFKACR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
-                    <bibl>
-                        <author>Wilson</author>
-                        <date>1990</date>
-                        <citedRange>42 n.87, 38 n.57, fig.31 </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref></bibl>
-                    <bibl>
-                        <author>Korhonen</author>
-                        <author>Soraci</author>
-                        <date>2019</date>
-                        <citedRange>104</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/I8LT7XNE"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002542">https://biblio.inscriptiones.org/epig10002542</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Henzel</author>
-                        <date>2022</date>
-                        <citedRange>305 Halu2</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/TLRRNFAN"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10003131">https://biblio.inscriptiones.org/epig10003131</ref>
-                     </bibl>
-                </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>The municipium of the Haluntini honours Gnaeus Pollienus</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#JP">Jonathan Prag</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+	   <ns0:funder><ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref></ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</ns0:name>
+                    <ns0:resp>conversion to EpiDoc</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</ns0:name>
+                    <ns0:resp>standardisation of template and tidying up encoding</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</ns0:name>
+                    <ns0:resp>encoding text division and checking the edition</ns0:resp>
+                </ns0:respStmt>
+            </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic001190</ns0:idno>
+                <ns0:idno type="TM">491448</ns0:idno>
+                <ns0:idno type="EDR" />
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS">39101554</ns0:idno>
+                <ns0:idno type="PHI">140674</ns0:idno>
+                <ns0:idno type="PHI">175639</ns0:idno>
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001190</ns0:idno>
+                <ns0:idno type="DOI" when="2020-12-18">10.5281/zenodo.4351755</ns0:idno>
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence. </ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Palermo</ns0:settlement>
+                        <ns0:repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</ns0:repository>
+                        <ns0:idno type="inventory">8814</ns0:idno>
+                        
+                        <ns0:altIdentifier>
+                            <ns0:settlement />
+                            <ns0:repository />
+                            <ns0:idno type="old" />
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="grc">Ancient Greek</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support><ns0:p>A large square base of the "breccia di San Marco". Mouldings around the top and bottom. Damage to the lower right front corner, the upper right front corner, the upper left corner moulding and ther rear upper left corner. The front face is somewhat eroded, with what appears to be a small patch of grey mortar in the centre. The upper surface has two large footholes, left foot forward, right foot to the rear, each c.8 cm from the front/back edge of the stone and c.25 cm long and 4-9 cm wide. The inscribed front face is 39 cm high x 64 cm wide.</ns0:p>
+                                    <ns0:material ana="#material.stone.breccia" ref="http://www.eagle-network.eu/voc/material/lod/73.html">breccia (local)</ns0:material>
+                                    <ns0:objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">statue base</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">70</ns0:height>
+                                        <ns0:width unit="cm">77.5</ns0:width>
+                                        <ns0:depth unit="cm">69</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition ana="#condition.damaged" />
+		    </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout><ns0:p>The text occupies five lines over the upper part of the front face.</ns0:p>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                	<ns0:damage ana="#text_condition.deteriorated" />
+			</ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote><ns0:p>Regular letters with a fairly square module, simply engraved without serifs. Alpha has broken bar; Kappa has full length arms; Mu has vertical first and last, with mid-strokes only descending half-way; omicron is full size; Pi has full length verticals, and slightly overlapping horizontal bar; omega is slightly open and nearly circular, with horizontal tails/feet.</ns0:p>
+                                <ns0:locus from="line1" to="line5">Line 1-5</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="30" atMost="30">30</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line1" to="line2">Interlineation line 1 to 2 </ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" />
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                    </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462228">Haluntium</ns0:placeName>		
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/2523425">San Marco d'Alunzio</ns0:placeName>
+                            	<ns0:geo>38.07261, 14.70093</ns0:geo>
+		</ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="-0046" notAfter-custom="-0001" evidence="textual-context">The use of the term 'municipium' in Greek places this text almost certainly after the grant of Latin rights to Sicily by Julius Caesar (probably 46 BCE), but equally the use of Greek implies a date not later than the early Augustan period. The lettering is compatible with a late Hellenistic date.</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered" notAfter="1624">First recorded observation is in Gualtherus 1624, where it was seen in the arch of an acqueduct near the Church of S. Antonio. It was observed there still by Salinas in 1880, prior to being removed to the Palermo Museum.</ns0:provenance>
+                        <ns0:provenance type="observed" subtype="autopsied" when="2024-12-03" resp="#JP">Prag 2024-12-03, on the north side of the second courtyard of the Museo archeologico regionale A. Salinas, Palermo.</ns0:provenance>
+                        <ns0:acquisition />
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+             <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
+                     <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
+	       <ns0:p>ISicily glyphs authority list</ns0:p>
+	     </ns1:fallback>
+	   </ns1:include>
+         </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language>
+                <ns0:language ident="it">Italian</ns0:language>
+                <ns0:language ident="grc">Greek</ns0:language>
+                <ns0:language ident="la">Latin</ns0:language>
+                <ns0:language ident="he">Hebrew</ns0:language>
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language>
+                <ns0:language ident="xly">Elymian</ns0:language>
+                <ns0:language ident="scx">Sikel</ns0:language>
+                <ns0:language ident="sxc">Sikan</ns0:language>
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="edited">
+            <ns0:listChange>
+                <ns0:change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</ns0:change>
+                <ns0:change when="2017-11-10" who="#JP">Jonathan Prag added a bibl element</ns0:change>
+                <ns0:change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</ns0:change>
+                <ns0:change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</ns0:change>
+                <ns0:change when="2020-10-20" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</ns0:change>
+            	<ns0:change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</ns0:change>
+		<ns0:change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</ns0:change>
+	    <ns0:change when="2020-12-18" who="#JP">Updated Zenodo DOI</ns0:change>
+            	<ns0:change when="2021-01-19" who="#SS">renumbered files, uris and references</ns0:change>
+                <ns0:change when="2024-12-18" who="#JP">Jonathan Prag revised on the basis of autopsy</ns0:change>
+	</ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic001190_tiled.tif" height="3264px" width="2448px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2017-07-21</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001190.jpg" height="3264px" width="2448px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2017-07-21</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="screen" url="ISic001190_detail_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001190_detail.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="screen" url="ISic001190_detail2_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001190_detail2.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="screen" url="ISic001190_leftthreequarter_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001190_leftthreequarter.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="screen" url="ISic001190_rightthreequarter_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001190_rightthreequarter.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2021-09-27</ns0:desc>
+            </ns0:graphic>
+         </ns0:surface>
+        <ns0:surface type="top">
+            <ns0:graphic n="screen" url="ISic001190_top_tiled.tif" height="2928px" width="2636px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2024-12-03</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001190_top.jpg" height="2928px" width="2636px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2024-12-03</ns0:desc>
+            </ns0:graphic>
+        </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
+                <ns0:ab>
+                    <ns0:lb n="1" xml:id="BTAAK" /><ns0:w xml:id="BTAAU">&#932;&#8056;</ns0:w> <ns0:w xml:id="BTAAe">&#956;&#959;&#965;&#957;&#953;&#954;&#943;&#960;&#953;&#959;<ns0:unclear>&#957;</ns0:unclear></ns0:w> <ns0:space unit="character" quantity="2" /> <ns0:w xml:id="BTAAo">&#964;&#8182;<ns0:supplied reason="lost" xml:id="BTAAy">&#957;</ns0:supplied></ns0:w> 
+                    <ns0:lb n="2" xml:id="BTAA&#921;" /><ns0:w xml:id="BTAA&#932;">&#7944;&#955;&#959;&#957;&#964;&#943;&#957;&#969;&#957;</ns0:w> <ns0:space unit="character" quantity="1" /> <ns0:persName type="attested"><ns0:name><ns0:w xml:id="BTAA&#949;">&#915;&#957;&#945;&#8150;&#959;&#957;</ns0:w></ns0:name> 
+                    <ns0:lb n="3" xml:id="BTAA&#959;" /><ns0:name><ns0:w xml:id="BTABA">&#928;&#959;&#955;&#955;&#953;&#951;&#957;&#8056;<ns0:unclear>&#957;</ns0:unclear></ns0:w></ns0:name> <ns0:name><ns0:w xml:id="BTABK"><ns0:orig><ns0:unclear>&#928;</ns0:unclear>&#927;&#923;&#923;&#917;<ns0:unclear>&#913;</ns0:unclear></ns0:orig><ns0:gap reason="lost" unit="character" extent="unknown" /></ns0:w></ns0:name> 
+                    <ns0:lb n="4" xml:id="BTABe" /><ns0:w xml:id="BTABo">&#965;&#7985;&#8056;&#957;</ns0:w></ns0:persName> <ns0:roleName type="paracivic" subtype="euergetes" xml:id="BTABy"><ns0:w xml:id="BTAB&#921;">&#949;&#8016;&#949;&#961;&#947;<ns0:supplied reason="lost">&#941;</ns0:supplied>&#964;<ns0:unclear>&#969;</ns0:unclear>&#957;</ns0:w></ns0:roleName> <ns0:w xml:id="BTAB&#959;">&#7936;<ns0:supplied reason="lost">&#960;</ns0:supplied>&#972;
+                    <ns0:lb n="5" break="no" xml:id="BTACA" />&#947;&#959;&#957;&#959;&#957;</ns0:w> <ns0:w xml:id="BTACK"><ns0:unclear>&#949;</ns0:unclear>&#8016;&#957;&#959;<ns0:supplied reason="lost" xml:id="BTACo">&#943;&#945;&#962;</ns0:supplied></ns0:w> <ns0:w xml:id="BTACy">&#7957;&#957;&#949;&#954;<ns0:unclear>&#949;</ns0:unclear>&#957;</ns0:w>
+                </ns0:ab>
+            </ns0:div>
+            <ns0:div type="apparatus" resp="#JP">
+                <ns0:listApp>
+                    <ns0:app><ns0:note>Text from autopsy</ns0:note></ns0:app>
+                    <ns0:app loc="1"><ns0:note>Gualtherus: &#956;&#959;&#965;&#957;&#953;&#954;&#943;&#960;&#953;&#959;[&#957;];  Kaibel, Manni-Piraino: &#956;&#959;&#965;&#957;&#953;&#954;&#943;&#960;&#953;&#959;&#957;; Korhonen-Soraci: &#956;&#959;&#965;&#957;&#953;&#954;&#943;&#960;&#953;&#959;&#957; &#964;&#8182;&#957;&#818;</ns0:note></ns0:app>
+                    <ns0:app loc="2"><ns0:note>Gualtherus: &#921;&#921;&#921;&#925;&#913;&#921;&#927;&#925;...</ns0:note></ns0:app>
+                    <ns0:app loc="3"><ns0:note>Gualtherus: &#928;&#927;&#923;&#923;&#917;&#921;&#925;&#927;&#921;&#928;&#933;..&#917;...&#913;&#917;&#937;&#935;&#927;&#917;; Kaibel: &#928;&#927;&#923;&#923;&#921;&#919;&#925;&#927;&#925; &#917;&#933;&#924;&#913;&#929;&#917;&#913;; Manni Piraino: &#928;&#959;&#955;&#955;&#953;&#951;&#957;&#8056;&#957; &#928;&#959;&#955;&#955;&#953;&#951;&#957;&#959;[&#8166;]; Korhonen-Soraci: &#928;&#959;&#955;&#955;&#953;&#951;&#957;&#8056;&#957; &#915;&#803;&#957;&#945;&#803;&#943;&#959;&#803;&#965;&#803;</ns0:note></ns0:app>
+                    <ns0:app loc="4"><ns0:note>Gualtherus: &#925;&#927;&#924;&#927;&#933;&#917;&#929;&#928;&#929;&#923; ...&#932;..&#932;&#913;&#923;&#927;...; Kaibel: &#917;&#933;&#917;&#929;&#915;/&#932;///&#913;&#915;/&#927;; Manni Piraino: &#949;&#8016;&#949;&#961;&#947;&#941;&#964;&#951;&#803;&#957;&#803;  &#7936;&#960;&#959;; Korhonen-Soraci: &#949;&#8016;&#949;&#961;&#947;&#949;&#964;&#8182;&#957;&#818; &#7936;&#960;&#959;</ns0:note></ns0:app>
+                    <ns0:app loc="5"><ns0:note>Gualtherus: .&#927;&#925;&#927;&#925; &#917;&#933;&#925;&#927;&#921;[&#945;&#962;] &#917;&#925;&#917;&#922;&#917;&#925;; Kaibel: &#915;&#927;&#925;&#927;&#925; &#915;&#925;&#927;&#921;&#913;//&#925;&#917;&#922;/&#925;; Manni Piraino: &#949;&#803;&#8016;&#957;&#803;&#959;&#943;&#945;[&#962;] &#7957;&#957;&#949;&#954;[&#949;&#957;]; Korhonen-Soraci: &#949;&#8016;&#957;&#959;&#943;&#945;[&#962;] &#7957;&#957;&#949;&#954;&#949;&#818;&#957;&#818; </ns0:note></ns0:app>
+                </ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation" xml:lang="en" resp="#JP">
+                <ns0:p>The municipium of the Haluntini (honours) Gnaios Pollienos son of [?], descendant of benefactors, for the sake of goodwill</ns0:p>
+            </ns0:div>
+            <ns0:div type="commentary">
+                <ns0:p>The stone is extremely difficult to read, consequent firstly upon the type of stone, a very variegated breccia, and secondly upon the fact, as noted by Salinas, that it was preserved in reuse in the arch of an acqueduct and so exposed to water and the elements for an extended period of centuries. Autopsy based readings have been attempted seemingly by Gualtherus in 1624, by Dessau as reported in Kaibel 1890, by Manni Piriano 1974, and by Korhonen and Soraci 2019; additionally Salinas reports the reading of Gualtherus but with minor variation consequent upon his interpretation of what Gualtherus printed. Previous readings are not consistently presented (and Korhonen-Soraci report with underlining, as if read by previous editors, letters which in a number of cases were never read, only conjecturally restored by those authors [when Gualtherus prints italic lower case, these are conjectural restorations, not readings]). The stone has presumably deteriorated since seen by Gualtherus, but he already clearly struggled to read it. The reading presented here is based upon c.2 hours of study under raking light on a late  December afternoon / evening. It is quite possible that the application of RTI or SfM could produce a better reading. The previous readings present considerable variety as can be seen in the apparatus, but it will be apparent that the essential crux is the second half of line 3. Given <ns0:foreign xml:lang="grc">&#965;&#7985;&#8056;&#957;</ns0:foreign> in line 4, the second half of the line must contain the individual's patronymic. Gualtherus saw something similar to the nomen Pollienos in the first half of the line, but his reading of the rest of the line is very uncertain; Kaibel/Dessau interpreted the angular strokes in the second half of the line as &#924;&#913;, reading Eumarea, whereas Manni Piraino took it to be &#923;&#923;, and read a repetition of the nomen Pollienos. The latter would be very unusual for a Roman filiation, as Korhonen-Soraci observed. Korhonen-Soraci claimed to be able to read the letters &#925;&#913;&#921;&#927; followed tentatively by &#933; at line end, and so, on the basis of &#915;&#925;&#913;&#921;&#927;&#925; in line 2, read &#915;&#803;&#957;&#945;&#803;&#943;&#959;&#803;&#965;&#803;.  They argued that the four oblique lines visible in this part of the line (read as &#924; by Kaibel/Dessau, and as &#923;&#923; by Manni Piraino) should be read so, but that the final of these on the right was part of a &#925;. The problem with this reading is that it simply ignores the remaining oblique lines, and these are undeniably present and incompatible with N, in the absence of vertical strokes. I print above what I believe to be legible on the stone, although with limited confidence, and without any easy solution, while noting that it aligns partially with the readings of both Kaibel and Manni Piraino. The very end of the line is entirely illegible. It is not easy to resolve these traces as a Roman praenomen, and yet it is obviously tempting to associate this Gnaios Pollieonos with the Gnaeus Pollienus Cn.f. attested at Thermae Himeraeae in <ns0:ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000095">ISic000095</ns0:ref> and <ns0:ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000096">ISic000096</ns0:ref>, as noted by previous scholars. If the patronymic is something else, then this potentially becomes a first generation Roman citizen, presumably with some relationship to the Pollienus family at Termini.</ns0:p>
+                <ns0:p>The formula <ns0:foreign xml:lang="grc">&#949;&#8016;&#949;&#961;&#947;&#941;&#964;&#969;&#957; &#7936;&#960;&#972;&#947;&#959;&#957;&#959;&#957;</ns0:foreign> is somewhat curious, assuming that the reading is correct: the penultimate letter of the first word is far from clear, Manni Piraino read instead &#949;&#8016;&#949;&#961;&#947;&#941;&#964;&#951;&#803;&#957;, but it is difficult to make sense of two accusatives in sequence. Parallels for the formulation here can be found in inscriptions from Samos (e.g. IG XII.6.1.296) and Didyma (I.Didyma 259). The implication, in turn, is that Pollienos presumably had a longer familial relationship with the community, and perhaps aligns therefore with the possibility that he is a first generation Roman citizen, of local birth, rather than identical with the individual from Thermae Himeraeae, given that this inscription surely dates no later than the Augustan period, and therefore cannot be later than the first generation of colonial settlers at Thermae Himeraeae of whom Cn. Pollienus Cn.f. must be a part.</ns0:p>
+                <ns0:p>The inscription's principal point of interest however lies in the use of the calque <ns0:foreign xml:lang="grc">&#956;&#959;&#965;&#957;&#953;&#954;&#943;&#960;&#953;&#959;&#957;</ns0:foreign>. This is usually assumed to reflect the town's assumption of municipal status following upon the grant of Latin rights by Caesar, although whether to be dated therefore narrowly to the period between Caesar's grant c.46 BCE and the conquest of the island by Octavian in 36 BCE, as argued e.g. by Giacomo Manganaro, or rather to reflect the continuation or resumption of that status under Augustus is unclear (municipal status being attested in a number of other Sicilian towns in the Augustan period, and that status is normally assumed to be Latin, not full Roman status). The shift towards the use of Latin in inscriptions is rapid in the Augustan period, but as this text indicates, by no means certain or universal in the first generation or so of the transition. For general discussion, see Prag, J.R.W. 2024. The transition from Republic to Principate in Sicily: an epigraphic perspective. In L.M. Cali&#242;, L. Campagna, G.M. Gerogiannis, E.C. Portale, L. Sole (eds), La Sicilia fra le guerre civili e l&#8217;epoca giulio-claudia, Atti del I Convegno Internazionale, Palermo, 19-21 maggio 2022, Museo Archeologico Regionale &#8220;Antonino Salinas&#8221;, 2 vols, Rome: Quasar, vol. 1, 71-94, at p.83ff.[<ns0:ref target="https://ora.ox.ac.uk/objects/uuid:3e9af99c-1ad0-4948-9b30-d643df336817">online copy</ns0:ref>]</ns0:p>
+                <ns0:p>It is clear from the inscription that the base bore a statue above. However, the visible footprints on the upper surface of the base are for a barefoot bronze statue facing in the opposite direction to the preserved inscription, left foot advanced and right foot trailing. The rear of the base is chiselled plain and shows no trace of an associated inscription. Henzel (Honores inauditi, p.305 no. Halu2 with 306 Halu3) assumes that the visible footprints are for a later statue and use of the base (Halu3), reflecting re-use, with the surviving inscription reflecting the original use (Halu2). However, the lack of any inscription for that hypothesised second use (Halu3), and the preservation of the inscription from the hypothesised original use (Halu2), surely speak against this, and it is easier to assume that the visible footprints belonged to an earlier statue, for which the inscription on what is now the rear has been removed, and that instead perhaps a later stone statue was set up over footholes, to accompany the surviving inscription. Henzel appears to be the first to have noted and discussed the orientation of the footholes.</ns0:p>
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl>
+                        <ns0:author>Gualtherus</ns0:author>
+                        <ns0:date>1624 [1625]</ns0:date>
+                        <ns0:citedRange>no.312</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Castelli</ns0:author>
+                        <ns0:date>1769</ns0:date>
+                        <ns0:citedRange>cl.5, no.31</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/SPTB56H3" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Castelli</ns0:author>
+                        <ns0:date>1784</ns0:date>
+                        <ns0:citedRange>cl.5, no.32</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/7PSFHSUH" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Muratori</ns0:author>
+                        <ns0:date>1740</ns0:date>
+                        <ns0:citedRange><ns0:ref target="http://arachne.uni-koeln.de/books/Muratori1740Vol2">p.1099, no.2</ns0:ref></ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/9S5VIRWZ" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10001395">https://biblio.inscriptiones.org/epig10001395</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl type="corpus" n="IG">
+                        <ns0:citedRange>
+                            <ns0:ref target="https://clio.columbia.edu/catalog/6873760">14.0367 </ns0:ref>
+                        </ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ns0:ref></ns0:bibl>
+                    <ns0:bibl type="bulletin" n="SEG">
+                        <ns0:citedRange>38.0919</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ns0:ref></ns0:bibl>
+                    <ns0:bibl type="corpus" n="IGMusPalermo">
+                         <ns0:author>Manni Piraino</ns0:author>
+                         <ns0:date>1973</ns0:date> 
+                        <ns0:citedRange>44</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ns0:ref></ns0:bibl>
+                    <ns0:bibl type="corpus" n="CIG">
+                        <ns0:citedRange>3.5608</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ns0:ref></ns0:bibl>
+                    <ns0:bibl type="bulletin" n="NSA">
+                        <ns0:author>Salinas</ns0:author>
+                        <ns0:title>NSA</ns0:title>
+                        <ns0:date>1880</ns0:date>
+                        <ns0:citedRange>193 no.1</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ns0:ref></ns0:bibl>
+                    <ns0:bibl type="corpus" n="IGRR">
+                        <ns0:citedRange>509</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/KSH4D9GK" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001116">https://biblio.inscriptiones.org/epig10001116</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Manganaro</ns0:author>
+                        <ns0:date>1988</ns0:date>
+                        <ns0:citedRange>19</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/RZSFKACR" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Wilson</ns0:author>
+                        <ns0:date>1990</ns0:date>
+                        <ns0:citedRange>42 n.87, 38 n.57, fig.31 </ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Korhonen</ns0:author>
+                        <ns0:author>Soraci</ns0:author>
+                        <ns0:date>2019</ns0:date>
+                        <ns0:citedRange>104</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/I8LT7XNE" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10002542">https://biblio.inscriptiones.org/epig10002542</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Henzel</ns0:author>
+                        <ns0:date>2022</ns0:date>
+                        <ns0:citedRange>305 Halu2</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/TLRRNFAN" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10003131">https://biblio.inscriptiones.org/epig10003131</ns0:ref>
+                     </ns0:bibl>
+                </ns0:listBibl>
+	   <ns0:listBibl type="discussion"><ns0:bibl /></ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>

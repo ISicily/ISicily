@@ -1,282 +1,279 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>I.Sicily inscription 001620</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#KMcD">Katherine McDonald</principal>
-                <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
-                <respStmt>
-                    <name xml:id="KMcD" ref="http://orcid.org/0000-0002-0721-3303">Katherine McDonald</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic001620</idno>
-                <idno type="TM">171040</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001620</idno>
-                <idno type="DOI" when="2020-12-22">10.5281/zenodo.4386222</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Messina</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina</repository>
-                        <idno type="inventory">A2030</idno>
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <country>Italy</country>
-                            <settlement>Messina</settlement>
-                            <repository>Museo regionale interdisciplinare di Messina</repository>
-                            <idno type="old">24</idno>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="osc">Oscan</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support><p>Large irregular limestone block, cut and smoothed on the front face for an inscription, top and bottom smooth, with the back surface left irregular. There is later recutting of the stone on the left and right-hand sides, see history of the inscription's discovery below.</p>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">Block</objectType>
-                                    <dimensions>
-                                        <height unit="cm">50</height>
-                                        <width unit="cm">125</width>
-                                        <depth unit="cm">45</depth>
-                                    </dimensions>
-                                </support>
-                                <condition ana="#condition.damaged"/>
-		    </supportDesc>
-                            <layoutDesc>
-                                <layout><p>The inscription has five lines of text, damaged on both the left-hand and right-hand sides. Line 3 has no damage to the right-hand side and appears to have only one letter missing from the left-hand side, suggesting that the text was centred on the field.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote><p>The inscription is written in the adapted Ionic Greek alphabet which was usually employed to write Oscan in Lucania and Bruttium from around the fourth to the first centuries BC.</p>
-                                <locus from="line1" to="line5">Lines 1-5</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">50-60</height>
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462538">Messana</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</placeName>
-                            	<geo>38.19394, 15.55256</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0201" precision="low">3rd century BCE</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered" notBefore="1612" notAfter="1613">The inscription was originally found in 1612 or 1613 near an old tower in the Giudecca area of Messina, and was recorded by G. Buonfiglio Costanzo. By 1624, when it was recorded by G. Gualtherus, the front left-hand corner of the stone had been cut away. The right-hand edge of the stone was cut away at some later date. The inscription was rediscovered in 1755 and mentioned by Caio Domenico Gallo. It was found again at the beginning of the twentieth century, built into a wall at Via Cárdines 152, and was moved to the Museo Regionale di Messina in 1909. For more information on the history of the discovery of the inscription, see Crawford (2011) and Crawford (<ref target="http://zotero.org/groups/382445/items/G82KT6YE">2006</ref>).</provenance>
-                        <provenance type="observed" subtype="autopsied" when="2014-09-20">MacDonald 2014-09-20</provenance>
-                        <acquisition>Messina, Museo Regionale Interdisciplinare di Messina old no. 24, no. Accascina 2030</acquisition>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language> 
-                <language ident="it">Italian</language> 
-                <language ident="grc">Ancient Greek</language> 
-                <language ident="la">Latin</language> 
-                <language ident="he">Hebrew</language> 
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language> 
-                <language ident="xly">Elymian</language> 
-                <language ident="scx">Sikel</language>  
-                <language ident="sxc">Sikan</language>  
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="draft">
-            <listChange>
-                <change when="2016-02-15">Katherine McDonald edited the file and added text, translation and commentary</change>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                    <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	    <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                    <change when="2022-01-14" who="#JP">Jonathan Prag re-incorporated original edits from Katherine McDonald (2016-02-15)</change>
-	</listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic001620_tiled.tif" height="2085px" width="3834px">
-                <desc>Photograph J. Prag, 2019-05-02</desc>
-            </graphic>
-            <graphic n="screen" url="ISic001620.jpg" height="2085px" width="3834px">
-                <desc>Photograph J. Prag, 2019-05-02</desc>
-            </graphic>
-        </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="osc-Grek" resp="#KMcD">
-                <ab>
-                <lb n="1"/><supplied reason="lost" evidence="previouseditor">στε</supplied>νισ καλινισ σταττ<unclear>ι</unclear><supplied reason="lost" evidence="parallel">ηισ</supplied>
-                <lb n="2"/><supplied reason="lost" evidence="previouseditor">μαρ</supplied>ασ πομπτιεσ νιυμδ<supplied reason="lost" evidence="parallel">ιηισ</supplied>
-                <lb n="3"/><unclear>μ</unclear>εδδειξ ουπσενσ
-                <lb n="4"/><supplied reason="lost" evidence="previouseditor">εινε</supplied><unclear>ι</unclear>μ τωϝτο μαμερτ<supplied reason="lost" evidence="parallel">ινο</supplied>
-                <lb n="5"/><supplied reason="lost" evidence="previouseditor">α</supplied>ππελλουνηι σακ<supplied reason="lost" evidence="parallel">αρο</supplied>
-                </ab>
-            </div>
-            <div type="apparatus" resp="#KMcD">
-                <listApp>
-                    <app><note>The beginning of each line is supplied from a C17 record of the inscription. The end of each line is supplied from the parallel copy, ISic 2816.</note></app>
-                    <app loc="3"><note>The right hand hasta of the mu is visible.</note></app>
-                    <app loc="4"><note>The iota is just visible along the left-hand edge of the front of the stone.</note></app>
-                </listApp>
-            </div>
-            <div type="translation" xml:lang="en" resp="#KMcD">
-                <p>Stenis Kalinis (son) of Stattis (and) Maras Pompiis (son) of Niumdis, meddices, and the Mamertine people built (this). Sacred to Apollo.</p>
-                <p>[Latinised] Stenius Calinius (son) of Stattius (and) Maras Pompius (son) of Niumidius, meddices, and the Mamertine people built (this). Sacred to Apollo.</p>
-            </div>
-            <div type="commentary" resp="#KMcD">
-                <p>There is another extant copy of this inscription (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic002816">ISic002816</ref>), which supplies the text missing from the right-hand side. Only the right-hand part of the other copy survives: the left-hand part of ISic002816, which was destroyed, is known from a seventeenth-century record of the text, and so this can be used to help restore the missing text from the left-hand edge of ISic001620, which is also known from the initial report of it in <ref target="http://zotero.org/groups/382445/items/QK2SZA3H">Buonfiglio Costanzo 1613</ref>.  Crawford (<ref target="http://zotero.org/groups/382445/items/2BHFHCRR">2011</ref>) states that the two inscriptions were ‘probably from a wall, perhaps either side of a gate’. Rix (<ref target="http://zotero.org/groups/382445/items/SH6KBKBT">2002</ref>) reports a third copy of this text, Me 3, but this third inscription does not exist: the text of Rix’s Me 3 has its origins in a faulty recording of what is actually ISic001620.</p>
-                <p>The text is written in the adapted Ionic Greek alphabet which was usually employed to write Oscan in Lucania and Bruttium from around the fourth to the first centuries BC.</p>
-                <p>The personal names are written in the normal Oscan style, with a praenomen and nomen, plus the genitive of the father’s praenomen (without a word for ‘son’). Cf. the syntax of <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001623">ISic001623</ref>. </p>
-                <p>The spellings of <foreign xml:lang="osc">ουπσενς</foreign> (which does not use psi) and <foreign xml:lang="osc">μεδδειξ</foreign> (which uses xi rather than kappa+sigma) may be indicative of orthographic differences between Oscan at Messana and Oscan written in the Greek alphabet in Lucania and Bruttium (<ref target="http://zotero.org/groups/382445/items/2RCYDL7W">McDonald 2015</ref>: 91). The spelling νιυ- (rather than νυ-, as ususually found in Lucania and Bruttium) in the personal name <foreign xml:lang="osc">νιυμδιηις</foreign> may also show different orthographic practices at Messina, and may show influence from spelling norms in Oscan alphabet used in Campania and Samnium (<ref target="http://zotero.org/groups/382445/items/HR3I2FMB">Zair 2016</ref> 138-9). Cf. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001621">ISicoo1621</ref>.</p>
-                <p> The Greek god name Apollo is borrowed into Oscan as <foreign xml:lang="osc">αππελλουνηι</foreign>, as elsewhere in Oscan – cf. <foreign xml:lang="osc">appelluneís</foreign> at Pompeii. This indicates a borrowing of the Doric form <foreign xml:lang="grc">Απελλων</foreign> rather than the Ionic <foreign xml:lang="grc">Απολλων</foreign>.</p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl>
-                        <author>Buonfiglio Costanzo</author>
-                        <date>1613</date>
-                        <citedRange><ref target="https://books.google.co.uk/books?id=IVrMOzw8HMoC">135</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/QK2SZA3H"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002391">https://biblio.inscriptiones.org/epig10002391</ref></bibl>
-                    <bibl>
-                        <author>Gualtherus</author>
-                        <date>1624 [1625]</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310928">3 no. 7</ref></citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
-                    <bibl>
-                        <author>Crawford</author>
-                        <date>2011</date>
-                        <citedRange>Messana 4</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/2BHFHCRR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001376">https://biblio.inscriptiones.org/epig10001376</ref></bibl>
-                    <bibl>
-                        <author>Vetter</author>
-                        <date>1953</date>
-                        <citedRange>no. 196</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/6C5ZKCF2"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001523">https://biblio.inscriptiones.org/epig10001523</ref></bibl>
-                    <bibl>
-                        <author>Morandi</author>
-                        <date>1982</date>
-                        <citedRange>143 no. 37</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/5U63BQIP"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001739">https://biblio.inscriptiones.org/epig10001739</ref></bibl>
-                    <bibl>
-                        <author>Parlangèli</author>
-                        <date>1956</date>
-                        <citedRange>no. 1.A</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/AFQ8FDTW"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001684">https://biblio.inscriptiones.org/epig10001684</ref></bibl>
-                    <bibl>
-                        <author>Orioles</author>
-                        <date>1992</date>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GGJG3JCZ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001720">https://biblio.inscriptiones.org/epig10001720</ref></bibl>
-                    <bibl>
-                        <author>Rix</author>
-                        <date>2002</date>
-                        <citedRange>Me 1</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SH6KBKBT"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002394">https://biblio.inscriptiones.org/epig10002394</ref></bibl>
-                    <bibl>
-                        <author>Crawford</author>
-                        <date>2006</date>
-                        <citedRange>521-525 figs. 258-259</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/G82KT6YE"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002390">https://biblio.inscriptiones.org/epig10002390</ref></bibl>
-                    </listBibl>
-	   <listBibl type="discussion">
-	       <bibl>
-	           <author>Clackson</author>
-	           <date>2012</date>
-	           <citedRange>138-141</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/3R4Q36I8"/>
-	       <ref target="https://biblio.inscriptiones.org/epig10002389">https://biblio.inscriptiones.org/epig10002389</ref></bibl>
-	       <bibl>
-	           <author>McDonald</author>
-	           <date>2015</date>
-	           <citedRange>91</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/2RCYDL7W"/>
-	       <ref target="https://biblio.inscriptiones.org/epig10002393">https://biblio.inscriptiones.org/epig10002393</ref></bibl>
-	       <bibl>
-	           <author>Zair</author>
-	           <date>2016</date>
-	           <citedRange>138-139</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/HR3I2FMB"/>
-	       <ref target="https://biblio.inscriptiones.org/epig10002392">https://biblio.inscriptiones.org/epig10002392</ref></bibl>
-	   </listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>I.Sicily inscription 001620</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#KMcD">Katherine McDonald</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+	   <ns0:funder><ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref></ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="KMcD" ref="http://orcid.org/0000-0002-0721-3303">Katherine McDonald</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</ns0:name>
+                    <ns0:resp>conversion to EpiDoc</ns0:resp>
+                </ns0:respStmt>
+	    <ns0:respStmt>
+     	       <ns0:name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</ns0:name>
+     	       <ns0:resp>standardisation of template and tidying up encoding</ns0:resp>
+ 	   </ns0:respStmt>
+            </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic001620</ns0:idno>
+                <ns0:idno type="TM">171040</ns0:idno>
+                <ns0:idno type="EDR" />
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS" />
+                <ns0:idno type="PHI" />
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001620</ns0:idno>
+                <ns0:idno type="DOI" when="2020-12-22">10.5281/zenodo.4386222</ns0:idno>
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Messina</ns0:settlement>
+                        <ns0:repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina</ns0:repository>
+                        <ns0:idno type="inventory">A2030</ns0:idno>
+                        
+                        <ns0:altIdentifier>
+                            <ns0:country>Italy</ns0:country>
+                            <ns0:settlement>Messina</ns0:settlement>
+                            <ns0:repository>Museo regionale interdisciplinare di Messina</ns0:repository>
+                            <ns0:idno type="old">24</ns0:idno>
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="osc">Oscan</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support><ns0:p>Large irregular limestone block, cut and smoothed on the front face for an inscription, top and bottom smooth, with the back surface left irregular. There is later recutting of the stone on the left and right-hand sides, see history of the inscription's discovery below.</ns0:p>
+                                    <ns0:material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</ns0:material>
+                                    <ns0:objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">Block</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">50</ns0:height>
+                                        <ns0:width unit="cm">125</ns0:width>
+                                        <ns0:depth unit="cm">45</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition ana="#condition.damaged" />
+		    </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout><ns0:p>The inscription has five lines of text, damaged on both the left-hand and right-hand sides. Line 3 has no damage to the right-hand side and appears to have only one letter missing from the left-hand side, suggesting that the text was centred on the field.</ns0:p>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                	<ns0:damage ana="#text_condition.incomplete" />
+			</ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote><ns0:p>The inscription is written in the adapted Ionic Greek alphabet which was usually employed to write Oscan in Lucania and Bruttium from around the fourth to the first centuries BC.</ns0:p>
+                                <ns0:locus from="line1" to="line5">Lines 1-5</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="50" atMost="60">50-60</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line1" to="line2">Interlineation line 1 to 2</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" />
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                    </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462538">Messana</ns0:placeName>		
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</ns0:placeName>
+                            	<ns0:geo>38.19394, 15.55256</ns0:geo>
+		</ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0201" precision="low">3rd century BCE</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered" notBefore="1612" notAfter="1613">The inscription was originally found in 1612 or 1613 near an old tower in the Giudecca area of Messina, and was recorded by G. Buonfiglio Costanzo. By 1624, when it was recorded by G. Gualtherus, the front left-hand corner of the stone had been cut away. The right-hand edge of the stone was cut away at some later date. The inscription was rediscovered in 1755 and mentioned by Caio Domenico Gallo. It was found again at the beginning of the twentieth century, built into a wall at Via C&#225;rdines 152, and was moved to the Museo Regionale di Messina in 1909. For more information on the history of the discovery of the inscription, see Crawford (2011) and Crawford (<ns0:ref target="http://zotero.org/groups/382445/items/G82KT6YE">2006</ns0:ref>).</ns0:provenance>
+                        <ns0:provenance type="observed" subtype="autopsied" when="2014-09-20">MacDonald 2014-09-20</ns0:provenance>
+                        <ns0:acquisition>Messina, Museo Regionale Interdisciplinare di Messina old no. 24, no. Accascina 2030</ns0:acquisition>
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+             <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
+                     <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
+	       <ns0:p>ISicily glyphs authority list</ns0:p>
+	     </ns1:fallback>
+	   </ns1:include>
+         </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language> 
+                <ns0:language ident="it">Italian</ns0:language> 
+                <ns0:language ident="grc">Ancient Greek</ns0:language> 
+                <ns0:language ident="la">Latin</ns0:language> 
+                <ns0:language ident="he">Hebrew</ns0:language> 
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language> 
+                <ns0:language ident="xly">Elymian</ns0:language> 
+                <ns0:language ident="scx">Sikel</ns0:language>  
+                <ns0:language ident="sxc">Sikan</ns0:language>  
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="draft">
+            <ns0:listChange>
+                <ns0:change when="2016-02-15">Katherine McDonald edited the file and added text, translation and commentary</ns0:change>
+                <ns0:change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</ns0:change>
+            	   <ns0:change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</ns0:change>
+            	   <ns0:change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</ns0:change>
+                    <ns0:change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</ns0:change>
+	    <ns0:change when="2020-12-22" who="#JP">Updated Zenodo DOI</ns0:change>
+            	    <ns0:change when="2021-01-19" who="#SS">renumbered files, uris and references</ns0:change>
+                    <ns0:change when="2022-01-14" who="#JP">Jonathan Prag re-incorporated original edits from Katherine McDonald (2016-02-15)</ns0:change>
+	</ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic001620_tiled.tif" height="2085px" width="3834px">
+                <ns0:desc>Photograph J. Prag, 2019-05-02</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="screen" url="ISic001620.jpg" height="2085px" width="3834px">
+                <ns0:desc>Photograph J. Prag, 2019-05-02</ns0:desc>
+            </ns0:graphic>
+        </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="osc-Grek" resp="#KMcD">
+                <ns0:ab>
+                <ns0:lb n="1" /><ns0:supplied reason="lost" evidence="previouseditor">&#963;&#964;&#949;</ns0:supplied>&#957;&#953;&#963; &#954;&#945;&#955;&#953;&#957;&#953;&#963; &#963;&#964;&#945;&#964;&#964;<ns0:unclear>&#953;</ns0:unclear><ns0:supplied reason="lost" evidence="parallel">&#951;&#953;&#963;</ns0:supplied>
+                <ns0:lb n="2" /><ns0:supplied reason="lost" evidence="previouseditor">&#956;&#945;&#961;</ns0:supplied>&#945;&#963; &#960;&#959;&#956;&#960;&#964;&#953;&#949;&#963; &#957;&#953;&#965;&#956;&#948;<ns0:supplied reason="lost" evidence="parallel">&#953;&#951;&#953;&#963;</ns0:supplied>
+                <ns0:lb n="3" /><ns0:unclear>&#956;</ns0:unclear>&#949;&#948;&#948;&#949;&#953;&#958; &#959;&#965;&#960;&#963;&#949;&#957;&#963;
+                <ns0:lb n="4" /><ns0:supplied reason="lost" evidence="previouseditor">&#949;&#953;&#957;&#949;</ns0:supplied><ns0:unclear>&#953;</ns0:unclear>&#956; &#964;&#969;&#989;&#964;&#959; &#956;&#945;&#956;&#949;&#961;&#964;<ns0:supplied reason="lost" evidence="parallel">&#953;&#957;&#959;</ns0:supplied>
+                <ns0:lb n="5" /><ns0:supplied reason="lost" evidence="previouseditor">&#945;</ns0:supplied>&#960;&#960;&#949;&#955;&#955;&#959;&#965;&#957;&#951;&#953; &#963;&#945;&#954;<ns0:supplied reason="lost" evidence="parallel">&#945;&#961;&#959;</ns0:supplied>
+                </ns0:ab>
+            </ns0:div>
+            <ns0:div type="apparatus" resp="#KMcD">
+                <ns0:listApp>
+                    <ns0:app><ns0:note>The beginning of each line is supplied from a C17 record of the inscription. The end of each line is supplied from the parallel copy, ISic 2816.</ns0:note></ns0:app>
+                    <ns0:app loc="3"><ns0:note>The right hand hasta of the mu is visible.</ns0:note></ns0:app>
+                    <ns0:app loc="4"><ns0:note>The iota is just visible along the left-hand edge of the front of the stone.</ns0:note></ns0:app>
+                </ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation" xml:lang="en" resp="#KMcD">
+                <ns0:p>Stenis Kalinis (son) of Stattis (and) Maras Pompiis (son) of Niumdis, meddices, and the Mamertine people built (this). Sacred to Apollo.</ns0:p>
+                <ns0:p>[Latinised] Stenius Calinius (son) of Stattius (and) Maras Pompius (son) of Niumidius, meddices, and the Mamertine people built (this). Sacred to Apollo.</ns0:p>
+            </ns0:div>
+            <ns0:div type="commentary" resp="#KMcD">
+                <ns0:p>There is another extant copy of this inscription (<ns0:ref target="http://sicily.classics.ox.ac.uk/inscription/ISic002816">ISic002816</ns0:ref>), which supplies the text missing from the right-hand side. Only the right-hand part of the other copy survives: the left-hand part of ISic002816, which was destroyed, is known from a seventeenth-century record of the text, and so this can be used to help restore the missing text from the left-hand edge of ISic001620, which is also known from the initial report of it in <ns0:ref target="http://zotero.org/groups/382445/items/QK2SZA3H">Buonfiglio Costanzo 1613</ns0:ref>.  Crawford (<ns0:ref target="http://zotero.org/groups/382445/items/2BHFHCRR">2011</ns0:ref>) states that the two inscriptions were &#8216;probably from a wall, perhaps either side of a gate&#8217;. Rix (<ns0:ref target="http://zotero.org/groups/382445/items/SH6KBKBT">2002</ns0:ref>) reports a third copy of this text, Me 3, but this third inscription does not exist: the text of Rix&#8217;s Me 3 has its origins in a faulty recording of what is actually ISic001620.</ns0:p>
+                <ns0:p>The text is written in the adapted Ionic Greek alphabet which was usually employed to write Oscan in Lucania and Bruttium from around the fourth to the first centuries BC.</ns0:p>
+                <ns0:p>The personal names are written in the normal Oscan style, with a praenomen and nomen, plus the genitive of the father&#8217;s praenomen (without a word for &#8216;son&#8217;). Cf. the syntax of <ns0:ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001623">ISic001623</ns0:ref>. </ns0:p>
+                <ns0:p>The spellings of <ns0:foreign xml:lang="osc">&#959;&#965;&#960;&#963;&#949;&#957;&#962;</ns0:foreign> (which does not use psi) and <ns0:foreign xml:lang="osc">&#956;&#949;&#948;&#948;&#949;&#953;&#958;</ns0:foreign> (which uses xi rather than kappa+sigma) may be indicative of orthographic differences between Oscan at Messana and Oscan written in the Greek alphabet in Lucania and Bruttium (<ns0:ref target="http://zotero.org/groups/382445/items/2RCYDL7W">McDonald 2015</ns0:ref>: 91). The spelling &#957;&#953;&#965;- (rather than &#957;&#965;-, as ususually found in Lucania and Bruttium) in the personal name <ns0:foreign xml:lang="osc">&#957;&#953;&#965;&#956;&#948;&#953;&#951;&#953;&#962;</ns0:foreign> may also show different orthographic practices at Messina, and may show influence from spelling norms in Oscan alphabet used in Campania and Samnium (<ns0:ref target="http://zotero.org/groups/382445/items/HR3I2FMB">Zair 2016</ns0:ref> 138-9). Cf. <ns0:ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001621">ISicoo1621</ns0:ref>.</ns0:p>
+                <ns0:p> The Greek god name Apollo is borrowed into Oscan as <ns0:foreign xml:lang="osc">&#945;&#960;&#960;&#949;&#955;&#955;&#959;&#965;&#957;&#951;&#953;</ns0:foreign>, as elsewhere in Oscan &#8211; cf. <ns0:foreign xml:lang="osc">appellune&#237;s</ns0:foreign> at Pompeii. This indicates a borrowing of the Doric form <ns0:foreign xml:lang="grc">&#913;&#960;&#949;&#955;&#955;&#969;&#957;</ns0:foreign> rather than the Ionic <ns0:foreign xml:lang="grc">&#913;&#960;&#959;&#955;&#955;&#969;&#957;</ns0:foreign>.</ns0:p>
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl>
+                        <ns0:author>Buonfiglio Costanzo</ns0:author>
+                        <ns0:date>1613</ns0:date>
+                        <ns0:citedRange><ns0:ref target="https://books.google.co.uk/books?id=IVrMOzw8HMoC">135</ns0:ref></ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/QK2SZA3H" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002391">https://biblio.inscriptiones.org/epig10002391</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Gualtherus</ns0:author>
+                        <ns0:date>1624 [1625]</ns0:date>
+                        <ns0:citedRange><ns0:ref target="http://arachne.uni-koeln.de/item/buchseite/310928">3 no. 7</ns0:ref></ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Crawford</ns0:author>
+                        <ns0:date>2011</ns0:date>
+                        <ns0:citedRange>Messana 4</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/2BHFHCRR" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001376">https://biblio.inscriptiones.org/epig10001376</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Vetter</ns0:author>
+                        <ns0:date>1953</ns0:date>
+                        <ns0:citedRange>no. 196</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/6C5ZKCF2" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001523">https://biblio.inscriptiones.org/epig10001523</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Morandi</ns0:author>
+                        <ns0:date>1982</ns0:date>
+                        <ns0:citedRange>143 no. 37</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/5U63BQIP" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001739">https://biblio.inscriptiones.org/epig10001739</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Parlang&#232;li</ns0:author>
+                        <ns0:date>1956</ns0:date>
+                        <ns0:citedRange>no. 1.A</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/AFQ8FDTW" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001684">https://biblio.inscriptiones.org/epig10001684</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Orioles</ns0:author>
+                        <ns0:date>1992</ns0:date>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/GGJG3JCZ" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001720">https://biblio.inscriptiones.org/epig10001720</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Rix</ns0:author>
+                        <ns0:date>2002</ns0:date>
+                        <ns0:citedRange>Me 1</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/SH6KBKBT" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002394">https://biblio.inscriptiones.org/epig10002394</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Crawford</ns0:author>
+                        <ns0:date>2006</ns0:date>
+                        <ns0:citedRange>521-525 figs. 258-259</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/G82KT6YE" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002390">https://biblio.inscriptiones.org/epig10002390</ns0:ref></ns0:bibl>
+                    </ns0:listBibl>
+	   <ns0:listBibl type="discussion">
+	       <ns0:bibl>
+	           <ns0:author>Clackson</ns0:author>
+	           <ns0:date>2012</ns0:date>
+	           <ns0:citedRange>138-141</ns0:citedRange>
+	           <ns0:ptr target="http://zotero.org/groups/382445/items/3R4Q36I8" />
+	       <ns0:ref target="https://biblio.inscriptiones.org/epig10002389">https://biblio.inscriptiones.org/epig10002389</ns0:ref></ns0:bibl>
+	       <ns0:bibl>
+	           <ns0:author>McDonald</ns0:author>
+	           <ns0:date>2015</ns0:date>
+	           <ns0:citedRange>91</ns0:citedRange>
+	           <ns0:ptr target="http://zotero.org/groups/382445/items/2RCYDL7W" />
+	       <ns0:ref target="https://biblio.inscriptiones.org/epig10002393">https://biblio.inscriptiones.org/epig10002393</ns0:ref></ns0:bibl>
+	       <ns0:bibl>
+	           <ns0:author>Zair</ns0:author>
+	           <ns0:date>2016</ns0:date>
+	           <ns0:citedRange>138-139</ns0:citedRange>
+	           <ns0:ptr target="http://zotero.org/groups/382445/items/HR3I2FMB" />
+	       <ns0:ref target="https://biblio.inscriptiones.org/epig10002392">https://biblio.inscriptiones.org/epig10002392</ns0:ref></ns0:bibl>
+	   </ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>

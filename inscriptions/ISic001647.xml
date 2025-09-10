@@ -1,258 +1,255 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Funerary epitaph for a wife</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
-                <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic001647</idno>
-                <idno type="TM">494045</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS">12700076</idno>
-                <idno type="PHI">334900</idno>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001647</idno>
-                <idno type="DOI" when="2020-12-22">10.5281/zenodo.4386248</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Lipari</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernabò Brea"</repository>
-                        <idno type="inventory">143</idno>
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="la">Latin</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support><p>A rectangular marble plaque, broken into multiple fragments, of which five survive and join. The upper left corner and the left side are missing.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--ILipara-->
-                                        <height unit="cm">34.6</height>
-                                        <width unit="cm">33.5</width>
-                                        <depth unit="cm">3</depth>
-                                    </dimensions>
-                                </support>
-                                <condition ana="#condition.fragments.contiguous"/>
-		    </supportDesc>
-                            <layoutDesc>
-                                <layout><p>The text is laid out over seven lines, somehwat unevenly spaced and sized, largest in lines 3-5, smallest in the final line, with some use of interpuncts.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote><p>Letters tending in some cases towards cursive (e.g. M), with I and T indistinguishable, E and F tall and narrow. Wedge shaped serifs at stroke ends.</p>
-                                <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">26-29</height>
-                                </dimensions>
-                                <locus from="line2" to="line2">Line 2</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">31-32</height>
-                                </dimensions>
-                                <locus from="line3" to="line3">Line 3</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">32-37</height>
-                                </dimensions>
-                                <locus from="line4" to="line4">Line 4</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">30-35</height>
-                                </dimensions>
-                                <locus from="line5" to="line5">Line 5</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">30-40</height>
-                                </dimensions>
-                                <locus from="line6" to="line6">Line 6</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">22-30</height>
-                                </dimensions>
-                                <locus from="line7" to="line7">Line 7</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">10-17</height>
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
-                            	<geo>38.48333, 14.93333</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" evidence="lettering textual-context">4th-5th century CE</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered">Found in Contrada Ponte (prop. Palamara) in unknown circumstances in 1949 <geo>38.4636672,14.9474141</geo></provenance><!-- representative point in cda. Ponte -->
-                        <provenance type="observed" subtype="observed">Seen on display in Lipara museum 2023-07-28 (Prag)</provenance>
-                        <acquisition/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Ancient Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="draft">
-            <listChange>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                <change when="2025-04-09" who="#JP">Jonathan Prag revised from publications and photograph</change>
-	</listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic001647_tiled.tif" height="3392px" width="3072px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-28</desc>
-            </graphic>
-            <graphic n="print" url="ISic001647.jpg" height="3392px" width="3072px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-28</desc>
-            </graphic>
-         </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP" source="#JP">
-                <ab>
-                    <lb n="1"/><supplied reason="lost" cert="low">Greg</supplied>oriae piae
-                    <lb n="2"/><supplied reason="lost"><expan><abbr>fem</abbr><ex>inae</ex></expan></supplied> <supplied reason="lost">i</supplied><hi rend="ligature">nd</hi>e coniu
-                    <lb n="3" break="no"/><supplied reason="lost">gi</supplied> <supplied reason="lost">inc</supplied>ompara
-                    <lb n="4" break="no"/><supplied reason="lost">b</supplied>ili <expan><abbr>qua</abbr><ex>e</ex></expan> morata
-                    <lb n="5"/><supplied reason="lost">es</supplied>t in <g ref="#interpunct">·</g> seculo an
-                    <lb n="6" break="no"/><supplied reason="lost">no</supplied>s <num value="33">XXXIII</num> dies <num value="29">XXVIIII</num>
-                    <lb n="7"/><persName type="attested"><name><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="1"/><w part="F">gus</w></name></persName> merenti <g ref="#interpunct">·</g> con<hi rend="tall">i</hi>ugi fecit
-                </ab>
-            </div>
-            <div type="apparatus">
-                <listApp>
-                    <app><note>Text after ILipara (in turn mostly following Manganaro), controlled against photograph; interpuncts are omitted in I.Lipara.</note></app>
-                    <app loc="1"><note>ILipara: [Greg]oriae † &lt;p&gt;iae</note></app>
-                    <app loc="7"><note>ILipara: [---]GVS</note></app>
-                </listApp>
-            </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
-            </div>
-            <div type="commentary">
-                <p>The readings of lines 1 and 2 are far from certain. In line 1, the fifth character is uncertain, read by some as a cross, by others as an E (a vertical, with a clear foot, and then crossed by a diagonal stroke halfway up); The sixth letter is variously read as an E, an F or an unclear P. It is difficult to read the fifth as a cross, and the sixth seems to be a P. But the alternative reading of e.g. Ferrua, of [Bonae memo]riae ..., where the name stands across the end of line 1 and into line 2 seems very plausible. The second character of line 2 is also unclear, two strong straight diagonal strokes, forming a backward C. Manganaro and others read NDE (presumably in ligature), as presented here, but this is also far from certain. A backwards C would permit the abbreviation for e.g. G(aiae), (as suggested by Calderone, Agnello and Bernarbo Brea), but the following letter is clearly E (or F), not L. The name of the commemorating husband at the start of line 7 seems clearly to end in -gus, not -cus (comparison with the other Cs in lines 2 and 5 seems clear); Manganaro suggested Mergus.</p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl type="corpus" n="ILipara">
-                          <author>Bernabó-Brea</author>
-                          <author>Cavalier</author>
-                          <author>Campagna</author>
-                          <date>2003</date> 
-                        <citedRange>792</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VDAQH5D2"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ref></bibl>
-                    <bibl>
-                        <author>Agnello</author>
-                        <date>1953</date>
-                        <citedRange>no.86</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref></bibl>
-                    <bibl>
-                        <author>Calderone</author>
-                        <date>1949</date>
-                        <citedRange>58-59 ph</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/IWUZJCRM"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002101">https://biblio.inscriptiones.org/epig10002101</ref></bibl>
-                    <bibl>
-                        <author>Ferrua</author>
-                        <date>1989</date>
-                        <citedRange>no.532</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref></bibl>
-                    <bibl>
-                        <author>Manganaro</author>
-                        <date>1993</date>
-                        <citedRange>591-592 fig.34-35</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JBI7CI5R"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001827">https://biblio.inscriptiones.org/epig10001827</ref></bibl>
-                </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>Funerary epitaph for a wife</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#JP">Jonathan Prag</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+	   <ns0:funder><ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref></ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</ns0:name>
+                    <ns0:resp>conversion to EpiDoc</ns0:resp>
+                </ns0:respStmt>
+	    <ns0:respStmt>
+     	       <ns0:name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</ns0:name>
+     	       <ns0:resp>standardisation of template and tidying up encoding</ns0:resp>
+ 	   </ns0:respStmt>
+            </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic001647</ns0:idno>
+                <ns0:idno type="TM">494045</ns0:idno>
+                <ns0:idno type="EDR" />
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS">12700076</ns0:idno>
+                <ns0:idno type="PHI">334900</ns0:idno>
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001647</ns0:idno>
+                <ns0:idno type="DOI" when="2020-12-22">10.5281/zenodo.4386248</ns0:idno>
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Lipari</ns0:settlement>
+                        <ns0:repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/048">Museo Archeologico Regionale Eoliano "Luigi Bernab&#242; Brea"</ns0:repository>
+                        <ns0:idno type="inventory">143</ns0:idno>
+                        
+                        <ns0:altIdentifier>
+                            <ns0:settlement />
+                            <ns0:repository />
+                            <ns0:idno type="old" />
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="la">Latin</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support><ns0:p>A rectangular marble plaque, broken into multiple fragments, of which five survive and join. The upper left corner and the left side are missing.</ns0:p>
+                                    <ns0:material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</ns0:material>
+                                    <ns0:objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">34.6</ns0:height>
+                                        <ns0:width unit="cm">33.5</ns0:width>
+                                        <ns0:depth unit="cm">3</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition ana="#condition.fragments.contiguous" />
+		    </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout><ns0:p>The text is laid out over seven lines, somehwat unevenly spaced and sized, largest in lines 3-5, smallest in the final line, with some use of interpuncts.</ns0:p>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                	<ns0:damage ana="#text_condition.incomplete" />
+			</ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote><ns0:p>Letters tending in some cases towards cursive (e.g. M), with I and T indistinguishable, E and F tall and narrow. Wedge shaped serifs at stroke ends.</ns0:p>
+                                <ns0:locus from="line1" to="line1">Line 1</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="26" atMost="29">26-29</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line2" to="line2">Line 2</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="31" atMost="32">31-32</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line3" to="line3">Line 3</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="32" atMost="37">32-37</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line4" to="line4">Line 4</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="30" atMost="35">30-35</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line5" to="line5">Line 5</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="30" atMost="40">30-40</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line6" to="line6">Line 6</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="22" atMost="30">22-30</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line7" to="line7">Line 7</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="10" atMost="17">10-17</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line1" to="line2">Interlineation line 1 to 2</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" />
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                    </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</ns0:placeName>		
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</ns0:placeName>
+                            	<ns0:geo>38.48333, 14.93333</ns0:geo>
+		</ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" evidence="lettering textual-context">4th-5th century CE</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered">Found in Contrada Ponte (prop. Palamara) in unknown circumstances in 1949 <ns0:geo>38.4636672,14.9474141</ns0:geo></ns0:provenance>
+                        <ns0:provenance type="observed" subtype="observed">Seen on display in Lipara museum 2023-07-28 (Prag)</ns0:provenance>
+                        <ns0:acquisition />
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+             <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
+                     <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
+	       <ns0:p>ISicily glyphs authority list</ns0:p>
+	     </ns1:fallback>
+	   </ns1:include>
+         </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language>
+                <ns0:language ident="it">Italian</ns0:language>
+                <ns0:language ident="grc">Ancient Greek</ns0:language>
+                <ns0:language ident="la">Latin</ns0:language>
+                <ns0:language ident="he">Hebrew</ns0:language>
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language>
+                <ns0:language ident="xly">Elymian</ns0:language>
+                <ns0:language ident="scx">Sikel</ns0:language>
+                <ns0:language ident="sxc">Sikan</ns0:language>
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="draft">
+            <ns0:listChange>
+                <ns0:change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</ns0:change>
+            	   <ns0:change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</ns0:change>
+            	   <ns0:change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</ns0:change>
+            	<ns0:change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</ns0:change>
+		<ns0:change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</ns0:change>
+	    <ns0:change when="2020-12-22" who="#JP">Updated Zenodo DOI</ns0:change>
+            	<ns0:change when="2021-01-19" who="#SS">renumbered files, uris and references</ns0:change>
+                <ns0:change when="2025-04-09" who="#JP">Jonathan Prag revised from publications and photograph</ns0:change>
+	</ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic001647_tiled.tif" height="3392px" width="3072px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-28</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001647.jpg" height="3392px" width="3072px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-28</ns0:desc>
+            </ns0:graphic>
+         </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="la" resp="#JP" source="#JP">
+                <ns0:ab>
+                    <ns0:lb n="1" /><ns0:supplied reason="lost" cert="low">Greg</ns0:supplied>oriae piae
+                    <ns0:lb n="2" /><ns0:supplied reason="lost"><ns0:expan><ns0:abbr>fem</ns0:abbr><ns0:ex>inae</ns0:ex></ns0:expan></ns0:supplied> <ns0:supplied reason="lost">i</ns0:supplied><ns0:hi rend="ligature">nd</ns0:hi>e coniu
+                    <ns0:lb n="3" break="no" /><ns0:supplied reason="lost">gi</ns0:supplied> <ns0:supplied reason="lost">inc</ns0:supplied>ompara
+                    <ns0:lb n="4" break="no" /><ns0:supplied reason="lost">b</ns0:supplied>ili <ns0:expan><ns0:abbr>qua</ns0:abbr><ns0:ex>e</ns0:ex></ns0:expan> morata
+                    <ns0:lb n="5" /><ns0:supplied reason="lost">es</ns0:supplied>t in <ns0:g ref="#interpunct">&#183;</ns0:g> seculo an
+                    <ns0:lb n="6" break="no" /><ns0:supplied reason="lost">no</ns0:supplied>s <ns0:num value="33">XXXIII</ns0:num> dies <ns0:num value="29">XXVIIII</ns0:num>
+                    <ns0:lb n="7" /><ns0:persName type="attested"><ns0:name><ns0:gap reason="lost" extent="unknown" unit="character" /><ns0:gap reason="illegible" unit="character" quantity="1" /><ns0:w part="F">gus</ns0:w></ns0:name></ns0:persName> merenti <ns0:g ref="#interpunct">&#183;</ns0:g> con<ns0:hi rend="tall">i</ns0:hi>ugi fecit
+                </ns0:ab>
+            </ns0:div>
+            <ns0:div type="apparatus">
+                <ns0:listApp>
+                    <ns0:app><ns0:note>Text after ILipara (in turn mostly following Manganaro), controlled against photograph; interpuncts are omitted in I.Lipara.</ns0:note></ns0:app>
+                    <ns0:app loc="1"><ns0:note>ILipara: [Greg]oriae &#8224; &lt;p&gt;iae</ns0:note></ns0:app>
+                    <ns0:app loc="7"><ns0:note>ILipara: [---]GVS</ns0:note></ns0:app>
+                </ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation">
+                <ns0:p />
+            </ns0:div>
+            <ns0:div type="commentary">
+                <ns0:p>The readings of lines 1 and 2 are far from certain. In line 1, the fifth character is uncertain, read by some as a cross, by others as an E (a vertical, with a clear foot, and then crossed by a diagonal stroke halfway up); The sixth letter is variously read as an E, an F or an unclear P. It is difficult to read the fifth as a cross, and the sixth seems to be a P. But the alternative reading of e.g. Ferrua, of [Bonae memo]riae ..., where the name stands across the end of line 1 and into line 2 seems very plausible. The second character of line 2 is also unclear, two strong straight diagonal strokes, forming a backward C. Manganaro and others read NDE (presumably in ligature), as presented here, but this is also far from certain. A backwards C would permit the abbreviation for e.g. G(aiae), (as suggested by Calderone, Agnello and Bernarbo Brea), but the following letter is clearly E (or F), not L. The name of the commemorating husband at the start of line 7 seems clearly to end in -gus, not -cus (comparison with the other Cs in lines 2 and 5 seems clear); Manganaro suggested Mergus.</ns0:p>
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl type="corpus" n="ILipara">
+ &#8232;                        <ns0:author>Bernab&#243;-Brea</ns0:author>
+ &#8232;                        <ns0:author>Cavalier</ns0:author>
+ &#8232;                        <ns0:author>Campagna</ns0:author>
+ &#8232;                        <ns0:date>2003</ns0:date> 
+                        <ns0:citedRange>792</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/VDAQH5D2" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Agnello</ns0:author>
+                        <ns0:date>1953</ns0:date>
+                        <ns0:citedRange>no.86</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Calderone</ns0:author>
+                        <ns0:date>1949</ns0:date>
+                        <ns0:citedRange>58-59 ph</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/IWUZJCRM" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002101">https://biblio.inscriptiones.org/epig10002101</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Ferrua</ns0:author>
+                        <ns0:date>1989</ns0:date>
+                        <ns0:citedRange>no.532</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Manganaro</ns0:author>
+                        <ns0:date>1993</ns0:date>
+                        <ns0:citedRange>591-592 fig.34-35</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/JBI7CI5R" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001827">https://biblio.inscriptiones.org/epig10001827</ns0:ref></ns0:bibl>
+                </ns0:listBibl>
+	   <ns0:listBibl type="discussion"><ns0:bibl /></ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>

@@ -1,274 +1,271 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Funerary inscription for Calemera</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
-                <funder>John Fell OUP Research Fund</funder>
-                <funder>
-                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
-                </funder>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>conversion to EpiDoc</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
-                    <resp>EpiDoc editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-                    <resp>standardisation of template and tidying up encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>Autopsy</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
-                    <resp>Lemmatization</resp>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic000139</idno>
-                <idno type="TM">284845</idno>
-                <idno type="EDR">111020</idno>
-                <idno type="EDH"/>
-                <idno type="EDCS">22100082</idno>
-                <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000139</idno>
-                <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334273</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
-                        <idno type="inventory">29</idno>
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="la">Latin</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support>
-                                    <p>Small marble plaque, intact on left, above and below, but partially damaged on the right side, with upper and lower right corners missing. The left edge is straight, the lower and upper edges more irregular. The rear is flat with traces of (modern?) mortar. Paint (modern) on the sides.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions>
-                                        <height unit="cm">20.5</height>
-                                        <width unit="cm">23.5</width>
-                                        <depth unit="cm">2.5</depth>
-                                    </dimensions>
-                                </support>
-                                <condition/>
-                            </supportDesc>
-                            <layoutDesc>
-                                <layout>
-                                    <p>Three lines of Latin text, approximately centred on the stone.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
-                                </layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote>
-                                <p>Somewhat irregular v-cut letters with serifs and crude/variable interpuncts.</p>
-                                <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">30-34 (I = 45)</height>
-                                </dimensions>
-                                <locus from="line2" to="line2">Line 2</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">26-32</height>
-                                </dimensions>
-                                <locus from="line3" to="line3">Line 3</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">26-35</height>
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm"/>
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
-                                <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                                <geo>37.98365, 13.69555</geo>
-                            </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered" when="1880">Found in early 1880 'in un fondo fuori di porta Messina, appartenente al sig. Sinibaldi Oddo', together with ISic000172, and donated to the museum<geo>37.9810835,13.6989596</geo></provenance><!-- approx location of Porta Messina -->
-                        <provenance type="observed" subtype="autopsied">Alex Antoniou 2023-07-07, in the storeroom of the Museo Civico, Termini Imerese.</provenance>
-                        <acquisition/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
-                    <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
-                    <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
-        </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Ancient Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="draft">
-            <listChange>
-                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-                <change when="2019-05-17" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus and translation.</change>
-                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                <change when="2024-04-17" who="#JP">Jonathan Prag revised from autopsy record, publications, and added images</change>
-                <change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</change>
-                <change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</change>
-            </listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic000139_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07.</desc>
-            </graphic>
-            <graphic n="print" url="ISic000139.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07.</desc>
-            </graphic>
-        </surface>
-        <surface type="rear">
-            <graphic n="screen" url="ISic000139_rear_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07.</desc>
-            </graphic>
-            <graphic n="print" url="ISic000139_rear.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07.</desc>
-            </graphic>
-        </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
-                <ab>
-                    <lb n="1" xml:id="ANοAK"/><w xml:id="ANοAU" n="5">d<hi rend="tall" xml:id="ANοAe">i</hi>s</w> <g ref="#interpunct" xml:id="ANοAo" n="10">·</g> <w xml:id="ANοAy" n="15"><expan xml:id="ANοAΙ"><abbr xml:id="ANοAΤ">man</abbr><ex xml:id="ANοAε">ibus</ex></expan></w>
-                    <lb n="2" xml:id="ANοAο"/><persName type="attested" xml:id="ANοBA"><name><w n="20" xml:id="ANοBK">Calemera</w></name></persName>
-                    <lb n="3" xml:id="ANοBU"/><w xml:id="ANοBe" n="25"><expan xml:id="ANοBo"><abbr xml:id="ANοBy">v</abbr><ex xml:id="ANοBΙ">ixit</ex></expan></w> <g ref="#interpunct" xml:id="ANοBΤ" n="30">·</g> <w xml:id="ANοBε" n="35"><expan xml:id="ANοBο"><abbr xml:id="ANοCA">an</abbr><ex xml:id="ANοCK">no</ex></expan></w> <g ref="#interpunct" xml:id="ANοCU" n="40">·</g> <num value="1"><w n="45" xml:id="ANοCe">I</w></num> <w xml:id="ANοCo" n="50"><expan xml:id="ANοCy"><abbr xml:id="ANοCΙ">m</abbr><ex xml:id="ANοCΤ">ensibus</ex></expan></w> <num value="4"><w n="55" xml:id="ANοCε">IV</w></num>
-                </ab>
-            </div>
-            <div type="edition" subtype="simple-lemmatized" resp="#RC">
-                <ab>
-                    <w n="5" lemma="Deus">dis</w>
-                    <w n="15" lemma="Manes">manibus</w>
-                    <w n="20" lemma="Calemera">Calemera</w>
-                    <w n="25" lemma="vivo">vixit</w>
-                    <w n="35" lemma="annus">anno</w>
-                    <w n="45" lemma="I">I</w>
-                    <w n="50" lemma="mensis">mensibus</w>
-                    <w n="55" lemma="IV">IV</w>
-                </ab>
-            </div>
-            <div type="apparatus">
-                <listApp>
-                    <app>
-                        <note>Text from autopsy</note>
-                    </app>
-                    <app loc="1">
-                        <note>Bivona: Dís (but I is tall, not with apex)</note>
-                    </app>
-                </listApp>
-            </div>
-            <div type="translation" xml:lang="en" resp="#TA">
-                <p>To the Shades of the Underworld. Calemera lived 1 year, 4 months.</p>
-            </div>
-            <div type="commentary">
-                <p>The name Calemera, well atested in Rome, is not otherwise attested in Sicily.</p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl type="bulletin" n="NSA">
-                        <author>Fiorelli</author>
-                        <title>NSA</title>
-                        <date>1880</date>
-                        <citedRange>200</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
-                    </bibl>
-                    <bibl type="corpus" n="CIL">
-                        <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650798">10.7381</ref>
-                        </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
-                    </bibl>
-                    <bibl type="corpus" n="ILMusTermini">
-                         <author>Bivona</author>
-                         <date>1994</date> 
-                        <citedRange>58</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
-                    </bibl>
-                    <bibl/>
-                </listBibl>
-                <listBibl type="discussion">
-                    <bibl/>
-                </listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>Funerary inscription for Calemera</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#JP">Jonathan Prag</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+                <ns0:funder>
+                    <ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref>
+                </ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</ns0:name>
+                    <ns0:resp>conversion to EpiDoc</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</ns0:name>
+                    <ns0:resp>EpiDoc editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</ns0:name>
+                    <ns0:resp>standardisation of template and tidying up encoding</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</ns0:name>
+                    <ns0:resp>Autopsy</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</ns0:name>
+                    <ns0:resp>Lemmatization</ns0:resp>
+                </ns0:respStmt>
+            </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic000139</ns0:idno>
+                <ns0:idno type="TM">284845</ns0:idno>
+                <ns0:idno type="EDR">111020</ns0:idno>
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS">22100082</ns0:idno>
+                <ns0:idno type="PHI" />
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000139</ns0:idno>
+                <ns0:idno type="DOI" when="2020-12-17">10.5281/zenodo.4334273</ns0:idno>
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Termini Imerese</ns0:settlement>
+                        <ns0:repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</ns0:repository>
+                        <ns0:idno type="inventory">29</ns0:idno>
+                        
+                        <ns0:altIdentifier>
+                            <ns0:settlement />
+                            <ns0:repository />
+                            <ns0:idno type="old" />
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="la">Latin</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support>
+                                    <ns0:p>Small marble plaque, intact on left, above and below, but partially damaged on the right side, with upper and lower right corners missing. The left edge is straight, the lower and upper edges more irregular. The rear is flat with traces of (modern?) mortar. Paint (modern) on the sides.</ns0:p>
+                                    <ns0:material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</ns0:material>
+                                    <ns0:objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">20.5</ns0:height>
+                                        <ns0:width unit="cm">23.5</ns0:width>
+                                        <ns0:depth unit="cm">2.5</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition />
+                            </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout>
+                                    <ns0:p>Three lines of Latin text, approximately centred on the stone.</ns0:p>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                    <ns0:damage />
+                                </ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote>
+                                <ns0:p>Somewhat irregular v-cut letters with serifs and crude/variable interpuncts.</ns0:p>
+                                <ns0:locus from="line1" to="line1">Line 1</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="10" atMost="13">30-34 (I = 45)</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line2" to="line2">Line 2</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="26" atMost="32">26-32</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line3" to="line3">Line 3</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="26" atMost="35">26-35</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line1" to="line2">Interlineation line 1 to 2</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" />
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                    </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</ns0:placeName>
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</ns0:placeName>
+                                <ns0:geo>37.98365, 13.69555</ns0:geo>
+                            </ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered" when="1880">Found in early 1880 'in un fondo fuori di porta Messina, appartenente al sig. Sinibaldi Oddo', together with ISic000172, and donated to the museum<ns0:geo>37.9810835,13.6989596</ns0:geo></ns0:provenance>
+                        <ns0:provenance type="observed" subtype="autopsied">Alex Antoniou 2023-07-07, in the storeroom of the Museo Civico, Termini Imerese.</ns0:provenance>
+                        <ns0:acquisition />
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+            <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+            <ns1:include href="../alists/ISicily-taxonomies.xml">
+                <ns1:fallback>
+                    <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                </ns1:fallback>
+            </ns1:include>
+            <ns1:include href="../alists/charDecl.xml">
+                <ns1:fallback>
+                    <ns0:p>ISicily glyphs authority list</ns0:p>
+                </ns1:fallback>
+            </ns1:include>
+        </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language>
+                <ns0:language ident="it">Italian</ns0:language>
+                <ns0:language ident="grc">Ancient Greek</ns0:language>
+                <ns0:language ident="la">Latin</ns0:language>
+                <ns0:language ident="he">Hebrew</ns0:language>
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language>
+                <ns0:language ident="xly">Elymian</ns0:language>
+                <ns0:language ident="scx">Sikel</ns0:language>
+                <ns0:language ident="sxc">Sikan</ns0:language>
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="draft">
+            <ns0:listChange>
+                <ns0:change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</ns0:change>
+                <ns0:change when="2019-05-17" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus and translation.</ns0:change>
+                <ns0:change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</ns0:change>
+                <ns0:change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</ns0:change>
+                <ns0:change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</ns0:change>
+                <ns0:change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</ns0:change>
+                <ns0:change when="2020-12-17" who="#JP">Updated Zenodo DOI</ns0:change>
+                <ns0:change when="2021-01-19" who="#SS">renumbered files, uris and references</ns0:change>
+                <ns0:change when="2024-04-17" who="#JP">Jonathan Prag revised from autopsy record, publications, and added images</ns0:change>
+                <ns0:change when="2025-06-16" who="#RC">Robert Crellin provided lemmatizations</ns0:change>
+                <ns0:change when="2025-08-13" who="#RC">Robert Crellin moved global IDs to inner w elements</ns0:change>
+            </ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic000139_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07.</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic000139.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07.</ns0:desc>
+            </ns0:graphic>
+        </ns0:surface>
+        <ns0:surface type="rear">
+            <ns0:graphic n="screen" url="ISic000139_rear_tiled.tif" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07.</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic000139_rear.jpg" height="3680px" width="5520px">
+                <ns0:desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07.</ns0:desc>
+            </ns0:graphic>
+        </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
+                <ns0:ab>
+                    <ns0:lb n="1" xml:id="AN&#959;AK" /><ns0:w xml:id="AN&#959;AU" n="5">d<ns0:hi rend="tall" xml:id="AN&#959;Ae">i</ns0:hi>s</ns0:w> <ns0:g ref="#interpunct" xml:id="AN&#959;Ao" n="10">&#183;</ns0:g> <ns0:w xml:id="AN&#959;Ay" n="15"><ns0:expan xml:id="AN&#959;A&#921;"><ns0:abbr xml:id="AN&#959;A&#932;">man</ns0:abbr><ns0:ex xml:id="AN&#959;A&#949;">ibus</ns0:ex></ns0:expan></ns0:w>
+                    <ns0:lb n="2" xml:id="AN&#959;A&#959;" /><ns0:persName type="attested" xml:id="AN&#959;BA"><ns0:name><ns0:w n="20" xml:id="AN&#959;BK">Calemera</ns0:w></ns0:name></ns0:persName>
+                    <ns0:lb n="3" xml:id="AN&#959;BU" /><ns0:w xml:id="AN&#959;Be" n="25"><ns0:expan xml:id="AN&#959;Bo"><ns0:abbr xml:id="AN&#959;By">v</ns0:abbr><ns0:ex xml:id="AN&#959;B&#921;">ixit</ns0:ex></ns0:expan></ns0:w> <ns0:g ref="#interpunct" xml:id="AN&#959;B&#932;" n="30">&#183;</ns0:g> <ns0:w xml:id="AN&#959;B&#949;" n="35"><ns0:expan xml:id="AN&#959;B&#959;"><ns0:abbr xml:id="AN&#959;CA">an</ns0:abbr><ns0:ex xml:id="AN&#959;CK">no</ns0:ex></ns0:expan></ns0:w> <ns0:g ref="#interpunct" xml:id="AN&#959;CU" n="40">&#183;</ns0:g> <ns0:num value="1"><ns0:w n="45" xml:id="AN&#959;Ce">I</ns0:w></ns0:num> <ns0:w xml:id="AN&#959;Co" n="50"><ns0:expan xml:id="AN&#959;Cy"><ns0:abbr xml:id="AN&#959;C&#921;">m</ns0:abbr><ns0:ex xml:id="AN&#959;C&#932;">ensibus</ns0:ex></ns0:expan></ns0:w> <ns0:num value="4"><ns0:w n="55" xml:id="AN&#959;C&#949;">IV</ns0:w></ns0:num>
+                </ns0:ab>
+            </ns0:div>
+            <ns0:div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ns0:ab>
+                    <ns0:w n="5" lemma="Deus">dis</ns0:w>
+                    <ns0:w n="15" lemma="Manes">manibus</ns0:w>
+                    <ns0:w n="20" lemma="Calemera">Calemera</ns0:w>
+                    <ns0:w n="25" lemma="vivo">vixit</ns0:w>
+                    <ns0:w n="35" lemma="annus">anno</ns0:w>
+                    <ns0:w n="45" lemma="I">I</ns0:w>
+                    <ns0:w n="50" lemma="mensis">mensibus</ns0:w>
+                    <ns0:w n="55" lemma="IV">IV</ns0:w>
+                </ns0:ab>
+            </ns0:div>
+            <ns0:div type="apparatus">
+                <ns0:listApp>
+                    <ns0:app>
+                        <ns0:note>Text from autopsy</ns0:note>
+                    </ns0:app>
+                    <ns0:app loc="1">
+                        <ns0:note>Bivona: D&#237;s (but I is tall, not with apex)</ns0:note>
+                    </ns0:app>
+                </ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation" xml:lang="en" resp="#TA">
+                <ns0:p>To the Shades of the Underworld. Calemera lived 1 year, 4 months.</ns0:p>
+            </ns0:div>
+            <ns0:div type="commentary">
+                <ns0:p>The name Calemera, well atested in Rome, is not otherwise attested in Sicily.</ns0:p>
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl type="bulletin" n="NSA">
+                        <ns0:author>Fiorelli</ns0:author>
+                        <ns0:title>NSA</ns0:title>
+                        <ns0:date>1880</ns0:date>
+                        <ns0:citedRange>200</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl type="corpus" n="CIL">
+                        <ns0:citedRange>
+                            <ns0:ref target="http://arachne.uni-koeln.de/item/buchseite/650798">10.7381</ns0:ref>
+                        </ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl type="corpus" n="ILMusTermini">
+                         <ns0:author>Bivona</ns0:author>
+                         <ns0:date>1994</ns0:date> 
+                        <ns0:citedRange>58</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
+                        <ns0:ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ns0:ref>
+                    </ns0:bibl>
+                    <ns0:bibl />
+                </ns0:listBibl>
+                <ns0:listBibl type="discussion">
+                    <ns0:bibl />
+                </ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>

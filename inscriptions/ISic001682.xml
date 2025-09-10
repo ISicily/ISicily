@@ -1,283 +1,280 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>funerary inscription for Cesernius Marcelus</title>
-                <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
-                <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
-                <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
-                    <resp>Creation of EpiDoc template</resp>
-                </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>I.Sicily</authority>
-                <idno type="filename">ISic001682</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001682</idno>
-                <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <country>Italy</country>
-                        <region>Sicily</region>
-                        <settlement>Siracusa</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
-                        <idno type="inventory">232</idno>
-                        <idno type="inventory">50779</idno>
-                        <!--Adding location for old id numbers if available-->
-                        <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="la">Latin</textLang>
-                    </msContents>
-                    <physDesc>
-                        <objectDesc>
-                            <supportDesc>
-                                <support><p>A marble funerary plaque, broken into multiple fragments and currently reconnected with plaster filling the voids. Orsi records 7 fragments (in both the Taccuini and the NSA), although the inventory entries both note only 6 fragments, and the transcription under inv.50779 (1948) misses the final letters lower right of the 7th fragment. The 7th fragment was not with the stone when last inspected (2015). It is unclear from Orsi's drawing whether the lower left corner was fully preserved in the 7th fragment originally or not, and therefore as it is currently preserved, at least one line is lost at the bottom. The plaque is thicker at the top than at the bottom.</p>
-                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257.html">plaque</objectType>
-                                    <dimensions>
-                                        <height unit="cm">39</height>
-                                        <width unit="cm">23.7</width>
-                                        <depth unit="cm">1.8-2.5</depth>
-                                    </dimensions>
-                                </support>
-                                <condition ana="#condition.fragments.contiguous"/>
-		    </supportDesc>
-                            <layoutDesc>
-                                <layout><p>Well-spaced lines filling the width of the available stone, word-breaks do not observe line-end.</p>
-                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
-                            </layoutDesc>
-                        </objectDesc>
-                        <handDesc>
-                            <handNote><p>Somewhat irregular deep-cut letters with pronounced terminations and occasionally extravagant serifs/flourishes (e.g. on X or E), and a varying tendency to the later narrow elongated style (e.g. TFL in line 5), and M sometimes with the upper strokes extended well above the join. A consistently lacks a cross-bar; E generally has equal length strokes, but with the top stroke often extended upwards; F, tall, narrow, and upward pointing; M sometimes with extended apices, sometimes without (all four strokes full length); P is closed; R sometimes open, with extended tail; X frequently over extended upper right. No interpuncts.</p>
-                                <locus from="line1" to="line1">Line 1</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">27-30</height>
-                                </dimensions>
-                                <locus from="line2" to="line2">Line 2</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">27-37</height>
-                                </dimensions>
-                                <locus from="line3" to="line3">Line 3</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">27-31</height>
-                                </dimensions>
-                                <locus from="line4" to="line4">Line 4</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">24-30</height>
-                                </dimensions>
-                                <locus from="line5" to="line5">Line 5</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">24-35</height>
-                                </dimensions>
-                                <locus from="line6" to="line6">Line 6</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">22-33</height>
-                                </dimensions>
-                                <locus from="line7" to="line7">Line 7</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">22-26</height>
-                                </dimensions>
-                                <locus from="line8" to="line8">Line 8</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">25-26</height>
-                                </dimensions>
-                                <locus from="line9" to="line9">Line 9</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm">23</height>
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation 1-2</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">10-15</height>
-                                </dimensions>
-                                <locus from="line2" to="line3">Interlineation 2-3</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">10-15</height>
-                                </dimensions>
-                                <locus from="line3" to="line4">Interlineation 3-4</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">13-21</height>
-                                </dimensions>
-                                <locus from="line4" to="line5">Interlineation 4-5</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">5-16</height>
-                                </dimensions>
-                                <locus from="line5" to="line6">Interlineation 5-6</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">10-22</height>
-                                </dimensions>
-                                <locus from="line6" to="line7">Interlineation 6-7</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">15-23</height>
-                                </dimensions>
-                                <locus from="line7" to="line8">Interlineation 7-8</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">17-21</height>
-                                </dimensions>
-                                <locus from="line8" to="line9">Interlineation 8-9</locus>
-                                <dimensions type="interlinear">
-                                    <height unit="mm">9-15</height>
-                                </dimensions>
-                            </handNote>
-                        </handDesc>
-                     </physDesc>
-                    <history>
-                        <origin>
-                            <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
-                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0151" notAfter-custom="0350" evidence="lettering" precision="low">mid-2nd century to mid-4th century CE</origDate>
-                        </origin>
-                        <provenance type="found" subtype="discovered" notAfter="1888">Found in the Fusco necropolis <geo cert="medium">37.0750458, 15.2590759</geo></provenance><!-- representative location of the Fusco necropolis -->
-                        <provenance type="observed" subtype="autopsied" when="2015-07-01" resp="#JP">Prag 2015-07-01</provenance>
-                        <acquisition/>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
-        <profileDesc>
-            <calendarDesc>
-                <calendar xml:id="julian">
-                    <p>Julian Calendar</p>
-                </calendar>
-            </calendarDesc>
-            <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Ancient Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
-                <language ident="phn">Phoenician</language>
-                <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
-            </langUsage>
-            <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
-                </keywords>
-            </textClass>
-        </profileDesc>
-        <revisionDesc status="edited">
-            <listChange>
-                    <change when="2021-06-02" who="#JP">Jonathan Prag created file from existing template and autopsy</change>
-	</listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface type="front">
-            <graphic n="screen" url="ISic001682_tiled.tif" height="5520px" width="3680px">
-                <desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
-            </graphic>
-            <graphic n="print" url="ISic001682.jpg" height="5520px" width="3680px">
-                <desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
-            </graphic>
-        </surface>
-        <surface type="rear">
-            <graphic n="screen" url="ISic001682_rear_tiled.tif" height="5520px" width="3680px">
-                <desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
-            </graphic>
-            <graphic n="print" url="ISic001682_rear.jpg" height="5520px" width="3680px">
-                <desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
-            </graphic>
-        </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
-                <ab>
-                    <lb n="1"/>Dis Manibus
-                    <lb n="2"/>memoriam Ce
-                    <lb n="3"/>serni Marce
-                    <lb n="4" break="no"/>li posuit <choice><orig>ux
-                    <lb n="5" break="no"/>xor</orig><reg>uxor</reg></choice> sua et fili
-                    <lb n="6"/>su<supplied reason="lost">i</supplied> <unclear>b</unclear><unclear>e</unclear>n<unclear>e</unclear> m<unclear>e</unclear>
-                    <lb n="7"/>re<unclear>n</unclear><supplied reason="lost">ti</supplied> qui <choice><orig>vix
-                    <lb n="8" break="no"/>xi<unclear>t</unclear></orig><reg>vixit</reg></choice> <supplied reason="lost">a</supplied><unclear>n</unclear>nis <space unit="character" quantity="2"/>
-                    <lb n="9"/><num atLeast="33" atMost="53"><supplied reason="undefined" evidence="previouseditor">X</supplied><gap reason="lost" unit="character" atLeast="1" atMost="2"/><unclear>X</unclear>XIII</num> <space unit="character" quantity="1"/>
-                    <lb n="10"/><supplied reason="undefined" evidence="previouseditor"><orig>SFV</orig></supplied><gap reason="lost" extent="unknown" unit="character"/>
-                 </ab>
-            </div>
-            <div type="apparatus" resp="#JP">
-                <listApp>
-                    <app loc="line 6"><note>The top of the B is visible above the break. The final two Es on this line appear either partially or entirely to lack the lowermost stroke.</note></app>
-                 </listApp>
-            </div>
-            <div type="translation" xml:lang="en" resp="#JP">
-                <p>To the shades of the departed. This memorial of Cesernius Marcelus his wife and sons set up for a well deserving man, who lived 43 (?) years ...</p>
-            </div>
-            <div type="commentary" resp="#JP">
-                <p>The fragment recorded by Orsi from the lower left recorded an initial X to the numeral and three letters in a 10th line below, which are not easily resolved in a common abbreviation but likely to pertain to the erection of the memorial by Cesernius Marcelus' family. The position of the X at the start of line 9, with at least a partial vacat of one character implied before it in the drawing by Orsi leaves it slightly uncertain exactly what the total age in years recorded was, with a minimum of 33 and a maximum of 53, but 43 seeming the most likely from the spacing on the fragments preserved. The repetition of X across line-break in both uxor and vixit is notable.</p>
-            </div>
-            <div type="bibliography">
-                <listBibl type="edition">
-                    <bibl type="bulletin" n="NSA">
-                        <author>Orsi</author>
-                        <title>NSA</title>
-                        <date>1889</date>
-                        <citedRange>385</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
-                    <bibl>
-                        <author>Orsi</author>
-                        <date>2018</date>
-                        <citedRange>Tacc. 1, p. 41</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref></bibl>
-                    <bibl type="bulletin" n="EphEp">
-                        <citedRange>VIII 688</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref></bibl>
-                    </listBibl>
-	   <listBibl type="discussion">
-	   <bibl/>
-	   </listBibl>
-            </div>
-        </body>
-    </text>
-</TEI>
+<ns0:TEI xmlns:ns0="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <ns0:teiHeader>
+        <ns0:fileDesc>
+            <ns0:titleStmt>
+                <ns0:title>funerary inscription for Cesernius Marcelus</ns0:title>
+                <ns0:editor ref="#JP">Jonathan Prag</ns0:editor>
+                <ns0:principal ref="#JP">Jonathan Prag</ns0:principal>
+                <ns0:funder>John Fell OUP Research Fund</ns0:funder>
+	   <ns0:funder><ns0:ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ns0:ref></ns0:funder>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</ns0:name>
+                    <ns0:resp>original data collection and editing</ns0:resp>
+                </ns0:respStmt>
+                <ns0:respStmt>
+                    <ns0:name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</ns0:name>
+                    <ns0:resp>Creation of EpiDoc template</ns0:resp>
+                </ns0:respStmt>
+	    <ns0:respStmt>
+     	       <ns0:name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</ns0:name>
+     	       <ns0:resp>standardisation of template and tidying up encoding</ns0:resp>
+ 	   </ns0:respStmt>
+            </ns0:titleStmt>
+            <ns0:publicationStmt>
+                <ns0:authority>I.Sicily</ns0:authority>
+                <ns0:idno type="filename">ISic001682</ns0:idno>
+                <ns0:idno type="TM" />
+                <ns0:idno type="EDR" />
+                <ns0:idno type="EDH" />
+                <ns0:idno type="EDCS" />
+                <ns0:idno type="PHI" />
+                <ns0:idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001682</ns0:idno>
+                <ns0:availability>
+                    <ns0:licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</ns0:licence>
+                </ns0:availability>
+            </ns0:publicationStmt>
+            <ns0:sourceDesc>
+                <ns0:msDesc>
+                    <ns0:msIdentifier>
+                        <ns0:country>Italy</ns0:country>
+                        <ns0:region>Sicily</ns0:region>
+                        <ns0:settlement>Siracusa</ns0:settlement>
+                        <ns0:repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</ns0:repository>
+                        <ns0:idno type="inventory">232</ns0:idno>
+                        <ns0:idno type="inventory">50779</ns0:idno>
+                        
+                        <ns0:altIdentifier>
+                            <ns0:settlement />
+                            <ns0:repository />
+                            <ns0:idno type="old" />
+                        </ns0:altIdentifier>
+                    </ns0:msIdentifier>
+                    <ns0:msContents>
+                        <ns0:textLang mainLang="la">Latin</ns0:textLang>
+                    </ns0:msContents>
+                    <ns0:physDesc>
+                        <ns0:objectDesc>
+                            <ns0:supportDesc>
+                                <ns0:support><ns0:p>A marble funerary plaque, broken into multiple fragments and currently reconnected with plaster filling the voids. Orsi records 7 fragments (in both the Taccuini and the NSA), although the inventory entries both note only 6 fragments, and the transcription under inv.50779 (1948) misses the final letters lower right of the 7th fragment. The 7th fragment was not with the stone when last inspected (2015). It is unclear from Orsi's drawing whether the lower left corner was fully preserved in the 7th fragment originally or not, and therefore as it is currently preserved, at least one line is lost at the bottom. The plaque is thicker at the top than at the bottom.</ns0:p>
+                                    <ns0:material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</ns0:material>
+                                    <ns0:objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257.html">plaque</ns0:objectType>
+                                    <ns0:dimensions>
+                                        <ns0:height unit="cm">39</ns0:height>
+                                        <ns0:width unit="cm">23.7</ns0:width>
+                                        <ns0:depth unit="cm">1.8-2.5</ns0:depth>
+                                    </ns0:dimensions>
+                                </ns0:support>
+                                <ns0:condition ana="#condition.fragments.contiguous" />
+		    </ns0:supportDesc>
+                            <ns0:layoutDesc>
+                                <ns0:layout><ns0:p>Well-spaced lines filling the width of the available stone, word-breaks do not observe line-end.</ns0:p>
+                                    <ns0:rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</ns0:rs>
+                                	<ns0:damage ana="#text_condition.incomplete" />
+			</ns0:layout>
+                            </ns0:layoutDesc>
+                        </ns0:objectDesc>
+                        <ns0:handDesc>
+                            <ns0:handNote><ns0:p>Somewhat irregular deep-cut letters with pronounced terminations and occasionally extravagant serifs/flourishes (e.g. on X or E), and a varying tendency to the later narrow elongated style (e.g. TFL in line 5), and M sometimes with the upper strokes extended well above the join. A consistently lacks a cross-bar; E generally has equal length strokes, but with the top stroke often extended upwards; F, tall, narrow, and upward pointing; M sometimes with extended apices, sometimes without (all four strokes full length); P is closed; R sometimes open, with extended tail; X frequently over extended upper right. No interpuncts.</ns0:p>
+                                <ns0:locus from="line1" to="line1">Line 1</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="27" atMost="30">27-30</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line2" to="line2">Line 2</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="27" atMost="37">27-37</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line3" to="line3">Line 3</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="27" atMost="31">27-31</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line4" to="line4">Line 4</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="24" atMost="30">24-30</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line5" to="line5">Line 5</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="24" atMost="35">24-35</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line6" to="line6">Line 6</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="22" atMost="33">22-33</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line7" to="line7">Line 7</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="22" atMost="26">22-26</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line8" to="line8">Line 8</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="25" atMost="26">25-26</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line9" to="line9">Line 9</ns0:locus>
+                                <ns0:dimensions type="letterHeight">
+                                    <ns0:height unit="mm" atLeast="23" atMost="23">23</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line1" to="line2">Interlineation 1-2</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="10" atMost="15">10-15</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line2" to="line3">Interlineation 2-3</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="10" atMost="15">10-15</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line3" to="line4">Interlineation 3-4</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="13" atMost="21">13-21</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line4" to="line5">Interlineation 4-5</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="5" atMost="16">5-16</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line5" to="line6">Interlineation 5-6</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="10" atMost="22">10-22</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line6" to="line7">Interlineation 6-7</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="15" atMost="23">15-23</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line7" to="line8">Interlineation 7-8</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="17" atMost="21">17-21</ns0:height>
+                                </ns0:dimensions>
+                                <ns0:locus from="line8" to="line9">Interlineation 8-9</ns0:locus>
+                                <ns0:dimensions type="interlinear">
+                                    <ns0:height unit="mm" atLeast="9" atMost="15">9-15</ns0:height>
+                                </ns0:dimensions>
+                            </ns0:handNote>
+                        </ns0:handDesc>
+                     </ns0:physDesc>
+                    <ns0:history>
+                        <ns0:origin>
+                            <ns0:origPlace>
+                                <ns0:placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</ns0:placeName>		
+                                <ns0:placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</ns0:placeName>
+                            	<ns0:geo>37.08415, 15.27628</ns0:geo>
+		</ns0:origPlace>
+                            <ns0:origDate datingMethod="#julian" notBefore-custom="0151" notAfter-custom="0350" evidence="lettering" precision="low">mid-2nd century to mid-4th century CE</ns0:origDate>
+                        </ns0:origin>
+                        <ns0:provenance type="found" subtype="discovered" notAfter="1888">Found in the Fusco necropolis <ns0:geo cert="medium">37.0750458, 15.2590759</ns0:geo></ns0:provenance>
+                        <ns0:provenance type="observed" subtype="autopsied" when="2015-07-01" resp="#JP">Prag 2015-07-01</ns0:provenance>
+                        <ns0:acquisition />
+                    </ns0:history>
+                </ns0:msDesc>
+            </ns0:sourceDesc>
+        </ns0:fileDesc>
+        <ns0:encodingDesc>
+             <ns0:p>Encoded following the latest EpiDoc guidelines</ns0:p>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
+                     <ns0:p>Taxonomies for ISicily controlled values</ns0:p>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
+	       <ns0:p>ISicily glyphs authority list</ns0:p>
+	     </ns1:fallback>
+	   </ns1:include>
+         </ns0:encodingDesc>
+        <ns0:profileDesc>
+            <ns0:calendarDesc>
+                <ns0:calendar xml:id="julian">
+                    <ns0:p>Julian Calendar</ns0:p>
+                </ns0:calendar>
+            </ns0:calendarDesc>
+            <ns0:langUsage>
+                <ns0:language ident="en">English</ns0:language>
+                <ns0:language ident="it">Italian</ns0:language>
+                <ns0:language ident="grc">Ancient Greek</ns0:language>
+                <ns0:language ident="la">Latin</ns0:language>
+                <ns0:language ident="he">Hebrew</ns0:language>
+                <ns0:language ident="phn">Phoenician</ns0:language>
+                <ns0:language ident="xpu">Punic</ns0:language>
+                <ns0:language ident="osc">Oscan</ns0:language>
+                <ns0:language ident="xly">Elymian</ns0:language>
+                <ns0:language ident="scx">Sikel</ns0:language>
+                <ns0:language ident="sxc">Sikan</ns0:language>
+            </ns0:langUsage>
+            <ns0:textClass>
+                <ns0:keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <ns0:term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</ns0:term>
+                </ns0:keywords>
+            </ns0:textClass>
+        </ns0:profileDesc>
+        <ns0:revisionDesc status="edited">
+            <ns0:listChange>
+                    <ns0:change when="2021-06-02" who="#JP">Jonathan Prag created file from existing template and autopsy</ns0:change>
+	</ns0:listChange>
+        </ns0:revisionDesc>
+    </ns0:teiHeader>
+    <ns0:facsimile>
+        <ns0:surface type="front">
+            <ns0:graphic n="screen" url="ISic001682_tiled.tif" height="5520px" width="3680px">
+                <ns0:desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001682.jpg" height="5520px" width="3680px">
+                <ns0:desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</ns0:desc>
+            </ns0:graphic>
+        </ns0:surface>
+        <ns0:surface type="rear">
+            <ns0:graphic n="screen" url="ISic001682_rear_tiled.tif" height="5520px" width="3680px">
+                <ns0:desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</ns0:desc>
+            </ns0:graphic>
+            <ns0:graphic n="print" url="ISic001682_rear.jpg" height="5520px" width="3680px">
+                <ns0:desc>Photo J. Prag (2015), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</ns0:desc>
+            </ns0:graphic>
+        </ns0:surface>
+    </ns0:facsimile>
+    <ns0:text>
+        <ns0:body>
+            <ns0:div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ns0:ab>
+                    <ns0:lb n="1" />Dis Manibus
+                    <ns0:lb n="2" />memoriam Ce
+                    <ns0:lb n="3" />serni Marce
+                    <ns0:lb n="4" break="no" />li posuit <ns0:choice><ns0:orig>ux
+                    <ns0:lb n="5" break="no" />xor</ns0:orig><ns0:reg>uxor</ns0:reg></ns0:choice> sua et fili
+                    <ns0:lb n="6" />su<ns0:supplied reason="lost">i</ns0:supplied> <ns0:unclear>b</ns0:unclear><ns0:unclear>e</ns0:unclear>n<ns0:unclear>e</ns0:unclear> m<ns0:unclear>e</ns0:unclear>
+                    <ns0:lb n="7" />re<ns0:unclear>n</ns0:unclear><ns0:supplied reason="lost">ti</ns0:supplied> qui <ns0:choice><ns0:orig>vix
+                    <ns0:lb n="8" break="no" />xi<ns0:unclear>t</ns0:unclear></ns0:orig><ns0:reg>vixit</ns0:reg></ns0:choice> <ns0:supplied reason="lost">a</ns0:supplied><ns0:unclear>n</ns0:unclear>nis <ns0:space unit="character" quantity="2" />
+                    <ns0:lb n="9" /><ns0:num atLeast="33" atMost="53"><ns0:supplied reason="undefined" evidence="previouseditor">X</ns0:supplied><ns0:gap reason="lost" unit="character" atLeast="1" atMost="2" /><ns0:unclear>X</ns0:unclear>XIII</ns0:num> <ns0:space unit="character" quantity="1" />
+                    <ns0:lb n="10" /><ns0:supplied reason="undefined" evidence="previouseditor"><ns0:orig>SFV</ns0:orig></ns0:supplied><ns0:gap reason="lost" extent="unknown" unit="character" />
+                 </ns0:ab>
+            </ns0:div>
+            <ns0:div type="apparatus" resp="#JP">
+                <ns0:listApp>
+                    <ns0:app loc="line 6"><ns0:note>The top of the B is visible above the break. The final two Es on this line appear either partially or entirely to lack the lowermost stroke.</ns0:note></ns0:app>
+                 </ns0:listApp>
+            </ns0:div>
+            <ns0:div type="translation" xml:lang="en" resp="#JP">
+                <ns0:p>To the shades of the departed. This memorial of Cesernius Marcelus his wife and sons set up for a well deserving man, who lived 43 (?) years ...</ns0:p>
+            </ns0:div>
+            <ns0:div type="commentary" resp="#JP">
+                <ns0:p>The fragment recorded by Orsi from the lower left recorded an initial X to the numeral and three letters in a 10th line below, which are not easily resolved in a common abbreviation but likely to pertain to the erection of the memorial by Cesernius Marcelus' family. The position of the X at the start of line 9, with at least a partial vacat of one character implied before it in the drawing by Orsi leaves it slightly uncertain exactly what the total age in years recorded was, with a minimum of 33 and a maximum of 53, but 43 seeming the most likely from the spacing on the fragments preserved. The repetition of X across line-break in both uxor and vixit is notable.</ns0:p>
+            </ns0:div>
+            <ns0:div type="bibliography">
+                <ns0:listBibl type="edition">
+                    <ns0:bibl type="bulletin" n="NSA">
+                        <ns0:author>Orsi</ns0:author>
+                        <ns0:title>NSA</ns0:title>
+                        <ns0:date>1889</ns0:date>
+                        <ns0:citedRange>385</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ns0:ref></ns0:bibl>
+                    <ns0:bibl>
+                        <ns0:author>Orsi</ns0:author>
+                        <ns0:date>2018</ns0:date>
+                        <ns0:citedRange>Tacc. 1, p. 41</ns0:citedRange>
+                        <ns0:ptr target="http://zotero.org/groups/382445/items/RGRSRUHK" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ns0:ref></ns0:bibl>
+                    <ns0:bibl type="bulletin" n="EphEp">
+                        <ns0:citedRange>VIII 688</ns0:citedRange>
+                        <ns0:ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3" />
+                    <ns0:ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ns0:ref></ns0:bibl>
+                    </ns0:listBibl>
+	   <ns0:listBibl type="discussion">
+	   <ns0:bibl />
+	   </ns0:listBibl>
+            </ns0:div>
+        </ns0:body>
+    </ns0:text>
+</ns0:TEI>
