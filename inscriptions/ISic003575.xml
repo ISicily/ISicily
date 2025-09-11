@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,10 +24,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003575</idno>
                 <idno type="TM">645646</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003575</idno>
                 <idno type="DOI" when="2020-09-09">10.5281/zenodo.4021567</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003575</idno>
@@ -49,11 +46,11 @@
                         <settlement>Halaesa</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/053">Antiquarium e sito archeologico di Halaesa</repository>
                         <idno type="inventory">30596</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -72,12 +69,12 @@
                                         <depth unit="cm">2.5-3</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Three lines of Latin text are preserved, but the end of each line is lost. Engraved guidelines for the layout of the text are visible for all three lines. The letters of all three lines are of approximately equal height (65-70 mm), although the second I in line 2 is extended to a height of 92 mm.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -85,7 +82,7 @@
                             <handNote>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">65-70</height>
+                                    <height unit="mm" atLeast="65" atMost="70">65-70</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation</locus>
                                 <dimensions type="interlinear">
@@ -108,7 +105,7 @@
                         <provenance type="found" subtype="discovered">Excavated 1972, in room 7 of the west portico of the agora<geo>37.997856, 14.262463</geo></provenance>
                         <provenance type="observed">On display in new lapidarium</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2011.06.15</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                     
                 </msDesc>
@@ -116,16 +113,16 @@
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -187,9 +184,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/>Avianiae · A<unclear>v</unclear><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><expan><abbr>P</abbr><ex>ubli</ex></expan> · Aelii · Ux<supplied reason="lost">ori</supplied>
-                    <lb n="3"/><expan><abbr>D</abbr><ex>ecreto</ex></expan> <space unit="character" quantity="3"/> <roleName type="civic" subtype="decurio"><expan><abbr><unclear>D</unclear></abbr><ex>ecurionum</ex></expan></roleName>
+                    <lb n="1" />Avianiae &#183; A<unclear>v</unclear><gap reason="lost" extent="unknown" unit="character" />
+                    <lb n="2" /><expan><abbr>P</abbr><ex>ubli</ex></expan> &#183; Aelii &#183; Ux<supplied reason="lost">ori</supplied>
+                    <lb n="3" /><expan><abbr>D</abbr><ex>ecreto</ex></expan> <space unit="character" quantity="3" /> <roleName type="civic" subtype="decurio"><expan><abbr><unclear>D</unclear></abbr><ex>ecurionum</ex></expan></roleName>
                 </ab>
             </div>
             <div type="apparatus">
@@ -199,7 +196,7 @@
                 <p>(Set up) for Aviania Av[--?--], wife of Publius Aelius, by the decree of the town council.</p>
             </div>
             <div type="commentary" resp="#JP">
-                <p>The traces of the last letters visible at the end of each line are enough to identify them. The second name of Aviania cannot be guessed, but the only likely word at the end of line two is uxor, ‘wife’. The abbreviation at the end of the text, DD, is standard, and also shows that this text belongs to the period when Halaesa was a Roman municipium (from the time of Augustus onwards). The original size of the inscription can be estimated from the central position of DD, and the stone was probably approximately 60cm wide originally, with only 4-5 letters missing from line 1, and 3-4 from line 2.</p>
+                <p>The traces of the last letters visible at the end of each line are enough to identify them. The second name of Aviania cannot be guessed, but the only likely word at the end of line two is uxor, &#8216;wife&#8217;. The abbreviation at the end of the text, DD, is standard, and also shows that this text belongs to the period when Halaesa was a Roman municipium (from the time of Augustus onwards). The original size of the inscription can be estimated from the central position of DD, and the stone was probably approximately 60cm wide originally, with only 4-5 letters missing from line 1, and 3-4 from line 2.</p>
                 <p>The gentilicium (family name) Avianius is known from Centuripe (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000005">ISic000005</ref>); it is not otherwise recorded in Sicily, although it is common in central and southern Italy. The name Aelius is a very common name, although not very frequent in Sicily; it is attested at Halaesa in the fragmentary text for Alfia (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003574">ISic003574</ref>) and in the Greek honorific for a rhetor (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003591">ISic003591</ref>).</p>
                     <p>It is likely that this text and the fragmentary text for Alfia were set up in honour of female members of the same family, since Alfia is related in some way to Lucius Aelius, as Aviania here is the wife of Publius Aelius. The same type of stone is used for both inscriptions, but the engraver of the two inscriptions is different as the letter forms are clearly different. The text belongs to the first or earlier second century AD.</p>
             </div>
@@ -209,10 +206,10 @@
                         <author>Prag and Tigano</author>
                         <date>2017</date>
                         <citedRange>no.17</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
+                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L" />
                     <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

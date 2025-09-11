@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,8 +24,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003513</idno>
                 <idno type="TM">493843</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">38200004</idno>
                 <idno type="PHI">313629</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003513</idno>
@@ -45,10 +42,10 @@
                         <settlement>Messina</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina</repository>
                         <idno type="inventory">A3567</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
+                            <settlement />
+                            <repository />
                             <idno type="old">2485</idno>
                         </altIdentifier>
                     </msIdentifier>
@@ -61,18 +58,18 @@
                                 <support><p>A marble plaque broken in two fragments across the middle; the fragments join. The right margin is lost, including the upper right corner. The lower margin is damaged, with the lower left and right corners missing.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Bitto-->
+                                    <dimensions>
                                         <height unit="cm">22</height>
                                         <width unit="cm">25</width>
                                         <depth unit="cm">2.1-2.2</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.complete.broken"/>
+                                <condition ana="#condition.complete.broken" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Text is more or less centered and concentrated on the upper portion of the plaque, with extensive use of interpuncts. Perhaps a single letter missing from the end of line 2.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
+                                	<damage ana="#text_condition.incomplete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -80,15 +77,15 @@
                             <handNote><p>Diamond shaped theta, broken and straight-bar alpha, beta with detached loops, sigma a slightly irregular four-bar version, epsilon with upward angled cross-strokes.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">24</height><!-- Bitto -->
+                                    <height unit="mm" atLeast="24" atMost="24">24</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Line 3-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">20</height>
+                                    <height unit="mm" atLeast="20" atMost="20">20</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -100,27 +97,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</placeName>
                             	<geo>38.19394, 15.55256</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st — 3rd century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st &#8212; 3rd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1914">From the 1914 excavation of the necropolis of San Placido</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -163,10 +160,10 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic003513_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
             <graphic n="print" url="ISic003513.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
          </surface>
     </facsimile>
@@ -174,23 +171,23 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>Χ</abbr><ex>θωνίοις</ex></expan> <g ref="#interpunct">·</g>
-                    <lb n="2"/>Ἀβιανία <g ref="#interpunct">·</g> Σαβεν<supplied reason="lost">α</supplied>
-                    <lb n="3"/>ἔζησεν <g ref="#interpunct">·</g> ἔτη
-                    <lb n="4"/><g ref="#interpunct">·</g> <num value="35">λε</num> <g ref="#interpunct">·</g>
+                    <lb n="1" /><expan><abbr>&#920;</abbr><ex>&#949;&#959;&#8150;&#962;</ex></expan> <g ref="#interpunct">&#183;</g> <expan><abbr>&#935;</abbr><ex>&#952;&#969;&#957;&#943;&#959;&#953;&#962;</ex></expan> <g ref="#interpunct">&#183;</g>
+                    <lb n="2" />&#7944;&#946;&#953;&#945;&#957;&#943;&#945; <g ref="#interpunct">&#183;</g> &#931;&#945;&#946;&#949;&#957;<supplied reason="lost">&#945;</supplied>
+                    <lb n="3" />&#7956;&#950;&#951;&#963;&#949;&#957; <g ref="#interpunct">&#183;</g> &#7956;&#964;&#951;
+                    <lb n="4" /><g ref="#interpunct">&#183;</g> <num value="35">&#955;&#949;</num> <g ref="#interpunct">&#183;</g>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app><note>Text after Bitto</note></app>
-                    <app loc="2"><note>Orsi: Σαβε(ῖ)ν[α] or Σαβέν[να]</note></app>
+                    <app loc="2"><note>Orsi: &#931;&#945;&#946;&#949;(&#8150;)&#957;[&#945;] or &#931;&#945;&#946;&#941;&#957;[&#957;&#945;]</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>To the spirits of the underworld. Abiana Sabeina, lived 35 years.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision--></p>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -198,16 +195,16 @@
                          <author>Bitto</author>
                          <date>2001</date> 
                         <citedRange>6</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R" />
                     <ref target="https://biblio.inscriptiones.org/epig10000029">https://biblio.inscriptiones.org/epig10000029</ref></bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>1916</date>
                         <citedRange>137</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/P49V3TMD"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/P49V3TMD" />
                     <ref target="https://biblio.inscriptiones.org/epig10001701">https://biblio.inscriptiones.org/epig10001701</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,8 +24,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic000932</idno>
                 <idno type="TM">492562</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">39102089</idno>
                 <idno type="PHI">140413</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000932</idno>
@@ -45,11 +42,11 @@
                         <settlement>Siracusa</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">66</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -61,19 +58,19 @@
                                 <support><p>Plaque of marble seemingly damaged above and below</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!-- Ferrua measurement -->
+                                    <dimensions>
                                         <height unit="cm">15</height>
                                         <width unit="cm">28</width>
                                         <depth unit="cm">2</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>over five lines, consistent left margin.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <rs ana="#execution.rubrication.red">Rubrication, red coloured</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -81,11 +78,11 @@
                             <handNote><p>traces of red paint noted in the inventory</p>
                                 <locus from="line1" to="line5">Line 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30</height><!-- Ferrua -->
+                                    <height unit="mm" atLeast="30" atMost="30">30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -101,23 +98,23 @@
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1823">No details of the original discovery, but reported by Crispi in 1823 as part of material of sig. D. Agostino Gallo, from Taormina, wrongly attributed to Siracusa by Kaibel (and the inventory is agnostic)</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -158,36 +155,28 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic000932_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic000932.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="3"/><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/>Εὐτύχιος
-                    <lb n="3"/>ἐτελεύτη
-                    <lb n="4" break="no"/>σε τῇ πρὸ <num value="13">ιγ</num>
-                    <lb n="5"/><supplied reason="lost">Ὀ</supplied>κτωβρί<supplied reason="lost">ων</supplied>
+                    <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><gap reason="illegible" unit="character" quantity="3" /><gap reason="lost" extent="unknown" unit="character" />
+                    <lb n="2" />&#917;&#8016;&#964;&#973;&#967;&#953;&#959;&#962;
+                    <lb n="3" />&#7952;&#964;&#949;&#955;&#949;&#973;&#964;&#951;
+                    <lb n="4" break="no" />&#963;&#949; &#964;&#8135; &#960;&#961;&#8056; <num value="13">&#953;&#947;</num>
+                    <lb n="5" /><supplied reason="lost">&#8008;</supplied>&#954;&#964;&#969;&#946;&#961;&#943;<supplied reason="lost">&#969;&#957;</supplied>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp><app><note>Text based upon Orsi and Ferrua</note></app>
-                    <app loc="1"><note>Ferrua: Δ(αιμοσιν) Θ(εοῖς) Χ(θονίοις); Kaibel: [Ἐνθά]δε κ[ῖτε]; Orsi and Crispi report three characters, seemingly a lambda, Roman D or a theta, and a chi, at the centre of the line.</note></app>
+                    <app loc="1"><note>Ferrua: &#916;(&#945;&#953;&#956;&#959;&#963;&#953;&#957;) &#920;(&#949;&#959;&#8150;&#962;) &#935;(&#952;&#959;&#957;&#943;&#959;&#953;&#962;); Kaibel: [&#7960;&#957;&#952;&#940;]&#948;&#949; &#954;[&#8150;&#964;&#949;]; Orsi and Crispi report three characters, seemingly a lambda, Roman D or a theta, and a chi, at the centre of the line.</note></app>
                     <app loc="4"><note>Crispi: IC; Kaibel proposes reading IE after Crispi</note></app>
-                    <app loc="5"><note>Earlier editors propose reading ΚΑΛ before the month name, but Ferrua is correct in suggesting there is no space and it was probably omitted.</note></app>
+                    <app loc="5"><note>Earlier editors propose reading &#922;&#913;&#923; before the month name, but Ferrua is correct in suggesting there is no space and it was probably omitted.</note></app>
                 </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
                 <p>Muscolino discusses the likely attribution of this and a number of other pieces, the earliest records of which state that it came from Taormina, but also indicate that the stones were moved to Siracusa early, leading to general attribution to Siracusa.</p>
@@ -198,65 +187,65 @@
                         <author>Crispi</author>
                         <date>1823</date>
                         <citedRange>263 no.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F8E6LSTF"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F8E6LSTF" />
                     <ref target="https://biblio.inscriptiones.org/epig10002230">https://biblio.inscriptiones.org/epig10002230</ref>
                     </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0115</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F" />
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
                     </bibl>
                     <bibl type="corpus" n="CIG">
                         <citedRange>4.9465</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS" />
                     <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref>
                     </bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>2018</date>
                         <citedRange>Tacc. 1, p.136</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RGRSRUHK" />
                     <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref>
                     </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1989</date>
                         <citedRange>no.476</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref>
                     </bibl>
                     <bibl>
                         <author>Rizzo</author>
                         <date>1904</date>
                         <citedRange>115</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/D82CQMFK"/>
+                        <ptr target="http://zotero.org/groups/382445/items/D82CQMFK" />
                         <ref target="https://biblio.inscriptiones.org/epig10003144">https://biblio.inscriptiones.org/epig10003144</ref>
                     </bibl>
                     <bibl>
                         <author>Strazzulla</author>
                         <date>1897</date>
                         <citedRange>no. 56</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/TUA8RN5S"/>
+                        <ptr target="http://zotero.org/groups/382445/items/TUA8RN5S" />
                         <ref target="https://biblio.inscriptiones.org/epig10001390">https://biblio.inscriptiones.org/epig10001390</ref>
                     </bibl>
                     <bibl>
                         <author>Wessel</author>
                         <date>1989</date>
                         <citedRange>287 no.1329</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/9CT5ZWIK"/>
+                        <ptr target="http://zotero.org/groups/382445/items/9CT5ZWIK" />
                         <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref>
                     </bibl>
                     <bibl>
                         <author>Muscolino</author>
                         <date>2011-2012</date>
                         <citedRange>231 G18</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/GJKY97S8"/>
+                        <ptr target="http://zotero.org/groups/382445/items/GJKY97S8" />
                         <ref target="https://biblio.inscriptiones.org/epig10002215">https://biblio.inscriptiones.org/epig10002215</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -31,10 +28,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic000284</idno>
                 <idno type="TM">491492</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">21900315</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000284</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334861</idno>
                 <availability>
@@ -49,12 +46,12 @@
                         <settlement>Taormina</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/062">Antiquarium del Teatro Antico</repository>
                         <idno type="inventory">3555</idno>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -66,18 +63,18 @@
                                 <support><p>A block of 'marmor luculleum' or Africano, from the Teos quarries. The block is quadrangular, but is cut back on the front in a sequence of three steps, deepest at the bottom and stepped back to the top. The rear is also cut back in a single very shallow step at the top. The exposed faces are all relatively smooth.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
-                                    <dimensions><!--Muscolino-->
+                                    <dimensions>
                                         <height unit="cm">81</height>
                                         <width unit="cm">76-78 (top to bottom)</width>
                                         <depth unit="cm">50-80 (top to bottom)</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.complete"/>
+                                <condition ana="#condition.complete" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Two single lines of text, one on the left and one on the right side. Both texts run left to right, and so the text on the left runs from the rear of the stone to the front, while the text on the right runs from the front to the back. The text on the left is missing the opening letters, having been inscribed prior to the removal of the 'step' from the rear of the stone. The text on the right appears to be essentially intact.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
+                                	<damage ana="#text_condition.complete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -85,11 +82,11 @@
                             <handNote><p>Both texts employ ligatures.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30-35</height><!--Muscolino-->
+                                    <height unit="mm" atLeast="30" atMost="35">30-35</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -103,25 +100,25 @@
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0108" notAfter-custom="0108" evidence="office">Explicitly dated to the consulship of 108 CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1841">Found in excavations directed by Cavallari in the ancient theatre in the period 19-24 July 1841; still visible in the theatre<geo>37.852370, 15.292201</geo></provenance><!-- representative geo in theatre orchestra -->
+                        <provenance type="found" subtype="discovered" when="1841">Found in excavations directed by Cavallari in the ancient theatre in the period 19-24 July 1841; still visible in the theatre<geo>37.852370, 15.292201</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -164,24 +161,16 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic000284_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic000284.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
             <ab>
-                    <milestone unit="face" n="1"/>
-                    <lb n="1"/><supplied reason="lost">sub</supplied> <expan><abbr>cur</abbr><ex>a</ex></expan> <expan><abbr>Pa<hi rend="ligature">te</hi>r</abbr><ex>ni</ex></expan> <roleName type="supracivic" subtype="procurator"><expan><abbr>p<unclear>r</unclear>oc</abbr><ex>uratoris</ex></expan></roleName>
-            <milestone unit="face" n="2"/>
-                    <lb n="2"/>Gallo <hi rend="ligature">et</hi> Bradua <roleName type="supracivic" subtype="consul"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulibus</ex></expan></roleName> <expan><abbr>n</abbr><ex>umero</ex></expan> <num atLeast="5" atMost="9">V<gap reason="lost" extent="unknown" unit="character" cert="low"></gap></num> 
+                    <milestone unit="face" n="1" />
+                    <lb n="1" /><supplied reason="lost">sub</supplied> <expan><abbr>cur</abbr><ex>a</ex></expan> <expan><abbr>Pa<hi rend="ligature">te</hi>r</abbr><ex>ni</ex></expan> <roleName type="supracivic" subtype="procurator"><expan><abbr>p<unclear>r</unclear>oc</abbr><ex>uratoris</ex></expan></roleName>
+            <milestone unit="face" n="2" />
+                    <lb n="2" />Gallo <hi rend="ligature">et</hi> Bradua <roleName type="supracivic" subtype="consul"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulibus</ex></expan></roleName> <expan><abbr>n</abbr><ex>umero</ex></expan> <num atLeast="5" atMost="9">V<gap reason="lost" extent="unknown" unit="character" cert="low" /></num> 
                 </ab>
                 </div>
             <div type="apparatus">
@@ -203,31 +192,31 @@
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650752">10.6996</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl>
                         <author>Lo Faso Pietrasanta</author>
                         <date>1832-1842</date>
                         <citedRange>V.42 tav.24.10</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/EMAB7PTB"/>
+                        <ptr target="http://zotero.org/groups/382445/items/EMAB7PTB" />
                     <ref target="https://biblio.inscriptiones.org/epig10001860">https://biblio.inscriptiones.org/epig10001860</ref></bibl>
                     <bibl>
                         <author>Coarelli and Torelli</author>
                         <date>1984</date>
                         <citedRange>361</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/N93VVSEU"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/N93VVSEU" />
                         <ref target="https://biblio.inscriptiones.org/epig10002073">https://biblio.inscriptiones.org/epig10002073</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>25 n.101</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                     <bibl>
                         <author>Muscolino</author>
                         <date>2023</date>
                         <citedRange>123-141</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/FUT4TN9H"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/FUT4TN9H" />
                         <ref target="https://biblio.inscriptiones.org/epig10003138">https://biblio.inscriptiones.org/epig10003138</ref>
                      </bibl>
                 </listBibl>
@@ -236,7 +225,7 @@
 	           <author>Wilson</author>
 	           <date>1990</date>
 	           <citedRange>76, 366 n.138, 395 n.18</citedRange>
-	           <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
+	           <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9" />
 	           <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref>
 	       </bibl>
 	   </listBibl>

@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -42,9 +39,9 @@
                 <idno type="filename">ISic000058</idno>
                 <idno type="TM">285298</idno>
                 <idno type="EDR">127523</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">22100119</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000058</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333934</idno>
                 <availability>
@@ -59,11 +56,11 @@
                         <settlement>Palermo</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
                         <idno type="inventory">3559</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -76,40 +73,40 @@
                                     <p>Three joining fragments of a marble plaque, intact left, right and above, but broken across the lower edge.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--ILTermini-->
+                                    <dimensions>
                                         <height unit="cm">15.5</height>
                                         <width unit="cm">33</width>
                                         <depth unit="cm">2.5-3</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <p>Three lines of Latin centred on the stone, with the name broken across lines 2-3 to maintain symmetry.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
+                                    <damage />
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <p>Deep v-cut letters, somewhat irregular, slab serifs and a broad module.</p><!-- measurements from ILTermini -->
+                                <p>Deep v-cut letters, somewhat irregular, slab serifs and a broad module.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25</height>
+                                    <height unit="mm" atLeast="25" atMost="25">25</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">23-27</height>
+                                    <height unit="mm" atLeast="23" atMost="27">23-27</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25-30</height>
+                                    <height unit="mm" atLeast="25" atMost="30">25-30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -125,23 +122,23 @@
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1867">Seen by Bormann in 1867 in collection of an antiquities dealer at Termini, sold in 1873 to Palermo museum with several others. Now in Palermo museum.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
+            <ns1:include href="../alists/ISicily-taxonomies.xml">
+                <ns1:fallback>
                     <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
+                </ns1:fallback>
+            </ns1:include>
+            <ns1:include href="../alists/charDecl.xml">
+                <ns1:fallback>
                     <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
+                </ns1:fallback>
+            </ns1:include>
         </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -185,23 +182,15 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic000058_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic000058.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1"/><w n="5"><expan><abbr>d</abbr><ex>is</ex></expan></w> <w n="10"><expan><abbr>m</abbr><ex>anibus</ex></expan></w>
-                    <lb n="2"/><name><w n="15"><expan><abbr>M</abbr><ex>arcus</ex></expan></w></name> <name><w n="20">Lollius</w></name> <name><w n="25">Myrti
-                    <lb n="3" break="no"/>lus</w></name> <g ref="#interpunct" n="30">·</g> <w n="35"><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct" n="40">·</g> <w n="45"><expan><abbr>a</abbr><ex>nnis</ex></expan></w> <g ref="#interpunct" n="50">·</g> <num value="50"><w n="55">L</w></num>
+                    <lb n="1" /><w n="5"><expan><abbr>d</abbr><ex>is</ex></expan></w> <w n="10"><expan><abbr>m</abbr><ex>anibus</ex></expan></w>
+                    <lb n="2" /><name><w n="15"><expan><abbr>M</abbr><ex>arcus</ex></expan></w></name> <name><w n="20">Lollius</w></name> <name><w n="25">Myrti
+                    <lb n="3" break="no" />lus</w></name> <g ref="#interpunct" n="30">&#183;</g> <w n="35"><expan><abbr>vix</abbr><ex>it</ex></expan></w> <g ref="#interpunct" n="40">&#183;</g> <w n="45"><expan><abbr>a</abbr><ex>nnis</ex></expan></w> <g ref="#interpunct" n="50">&#183;</g> <num value="50"><w n="55">L</w></num>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#VF">
@@ -227,7 +216,7 @@
                 <p>To the shades of the underworld. Marcus Lollius Myrtilus lived 50 years.</p>
             </div>
             <div type="commentary">
-                <p/>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -235,27 +224,27 @@
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650799">10.7417</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusPalermo">
                          <author>Bivona</author>
                          <date>1970</date> 
                         <citedRange>59</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6" />
                         <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>115</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
                     </bibl>
-                    <bibl/>
+                    <bibl />
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl/>
+                    <bibl />
                 </listBibl>
             </div>
         </body>

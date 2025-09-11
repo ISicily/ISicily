@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -38,9 +35,9 @@
                 <idno type="filename">ISic000118</idno>
                 <idno type="TM">285310</idno>
                 <idno type="EDR">127539</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">22100069</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000118</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334201</idno>
                 <availability>
@@ -55,11 +52,11 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">117</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -72,44 +69,44 @@
                                     <p>A block of conglomerate, broken across the lower right corner. A rectangular field is inset into the face (H 26 cm x W 34), in which the inscription is set, the frame only roughly finished. The exact depth and form of the rear is uncertain, as when observed by Bivona the block was fixed to a wall with cement.</p>
                                     <material ana="#material.stone.conglomerate" ref="http://www.eagle-network.eu/voc/material/lod/74.html">conglomerate</material>
                                     <objectType ana="object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
-                                    <dimensions><!--ILTermini-->
+                                    <dimensions>
                                         <height unit="cm">45</height>
                                         <width unit="cm">54</width>
                                         <depth unit="cm">22</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <p>Four lines of latin letters, filling the available space.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
+                                    <damage />
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--ILTermini-->
+                            <handNote>
                                 <p>The letters are somewhat irregular, and the uneven surface makes it impossible to distinguish any interpuncts.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">50</height>
+                                    <height unit="mm" atLeast="50" atMost="50">50</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">50-60</height>
+                                    <height unit="mm" atLeast="50" atMost="60">50-60</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">40-50</height>
+                                    <height unit="mm" atLeast="40" atMost="50">40-50</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30-40</height>
+                                    <height unit="mm" atLeast="30" atMost="40">30-40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -123,26 +120,26 @@
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0250" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">First seen by B. Romano shortly prior to 1829 in a garden 'nella pianura di Giancaniglia fuori la porta di Palermo' <geo>37.9871901,13.6867031</geo>, in use as a garden seat; subsequently hidden by the owner, but rediscovered in the later 19th cent.; transferred to the civic museum shortly before seen by Mommsen; seen by Bivona prior to 1994.</provenance><!-- representative point outside the Porta Palermo, area of ancient necropolis -->
+                        <provenance type="found" subtype="discovered">First seen by B. Romano shortly prior to 1829 in a garden 'nella pianura di Giancaniglia fuori la porta di Palermo' <geo>37.9871901,13.6867031</geo>, in use as a garden seat; subsequently hidden by the owner, but rediscovered in the later 19th cent.; transferred to the civic museum shortly before seen by Mommsen; seen by Bivona prior to 1994.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Not located during study in the museum 2022-2023.</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
+            <ns1:include href="../alists/ISicily-taxonomies.xml">
+                <ns1:fallback>
                     <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
+                </ns1:fallback>
+            </ns1:include>
+            <ns1:include href="../alists/charDecl.xml">
+                <ns1:fallback>
                     <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
+                </ns1:fallback>
+            </ns1:include>
         </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -188,10 +185,10 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000118_tiled.tif" height="3008px" width="3576px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; scanned from ILTermini</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; scanned from ILTermini</desc>
             </graphic>
             <graphic n="print" url="ISic000118.jpg" height="3008px" width="3576px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; scanned from ILTermini</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; scanned from ILTermini</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -199,10 +196,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1" xml:id="ALεAK"/><w xml:id="ALεAU" n="5"><expan xml:id="ALεAe"><abbr xml:id="ALεAo">d</abbr><ex xml:id="ALεAy">is</ex></expan></w> <w xml:id="ALεAΙ" n="10"><expan xml:id="ALεAΤ"><abbr xml:id="ALεAε">m</abbr><ex xml:id="ALεAο">anibus</ex></expan></w>
-                    <lb n="2" xml:id="ALεBA"/><persName type="attested" xml:id="ALεBK"><name><w n="15" xml:id="ALεBU"><expan xml:id="ALεBe"><abbr xml:id="ALεBo">P</abbr><ex xml:id="ALεBy">ublius</ex></expan></w></name> <name><w n="20" xml:id="ALεBΙ">Acellius</w></name>
-                    <lb n="3" xml:id="ALεBΤ"/><name><w n="25" xml:id="ALεBε">Eyporistus</w></name></persName>
-                    <lb n="4" xml:id="ALεBο"/><w xml:id="ALεCA" n="30"><expan xml:id="ALεCK"><abbr xml:id="ALεCU">vix</abbr><ex xml:id="ALεCe">it</ex></expan></w> <w xml:id="ALεCo" n="35"><expan xml:id="ALεCy"><abbr xml:id="ALεCΙ">an</abbr><ex xml:id="ALεCΤ">nis</ex></expan></w> <num value="70"><w n="40" xml:id="ALεCε">LXX</w></num>
+                    <lb n="1" xml:id="AL&#949;AK" /><w xml:id="AL&#949;AU" n="5"><expan xml:id="AL&#949;Ae"><abbr xml:id="AL&#949;Ao">d</abbr><ex xml:id="AL&#949;Ay">is</ex></expan></w> <w xml:id="AL&#949;A&#921;" n="10"><expan xml:id="AL&#949;A&#932;"><abbr xml:id="AL&#949;A&#949;">m</abbr><ex xml:id="AL&#949;A&#959;">anibus</ex></expan></w>
+                    <lb n="2" xml:id="AL&#949;BA" /><persName type="attested" xml:id="AL&#949;BK"><name><w n="15" xml:id="AL&#949;BU"><expan xml:id="AL&#949;Be"><abbr xml:id="AL&#949;Bo">P</abbr><ex xml:id="AL&#949;By">ublius</ex></expan></w></name> <name><w n="20" xml:id="AL&#949;B&#921;">Acellius</w></name>
+                    <lb n="3" xml:id="AL&#949;B&#932;" /><name><w n="25" xml:id="AL&#949;B&#949;">Eyporistus</w></name></persName>
+                    <lb n="4" xml:id="AL&#949;B&#959;" /><w xml:id="AL&#949;CA" n="30"><expan xml:id="AL&#949;CK"><abbr xml:id="AL&#949;CU">vix</abbr><ex xml:id="AL&#949;Ce">it</ex></expan></w> <w xml:id="AL&#949;Co" n="35"><expan xml:id="AL&#949;Cy"><abbr xml:id="AL&#949;C&#921;">an</abbr><ex xml:id="AL&#949;C&#932;">nis</ex></expan></w> <num value="70"><w n="40" xml:id="AL&#949;C&#949;">LXX</w></num>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#RC">
@@ -237,7 +234,7 @@
                 <p>To the Shades of the Underworld. Publius Acellius Eyporistus lived 70 years.</p>
             </div>
             <div type="commentary">
-                <p/>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -245,27 +242,27 @@
                         <author>Romano</author>
                         <date>1829</date>
                         <citedRange>296 no.3</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2UJS2UVS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2UJS2UVS" />
                         <ref target="https://biblio.inscriptiones.org/epig10002748">https://biblio.inscriptiones.org/epig10002748</ref>
                     </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">10.7368</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>37</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
                     </bibl>
-                    <bibl/>
+                    <bibl />
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl/>
+                    <bibl />
                 </listBibl>
             </div>
         </body>

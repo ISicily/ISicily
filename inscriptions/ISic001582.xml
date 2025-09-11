@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -31,8 +28,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001582</idno>
                 <idno type="TM">493919</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">41300094</idno>
                 <idno type="PHI">175719</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001582</idno>
@@ -49,11 +46,11 @@
                         <settlement>Palermo</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
                         <idno type="inventory">17054</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -65,18 +62,18 @@
                                 <support><p>Fragment of a marble plaque, of which part of the top edge is preserved, broken on all other sides.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--IGPalermo-->
+                                    <dimensions>
                                         <height unit="cm">11</height>
                                         <width unit="cm">12.1</width>
                                         <depth unit="cm">1.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -84,11 +81,11 @@
                             <handNote>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25-35</height><!-- IGPalermo -->
+                                    <height unit="mm" atLeast="25" atMost="35">25-35</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -104,23 +101,23 @@
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1888">Original discovery not recorded, acquired by Palermo museum 27 January 1888.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -162,34 +159,26 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic001582_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic001582.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/><supplied reason="lost"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></supplied> <expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan> <g ref="#ivy-leaf">❦</g>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΤΙΜΟ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2a"/><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1" /><supplied reason="lost"><expan><abbr>&#920;</abbr><ex>&#949;&#959;&#8150;&#962;</ex></expan></supplied> <expan><abbr>&#922;</abbr><ex>&#945;&#964;&#945;&#967;&#952;&#959;&#957;&#943;&#959;&#953;&#962;</ex></expan> <g ref="#ivy-leaf">&#10086;</g>
+                    <lb n="2" /><gap reason="lost" extent="unknown" unit="character" /><orig>&#932;&#921;&#924;&#927;</orig><gap reason="lost" extent="unknown" unit="character" />
+                    <lb n="2a" /><gap reason="lost" extent="unknown" unit="character" />
                 </ab>
             </div>
             <div type="apparatus">
                 <p>Text of IGPalermo</p>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag; Th.K. heading, v.little else.--></p>
+                <p>
+                    </p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -197,17 +186,17 @@
                          <author>Manni Piraino</author>
                          <date>1973</date> 
                         <citedRange>118</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M" />
                     <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
                    <bibl>
                         <author>Muscolino</author>
                         <date>2011-2012</date>
                         <citedRange>219 G3 fig.4</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/GJKY97S8"/>
+                        <ptr target="http://zotero.org/groups/382445/items/GJKY97S8" />
                         <ref target="https://biblio.inscriptiones.org/epig10002215">https://biblio.inscriptiones.org/epig10002215</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

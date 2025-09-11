@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -36,9 +33,9 @@
                 <idno type="filename">ISic000126</idno>
                 <idno type="TM">285264</idno>
                 <idno type="EDR">127480</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">22100076</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000126</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334223</idno>
                 <availability>
@@ -53,11 +50,11 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">105</idno>
-                        <!--Black 7PP on top. Red 16 on face.-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -75,12 +72,12 @@
                                         <depth unit="cm">8.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Four lines of Latin text. First two lines are roughly centred, but final two are right-aligned on stone leaving a large vacat on left.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -88,23 +85,23 @@
                             <handNote><p>Carving of letters is rough, getting rougher and more inconsistent. Text is angular and haphazard, more pronounced in line 4. Letter heights and depths are inconsistent. Use of serifs and the apex on the 'A' in line 4 is particularly pronounced. Triangular interpuncts of different shapes: lines 1-2, interpuncts are outline triangles, line 4, interpuncts are hollowed out.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">29-33</height>
+                                    <height unit="mm" atLeast="29" atMost="33">29-33</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">26-32</height>
+                                    <height unit="mm" atLeast="26" atMost="32">26-32</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">42-47</height>
+                                    <height unit="mm" atLeast="42" atMost="47">42-47</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">40-42</height>
+                                    <height unit="mm" atLeast="40" atMost="42">40-42</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -118,25 +115,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0050" evidence="lettering">Bivona attributed to C1 BCE on palaeographic grounds, but it could also be slightly later</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in Termini Imerese outside the porta di Caccamo (= Porta di Girgenti), in a burial ground.<geo>37.9834352,13.6923962</geo></provenance><!-- location of Porta Girgenti -->
+                        <provenance type="found" subtype="discovered">Found in Termini Imerese outside the porta di Caccamo (= Porta di Girgenti), in a burial ground.<geo>37.9834352,13.6923962</geo></provenance>
                         <provenance type="observed" subtype="autopsied" when="2023-07-05" resp="#AA">Antoniou, 2023-07-05. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 8, shelf 6.</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -181,18 +178,18 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000126_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-05.</desc>
             </graphic>
             <graphic n="print" url="ISic000126.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-05.</desc>
             </graphic>
          </surface>
         <surface type="front">
             <graphic n="screen" url="ISic000126_rear_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-05.</desc>
             </graphic>
             <graphic n="print" url="ISic000126_rear.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-05.</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -200,16 +197,16 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
-                    <lb n="1" xml:id="AMΙAK"/><persName type="attested" xml:id="AMΙAU"><name xml:id="AMΙAe"><expan xml:id="AMΙAo"><abbr xml:id="AMΙAy">P</abbr><ex xml:id="AMΙAΙ">ubli</ex></expan></name> <g ref="#interpunct" xml:id="AMΙAΤ">·</g> <name xml:id="AMΙAε">Alfesi</name> 
-                    <lb n="2" xml:id="AMΙAο"/><persName xml:id="AMΙBA"><name type="patronym" xml:id="AMΙBK"><expan xml:id="AMΙBU"><abbr xml:id="AMΙBe">P</abbr><ex xml:id="AMΙBo">ubli</ex></expan></name></persName> <g ref="#interpunct" xml:id="AMΙBy">·</g> <w xml:id="AMΙBΙ"><expan xml:id="AMΙBΤ"><abbr xml:id="AMΙBε">f</abbr><ex xml:id="AMΙBο">ili</ex></expan></w> <g ref="#interpunct" xml:id="AMΙCA">·</g> <name xml:id="AMΙCK">Salv<hi rend="tall" xml:id="AMΙCU">i</hi></name></persName> 
-                    <lb n="3" xml:id="AMΙCe"/><w xml:id="AMΙCo">have</w> 
-                    <lb n="4" xml:id="AMΙCy"/><w xml:id="AMΙCΙ"><expan xml:id="AMΙCΤ"><abbr xml:id="AMΙCε">v</abbr><ex xml:id="AMΙCο">ixit</ex></expan></w> <g ref="#interpunct" xml:id="AMΙDA">·</g> <w xml:id="AMΙDK"><expan xml:id="AMΙDU"><abbr xml:id="AMΙDe">a</abbr><ex xml:id="AMΙDo">nnis</ex></expan></w> <g ref="#interpunct" xml:id="AMΙDy">·</g> <num value="19" xml:id="AMΙDΙ">XIX</num>
+                    <lb n="1" xml:id="AM&#921;AK" /><persName type="attested" xml:id="AM&#921;AU"><name xml:id="AM&#921;Ae"><expan xml:id="AM&#921;Ao"><abbr xml:id="AM&#921;Ay">P</abbr><ex xml:id="AM&#921;A&#921;">ubli</ex></expan></name> <g ref="#interpunct" xml:id="AM&#921;A&#932;">&#183;</g> <name xml:id="AM&#921;A&#949;">Alfesi</name> 
+                    <lb n="2" xml:id="AM&#921;A&#959;" /><persName xml:id="AM&#921;BA"><name type="patronym" xml:id="AM&#921;BK"><expan xml:id="AM&#921;BU"><abbr xml:id="AM&#921;Be">P</abbr><ex xml:id="AM&#921;Bo">ubli</ex></expan></name></persName> <g ref="#interpunct" xml:id="AM&#921;By">&#183;</g> <w xml:id="AM&#921;B&#921;"><expan xml:id="AM&#921;B&#932;"><abbr xml:id="AM&#921;B&#949;">f</abbr><ex xml:id="AM&#921;B&#959;">ili</ex></expan></w> <g ref="#interpunct" xml:id="AM&#921;CA">&#183;</g> <name xml:id="AM&#921;CK">Salv<hi rend="tall" xml:id="AM&#921;CU">i</hi></name></persName> 
+                    <lb n="3" xml:id="AM&#921;Ce" /><w xml:id="AM&#921;Co">have</w> 
+                    <lb n="4" xml:id="AM&#921;Cy" /><w xml:id="AM&#921;C&#921;"><expan xml:id="AM&#921;C&#932;"><abbr xml:id="AM&#921;C&#949;">v</abbr><ex xml:id="AM&#921;C&#959;">ixit</ex></expan></w> <g ref="#interpunct" xml:id="AM&#921;DA">&#183;</g> <w xml:id="AM&#921;DK"><expan xml:id="AM&#921;DU"><abbr xml:id="AM&#921;De">a</abbr><ex xml:id="AM&#921;Do">nnis</ex></expan></w> <g ref="#interpunct" xml:id="AM&#921;Dy">&#183;</g> <num value="19" xml:id="AM&#921;D&#921;">XIX</num>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app><note>Text on basis of autopsy</note></app>
-                    <app loc="2"><note>Bivona: Salví (i.e. marks an apex, but the letter is merely tall).</note></app>
+                    <app loc="2"><note>Bivona: Salv&#237; (i.e. marks an apex, but the letter is merely tall).</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#TA #AA">
@@ -224,19 +221,19 @@
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650798">10.7375</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>45</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                     <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
                     </bibl>
-                    <bibl/>
+                    <bibl />
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

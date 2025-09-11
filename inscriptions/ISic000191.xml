@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -38,9 +35,9 @@
                 <idno type="filename">ISic000191</idno>
                 <idno type="TM">285223</idno>
                 <idno type="EDR">127386</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">22100118</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000191</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334492</idno>
                 <availability>
@@ -56,12 +53,12 @@
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
-                        <idno type="inventory">33</idno><!-- red 75 also on the stone -->
-                        <!--Adding location for old id numbers if available-->
+                        <idno type="inventory">33</idno>
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -80,13 +77,13 @@
                                         <depth unit="cm">2.8-3.3 (bottom to top)</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.fragment"/>
+                                <condition ana="#condition.fragment" />
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <p>Four lines of Latin letters, line 1 set far left, lines 2-4 indented with a consistent margin. Only 8mm is preserved below line 4, leaving it uncertain whether the text continued below or not. </p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage ana="#text_condition.incomplete"/>
+                                    <damage ana="#text_condition.incomplete" />
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
@@ -95,31 +92,31 @@
                                 <p>Neat v-cut letters of moderately wide module. P is open, O large, M with near vertical first and last strokes, full-length middle strokes.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">42</height>
+                                    <height unit="mm" atLeast="42" atMost="42">42</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">32-33</height>
+                                    <height unit="mm" atLeast="32" atMost="33">32-33</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">28-29</height>
+                                    <height unit="mm" atLeast="28" atMost="29">28-29</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25</height>
+                                    <height unit="mm" atLeast="25" atMost="25">25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">9-10</height>
+                                    <height unit="mm" atLeast="9" atMost="10">9-10</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">13-15</height>
+                                    <height unit="mm" atLeast="13" atMost="15">13-15</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Interlineation line 3 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">17</height>
+                                    <height unit="mm" atLeast="17" atMost="17">17</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -135,23 +132,23 @@
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1838">First recorded by Romano (1838), originally walled into the front of the 'Casa del Civico Magistrato' in Termini before being moved to the civic museum.</provenance>
                         <provenance type="observed" subtype="autopsied">Prag 2023-07-07, depositi of the Museo Civico, room 1, rack 3, shelf 2.</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
+            <ns1:include href="../alists/ISicily-taxonomies.xml">
+                <ns1:fallback>
                     <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
+                </ns1:fallback>
+            </ns1:include>
+            <ns1:include href="../alists/charDecl.xml">
+                <ns1:fallback>
                     <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
+                </ns1:fallback>
+            </ns1:include>
         </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -197,18 +194,18 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000191_tiled.tif" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07</desc>
             </graphic>
             <graphic n="print" url="ISic000191.jpg" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07</desc>
             </graphic>
         </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic000191_rear_tiled.tif" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07</desc>
             </graphic>
             <graphic n="print" url="ISic000191_rear.jpg" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-07</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-07</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -216,10 +213,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="ATKAK"/><persName type="attested"><name><w n="5" xml:id="ATKAU"><expan xml:id="ATKAe"><abbr xml:id="ATKAo">Cn</abbr><ex xml:id="ATKAy">aeus</ex></expan></w></name> <g ref="#interpunct" xml:id="ATKAΙ" n="10">·</g> <name><w part="I" n="15" xml:id="ATKAΤ">L</w></name><gap reason="lost" extent="unknown" unit="character" xml:id="ATKAε" n="20"/>
-                    <lb n="2" xml:id="ATKAο"/><name><w part="I" n="25" xml:id="ATKBA">Lici<unclear xml:id="ATKBK">n</unclear></w></name></persName><gap reason="lost" extent="unknown" unit="character" xml:id="ATKBU" n="30"/>
-                    <lb n="3" xml:id="ATKBe"/><name><w part="I" n="35" xml:id="ATKBo">Pom</w></name> <gap reason="lost" extent="unknown" unit="character" xml:id="ATKBy" n="40"/>
-                    <lb n="4" xml:id="ATKBΙ"/><w part="F" xml:id="ATKBΤ" n="45">mo</w> <gap reason="illegible" unit="character" quantity="1" xml:id="ATKBε" n="50"/> <gap reason="lost" extent="unknown" unit="character" xml:id="ATKBο" n="55"/>
+                    <lb n="1" xml:id="ATKAK" /><persName type="attested"><name><w n="5" xml:id="ATKAU"><expan xml:id="ATKAe"><abbr xml:id="ATKAo">Cn</abbr><ex xml:id="ATKAy">aeus</ex></expan></w></name> <g ref="#interpunct" xml:id="ATKA&#921;" n="10">&#183;</g> <name><w part="I" n="15" xml:id="ATKA&#932;">L</w></name><gap reason="lost" extent="unknown" unit="character" xml:id="ATKA&#949;" n="20" />
+                    <lb n="2" xml:id="ATKA&#959;" /><name><w part="I" n="25" xml:id="ATKBA">Lici<unclear xml:id="ATKBK">n</unclear></w></name></persName><gap reason="lost" extent="unknown" unit="character" xml:id="ATKBU" n="30" />
+                    <lb n="3" xml:id="ATKBe" /><name><w part="I" n="35" xml:id="ATKBo">Pom</w></name> <gap reason="lost" extent="unknown" unit="character" xml:id="ATKBy" n="40" />
+                    <lb n="4" xml:id="ATKB&#921;" /><w part="F" xml:id="ATKB&#932;" n="45">mo</w> <gap reason="illegible" unit="character" quantity="1" xml:id="ATKB&#949;" n="50" /> <gap reason="lost" extent="unknown" unit="character" xml:id="ATKB&#959;" n="55" />
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#VF">
@@ -247,10 +244,10 @@
                 </listApp>
             </div>
             <div type="translation">
-                <p/>
+                <p />
             </div>
             <div type="commentary">
-                <p/>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -258,27 +255,27 @@
                         <author>Romano</author>
                         <date>1838</date>
                         <citedRange>112 no.31</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/25ZN5T5X"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/25ZN5T5X" />
                         <ref target="https://biblio.inscriptiones.org/epig10001618">https://biblio.inscriptiones.org/epig10001618</ref>
                     </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7416</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>113</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                         <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
                     </bibl>
-                    <bibl/>
+                    <bibl />
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl/>
+                    <bibl />
                 </listBibl>
             </div>
         </body>

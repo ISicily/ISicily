@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -26,11 +23,11 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic004405</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="TM" />
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004405</idno>
                 <idno type="DOI" when="2020-12-21">10.5281/zenodo.4381912</idno>
                 <availability>
@@ -47,11 +44,11 @@
                         <settlement>Megara Hyblaea</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/104">Antiquarium di Megara Hyblaia</repository>
                         <idno type="inventory">MH C22</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -63,18 +60,18 @@
                                 <support><p>A small limestone altar, with mouldings top and bottom at the front and sides, smooth behind, and a depression in the upper surface.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar</objectType>
-                                    <dimensions><!-- all dimensions are based upon the scale drawing in Treziny 2018-->
+                                    <dimensions>
                                         <height unit="cm">4.5</height>
                                         <width unit="cm">7.5</width>
                                         <depth unit="cm">6.6</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Three lines of Greek letters are incised into the front face, occupying most of the space between the mouldings, with a more or less consistent left margin and an uneven right margin</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -82,15 +79,15 @@
                             <handNote><p>The letters are somewhat unevenly incised. Horizontals on alpha and eta often slope down to the left; epsilon is lunate; theta is roughly circulate with a detached horizontal bar in the centre; mu is unevenly incised, with a middle stroke which does not descend all the way.</p>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">3-7</height>
+                                    <height unit="mm" atLeast="3" atMost="7">3-7</height>
                                 </dimensions>
                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">2-4</height>
+                                    <height unit="mm" atLeast="2" atMost="4">2-4</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">0-2</height>
+                                    <height unit="mm" atLeast="0" atMost="2">0-2</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -102,27 +99,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/8063661">Megara Iblea</placeName>
                             	<geo>37.20380, 15.18274</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" evidence="lettering" precision="low">2nd — 1st century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" evidence="lettering" precision="low">2nd &#8212; 1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1968">Found after the original publication of the Hellenistic temple north of the agora, in excavation of 1968 of the area of the archaic building 'k' (Megara 1), c.20 m north-east of the Hellenistic temple, in re-use in a late wall<geo>37.204466, 15.181895</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -164,10 +161,10 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic004405_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
             <graphic n="print" url="ISic004405.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
          </surface>
     </facsimile>
@@ -175,32 +172,32 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                   <ab>
-                      <lb n="1"/>Μη<gap reason="illegible" unit="character" quantity="1"/>τριου
-                      <lb n="2"/>ἀνάθεμα
-                      <lb n="3"/>Ἀφροδίτη
+                      <lb n="1" />&#924;&#951;<gap reason="illegible" unit="character" quantity="1" />&#964;&#961;&#953;&#959;&#965;
+                      <lb n="2" />&#7936;&#957;&#940;&#952;&#949;&#956;&#945;
+                      <lb n="3" />&#7944;&#966;&#961;&#959;&#948;&#943;&#964;&#951;
                  </ab>
                 </div>
                <div type="apparatus">
                 <listApp>
-                    <app><note>Text of Tréziny 2018</note></app>
+                    <app><note>Text of Tr&#233;ziny 2018</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Dedication of (?) to Aphrodite</p>
             </div>
             <div type="commentary" resp="#JP">
-                <p>The first line is not entirely clear in (the publication provides a drawing only, no photograph). The curved trace after 'eta' is compatible with a lunate sigma (compare small lunate epsilon in line 2). Based upon searches of LGPN, the female name Μηστρία is attested once from Messene in Greece in the imperial period; the male name Μέστριος is attested 7 times in the region of Macedonia, Thrace and the Black Sea; the male name Μήστωρ is more common, attested already in Homer, and in Sicily at Selinus in the Archaic period (IGDS II.26) (see the extensive discussion of the name by P. Bernard in <ref target="https://doi.org/10.3406/jds.2002.1656">Bernard Paul, Bopearachchi Osmund. Deux bracelets grecs avec inscriptions grecques trouvés dans l'Asie centrale hellénisée. In: Journal des savants, 2002, n°2. pp. 237-278</ref>, at 251-254. Μηστριος is presumably therefore the most likely reading.</p>
+                <p>The first line is not entirely clear in (the publication provides a drawing only, no photograph). The curved trace after 'eta' is compatible with a lunate sigma (compare small lunate epsilon in line 2). Based upon searches of LGPN, the female name &#924;&#951;&#963;&#964;&#961;&#943;&#945; is attested once from Messene in Greece in the imperial period; the male name &#924;&#941;&#963;&#964;&#961;&#953;&#959;&#962; is attested 7 times in the region of Macedonia, Thrace and the Black Sea; the male name &#924;&#942;&#963;&#964;&#969;&#961; is more common, attested already in Homer, and in Sicily at Selinus in the Archaic period (IGDS II.26) (see the extensive discussion of the name by P. Bernard in <ref target="https://doi.org/10.3406/jds.2002.1656">Bernard Paul, Bopearachchi Osmund. Deux bracelets grecs avec inscriptions grecques trouv&#233;s dans l'Asie centrale hell&#233;nis&#233;e. In: Journal des savants, 2002, n&#176;2. pp. 237-278</ref>, at 251-254. &#924;&#951;&#963;&#964;&#961;&#953;&#959;&#962; is presumably therefore the most likely reading.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                       <bibl>
-                        <author>Tréziny</author>
+                        <author>Tr&#233;ziny</author>
                         <date>2018</date>
                         <citedRange>206 with fig. 311 (dr)</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/5UHWUE4K"/>
+                        <ptr target="http://zotero.org/groups/382445/items/5UHWUE4K" />
                     <ref target="https://biblio.inscriptiones.org/epig10002599">https://biblio.inscriptiones.org/epig10002599</ref></bibl>                    
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

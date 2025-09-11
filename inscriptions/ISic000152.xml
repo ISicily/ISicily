@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -36,9 +33,9 @@
                 <idno type="filename">ISic000152</idno>
                 <idno type="TM">285241</idno>
                 <idno type="EDR">111048</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">10900647</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000152</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334342</idno>
                 <availability>
@@ -53,11 +50,11 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">55</idno>
-                        <!--Red 58 on face. Inv 55 on l. side.-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -75,12 +72,12 @@
                                         <depth unit="cm">4</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Three lines of fragmentary Latin text (a fourth line is possible, but the break obscures this; the epigraphic formula suggests three lines only). There is a large vacat on the left side of all text.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -88,19 +85,19 @@
                             <handNote><p>The text is irregularly and shakily carved. Letter height and width differ even on the same line, and the T on line 2 is significantly taller than other letters. Simple serifs used. The vertical bar for the 'R' in line 2 is bisected by a long horizontal foot. At the end of line 2, the top of a serifed downstroke is just visible after the T.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">63-69</height>
+                                    <height unit="mm" atLeast="63" atMost="69">63-69</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">49-50</height>
+                                    <height unit="mm" atLeast="49" atMost="50">49-50</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">34</height>
+                                    <height unit="mm" atLeast="34" atMost="34">34</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -114,25 +111,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1889">Found in excavations in the garden of the Convento dei Cappuccini, in Termini Imerese, in 1889, during the construction of new buildings, together with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000185">ISic000185</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000226">ISic000226</ref>.<geo>37.982433, 13.695378</geo></provenance><!-- representative point location of the convent -->
+                        <provenance type="found" subtype="discovered" when="1889">Found in excavations in the garden of the Convento dei Cappuccini, in Termini Imerese, in 1889, during the construction of new buildings, together with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000185">ISic000185</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000226">ISic000226</ref>.<geo>37.982433, 13.695378</geo></provenance>
                         <provenance type="observed" subtype="autopsied" when="2023-07-04" resp="#AA">Antoniou, 2023-07-04. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 7, shelf 1.</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -177,18 +174,18 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000152_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-04.</desc>
             </graphic>
             <graphic n="print" url="ISic000152.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-04.</desc>
             </graphic>
          </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic000152_rear_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-04.</desc>
             </graphic>
             <graphic n="print" url="ISic000152_rear.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04.</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-04.</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -196,9 +193,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #AA">
                 <ab>
-                    <lb n="1" xml:id="APUAK"/><persName type="attested" xml:id="APUAU"><name xml:id="APUAe">Claud<gap reason="lost" extent="unknown" unit="character" xml:id="APUAo"/></name> 
-                    <lb n="2" xml:id="APUAy"/><name xml:id="APUAΙ">Fort<unclear xml:id="APUAΤ">u</unclear><gap reason="lost" extent="unknown" unit="character" xml:id="APUAε"/></name></persName> 
-                    <lb n="3" xml:id="APUAο"/><w xml:id="APUBA"><expan xml:id="APUBK"><abbr xml:id="APUBU">vix</abbr><ex xml:id="APUBe">it</ex></expan></w> <w xml:id="APUBo"><supplied reason="lost" xml:id="APUBy"><expan xml:id="APUBΙ"><abbr xml:id="APUBΤ">an</abbr><ex xml:id="APUBε">nis</ex></expan></supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="APUBο"/>
+                    <lb n="1" xml:id="APUAK" /><persName type="attested" xml:id="APUAU"><name xml:id="APUAe">Claud<gap reason="lost" extent="unknown" unit="character" xml:id="APUAo" /></name> 
+                    <lb n="2" xml:id="APUAy" /><name xml:id="APUA&#921;">Fort<unclear xml:id="APUA&#932;">u</unclear><gap reason="lost" extent="unknown" unit="character" xml:id="APUA&#949;" /></name></persName> 
+                    <lb n="3" xml:id="APUA&#959;" /><w xml:id="APUBA"><expan xml:id="APUBK"><abbr xml:id="APUBU">vix</abbr><ex xml:id="APUBe">it</ex></expan></w> <w xml:id="APUBo"><supplied reason="lost" xml:id="APUBy"><expan xml:id="APUB&#921;"><abbr xml:id="APUB&#932;">an</abbr><ex xml:id="APUB&#949;">nis</ex></expan></supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="APUB&#959;" />
                 </ab>
             </div>
             <div type="apparatus">
@@ -218,21 +215,21 @@
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>71</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                     <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Fiorelli</author>
                         <title>NSA</title>
                         <date>1889</date>
                         <citedRange>139</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                     <bibl type="bulletin" n="EphEp">
                         <citedRange>VIII 703</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3" />
                     <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

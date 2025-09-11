@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -31,10 +28,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic000536</idno>
                 <idno type="TM">491759</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">22000846</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000536</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4384886</idno>
                 <availability>
@@ -43,17 +40,17 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Trapani</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/105">Museo Regionale Agostino Pepoli</repository>
                         <idno type="inventory">7922</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -65,30 +62,30 @@
                                 <support><p>Fragment of a marble plaque, broken left and right; unclear whether intact or broken above and below.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble (white)</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Oliveri-->
+                                    <dimensions>
                                         <height unit="cm">11.1</height>
                                         <width unit="cm">8</width>
                                         <depth unit="cm">1.8</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.fragment"/>
+                                <condition ana="#condition.fragment" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Two widely separated lines of monumental letters, possibly with guidelines.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
+                                	<damage ana="#text_condition.incomplete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Monumenal v-cut letters with serifs, fairly wide module/spacing</p><!--Oliveri-->
+                            <handNote><p>Monumenal v-cut letters with serifs, fairly wide module/spacing</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">20-25</height>
+                                    <height unit="mm" atLeast="20" atMost="25">20-25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">30</height>
+                                    <height unit="mm" atLeast="30" atMost="30">30</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -104,23 +101,23 @@
                         </origin>
                         <provenance type="found">Original discovery not recorded</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -161,33 +158,25 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic000536_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic000536.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>A</unclear>GNA<unclear>I</unclear></orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F"><unclear>a</unclear>na</w> <g ref="#interpunct">·</g> <abbr>L</abbr> <g ref="#interpunct">·</g> <w part="I">M</w><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><orig><unclear>A</unclear>GNA<unclear>I</unclear></orig><gap reason="lost" extent="unknown" unit="character" />
+                    <lb n="2" /><gap reason="lost" extent="unknown" unit="character" /><w part="F"><unclear>a</unclear>na</w> <g ref="#interpunct">&#183;</g> <abbr>L</abbr> <g ref="#interpunct">&#183;</g> <w part="I">M</w><gap reason="lost" extent="unknown" unit="character" />
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp><app><note>Text of CIL</note></app></listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--fragment only--></p>
+                <p>
+                    </p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -195,16 +184,16 @@
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7256</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl>
                         <author>Oliveri</author>
                         <date>2009</date>
                         <citedRange>392 no.6 ph</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/539T7KIS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/539T7KIS" />
                     <ref target="https://biblio.inscriptiones.org/epig10001723">https://biblio.inscriptiones.org/epig10001723</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

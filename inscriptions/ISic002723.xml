@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,9 +24,9 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic002723</idno>
                 <idno type="TM">645143</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
                 <idno type="PHI">178082</idno>
                 <idno type="PHI">333153</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002723</idno>
@@ -46,11 +43,11 @@
                         <settlement>Gela</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/010">Museo Archeologico Regionale di Gela</repository>
                         <idno type="inventory">38324</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -62,18 +59,18 @@
                                 <support><p>Irregular sandstone stele, recomposed from multiple fragments, damaged on the left</p>
                                     <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
                                     <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
-                                    <dimensions><!--Brugnone-->
+                                    <dimensions>
                                         <height unit="cm">85</height>
                                         <width unit="cm">35</width>
                                         <depth unit="cm">7-8.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.fragments.contiguous"/>
+                                <condition ana="#condition.fragments.contiguous" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Large irregular text over three lines</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
+                                	<damage ana="#text_condition.incomplete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -81,11 +78,11 @@
                             <handNote><p>Delta and Alpha tending to cursive; lunate sigma.</p>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">35-90</height>
+                                    <height unit="mm" atLeast="35" atMost="90">35-90</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -101,25 +98,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" evidence="archaeological-context">4th century CE, in re-use in the bath building</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" notBefore="1954" notAfter="1961">Found in excavations of 1954 / 1961, in re-use as a cover in the praefurnium in room IV of the bath complex<geo>37.3188801,14.2944693</geo></provenance><!-- location of the baths complex -->
+                        <provenance type="found" subtype="discovered" notBefore="1954" notAfter="1961">Found in excavations of 1954 / 1961, in re-use as a cover in the praefurnium in room IV of the bath complex<geo>37.3188801,14.2944693</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -158,29 +155,21 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic002723_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic002723.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name><supplied reason="lost">Ἰ</supplied>ούδας</name></persName>
-                    <lb n="2"/>σαβαν
-                    <lb n="3" break="no"/>ᾶς
+                    <lb n="1" /><persName type="attested"><name><supplied reason="lost">&#7992;</supplied>&#959;&#973;&#948;&#945;&#962;</name></persName>
+                    <lb n="2" />&#963;&#945;&#946;&#945;&#957;
+                    <lb n="3" break="no" />&#8118;&#962;
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app><note>Text of Brugnone</note></app>
-                    <app loc="2-3"><note>Bonomi: alternatively Σαβα&lt;τ&gt;ίας</note></app>
+                    <app loc="2-3"><note>Bonomi: alternatively &#931;&#945;&#946;&#945;&lt;&#964;&gt;&#943;&#945;&#962;</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
@@ -193,38 +182,38 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>52.0908</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>45.1354</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Bonomi</author>
                         <date>1964</date>
                         <citedRange>179 fig. 9 and 207</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/BBEDUUG3"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/BBEDUUG3" />
                     <ref target="https://biblio.inscriptiones.org/epig10002127">https://biblio.inscriptiones.org/epig10002127</ref></bibl>
                     <bibl>
                         <author>Curbera</author>
                         <date>1995</date>
                         <citedRange>101 no.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/WQJVJTCR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/WQJVJTCR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001488">https://biblio.inscriptiones.org/epig10001488</ref></bibl>
                     <bibl>
                         <author>Noy</author>
                         <date>1993</date>
                         <citedRange>no.158</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/IBA4JMAN"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/IBA4JMAN" />
                     <ref target="https://biblio.inscriptiones.org/epig10000166">https://biblio.inscriptiones.org/epig10000166</ref></bibl>
                     <bibl>
                         <author>Brugnone</author>
                         <date>2002</date>
                         <citedRange>298 no.4 fig.5</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/I6XXZEB6"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/I6XXZEB6" />
                     <ref target="https://biblio.inscriptiones.org/epig10002118">https://biblio.inscriptiones.org/epig10002118</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

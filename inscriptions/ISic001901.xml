@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -22,12 +19,12 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001901</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
+                <idno type="TM" />
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
                 <idno type="PHI">336176</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001901</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
@@ -41,11 +38,11 @@
                         <settlement>Aidone</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/001">Museo Archeologico di Aidone</repository>
                         <idno type="inventory">63-1103</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -57,18 +54,18 @@
                                 <support><p>A wedge-shaped die carved from yellowish fine-grained limestone, decorated on the short and long sides, a palm branch on the short side, a Latin inscription on the long side. Partially damaged upper right corner.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.stamp" ref="https://www.eagle-network.eu/voc/objtyp/lod/122.html">stamp</objectType>
-                                    <dimensions><!--Walthall-->
+                                    <dimensions>
                                         <height unit="cm">9.96</height>
                                         <width unit="cm">2.28-7.33</width>
                                         <depth unit="cm">4.31</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.damaged"/>
+                                <condition ana="#condition.damaged" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Text is retrograde filling the long face of the stamp</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
+                                	<damage ana="#text_condition.complete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -76,11 +73,11 @@
                             <handNote><p>Neatly incised letters of slightly varying height and use of ligatures with short vertical interpuncts. Slight curvature to the strokes and tails rather than serifs.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">21-28</height>
+                                    <height unit="mm" atLeast="21" atMost="28">21-28</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -96,23 +93,23 @@
                         </origin>
                         <provenance type="found" subtype="discovered" when="1963">Found during exxcavation of the House of the Arched Cistern in 1963, ldoged against interior face of western wall of room 26 (off the northern peristyle court). House occupied between early 3rd cent. BCE and mid-1st cent. CE.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -145,27 +142,19 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic001901_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic001901.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP" source="https://www.zotero.org/groups/382445/items/SD56763J">
                 <ab>
-                    <lb n="1" style="text-direction:r-to-l"/><persName><name><w part="I"><expan><abbr>Q</abbr><ex>uint</ex></expan></w></name> <g ref="#interpunct">·</g> <name><w part="I"><expan><abbr><hi rend="ligature">Ant</hi>o</abbr><ex>ni</ex></expan></w></name> <g ref="#interpunct">·</g> <name><w part="I"><expan><abbr><hi rend="ligature">Aq</hi></abbr><ex>u</ex></expan></w></name></persName>
+                    <lb n="1" style="text-direction:r-to-l" /><persName><name><w part="I"><expan><abbr>Q</abbr><ex>uint</ex></expan></w></name> <g ref="#interpunct">&#183;</g> <name><w part="I"><expan><abbr><hi rend="ligature">Ant</hi>o</abbr><ex>ni</ex></expan></w></name> <g ref="#interpunct">&#183;</g> <name><w part="I"><expan><abbr><hi rend="ligature">Aq</hi></abbr><ex>u</ex></expan></w></name></persName>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Manganaro 1999: [(?)τ]ο͂ · ναο͂ · Ἀθ[αναίας(?)]</note>
+                        <note>Manganaro 1999: [(?)&#964;]&#959;&#834; &#183; &#957;&#945;&#959;&#834; &#183; &#7944;&#952;[&#945;&#957;&#945;&#8055;&#945;&#962;(?)]</note>
                     </app>
                 </listApp>
             </div>
@@ -179,22 +168,22 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>49.1317.3</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1999</date>
                         <citedRange>47 no.37 fig.112</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GRB3IPD5"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GRB3IPD5" />
                     <ref target="https://biblio.inscriptiones.org/epig10001813">https://biblio.inscriptiones.org/epig10001813</ref></bibl>
                     <bibl>
                         <author>Walthall, Korhonen</author>
                         <date>2024</date>
                         <citedRange>309-311</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/SD56763J"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SD56763J" />
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

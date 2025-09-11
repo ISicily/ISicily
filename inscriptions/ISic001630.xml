@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,10 +24,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001630</idno>
                 <idno type="TM">645081</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001630</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4386236</idno>
                 <availability>
@@ -43,13 +40,13 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <repository />
+                        
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -61,18 +58,18 @@
                                 <support><p>Marble plaque, apparently damaged on the lower left and right edges, but otherwise intact</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Libertini-->
+                                    <dimensions>
                                         <height unit="cm">21.5</height>
                                         <width unit="cm">18.5</width>
-                                        <depth unit="cm"/>
+                                        <depth unit="cm" />
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -80,11 +77,11 @@
                             <handNote>
                                 <locus from="line1" to="line7">Line 1-7</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">25</height><!-- Libertini -->
+                                    <height unit="mm" atLeast="25" atMost="25">25</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -96,28 +93,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" cert="low" precision="low">4th — 5th century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" cert="low" precision="low">4th &#8212; 5th century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" notAfter="1931">Found in prop. Cesareo, in via Ughetti (adjoining via Androne, part of the same necropolis as via dott. Consoli) in the period between 1928 and 1931; seen by Agnello in the Castello Ursino civic museum prior to 1953, but not identified since.<geo>37.509298, 15.080621</geo></provenance><!-- representative geo on via Ughetti-->
+                        <provenance type="found" subtype="discovered" notAfter="1931">Found in prop. Cesareo, in via Ughetti (adjoining via Androne, part of the same necropolis as via dott. Consoli) in the period between 1928 and 1931; seen by Agnello in the Castello Ursino civic museum prior to 1953, but not identified since.<geo>37.509298, 15.080621</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Lost?</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -157,43 +154,35 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic001630_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic001630.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><supplied reason="lost">ἐ</supplied>νθάδε κεῖτε
-                    <lb n="2"/><persName type="attested"><name>Κυριακὸς</name></persName> ζήσας
-                    <lb n="3"/><supplied reason="lost">ε</supplied>̓́τη <num value="23">εἴκοσει τρ<supplied reason="lost">ία</supplied></num>
-                    <lb n="4"/><supplied reason="lost">ἀ</supplied>μέμπτως ζ<supplied reason="lost">ή</supplied>
-                    <lb n="5" break="no"/><supplied reason="lost">σα</supplied>ς τὸν βίον ἐπ<supplied reason="lost">λ</supplied>
-                    <lb n="6" break="no"/><supplied reason="lost">ή</supplied>ρωσεν τῇ π<supplied reason="lost">ρὸ</supplied>
-                    <lb n="7"/><num value="5">ε</num> καλανδ<supplied reason="lost">ῶν</supplied> <gap reason="illegible" unit="character" extent="unknown"><desc>name of month</desc></gap>
+                    <lb n="1" /><supplied reason="lost">&#7952;</supplied>&#957;&#952;&#940;&#948;&#949; &#954;&#949;&#8150;&#964;&#949;
+                    <lb n="2" /><persName type="attested"><name>&#922;&#965;&#961;&#953;&#945;&#954;&#8056;&#962;</name></persName> &#950;&#942;&#963;&#945;&#962;
+                    <lb n="3" /><supplied reason="lost">&#949;</supplied>&#787;&#769;&#964;&#951; <num value="23">&#949;&#953;&#787;&#769;&#954;&#959;&#963;&#949;&#953; &#964;&#961;<supplied reason="lost">&#943;&#945;</supplied></num>
+                    <lb n="4" /><supplied reason="lost">&#7936;</supplied>&#956;&#941;&#956;&#960;&#964;&#969;&#962; &#950;<supplied reason="lost">&#942;</supplied>
+                    <lb n="5" break="no" /><supplied reason="lost">&#963;&#945;</supplied>&#962; &#964;&#8056;&#957; &#946;&#943;&#959;&#957; &#7952;&#960;<supplied reason="lost">&#955;</supplied>
+                    <lb n="6" break="no" /><supplied reason="lost">&#942;</supplied>&#961;&#969;&#963;&#949;&#957; &#964;&#8134;&#837; &#960;<supplied reason="lost">&#961;&#8056;</supplied>
+                    <lb n="7" /><num value="5">&#949;</num> &#954;&#945;&#955;&#945;&#957;&#948;<supplied reason="lost">&#8182;&#957;</supplied> <gap reason="illegible" unit="character" extent="unknown"><desc>name of month</desc></gap>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
                     <app><note>Text of Agnello</note></app>
-                    <app loc="1"><note>Libertini: ἐνθάδε κῆτε</note></app>
-                    <app loc="3"><note>Libertini: ἔτη εἴκοσει τρία</note></app>
-                    <app loc="4"><note>ἀμέμπτως ζή</note></app>
-                    <app loc="7"><note>Libertini: ε καλανδῶν. ; Agnello comments that the month name is written in very small letters at the end, but is not legible</note></app>
+                    <app loc="1"><note>Libertini: &#7952;&#957;&#952;&#940;&#948;&#949; &#954;&#8134;&#964;&#949;</note></app>
+                    <app loc="3"><note>Libertini: &#949;&#787;&#769;&#964;&#951; &#949;&#953;&#787;&#769;&#954;&#959;&#963;&#949;&#953; &#964;&#961;&#943;&#945;</note></app>
+                    <app loc="4"><note>&#7936;&#956;&#941;&#956;&#960;&#964;&#969;&#962; &#950;&#942;</note></app>
+                    <app loc="7"><note>Libertini: &#949; &#954;&#945;&#955;&#945;&#957;&#948;&#8182;&#957;. ; Agnello comments that the month name is written in very small letters at the end, but is not legible</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Here lies Kyriakos, having lived 23 years. Having lived blamelessly, he fulfilled his life on the 5th day before the Kalends of [---]</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -201,16 +190,16 @@
                         <author>Agnello</author>
                         <date>1953</date>
                         <citedRange>no.62</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR" />
                     <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref></bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1931</date>
                         <citedRange>44 no.8</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/T67M4XMU"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/T67M4XMU" />
                     <ref target="https://biblio.inscriptiones.org/epig10001870">https://biblio.inscriptiones.org/epig10001870</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

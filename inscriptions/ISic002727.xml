@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -28,7 +25,7 @@
                 <idno type="filename">ISic002727</idno>
                 <idno type="TM">645147</idno>
                 <idno type="EDR">136553</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">64400329</idno>
                 <idno type="PHI">333214</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002727</idno>
@@ -45,11 +42,11 @@
                         <settlement>Segesta</settlement>
                         <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/196">Parco archeologico di Segesta</repository>
                         <idno type="inventory">SG6496</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -62,18 +59,18 @@
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
-                                        <!--I.Segesta-->
+                                        
                                         <height unit="cm">30.5</height>
                                         <width unit="cm">35.5</width>
                                         <depth unit="cm">14</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.complete"/>
+                                <condition ana="#condition.complete" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Text is set out over three lines, the first two left justified, the third crudely centred, with a vacat both above and below.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
+                                	<damage ana="#text_condition.complete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -81,11 +78,11 @@
                             <handNote><p>The letters are incised somewhat crudely, more in the style of scratched than formally engraved letters, but of roughly equal size throughout. Lunate epsilon and sigma, uncial omega, mu tending towards cursive.</p>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">17-22</height><!-- ISegesta -->
+                                    <height unit="mm" atLeast="17" atMost="22">17-22</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2 </locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -99,25 +96,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="-0001" evidence="lettering">1st century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1993">Found in secondary deposition in SAS 3, in re-use in a layer no later than the second half of the C12 CE, part of the mediaeval structures on the upper terrace of the agora.<geo>37.9395302,12.8394721</geo></provenance><!-- findspot, located using Googlemaps, after ISegesta fig.138 -->
+                        <provenance type="found" subtype="discovered" when="1993">Found in secondary deposition in SAS 3, in re-use in a layer no later than the second half of the C12 CE, part of the mediaeval structures on the upper terrace of the agora.<geo>37.9395302,12.8394721</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -159,29 +156,21 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic002727_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic002727.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP" source="http://zotero.org/groups/382445/items/3PK3JKXR">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name>Ἡράκλειος</name> <name>Διονυσίου</name>
-                    <lb n="2"/><name type="demotic">Πετρεῖνος</name></persName> <roleName type="civic" subtype="agoranomos">ἀγορανομέων</roleName>
-                    <lb n="3"/>ἐκ τῶν ἰδίων
+                    <lb n="1" /><persName type="attested"><name>&#7977;&#961;&#940;&#954;&#955;&#949;&#953;&#959;&#962;</name> <name>&#916;&#953;&#959;&#957;&#965;&#963;&#943;&#959;&#965;</name>
+                    <lb n="2" /><name type="demotic">&#928;&#949;&#964;&#961;&#949;&#8150;&#957;&#959;&#962;</name></persName> <roleName type="civic" subtype="agoranomos">&#7936;&#947;&#959;&#961;&#945;&#957;&#959;&#956;&#941;&#969;&#957;</roleName>
+                    <lb n="3" />&#7952;&#954; &#964;&#8182;&#957; &#7984;&#948;&#943;&#969;&#957;
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
                     <app><note>Text of ISegesta</note></app>
-                    <app loc="3"><note>The final Ν is underdotted in I.Segesta, but it is unclear why, as the text is completely clear in the photograph.</note></app>
+                    <app loc="3"><note>The final &#925; is underdotted in I.Segesta, but it is unclear why, as the text is completely clear in the photograph.</note></app>
                 </listApp>
             </div>
             <div type="translation" resp="#JP" xml:lang="en">
@@ -197,45 +186,45 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>45.1392</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl type="corpus" n="IGDS2">
                          <author>Dubois</author>
                          <date>2008</date> 
                         <citedRange>86</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/SM2KDHZC"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SM2KDHZC" />
                     <ref target="https://biblio.inscriptiones.org/epig10000160">https://biblio.inscriptiones.org/epig10000160</ref></bibl>
                     <bibl>
                         <author>Nenci</author>
                         <date>1995</date>
                         <citedRange>1182 no.1 tav.267.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/WHBJDH75"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/WHBJDH75" />
                     <ref target="https://biblio.inscriptiones.org/epig10001415">https://biblio.inscriptiones.org/epig10001415</ref></bibl>
                     <bibl>
                         <author>Nenci</author>
                         <date>1997</date>
                         <citedRange>1191 tav.CCXXXIV.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4FSSHE62"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4FSSHE62" />
                     <ref target="https://biblio.inscriptiones.org/epig10001729">https://biblio.inscriptiones.org/epig10001729</ref></bibl>
                     <bibl><author>Giustolisi</author>
                         <date>1999</date>
                         <citedRange>135 ph dr</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/GGJ4H43M"/>
+                        <ptr target="http://zotero.org/groups/382445/items/GGJ4H43M" />
                     <ref target="https://biblio.inscriptiones.org/epig10001944">https://biblio.inscriptiones.org/epig10001944</ref></bibl>
                     <bibl>
                         <author>De Vido</author>
                         <date>2003</date>
                         <citedRange>400 no.11</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/33HPA43I"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/33HPA43I" />
                     <ref target="https://biblio.inscriptiones.org/epig10002041">https://biblio.inscriptiones.org/epig10002041</ref></bibl>
                     <bibl>
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>G17</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR"/>
+                        <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

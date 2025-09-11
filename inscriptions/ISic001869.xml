@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -22,11 +19,11 @@
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001869</idno>
-                <idno type="TM"/>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="TM" />
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001869</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
@@ -40,11 +37,11 @@
                         <settlement>Siracusa</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">16474</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -56,30 +53,30 @@
                                 <support><p>Described as a rough block of "calcare" in the museum inventory, as 'un blocco sformato di arenaria' in Orsi 1899, and so presumably a coarse local limestone. The inventory notes that it was sawn down for transportation, and was thicker before it was transported to the museum (it is unclear therefore whether the measurement of thickness/depth reported in Orsi's publication is pre- or post-transportation, since the block has so far not been relocated. The inventory does not record the thickness. It appears from the sketch in the inventory that the stone was damaged on the left side, and upper right corner.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
-                                    <dimensions><!--Orsi 1899-->
+                                    <dimensions>
                                         <height unit="cm">36</height>
                                         <width unit="cm">69</width>
                                         <depth unit="cm">33</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Three lines of Greek letters, seemingly not centered / regularly laid out.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Described by Orsi (1896) as 'scritto a pessimi caratteri', and (1899) as 'lettere cattive, rustiche cosi che a tutta prima sembrano archaiche, e molto sconservate... L'iscrizione negligentemente redatta e scolpita è funebre di tarda età'. Pace states 'lettere del III sec. av. Cr.', but given the presence of lunate epsilon and Orsi's comments, a later date seems much more likely.</p>
+                            <handNote><p>Described by Orsi (1896) as 'scritto a pessimi caratteri', and (1899) as 'lettere cattive, rustiche cosi che a tutta prima sembrano archaiche, e molto sconservate... L'iscrizione negligentemente redatta e scolpita &#232; funebre di tarda et&#224;'. Pace states 'lettere del III sec. av. Cr.', but given the presence of lunate epsilon and Orsi's comments, a later date seems much more likely.</p>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">55-95</height><!-- Orsi -->
+                                    <height unit="mm" atLeast="55" atMost="95">55-95</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -93,25 +90,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0400" evidence="lettering">Suggested to be of later Roman date by Orsi on the basis of lettering etc.</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1896">A chance find during the excavations of 1896 by a farmer, found in the water at the mouth of the Hipparis (Forgia).<geo>36.8759983,14.4377781</geo></provenance><!-- mouth of the Forgia/Hipparis -->
+                        <provenance type="found" subtype="discovered" when="1896">A chance find during the excavations of 1896 by a farmer, found in the water at the mouth of the Hipparis (Forgia).<geo>36.8759983,14.4377781</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None; the stone has not so far been located in the Siracusa museum (now in Camarina?)</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -144,38 +141,30 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic001075_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic001075.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name>Ἀρτεμο<unclear>ι</unclear></name>
-                    <lb n="2"/><persName type="attested"><name type="patronym">Ἀρτεμιδό
-                    <lb n="3"/><unclear>τ</unclear>ου</name></persName></persName> <w>χαῖρε</w>
+                    <lb n="1" /><persName type="attested"><name>&#7944;&#961;&#964;&#949;&#956;&#959;<unclear>&#953;</unclear></name>
+                    <lb n="2" /><persName type="attested"><name type="patronym">&#7944;&#961;&#964;&#949;&#956;&#953;&#948;&#972;
+                    <lb n="3" /><unclear>&#964;</unclear>&#959;&#965;</name></persName></persName> <w>&#967;&#945;&#8150;&#961;&#949;</w>
                  </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
                     <app><note>Text after Orsi 1899 (note that Pace simply follows Orsi 1899</note></app>
-                    <app loc="1"><note>Orsi 1896: ΑΡΤΕΜΟΝ; the inventory shows the foot of a vertical for the final letter, Orsi 1899 prints a small or damaged I (unclear)</note></app>
+                    <app loc="1"><note>Orsi 1896: &#913;&#929;&#932;&#917;&#924;&#927;&#925;; the inventory shows the foot of a vertical for the final letter, Orsi 1899 prints a small or damaged I (unclear)</note></app>
                     <app loc="2"><note>The inventory shows the left half of the initial alpha to be missing</note></app>
-                    <app loc="3"><note>Orsi 1896: ΤΟΥ; Orsi 1899: ΓΟΥ; inventory: [Δ]ΟΥ</note></app>
+                    <app loc="3"><note>Orsi 1896: &#932;&#927;&#933;; Orsi 1899: &#915;&#927;&#933;; inventory: [&#916;]&#927;&#933;</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Artemo daughter of Artemidotos, farewell!</p>
             </div>
             <div type="commentary">
-                <p>The stone does not seem to have been seen or restudied since Orsi's 1899 publication. The presence of omicron and iota adscript at the end of the name, taken to be a vocative by Orsi, would either seem to be archaic, or later Roman orthograpic variation, and given the presence of lunate epsilon and other comments of Orsi, the latter seems preferable. Cordano includes the name in her onomastic list in Cordano, Federica. 1984. «Camarina VII: alcuni documenti iscritti importanti per la storia della città». Bolletino d’Arte Anno 69, 26: 31–56, at no. 83, derived from Pace.
+                <p>The stone does not seem to have been seen or restudied since Orsi's 1899 publication. The presence of omicron and iota adscript at the end of the name, taken to be a vocative by Orsi, would either seem to be archaic, or later Roman orthograpic variation, and given the presence of lunate epsilon and other comments of Orsi, the latter seems preferable. Cordano includes the name in her onomastic list in Cordano, Federica. 1984. &#171;Camarina VII: alcuni documenti iscritti importanti per la storia della citt&#224;&#187;. Bolletino d&#8217;Arte Anno 69, 26: 31&#8211;56, at no. 83, derived from Pace.
                 </p>
             </div>
             <div type="bibliography">
@@ -184,25 +173,25 @@
                         <author>Orsi</author>
                         <date>1896</date>
                         <citedRange>399</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/FWX5CWBN"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/FWX5CWBN" />
                         <ref target="https://biblio.inscriptiones.org/epig10001709">https://biblio.inscriptiones.org/epig10001709</ref>
                     </bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>1899</date>
                         <citedRange>276</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ICW2M9P2"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ICW2M9P2" />
                         <ref target="https://biblio.inscriptiones.org/epig10002750">https://biblio.inscriptiones.org/epig10002750</ref>
                     </bibl>
                     <bibl>
                         <author>Pace</author>
                         <date>1927</date>
                         <citedRange>160 no.3</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ZJ6KUFMM"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZJ6KUFMM" />
                         <ref target="https://biblio.inscriptiones.org/epig10001692">https://biblio.inscriptiones.org/epig10001692</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -32,9 +29,9 @@
                 <idno type="filename">ISic000312</idno>
                 <idno type="TM">491519</idno>
                 <idno type="EDR">139968</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">21900347</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000312</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4335103</idno>
                 <idno type="DOI" when="2021-01-06">10.5281/zenodo.4422008</idno>
@@ -51,9 +48,9 @@
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">1335</idno>
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -65,34 +62,34 @@
                                 <support><p>Rectangular block of black lava stone. All four sides are cut straight and the block appears to be intact. On the upper surface a depression across the rear half, flanked by two holes for metal clamps adjoining the rear edge, suggests both that a second block stood at the rear and that something, presumably an honorific statue, stood on top.</p>
                                     <material ana="#material.stone.volcanic" ref="http://www.eagle-network.eu/voc/material/lod/28.html">volcanic</material>
                                     <objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">statue base</objectType>
-                                    <dimensions><!-- from Korhonen -->
+                                    <dimensions>
                                         <height unit="cm">78</height>
                                         <width unit="cm">83</width>
                                         <depth unit="cm">36</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Four lines of Latin text, centred on the stone and filling the face, slightly decreasing in size from line 1.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
-                        <handDesc><!-- measurements of Korhonen -->
+                        <handDesc>
                             <handNote><p>Large, plain, deeply cut letters. P is open, R and B are closed; some upright strokes (all letter I, some L and V) have a serif ascending upper right; plain interpuncts in lines 1 and 3; the numeral in line 3 is marked by a mid-bar.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">120-130</height>
+                                    <height unit="mm" atLeast="120" atMost="130">120-130</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Line 3-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">90-110</height>
+                                    <height unit="mm" atLeast="90" atMost="110">90-110</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -109,7 +106,7 @@
                         <provenance type="found" subtype="discovered" when="1767">Found in the excavation of the foundations of the 'Cappellone' of the Chiesa di S.Agata la Vetera<geo cert="medium">37.507077, 15.083852</geo>, in 1767, and transferred to the Biscari collection.</provenance>
                         <provenance type="observed">Museum courtyard</provenance>
                         <provenance type="observed" subtype="autopsied" when="2018-07-06">Prag 2018-07-06</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                     
                 </msDesc>
@@ -117,16 +114,16 @@
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -197,10 +194,10 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><expan><abbr>L</abbr><ex>ucio</ex></expan> <g ref="#interpunct">·</g> Rubrio
-                   <lb n="2"/>Proculo
-                    <lb n="3"/><roleName type="civic" subtype="duumvir.quinquennalis"><expan><abbr><num value="2"><hi rend="intraline">II</hi></num>vir</abbr><ex>o</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>quin</abbr><ex>quennali</ex></expan></roleName>
-                    <lb n="4"/><roleName type="civic.religious" subtype="augur">auguri</roleName>
+                    <lb n="1" /><expan><abbr>L</abbr><ex>ucio</ex></expan> <g ref="#interpunct">&#183;</g> Rubrio
+                   <lb n="2" />Proculo
+                    <lb n="3" /><roleName type="civic" subtype="duumvir.quinquennalis"><expan><abbr><num value="2"><hi rend="intraline">II</hi></num>vir</abbr><ex>o</ex></expan> <g ref="#interpunct">&#183;</g> <expan><abbr>quin</abbr><ex>quennali</ex></expan></roleName>
+                    <lb n="4" /><roleName type="civic.religious" subtype="augur">auguri</roleName>
                 </ab>
             </div>
             <div type="apparatus">
@@ -210,7 +207,7 @@
                 <p>To Lucius Rubrius Proculus, quinquennial duumvir, augur</p>
             </div>
             <div type="translation" xml:lang="it">
-                <p/>
+                <p />
             </div>
             <div type="commentary" xml:lang="en">
                 <p>The only attestation for Catania of a duumvir quinquennalis</p>
@@ -221,58 +218,58 @@
                         <author>Castelli</author>
                         <date>1769</date>
                         <citedRange>52 cl.5 no.35</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3" />
                     <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>57 cl.5 no.36</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH" />
                     <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
                     <bibl>
                         <author>Ferrara</author>
                         <date>1829</date>
                         <citedRange>283 no.1</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN" />
                     <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref></bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7028</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="IMusCatania">
                          <author>Korhonen</author>
                          <date>2004</date> 
                         <citedRange>21</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH" />
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1937</date>
                         <citedRange>68</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/P7FP4UWI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/P7FP4UWI" />
                     <ref target="https://biblio.inscriptiones.org/epig10001867">https://biblio.inscriptiones.org/epig10001867</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>tav.15</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1990</date>
                         <citedRange>172 fig.144</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9" />
                     <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref></bibl>
                     <bibl>
                         <author>Mole Ventura</author>
                         <date>1996</date>
                         <citedRange>184, 190</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F9UFQEH6"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/F9UFQEH6" />
                     <ref target="https://biblio.inscriptiones.org/epig10001742">https://biblio.inscriptiones.org/epig10001742</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

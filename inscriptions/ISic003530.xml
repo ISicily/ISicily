@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,8 +24,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003530</idno>
                 <idno type="TM">493862</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">38200016</idno>
                 <idno type="PHI">313652</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003530</idno>
@@ -45,11 +42,11 @@
                         <settlement>Messina</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/147">Museo regionale interdisciplinare di Messina</repository>
                         <idno type="inventory">A4950</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -61,34 +58,34 @@
                                 <support><p>Marble plaque, broken into fragments, of which five survive, which join. The upper and lower left corners are lost, but a small part of the left margin is preserved. A small part of the right margin and the lower right corner also lost.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!-- Bitto -->
+                                    <dimensions>
                                         <height unit="cm">17.7</height>
                                         <width unit="cm">21</width>
-                                        <depth unit="cm"/>
+                                        <depth unit="cm" />
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.fragments.contiguous"/>
+                                <condition ana="#condition.fragments.contiguous" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Text is centred, with a straight left margin and an irregular right margin.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
+                                	<damage ana="#text_condition.incomplete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote><p>V-cut lunate Greek letters, slightly irregular: lunate sigma and epsilon, cursive omega, regular mu with short middle strokes.</p>
-                                <locus from="line1" to="line5">Line 1-5</locus><!-- Bitto -->
+                                <locus from="line1" to="line5">Line 1-5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">15</height>
+                                    <height unit="mm" atLeast="15" atMost="15">15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">20</height>
+                                    <height unit="mm" atLeast="20" atMost="20">20</height>
                                 </dimensions>
                                 <locus from="line2" to="line5">Interlineation line 2 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">15</height>
+                                    <height unit="mm" atLeast="15" atMost="15">15</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -100,27 +97,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</placeName>
                             	<geo>38.19394, 15.55256</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st — 3rd century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st &#8212; 3rd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Necropolis at the Orti della Maddalena</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -163,10 +160,10 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic003530_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
             <graphic n="print" url="ISic003530.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
          </surface>
     </facsimile>
@@ -174,21 +171,21 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><supplied reason="lost"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></supplied> <space unit="character" extent="unknown"/> <expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan>
-                    <lb n="2"/><supplied reason="lost" cert="low"><expan><abbr>Κλ</abbr><ex>ώδιος</ex></expan></supplied> <unclear>Ῥ</unclear>ωμανὸς
-                    <lb n="3"/><expan><abbr>ἔζ</abbr><ex>ησεν</ex></expan> <g ref="#ivy-leaf">❦</g> <expan><abbr><supplied reason="lost">ἔ</supplied> τ</abbr><ex>η</ex></expan> <g ref="#ivy-leaf">❦</g> <num value="1">α</num> <g ref="#ivy-leaf">❦</g> <expan><abbr>μ</abbr><ex>ῆνας</ex></expan> <g ref="#ivy-leaf">❦</g> <num atLeast="1" atMost="12"><gap reason="illegible" unit="character" quantity="1"/></num><g ref="#ivy-leaf">❦</g>  <expan><abbr>ἡ</abbr><ex>μέρας</ex></expan> <g ref="#ivy-leaf">❦</g> <num value="28">κη</num> 
-                    <lb n="4"/><expan><abbr>Κλ</abbr><ex>ώδιος</ex></expan> <g ref="#ivy-leaf">❦</g> Θησεὺς <g ref="#ivy-leaf">❦</g> πατ<hi rend="ligature">ὴρ</hi>
-                    <lb n="5"/><supplied reason="lost"><space unit="character" quantity="3"/></supplied> <expan><abbr>τέκ</abbr><ex>νῳ</ex></expan> <g ref="#ivy-leaf">❦</g>  <expan><abbr>γλυκυτάτ</abbr><ex>ῳ</ex></expan>
+                    <lb n="1" /><supplied reason="lost"><expan><abbr>&#920;</abbr><ex>&#949;&#959;&#8150;&#962;</ex></expan></supplied> <space unit="character" extent="unknown" /> <expan><abbr>&#922;</abbr><ex>&#945;&#964;&#945;&#967;&#952;&#959;&#957;&#943;&#959;&#953;&#962;</ex></expan>
+                    <lb n="2" /><supplied reason="lost" cert="low"><expan><abbr>&#922;&#955;</abbr><ex>&#974;&#948;&#953;&#959;&#962;</ex></expan></supplied> <unclear>&#8172;</unclear>&#969;&#956;&#945;&#957;&#8056;&#962;
+                    <lb n="3" /><expan><abbr>&#7956;&#950;</abbr><ex>&#951;&#963;&#949;&#957;</ex></expan> <g ref="#ivy-leaf">&#10086;</g> <expan><abbr><supplied reason="lost">&#7956;</supplied> &#964;</abbr><ex>&#951;</ex></expan> <g ref="#ivy-leaf">&#10086;</g> <num value="1">&#945;</num> <g ref="#ivy-leaf">&#10086;</g> <expan><abbr>&#956;</abbr><ex>&#8134;&#957;&#945;&#962;</ex></expan> <g ref="#ivy-leaf">&#10086;</g> <num atLeast="1" atMost="12"><gap reason="illegible" unit="character" quantity="1" /></num><g ref="#ivy-leaf">&#10086;</g>  <expan><abbr>&#7969;</abbr><ex>&#956;&#941;&#961;&#945;&#962;</ex></expan> <g ref="#ivy-leaf">&#10086;</g> <num value="28">&#954;&#951;</num> 
+                    <lb n="4" /><expan><abbr>&#922;&#955;</abbr><ex>&#974;&#948;&#953;&#959;&#962;</ex></expan> <g ref="#ivy-leaf">&#10086;</g> &#920;&#951;&#963;&#949;&#8058;&#962; <g ref="#ivy-leaf">&#10086;</g> &#960;&#945;&#964;<hi rend="ligature">&#8052;&#961;</hi>
+                    <lb n="5" /><supplied reason="lost"><space unit="character" quantity="3" /></supplied> <expan><abbr>&#964;&#941;&#954;</abbr><ex>&#957;&#8179;</ex></expan> <g ref="#ivy-leaf">&#10086;</g>  <expan><abbr>&#947;&#955;&#965;&#954;&#965;&#964;&#940;&#964;</abbr><ex>&#8179;</ex></expan>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp><app><note>Text after Bitto and Griffo</note></app></listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision--></p>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -196,17 +193,17 @@
                          <author>Bitto</author>
                          <date>2001</date> 
                         <citedRange>21</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R" />
                     <ref target="https://biblio.inscriptiones.org/epig10000029">https://biblio.inscriptiones.org/epig10000029</ref></bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Griffo</author>
                         <title>NSA</title>
                         <date>1942</date>
                         <citedRange>84 no. 5 fig. 23</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

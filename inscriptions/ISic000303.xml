@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -38,9 +35,9 @@
                 <idno type="filename">ISic000303</idno>
                 <idno type="TM">491513</idno>
                 <idno type="EDR">139982</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">21900338</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000303</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4335077</idno>
                 <availability>
@@ -55,11 +52,11 @@
                         <settlement>Catania</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">642</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -71,26 +68,26 @@
                                 <support>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Korhonen-->
+                                    <dimensions>
                                         <height unit="cm">14.5</height>
                                         <width unit="cm">67</width>
                                         <depth unit="cm">2.7-4.8</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
                             </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
+                                    <damage />
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Korhonen-->
+                            <handNote>
                                 <locus from="line1" to="line2">Lines 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">22-28</height>
+                                    <height unit="mm" atLeast="22" atMost="28">22-28</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -112,23 +109,23 @@
                         <provenance type="found" subtype="first-recorded">First recorded in 18th century in re-use 'Nel chiostro dei PP. Domenicani sotto titolo di S. Domenico fuori le mura' (Amico)</provenance>
                         <provenance type="observed">sala VII.286, mag. sup.</provenance>
                         <provenance type="observed" subtype="autopsied">2016.10.14</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
+            <ns1:include href="../alists/ISicily-taxonomies.xml">
+                <ns1:fallback>
                     <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
+                </ns1:fallback>
+            </ns1:include>
+            <ns1:include href="../alists/charDecl.xml">
+                <ns1:fallback>
                     <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
+                </ns1:fallback>
+            </ns1:include>
         </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -192,9 +189,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TG">
                 <ab>
-                    <lb n="1"/><g ref="#interpunct" n="5">·</g> <persName type="attested"><name><w n="10"><expan><abbr>L</abbr><ex>ucio</ex></expan></w></name> <g ref="#interpunct" n="15">·</g> <name><w n="20">Roscio</w></name> <g ref="#interpunct" n="25">·</g> <name><w n="30"><expan><abbr>L</abbr><ex>uci</ex></expan></w></name> <g ref="#interpunct" n="35">·</g> <w n="40"><expan><abbr>f</abbr><ex>ilio</ex></expan></w> <g ref="#interpunct" n="45">·</g> <orgName type="tribe"><w n="50"><expan><abbr>Quir</abbr><ex>ina</ex></expan></w></orgName> <supplied reason="subaudible"><w n="53">tribu</w></supplied> <g ref="#interpunct" n="55">·</g> <name><w n="60">Rufo</w></name></persName> <g ref="#interpunct" n="65">·</g> <roleName type="military" subtype="praefectus.cohortis"><w n="70"><expan><abbr>pr</abbr><ex>aefecto</ex></expan></w> <w n="75"><supplied reason="lost"><expan><abbr>coh</abbr><ex>ortis</ex></expan></supplied></w></roleName> <gap reason="lost" extent="unknown" unit="character" n="80"/>
-                    <lb n="2"/><w n="85">equitatae</w> <g ref="#interpunct" n="90">·</g> <w n="95">equo</w> <g ref="#interpunct" n="100">·</g> <w n="105"><expan><abbr>pub</abbr><ex>lico</ex></expan></w> <g ref="#interpunct" n="110">·</g> <w n="115">adlecto</w> <w n="120"><supplied reason="lost" cert="low">in</supplied></w> <supplied reason="lost"><num value="5"><w n="125">V</w></num></supplied> <w n="130"><supplied reason="lost">decurias</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="135"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="line" n="140"/>
+                    <lb n="1" /><g ref="#interpunct" n="5">&#183;</g> <persName type="attested"><name><w n="10"><expan><abbr>L</abbr><ex>ucio</ex></expan></w></name> <g ref="#interpunct" n="15">&#183;</g> <name><w n="20">Roscio</w></name> <g ref="#interpunct" n="25">&#183;</g> <name><w n="30"><expan><abbr>L</abbr><ex>uci</ex></expan></w></name> <g ref="#interpunct" n="35">&#183;</g> <w n="40"><expan><abbr>f</abbr><ex>ilio</ex></expan></w> <g ref="#interpunct" n="45">&#183;</g> <orgName type="tribe"><w n="50"><expan><abbr>Quir</abbr><ex>ina</ex></expan></w></orgName> <supplied reason="subaudible"><w n="53">tribu</w></supplied> <g ref="#interpunct" n="55">&#183;</g> <name><w n="60">Rufo</w></name></persName> <g ref="#interpunct" n="65">&#183;</g> <roleName type="military" subtype="praefectus.cohortis"><w n="70"><expan><abbr>pr</abbr><ex>aefecto</ex></expan></w> <w n="75"><supplied reason="lost"><expan><abbr>coh</abbr><ex>ortis</ex></expan></supplied></w></roleName> <gap reason="lost" extent="unknown" unit="character" n="80" />
+                    <lb n="2" /><w n="85">equitatae</w> <g ref="#interpunct" n="90">&#183;</g> <w n="95">equo</w> <g ref="#interpunct" n="100">&#183;</g> <w n="105"><expan><abbr>pub</abbr><ex>lico</ex></expan></w> <g ref="#interpunct" n="110">&#183;</g> <w n="115">adlecto</w> <w n="120"><supplied reason="lost" cert="low">in</supplied></w> <supplied reason="lost"><num value="5"><w n="125">V</w></num></supplied> <w n="130"><supplied reason="lost">decurias</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="135" />
+                    <lb n="3" /><gap reason="lost" extent="unknown" unit="line" n="140" />
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#VF">
@@ -228,11 +225,11 @@
                 </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Two frags: L.Roscio L.f.Quir.Rufo.pr[(aef.coh...) / equitatae.equo.pub.adlecto[- - -. L. Roscius Rufus, found out of original context; Roscii well-attested in Sicily; note Eck ap. Gentili, Catania Antica (1996), p.237, esp. Eck proposes a restoration for the end of line 2 of: adlecto [in V decurias? - - -] followed by Korhonen. Rufus is of equestrian rank, probably born and died in Sicily.--></p>
+                <p>
+                    </p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -240,33 +237,33 @@
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650756">10.7019</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                         <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="IMusCatania">
                          <author>Korhonen</author>
                          <date>2004</date> 
                         <citedRange>16</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH" />
                         <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
                     </bibl>
                     <bibl>
                         <author>Eck</author>
                         <date>1996</date>
                         <citedRange>236-237</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/7T8K8ATA"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7T8K8ATA" />
                         <ref target="https://biblio.inscriptiones.org/epig10002014">https://biblio.inscriptiones.org/epig10002014</ref>
                     </bibl>
                     <bibl>
                         <author>Eck</author>
                         <date>1996</date>
                         <citedRange>112</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4HE5CIGJ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4HE5CIGJ" />
                         <ref target="https://biblio.inscriptiones.org/epig10001475">https://biblio.inscriptiones.org/epig10001475</ref>
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl/>
+                    <bibl />
                 </listBibl>
             </div>
         </body>

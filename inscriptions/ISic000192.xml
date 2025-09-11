@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -36,9 +33,9 @@
                 <idno type="filename">ISic000192</idno>
                 <idno type="TM">175702</idno>
                 <idno type="EDR">077920</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">8900398</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000192</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334496</idno>
                 <availability>
@@ -53,11 +50,11 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">60</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -75,12 +72,12 @@
                                         <depth unit="cm">9.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Three lines of Latin text (end of line 2 is obscured by break in stone).  Use of roughly triangular interpuncts.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -88,7 +85,7 @@
                             <handNote><p>Text is deeply and broadly incised into the stone, except for the interpuncts. Letters do not uniformly follow the line, and are of varying sizes. O at end of line 2 is much smaller than the rest of the text. Spacing is inconsistent, with the Xs on line three touching. Light serifs used on letters.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">85-98</height>
+                                    <height unit="mm" atLeast="85" atMost="98">85-98</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
@@ -96,11 +93,11 @@
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">46-53</height>
+                                    <height unit="mm" atLeast="46" atMost="53">46-53</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -114,25 +111,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1914-09">Discovered by chance in the Necropolis di S.Antonino in September 1914, together with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000211">ISic000211</ref>, <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000222">ISic000222</ref>, and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000231">ISic000231</ref>, and moved to the Museum on the 25th of that month.<geo>37.9825192,13.6901331</geo></provenance><!-- representative point in the area of the necropolis of S. Antonio -->
+                        <provenance type="found" subtype="discovered" when="1914-09">Discovered by chance in the Necropolis di S.Antonino in September 1914, together with <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000211">ISic000211</ref>, <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000222">ISic000222</ref>, and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000231">ISic000231</ref>, and moved to the Museum on the 25th of that month.<geo>37.9825192,13.6901331</geo></provenance>
                         <provenance type="observed" subtype="autopsied" when="2023-07-06" resp="#AA">Antoniou, 2023-07-06. In the Depositi of Museo Civico Baldassare Romano, room 1, scaffold 12, shelf 5</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -177,10 +174,10 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000192_tiled.tif" height="4080px" width="3072px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-06</desc>
             </graphic>
             <graphic n="print" url="ISic000192.jpg" height="4080px" width="3072px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-06</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2023-07-06</desc>
             </graphic>
          </surface>
     </facsimile>
@@ -188,9 +185,9 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM #AA">
                 <ab>
-                    <lb n="1" xml:id="ATUAK"/><w xml:id="ATUAU">ex</w> <g ref="#interpunct" xml:id="ATUAe">·</g> <w xml:id="ATUAo"><expan xml:id="ATUAy"><abbr xml:id="ATUAΙ">d</abbr><ex xml:id="ATUAΤ">ecreto</ex></expan></w> <g ref="#interpunct" xml:id="ATUAε">·</g> <roleName type="civic" subtype="decurio" xml:id="ATUAο"><w xml:id="ATUBA"><expan xml:id="ATUBK"><abbr xml:id="ATUBU">d</abbr><ex xml:id="ATUBe">ecurionum</ex></expan></w></roleName> 
-                    <lb n="2" xml:id="ATUBo"/><w xml:id="ATUBy"><expan xml:id="ATUBΙ"><abbr xml:id="ATUBΤ">l</abbr><ex xml:id="ATUBε">ocus</ex></expan></w> <g ref="#interpunct" xml:id="ATUBο">·</g> <w xml:id="ATUCA"><expan xml:id="ATUCK"><abbr xml:id="ATUCU">p</abbr><ex xml:id="ATUCe">ublice</ex></expan></w> <g ref="#interpunct" xml:id="ATUCo">·</g> <w xml:id="ATUCy"><expan xml:id="ATUCΙ"><abbr xml:id="ATUCΤ">d</abbr><ex xml:id="ATUCε">atus</ex></expan></w> <persName type="attested" xml:id="ATUCο"><name xml:id="ATUDA"><expan xml:id="ATUDK"><abbr xml:id="ATUDU">P</abbr><ex xml:id="ATUDe">ublio</ex></expan></name> <name xml:id="ATUDo">Lo<gap reason="lost" extent="unknown" unit="character" xml:id="ATUDy"/></name></persName> 
-                    <lb n="3" xml:id="ATUDΙ"/><num value="35" xml:id="ATUDΤ">XXXV</num>
+                    <lb n="1" xml:id="ATUAK" /><w xml:id="ATUAU">ex</w> <g ref="#interpunct" xml:id="ATUAe">&#183;</g> <w xml:id="ATUAo"><expan xml:id="ATUAy"><abbr xml:id="ATUA&#921;">d</abbr><ex xml:id="ATUA&#932;">ecreto</ex></expan></w> <g ref="#interpunct" xml:id="ATUA&#949;">&#183;</g> <roleName type="civic" subtype="decurio" xml:id="ATUA&#959;"><w xml:id="ATUBA"><expan xml:id="ATUBK"><abbr xml:id="ATUBU">d</abbr><ex xml:id="ATUBe">ecurionum</ex></expan></w></roleName> 
+                    <lb n="2" xml:id="ATUBo" /><w xml:id="ATUBy"><expan xml:id="ATUB&#921;"><abbr xml:id="ATUB&#932;">l</abbr><ex xml:id="ATUB&#949;">ocus</ex></expan></w> <g ref="#interpunct" xml:id="ATUB&#959;">&#183;</g> <w xml:id="ATUCA"><expan xml:id="ATUCK"><abbr xml:id="ATUCU">p</abbr><ex xml:id="ATUCe">ublice</ex></expan></w> <g ref="#interpunct" xml:id="ATUCo">&#183;</g> <w xml:id="ATUCy"><expan xml:id="ATUC&#921;"><abbr xml:id="ATUC&#932;">d</abbr><ex xml:id="ATUC&#949;">atus</ex></expan></w> <persName type="attested" xml:id="ATUC&#959;"><name xml:id="ATUDA"><expan xml:id="ATUDK"><abbr xml:id="ATUDU">P</abbr><ex xml:id="ATUDe">ublio</ex></expan></name> <name xml:id="ATUDo">Lo<gap reason="lost" extent="unknown" unit="character" xml:id="ATUDy" /></name></persName> 
+                    <lb n="3" xml:id="ATUD&#921;" /><num value="35" xml:id="ATUD&#932;">XXXV</num>
                 </ab>
             </div>
             <div type="apparatus">
@@ -199,7 +196,7 @@
                 </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary" resp="#AA">
                 <p>Bivona (1994) hypothetically suggests that the missing name, in the dative case, at the end of line 2, is a member of the gens Lollia, known elsewhere in Termini, see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000058">ISic000058</ref>.</p>
@@ -208,13 +205,13 @@
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1980.0520</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="corpus" n="ILMusTermini">
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>114</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                     <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
                     <bibl>
                         <author>Bivona</author>
@@ -222,7 +219,7 @@
                         <citedRange>545 no.8 tav.4</citedRange>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

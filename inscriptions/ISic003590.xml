@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,10 +24,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003590</idno>
                 <idno type="TM">645669</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003590</idno>
                 <idno type="DOI" when="2020-09-09">10.5281/zenodo.4021597</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003590</idno>
@@ -49,11 +46,11 @@
                         <settlement>Halaesa</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/053">Antiquarium e sito archeologico di Halaesa</repository>
                         <idno type="inventory">30605</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -72,12 +69,12 @@
                                         <depth unit="cm">2-3</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Remains of three lines of Latin text are preserved, together with guide-lines top and bottom of each line. A further three guide lines are preserved below the last line of the text, but with no traces of letters.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -85,15 +82,15 @@
                             <handNote><p>The letters decrease from 60mm in line 1, to 42-43 mm in line 2 and 35 mm in line 3. The letters are fairly crudely V-cut, not always maintaining the vertical. V is very broad and irregular; E tall and narrow; R has a very small, closed eye; P a large elongated eye; G is tall and narrow. Serifs are basic, as are the triangular interpuncts which occur at every word division.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">60</height>
+                                    <height unit="mm" atLeast="60" atMost="60">60</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">42-43</height>
+                                    <height unit="mm" atLeast="42" atMost="43">42-43</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">35</height>
+                                    <height unit="mm" atLeast="35" atMost="35">35</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation</locus>
                                 <dimensions type="interlinear">
@@ -116,7 +113,7 @@
                         <provenance type="found" subtype="discovered">From the excavations of the agora</provenance>
                         <provenance type="observed">On display in the lapidarium on site</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2011.06.15</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                     
                 </msDesc>
@@ -124,16 +121,16 @@
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -193,11 +190,11 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb/><gap reason="lost" extent="unknown" unit="line"/>
-                    <lb n="1"/><expan><abbr>Aug</abbr><ex>usto</ex></expan> ·
-                    <lb n="2"/>Res · <expan><abbr>P</abbr><ex>ublica</ex></expan> · <expan><abbr>Hal</abbr><ex>aesinorum</ex></expan> ·
-                   <lb n="3"/><space extent="unknown" unit="character"/><expan><abbr>D</abbr><ex>ecreto</ex></expan> · <roleName type="civic" subtype="decurio"><expan><abbr>D</abbr><ex>ecurionum</ex></expan></roleName> · <space extent="unknown" unit="character"/>
-                    <lb/><space unit="line" quantity="3"/>
+                    <lb /><gap reason="lost" extent="unknown" unit="line" />
+                    <lb n="1" /><expan><abbr>Aug</abbr><ex>usto</ex></expan> &#183;
+                    <lb n="2" />Res &#183; <expan><abbr>P</abbr><ex>ublica</ex></expan> &#183; <expan><abbr>Hal</abbr><ex>aesinorum</ex></expan> &#183;
+                   <lb n="3" /><space extent="unknown" unit="character" /><expan><abbr>D</abbr><ex>ecreto</ex></expan> &#183; <roleName type="civic" subtype="decurio"><expan><abbr>D</abbr><ex>ecurionum</ex></expan></roleName> &#183; <space extent="unknown" unit="character" />
+                    <lb /><space unit="line" quantity="3" />
                 </ab>
             </div>
             <div type="apparatus">
@@ -215,10 +212,10 @@
                         <author>Prag and Tigano</author>
                         <date>2017</date>
                         <citedRange>no.31</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
+                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L" />
                     <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

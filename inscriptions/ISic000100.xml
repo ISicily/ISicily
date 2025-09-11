@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -32,9 +29,9 @@
                 <idno type="filename">ISic000100</idno>
                 <idno type="TM">285328</idno>
                 <idno type="EDR">127535</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">22100053</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000100</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334134</idno>
                 <availability>
@@ -49,11 +46,11 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">120</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -71,12 +68,12 @@
                                         <depth unit="cm">80.5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>11 lines of regular neat wide letters of faily consistent size and spacing, with a regular left margin, almost entirely filling the available field.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -84,31 +81,31 @@
                             <handNote><p>regular letters iwth a faily wide square module, lacking visible interpuncts or serifs (but note the material); use of ligature at the end of line 2.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">55</height>
+                                    <height unit="mm" atLeast="55" atMost="55">55</height>
                                 </dimensions>
                                 <locus from="line2" to="line4">Line 2-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">53-54</height>
+                                    <height unit="mm" atLeast="53" atMost="54">53-54</height>
                                 </dimensions>
                                 <locus from="line5" to="line5">Line 5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">48-52</height>
+                                    <height unit="mm" atLeast="48" atMost="52">48-52</height>
                                 </dimensions>
                                 <locus from="line6" to="line8">Line 6-8</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">50-54</height>
+                                    <height unit="mm" atLeast="50" atMost="54">50-54</height>
                                 </dimensions>
                                 <locus from="line9" to="line9">Line 9</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">48-54</height>
+                                    <height unit="mm" atLeast="48" atMost="54">48-54</height>
                                 </dimensions>
                                 <locus from="line10" to="line11">Line 10-11</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">50-54</height>
+                                    <height unit="mm" atLeast="50" atMost="54">50-54</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -122,25 +119,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" cert="low" precision="low" evidence="lettering">Bivona dates to 2nd century CE by lettering</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1768">Found 1768 in vicinity of the Castle<geo>37.9886513,13.6971343</geo></provenance><!-- representative point for the castle, from google maps -->
+                        <provenance type="found" subtype="discovered" when="1768">Found 1768 in vicinity of the Castle<geo>37.9886513,13.6971343</geo></provenance>
                         <provenance type="observed" subtype="autopsied">Prag 2022-07-08, in the courtyard of the museum.</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -185,10 +182,10 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000100_tiled.tif" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
             <graphic n="print" url="ISic000100.jpg" height="5520px" width="3680px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
          </surface>
     </facsimile>
@@ -196,17 +193,17 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
-                    <lb n="1" xml:id="AKAAK"/><persName type="attested" xml:id="AKAAU"><name xml:id="AKAAe">Antiae</name> <persName type="attested" xml:id="AKAAo"><name type="patronym" xml:id="AKAAy"><expan xml:id="AKAAΙ"><abbr xml:id="AKAAΤ">M</abbr><ex xml:id="AKAAε">arci</ex></expan></name></persName> <w xml:id="AKAAο"><expan xml:id="AKABA"><abbr xml:id="AKABK">f</abbr><ex xml:id="AKABU">iliae</ex></expan></w> <name xml:id="AKABe">Cleo
-                    <lb n="2" break="no" xml:id="AKABo"/>patrae</name></persName> <roleName type="civic.religious" subtype="sacerdos" xml:id="AKABy"><w xml:id="AKABΙ">sacerdo<hi rend="ligature" xml:id="AKABΤ">ti</hi></w></roleName> 
-                    <lb n="3" xml:id="AKABε"/><w xml:id="AKABο">ex</w> <w xml:id="AKACA">voluntate</w> <w xml:id="AKACK"><expan xml:id="AKACU"><abbr xml:id="AKACe">po<unclear xml:id="AKACo">p</unclear></abbr><ex xml:id="AKACy">uli</ex></expan></w> 
-                    <lb n="4" xml:id="AKACΙ"/><w xml:id="AKACΤ"><expan xml:id="AKACε"><abbr xml:id="AKACο">d</abbr><ex xml:id="AKADA">ecreto</ex></expan></w> <w xml:id="AKADK"><expan xml:id="AKADU"><abbr xml:id="AKADe">d</abbr><ex xml:id="AKADo">ecurionum</ex></expan></w> <w xml:id="AKADy">inpensa</w> <w xml:id="AKADΙ"><expan xml:id="AKADΤ"><abbr xml:id="AKADε">pu<unclear xml:id="AKADο">b</unclear></abbr><ex xml:id="AKAEA">lico</ex></expan></w> 
-                    <lb n="5" xml:id="AKAEK"/><w xml:id="AKAEU">remissa</w> <w xml:id="AKAEe">cuius</w> <w xml:id="AKAEo">d<supplied reason="lost" xml:id="AKAEy">e</supplied>
-                    <lb n="6" break="no" xml:id="AKAEΙ"/>dicatione</w> <w xml:id="AKAEΤ">ple<supplied reason="lost" xml:id="AKAEε">beis</supplied></w> 
-                    <lb n="7" xml:id="AKAEο"/><w xml:id="AKAFA">singuli</w> <roleName type="civic" subtype="decurio" xml:id="AKAFK"><w xml:id="AKAFU">decu</w> <w xml:id="AKAFe"><supplied reason="lost" xml:id="AKAFo">ri</supplied>
-                    <lb n="8" break="no" xml:id="AKAFy"/>onum</w></roleName> <w xml:id="AKAFΙ">filis</w> <w xml:id="AKAFΤ"><unclear xml:id="AKAFε">b</unclear><supplied reason="lost" xml:id="AKAFο">ini</supplied></w> 
-                    <lb n="9" xml:id="AKAGA"/><roleName type="civic" subtype="decurio" xml:id="AKAGK"><w xml:id="AKAGU">decurioni</w> <w xml:id="AKAGe"><supplied reason="lost" xml:id="AKAGo">bus</supplied></w></roleName> 
-                    <lb n="10" xml:id="AKAGy"/><w xml:id="AKAGΙ">quini</w> <w xml:id="AKAGΤ">den<supplied reason="lost" xml:id="AKAGε">arii</supplied></w> 
-                    <lb n="11" xml:id="AKAGο"/><w xml:id="AKAHA">dati</w> <w xml:id="AKAHK">sunt</w>
+                    <lb n="1" xml:id="AKAAK" /><persName type="attested" xml:id="AKAAU"><name xml:id="AKAAe">Antiae</name> <persName type="attested" xml:id="AKAAo"><name type="patronym" xml:id="AKAAy"><expan xml:id="AKAA&#921;"><abbr xml:id="AKAA&#932;">M</abbr><ex xml:id="AKAA&#949;">arci</ex></expan></name></persName> <w xml:id="AKAA&#959;"><expan xml:id="AKABA"><abbr xml:id="AKABK">f</abbr><ex xml:id="AKABU">iliae</ex></expan></w> <name xml:id="AKABe">Cleo
+                    <lb n="2" break="no" xml:id="AKABo" />patrae</name></persName> <roleName type="civic.religious" subtype="sacerdos" xml:id="AKABy"><w xml:id="AKAB&#921;">sacerdo<hi rend="ligature" xml:id="AKAB&#932;">ti</hi></w></roleName> 
+                    <lb n="3" xml:id="AKAB&#949;" /><w xml:id="AKAB&#959;">ex</w> <w xml:id="AKACA">voluntate</w> <w xml:id="AKACK"><expan xml:id="AKACU"><abbr xml:id="AKACe">po<unclear xml:id="AKACo">p</unclear></abbr><ex xml:id="AKACy">uli</ex></expan></w> 
+                    <lb n="4" xml:id="AKAC&#921;" /><w xml:id="AKAC&#932;"><expan xml:id="AKAC&#949;"><abbr xml:id="AKAC&#959;">d</abbr><ex xml:id="AKADA">ecreto</ex></expan></w> <w xml:id="AKADK"><expan xml:id="AKADU"><abbr xml:id="AKADe">d</abbr><ex xml:id="AKADo">ecurionum</ex></expan></w> <w xml:id="AKADy">inpensa</w> <w xml:id="AKAD&#921;"><expan xml:id="AKAD&#932;"><abbr xml:id="AKAD&#949;">pu<unclear xml:id="AKAD&#959;">b</unclear></abbr><ex xml:id="AKAEA">lico</ex></expan></w> 
+                    <lb n="5" xml:id="AKAEK" /><w xml:id="AKAEU">remissa</w> <w xml:id="AKAEe">cuius</w> <w xml:id="AKAEo">d<supplied reason="lost" xml:id="AKAEy">e</supplied>
+                    <lb n="6" break="no" xml:id="AKAE&#921;" />dicatione</w> <w xml:id="AKAE&#932;">ple<supplied reason="lost" xml:id="AKAE&#949;">beis</supplied></w> 
+                    <lb n="7" xml:id="AKAE&#959;" /><w xml:id="AKAFA">singuli</w> <roleName type="civic" subtype="decurio" xml:id="AKAFK"><w xml:id="AKAFU">decu</w> <w xml:id="AKAFe"><supplied reason="lost" xml:id="AKAFo">ri</supplied>
+                    <lb n="8" break="no" xml:id="AKAFy" />onum</w></roleName> <w xml:id="AKAF&#921;">filis</w> <w xml:id="AKAF&#932;"><unclear xml:id="AKAF&#949;">b</unclear><supplied reason="lost" xml:id="AKAF&#959;">ini</supplied></w> 
+                    <lb n="9" xml:id="AKAGA" /><roleName type="civic" subtype="decurio" xml:id="AKAGK"><w xml:id="AKAGU">decurioni</w> <w xml:id="AKAGe"><supplied reason="lost" xml:id="AKAGo">bus</supplied></w></roleName> 
+                    <lb n="10" xml:id="AKAGy" /><w xml:id="AKAG&#921;">quini</w> <w xml:id="AKAG&#932;">den<supplied reason="lost" xml:id="AKAG&#949;">arii</supplied></w> 
+                    <lb n="11" xml:id="AKAG&#959;" /><w xml:id="AKAHA">dati</w> <w xml:id="AKAHK">sunt</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -218,7 +215,7 @@
                 <p>To Antia Cleopatra, daughter of Marcus, priestess, by the will of the people, (erected) by decree of the city council, with the expense reimbursed from public funds. On the occasion of whose dedication (?) one denarius was given to (each of) the plebs, two to the sons of decuriones, and five to the decuriones.</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -226,29 +223,29 @@
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650796">10.7352</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">
                                 10.7352add</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="ILMusTermini">
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>18</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                     <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>tav.16</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

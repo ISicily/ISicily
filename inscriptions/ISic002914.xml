@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -31,10 +28,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic002914</idno>
                 <idno type="TM">645304</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002914</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387743</idno>
                 <availability>
@@ -48,12 +45,12 @@
                         <region>Sicily</region>
                         <settlement>Piazza Armerina</settlement>
                         <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/198">Villa Romana del Casale</repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -65,30 +62,30 @@
                                 <support><p>Two fragments of a marble plaque, suggested by Manganaro to be part of the same text due to physical similarities. Fragment (a) shows a vacat and preserves a moulding and original edge below, suggesting the final line of a text; fragment (b) is broken on all sides. Fragment (b) is W 17 cm x H 9 x D 4 (Pucci).</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <dimensions>
+                                        <height unit="cm" />
+                                        <width unit="cm" />
+                                        <depth unit="cm" />
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Manganaro-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">120</height>
+                                    <height unit="mm" atLeast="120" atMost="120">120</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -96,30 +93,30 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient"/>
+                                <placeName type="ancient" />
                                 <placeName type="modern" ref="http://sws.geonames.org/2523796">Piazza Armerina</placeName>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st — 3rd century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" precision="low">1st &#8212; 3rd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Part of the material excavated at the Villa Casale</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -159,27 +156,19 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic002914_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic002914.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <div type="textpart" subtype="fragment-physical" n="a">
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" cert="low">a</supplied>rcu<unclear>m</unclear> <gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /> <supplied reason="lost" cert="low">a</supplied>rcu<unclear>m</unclear> <gap reason="lost" extent="unknown" unit="character" />
                     </ab>
             </div>
                 <div type="textpart" subtype="fragment-physical" n="b">
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ERC</orig><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><orig>ERC</orig><gap reason="lost" extent="unknown" unit="character" />
                     </ab>
             </div>
             </div>
@@ -187,7 +176,7 @@
                 <listApp><app><note>Text after Manganaro 2005 / 1982 and Pucci 1971</note></app></listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
                 <p>The second fragment (ERC) is reported by Pucci, but not the first.</p>
@@ -198,28 +187,28 @@
                         <author>Manganaro</author>
                         <date>1982</date>
                         <citedRange>503 no.9-10 fig.13-14</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VG592RBX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VG592RBX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001835">https://biblio.inscriptiones.org/epig10001835</ref></bibl>
                     <bibl>
                         <author>Pucci</author>
                         <date>1971</date>
                         <citedRange>252 fig.115</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/82KV6NAB"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/82KV6NAB" />
                     <ref target="https://biblio.inscriptiones.org/epig10001653">https://biblio.inscriptiones.org/epig10001653</ref></bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1983</date>
                         <citedRange>93</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/C9HTRTCR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/C9HTRTCR" />
                     <ref target="https://biblio.inscriptiones.org/epig10002650">https://biblio.inscriptiones.org/epig10002650</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2005</date>
                         <citedRange>186 no.9 fig.25-26</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/H5C4UQ9K"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/H5C4UQ9K" />
                     <ref target="https://biblio.inscriptiones.org/epig10001800">https://biblio.inscriptiones.org/epig10001800</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

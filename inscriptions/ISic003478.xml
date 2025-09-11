@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,8 +24,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003478</idno>
                 <idno type="TM">645099</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">70900813</idno>
                 <idno type="PHI">336137</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003478</idno>
@@ -44,12 +41,12 @@
                         <region>Sicily</region>
                         <settlement>Aci Castello</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/022">Antiquarium e museo civico di Aci Castello</repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -61,18 +58,18 @@
                                 <support><p>Fragment of a limestone plaque or stele, broken left, right and below, seemingly intact above</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
-                                    <dimensions><!--from Manganaro 1999-->
+                                    <dimensions>
                                         <height unit="cm">20</height>
                                         <width unit="cm">40</width>
                                         <depth unit="cm">12.5-15</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Remains of two lines, damaged at either end, seemingly centered</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -80,11 +77,11 @@
                             <handNote><p>Regular square letters of even height. Alpha has broken bar; epsilon has shorter middle bar; mu has vertical first and last, with the middle strokes meeting mid-way above the baseline; omicron is full size; rho has small eye;  omega is broad and lunate.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">35-50</height><!-- from Manganaro -->
+                                    <height unit="mm" atLeast="35" atMost="50">35-50</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -92,31 +89,31 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient"/>
+                                <placeName type="ancient" />
                                 <placeName type="modern" ref="http://pleiades.stoa.org/places/462328">Monte Artesino di Nicosia</placeName>		
                             	<geo>37.66667, 14.28333</geo>
 		</origPlace>
                             <origDate datingMethod="#julian" cert="low" notBefore="-0200" notAfter="0200" evidence="lettering">More likely late hellenistic than early imperial (lunate omega not before the second century BCE and rare on stone so early)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Said to havebeen found on <placeName ref="http://pleiades.stoa.org/places/462328">Monte Artesino di Nicosia</placeName><geo cert="low">37.66667, 14.28333</geo></provenance><!-- generic geo for Monte Artesino -->
+                        <provenance type="found" subtype="discovered">Said to havebeen found on <placeName ref="http://pleiades.stoa.org/places/462328">Monte Artesino di Nicosia</placeName><geo cert="low">37.66667, 14.28333</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -159,10 +156,10 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic003478_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
             <graphic n="print" url="ISic003478.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana</desc>
             </graphic>
          </surface>
     </facsimile>
@@ -170,8 +167,8 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">Ἀρ</supplied>τέμωνο<supplied reason="lost">ς</supplied>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">χ</supplied>αῖρε
+                    <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><supplied reason="lost">&#7944;&#961;</supplied>&#964;&#941;&#956;&#969;&#957;&#959;<supplied reason="lost">&#962;</supplied>
+                    <lb n="2" /><gap reason="lost" extent="unknown" unit="character" /><supplied reason="lost">&#967;</supplied>&#945;&#8150;&#961;&#949;
                 </ab>
             </div>
             <div type="apparatus">
@@ -181,25 +178,25 @@
                 </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
-                <p>It is likely that the idionym, in nominative/vocative, of the deceased is missing from the left side of the stone (rather than in the space above); if so, then the original stone would be perhaps twice as wide, and Manganaro's suggestion that the word χρηστὲ is missing at the start of line 2 i plausible. There is a clear vacat above line 1, whether the top of the stone is intact or not, and also after the final word of line 2. The lunate omega is notable in a text that is otherwise very square and regular in form; the date is uncertain.</p>
+                <p>It is likely that the idionym, in nominative/vocative, of the deceased is missing from the left side of the stone (rather than in the space above); if so, then the original stone would be perhaps twice as wide, and Manganaro's suggestion that the word &#967;&#961;&#951;&#963;&#964;&#8050; is missing at the start of line 2 i plausible. There is a clear vacat above line 1, whether the top of the stone is intact or not, and also after the final word of line 2. The lunate omega is notable in a text that is otherwise very square and regular in form; the date is uncertain.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>49.1299</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1999</date>
                         <citedRange>42 no.17 fig.94</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GRB3IPD5"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GRB3IPD5" />
                     <ref target="https://biblio.inscriptiones.org/epig10001813">https://biblio.inscriptiones.org/epig10001813</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

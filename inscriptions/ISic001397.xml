@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -31,8 +28,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001397</idno>
                 <idno type="TM">493012</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">39101524</idno>
                 <idno type="PHI">140904</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001397</idno>
@@ -49,11 +46,11 @@
                         <settlement>Siracusa</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
                         <idno type="inventory">35826</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -71,12 +68,12 @@
                                         <depth unit="cm">1.9-2.1</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.damaged"/>
+                                <condition ana="#condition.damaged" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The layout is unusual, with the text centred in a pseudo-stoichedon, the letters equal in number on each line, irrespective of word-breaks, and vertically aligned, and the final empty letter space in line 5 occupied by a hedera. </p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
+                                	<damage ana="#text_condition.complete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -84,39 +81,39 @@
                             <handNote><p>Neatly carved, regular letters of slightly uneven height (not v-cut, simple groove). Lunate epsilon and sigma, alpha with extended upper stroke, slight serifs to most strokes. Single interpunct before age.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">26-28 (Ε is 20)</height>
+                                    <height unit="mm">26-28 (&#917; is 20)</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">21-23 (Σ is 18)</height>
+                                    <height unit="mm">21-23 (&#931; is 18)</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">23-25 (Ε is 20)</height>
+                                    <height unit="mm">23-25 (&#917; is 20)</height>
                                 </dimensions>
                                 <locus from="line4" to="line4">Line 4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">20-24</height>
+                                    <height unit="mm" atLeast="20" atMost="24">20-24</height>
                                 </dimensions>
                                 <locus from="line5" to="line5">Line 5</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">21-22</height>
+                                    <height unit="mm" atLeast="21" atMost="22">21-22</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">10</height>
+                                    <height unit="mm" atLeast="10" atMost="10">10</height>
                                 </dimensions>
                                 <locus from="line2" to="line3">Interlineation line 2 to 3</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">10</height>
+                                    <height unit="mm" atLeast="10" atMost="10">10</height>
                                 </dimensions>
                                 <locus from="line3" to="line4">Interlineation line 3 to 4</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">15</height>
+                                    <height unit="mm" atLeast="15" atMost="15">15</height>
                                 </dimensions>
                                 <locus from="line4" to="line5">Interlineation line 4 to 5</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm">10</height>
+                                    <height unit="mm" atLeast="10" atMost="10">10</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -132,23 +129,23 @@
                         </origin>
                         <provenance type="found" subtype="discovered" when="1841-02">Found in February 1841 by a farmer, in proximity to the road running from the chiesa dell'Addolorata towards Acquanova, who gave it to D. Giuseppe Polizzi (where first reported by a traveller in 1844). Purchased by Siracusa Museum in 1914; currently in cassetta 4, Magazzino B.</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP" xml:id="autopsy">Prag 2014-09-11</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -192,18 +189,18 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic001397_tiled.tif" height="2880px" width="3480px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</desc>
             </graphic>
             <graphic n="print" url="ISic001397.jpg" height="2880px" width="3480px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</desc>
             </graphic>
          </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic001397_rear_tiled.tif" height="2872px" width="3232px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</desc>
             </graphic>
             <graphic n="print" url="ISic001397_rear.jpg" height="2872px" width="3232px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-11</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J. Prag 2014-09-11</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -211,11 +208,11 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AL #JP" source="#autopsy">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name type="idionym">Γλυκέρ
-                    <lb n="2" break="no"/>α</name></persName> χρηστ
-                    <lb n="3" break="no"/>ὰ χαῖρε
-                    <lb n="4"/>ἔζησες
-                    <lb n="5"/>ἔτη <g ref="#interpunct">·</g> <num value="53">νγ</num> <g ref="#ivy-leaf">❦</g>
+                    <lb n="1" /><persName type="attested"><name type="idionym">&#915;&#955;&#965;&#954;&#8051;&#961;
+                    <lb n="2" break="no" />&#945;</name></persName> &#967;&#961;&#951;&#963;&#964;
+                    <lb n="3" break="no" />&#8048; &#967;&#945;&#8150;&#961;&#949;
+                    <lb n="4" />&#7956;&#950;&#951;&#963;&#949;&#962;
+                    <lb n="5" />&#7956;&#964;&#951; <g ref="#interpunct">&#183;</g> <num value="53">&#957;&#947;</num> <g ref="#ivy-leaf">&#10086;</g>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
@@ -227,7 +224,7 @@
                 <p>Glykera, worthy one, farewell! you lived 53 years.</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p />
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -235,24 +232,24 @@
                         <author>anonymous</author>
                         <date>1844</date>
                         <citedRange>992 no.3</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/W95DKLZ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/W95DKLZ" />
                     </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0578</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F" />
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
                     </bibl>
                     <bibl>
                         <author>Ansaldi</author>
                         <date>1851</date>
                         <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/724748">51 no. 14</ref></citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/9BF3BJJI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9BF3BJJI" />
                     <ref target="https://biblio.inscriptiones.org/epig10002182">https://biblio.inscriptiones.org/epig10002182</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

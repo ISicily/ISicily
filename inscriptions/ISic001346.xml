@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -44,8 +41,8 @@
                 <idno type="filename">ISic001346</idno>
                 <idno type="TM">492955</idno>
                 <idno type="EpiCUM">Ursino570</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">39101720</idno>
                 <idno type="PHI">140844</idno>
                 <idno type="PHI">316207</idno>
@@ -62,13 +59,13 @@
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
-                        <idno type="inventory"/>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        <idno type="inventory" />
+                        
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -86,12 +83,12 @@
                                         <depth unit="cm">4.2</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.damaged"/>
+                                <condition ana="#condition.damaged" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The remains of one line of Greek letters, preceded by a plain cross (which may be a later addition), are preserved on the moulding at the base of the relief.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -99,7 +96,7 @@
                             <handNote><p>Slightly irregularly disposed letters, with a hedera between the first two words. In the text preserved by Gualtherus lunate epsilon, sigma and cursive omega are recorded, and interpuncts before the numerals.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30-37</height>
+                                    <height unit="mm" atLeast="30" atMost="37">30-37</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -119,24 +116,24 @@
                         </origin>
                         <provenance type="found" subtype="first-seen">First observed in the Cathedral of S. Agata<geo>37.502469, 15.088203</geo>.</provenance>
                         <provenance type="observed">Only a fragment was preserved after the 17th century, seen by Mommsen in Museo Biscari, who believed it was modern. Seen later by Korhonen in magazzino superiore, Collezione Biscari.</provenance>
-                        <provenance type="observed" subtype="autopsied"/>
-                        <acquisition/>
+                        <provenance type="observed" subtype="autopsied" />
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -203,14 +200,14 @@
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #JP">
                 <div type="textpart" subtype="section" n="A">
                     <ab>
-                        <lb n="1"/><supplied reason="lost" evidence="previouseditor"><persName><name>Μέμφις</name></persName></supplied>
-                        <lb n="2" style="text-direction:r-to-l"/><supplied reason="lost" evidence="previouseditor"><persName><name>Δεκένιος</name></persName></supplied>
+                        <lb n="1" /><supplied reason="lost" evidence="previouseditor"><persName><name>&#924;&#941;&#956;&#966;&#953;&#962;</name></persName></supplied>
+                        <lb n="2" style="text-direction:r-to-l" /><supplied reason="lost" evidence="previouseditor"><persName><name>&#916;&#949;&#954;&#941;&#957;&#953;&#959;&#962;</name></persName></supplied>
                     </ab>
                 </div>
                 <div type="textpart" subtype="section" n="B">
                 <ab>
-                    <lb n="1"/><g ref="#cross_latin">†</g> <persName type="attested"><name>Τίτο<unclear>ς</unclear></name> <g ref="#ivy-leaf">❦</g> <name>Αἴλις</name> <supplied reason="lost" evidence="previouseditor"><name>Βικτωρεῖνος</name></supplied></persName> <w><supplied reason="lost" evidence="previouseditor">ἔζησεν</supplied></w> <w><supplied reason="lost" evidence="previouseditor">ἔτη</supplied></w> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">·</g></supplied> <supplied reason="lost" evidence="previouseditor"><num value="16">ις</num></supplied> <w><supplied reason="lost" evidence="previouseditor">μῆνες</supplied></w> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">·</g></supplied> <supplied reason="lost" evidence="previouseditor"><num value="5">ε</num></supplied> <w><supplied reason="lost" evidence="previouseditor">ἡμέρας</supplied></w> <supplied reason="lost" evidence="previouseditor"><num value="17">ιζ</num></supplied> <w><supplied reason="lost" evidence="previouseditor">ἀδελφοὶ</supplied></w>
-                    <lb n="2"/><w><supplied reason="lost" evidence="previouseditor">εὐσεβεῖς</supplied></w> <w><supplied reason="lost" evidence="previouseditor">ἐποίησαν</supplied></w> <w><supplied reason="lost" evidence="previouseditor">σὺν</supplied></w> <w><supplied reason="lost" evidence="previouseditor">μητρὶ</supplied></w> <w><supplied reason="lost" evidence="previouseditor">ἐκ</supplied></w> <w><supplied reason="lost" evidence="previouseditor">τῶν</supplied></w> <w><supplied reason="lost" evidence="previouseditor">αὐτοῦ</supplied></w> <gap reason="lost" extent="unknown" unit="character" cert="low"/>
+                    <lb n="1" /><g ref="#cross_latin">&#8224;</g> <persName type="attested"><name>&#932;&#943;&#964;&#959;<unclear>&#962;</unclear></name> <g ref="#ivy-leaf">&#10086;</g> <name>&#913;&#7988;&#955;&#953;&#962;</name> <supplied reason="lost" evidence="previouseditor"><name>&#914;&#953;&#954;&#964;&#969;&#961;&#949;&#8150;&#957;&#959;&#962;</name></supplied></persName> <w><supplied reason="lost" evidence="previouseditor">&#7956;&#950;&#951;&#963;&#949;&#957;</supplied></w> <w><supplied reason="lost" evidence="previouseditor">&#7956;&#964;&#951;</supplied></w> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">&#183;</g></supplied> <supplied reason="lost" evidence="previouseditor"><num value="16">&#953;&#962;</num></supplied> <w><supplied reason="lost" evidence="previouseditor">&#956;&#8134;&#957;&#949;&#962;</supplied></w> <supplied reason="lost" evidence="previouseditor"><g ref="#interpunct">&#183;</g></supplied> <supplied reason="lost" evidence="previouseditor"><num value="5">&#949;</num></supplied> <w><supplied reason="lost" evidence="previouseditor">&#7969;&#956;&#941;&#961;&#945;&#962;</supplied></w> <supplied reason="lost" evidence="previouseditor"><num value="17">&#953;&#950;</num></supplied> <w><supplied reason="lost" evidence="previouseditor">&#7936;&#948;&#949;&#955;&#966;&#959;&#8054;</supplied></w>
+                    <lb n="2" /><w><supplied reason="lost" evidence="previouseditor">&#949;&#8016;&#963;&#949;&#946;&#949;&#8150;&#962;</supplied></w> <w><supplied reason="lost" evidence="previouseditor">&#7952;&#960;&#959;&#943;&#951;&#963;&#945;&#957;</supplied></w> <w><supplied reason="lost" evidence="previouseditor">&#963;&#8058;&#957;</supplied></w> <w><supplied reason="lost" evidence="previouseditor">&#956;&#951;&#964;&#961;&#8054;</supplied></w> <w><supplied reason="lost" evidence="previouseditor">&#7952;&#954;</supplied></w> <w><supplied reason="lost" evidence="previouseditor">&#964;&#8182;&#957;</supplied></w> <w><supplied reason="lost" evidence="previouseditor">&#945;&#8016;&#964;&#959;&#8166;</supplied></w> <gap reason="lost" extent="unknown" unit="character" cert="low" />
                 </ab>
             </div>
             </div>
@@ -218,8 +215,8 @@
                 <listApp>
                     <app><note>Text based on photograph and previous editors</note></app>
                     <app loc="B.1"><note>Mommsen TITO S[-]ATAR/ae</note></app> 
-                    <app loc="B.1"><note>Walther, Amico, Torremuzza, Ferrara, Kirchhof, Ferrua, Korhonen: ἔτη ις´, μῆνες ε´; Kaibel, Wessel: ἔτη ις´ (vel ιγ´), μῆνες ε´ (vel θ´)</note></app>
-                    <app loc="B.2"><note>Walther, Amico, Torremuzza, Ferrara, Kirchhof, Ferrua, Korhonen: αὐτοῦ; Kaibel, Wessel: αὐτῶν</note></app> 
+                    <app loc="B.1"><note>Walther, Amico, Torremuzza, Ferrara, Kirchhof, Ferrua, Korhonen: &#7956;&#964;&#951; &#953;&#962;&#8189;, &#956;&#8134;&#957;&#949;&#962; &#949;&#8189;; Kaibel, Wessel: &#7956;&#964;&#951; &#953;&#962;&#8189; (vel &#953;&#947;&#8189;), &#956;&#8134;&#957;&#949;&#962; &#949;&#8189; (vel &#952;&#8189;)</note></app>
+                    <app loc="B.2"><note>Walther, Amico, Torremuzza, Ferrara, Kirchhof, Ferrua, Korhonen: &#945;&#8016;&#964;&#959;&#8166;; Kaibel, Wessel: &#945;&#8016;&#964;&#8182;&#957;</note></app> 
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
@@ -229,16 +226,9 @@
                 <p>Titos Aelios Victorinos visse 18 anni, 5 mesi e 17 giorni. I suoi fratelli pietosi hanno realizzato (questo) insieme con la loro madre dagli averi di Vittorino ...</p>
             </div>
             <div type="commentary" resp="#martaf #JP">
-                <p>Walther and Vallambert (in Cod. Vat. Lat. 6039 f. 85v) describe the relief, in which a bare-headed man with a long tunic was surrounded by two young boys, one riding a horse, the other leading another horse (the names of the boys were inscribed on the relief <foreign xml:lang="grc">ΜΕΜΦΙΣ</foreign> and <foreign xml:lang="grc">ΔΕΚΕΝΙΟΣ</foreign>, the latter written right to left). The epitaph was considered to be Christian by the editors before Ferrua because of the cross symbol before <foreign xml:lang="grc">Τίτος</foreign>. However, the symbol has proven to be later, perhaps modern, since Vallambert in the mid-16th century did not see it. The cross may have been inscribed at a later stage to make the object “more Christian”. Apart from this, there is no other evidence for a Christian provenance of the inscription: the subject of the relief argues rather in favour of a pagan provenance of the document, as Ferrua remarks. The two naked young men near horses may refer to the Dioscuri, just as the expression <foreign xml:lang="grc">ἀδελφοὶ εὐσεβεῖς</foreign> may refer to another pair of brothers famous in Catania, the <foreign xml:lang="la">Pii fratres</foreign>, named also in IG 14.502 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001323">ISic001323</ref>. The grave could also have been built not by the brothers of the deceased, but “metaphorically” by the <foreign xml:lang="la">Pii fratres</foreign>, that is by his mother under the protection of the divine brothers.</p>
-                <p>Korhonen favours a dating to the second half of the 2nd century CE because Titus Aelius was often adopted by freedmen after the reign of Antoninus Pius. For the expression <foreign xml:lang="grc">ἐκ τῶν αὐτοῦ</foreign> as the equivalent of <foreign xml:lang="la">sua pecunia</foreign>, see IG 14.574 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001393">ISic001393</ref>.</p>
-                <!--Korhonen comments: L'iscrizione fu collocata tra le cristiane da Kirchhoff, Kaibel e dagli altri studiosi anteriori a Ferrua, ma come ha affermato quest'ultimo - che, comunque, non vide neanche il frammento - si tratta di un sarcofago di epoca anteriore. In base alle caratteristiche del monumento, Ferrua lo voleva datare al principio del secolo III. Questo è possibile (cioè, la prima metà del III secolo), ma la combinazione T. Aelius, usata dai liberti di Antonino Pio e dai loro discendenti, potrebbe riportare l'iscrizione anche nella seconda metà del II secolo. Una croce iniziale sarebbe in questa epoca assolutamente insolita (vd. Ferrua). Il Vallambert, nella metà del Cinquecento, non la riporta, e credo che possa essere stata incisa dopo che Vallambert vide il monumento, per renderlo "meno pagano" in una chiesa. - Il formulario è insolito a Catania. Alla fine Kaibel ha senza motivo voluto emendare la lettura di Walther in αὑτ[ῶν], un'espressione molto rara. Il significato di ἐκ τῶν αὐτοῦ, un nesso ben attestato, è "dall'eredità di T. Aelius Victorinus". È interessante il nesso ἀδελφοὶ εὐσεβεῖς: forse i fratelli di T. Aelius Victorinus si sono identificati con i Pii fratres, simboli di Catania.</p>
-                <p>Italian edition online in <ref target="http://epicum.istc.cnr.it/EPICUM/?page_id=4570">EpiCUM570</ref></p>
-                <p>Korhonen reports: 
-                    "Catinae in episcopali templo Agathae", Vallambert, Walther. "Sepulcrum, cuius tertia pars, ara, clusa est, templi parieti coniuncta. 
-                    In fronte sepulcri circulus, in cuius medio pars hominis superior, nudo capite ac talari veste, qui quidem circulus a lateribus pueros nudos 
-                    equis insidentes habet, latera vero sepulcri pensiles coronas" Vallambert; "utrinque nudus puellus, hic equo insidet, ille equum ducit; 
-                    illi ΜΕΜΦΙϹ, huic ΔΕΚΕΝΙΟϹ [da destra a sinistra] adscriptum" Walther. Il monumento fu certamente danneggiato nel terremoto del 1693; 
-                    il frammento esistente è stato segnalato nel Museo Biscari da Mommsen, che lo considerava moderno.-->
+                <p>Walther and Vallambert (in Cod. Vat. Lat. 6039 f. 85v) describe the relief, in which a bare-headed man with a long tunic was surrounded by two young boys, one riding a horse, the other leading another horse (the names of the boys were inscribed on the relief <foreign xml:lang="grc">&#924;&#917;&#924;&#934;&#921;&#931;</foreign> and <foreign xml:lang="grc">&#916;&#917;&#922;&#917;&#925;&#921;&#927;&#931;</foreign>, the latter written right to left). The epitaph was considered to be Christian by the editors before Ferrua because of the cross symbol before <foreign xml:lang="grc">&#932;&#943;&#964;&#959;&#962;</foreign>. However, the symbol has proven to be later, perhaps modern, since Vallambert in the mid-16th century did not see it. The cross may have been inscribed at a later stage to make the object &#8220;more Christian&#8221;. Apart from this, there is no other evidence for a Christian provenance of the inscription: the subject of the relief argues rather in favour of a pagan provenance of the document, as Ferrua remarks. The two naked young men near horses may refer to the Dioscuri, just as the expression <foreign xml:lang="grc">&#7936;&#948;&#949;&#955;&#966;&#959;&#8054; &#949;&#8016;&#963;&#949;&#946;&#949;&#8150;&#962;</foreign> may refer to another pair of brothers famous in Catania, the <foreign xml:lang="la">Pii fratres</foreign>, named also in IG 14.502 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001323">ISic001323</ref>. The grave could also have been built not by the brothers of the deceased, but &#8220;metaphorically&#8221; by the <foreign xml:lang="la">Pii fratres</foreign>, that is by his mother under the protection of the divine brothers.</p>
+                <p>Korhonen favours a dating to the second half of the 2nd century CE because Titus Aelius was often adopted by freedmen after the reign of Antoninus Pius. For the expression <foreign xml:lang="grc">&#7952;&#954; &#964;&#8182;&#957; &#945;&#8016;&#964;&#959;&#8166;</foreign> as the equivalent of <foreign xml:lang="la">sua pecunia</foreign>, see IG 14.574 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001393">ISic001393</ref>.</p>
+                
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -246,66 +236,66 @@
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
                         <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/310933">36</ref></citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS" />
                     <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
                     <bibl>
                         <author>Amico</author>
                         <date>1741</date>
                         <citedRange>260 no.1</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T" />
                     <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref></bibl>
                     <bibl>
                         <author>Torremuzza</author>
                         <date>1769</date>
                         <citedRange>256 no.54</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3" />
                     <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
                     <bibl>
                         <author>Torremuzza</author>
                         <date>1784</date>
                         <citedRange>274 no.62</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH" />
                     <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
                     <bibl>
                         <author>Ferrara</author>
                         <date>1829</date>
                         <citedRange>369 no.3</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN" />
                     <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref></bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0527</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F" />
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.1063*</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="IMusCatania">
                          <author>Korhonen</author>
                          <date>2004</date> 
                         <citedRange>52</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH" />
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
                     <bibl type="corpus" n="CIG">
                         <citedRange>4.9477</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS" />
                     <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref></bibl>
                     <bibl type="corpus" n="IGCVO">
                         <citedRange>9211</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK" />
                     <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref></bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1941</date>
                         <citedRange>162-164</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4HR4GXBX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/4HR4GXBX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001456">https://biblio.inscriptiones.org/epig10001456</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

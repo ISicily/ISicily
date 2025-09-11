@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -36,9 +33,9 @@
                 <idno type="filename">ISic000104</idno>
                 <idno type="TM">285236</idno>
                 <idno type="EDR">110876</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">22100057</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000104</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334146</idno>
                 <availability>
@@ -53,11 +50,11 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">420</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -75,12 +72,12 @@
                                         <depth unit="cm">9.2-9.4</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>A single line of monumental letters set neatly in the vertical middle of the available field.</p>
                                     <rs ana="#execution.alveolatae" ref="https://www.eagle-network.eu/voc/writing/lod/36.html">litterae alevolatae</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -88,11 +85,11 @@
                             <handNote><p>The letters are deeply square cut (7-12 mm deep, typically 8-10), without serifs, for the insertion of bronze letters, with triangular interpuncts and use of supraline on numeral. Bronze is preserved in the three interpuncts in fragment A, and the letter N in fragment A preserves some of the fixing material for the original bronze letter. Note that the I of 'vir' is extended, 138mm tall.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">114-123</height>
+                                    <height unit="mm" atLeast="114" atMost="123">114-123</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -106,25 +103,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0021" notAfter-custom="0050" evidence="lettering">Augustan or Julio-Claudian</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1878-02-16">Found in the context of excavation of a structure in the area between the castle and the duomo (precise description of the location varies, CIL says 'in piazza del Duomo', Salinas in NSA refers to excavations in the vicinity of the castle rock).<geo>37.9877585,13.6963563</geo></provenance><!-- representative point between duomo and castle -->
+                        <provenance type="found" subtype="discovered" when="1878-02-16">Found in the context of excavation of a structure in the area between the castle and the duomo (precise description of the location varies, CIL says 'in piazza del Duomo', Salinas in NSA refers to excavations in the vicinity of the castle rock).<geo>37.9877585,13.6963563</geo></provenance>
                         <provenance type="observed" subtype="autopsied">Prag 2022-07-13, in the courtyard of the Museo Civico.</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -163,47 +160,47 @@
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-08-23" who="#JP">Jonathan Prag added image</change>
                 <change when="2024-04-08" who="#JP">Jonathan Prag revised from autopsy</change>
-                <change when="2025-04-30" who="#RC>">Robert Crellin corrected automatic tokenization</change>
+                <change when="2025-04-30" who="#RC&gt;">Robert Crellin corrected automatic tokenization</change>
                 </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000104_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
             <graphic n="print" url="ISic000104.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
             <graphic n="screen" url="ISic000104_copy2_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
             <graphic n="print" url="ISic000104_copy2.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
          </surface>
         <surface type="left">
             <graphic n="screen" url="ISic000104_left_tiled.tif" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
             <graphic n="print" url="ISic000104_left.jpg" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
         </surface>
         <surface type="right">
             <graphic n="screen" url="ISic000104_right_tiled.tif" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
             <graphic n="print" url="ISic000104_right.jpg" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
         </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic000104_rear_tiled.tif" height="1960px" width="4032px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
             <graphic n="print" url="ISic000104_rear.jpg" height="1960px" width="4032px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J.Prag 2022-07-13</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo J.Prag 2022-07-13</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -211,13 +208,13 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #RC">
                 <ab>
-                    <lb n="1" xml:id="AKoAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKoAU"/>
-                    <persName type="attested" xml:id="AKoAe"><name xml:id="AKoAo"><expan xml:id="AKoAy"><abbr xml:id="AKoAΙ">Cn</abbr><ex xml:id="AKoAΤ">aei</ex></expan></name>
-                        <g ref="#interpunct" xml:id="AKoAε">·</g> <w xml:id="AKoAο"><expan xml:id="AKoBA"><abbr xml:id="AKoBK">f</abbr><ex xml:id="AKoBU">ilius</ex></expan></w></persName> 
-                    <g ref="#interpunct" xml:id="AKoBe">·</g> <roleName type="civic" subtype="duumvir" xml:id="AKoBo"><w xml:id="AKoBt"><expan><abbr><hi rend="supraline" xml:id="AKoBΙ">II</hi></abbr><ex>duum</ex></expan>
-                            <g ref="#interpunct" xml:id="AKoCΜ">·</g>v<hi rend="tall" xml:id="AKoBΤ">i</hi>r</w></roleName> <g ref="#interpunct" xml:id="AKoCA">·</g> 
+                    <lb n="1" xml:id="AKoAK" /><gap reason="lost" extent="unknown" unit="character" xml:id="AKoAU" />
+                    <persName type="attested" xml:id="AKoAe"><name xml:id="AKoAo"><expan xml:id="AKoAy"><abbr xml:id="AKoA&#921;">Cn</abbr><ex xml:id="AKoA&#932;">aei</ex></expan></name>
+                        <g ref="#interpunct" xml:id="AKoA&#949;">&#183;</g> <w xml:id="AKoA&#959;"><expan xml:id="AKoBA"><abbr xml:id="AKoBK">f</abbr><ex xml:id="AKoBU">ilius</ex></expan></w></persName> 
+                    <g ref="#interpunct" xml:id="AKoBe">&#183;</g> <roleName type="civic" subtype="duumvir" xml:id="AKoBo"><w xml:id="AKoBt"><expan><abbr><hi rend="supraline" xml:id="AKoB&#921;">II</hi></abbr><ex>duum</ex></expan>
+                            <g ref="#interpunct" xml:id="AKoC&#924;">&#183;</g>v<hi rend="tall" xml:id="AKoB&#932;">i</hi>r</w></roleName> <g ref="#interpunct" xml:id="AKoCA">&#183;</g> 
                     <w xml:id="AKoCK"><expan xml:id="AKoCU"><abbr xml:id="AKoCe">quinq</abbr><ex xml:id="AKoCo">uennalis</ex></expan></w> 
-                    <g ref="#interpunct" xml:id="AKoCy">·</g> <gap reason="illegible" unit="character" quantity="1" xml:id="AKoCΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AKoCΤ"/>
+                    <g ref="#interpunct" xml:id="AKoCy">&#183;</g> <gap reason="illegible" unit="character" quantity="1" xml:id="AKoC&#921;" /><gap reason="lost" extent="unknown" unit="character" xml:id="AKoC&#932;" />
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
@@ -239,26 +236,26 @@
                         <title>NSA</title>
                         <date>1878</date>
                         <citedRange>72</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
                     </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650797">10.7356</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
                     </bibl>
                     <bibl type="corpus" n="ILMusTermini">
                          <author>Bivona</author>
                          <date>1994</date> 
                         <citedRange>22</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79" />
                     <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
                     </bibl>
-                    <bibl/>
+                    <bibl />
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

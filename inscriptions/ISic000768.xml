@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -28,9 +25,9 @@
                 <idno type="filename">ISic000768</idno>
                 <idno type="TM">175722</idno>
                 <idno type="EDR">075544</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">9401428</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000768</idno>
                 <idno type="DOI" when="2020-09-09">10.5281/zenodo.4021521</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000768</idno>
@@ -49,11 +46,11 @@
                         <settlement>Halaesa</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/053">Antiquarium e sito archeologico di Halaesa</repository>
                         <idno type="inventory">ME 20226</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -71,12 +68,12 @@
                                         <depth unit="cm">21</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>The epigraphic face is preserved for a width of 12.5 cm, with two lines of Latin letters filling the available field.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -84,7 +81,7 @@
                             <handNote><p>The letters are tall, neatly cut and closely spaced (height c.30mm), and words are separated by simple triangular interpuncts. The letters are lightly serifed. E is tall and narrow, T has a curved cross-bar, rising to the right.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30</height>
+                                    <height unit="mm" atLeast="30" atMost="30">30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -107,7 +104,7 @@
                         <provenance type="found" subtype="discovered">Excavated 10 September 1970, in front of room 2 of the west portico of the agora; found in contact with the pavement of the portico<geo>37.998047, 14.262635</geo></provenance>
                         <provenance type="observed">On display.</provenance>
                         <provenance type="observed" subtype="autopsied" resp="#JP">2011.06.15</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                     
                 </msDesc>
@@ -115,16 +112,16 @@
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -188,8 +185,8 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">Conco</supplied><unclear>r</unclear>diae · Aug<supplied reason="lost">ustae</supplied><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>ethus · <roleName type="civic.religious" subtype="sevir">sev<supplied reason="lost">ir</supplied></roleName><gap reason="lost" extent="unknown" unit="character"/>                    
+                    <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><supplied reason="lost">Conco</supplied><unclear>r</unclear>diae &#183; Aug<supplied reason="lost">ustae</supplied><gap reason="lost" extent="unknown" unit="character" />
+                    <lb n="2" /><gap reason="lost" extent="unknown" unit="character" />ethus &#183; <roleName type="civic.religious" subtype="sevir">sev<supplied reason="lost">ir</supplied></roleName><gap reason="lost" extent="unknown" unit="character" />                    
                 </ab>
             </div>
             <div type="apparatus">
@@ -199,65 +196,65 @@
                 <p>[---]to Augustan Concord[---(set up by) -]ethus, sevir[---]</p>
             </div>
             <div type="commentary" resp="#JP">
-                <p>The fragment is likely to have formed part of the base of a statue, a dedication by a sevir. The extent of the text to left and right cannot be established. As previous editors have noted, Augustan concord is often associated with pax (for which see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003576">ISic003576</ref>) or spes and one of those may have stood in the first part of line 1 (Portale 2009: 85 n.46). The full name of the sevir must have stood in the latter part of line 1 and/or the first part of line 2. Manganaro (1989: 190, under no.80) suggested that this could be Aulus Mevius Zethus, known from another inscription from Halaesa (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000767">ISic000767</ref>) and plausibly restored the text as: Concordiae Augustae sacrum |  A(ulus) Mevius Zethus sevir Augustalis, i.e. “Sacred to Augustan Concord. Aulus Mevius Zethus, sevir Augustalis (set this up)”.</p>
+                <p>The fragment is likely to have formed part of the base of a statue, a dedication by a sevir. The extent of the text to left and right cannot be established. As previous editors have noted, Augustan concord is often associated with pax (for which see <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003576">ISic003576</ref>) or spes and one of those may have stood in the first part of line 1 (Portale 2009: 85 n.46). The full name of the sevir must have stood in the latter part of line 1 and/or the first part of line 2. Manganaro (1989: 190, under no.80) suggested that this could be Aulus Mevius Zethus, known from another inscription from Halaesa (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000767">ISic000767</ref>) and plausibly restored the text as: Concordiae Augustae sacrum |  A(ulus) Mevius Zethus sevir Augustalis, i.e. &#8220;Sacred to Augustan Concord. Aulus Mevius Zethus, sevir Augustalis (set this up)&#8221;.</p>
                 <p>The inscription was found in the same area of the portico as an acephalous statue of a female figure found in 1895 (inv. 20193; Portale 2009: 80 n.30 and 82 n.36), not dissimilar to the statue of Ceres dedicated by another sevir (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000804">ISic000804</ref>). Portale (2009: 85-87) has suggested that the inscription should be associated with the statue, which would then be a representation of Concord. The statue is dated stylistically to the early Antonine period (140s BC), about a generation earlier than the statue of Ceres. Such a date would be entirely compatible with the form of the inscription, which could be later first or second century AD (and that of Mevius Zethus could be first or second century also). The inscribed base and statue would presumably originally have stood in a niche in one of the rooms of the portico.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>1973.0271</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl>
                         <author>Scibona</author>
                         <date>1971</date>
                         <citedRange>17 no.7 fig.1</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/UISW82JC"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/UISW82JC" />
                     <ref target="https://biblio.inscriptiones.org/epig10001599">https://biblio.inscriptiones.org/epig10001599</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>47</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1989</date>
                         <citedRange>190</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/EZMBJ6GN"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/EZMBJ6GN" />
                     <ref target="https://biblio.inscriptiones.org/epig10001831">https://biblio.inscriptiones.org/epig10001831</ref></bibl>
                     <bibl>
                         <author>Facella</author>
                         <date>2006</date>
                         <citedRange>288</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/J4XWZPV6"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/J4XWZPV6" />
                     <ref target="https://biblio.inscriptiones.org/epig10002013">https://biblio.inscriptiones.org/epig10002013</ref></bibl>
                     <bibl>
                         <author>Scibona</author>
                         <date>2008</date>
                         <citedRange>26 ph</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/6GFVUASD"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/6GFVUASD" />
                     <ref target="https://biblio.inscriptiones.org/epig10001593">https://biblio.inscriptiones.org/epig10001593</ref></bibl>
                     <bibl>
                         <author>Portale</author>
                         <date>2009</date>
                         <citedRange>85-87</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/BCIMMIKZ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/BCIMMIKZ" />
                     <ref target="https://biblio.inscriptiones.org/epig10001670">https://biblio.inscriptiones.org/epig10001670</ref></bibl>
                     <bibl>
                         <author>Prestianni Giallombardo</author>
                         <date>2012</date>
                         <citedRange>183 fig.172</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/CJISRIUV"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/CJISRIUV" />
                     <ref target="https://biblio.inscriptiones.org/epig10001357">https://biblio.inscriptiones.org/epig10001357</ref></bibl>
                     <bibl>
                         <author>Prag and Tigano</author>
                         <date>2017</date>
                         <citedRange>no.15</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
+                        <ptr target="http://zotero.org/groups/382445/items/MI64NB9L" />
                     <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

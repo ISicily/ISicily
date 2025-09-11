@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,8 +24,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003565</idno>
                 <idno type="TM">175860</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">65100060</idno>
                 <idno type="PHI">336965</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003565</idno>
@@ -45,11 +42,11 @@
                         <settlement>Modica</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/094">Museo Archeologico Belgiorno</repository>
                         <idno type="inventory">2217</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -61,18 +58,18 @@
                                 <support><p>Fragment of a limestone plaque, of the sort used for covering loculi; text is complete</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Rizzone Sammito 2005-->
+                                    <dimensions>
                                         <height unit="cm">16.5</height>
                                         <width unit="cm">19</width>
                                         <depth unit="cm">4.2</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.fragment"/>
+                                <condition ana="#condition.fragment" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Filling the available space, with vacat below</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
+                                	<damage ana="#text_condition.complete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -80,11 +77,11 @@
                             <handNote><p>lunate sigma and epsilon, uncial omega, alpha of the cursive variety; upsilon without stem</p>
                                 <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">28</height><!--Rizzone Sammito 2005-->
+                                    <height unit="mm" atLeast="28" atMost="28">28</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -98,25 +95,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" evidence="lettering textual-context">4th century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1980">Found in the Hypogeum of Dionysa, contrada Treppiedi (first identified 1980), and now in the Modica museo civico<geo>36.8343091,14.7756843</geo></provenance><!-- location of the hypogeum-->
+                        <provenance type="found" subtype="discovered" when="1980">Found in the Hypogeum of Dionysa, contrada Treppiedi (first identified 1980), and now in the Modica museo civico<geo>36.8343091,14.7756843</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -155,24 +152,16 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic003565_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic003565.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>ἀπέθανε
-                    <lb n="2"/><persName type="attested"><name>Διόνυσα</name></persName>
-                    <lb n="3"/><expan><abbr>πρ</abbr><ex>ὸ</ex></expan> <num value="3">γ</num> <expan><abbr>καλ</abbr><ex>ανδῶν</ex></expan> <choice><orig>Φλε
-                    <lb n="4" break="no"/>βαρίων</orig><reg>Φεβρουαρίων</reg></choice>
+                    <lb n="1" />&#7936;&#960;&#941;&#952;&#945;&#957;&#949;
+                    <lb n="2" /><persName type="attested"><name>&#916;&#953;&#972;&#957;&#965;&#963;&#945;</name></persName>
+                    <lb n="3" /><expan><abbr>&#960;&#961;</abbr><ex>&#8056;</ex></expan> <num value="3">&#947;</num> <expan><abbr>&#954;&#945;&#955;</abbr><ex>&#945;&#957;&#948;&#8182;&#957;</ex></expan> <choice><orig>&#934;&#955;&#949;
+                    <lb n="4" break="no" />&#946;&#945;&#961;&#943;&#969;&#957;</orig><reg>&#934;&#949;&#946;&#961;&#959;&#965;&#945;&#961;&#943;&#969;&#957;</reg></choice>
                 </ab>
             </div>
             <div type="apparatus">
@@ -181,47 +170,47 @@
                 </listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
-                <p>For the form <foreign xml:lang="grc">Φλεβαρίων</foreign>, compare <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001884">ISic001884</ref>.</p>
+                <p>For the form <foreign xml:lang="grc">&#934;&#955;&#949;&#946;&#945;&#961;&#943;&#969;&#957;</foreign>, compare <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001884">ISic001884</ref>.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>2003.0781</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>53.1025bis</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
                     <bibl>
                         <author>Di Stefano</author>
                         <date>2003</date>
                         <citedRange>888 tav.368 fig.3</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/7B32HZQA"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/7B32HZQA" />
                     <ref target="https://biblio.inscriptiones.org/epig10002032">https://biblio.inscriptiones.org/epig10002032</ref></bibl>
                     <bibl>
                         <author>Rizzone and Sammito</author>
                         <date>2005</date>
                         <citedRange>55 fig.8</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/QVZ3BJBB"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/QVZ3BJBB" />
                     <ref target="https://biblio.inscriptiones.org/epig10001629">https://biblio.inscriptiones.org/epig10001629</ref></bibl>
                     <bibl>
                         <author>Rizzone</author>
                         <date>2009</date>
                         <citedRange>57 no.7</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/8ENX9UZ5"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/8ENX9UZ5" />
                     <ref target="https://biblio.inscriptiones.org/epig10001633">https://biblio.inscriptiones.org/epig10001633</ref></bibl>
                     <bibl>
                         <author>Rizzone, Sammito, Sirugo</author>
                         <date>2009</date>
                         <citedRange>78 fig. 48</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/63PABBLY"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/63PABBLY" />
                      </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

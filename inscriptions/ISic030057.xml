@@ -1,11 +1,8 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Contract for the sale of a house and related structures</title><!--edit to reflect Souza 2022 in ZPE-->
+            <title>Contract for the sale of a house and related structures</title>
             <editor ref="#JP">Jonathan Prag</editor>
 	<principal ref="#RDS">Randall Souza</principal>
             <funder>John Fell OUP Research Fund</funder>
@@ -36,7 +33,7 @@
             <idno type="filename">ISic030057</idno>
             <idno type="TM">698778</idno>
             <idno type="EDR">153131</idno>
-            <idno type="EDH"/>
+            <idno type="EDH" />
             <idno type="EDCS">71000208</idno>
             <idno type="PHI">340012</idno>
             <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030057</idno>
@@ -50,10 +47,10 @@
                   <country>Italy</country>
                   <region>Sicily</region>
                      <settlement>Ragusa</settlement>
-                  <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository><!-- aka Museo Regionale Interdisciplinare di Ragusa -->
-                  <idno type="inventory"/><!--I don't believe that the Ricotti Prina objects ever received inventory numbers #RDS-->
+                  <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/091">Museo Archeologico Ibleo</repository>
+                  <idno type="inventory" />
                   <altIdentifier>
-                     <idno/>
+                     <idno />
                   </altIdentifier>
                 </msIdentifier>
                <msContents>
@@ -72,13 +69,13 @@
                               <depth unit="cm">0.1</depth>
                            </dimensions>
                         </support>
-                        <condition ana="#condition.damaged"/>
+                        <condition ana="#condition.damaged" />
                      </supportDesc>
                      <layoutDesc>
                         <layout>
                            <p>The top of the sheet is damaged and the first line of text is not well preserved, but does appear to be the first line of the document. The right margin is entirely preserved. The bottom of the sheet is damaged but the final preserved line of text does appear to be the last line of the document. The left margin is unknown, and it is an open question how much text is lost on the left side (see below in commentary). The text wraps and several words are continued fron one line onto the next, breaking roughly between syllables (Lines 4, 5).</p>
                            <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
-                           <damage ana="#text_condition.incomplete"/>
+                           <damage ana="#text_condition.incomplete" />
                            </layout>
                      </layoutDesc>
                   </objectDesc>
@@ -89,7 +86,7 @@
                      </handNote>
                      <handNote n="hand1" xml:id="m1">
                         <dimensions type="letterHeight">
-                           <height unit="mm">2</height>
+                           <height unit="mm" atLeast="2" atMost="2">2</height>
                         </dimensions>
                         <dimensions type="interlinear">
                            <height unit="mm">not recorded</height>
@@ -115,16 +112,16 @@
       </fileDesc>
       <encodingDesc>
          <p>Encoded following the latest EpiDoc guidelines</p>
-         <xi:include href="../alists/ISicily-taxonomies.xml">
-            <xi:fallback>
+         <ns1:include href="../alists/ISicily-taxonomies.xml">
+            <ns1:fallback>
                <p>Taxonomies for ISicily controlled values</p>
-            </xi:fallback>
-         </xi:include>
-         <xi:include href="../alists/charDecl.xml">
-            <xi:fallback>
+            </ns1:fallback>
+         </ns1:include>
+         <ns1:include href="../alists/charDecl.xml">
+            <ns1:fallback>
                <p>ISicily glyphs authority list</p>
-            </xi:fallback>
-         </xi:include>
+            </ns1:fallback>
+         </ns1:include>
       </encodingDesc>
       <profileDesc>
          <calendarDesc>
@@ -159,79 +156,79 @@
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface/>
+      <surface />
    </facsimile>
    <text>
       <body>
          <div type="edition" xml:space="preserve" xml:lang="grc" resp="#RDS">
          <ab>
-         <lb n="1"/><gap reason="lost" atMost="3" atLeast="2" unit="character"/><orig>ΙΧ</orig><gap reason="lost" extent="unknown" unit="character"/><orig>ΛΙ</orig><gap reason="lost" extent="unknown" unit="character"/>
-         <lb n="2"/><gap reason="lost" atMost="3" atLeast="2" unit="character"/>αρχος <supplied reason="lost">Ἁ</supplied>γελόχου ἕκτα <expan><abbr>δευ</abbr><ex>τέρα</ex></expan> οἰκίαν πασ<unclear>τ</unclear><supplied reason="lost">ά</supplied>δα
-         <lb n="3"/><gap reason="lost" atMost="3" atLeast="2" unit="character"/><supplied reason="lost">λ</supplied>αύραι τοῦ Ἡρακλέος καὶ τὰς αὐλὰς ἐκ το<unclear>ῦ</unclear> <unclear>θ</unclear>αλ<unclear>ά</unclear><supplied reason="lost">μ</supplied>μου
-         <lb n="4"/><gap reason="lost" atMost="3" atLeast="2" unit="character"/>ν καὶ τὸ φρῆν καὶ τὰν μύλαν ἴδιον καὶ τὰ <supplied reason="lost">θ</supplied>υρώμα
-         <lb n="5" break="no"/><supplied reason="lost">τα</supplied><gap reason="lost" atMost="3" atLeast="2" unit="character"/><orig>Α</orig> πέντε ταλάντων πὰρ Δικαιαγόρας τᾶς Ἀν<unclear>τ</unclear>άλ
-         <lb n="6" break="no"/><supplied reason="lost">λου</supplied> <unclear>χ</unclear>ήρας <orig><unclear>Ι</unclear>Ϲ</orig><gap reason="lost" extent="unknown" unit="character"/> <space extent="unknown" unit="character"/>
-         <lb n="7"/><supplied reason="lost">Διογ</supplied>ένης Πρά<gap reason="lost" extent="unknown" unit="character"/> <expan><abbr>δ</abbr><ex>εκάτα</ex></expan> <expan><abbr>πρώ</abbr><ex>τα</ex></expan> <space extent="unknown" unit="character"/>
-         <lb n="8"/><supplied reason="lost">Ἡρα</supplied><unclear>κ</unclear>λείδα<unclear>ς</unclear> <gap reason="lost" extent="unknown" unit="character"/> ἕκτα <expan><abbr>δευ</abbr><ex>τέρα</ex></expan> <space extent="unknown" unit="character"/>
-         <lb n="9"/><supplied reason="lost" cert="low">Διον</supplied><unclear>ο</unclear>ύσιος <orig><unclear>Ω</unclear></orig><gap reason="lost" extent="unknown" unit="character"/> <expan><abbr>δευ</abbr><ex>τέρα</ex></expan> <space extent="unknown" unit="character"/>
-         <lb n="10"/><gap reason="lost" atLeast="5" atMost="6" unit="character"/><gap reason="illegible" extent="1" unit="character"/>ος Εὐ<unclear>ω</unclear><space extent="unknown" unit="character"/>
-         <lb n="11"/><gap reason="lost" extent="unknown" unit="character"/> <expan><abbr>δευ</abbr><ex>τέρα</ex></expan> <space extent="unknown" unit="character"/>
-         <lb n="12"/><gap reason="lost" extent="unknown" unit="character"/> <expan><abbr>δ</abbr><ex>εκάτ</ex><abbr>α</abbr></expan> <expan><abbr>δευ</abbr><ex>τέρα</ex></expan> <space extent="unknown" unit="character"/>
-         <lb n="13"/><gap reason="lost" extent="unknown" unit="character"/> <expan><abbr>ἕκτ</abbr><ex>α</ex></expan> <expan><abbr>δευ</abbr><ex>τέρα</ex></expan> ἢ δεκάτα πρώτα <space extent="unknown" unit="character"/>
-         <lb n="14"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">δεκ</supplied>άτα πράτα <space extent="unknown" unit="character"/>
-         <lb n="15"/><gap reason="lost" extent="unknown" unit="character"/><space extent="unknown" unit="character"/>
-         <lb n="16"/><gap reason="lost" extent="unknown" unit="character"/> <expan><abbr><supplied reason="lost">τ</supplied>ρί</abbr><ex>τα</ex></expan> καὶ δεκάτ<supplied reason="lost">α</supplied> <space extent="unknown" unit="character"/>
-         <lb n="17"/><space quantity="1" unit="line"/>
+         <lb n="1" /><gap reason="lost" atMost="3" atLeast="2" unit="character" /><orig>&#921;&#935;</orig><gap reason="lost" extent="unknown" unit="character" /><orig>&#923;&#921;</orig><gap reason="lost" extent="unknown" unit="character" />
+         <lb n="2" /><gap reason="lost" atMost="3" atLeast="2" unit="character" />&#945;&#961;&#967;&#959;&#962; <supplied reason="lost">&#7945;</supplied>&#947;&#949;&#955;&#972;&#967;&#959;&#965; &#7957;&#954;&#964;&#945; <expan><abbr>&#948;&#949;&#965;</abbr><ex>&#964;&#941;&#961;&#945;</ex></expan> &#959;&#7984;&#954;&#943;&#945;&#957; &#960;&#945;&#963;<unclear>&#964;</unclear><supplied reason="lost">&#940;</supplied>&#948;&#945;
+         <lb n="3" /><gap reason="lost" atMost="3" atLeast="2" unit="character" /><supplied reason="lost">&#955;</supplied>&#945;&#973;&#961;&#945;&#953; &#964;&#959;&#8166; &#7977;&#961;&#945;&#954;&#955;&#941;&#959;&#962; &#954;&#945;&#8054; &#964;&#8048;&#962; &#945;&#8016;&#955;&#8048;&#962; &#7952;&#954; &#964;&#959;<unclear>&#8166;</unclear> <unclear>&#952;</unclear>&#945;&#955;<unclear>&#940;</unclear><supplied reason="lost">&#956;</supplied>&#956;&#959;&#965;
+         <lb n="4" /><gap reason="lost" atMost="3" atLeast="2" unit="character" />&#957; &#954;&#945;&#8054; &#964;&#8056; &#966;&#961;&#8134;&#957; &#954;&#945;&#8054; &#964;&#8048;&#957; &#956;&#973;&#955;&#945;&#957; &#7988;&#948;&#953;&#959;&#957; &#954;&#945;&#8054; &#964;&#8048; <supplied reason="lost">&#952;</supplied>&#965;&#961;&#974;&#956;&#945;
+         <lb n="5" break="no" /><supplied reason="lost">&#964;&#945;</supplied><gap reason="lost" atMost="3" atLeast="2" unit="character" /><orig>&#913;</orig> &#960;&#941;&#957;&#964;&#949; &#964;&#945;&#955;&#940;&#957;&#964;&#969;&#957; &#960;&#8048;&#961; &#916;&#953;&#954;&#945;&#953;&#945;&#947;&#972;&#961;&#945;&#962; &#964;&#8118;&#962; &#7944;&#957;<unclear>&#964;</unclear>&#940;&#955;
+         <lb n="6" break="no" /><supplied reason="lost">&#955;&#959;&#965;</supplied> <unclear>&#967;</unclear>&#942;&#961;&#945;&#962; <orig><unclear>&#921;</unclear>&#1017;</orig><gap reason="lost" extent="unknown" unit="character" /> <space extent="unknown" unit="character" />
+         <lb n="7" /><supplied reason="lost">&#916;&#953;&#959;&#947;</supplied>&#941;&#957;&#951;&#962; &#928;&#961;&#940;<gap reason="lost" extent="unknown" unit="character" /> <expan><abbr>&#948;</abbr><ex>&#949;&#954;&#940;&#964;&#945;</ex></expan> <expan><abbr>&#960;&#961;&#974;</abbr><ex>&#964;&#945;</ex></expan> <space extent="unknown" unit="character" />
+         <lb n="8" /><supplied reason="lost">&#7977;&#961;&#945;</supplied><unclear>&#954;</unclear>&#955;&#949;&#943;&#948;&#945;<unclear>&#962;</unclear> <gap reason="lost" extent="unknown" unit="character" /> &#7957;&#954;&#964;&#945; <expan><abbr>&#948;&#949;&#965;</abbr><ex>&#964;&#941;&#961;&#945;</ex></expan> <space extent="unknown" unit="character" />
+         <lb n="9" /><supplied reason="lost" cert="low">&#916;&#953;&#959;&#957;</supplied><unclear>&#959;</unclear>&#973;&#963;&#953;&#959;&#962; <orig><unclear>&#937;</unclear></orig><gap reason="lost" extent="unknown" unit="character" /> <expan><abbr>&#948;&#949;&#965;</abbr><ex>&#964;&#941;&#961;&#945;</ex></expan> <space extent="unknown" unit="character" />
+         <lb n="10" /><gap reason="lost" atLeast="5" atMost="6" unit="character" /><gap reason="illegible" extent="1" unit="character" />&#959;&#962; &#917;&#8016;<unclear>&#969;</unclear><space extent="unknown" unit="character" />
+         <lb n="11" /><gap reason="lost" extent="unknown" unit="character" /> <expan><abbr>&#948;&#949;&#965;</abbr><ex>&#964;&#941;&#961;&#945;</ex></expan> <space extent="unknown" unit="character" />
+         <lb n="12" /><gap reason="lost" extent="unknown" unit="character" /> <expan><abbr>&#948;</abbr><ex>&#949;&#954;&#940;&#964;</ex><abbr>&#945;</abbr></expan> <expan><abbr>&#948;&#949;&#965;</abbr><ex>&#964;&#941;&#961;&#945;</ex></expan> <space extent="unknown" unit="character" />
+         <lb n="13" /><gap reason="lost" extent="unknown" unit="character" /> <expan><abbr>&#7957;&#954;&#964;</abbr><ex>&#945;</ex></expan> <expan><abbr>&#948;&#949;&#965;</abbr><ex>&#964;&#941;&#961;&#945;</ex></expan> &#7970; &#948;&#949;&#954;&#940;&#964;&#945; &#960;&#961;&#974;&#964;&#945; <space extent="unknown" unit="character" />
+         <lb n="14" /><gap reason="lost" extent="unknown" unit="character" /> <supplied reason="lost">&#948;&#949;&#954;</supplied>&#940;&#964;&#945; &#960;&#961;&#940;&#964;&#945; <space extent="unknown" unit="character" />
+         <lb n="15" /><gap reason="lost" extent="unknown" unit="character" /><space extent="unknown" unit="character" />
+         <lb n="16" /><gap reason="lost" extent="unknown" unit="character" /> <expan><abbr><supplied reason="lost">&#964;</supplied>&#961;&#943;</abbr><ex>&#964;&#945;</ex></expan> &#954;&#945;&#8054; &#948;&#949;&#954;&#940;&#964;<supplied reason="lost">&#945;</supplied> <space extent="unknown" unit="character" />
+         <lb n="17" /><space quantity="1" unit="line" />
          </ab>
          </div>
          <div type="apparatus" resp="#RDS">
            <listApp>
               <app><note>Text from Souza 2022 in ZPE.</note></app>
               <app loc="Line 2"><note>Manganaro does not expand the phratry-tribe designations here or elsewhere in the text.</note></app>
-              <app loc="Line 4"><note><supplied reason="lost">σὺ</supplied>ν, M. and C.</note></app>
+              <app loc="Line 4"><note><supplied reason="lost">&#963;&#8058;</supplied>&#957;, M. and C.</note></app>
               <app loc="Line 13"><note>On the lamina, the letter in the final word that must be an omega or an alpha is rendered oddly with two vertical lines.</note></app>
-              <app loc="Line 14"><note><expan><abbr>δυ</abbr><ex>ω</ex></expan> δ<supplied reason="lost">ε</supplied>κάτα, C.; </note></app>
-              <app loc="Line 15"><note>M. read <unclear>ΔΕΥ</unclear>; C. read <supplied reason="lost">ἕκτα</supplied> <expan><abbr>δευ</abbr><ex>τέρα</ex></expan>; I cannot detect the existence of letters on this line either by autopsy nor photography.</note></app>
-              <app loc="Line 16"><note><supplied reason="lost">Τ</supplied>ΡΙΚΑΙΔΕΚΑΤ<gap reason="illegible" extent="1" unit="character"/>, M.; <expan><abbr>τρί</abbr><ex>τα</ex></expan> και <expan><abbr>δεκάτ</abbr><ex>α</ex></expan>, C. and D.</note></app>
+              <app loc="Line 14"><note><expan><abbr>&#948;&#965;</abbr><ex>&#969;</ex></expan> &#948;<supplied reason="lost">&#949;</supplied>&#954;&#940;&#964;&#945;, C.; </note></app>
+              <app loc="Line 15"><note>M. read <unclear>&#916;&#917;&#933;</unclear>; C. read <supplied reason="lost">&#7957;&#954;&#964;&#945;</supplied> <expan><abbr>&#948;&#949;&#965;</abbr><ex>&#964;&#941;&#961;&#945;</ex></expan>; I cannot detect the existence of letters on this line either by autopsy nor photography.</note></app>
+              <app loc="Line 16"><note><supplied reason="lost">&#932;</supplied>&#929;&#921;&#922;&#913;&#921;&#916;&#917;&#922;&#913;&#932;<gap reason="illegible" extent="1" unit="character" />, M.; <expan><abbr>&#964;&#961;&#943;</abbr><ex>&#964;&#945;</ex></expan> &#954;&#945;&#953; <expan><abbr>&#948;&#949;&#954;&#940;&#964;</abbr><ex>&#945;</ex></expan>, C. and D.</note></app>
            </listApp>
          </div>
          <div type="translation" xml:lang="en" resp="#RDS">
             <p>When ??? was in office...--archos son of Hagelochos sixth (phratry)-second (tribe) bought a house, a portico...in the district of Herakles, and the courtyards from the inner room...and the well and the private mill and the doorways...for five talents from Dikaiagora the daughter of Antallos. [Guarantors:] Tenth (phratry)-first (tribe). Sixth (phratry)-second (tribe). Sixth (phratry)-second (tribe). Sixth (phratry)-second (tribe). Tenth (phratry)-second (tribe). Sixth (phratry)-second (tribe) or tenth (phratry)-first (tribe). Twelfth (phratry). Sixth (phratry)-second (tribe). Thirteenth (phratry).</p>
          </div>
          <div type="commentary">
-            <p/>
+            <p />
          </div>
-         <div type="bibliography"><!--start here-->
+         <div type="bibliography">
             <listBibl type="edition">
                <bibl type="bulletin" n="SEG">
                	<citedRange>39.1002</citedRange>
-               	<ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+               	<ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
 	 	<bibl type="bulletin" n="BE">
       			<citedRange>1999.0645</citedRange>
-			<ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+			<ptr target="http://zotero.org/groups/382445/items/77P5MNIR" />
 		<ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
 		 <bibl>
 			<author>Manganaro</author>
 			<date>1989</date>
 			<citedRange>199 Kam. VII fig.2</citedRange>
-			<ptr target="http://zotero.org/groups/382445/items/SIK4QJV4"/>
+			<ptr target="http://zotero.org/groups/382445/items/SIK4QJV4" />
 		<ref target="https://biblio.inscriptiones.org/epig10002637">https://biblio.inscriptiones.org/epig10002637</ref></bibl>
 		<bibl type="corpus" n="IGDS2">
                          <author>Dubois</author>
                          <date>2008</date>
 			<citedRange>51</citedRange>
-			<ptr target="http://zotero.org/groups/382445/items/SM2KDHZC"/>
+			<ptr target="http://zotero.org/groups/382445/items/SM2KDHZC" />
 		<ref target="https://biblio.inscriptiones.org/epig10000160">https://biblio.inscriptiones.org/epig10000160</ref></bibl>
 		<bibl>
 			<author>Souza</author>
 			<date>2022</date>
 			<citedRange>72 no.1</citedRange>
-			<ptr target="http://zotero.org/groups/382445/items/2RKAGTPR"/>
+			<ptr target="http://zotero.org/groups/382445/items/2RKAGTPR" />
 		<ref target="https://biblio.inscriptiones.org/epig10002688">https://biblio.inscriptiones.org/epig10002688</ref></bibl>
              </listBibl>
             <listBibl type="discussion">
-               <bibl/>
+               <bibl />
             </listBibl>
          </div>
       </body>

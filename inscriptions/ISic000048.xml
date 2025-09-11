@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -31,10 +28,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic000048</idno>
                 <idno type="TM">491487</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">21900308</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000048</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4333896</idno>
                 <availability>
@@ -49,11 +46,11 @@
                         <settlement>Palermo</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/064">Museo Archeologico Regionale Antonino Salinas</repository>
                         <idno type="inventory">3549</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -65,18 +62,18 @@
                                 <support><p>Small quadrangular base in marble (or the local Taormina breccia?), with a quadrangular depression in the centre with holes at the four corners.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
-                                    <dimensions><!--ILPalermo-->
+                                    <dimensions>
                                         <height unit="cm">10.5</height>
                                         <width unit="cm">23.5</width>
                                         <depth unit="cm">27</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Latin text over three lines, intended to be centred on the stone, but the right margin is poorly controlled and the text runs up against the edge.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -84,19 +81,19 @@
                             <handNote><p>Deeply incised letters (reflecting the need for exaggerated depth for visibility on this stone?) with serifs, and angular or comma-shaped interpuncts.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">18</height>
+                                    <height unit="mm" atLeast="18" atMost="18">18</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">15</height>
+                                    <height unit="mm" atLeast="15" atMost="15">15</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">15</height>
+                                    <height unit="mm" atLeast="15" atMost="15">15</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -108,27 +105,27 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
                             	<geo>37.85358, 15.28851</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200" precision="low">1st — 2nd century CE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0200" precision="low">1st &#8212; 2nd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1868">Acquired in 1868 from D. Gaetano Zucchero of Taormina, having been found in the area of the Chiesa di San Pancrazio, together with a statue of a priestess of Isis</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -170,23 +167,15 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic000048_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic000048.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA #JP">
                 <ab>
-                    <lb n="1"/><persName type="divine"><name>Serapi</name></persName> <g ref="#interpunct">·</g> <persName type="divine"><name>Isi</name></persName> <g ref="#interpunct">·</g> sacrum
-                    <lb n="2"/><persName type="attested"><name><expan><abbr>C</abbr><ex>aius</ex></expan></name> <g ref="#interpunct">·</g> <name>Ennius</name> <g ref="#interpunct">·</g> <name>Secundus</name></persName>
-                    <lb n="3"/>votum <g ref="#interpunct">·</g> <expan><abbr>a</abbr><ex cert="low">nimo</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>p</abbr><ex cert="low">io</ex></expan>
+                    <lb n="1" /><persName type="divine"><name>Serapi</name></persName> <g ref="#interpunct">&#183;</g> <persName type="divine"><name>Isi</name></persName> <g ref="#interpunct">&#183;</g> sacrum
+                    <lb n="2" /><persName type="attested"><name><expan><abbr>C</abbr><ex>aius</ex></expan></name> <g ref="#interpunct">&#183;</g> <name>Ennius</name> <g ref="#interpunct">&#183;</g> <name>Secundus</name></persName>
+                    <lb n="3" />votum <g ref="#interpunct">&#183;</g> <expan><abbr>a</abbr><ex cert="low">nimo</ex></expan> <g ref="#interpunct">&#183;</g> <expan><abbr>p</abbr><ex cert="low">io</ex></expan>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
@@ -199,42 +188,42 @@
                 <p>Sacred to Serapis and Isis, Caius Ennius Secundus (fulfilled) his vow with a dutiful spirit</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision--></p>
+                <p />
             </div>
-            <div type="bibliography"><!-- L. Bricault, RICIS supplément II, Bibliotheca Isiaca 2, 2011, 273-307, at 518/302; L. Vidman, Sylloge inscriptionum religionis Isiacae et Sarapiacae, Berlin 1969, at 514; and check Gasparini -->
+            <div type="bibliography">
                 <listBibl type="edition">
                     <bibl>
                         <author>Schoene</author>
                         <date>1867</date>
                         <citedRange>172-173</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RX6QDFXY"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RX6QDFXY" />
                         <ref target="https://biblio.inscriptiones.org/epig10003147">https://biblio.inscriptiones.org/epig10003147</ref>
                     </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650752">10.6989</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI" />
                     <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
                     <bibl type="corpus" n="ILMusPalermo">
                          <author>Bivona</author>
                          <date>1970</date> 
                         <citedRange>49</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6" />
                     <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1961</date>
                         <citedRange>177 with n.11</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HXK7DASC"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HXK7DASC" />
                     <ref target="https://biblio.inscriptiones.org/epig10001852">https://biblio.inscriptiones.org/epig10001852</ref></bibl>
                     <bibl>
                         <author>Muscolino</author>
                         <date>2014</date>
-                        <ptr target="https://www.zotero.org/groups/382445/items/8Z58IHXS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/8Z58IHXS" />
                     <ref target="https://biblio.inscriptiones.org/epig10002217">https://biblio.inscriptiones.org/epig10002217</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

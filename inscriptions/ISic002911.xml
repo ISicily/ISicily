@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -28,9 +25,9 @@
                 <idno type="filename">ISic002911</idno>
                 <idno type="TM">175820</idno>
                 <idno type="EDR">074096</idno>
-                <idno type="EDH"/>
+                <idno type="EDH" />
                 <idno type="EDCS">13600405</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002911</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4387737</idno>
                 <availability>
@@ -46,12 +43,12 @@
                         <region>Sicily</region>
                         <settlement>Piazza Armerina</settlement>
                         <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/198">Villa Romana del Casale</repository>
-                        <!--No inventory number found-->
-                        <!--Adding location for old id numbers if available-->
+                        
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -64,32 +61,32 @@
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.table" ref="https://www.eagle-network.eu/voc/objtyp/lod/157.html">table</objectType>
                                     <dimensions>
-                                        <!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                        
+                                        <height unit="cm" />
+                                        <width unit="cm" />
+                                        <depth unit="cm" />
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.fragments.non-contiguous"/>
+                                <condition ana="#condition.fragments.non-contiguous" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <!--Default value and requires checking-->
+                                    
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
+                                	<damage ana="#text_condition.incomplete" />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote><p>serifed letters, in some cases separated by hederae</p>
-                                <!--Manganaro-->
+                                
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">45</height>
+                                    <height unit="mm" atLeast="45" atMost="45">45</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -97,31 +94,31 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient"/>
+                                <placeName type="ancient" />
                                 <placeName type="modern" ref="http://sws.geonames.org/2523796">Piazza Armerina</placeName>		
                             	<geo>37.38417, 14.36921</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" precision="low">Severan (late 2nd — early 3rd century CE)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" precision="low">Severan (late 2nd &#8212; early 3rd century CE)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Material from excavation of the Villa Casale</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -162,42 +159,34 @@
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic002911_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic002911.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+    <facsimile><surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <div type="textpart" subtype="fragment-physical" n="a">
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><space unit="character" quantity="3"/><orig>AED</orig><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><space unit="character" quantity="3" /><orig>AED</orig><gap reason="lost" extent="unknown" unit="character" />
                     </ab>
                 </div>
                 <div type="textpart" subtype="fragment-physical" n="b">
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><space unit="character" quantity="1"/><orig>P</orig> <g ref="#interpunct">·</g><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><space unit="character" quantity="1" /><orig>P</orig> <g ref="#interpunct">&#183;</g><gap reason="lost" extent="unknown" unit="character" />
                     </ab>
                 </div>
                 <div type="textpart" subtype="fragment-physical" n="c">
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>VS</orig> <g ref="#interpunct">·</g> <space unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><orig>VS</orig> <g ref="#interpunct">&#183;</g> <space unit="character" quantity="1" /><gap reason="lost" extent="unknown" unit="character" />
                     </ab>
                 </div>
                 <div type="textpart" subtype="fragment-physical" n="d">
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>H</orig> <g ref="#ivy-leaf">❦</g> <orig>V</orig> <g ref="#ivy-leaf">❦</g> <orig>GALLO</orig><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><orig>H</orig> <g ref="#ivy-leaf">&#10086;</g> <orig>V</orig> <g ref="#ivy-leaf">&#10086;</g> <orig>GALLO</orig><gap reason="lost" extent="unknown" unit="character" />
                     </ab>
                 </div>
                 <div type="textpart" subtype="fragment-physical" n="e">
                     <ab>
-                        <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>D</orig><gap reason="lost" extent="unknown" unit="character"/>
+                        <lb n="1" /><gap reason="lost" extent="unknown" unit="character" /><orig>D</orig><gap reason="lost" extent="unknown" unit="character" />
                     </ab>
                 </div>
             </div>
@@ -205,60 +194,60 @@
                 <listApp><app><note>Text after photographs in Manganaro 2005</note></app></listApp>
             </div>
             <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+                <p />
             </div>
             <div type="commentary">
-                <p>Manganaro, on the suggestion of H.G. Kolbe, proposes aed(iculam) or aed(em), P as a praenomen, -VS as the end of a cognomen, and then [?praef. Co]h(ortis) V Gallo[rum] d[edicavit].</p><!--commented out pending revision-->
-                    <!--five frr. from the rim of an offering table perhaps (note, four frr. in each of Manganaro and Pucci's photos, but between them, as Manganaro was aware, five frr.!). No intact words, perhaps a ref. to an aedes. Perhaps someone's name, and possibly elements of an equestrian career, either a praef. cohortis (ref. to V. Gallorum), or poss. a procurator.-->
+                <p>Manganaro, on the suggestion of H.G. Kolbe, proposes aed(iculam) or aed(em), P as a praenomen, -VS as the end of a cognomen, and then [?praef. Co]h(ortis) V Gallo[rum] d[edicavit].</p>
+                    
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
                         <citedRange>2005.0673</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1956.0100</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl>
                         <author>Gentili</author>
                         <date>1952</date>
                         <citedRange>44 n.7</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JR6X726R"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JR6X726R" />
                     <ref target="https://biblio.inscriptiones.org/epig10001434">https://biblio.inscriptiones.org/epig10001434</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1982</date>
                         <citedRange>501 no.6 fig.9</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VG592RBX"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VG592RBX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001835">https://biblio.inscriptiones.org/epig10001835</ref></bibl>
                     <bibl>
                         <author>Pucci</author>
                         <date>1971</date>
                         <citedRange>249-250 fig.113</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/82KV6NAB"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/82KV6NAB" />
                     <ref target="https://biblio.inscriptiones.org/epig10001653">https://biblio.inscriptiones.org/epig10001653</ref></bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1983</date>
                         <citedRange>93</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/C9HTRTCR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/C9HTRTCR" />
                     <ref target="https://biblio.inscriptiones.org/epig10002650">https://biblio.inscriptiones.org/epig10002650</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>25 n.96</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2005</date>
                         <citedRange>186 no.3 fig.18</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/H5C4UQ9K"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/H5C4UQ9K" />
                     <ref target="https://biblio.inscriptiones.org/epig10001800">https://biblio.inscriptiones.org/epig10001800</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

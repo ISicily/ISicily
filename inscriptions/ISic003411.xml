@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,10 +24,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003411</idno>
                 <idno type="TM">644956</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
-                <idno type="EDCS"/>
-                <idno type="PHI"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
+                <idno type="EDCS" />
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003411</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388528</idno>
                 <availability>
@@ -45,7 +42,7 @@
                         <settlement>Taormina</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/062">Antiquarium del Teatro Antico</repository>
                         <idno type="inventory">36</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
                             <settlement>Taormina</settlement>
                             <repository>Antiquarium del Teatro Antico</repository>
@@ -61,18 +58,18 @@
                                 <support><p>A brick, engraved after firing, broken across the lower right</p>
                                     <material ana="#material.clay" ref="http://www.eagle-network.eu/voc/material/lod/131.html">clay</material>
                                     <objectType ana="#object.tile" ref="http://www.eagle-network.eu/voc/objtyp/lod/951.html">tile</objectType>
-                                    <dimensions><!--Ferrua-->
+                                    <dimensions>
                                         <height unit="cm">20</height>
                                         <width unit="cm">34</width>
                                         <depth unit="cm">5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Text incised in two lines, across the left and right sides of the upper part of a large cross incised across the middle of the brick.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
@@ -80,11 +77,11 @@
                             <handNote>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">17</height>
+                                    <height unit="mm" atLeast="17" atMost="17">17</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -98,25 +95,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500">Christian</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1880-01">Found in the ancient theatre of Taormina, January 1880.<geo>37.852418, 15.292298</geo></provenance><!-- representative point in the ancient theatre -->
+                        <provenance type="found" subtype="discovered" when="1880-01">Found in the ancient theatre of Taormina, January 1880.<geo>37.852418, 15.292298</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -157,22 +154,14 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!-- 
-        <surface type="front">
-            <graphic n="screen" url="ISic003411_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic003411.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface> -->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>ἡμέ<hi rend="stacked">ρᾳ</hi> <expan><abbr>Σαβ</abbr><ex>βά</ex><abbr>τ</abbr><ex>ου</ex></expan>
-                    <lb n="2"/><persName type="attested"><name>Ἰαγάθη</name></persName>
+                    <lb n="1" />&#7969;&#956;&#941;<hi rend="stacked">&#961;&#945;&#837;</hi> <expan><abbr>&#931;&#945;&#946;</abbr><ex>&#946;&#940;</ex><abbr>&#964;</abbr><ex>&#959;&#965;</ex></expan>
+                    <lb n="2" /><persName type="attested"><name>&#7992;&#945;&#947;&#940;&#952;&#951;</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
@@ -191,41 +180,41 @@
                         <title>NSA</title>
                         <date>1880</date>
                         <citedRange>36</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV" />
                     <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
                   <bibl>
                         <author>Muscolino</author>
                         <date>2011-2012</date>
                         <citedRange>229 G17 fig.12</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/GJKY97S8"/>
+                        <ptr target="http://zotero.org/groups/382445/items/GJKY97S8" />
                         <ref target="https://biblio.inscriptiones.org/epig10002215">https://biblio.inscriptiones.org/epig10002215</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1961</date>
                         <citedRange>197 fig.22</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HXK7DASC"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HXK7DASC" />
                     <ref target="https://biblio.inscriptiones.org/epig10001852">https://biblio.inscriptiones.org/epig10001852</ref></bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1989</date>
                         <citedRange>no.474</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref></bibl>
                     <bibl>
                         <author>Wessel</author>
                         <date>1989</date>
                         <citedRange>246 no. 1055</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/9CT5ZWIK"/>
+                        <ptr target="http://zotero.org/groups/382445/items/9CT5ZWIK" />
                         <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref></bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2004-2005</date>
                         <citedRange>364 fig.5</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/BMHLMJAM"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/BMHLMJAM" />
                         <ref target="https://biblio.inscriptiones.org/epig10003134">https://biblio.inscriptiones.org/epig10003134</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>

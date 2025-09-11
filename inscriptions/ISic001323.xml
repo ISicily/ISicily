@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -35,8 +32,8 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001323</idno>
                 <idno type="TM">492929</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">39101694</idno>
                 <idno type="PHI">140817</idno>
                 <idno type="PHI">316200</idno>
@@ -54,11 +51,11 @@
                         <settlement>Catania</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/018">Museo Civico di Catania</repository>
                         <idno type="inventory">22</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -70,27 +67,27 @@
                                 <support><p>Marble plaque damaged on the lower edge (slightly convex surface), originally connected to a marble column, as part of a statue base.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--measurements from Korhonen-->
+                                    <dimensions>
                                         <height unit="cm">36</height>
                                         <width unit="cm">41</width>
                                         <depth unit="cm">7.8</depth>
                                     </dimensions>
                                 </support>
-                                <condition ana="#condition.damaged"/>
+                                <condition ana="#condition.damaged" />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Lines 1, 4 and 7 are set further to the left, with the other lines indented by one character space, reflecting the beginning of each line of hexameter verse.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <rs ana="#execution.rubrication">Rubrication</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Regular letters: lunate Ε, Σ, cursive Ω, Α with broken bar.</p><!--measurements from Korhonen-->
+                            <handNote><p>Regular letters: lunate &#917;, &#931;, cursive &#937;, &#913; with broken bar.</p>
                                 <locus from="line1" to="line9">Lines 1-9</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">26-40</height>
+                                    <height unit="mm" atLeast="26" atMost="40">26-40</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -106,28 +103,28 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0251" notAfter-custom="0400" precision="low" evidence="lettering">Late 3rd — late 4th century CE (Korhonen on the basis of lettering)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0251" notAfter-custom="0400" precision="low" evidence="lettering">Late 3rd &#8212; late 4th century CE (Korhonen on the basis of lettering)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1594">Found in 1594 among the ruins of the Odeon (at the house of Dott. D. Cataldo Fimia Patricio) between Porta di Mezzo and Convento di S. Agostino<geo>37.5033164,15.0838968</geo>.</provenance><!-- geo for the odeon -->
+                        <provenance type="found" subtype="discovered" when="1594">Found in 1594 among the ruins of the Odeon (at the house of Dott. D. Cataldo Fimia Patricio) between Porta di Mezzo and Convento di S. Agostino<geo>37.5033164,15.0838968</geo>.</provenance>
                         <provenance type="observed">Observed by Torremuzza in Museo dei Benedettini, later by Korhonen in magazzino superiore, Collezione dei Benedettini, formerly sala I.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -173,24 +170,24 @@
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic001323_tiled.tif" height="3168px" width="4752px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
             </graphic>
             <graphic n="print" url="ISic001323.jpg" height="3168px" width="4752px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
             </graphic>
             <graphic n="screen" url="ISic001323_copy2_tiled.tif" height="3168px" width="4752px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
             </graphic>
             <graphic n="print" url="ISic001323_copy2.jpg" height="3168px" width="4752px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
             </graphic>
          </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic001323_rear_tiled.tif" height="3168px" width="4752px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
             </graphic>
             <graphic n="print" url="ISic001323_rear.jpg" height="3168px" width="4752px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell&#8217;Identit&#224; Siciliana - Dipartimento dei Beni Culturali e dell&#8217;Identit&#224; Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
             </graphic>
         </surface>
     </facsimile>
@@ -198,34 +195,34 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/><persName type="divine"><name>Εὐσεβέων</name></persName> <w>κλυτὸν</w>
-                    <lb n="2"/><w>ἄστυ</w> <w>πανόλβιον</w>
-                    <lb n="3"/><w>ἄνδρα</w> <w>ἀνέθηκε</w>
-                    <lb n="4"/><persName type="attested"><name type="patronymic">Ζωσυμιανείδην</name>
-                    <lb n="5"/><roleName type="civic" subtype="agonothetes"><w>ἀγωνοθετῆρα</w></roleName>
-                    <lb n="6"/><name>Σεβῆρον</name></persName>
-                    <lb n="7"/><w>ὄφρα</w> <w>καὶ</w> <w>ἐσομένοισι</w>
-                    <lb n="8"/><gap reason="lost" quantity="1" unit="character"/><gap reason="illegible" quantity="3" unit="character"/><orig>ΟΣΝΖΕ<unclear>Ι</unclear></orig> <w>βρ<unclear>ο</unclear>
-                    <lb n="9" break="no"/><supplied reason="lost">τοῖσιν</supplied></w><gap reason="lost" unit="character" extent="unknown"/>
+                    <lb n="1" /><persName type="divine"><name>&#917;&#8016;&#963;&#949;&#946;&#941;&#969;&#957;</name></persName> <w>&#954;&#955;&#965;&#964;&#8056;&#957;</w>
+                    <lb n="2" /><w>&#7940;&#963;&#964;&#965;</w> <w>&#960;&#945;&#957;&#972;&#955;&#946;&#953;&#959;&#957;</w>
+                    <lb n="3" /><w>&#7940;&#957;&#948;&#961;&#945;</w> <w>&#7936;&#957;&#941;&#952;&#951;&#954;&#949;</w>
+                    <lb n="4" /><persName type="attested"><name type="patronymic">&#918;&#969;&#963;&#965;&#956;&#953;&#945;&#957;&#949;&#943;&#948;&#951;&#957;</name>
+                    <lb n="5" /><roleName type="civic" subtype="agonothetes"><w>&#7936;&#947;&#969;&#957;&#959;&#952;&#949;&#964;&#8134;&#961;&#945;</w></roleName>
+                    <lb n="6" /><name>&#931;&#949;&#946;&#8134;&#961;&#959;&#957;</name></persName>
+                    <lb n="7" /><w>&#8004;&#966;&#961;&#945;</w> <w>&#954;&#945;&#8054;</w> <w>&#7952;&#963;&#959;&#956;&#941;&#957;&#959;&#953;&#963;&#953;</w>
+                    <lb n="8" /><gap reason="lost" quantity="1" unit="character" /><gap reason="illegible" quantity="3" unit="character" /><orig>&#927;&#931;&#925;&#918;&#917;<unclear>&#921;</unclear></orig> <w>&#946;&#961;<unclear>&#959;</unclear>
+                    <lb n="9" break="no" /><supplied reason="lost">&#964;&#959;&#8150;&#963;&#953;&#957;</supplied></w><gap reason="lost" unit="character" extent="unknown" />
                 </ab>
             </div>
             <div type="apparatus" resp="#martaf">
                 <listApp>
                     <app><note>Text based on photographs</note></app>
-                    <app loc="line 4"><note>Franz, Kaibel: Ζωσιμιανείδην</note></app>
-                    <app loc="line 5"><note>Walther, Torremuzza: ἀγωνοθεθῆρα</note></app> 
-                    <app loc="line 7"><note>Franz, Kaibel: ὄφρα καὶ ἐσ<supplied reason="omitted">σ</supplied>ομένοισι</note></app>                        
-                    <app loc="lines 8-9"><note>Walther, Torremuzza: ΙΡΟΠΟCΛΙΖΕΒΡΟ; Amico, Ferrara: ΙΡ...ΟΕΛΙΖΕΒΙΡΟ; Burmann: ἀοίδιμος ᾖσι βροτοῖσιν; Welcker: βροτοῖσι μέλῃ Σευήρου; Franz: ΡΩCΚΛΗΖΟΙΤΟ = [ἥ]ρ[ως κ]λ[ῄ]ζ[οιτο] βρο|[τοῖσιν] (see Arcangelo, Istoria delle cose insigni e famosi successi di Catania “ut heroibus celebris memores servetur”); Kaibel: the upper parts of ΙΡCΙΙΙΟCΑΙΖΕΙΒΡΟ (reported the reading πρόμος by Röhl); Manganaro ΙΙΙ<unclear>Μ</unclear>ΟCΙΓCΙ<unclear>ΒΡΟ</unclear> = [π]ρόμος ἀ(ε)ὶ ζ(ῆ)ι βρο|[τοῖσιν]; Wilson: πρόμος ἀῒ ζεῖ (= ἀεὶ ζῇ) βρό|[τοισι]; Korhonen [-]+++ΟCΝΖΕ<unclear>Ι</unclear> βρ<unclear>ο</unclear>-|[τοῖσιν ---]</note></app>      
+                    <app loc="line 4"><note>Franz, Kaibel: &#918;&#969;&#963;&#953;&#956;&#953;&#945;&#957;&#949;&#943;&#948;&#951;&#957;</note></app>
+                    <app loc="line 5"><note>Walther, Torremuzza: &#7936;&#947;&#969;&#957;&#959;&#952;&#949;&#952;&#8134;&#961;&#945;</note></app> 
+                    <app loc="line 7"><note>Franz, Kaibel: &#8004;&#966;&#961;&#945; &#954;&#945;&#8054; &#7952;&#963;<supplied reason="omitted">&#963;</supplied>&#959;&#956;&#941;&#957;&#959;&#953;&#963;&#953;</note></app>                        
+                    <app loc="lines 8-9"><note>Walther, Torremuzza: &#921;&#929;&#927;&#928;&#927;C&#923;&#921;&#918;&#917;&#914;&#929;&#927;; Amico, Ferrara: &#921;&#929;...&#927;&#917;&#923;&#921;&#918;&#917;&#914;&#921;&#929;&#927;; Burmann: &#7936;&#959;&#943;&#948;&#953;&#956;&#959;&#962; &#8086;&#963;&#953; &#946;&#961;&#959;&#964;&#959;&#8150;&#963;&#953;&#957;; Welcker: &#946;&#961;&#959;&#964;&#959;&#8150;&#963;&#953; &#956;&#941;&#955;&#8131; &#931;&#949;&#965;&#942;&#961;&#959;&#965;; Franz: &#929;&#937;C&#922;&#923;&#919;&#918;&#927;&#921;&#932;&#927; = [&#7973;]&#961;[&#969;&#962; &#954;]&#955;[&#8132;]&#950;[&#959;&#953;&#964;&#959;] &#946;&#961;&#959;|[&#964;&#959;&#8150;&#963;&#953;&#957;] (see Arcangelo, Istoria delle cose insigni e famosi successi di Catania &#8220;ut heroibus celebris memores servetur&#8221;); Kaibel: the upper parts of &#921;&#929;C&#921;&#921;&#921;&#927;C&#913;&#921;&#918;&#917;&#921;&#914;&#929;&#927; (reported the reading &#960;&#961;&#972;&#956;&#959;&#962; by R&#246;hl); Manganaro &#921;&#921;&#921;<unclear>&#924;</unclear>&#927;C&#921;&#915;C&#921;<unclear>&#914;&#929;&#927;</unclear> = [&#960;]&#961;&#972;&#956;&#959;&#962; &#7936;(&#949;)&#8054; &#950;(&#8134;)&#953; &#946;&#961;&#959;|[&#964;&#959;&#8150;&#963;&#953;&#957;]; Wilson: &#960;&#961;&#972;&#956;&#959;&#962; &#7936;&#8146; &#950;&#949;&#8150; (= &#7936;&#949;&#8054; &#950;&#8135;) &#946;&#961;&#972;|[&#964;&#959;&#953;&#963;&#953;]; Korhonen [-]+++&#927;C&#925;&#918;&#917;<unclear>&#921;</unclear> &#946;&#961;<unclear>&#959;</unclear>-|[&#964;&#959;&#8150;&#963;&#953;&#957; ---]</note></app>      
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#martaf">
                 <p>The renowned city of the Pious (brothers) has dedicated (the statue of) the truly happy Severus son of Zosimianos, the agonethetes, so that even among future ... mortals ...</p>
             </div>
             <div type="translation" xml:lang="it" resp="#martaf">
-                <p>L’illustre città dei Pii (fratelli) ha dedicato (la statua di) il fortunato Severo figlio di Zosimianos, l’agonoteta, affinché anche tra i posteri … mortali …</p>
+                <p>L&#8217;illustre citt&#224; dei Pii (fratelli) ha dedicato (la statua di) il fortunato Severo figlio di Zosimianos, l&#8217;agonoteta, affinch&#233; anche tra i posteri &#8230; mortali &#8230;</p>
             </div>
             <div type="commentary" resp="#martaf #JP">
-                <p>The honorary inscription in hexameter originally accompanied a statue dedicated by the citizens of Catania to the agonothetes Severus, son of Zosimianos, which was presumably situated in the Odeon, where this base was found. The periphrasis <foreign xml:lang="grc">Εὐσεβέων κλυτὸν ἄστυ</foreign> indicates Catania, which was known in antiquity as the city of the <foreign xml:lang="la">Fratres Pii</foreign>, Amphinomos and Anapias, who saved their parents from the eruption of Aetna (Conon FGrHist 26 F 1: for other souces, see Franzoni 1995: 209-212) and whose statues were present in the city since the Hellenistic age (cfr. IMusCatania 12 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000631">ISic000631</ref>; Franzoni 1995: 217-222). The city of Catania honours with a statue the agonothetes, Severus son of Zosimianos: <foreign xml:lang="grc">Ζωσυμιανείδην</foreign> is a patronymic with the epic suffix <foreign xml:lang="grc">-ίδης</foreign>. An agonothetes was in charge of organising athletic and musical contests (the location of the inscription, the Odeion, is clearly relevant) and was a common office in the Greek East: this is, however, the only attestation of the term in Sicily (for an agonothetes in Naples, see CIL 10.1487), and is unusually late. The form <foreign xml:lang="grc">ἀγωνοθετῆρ</foreign> for <foreign xml:lang="grc">ἀγωνοθέτης</foreign> is probably an archaism, in line with the epic tone of the inscription. The reading of the last lines is uncertain and no restoration suggested by the last editors seems to agree with the traces on the stone. Korhonen (IMusCatania 24 comm. ad loc.) suggests that the text might have been accompanied by a Latin inscription detailng the full name and rank/office of the honorand, on the parallel of <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000406">ISic000406</ref> from Syracuse.</p>
+                <p>The honorary inscription in hexameter originally accompanied a statue dedicated by the citizens of Catania to the agonothetes Severus, son of Zosimianos, which was presumably situated in the Odeon, where this base was found. The periphrasis <foreign xml:lang="grc">&#917;&#8016;&#963;&#949;&#946;&#941;&#969;&#957; &#954;&#955;&#965;&#964;&#8056;&#957; &#7940;&#963;&#964;&#965;</foreign> indicates Catania, which was known in antiquity as the city of the <foreign xml:lang="la">Fratres Pii</foreign>, Amphinomos and Anapias, who saved their parents from the eruption of Aetna (Conon FGrHist 26 F 1: for other souces, see Franzoni 1995: 209-212) and whose statues were present in the city since the Hellenistic age (cfr. IMusCatania 12 = <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000631">ISic000631</ref>; Franzoni 1995: 217-222). The city of Catania honours with a statue the agonothetes, Severus son of Zosimianos: <foreign xml:lang="grc">&#918;&#969;&#963;&#965;&#956;&#953;&#945;&#957;&#949;&#943;&#948;&#951;&#957;</foreign> is a patronymic with the epic suffix <foreign xml:lang="grc">-&#943;&#948;&#951;&#962;</foreign>. An agonothetes was in charge of organising athletic and musical contests (the location of the inscription, the Odeion, is clearly relevant) and was a common office in the Greek East: this is, however, the only attestation of the term in Sicily (for an agonothetes in Naples, see CIL 10.1487), and is unusually late. The form <foreign xml:lang="grc">&#7936;&#947;&#969;&#957;&#959;&#952;&#949;&#964;&#8134;&#961;</foreign> for <foreign xml:lang="grc">&#7936;&#947;&#969;&#957;&#959;&#952;&#941;&#964;&#951;&#962;</foreign> is probably an archaism, in line with the epic tone of the inscription. The reading of the last lines is uncertain and no restoration suggested by the last editors seems to agree with the traces on the stone. Korhonen (IMusCatania 24 comm. ad loc.) suggests that the text might have been accompanied by a Latin inscription detailng the full name and rank/office of the honorand, on the parallel of <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000406">ISic000406</ref> from Syracuse.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -233,116 +230,116 @@
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
                         <citedRange>no.37</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS" />
                     <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
                     </bibl>
                     <bibl>
                         <author>Amico</author>
                         <date>1741</date>
                         <citedRange>238-240</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T" />
                     <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref>
                     </bibl>
                     <bibl>
                         <author>Torremuzza</author>
                         <date>1769</date>
                         <citedRange>52 no.36</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3" />
                     <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
                     </bibl>
                     <bibl>
                         <author>Torremuzza</author>
                         <date>1784</date>
                         <citedRange>57 no.37</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH" />
                     <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
                     </bibl>
                     <bibl>
                         <author>Ferrara</author>
                         <date>1829</date>
                         <citedRange>277-278</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
+                        <ptr target="http://zotero.org/groups/382445/items/82T4IWDN" />
                     <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref>
                     </bibl>
                     <bibl type="corpus" n="IG">
                         <citedRange>
                             <ref target="https://clio.columbia.edu/catalog/6873760">14.0502</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F" />
                     <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
                     </bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1959.0024</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
                     </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>44.0738.11</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ" />
                     <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
                     </bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1959.0541</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
                     </bibl>
                     <bibl type="corpus" n="IMusCatania">
                          <author>Korhonen</author>
                          <date>2004</date> 
                         <citedRange>24</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH" />
                     <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
                     </bibl>
                     <bibl type="corpus" n="CIG">
                         <citedRange>3.5727</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/HTUDQBXS" />
                     <ref target="https://biblio.inscriptiones.org/epig10001252">https://biblio.inscriptiones.org/epig10001252</ref>
                     </bibl>
                     <bibl>
                         <author>Kaibel</author>
                         <date>1878</date>
                         <citedRange>no.887</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R6EN7EKK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R6EN7EKK" />
                     <ref target="https://biblio.inscriptiones.org/epig10001900">https://biblio.inscriptiones.org/epig10001900</ref>
                     </bibl>
                     <bibl type="corpus" n="IGRR">
                         <citedRange>491</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/KSH4D9GK"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/KSH4D9GK" />
                     <ref target="https://biblio.inscriptiones.org/epig10001116">https://biblio.inscriptiones.org/epig10001116</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1958-1959</date>
                         <citedRange>15-17</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/BVD8KVF7"/>
+                        <ptr target="http://zotero.org/groups/382445/items/BVD8KVF7" />
                     <ref target="https://biblio.inscriptiones.org/epig10001856">https://biblio.inscriptiones.org/epig10001856</ref>
                     </bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1990</date>
                         <citedRange>172</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9" />
                     <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1994</date>
                         <citedRange>97 no.XI</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/532NF7SV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/532NF7SV" />
                     <ref target="https://biblio.inscriptiones.org/epig10001825">https://biblio.inscriptiones.org/epig10001825</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2010</date>
                         <citedRange>passim</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ZJA2JMRW"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZJA2JMRW" />
                     <ref target="https://biblio.inscriptiones.org/epig10001793">https://biblio.inscriptiones.org/epig10001793</ref>
                     </bibl>
                     <bibl>
-                        <author>Molè Ventura</author>
+                        <author>Mol&#232; Ventura</author>
                         <date>2018</date>
                         <citedRange>passim</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/46K2DWI7"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/46K2DWI7" />
                     <ref target="https://biblio.inscriptiones.org/epig10002256">https://biblio.inscriptiones.org/epig10002256</ref>
                     </bibl>
                 </listBibl>
@@ -350,7 +347,7 @@
                     <author>Franzoni</author>
                     <date>1995</date>
                     <citedRange>209-222</citedRange>
-                    <ptr target="http://zotero.org/groups/382445/items/TCRRXBFB"/>
+                    <ptr target="http://zotero.org/groups/382445/items/TCRRXBFB" />
                 <ref target="https://biblio.inscriptiones.org/epig10002244">https://biblio.inscriptiones.org/epig10002244</ref>
                 </bibl>
                 </listBibl>

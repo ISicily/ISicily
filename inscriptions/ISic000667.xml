@@ -1,7 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ns1="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -27,10 +24,10 @@
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic000667</idno>
                 <idno type="TM">491376</idno>
-                <idno type="EDR"/>
-                <idno type="EDH"/>
+                <idno type="EDR" />
+                <idno type="EDH" />
                 <idno type="EDCS">5000364</idno>
-                <idno type="PHI"/>
+                <idno type="PHI" />
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000667</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385128</idno>
                 <availability>
@@ -46,11 +43,11 @@
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/196">Parco archeologico di Segesta</repository>
                         <idno type="inventory">SG775</idno>
                         <idno type="inventory">IG 2605</idno>
-                        <!--Adding location for old id numbers if available-->
+                        
                         <altIdentifier>
-                            <settlement/>
-                            <repository/>
-                            <idno type="old"/>
+                            <settlement />
+                            <repository />
+                            <idno type="old" />
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -62,30 +59,30 @@
                                 <support><p>A thick paving slab of the local stone, re-used as a tomb cover in late-antiquity and then re-used again in the settlement circuit wall of the Norman period. The surface is rather worn, and damaged in the upper left corner. The rear appears uneven.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--ISegesta-->
+                                    <dimensions>
                                         <height unit="cm">60</height>
                                         <width unit="cm">112</width>
                                         <depth unit="cm">36</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition />
 		    </supportDesc>
                             <layoutDesc>
                                 <layout><p>Three lines of Latin letters roughly centred and concentrated in the lower half of the face.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage />
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Fairly crudely incised letters, somewhat irregular, with staurogram and use of supralines.</p><!-- measurements from ISegesta -->
+                            <handNote><p>Fairly crudely incised letters, somewhat irregular, with staurogram and use of supralines.</p>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">48-98</height>
+                                    <height unit="mm" atLeast="48" atMost="98">48-98</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
-                                    <height unit="mm"/>
+                                    <height unit="mm" />
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -99,25 +96,25 @@
 		</origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0524" notAfter-custom="0524" evidence="office">17 May 524 CE, dated by the consulate of Opilio and the second indiction.</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1990">Found in 1990 in re-use in the Normal period circuit wall, in the SW corner of room B1 (US3522)<geo>37.9395591,12.8370001</geo></provenance><!-- findspot pinned on a google map -->
+                        <provenance type="found" subtype="discovered" when="1990">Found in 1990 in re-use in the Normal period circuit wall, in the SW corner of room B1 (US3522)<geo>37.9395591,12.8370001</geo></provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
-                        <acquisition/>
+                        <acquisition />
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
              <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
+             <ns1:include href="../alists/ISicily-taxonomies.xml">
+                 <ns1:fallback>
                      <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
+                 </ns1:fallback>
+             </ns1:include>
+	  <ns1:include href="../alists/charDecl.xml">
+	     <ns1:fallback>
 	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
+	     </ns1:fallback>
+	   </ns1:include>
          </encodingDesc>
         <profileDesc>
             <calendarDesc>
@@ -159,23 +156,15 @@
         </revisionDesc>
     </teiHeader>
     <facsimile>
-        <surface/><!--
-        <surface type="front">
-            <graphic n="screen" url="ISic000667_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-            <graphic n="print" url="ISic000667.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
-            </graphic>
-         </surface>-->
+        <surface />
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><g ref="#staurogram">&#x101a0;</g> vixit <persName type="attested"><name>Pontius</name></persName> in pa
-                    <lb n="2" break="no"/>ce <expan><abbr><hi rend="supraline">an</hi></abbr><ex>nos</ex></expan> <expan><abbr><hi rend="supraline">pl</hi></abbr><ex>us</ex></expan> <expan><abbr>m</abbr><ex>inus</ex></expan> <num value="80"><hi rend="tall">L</hi><hi rend="small">XXX</hi></num> <expan><abbr>rec</abbr><ex>essit</ex></expan> <g ref="#interpunct">·</g><num value="16">X<c xml:lang="grc">ς</c></num> <expan><abbr>K</abbr><ex>alendas</ex></expan> <expan><abbr>Iun</abbr><ex>ias</ex></expan>
-                    <lb n="3"/><roleName type="supracivic" subtype="consul"><expan><abbr><hi rend="supraline">c</hi></abbr><ex>on</ex><abbr><hi rend="supraline">s</hi></abbr><ex>ulatu</ex></expan></roleName> <persName type="attested"><name>Opilionis</name></persName> <expan><abbr>v</abbr><ex>iri</ex></expan> <roleName type="supracivic" subtype="clarissimus"><expan><abbr>c</abbr><ex>larissimi</ex></expan></roleName> <expan><abbr><hi rend="supraline">ind</hi></abbr><ex>ictione</ex></expan> <num value="2"><surplus>I</surplus>II</num>
+                    <lb n="1" /><g ref="#staurogram">&#65952;</g> vixit <persName type="attested"><name>Pontius</name></persName> in pa
+                    <lb n="2" break="no" />ce <expan><abbr><hi rend="supraline">an</hi></abbr><ex>nos</ex></expan> <expan><abbr><hi rend="supraline">pl</hi></abbr><ex>us</ex></expan> <expan><abbr>m</abbr><ex>inus</ex></expan> <num value="80"><hi rend="tall">L</hi><hi rend="small">XXX</hi></num> <expan><abbr>rec</abbr><ex>essit</ex></expan> <g ref="#interpunct">&#183;</g><num value="16">X<c xml:lang="grc">&#962;</c></num> <expan><abbr>K</abbr><ex>alendas</ex></expan> <expan><abbr>Iun</abbr><ex>ias</ex></expan>
+                    <lb n="3" /><roleName type="supracivic" subtype="consul"><expan><abbr><hi rend="supraline">c</hi></abbr><ex>on</ex><abbr><hi rend="supraline">s</hi></abbr><ex>ulatu</ex></expan></roleName> <persName type="attested"><name>Opilionis</name></persName> <expan><abbr>v</abbr><ex>iri</ex></expan> <roleName type="supracivic" subtype="clarissimus"><expan><abbr>c</abbr><ex>larissimi</ex></expan></roleName> <expan><abbr><hi rend="supraline">ind</hi></abbr><ex>ictione</ex></expan> <num value="2"><surplus>I</surplus>II</num>
                 </ab>
             </div>
             <div type="apparatus">
@@ -189,7 +178,7 @@
                 <p>?((staurogram)) Pontius lived in pace more or less 80 years. He departed 16 days before the Kalends of June in the consulate of Opilio, vir clarissimus, in the second indiction.</p>
             </div>
             <div type="translation" xml:lang="it" resp="ISegesta">
-                <p>((staurogramma)) Pontius è vissuto in pace più o meno ottant'anni. È morto il 24 maggio (nell'anno del) consolato del vir clarissimus Opilio, II dell'indizione</p>
+                <p>((staurogramma)) Pontius &#232; vissuto in pace pi&#249; o meno ottant'anni. &#200; morto il 24 maggio (nell'anno del) consolato del vir clarissimus Opilio, II dell'indizione</p>
             </div>
             <div type="commentary">
                 <p>The only funerary inscription to date from Segesta, this provides important evidence for the continuity of settlement in Segesta in the sixth century CE in the period of the Gothic domination.</p>
@@ -200,42 +189,42 @@
                         <author>Nenci</author>
                         <date>1991</date>
                         <citedRange>253-255</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/LVQ6C5UT"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/LVQ6C5UT" />
                         <ref target="https://biblio.inscriptiones.org/epig10002805">https://biblio.inscriptiones.org/epig10002805</ref>
                     </bibl>
                     <bibl>
                         <author>Nenci</author>
                         <date>1991</date>
                         <citedRange>929 no.11 tav. CCCIV.2</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/ERHMXBDJ"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ERHMXBDJ" />
                         <ref target="https://biblio.inscriptiones.org/epig10001413">https://biblio.inscriptiones.org/epig10001413</ref>
                     </bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1991.0900</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX" />
                     <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
                     <bibl>
                         <author>De Vido</author>
                         <date>1991</date>
                         <citedRange>980</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/KMKJH2E8"/>
+                        <ptr target="https://www.zotero.org/groups/382445/items/KMKJH2E8" />
                     <ref target="https://biblio.inscriptiones.org/epig10001409">https://biblio.inscriptiones.org/epig10001409</ref>
                     </bibl>
                     <bibl>
                         <author>Michelini</author>
                         <date>1999</date>
                         <citedRange>444-445</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/DI69MHYJ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/DI69MHYJ" />
                         <ref target="https://biblio.inscriptiones.org/epig10002305">https://biblio.inscriptiones.org/epig10002305</ref>
                     </bibl>
                     <bibl>
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>L15</citedRange>
-                        <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR"/>
+                        <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR" />
                     <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion"><bibl /></listBibl>
             </div>
         </body>
     </text>
