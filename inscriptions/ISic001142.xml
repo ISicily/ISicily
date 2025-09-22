@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -19,32 +21,20 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division</resp>
                 </respStmt>
-	    <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -82,7 +72,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Plaque of veiny grey-white marble. Large section of stone missing at bottom left. Front face is polished, back is flat.</p>
+                                <support>
+                                    <p>Plaque of veiny grey-white marble. Large section of stone missing at bottom left. Front face is polished, back is flat.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
@@ -92,27 +83,29 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Three lines of Greek text</p>
+                                <layout>
+                                    <p>Three lines of Greek text</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Letters are extremely thin, and curved. The first vertical stem of the eta in line 2 appears to join the vertical stem of the kappa in line 1, thus making it difficult to be precise about letter heights in lines 1-2. The orthography is extremely strange, particularly in the tail of the tau in line 3 which gives the impression of the letter 'J'.</p>
+                            <handNote>
+                                <p>Letters are extremely thin, and curved. The first vertical stem of the eta in line 2 appears to join the vertical stem of the kappa in line 1, thus making it difficult to be precise about letter heights in lines 1-2. The orthography is extremely strange, particularly in the tail of the tau in line 3 which gives the impression of the letter 'J'.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">35-50</height>
+                                    <height unit="mm" atLeast="35" atMost="50">35-50</height>
                                 </dimensions>
                                 <locus from="line2" to="line2">Line 2</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">55-59</height>
+                                    <height unit="mm" atLeast="55" atMost="59">55-59</height>
                                 </dimensions>
                                 <locus from="line3" to="line3">Line 3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">30-48</height>
+                                    <height unit="mm" atLeast="30" atMost="48">30-48</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -124,10 +117,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" cert="low">Brugnone doubts authenticity, on grounds of type of marble, and letter forms (?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">The place, date, and circumstances of the discovery are unknown, but the inscription is known to come from Termini Imerese</provenance>
@@ -138,18 +131,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -179,15 +172,16 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-10-05" who="#VM">Valentina Mignosa encoded text division</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
                 <change when="2020-10-14" who="#JP">Jonathan Prag made minor edits, added objectType</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-04-29" who="#AA">edition on basis of autopsy</change>
-	</listChange>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -198,21 +192,34 @@
             <graphic n="print" url="ISic001142.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #AA">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name>Κ<supplied reason="omitted">α</supplied>νυλ
-                    <lb n="2" break="no"/>ηία</name></persName>
-                    <lb n="3"/><gap reason="lost" quantity="1" unit="character" precision="low"/><unclear>ω</unclear>τη
+                    <lb n="1"/><persName type="attested"><name><w n="5">Κ<supplied reason="omitted">α</supplied>νυλ
+                    <lb n="2" break="no"/>ηία</w></name></persName>
+                    <lb n="3"/><gap reason="lost" quantity="1" unit="character" precision="low" n="10"/> <w part="F" n="15"><unclear>ω</unclear>τη</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <w n="5" lemma="Κανυληία">Κανυληία</w>
+                    <gap reason="lost" quantity="1" unit="character" precision="low" n="10"><desc>[.]</desc></gap>
+                    <w n="15" lemma="NOLEMMA">ωτη</w>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of autopsy</note></app>
-                    <app loc="line 3"><note>Kaibel reads <supplied reason="lost">Βι</supplied>ότη in line 3, but as Brugnone (1974) notes, the first visible letter is more likely an italic omega than an omicron.</note></app>
+                    <app>
+                        <note>Text of autopsy</note>
+                    </app>
+                    <app loc="line 3">
+                        <note>
+                            Kaibel reads[Βι]ότη in line 3, but as Brugnone (1974) notes, the first visible letter is more likely an uncial omega than an omicron.
+                        </note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -224,18 +231,26 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0323</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">323</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusTermini">
+                        <author>Brugnone</author>
+                        <date>1974</date>
                         <citedRange>20*</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/9WZ7KU5C"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001397">https://biblio.inscriptiones.org/epig10001397</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001397">https://biblio.inscriptiones.org/epig10001397</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

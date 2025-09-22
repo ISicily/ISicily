@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -19,28 +21,16 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-	            <respStmt>
-     	            <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	            <resp>standardisation of template and tidying up encoding</resp>
- 	            </respStmt>
                 <respStmt>
                     <name xml:id="MH" ref="https://orcid.org/0000-0002-0981-2465">Matthew Hewitt</name>
-                    <resp>Transcription</resp>           
+                    <resp>Transcription</resp>
                 </respStmt>
-	            <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -64,8 +54,8 @@
                     <msIdentifier><!--Default country and region-->
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>Lost</settlement>
-                        <repository><!--Add Repository Here--></repository>
+                        <settlement>unknown</settlement>
+                        <repository>unknown</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -89,12 +79,12 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -113,10 +103,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" cert="low">(?)</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
@@ -127,18 +117,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -167,14 +157,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		        <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	            <change when="2020-12-22" who="#system">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-05-07" who="#MH">Transcribed text.</change>
-	</listChange>
+                <change when="2025-07-24" who="#VF">Victoria Fendel's lemmatizations were added</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -185,17 +176,32 @@
             <graphic n="print" url="ISic001163.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#MH">
                 <ab>
-                    <lb n="1"/><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
-			<lb n="2"/><orig>ΣΕ</orig><gap reason="lost" extent="unknown" unit="character"/>                
-                    <lb n="3"/><orig>Π</orig><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="4"/><orig>ΕΥ</orig> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="5"/><orig>ΞΕ</orig> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><gap reason="illegible" unit="character" quantity="1" n="5"/> <gap reason="lost" extent="unknown" unit="character" n="10"/>
+                    <lb n="2"/><orig n="15">ΣΕ</orig><gap reason="lost" extent="unknown" unit="character" n="20"/>
+                    <lb n="3"/><orig n="25">Π</orig><gap reason="illegible" unit="character" quantity="1" n="30"/> <gap reason="lost" extent="unknown" unit="character" n="35"/>
+                    <lb n="4"/><orig n="40">ΕΥ</orig><gap reason="lost" extent="unknown" unit="character" n="45"/>
+                    <lb n="5"/><orig n="50">ΞΕ</orig><gap reason="lost" extent="unknown" unit="character" n="55"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF">
+                <ab>
+                    <gap reason="illegible" unit="character" quantity="1" n="5"><desc>[.]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="10"><desc>[-?-]</desc></gap>
+                    <orig n="15">ΣΕ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="20"><desc>[-?-]</desc></gap>
+                    <orig n="25">Π</orig>
+                    <gap reason="illegible" unit="character" quantity="1" n="30"><desc>[.]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="35"><desc>[-?-]</desc></gap>
+                    <orig n="40">ΕΥ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="45"><desc>[-?-]</desc></gap>
+                    <orig n="50">ΞΕ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="55"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
@@ -215,14 +221,19 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
+                        <author>Kaibel</author>
+                        <date>1890</date>
                         <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">14.0343</ref>
+                            <ref target="https://clio.columbia.edu/catalog/6873760">343</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
