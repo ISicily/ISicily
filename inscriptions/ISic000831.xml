@@ -149,6 +149,9 @@
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
                     <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
+                <keywords scheme="https://thesaurus.mom.fr/?idt-th222"><!-- adding typology for metre -->
+                    <term ref="https://ark.mom.fr/ark:/76609/poe-drj1g3z815tfz5qfvthm">dactylic hexameter</term>
+                </keywords>
             </textClass>
         </profileDesc>
         <revisionDesc status="draft">
@@ -161,6 +164,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-02" who="#JP">Jonathan Prag revised text, draft encoded metre</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -176,19 +180,23 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig><unclear>Ν</unclear>ΕΑΝ</orig><gap reason="lost" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΔΞΟΝΤΑ</orig><gap reason="lost" quantity="1" unit="character"/><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἰδία</supplied>ι δαπάν<supplied reason="lost" cert="low">αι</supplied> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΣΣΑΙΣΟ</orig><gap reason="lost" extent="unknown" unit="character"/> 
-                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="lost" quantity="1" unit="character"/><orig>ΛΓ</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb/><gap reason="lost" extent="unknown" unit="line"/>
+                    <lg met="#hexameter" part="Y"><!-- verse requires a metDecl, and the more flexible encoding of the draft metDecl that is not yet included in the epidoc schema, to permit flexible idealtype of hexameter, and so to remove the unnecessary 'real' from here -->
+                        <l real="+--|+--|+--|+--|+--|+-"><lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">γε</supplied>νεὰς</w> <w>γενεὰν</w> <w part="I">π<unclear>ε</unclear></w><gap reason="lost" extent="unknown" unit="character"/></l>
+                    <l real="+--|+--|++|++|+--|+-"><lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">οι</w> δ’ἐργάξονται <w part="I"><unclear>π</unclear></w><gap reason="lost" extent="unknown" unit="character"/></l>
+                    <l real="+--|+--|++|+--|+--|+-"><lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">ον</w> <w>πᾶσ<unclear>ι</unclear>ν</w> <w part="I">δαπαν</w><gap reason="lost" extent="unknown" unit="character"/></l>
+                    <l real="+--|+--|++|+--|+--|+-"><lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><w><unclear>δ</unclear></w>’ <w>ἐμ</w> <w>μ<unclear>έ</unclear>σσαις</w> <w part="I">ο</w><gap reason="lost" extent="unknown" unit="character"/></l>
+                    <l real="+--|+--|+--|+--|+--|+-"><lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><w part="F">εσσι</w> <w part="I">κ<unclear>ε</unclear>λ<unclear>ευ</unclear></w><gap reason="lost" extent="unknown" unit="character"/></l>
+                        </lg>
+                    <lb/><gap reason="lost" extent="unknown" unit="line"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text of IG</note>
+                        <note>Text of Manganaro 1994</note>
                     </app>
                 </listApp>
             </div>
@@ -198,11 +206,11 @@
             <div type="commentary">
                 <p><!--commented out pending revision-->
                     <!--Manganaro attempts some restorations; dates on basis of letter forms; epigram.
-                    l.1  – ⏑ ⏑ – [γε]νεὰς γενεὰν πε̣[⏑ – ⏑ ⏑ – ⏑]
+                    l.1 [ – ⏑ ⏑ – γε]νεὰς γενεὰν πε̣[⏑ – ⏑ ⏑ – ⏑]
                     l.2 [– ⏑ ⏑ – ⏑ ⏑] οι δ’ ἐργάξονται π̣[⏑ ⏑ – ⏑]
                     l.3 [– ⏑ ⏑ – ⏑ ⏑] ον πᾶσι̣ν δαπαν [– ⏑ ⏑ – ⏑] 
                     l.4 [– ⏑ ⏑ – ⏑ ⏑] δ̣’ ἐμ μέ̣σσαις ο [⏑ – ⏑ ⏑ – ⏑]
-                    l.5 [– ⏑ ⏑ – ⏑ ⏑]εσσι κε̣λε̣υ̣[⏑ ⏑ – ⏑ ⏑ – ⏑]--></p>
+                    l.5 [– ⏑ ⏑ – ⏑ ⏑]εσσι κε̣λε̣υ̣[⏑ ⏑ – ⏑ ⏑ – ⏑]  --></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
