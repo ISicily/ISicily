@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,11 +20,15 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	</titleStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001181</idno>
@@ -62,7 +68,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A large grey-white limestone block, seemingly intact, in re-use in an external corner wall of a mediaeval church.</p>
+                                <support>
+                                    <p>A large grey-white limestone block, seemingly intact, in re-use in an external corner wall of a mediaeval church.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions>
@@ -72,12 +79,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Four lines of Greek text, not quite centred, but lines 2 and 3 fill the width of the face.</p>
+                                <layout>
+                                    <p>Four lines of Greek text, not quite centred, but lines 2 and 3 fill the width of the face.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -121,10 +129,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462097">Apollonia</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462097">Apollonia</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523486">Monte San Fratello</placeName>
-                            	<geo>38.03255, 14.59566</geo>
-		</origPlace>
+                                <geo>38.03255, 14.59566</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" evidence="lettering">2nd — 1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="first-recorded">First recorded, and still visible, in exterior corner wall of Santuario dei Tre Santi Fratelli, Monte Vecchio, San Fratello (ME)<geo>38.033098, 14.597275</geo></provenance>
@@ -132,23 +140,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2019-07-23; 2006-04</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -179,13 +186,14 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-07-23" who="#JP">Jonathan Prag edited on basis of autopsy in 2006 and 2019</change>
                 <change when="2020-09-10" who="#JP">Updated Zenodo DOI</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -208,16 +216,20 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="BSKAK"/><w xml:id="BSKAU">ὁ</w> <w xml:id="BSKAe">δᾶμος</w> 
-                    <lb n="2" xml:id="BSKAo"/><w xml:id="BSKAy">Ἄνδρωνα<space unit="character" quantity="1" xml:id="BSKAΙ"/>Θρασίου</w> <w xml:id="BSKAΤ"><abbr xml:id="BSKAε">Λ<choice xml:id="BSKAο"><corr xml:id="BSKBA">α</corr><sic xml:id="BSKBK">Λ</sic></choice>β</abbr></w> 
-                    <lb n="3" xml:id="BSKBU"/><w xml:id="BSKBe">εὐεργεσίας</w> <w xml:id="BSKBo">ἕνεκεν</w> 
-                    <lb n="4" xml:id="BSKBy"/><w xml:id="BSKBΙ">θεοῖς</w> <w xml:id="BSKBΤ">πᾶσι</w>
+                    <lb n="1" xml:id="BSKAK"/><w xml:id="BSKAU" n="5">ὁ</w> <w xml:id="BSKAe" n="10">δᾶμος</w>
+                    <lb n="2" xml:id="BSKAo"/><w xml:id="BSKAy" n="15">Ἄνδρωνα<space unit="character" quantity="1" xml:id="BSKAΙ" n="20"/>Θρασίου</w> <w xml:id="BSKAΤ" n="25"><abbr xml:id="BSKAε">Λ<choice xml:id="BSKAο"><corr xml:id="BSKBA">α</corr><sic xml:id="BSKBK">Λ</sic></choice>β</abbr></w>
+                    <lb n="3" xml:id="BSKBU"/><w xml:id="BSKBe" n="30">εὐεργεσίας</w> <w xml:id="BSKBo" n="35">ἕνεκεν</w>
+                    <lb n="4" xml:id="BSKBy"/><w xml:id="BSKBΙ" n="40">θεοῖς</w> <w xml:id="BSKBΤ" n="45">πᾶσι</w>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text from autopsy</note></app>
-                    <app loc="line 1"><note>pietra: ΛΛΒ</note></app>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                    <app loc="line 1">
+                        <note>pietra: ΛΛΒ</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
@@ -225,7 +237,7 @@
             </div>
             <div type="commentary">
                 <p>The text, unusually for Sicily, omits the ethnic of the people erecting the honours for Andron. It is reasonably assumed that the inscription comes from the site of ancient Apollonia, since it has been recorded since the 17th century in re-use in a structural wall of the church of the 'tre santi', which dates back to the 11th/12th century, and within which a number of other pieces of ancient stonework can be seen in re-use also; the church stands within the ancient site. The presence of a demotic abbreviation (to be corrected to 'LAB') finds parallels in a number of other texts from Hellenistic Sicily, and in particular from Halaesa (e.g. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000800">ISic000800</ref>) and Kaleakte (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003628">ISic003628</ref>) among nearby sites. The specific abbreviation 'lab' is attested at Halaesa (SEG 59.1100) and in IGDS II.40, a list of names on lead that may come from the area of Siracusa. The presence of identical such abbreviations at, e.g., both Halaesa and Akrai, however, demonstrates that this particular example cannot serve to prove that the text originally came from Halaesa. Dedications 'to all the gods' are also reasonably widespread in Hellenistic Sicily, both at Halaesa and elsewhere. At Halaesa the formula consistently stands at the head of the text, however (e.g. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000800">ISic000800</ref>); the final position, as here, finds parallels, for instance, at Tauromenion (e.g. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003125">ISic003125</ref>)</p>
-                    <p><ref target="http://clas-lgpn2.classics.ox.ac.uk/cgi-bin/lgpn_search.cgi?namenoaccents=%CE%91%CE%9D%CE%94%CE%A1%CE%A9%CE%9D">Andron</ref> is a reasonably common name, with at least 11 other attestations in Sicily; <ref target="http://clas-lgpn2.classics.ox.ac.uk/cgi-bin/lgpn_search.cgi?namenoaccents=%CE%98%CE%A1%CE%91%CE%A3%CE%99%CE%9F%CE%A3">Thrasios</ref>, by contrast, is rare and not attested otherwise in Sicily.</p>
+                <p><ref target="http://clas-lgpn2.classics.ox.ac.uk/cgi-bin/lgpn_search.cgi?namenoaccents=%CE%91%CE%9D%CE%94%CE%A1%CE%A9%CE%9D">Andron</ref> is a reasonably common name, with at least 11 other attestations in Sicily; <ref target="http://clas-lgpn2.classics.ox.ac.uk/cgi-bin/lgpn_search.cgi?namenoaccents=%CE%98%CE%A1%CE%91%CE%A3%CE%99%CE%9F%CE%A3">Thrasios</ref>, by contrast, is rare and not attested otherwise in Sicily.</p>
                 <p>Excavation of ancient Apollonia has to date been limited (see Bonanno 2008), but it is clear that there was a city there in the Hellenistic period and the city is <ref target="https://topostext.org/place/380146UApo"> attested in several ancient sources including the Verrines (Cic. 2 Verr. 3.103; 5.86, 90). </ref>.</p>
                 <p>L. D'Amore 2005 provides a detailed antiquarian/editorial history of the stone's publication, demonstrating that IG XIV.613 of Rhegion is in fact a false doublet deriving from a report of this text.</p>
             </div>
@@ -238,65 +250,78 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">359</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>55.1054</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>55.1006</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
                         <citedRange>43 no.307</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1769</date>
                         <citedRange>cl.5 no.4</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Franz</author>
                         <date>1853</date>
                         <citedRange>5602</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Salinas</author>
                         <title>NSA</title>
                         <date>1880</date>
                         <citedRange>198 no.17</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Manni Piraino</author>
                         <date>1971</date>
                         <citedRange>178-179 tav.LII</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/M53TV4H9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001775">https://biblio.inscriptiones.org/epig10001775</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001775">https://biblio.inscriptiones.org/epig10001775</ref>
+                    </bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1990</date>
                         <citedRange>378 n.19, 406 n.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref>
+                    </bibl>
                     <bibl>
                         <author>D'Amore</author>
                         <date>2005</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/3WG3JUGX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002057">https://biblio.inscriptiones.org/epig10002057</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002057">https://biblio.inscriptiones.org/epig10002057</ref>
+                    </bibl>
                     <bibl>
                         <author>Bonanno</author>
                         <date>2008</date>
                         <citedRange>14 fig.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/8MDR32WG"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002129">https://biblio.inscriptiones.org/epig10002129</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002129">https://biblio.inscriptiones.org/epig10002129</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

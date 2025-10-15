@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,17 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -74,12 +80,12 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -98,12 +104,12 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>		
-                                <offset>near
-                                    <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>
+                                <offset>
+                                    near<placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
                                 </offset>
-                            	<geo>37.05780, 14.89346</geo>
-		</origPlace>
+                                <geo>37.05780, 14.89346</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0101">3rd — 2nd century BCE (so Consani
                                 1996)</origDate>
                         </origin>
@@ -112,23 +118,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2014.09.11</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -156,14 +161,15 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                   <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                   <change when="2020-10-14" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-10-14" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -174,21 +180,25 @@
             <graphic n="print" url="ISic001035.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1" xml:id="BDyAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyAU"/><w xml:id="BDyAe">ΝΤΟΣ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyAo"/>
-                    <lb n="2" xml:id="BDyAy"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyAΙ"/><gap reason="illegible" quantity="1" unit="character" xml:id="BDyAΤ"/><w xml:id="BDyAε">ς</w> <w xml:id="BDyAο">Φιλ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyBA"/>
-                    <lb n="3" xml:id="BDyBK"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyBU"/><gap reason="illegible" quantity="1" unit="character" xml:id="BDyBe"/><w xml:id="BDyBo">ίδας</w> <w xml:id="BDyBy">Φι<unclear xml:id="BDyBΙ">λ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyBΤ"/>
-                    <lb n="4" xml:id="BDyBε"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyBο"/><w xml:id="BDyCA"><unclear xml:id="BDyCK">ι</unclear>νίλας</w> <w xml:id="BDyCU">Ἡρα</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyCe"/>
-                    <lb n="5" xml:id="BDyCo"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyCy"/><w xml:id="BDyCΙ">στοκλῆς</w> <w xml:id="BDyCΤ">Πο</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyCε"/>
+                    <lb n="1" xml:id="BDyAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyAU" n="5"/><w xml:id="BDyAe" n="10">ΝΤΟΣ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyAo" n="15"/>
+                    <lb n="2" xml:id="BDyAy"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyAΙ" n="20"/><gap reason="illegible" quantity="1" unit="character" xml:id="BDyAΤ" n="25"/><w xml:id="BDyAε" n="30">ς</w> <w xml:id="BDyAο" n="35">Φιλ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyBA" n="40"/>
+                    <lb n="3" xml:id="BDyBK"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyBU" n="45"/><gap reason="illegible" quantity="1" unit="character" xml:id="BDyBe" n="50"/><w xml:id="BDyBo" n="55">ίδας</w> <w xml:id="BDyBy" n="60">Φι<unclear xml:id="BDyBΙ">λ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyBΤ" n="65"/>
+                    <lb n="4" xml:id="BDyBε"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyBο" n="70"/><w xml:id="BDyCA" n="75"><unclear xml:id="BDyCK">ι</unclear>νίλας</w> <w xml:id="BDyCU" n="80">Ἡρα</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyCe" n="85"/>
+                    <lb n="5" xml:id="BDyCo"/><gap reason="lost" extent="unknown" unit="character" xml:id="BDyCy" n="90"/><w xml:id="BDyCΙ" n="95">στοκλῆς</w> <w xml:id="BDyCΤ" n="100">Πο</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BDyCε" n="105"/>
                 </ab>
             </div>
-              <div type="apparatus">
-                  <listApp><app><note>Text of Pugliese Carratelli 1956</note></app></listApp>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text of Pugliese Carratelli 1956</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -205,28 +215,34 @@
                                 14.0214a</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
-                         <author>Manni Piraino</author>
-                         <date>1973</date> 
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>030a</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Orsi</author>
                         <title>NSA</title>
                         <date>1889</date>
                         <citedRange>389</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Pugliese Carratelli</author>
                         <date>1956</date>
                         <citedRange>no.4 tav.34</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/PJDRZH66"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001394">https://biblio.inscriptiones.org/epig10001394</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001394">https://biblio.inscriptiones.org/epig10001394</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

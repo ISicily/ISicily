@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,11 +24,15 @@
                     <name xml:id="DM" ref="http://orcid.org/0000-0003-2267-0411">Davide Massimo</name>
                     <resp>revised the EpiDoc encoding</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	</titleStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic003477</idno>
@@ -66,7 +72,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Fragment of a limestone stele. The left margin is preserved, but the stone is broken on all other sides.</p>
+                                <support>
+                                    <p>Fragment of a limestone stele. The left margin is preserved, but the stone is broken on all other sides.</p>
                                     <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone
                                     </material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
@@ -77,12 +84,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>The beginning of five lines of Greek letters more or less aligned with the left margin of the stone.</p>
+                                <layout>
+                                    <p>The beginning of five lines of Greek letters more or less aligned with the left margin of the stone.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -122,12 +130,12 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>		
-                                <offset>near
-                                    <placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>
+                                <offset>
+                                    near<placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
                                 </offset>
-                            	<geo>37.99907, 14.26197</geo>
-		</origPlace>
+                                <geo>37.99907, 14.26197</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001" evidence="lettering">2nd — 1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1956">Recovered from the area of Temple A in 1956 (either from the main trench along the west side of the platform, or other soundings taken in the vicinity, all made by Carettoni in 1956)<geo>38.000505, 14.261362</geo></provenance>
@@ -135,23 +143,22 @@
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -183,12 +190,13 @@
                 <change when="2019-03-08" who="#DM">Davide Massimo revised the EpiDoc encoding</change>
                 <change when="2019-07-23" who="#JP">Jonathan Prag edited the file based on autopsy for 2017 edition</change>
                 <change when="2020-09-09" who="#JP">Updated Zenodo DOI</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -220,23 +228,29 @@
                 <desc>Photo J.Prag courtesy Soprintendenza BBCCAA di Messina</desc>
             </graphic>
         </surface>
-     </facsimile>
+    </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#DM">
                 <ab>
-                    <lb n="1" xml:id="DvΤAK"/><w xml:id="DvΤAU">Ἐ<unclear xml:id="DvΤAe">π</unclear><supplied reason="lost" xml:id="DvΤAo">ι</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤAy"/>
-                    <lb n="2" xml:id="DvΤAΙ"/><w xml:id="DvΤAΤ">Ἡρα<supplied reason="lost" xml:id="DvΤAε">κλειδ</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤAο"/>
-                    <lb n="3" xml:id="DvΤBA"/><w xml:id="DvΤBK">Ἀπο<unclear xml:id="DvΤBU">λ</unclear><supplied reason="lost" xml:id="DvΤBe">λ</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤBo"/>
-                    <lb n="4" xml:id="DvΤBy"/><w xml:id="DvΤBΙ">Αἰσχ<unclear xml:id="DvΤBΤ">ύ</unclear><supplied reason="lost" cert="low" xml:id="DvΤBε">λος</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤBο"/>
-                    <lb n="5" xml:id="DvΤCA"/><w xml:id="DvΤCK">Ε<unclear xml:id="DvΤCU">ὐ</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤCe"/>
+                    <lb n="1" xml:id="DvΤAK"/><w xml:id="DvΤAU" n="5">Ἐ<unclear xml:id="DvΤAe">π</unclear><supplied reason="lost" xml:id="DvΤAo">ι</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤAy" n="10"/>
+                    <lb n="2" xml:id="DvΤAΙ"/><w xml:id="DvΤAΤ" n="15">Ἡρα<supplied reason="lost" xml:id="DvΤAε">κλειδ</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤAο" n="20"/>
+                    <lb n="3" xml:id="DvΤBA"/><w xml:id="DvΤBK" n="25">Ἀπο<unclear xml:id="DvΤBU">λ</unclear><supplied reason="lost" xml:id="DvΤBe">λ</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤBo" n="30"/>
+                    <lb n="4" xml:id="DvΤBy"/><w xml:id="DvΤBΙ" n="35">Αἰσχ<unclear xml:id="DvΤBΤ">ύ</unclear><supplied reason="lost" cert="low" xml:id="DvΤBε">λος</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤBο" n="40"/>
+                    <lb n="5" xml:id="DvΤCA"/><w xml:id="DvΤCK" n="45">Ε<unclear xml:id="DvΤCU">ὐ</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="DvΤCe" n="50"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text as in Prag and Tigano 2017, from autopsy</note></app>
-                    <app loc="line 3"><note>Carettoni: ΑΠΟΛ[ΛΙΝΙ]</note></app>
-                    <app loc="line 4"><note>Carettoni: ΑΙΣΚΥ[---]</note></app>
+                    <app>
+                        <note>Text as in Prag and Tigano 2017, from autopsy</note>
+                    </app>
+                    <app loc="line 3">
+                        <note>Carettoni: ΑΠΟΛ[ΛΙΝΙ]</note>
+                    </app>
+                    <app loc="line 4">
+                        <note>Carettoni: ΑΙΣΚΥ[---]</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -244,41 +258,48 @@
             </div>
             <div type="commentary" resp="#JP">
                 <p>Carettoni (1961: 318) suggested that this was a dedication to Apollo, restoring ΑΠΟΛΛΙΝΙ (‘to Apollo’) in line 3; Manganaro (1999: 68, followed by Facella 2006: 320) speculates instead that the text was a list of names, perhaps of ephebes, or alternatively of dedicants or contributors, but too little survives to be certain of either interpretation. It is possible that the text continued both above and/or below what survives. Carettoni mistakenly read ΑΙΣΚΥ in line 4.  The restorations are those suggested by Manganaro, but must be considered purely exempli gratia.</p>
-                    <p>The text cannot be dated precisely, but the letter forms suggest a date in the second or first century BC.</p>
+                <p>The text cannot be dated precisely, but the letter forms suggest a date in the second or first century BC.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>49.1282</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Carettoni</author>
                         <title>NSA</title>
                         <date>1961</date>
                         <citedRange>318 no.12a</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1999</date>
                         <citedRange>68 no.63 fig.145</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GRB3IPD5"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001813">https://biblio.inscriptiones.org/epig10001813</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001813">https://biblio.inscriptiones.org/epig10001813</ref>
+                    </bibl>
                     <bibl>
                         <author>Facella</author>
                         <date>2006</date>
                         <citedRange>320</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/J4XWZPV6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002013">https://biblio.inscriptiones.org/epig10002013</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002013">https://biblio.inscriptiones.org/epig10002013</ref>
+                    </bibl>
                     <bibl>
                         <author>Prag and Tigano</author>
                         <date>2017</date>
                         <citedRange>no.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

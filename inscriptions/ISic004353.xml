@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -57,7 +63,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Fragment of a thick plaque of marble, broken on all sides. The rear is finished but not polished, with traces of plaster.</p>
+                                <support>
+                                    <p>Fragment of a thick plaque of marble, broken on all sides. The rear is finished but not polished, with traces of plaster.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
@@ -67,16 +74,17 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete #text_condition.legible"/>
-			</layout>
+                                    <damage ana="#text_condition.incomplete #text_condition.legible"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Lunate sigma in quadrate form, kappa with short arms, use of ligature, interpuncts of plain dots.</p>
+                            <handNote>
+                                <p>Lunate sigma in quadrate form, kappa with short arms, use of ligature, interpuncts of plain dots.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="25" atMost="35">25-35</height>
@@ -91,10 +99,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
-                            	<geo>37.62336, 14.74049</geo>
-		</origPlace>
+                                <geo>37.62336, 14.74049</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500">late imperial</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">From the area of the rione Forca, in the vicinity of the 'Dogana' tomb, Centuripe <geo cert="medium">37.625270, 14.740939</geo></provenance>
@@ -105,18 +113,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -145,13 +153,14 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-12-14" who="#JP">Jonathan Prag added images, edited text and metadata</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -176,15 +185,21 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>Η</orig> <g ref="#interpunct">·</g> τ<hi rend="ligature" xml:id="h1">ῇ</hi> <hi rend="ligature" xml:id="h2">π</hi>ρὸ <num value="16">ιϛ</num> καλ<supplied reason="lost">ανδῶν</supplied> <gap reason="lost" extent="unknown" unit="character"/><link target="#h1 #h2"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/>σιου <g ref="#interpunct">·</g> <expan><abbr>Τιβ</abbr><ex cert="low">ερίου</ex></expan> <g ref="#interpunct">·</g> κ<gap reason="illegible" unit="character" quantity="3"/><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="5"/><orig n="10">Η</orig> <g ref="#interpunct" n="15">·</g> τ<hi rend="ligature" xml:id="h1">ῇ</hi> <hi rend="ligature" xml:id="h2">π</hi>ρὸ <num value="16">ιϛ</num> καλ<supplied reason="lost">ανδῶν</supplied> <gap reason="lost" extent="unknown" unit="character" n="20"/><link target="#h1 #h2"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" n="25"/>σιου <g ref="#interpunct" n="30">·</g> <expan><abbr>Τιβ</abbr><ex cert="low">ερίου</ex></expan> <g ref="#interpunct" n="35">·</g> κ<gap reason="illegible" unit="character" quantity="3" n="40"/><gap reason="lost" extent="unknown" unit="character" n="45"/>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app><note>Text from autopsy</note></app>
-                    <app loc="1"><note>Biondi: πρὸ ι καλ</note></app>
-                    <app loc="2"><note>The character after final Κ is either Α or Λ, followed by the tops of two further letters.</note></app>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                    <app loc="1">
+                        <note>Biondi: πρὸ ι καλ</note>
+                    </app>
+                    <app loc="2">
+                        <note>The character after final Κ is either Α or Λ, followed by the tops of two further letters.</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -200,9 +215,12 @@
                         <date>2014</date>
                         <citedRange>171 no. 242 fig. 42</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/8CH847SJ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002149">https://biblio.inscriptiones.org/epig10002149</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002149">https://biblio.inscriptiones.org/epig10002149</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

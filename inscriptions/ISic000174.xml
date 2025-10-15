@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,7 +64,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Irregular fragment of a grey marble plaque. Intact on the left side, with broken moulding down the left margin. Broken on all other sides. Picked finish on the reverse.</p>
+                                <support>
+                                    <p>Irregular fragment of a grey marble plaque. Intact on the left side, with broken moulding down the left margin. Broken on all other sides. Picked finish on the reverse.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
@@ -68,16 +75,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Three lines of Latin letters, seemingly maintaining a consistent left margin, but irregular right margin, with a large vacat after DMS in line 1.</p>
+                                <layout>
+                                    <p>Three lines of Latin letters, seemingly maintaining a consistent left margin, but irregular right margin, with a large vacat after DMS in line 1.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Deep cut letters, with extended apices and somewhat irregular in layout and size. Deep serifs and occasional hederae but no interpuncts.</p>
+                            <handNote>
+                                <p>Deep cut letters, with extended apices and somewhat irregular in layout and size. Deep serifs and occasional hederae but no interpuncts.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="38" atMost="45">38-45</height>
@@ -104,10 +113,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0300" evidence="lettering">Ferrua dates to the 3rd century CE on the basis of the letter forms.</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1883-03-10">Found 10th March 1883 in the ruins of the old castle of Termini Imerese  <geo>37.9886196,13.6963535</geo></provenance><!-- representative point for the castle -->
@@ -118,18 +127,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,14 +168,15 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-08-18" who="#JP">Jonathan Prag made preliminary edits from ILTermini</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-05-27" who="#JP">Jonathan Prag revised from autopsy</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -177,7 +187,7 @@
             <graphic n="print" url="ISic000174.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04</desc>
             </graphic>
-         </surface>
+        </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic000174_rear_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-04</desc>
@@ -191,17 +201,23 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="ARoAK"/><w xml:id="ARoAU"><expan xml:id="ARoAe"><abbr xml:id="ARoAo">D</abbr><ex xml:id="ARoAy">is</ex></expan></w> <w xml:id="ARoAΙ"><expan xml:id="ARoAΤ"><abbr xml:id="ARoAε">m</abbr><ex xml:id="ARoAο">anibus</ex></expan></w> <w xml:id="ARoBA"><expan xml:id="ARoBK"><abbr xml:id="ARoBU">s</abbr><ex xml:id="ARoBe">acrum</ex></expan></w> 
-                    <lb n="2" xml:id="ARoBo"/><w xml:id="ARoBy">Euplia</w> <g ref="#ivy-leaf" xml:id="ARoBΙ">❦</g> <w xml:id="ARoBΤ">v<unclear xml:id="ARoBε">i</unclear>
-                    <lb n="3" break="no" xml:id="ARoBο"/>xit</w> <g ref="#ivy-leaf" xml:id="ARoCA">❦</g> <w xml:id="ARoCK"><expan xml:id="ARoCU"><abbr xml:id="ARoCe">an</abbr><ex xml:id="ARoCo">nis</ex></expan></w> <w xml:id="ARoCy"><expan xml:id="ARoCΙ"><hi rend="reversed" xml:id="ARoCε"><abbr xml:id="ARoCΤ"><am>Ↄ</am></abbr></hi><ex cert="low" xml:id="ARoDA">circiter</ex></expan></w> <num value="55" xml:id="ARoDK">LV</num>
+                    <lb n="1" xml:id="ARoAK"/><w xml:id="ARoAU" n="5"><expan xml:id="ARoAe"><abbr xml:id="ARoAo">D</abbr><ex xml:id="ARoAy">is</ex></expan></w> <w xml:id="ARoAΙ" n="10"><expan xml:id="ARoAΤ"><abbr xml:id="ARoAε">m</abbr><ex xml:id="ARoAο">anibus</ex></expan></w> <w xml:id="ARoBA" n="15"><expan xml:id="ARoBK"><abbr xml:id="ARoBU">s</abbr><ex xml:id="ARoBe">acrum</ex></expan></w>
+                    <lb n="2" xml:id="ARoBo"/><w xml:id="ARoBy" n="20">Euplia</w> <g ref="#ivy-leaf" xml:id="ARoBΙ" n="25">❦</g> <w xml:id="ARoBΤ" n="30">v<unclear xml:id="ARoBε">i</unclear>
+                    <lb n="3" break="no" xml:id="ARoBο"/>xit</w> <g ref="#ivy-leaf" xml:id="ARoCA" n="35">❦</g> <w xml:id="ARoCK" n="40"><expan xml:id="ARoCU"><abbr xml:id="ARoCe">an</abbr><ex xml:id="ARoCo">nis</ex></expan></w> <w xml:id="ARoCy" n="45"><expan xml:id="ARoCΙ"><hi rend="reversed" xml:id="ARoCε"><abbr xml:id="ARoCΤ"><am>Ↄ</am></abbr></hi><ex cert="low" xml:id="ARoDA">circiter</ex></expan></w> <num value="55" xml:id="ARoDK">LV</num>
                 </ab>
                </div>
             <div type="apparatus" resp="#JP">
-               <listApp>
-                   <app><note>Text from autopsy</note></app>
-                   <app loc="1"><note>Ferrua: D·M·</note></app>
-               <app loc="line 3"><note>Ferrua: IV</note></app>
-               </listApp>
+                <listApp>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                    <app loc="1">
+                        <note>Ferrua: D·M·</note>
+                    </app>
+                    <app loc="line 3">
+                        <note>Ferrua: IV</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Sacred to the shades of the underworld. Euplia lived approximately 55 years.</p>
@@ -214,32 +230,39 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>1977.0341</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusTermini">
-                         <author>Bivona</author>
-                         <date>1994</date> 
+                        <author>Bivona</author>
+                        <date>1994</date>
                         <citedRange>95</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Fiorelli</author>
                         <title>NSA</title>
                         <date>1883</date>
                         <citedRange>179</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl type="bulletin" n="EphEp">
                         <citedRange>VIII 704</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref>
+                    </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1941</date>
                         <citedRange>262 no.24</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/P7QQ9SB6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002655">https://biblio.inscriptiones.org/epig10002655</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002655">https://biblio.inscriptiones.org/epig10002655</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,17 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Epidoc editing and addition of metadata</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -62,7 +68,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Rough yellow/white rectalinear block of limestone. Top and bottom edges are likely original, left and right sides broken. Back is flat, but traces of modern mortar. Traces of modern paint on sides.</p>
+                                <support>
+                                    <p>Rough yellow/white rectalinear block of limestone. Top and bottom edges are likely original, left and right sides broken. Back is flat, but traces of modern mortar. Traces of modern paint on sides.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
@@ -72,16 +79,18 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Three lines of Latin text, without much room on sides. Multiple types of interpunct used throughout, although all faint on stone.</p>
+                                <layout>
+                                    <p>Three lines of Latin text, without much room on sides. Multiple types of interpunct used throughout, although all faint on stone.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Text is relatively regular and neat, although stonecarver was not able to achieve straight lines on all letters (for instance, the wobbly 'D' in line 2). Serifs used on all letters. The cross-bar on the As are barely noticeable.</p>
+                            <handNote>
+                                <p>Text is relatively regular and neat, although stonecarver was not able to achieve straight lines on all letters (for instance, the wobbly 'D' in line 2). Serifs used on all letters. The cross-bar on the As are barely noticeable.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="39" atMost="42">39-42</height>
@@ -104,10 +113,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                            	<geo>37.98365, 13.69555</geo>
-		</origPlace>
+                                <geo>37.98365, 13.69555</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1886">Found in the ruins of the Castle at Termini Imerese, in 1886<geo>37.988602, 13.697916</geo></provenance>
@@ -118,18 +127,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,15 +168,16 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-08-27" who="#JP">Jonathan Prag made draft revisions based upon existing publications</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-02-12" who="#AA">edition on basis of autopsy and photographs</change>
                 <change when="2024-07-25" who="#JP">Jonathan Prag added images and minor revisions</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -178,7 +188,7 @@
             <graphic n="print" url="ISic000190.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05</desc>
             </graphic>
-         </surface>
+        </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic000190_rear_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-05</desc>
@@ -192,14 +202,18 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP #AA">
                 <ab>
-                    <lb n="1" xml:id="ATAAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="ATAAU"/><persName type="attested" xml:id="ATAAe"><name xml:id="ATAAo"><expan xml:id="ATAAy"><abbr xml:id="ATAAΙ"><unclear xml:id="ATAAΤ">P</unclear></abbr><ex xml:id="ATAAε">ubli</ex></expan></name></persName> <g ref="#interpunct" xml:id="ATAAο">·</g> <w xml:id="ATABA"><expan xml:id="ATABK"><abbr xml:id="ATABU">l</abbr><ex xml:id="ATABe">iberto</ex></expan></w> <g ref="#interpunct" xml:id="ATABo">·</g> <persName type="attested" xml:id="ATABy"><w xml:id="ATABΙ">Lesbi</w> <w xml:id="ATABΤ"><supplied reason="lost" xml:id="ATABε">o</supplied></w></persName> 
-                    <lb n="2" xml:id="ATABο"/><gap reason="lost" extent="unknown" unit="character" xml:id="ATACA"/><w xml:id="ATACK"><expan xml:id="ATACU"><abbr xml:id="ATACe"><unclear xml:id="ATACo">l</unclear></abbr><ex xml:id="ATACy">iberto</ex></expan></w> <g ref="#interpunct" xml:id="ATACΙ">·</g> <persName type="attested" xml:id="ATACΤ"><w xml:id="ATACε">Damop</w> <w xml:id="ATACο"><unclear xml:id="ATADA">h</unclear></w> <w xml:id="ATADK"><supplied reason="lost" xml:id="ATADU">ilo</supplied></w></persName> 
-                    <lb n="3" xml:id="ATADe"/><gap reason="lost" extent="unknown" unit="character" xml:id="ATADo"/><w xml:id="ATADy"><unclear xml:id="ATADΙ">t</unclear>as</w> <g ref="#interpunct" xml:id="ATADΤ">·</g> <w xml:id="ATADε"><expan xml:id="ATADο"><abbr xml:id="ATAEA">f</abbr><ex xml:id="ATAEK">ecit</ex></expan></w> <g ref="#interpunct" xml:id="ATAEU">·</g> <w xml:id="ATAEe"><expan xml:id="ATAEo"><abbr xml:id="ATAEy">d</abbr><ex xml:id="ATAEΙ">e</ex></expan></w> <g ref="#interpunct" xml:id="ATAEΤ">·</g> <w xml:id="ATAEε"><expan xml:id="ATAEο"><abbr xml:id="ATAFA">s</abbr><ex xml:id="ATAFK">uo</ex></expan></w>
+                    <lb n="1" xml:id="ATAAK"/><gap reason="lost" extent="unknown" unit="character" xml:id="ATAAU" n="5"/><persName type="attested" xml:id="ATAAe"><name xml:id="ATAAo"><expan xml:id="ATAAy"><abbr xml:id="ATAAΙ"><unclear xml:id="ATAAΤ">P</unclear></abbr><ex xml:id="ATAAε">ubli</ex></expan></name></persName> <g ref="#interpunct" xml:id="ATAAο" n="10">·</g> <w xml:id="ATABA" n="15"><expan xml:id="ATABK"><abbr xml:id="ATABU">l</abbr><ex xml:id="ATABe">iberto</ex></expan></w> <g ref="#interpunct" xml:id="ATABo" n="20">·</g> <persName type="attested" xml:id="ATABy"><w xml:id="ATABΙ" n="25">Lesbi</w> <w xml:id="ATABΤ" n="30"><supplied reason="lost" xml:id="ATABε">o</supplied></w></persName>
+                    <lb n="2" xml:id="ATABο"/><gap reason="lost" extent="unknown" unit="character" xml:id="ATACA" n="35"/><w xml:id="ATACK" n="40"><expan xml:id="ATACU"><abbr xml:id="ATACe"><unclear xml:id="ATACo">l</unclear></abbr><ex xml:id="ATACy">iberto</ex></expan></w> <g ref="#interpunct" xml:id="ATACΙ" n="45">·</g> <persName type="attested" xml:id="ATACΤ"><w xml:id="ATACε" n="50">Damop</w> <w xml:id="ATACο" n="55"><unclear xml:id="ATADA">h</unclear></w> <w xml:id="ATADK" n="60"><supplied reason="lost" xml:id="ATADU">ilo</supplied></w></persName>
+                    <lb n="3" xml:id="ATADe"/><gap reason="lost" extent="unknown" unit="character" xml:id="ATADo" n="65"/><w xml:id="ATADy" n="70"><unclear xml:id="ATADΙ">t</unclear>as</w> <g ref="#interpunct" xml:id="ATADΤ" n="75">·</g> <w xml:id="ATADε" n="80"><expan xml:id="ATADο"><abbr xml:id="ATAEA">f</abbr><ex xml:id="ATAEK">ecit</ex></expan></w> <g ref="#interpunct" xml:id="ATAEU" n="85">·</g> <w xml:id="ATAEe" n="90"><expan xml:id="ATAEo"><abbr xml:id="ATAEy">d</abbr><ex xml:id="ATAEΙ">e</ex></expan></w> <g ref="#interpunct" xml:id="ATAEΤ" n="95">·</g> <w xml:id="ATAEε" n="100"><expan xml:id="ATAEο"><abbr xml:id="ATAFA">s</abbr><ex xml:id="ATAFK">uo</ex></expan></w>
                 </ab>
             </div>
             <div type="apparatus" resp="#AA">
-                <listApp><app><note>Text based on autopsy</note></app></listApp>
-             </div>
+                <listApp>
+                    <app>
+                        <note>Text based on autopsy</note>
+                    </app>
+                </listApp>
+            </div>
             <div type="translation" xml:lang="en" resp="#AA">
                 <p>[...] To [...] Lesbius, freedman of Publius [...], [and] [...] Damophilus, freedman of [...], [?] made [this] from his own resources.</p>
             </div>
@@ -209,24 +223,29 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="ILMusTermini">
-                         <author>Bivona</author>
-                         <date>1994</date> 
+                        <author>Bivona</author>
+                        <date>1994</date>
                         <citedRange>112</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Salinas</author>
                         <title>NSA</title>
                         <date>1886</date>
                         <citedRange>337</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl type="bulletin" n="EphEp">
                         <citedRange>VIII 706</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/PU8UDAF3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002649">https://biblio.inscriptiones.org/epig10002649</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

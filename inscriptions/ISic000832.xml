@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -69,12 +75,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -152,10 +158,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0001">2nd — 1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1890">Found before 1890 in the area of the <placeName ref="https://pleiades.stoa.org/places/786829671">Greek theatre</placeName> in Neapolis<geo>37.075784, 15.275079</geo></provenance>
@@ -163,22 +169,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2006.04; 2013.09.30</provenance>
                         <acquisition/>
                     </history>
-                    </msDesc>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -209,42 +215,48 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-05-28" who="#JP">Jonathan Prag added image and bibl items</change>
                 <change when="2018-05-31" who="#JP">Jonathan Prag revised the text division and added some metadata</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-11" who="#JP">Jonathan Prag made minor edits</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-          <surface type="front">
-              <graphic n="screen" url="ISic000832_tiled.tif" height="2757px" width="4439px">
-                  <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
-              </graphic>
-              <graphic n="print" url="ISic000832.jpg" height="2757px" width="4439px">
-                  <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
-              </graphic>
+        <surface type="front">
+            <graphic n="screen" url="ISic000832_tiled.tif" height="2757px" width="4439px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
+            <graphic n="print" url="ISic000832.jpg" height="2757px" width="4439px">
+                <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
+            </graphic>
         </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="AθUAK"/><gap reason="lost" unit="character" extent="unknown" xml:id="AθUAU"/><w xml:id="AθUAe"><supplied reason="lost" xml:id="AθUAo">τὸ</supplied></w> <w xml:id="AθUAy"><supplied reason="lost" xml:id="AθUAΙ">κοινὸν</supplied></w> <w xml:id="AθUAΤ"><supplied reason="lost" xml:id="AθUAε">τῶν</supplied></w> <w xml:id="AθUAο"><supplied reason="lost" xml:id="AθUBA">περὶ</supplied></w> <w xml:id="AθUBK"><supplied reason="lost" xml:id="AθUBU">τὸν</supplied></w> 
-                    <lb n="2" xml:id="AθUBe"/><w xml:id="AθUBo">Διόνυσον</w> <w xml:id="AθUBy">τεχνιτῶ<supplied reason="lost" xml:id="AθUBΙ">ν</supplied></w> <w xml:id="AθUBΤ"><supplied reason="lost" xml:id="AθUBε">στεφανοῖ</supplied></w> <w xml:id="AθUBο"><supplied reason="lost" xml:id="AθUCA">τὸν</supplied></w> <w xml:id="AθUCK"><supplied reason="lost" xml:id="AθUCU">δεῖνα</supplied></w> <w xml:id="AθUCe"><supplied reason="lost" xml:id="AθUCo">τοῦ</supplied></w> <w xml:id="AθUCy"><supplied reason="lost" xml:id="AθUCΙ">δεῖνα</supplied></w> 
-                    <lb n="3" xml:id="AθUCΤ"/><w xml:id="AθUCε">υἱὸν</w> <w xml:id="AθUCο">Σκύμνον,</w> <roleName type="paracivic" subtype="euergetes" xml:id="AθUDA"><w xml:id="AθUDK">εὐερ</w> <w xml:id="AθUDU"><supplied reason="lost" xml:id="AθUDe">γέτην</supplied></w></roleName> <w xml:id="AθUDo"><supplied reason="lost" xml:id="AθUDy">ἀρετῆς</supplied></w> <w xml:id="AθUDΙ"><supplied reason="lost" xml:id="AθUDΤ">ἕνεκεν</supplied></w> <w xml:id="AθUDε"><supplied reason="lost" xml:id="AθUDο">καὶ</supplied></w> <w xml:id="AθUEA"><supplied reason="lost" xml:id="AθUEK">εὐνοίας</supplied></w> <w xml:id="AθUEU"><supplied reason="lost" xml:id="AθUEe">ἧς</supplied></w> 
-                    <lb n="4" xml:id="AθUEo"/><w xml:id="AθUEy">ἔχων</w> <w xml:id="AθUEΙ">διατελεῖ</w> <w xml:id="AθUEΤ">πρὸ<supplied reason="lost" xml:id="AθUEε">ς</supplied></w> <w xml:id="AθUEο"><supplied reason="lost" xml:id="AθUFA">τὸ</supplied></w> <w xml:id="AθUFK"><supplied reason="lost" xml:id="AθUFU">κοινὸν</supplied></w> <w xml:id="AθUFe"><supplied reason="lost" xml:id="AθUFo">τῶν</supplied></w> <w xml:id="AθUFy"><supplied reason="lost" xml:id="AθUFΙ">περὶ</supplied></w> <w xml:id="AθUFΤ"><supplied reason="lost" xml:id="AθUFε">τὸν</supplied></w> <w xml:id="AθUFο"><supplied reason="lost" xml:id="AθUGA">Διόνυσον</supplied></w> 
-                    <lb n="5" xml:id="AθUGK"/><w xml:id="AθUGU">τεχνιτῶν</w> <w xml:id="AθUGe">καὶ</w> <w xml:id="AθUGo">κατὰ</w> <w xml:id="AθUGy">καλ<supplied reason="lost" xml:id="AθUGΙ">οκἀγαθίαν</supplied></w> <w xml:id="AθUGΤ"><supplied reason="lost" xml:id="AθUGε">εὐθὺς</supplied></w> <w xml:id="AθUGο"><supplied reason="lost" xml:id="AθUHA">δὲ</supplied></w> <w xml:id="AθUHK"><supplied reason="lost" xml:id="AθUHU">μετὰ</supplied></w> <w xml:id="AθUHe"><supplied reason="lost" xml:id="AθUHo">τὰς</supplied></w> 
-                    <lb n="6" xml:id="AθUHy"/><w xml:id="AθUHΙ">σπονδὰς</w> <w xml:id="AθUHΤ">καὶ</w> <w xml:id="AθUHε">ζῶντα</w> <w xml:id="AθUHο"><supplied reason="lost" xml:id="AθUIA">καὶ</supplied></w> <w xml:id="AθUIK"><supplied reason="lost" xml:id="AθUIU">μεταλλάξαντα</supplied></w> <w xml:id="AθUIe"><supplied reason="lost" xml:id="AθUIo">αὐτὸν</supplied></w> <w xml:id="AθUIy"><supplied reason="lost" xml:id="AθUIΙ">ἐπὶ</supplied></w> <w xml:id="AθUIΤ"><supplied reason="lost" xml:id="AθUIε">τῆς</supplied></w> 
-                    <lb n="7" xml:id="AθUIο"/><w xml:id="AθUJA">τρίτης</w> <w xml:id="AθUJK"><supplied reason="lost" xml:id="AθUJU">ἀεὶ</supplied></w> <w xml:id="AθUJe"><supplied reason="lost" xml:id="AθUJo">ἡμέρας</supplied></w> <w xml:id="AθUJy"><supplied reason="lost" xml:id="AθUJΙ">τῶν</supplied></w> <w xml:id="AθUJΤ"><supplied reason="lost" xml:id="AθUJε">συνόδων</supplied></w> <w xml:id="AθUJο"><supplied reason="lost" xml:id="AθUKA">ἀναγορεύεσθαι</supplied></w>
+                    <lb n="1" xml:id="AθUAK"/><gap reason="lost" unit="character" extent="unknown" xml:id="AθUAU" n="5"/><w xml:id="AθUAe" n="10"><supplied reason="lost" xml:id="AθUAo">τὸ</supplied></w> <w xml:id="AθUAy" n="15"><supplied reason="lost" xml:id="AθUAΙ">κοινὸν</supplied></w> <w xml:id="AθUAΤ" n="20"><supplied reason="lost" xml:id="AθUAε">τῶν</supplied></w> <w xml:id="AθUAο" n="25"><supplied reason="lost" xml:id="AθUBA">περὶ</supplied></w> <w xml:id="AθUBK" n="30"><supplied reason="lost" xml:id="AθUBU">τὸν</supplied></w>
+                    <lb n="2" xml:id="AθUBe"/><w xml:id="AθUBo" n="35">Διόνυσον</w> <w xml:id="AθUBy" n="40">τεχνιτῶ<supplied reason="lost" xml:id="AθUBΙ">ν</supplied></w> <w xml:id="AθUBΤ" n="45"><supplied reason="lost" xml:id="AθUBε">στεφανοῖ</supplied></w> <w xml:id="AθUBο" n="50"><supplied reason="lost" xml:id="AθUCA">τὸν</supplied></w> <w xml:id="AθUCK" n="55"><supplied reason="lost" xml:id="AθUCU">δεῖνα</supplied></w> <w xml:id="AθUCe" n="60"><supplied reason="lost" xml:id="AθUCo">τοῦ</supplied></w> <w xml:id="AθUCy" n="65"><supplied reason="lost" xml:id="AθUCΙ">δεῖνα</supplied></w>
+                    <lb n="3" xml:id="AθUCΤ"/><w xml:id="AθUCε" n="70">υἱὸν</w> <w xml:id="AθUCο" n="75">Σκύμνον,</w> <roleName type="paracivic" subtype="euergetes" xml:id="AθUDA"><w xml:id="AθUDK" n="80">εὐερ</w> <w xml:id="AθUDU" n="85"><supplied reason="lost" xml:id="AθUDe">γέτην</supplied></w></roleName> <w xml:id="AθUDo" n="90"><supplied reason="lost" xml:id="AθUDy">ἀρετῆς</supplied></w> <w xml:id="AθUDΙ" n="95"><supplied reason="lost" xml:id="AθUDΤ">ἕνεκεν</supplied></w> <w xml:id="AθUDε" n="100"><supplied reason="lost" xml:id="AθUDο">καὶ</supplied></w> <w xml:id="AθUEA" n="105"><supplied reason="lost" xml:id="AθUEK">εὐνοίας</supplied></w> <w xml:id="AθUEU" n="110"><supplied reason="lost" xml:id="AθUEe">ἧς</supplied></w>
+                    <lb n="4" xml:id="AθUEo"/><w xml:id="AθUEy" n="115">ἔχων</w> <w xml:id="AθUEΙ" n="120">διατελεῖ</w> <w xml:id="AθUEΤ" n="125">πρὸ<supplied reason="lost" xml:id="AθUEε">ς</supplied></w> <w xml:id="AθUEο" n="130"><supplied reason="lost" xml:id="AθUFA">τὸ</supplied></w> <w xml:id="AθUFK" n="135"><supplied reason="lost" xml:id="AθUFU">κοινὸν</supplied></w> <w xml:id="AθUFe" n="140"><supplied reason="lost" xml:id="AθUFo">τῶν</supplied></w> <w xml:id="AθUFy" n="145"><supplied reason="lost" xml:id="AθUFΙ">περὶ</supplied></w> <w xml:id="AθUFΤ" n="150"><supplied reason="lost" xml:id="AθUFε">τὸν</supplied></w> <w xml:id="AθUFο" n="155"><supplied reason="lost" xml:id="AθUGA">Διόνυσον</supplied></w>
+                    <lb n="5" xml:id="AθUGK"/><w xml:id="AθUGU" n="160">τεχνιτῶν</w> <w xml:id="AθUGe" n="165">καὶ</w> <w xml:id="AθUGo" n="170">κατὰ</w> <w xml:id="AθUGy" n="175">καλ<supplied reason="lost" xml:id="AθUGΙ">οκἀγαθίαν</supplied></w> <w xml:id="AθUGΤ" n="180"><supplied reason="lost" xml:id="AθUGε">εὐθὺς</supplied></w> <w xml:id="AθUGο" n="185"><supplied reason="lost" xml:id="AθUHA">δὲ</supplied></w> <w xml:id="AθUHK" n="190"><supplied reason="lost" xml:id="AθUHU">μετὰ</supplied></w> <w xml:id="AθUHe" n="195"><supplied reason="lost" xml:id="AθUHo">τὰς</supplied></w>
+                    <lb n="6" xml:id="AθUHy"/><w xml:id="AθUHΙ" n="200">σπονδὰς</w> <w xml:id="AθUHΤ" n="205">καὶ</w> <w xml:id="AθUHε" n="210">ζῶντα</w> <w xml:id="AθUHο" n="215"><supplied reason="lost" xml:id="AθUIA">καὶ</supplied></w> <w xml:id="AθUIK" n="220"><supplied reason="lost" xml:id="AθUIU">μεταλλάξαντα</supplied></w> <w xml:id="AθUIe" n="225"><supplied reason="lost" xml:id="AθUIo">αὐτὸν</supplied></w> <w xml:id="AθUIy" n="230"><supplied reason="lost" xml:id="AθUIΙ">ἐπὶ</supplied></w> <w xml:id="AθUIΤ" n="235"><supplied reason="lost" xml:id="AθUIε">τῆς</supplied></w>
+                    <lb n="7" xml:id="AθUIο"/><w xml:id="AθUJA" n="240">τρίτης</w> <w xml:id="AθUJK" n="245"><supplied reason="lost" xml:id="AθUJU">ἀεὶ</supplied></w> <w xml:id="AθUJe" n="250"><supplied reason="lost" xml:id="AθUJo">ἡμέρας</supplied></w> <w xml:id="AθUJy" n="255"><supplied reason="lost" xml:id="AθUJΙ">τῶν</supplied></w> <w xml:id="AθUJΤ" n="260"><supplied reason="lost" xml:id="AθUJε">συνόδων</supplied></w> <w xml:id="AθUJο" n="265"><supplied reason="lost" xml:id="AθUKA">ἀναγορεύεσθαι</supplied></w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text after Kaibel in IG XIV.12, checked against the stone</note></app>
-                    <app loc="line 4"><note>Sigma of πρὸς read by Kaibel but not visible on stone</note></app>
+                <listApp>
+                    <app>
+                        <note>Text after Kaibel in IG XIV.12, checked against the stone</note>
+                    </app>
+                    <app loc="line 4">
+                        <note>Sigma of πρὸς read by Kaibel but not visible on stone</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -263,56 +275,67 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">12</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>50.1025</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Kaibel</author>
                         <date>1890</date>
                         <citedRange>685 add</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>2018</date>
                         <citedRange>Tacc. 1, p. 40</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref></bibl>    
+                        <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1963</date>
                         <citedRange>57-58 ph</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/M3UEW68D"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001850">https://biblio.inscriptiones.org/epig10001850</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001850">https://biblio.inscriptiones.org/epig10001850</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Orsi</author>
                         <title>NSA</title>
                         <date>1889</date>
                         <citedRange>384</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Rizzo</author>
                         <date>1923</date>
                         <citedRange>126 no.2 fig.58</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HK53TEE7"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001638">https://biblio.inscriptiones.org/epig10001638</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001638">https://biblio.inscriptiones.org/epig10001638</ref>
+                    </bibl>
                     <bibl>
                         <author>Le Guen</author>
                         <date>2001</date>
                         <citedRange>319 no.73</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TWIMMGE7"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001883">https://biblio.inscriptiones.org/epig10001883</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001883">https://biblio.inscriptiones.org/epig10001883</ref>
+                    </bibl>
                     <bibl>
                         <author>Aneziri</author>
                         <date>2003</date>
                         <citedRange>401 F2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/CGKZI92K"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000641">https://biblio.inscriptiones.org/epig10000641</ref></bibl>
-                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000641">https://biblio.inscriptiones.org/epig10000641</ref>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

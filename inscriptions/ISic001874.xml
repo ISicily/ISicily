@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,15 +9,21 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -53,7 +59,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>white tesserae set into a cocciopesto pavement in both maeander patterns and black-and-white tesserae rosettes, with the inscription set in a rounded tabula ansata form.</p>
+                                <support>
+                                    <p>white tesserae set into a cocciopesto pavement in both maeander patterns and black-and-white tesserae rosettes, with the inscription set in a rounded tabula ansata form.</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.pavement" ref="http://www.eagle-network.eu/voc/objtyp/lod/190.htm">pavement</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -63,12 +70,13 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.damaged"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>The text is placed inside a rounded tabula ansata.</p>
+                                <layout>
+                                    <p>The text is placed inside a rounded tabula ansata.</p>
                                     <rs ana="#execution.inlaid" ref="https://www.eagle-network.eu/voc/writing/lod/4.html">inlaid</rs>
-                                	<damage ana="#text_condition.complete"/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -89,7 +97,7 @@
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
                                 </dimensions>
-                                </handNote>
+                            </handNote>
                         </handDesc>
                     </physDesc>
                     <history>
@@ -109,18 +117,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -148,8 +156,9 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                        <change when="2024-05-02" who="#JP">Jonathan Prag created file from publication references and photograph</change>
-	</listChange>
+                <change when="2024-05-02" who="#JP">Jonathan Prag created file from publication references and photograph</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -160,23 +169,27 @@
             <graphic n="print" url="ISic001874.jpg" height="3144px" width="5560px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo R.J.A. Wilson 2022-05-23.</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="BμoAK"/><w xml:id="BμoAU">χαῖρε</w>
+                    <lb n="1" xml:id="BμoAK"/><w xml:id="BμoAU" n="5">χαῖρε</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text from photograph</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text from photograph</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Greetings!</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p/>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -195,7 +208,9 @@
                         <ref target="https://biblio.inscriptiones.org/epig10002745">https://biblio.inscriptiones.org/epig10002745</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

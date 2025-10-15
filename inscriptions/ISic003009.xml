@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -69,13 +75,13 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.damaged"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <p>Three lines of large Greek letters; all are incomplete, but the unjustified left margin suggests a text that was originally centred on the stone</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -105,10 +111,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0201" evidence="lettering titulature">Letters of the 3rd century BCE; the apparent double kingship reference suggests the Hieronian period</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found in foundation works for post office, between via Eumelo, via Archia, and via Carabelli<geo>37.070881, 15.284686</geo></provenance>
@@ -120,18 +126,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -161,14 +167,15 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-04-07" who="#JP">Jonathan Prag revised the EpiDoc after autopsy and added metadata, text, images</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-11-03" who="#JP">Jonathan Prag revised after further autopsy</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -206,15 +213,19 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
-                           <ab>
-                    <lb n="1" xml:id="DAοAK"/><w xml:id="DAοAU">Δά<unclear xml:id="DAοAe">μ</unclear><supplied reason="lost" xml:id="DAοAo">ατρι</supplied></w> <w xml:id="DAοAy"><supplied reason="lost" xml:id="DAοAΙ">καὶ</supplied></w> <w xml:id="DAοAΤ"><supplied reason="lost" xml:id="DAοAε">Κόραι</supplied></w> 
-                    <lb n="2" xml:id="DAοAο"/><roleName type="supracivic" subtype="basileus" xml:id="DAοBA"><w xml:id="DAοBK">βασιλ</w> <w xml:id="DAοBU"><supplied reason="lost" xml:id="DAοBe">έα</supplied></w></roleName> <w xml:id="DAοBo"><supplied reason="lost" xml:id="DAοBy">Ἱερώνυμον</supplied></w> 
-                    <lb n="3" xml:id="DAοBΙ"/><roleName type="supracivic" subtype="basileus" xml:id="DAοBΤ"><w xml:id="DAοBε">βασι</w> <w xml:id="DAοBο"><supplied reason="lost" xml:id="DAοCA">λέος</supplied></w></roleName> <w xml:id="DAοCK"><supplied reason="lost" xml:id="DAοCU">Γέλωνος</supplied></w> 
-                    <lb n="4" xml:id="DAοCe"/><w xml:id="DAοCo"><supplied reason="lost" xml:id="DAοCy">Συρακόσιοι</supplied></w>
+                <ab>
+                    <lb n="1" xml:id="DAοAK"/><w xml:id="DAοAU" n="5">Δά<unclear xml:id="DAοAe">μ</unclear><supplied reason="lost" xml:id="DAοAo">ατρι</supplied></w> <w xml:id="DAοAy" n="10"><supplied reason="lost" xml:id="DAοAΙ">καὶ</supplied></w> <w xml:id="DAοAΤ" n="15"><supplied reason="lost" xml:id="DAοAε">Κόραι</supplied></w>
+                    <lb n="2" xml:id="DAοAο"/><roleName type="supracivic" subtype="basileus" xml:id="DAοBA"><w xml:id="DAοBK" n="20">βασιλ</w> <w xml:id="DAοBU" n="25"><supplied reason="lost" xml:id="DAοBe">έα</supplied></w></roleName> <w xml:id="DAοBo" n="30"><supplied reason="lost" xml:id="DAοBy">Ἱερώνυμον</supplied></w>
+                    <lb n="3" xml:id="DAοBΙ"/><roleName type="supracivic" subtype="basileus" xml:id="DAοBΤ"><w xml:id="DAοBε" n="35">βασι</w> <w xml:id="DAοBο" n="40"><supplied reason="lost" xml:id="DAοCA">λέος</supplied></w></roleName> <w xml:id="DAοCK" n="45"><supplied reason="lost" xml:id="DAοCU">Γέλωνος</supplied></w>
+                    <lb n="4" xml:id="DAοCe"/><w xml:id="DAοCo" n="50"><supplied reason="lost" xml:id="DAοCy">Συρακόσιοι</supplied></w>
                 </ab>
             </div>
             <div type="apparatus">
-               <listApp><app><note>Text of Manganaro 1977, checked against stone</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text of Manganaro 1977, checked against stone</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>The Syracusans dedicate (this statue of) King Hieronymos, son of King Gelon, to Damater and Kore</p>
@@ -227,11 +238,13 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>56.1103.2.2</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>34.0979</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Gentili</author>
                         <date>1959-1960</date>
@@ -242,25 +255,29 @@
                         <date>1961</date>
                         <citedRange>8-10 no.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/CBDGFVEG"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001955">https://biblio.inscriptiones.org/epig10001955</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001955">https://biblio.inscriptiones.org/epig10001955</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1963</date>
                         <citedRange>24</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/NF8RRH7M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001848">https://biblio.inscriptiones.org/epig10001848</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001848">https://biblio.inscriptiones.org/epig10001848</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1965</date>
                         <citedRange>186 no.2 tav.64</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RGTHAFKT"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001841">https://biblio.inscriptiones.org/epig10001841</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001841">https://biblio.inscriptiones.org/epig10001841</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1965</date>
                         <citedRange>315 n.11</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VUT2KB38"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001840">https://biblio.inscriptiones.org/epig10001840</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001840">https://biblio.inscriptiones.org/epig10001840</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1977</date>
@@ -271,9 +288,12 @@
                         <date>2006</date>
                         <citedRange>no.2.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/7AQ7W2MW"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002022">https://biblio.inscriptiones.org/epig10002022</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002022">https://biblio.inscriptiones.org/epig10002022</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

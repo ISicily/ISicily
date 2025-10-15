@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>creation of original EpiDoc template</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -57,7 +63,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A fragment of black and white mosaic, broken on all sides</p>
+                                <support>
+                                    <p>A fragment of black and white mosaic, broken on all sides</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.mosaic" ref="http://www.eagle-network.eu/voc/objtyp/lod/184">mosaic</objectType>
                                     <dimensions><!--not recorded-->
@@ -67,12 +74,13 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Three letters are preserved in black tesserae against a white background, with white space to left and above, but the text broken off to the right</p>
+                                <layout>
+                                    <p>Three letters are preserved in black tesserae against a white background, with white space to left and above, but the text broken off to the right</p>
                                     <rs ana="#execution.mosaic" ref="https://www.eagle-network.eu/voc/writing/lod/16.html">mosaic</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -94,10 +102,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462498">Soluntum</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462498">Soluntum</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523057">Solunto</placeName>
-                            	<geo>38.09296, 13.53147</geo>
-		</origPlace>
+                                <geo>38.09296, 13.53147</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0060" notAfter-custom="-0051" evidence="archaeological-context">Mid-1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Seemingly part of a group of material found near the north-west corner of the peristyle of the 'Casa delle ghirlande', probably during the excavations of V. Tusa in the 1950s<geo>38.094675, 13.532235</geo></provenance>
@@ -109,18 +117,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -149,28 +157,33 @@
         <revisionDesc status="edited">
             <listChange>
                 <change when="2021-04-23" who="#JP">Jonathan Prag created file from template, using photograph and publications</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-                      <surface type="front">
-                            <graphic n="screen" url="ISic001672_tiled.tif" height="3024px" width="4032px">
-                                <desc>Photo J. Prag, 2018</desc>
-                            </graphic>
-                          <graphic n="print" url="ISic001672.jpg" height="3024px" width="4032px">
-                              <desc>Photo J. Prag, 2018</desc>
-                          </graphic>
-                    </surface>
+        <surface type="front">
+            <graphic n="screen" url="ISic001672_tiled.tif" height="3024px" width="4032px">
+                <desc>Photo J. Prag, 2018</desc>
+            </graphic>
+            <graphic n="print" url="ISic001672.jpg" height="3024px" width="4032px">
+                <desc>Photo J. Prag, 2018</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="BΠUAK"/><w xml:id="BΠUAU">χαῖ<supplied reason="lost" xml:id="BΠUAe">ρε</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BΠUAo"/>
+                    <lb n="1" xml:id="BΠUAK"/><w xml:id="BΠUAU" n="5">χαῖ<supplied reason="lost" xml:id="BΠUAe">ρε</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="BΠUAo" n="10"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text from photograph</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text from photograph</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Greetings!</p>
@@ -185,15 +198,18 @@
                         <date>2020</date>
                         <citedRange>166 and fig. 12.c</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/JJRNU2EW"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002496">https://biblio.inscriptiones.org/epig10002496</ref></bibl>
-                  </listBibl>
-	   <listBibl type="discussion">
-	       <bibl>
-	           <author>Portale</author>
-	           <date>2006</date>
-	           <citedRange>81 n.64</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/PA7ZG6EU"/>
-	       <ref target="https://biblio.inscriptiones.org/epig10001671">https://biblio.inscriptiones.org/epig10001671</ref></bibl></listBibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002496">https://biblio.inscriptiones.org/epig10002496</ref>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Portale</author>
+                        <date>2006</date>
+                        <citedRange>81 n.64</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/PA7ZG6EU"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001671">https://biblio.inscriptiones.org/epig10001671</ref>
+                    </bibl>
+                </listBibl>
             </div>
         </body>
     </text>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,15 +20,19 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>establishment of EpiDoc template</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="MMohr"/>
                     <resp>provision of data and photograph</resp>
                 </respStmt>
-                </titleStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001674</idno>
@@ -36,7 +42,7 @@
                 <idno type="EDCS">64901084</idno>
                 <idno type="PHI">331396</idno>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001674</idno>
-               <availability>
+                <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
             </publicationStmt>
@@ -61,7 +67,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Inscription set in opus signinum pavement at the threshold between rooms 17 and 16 in 'casa a peristilo 1', inside room 17, facing the viewer as one moves from west to east, from room 17 to room 16. There is some damage and lacunae in the right hand half of the text.</p>
+                                <support>
+                                    <p>Inscription set in opus signinum pavement at the threshold between rooms 17 and 16 in 'casa a peristilo 1', inside room 17, facing the viewer as one moves from west to east, from room 17 to room 16. There is some damage and lacunae in the right hand half of the text.</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.pavement" ref="https://www.eagle-network.eu/voc/objtyp/lod/190.html">pavement</objectType>
                                     <dimensions><!-- -->
@@ -71,12 +78,13 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.damaged"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Set out over two lines, somewhat unevenly, parallel to the stone threshold</p>
+                                <layout>
+                                    <p>Set out over two lines, somewhat unevenly, parallel to the stone threshold</p>
                                     <rs ana="#execution.inlaid" ref="https://www.eagle-network.eu/voc/writing/lod/4.html">inlaid</rs>
-                                	<damage ana="#text_condition.incomplete"/>
-			</layout>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -108,10 +116,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462258" corresp="#findspot">Ietas</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462258" corresp="#findspot">Ietas</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524540">Monte Iato</placeName>
-                            	<geo>37.967050, 13.198199</geo>
-		</origPlace>
+                                <geo>37.967050, 13.198199</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0201" evidence="archaeological-context">third century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1985" xml:id="findspot">On the threshold of doorway from room 17 to room 16 of 'casa a peristilo 1'<geo>37.967313, 13.195928</geo></provenance>
@@ -123,18 +131,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following EpiDoc guidelines 9.2</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -163,16 +171,17 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2021-04-30" who="#JP">Jonathan Prag created file from template based upon published information</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-          <surface type="front">
-                <graphic n="screen" url="ISic001674_tiled.tif" height="3352px" width="5265px">
-                    <desc>Photo courtesy Zurich Ietas excavations</desc>
-                </graphic>
-                <graphic n="print" url="ISic001674.jpg" height="3352px" width="5265px">
-                    <desc>Photo courtesy Zurich Ietas excavations</desc>
+        <surface type="front">
+            <graphic n="screen" url="ISic001674_tiled.tif" height="3352px" width="5265px">
+                <desc>Photo courtesy Zurich Ietas excavations</desc>
+            </graphic>
+            <graphic n="print" url="ISic001674.jpg" height="3352px" width="5265px">
+                <desc>Photo courtesy Zurich Ietas excavations</desc>
             </graphic>
         </surface>
         <surface type="front">
@@ -182,20 +191,25 @@
             <graphic n="print" url="ISic001674.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface></facsimile>
+        </surface>
+    </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="BΠoAK"/><w xml:id="BΠoAU">Χαῖρε</w> <w xml:id="BΠoAe">καὶ</w> <w xml:id="BΠoAo"><supplied reason="lost" xml:id="BΠoAy">πί</supplied><unclear xml:id="BΠoAΙ">ει</unclear></w> <w xml:id="BΠoAΤ"><supplied reason="lost" xml:id="BΠoAε">εὖ</supplied></w> 
-                    <lb n="2" xml:id="BΠoAο"/><w xml:id="BΠoBA">ἱλαρὸς</w> <w xml:id="BΠoBK">εἶ</w> <w xml:id="BΠoBU">νυ</w>
+                    <lb n="1" xml:id="BΠoAK"/><w xml:id="BΠoAU" n="5">Χαῖρε</w> <w xml:id="BΠoAe" n="10">καὶ</w> <w xml:id="BΠoAo" n="15"><supplied reason="lost" xml:id="BΠoAy">πί</supplied><unclear xml:id="BΠoAΙ">ει</unclear></w> <w xml:id="BΠoAΤ" n="20"><supplied reason="lost" xml:id="BΠoAε">εὖ</supplied></w>
+                    <lb n="2" xml:id="BΠoAο"/><w xml:id="BΠoBA" n="25">ἱλαρὸς</w> <w xml:id="BΠoBK" n="30">εἶ</w> <w xml:id="BΠoBU" n="35">νυ</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
-               <listApp>
-                   <app><note>Text of Isler 1986</note></app>
-                   <app loc="line 2"><note>Isler 1985: ΙΛΑΡΟΣ Ι ΝΥ</note></app>
-                   </listApp>
+                <listApp>
+                    <app>
+                        <note>Text of Isler 1986</note>
+                    </app>
+                    <app loc="line 2">
+                        <note>Isler 1985: ΙΛΑΡΟΣ Ι ΝΥ</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p/>
@@ -208,40 +222,47 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>35.1002</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>36.0836</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1988.0245</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
+                    </bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1993.0714</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
+                    </bibl>
                     <bibl>
                         <author>Isler</author>
                         <date>1985</date>
                         <citedRange>13-15 with fig. 20</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/J6XVB3EM"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002220">https://biblio.inscriptiones.org/epig10002220</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002220">https://biblio.inscriptiones.org/epig10002220</ref>
+                    </bibl>
                     <bibl>
                         <author>Isler</author>
                         <date>1986</date>
                         <citedRange>72-73 with abb. 3</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/7RY9946C"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002487">https://biblio.inscriptiones.org/epig10002487</ref></bibl>
-                 </listBibl>
-	   <listBibl type="discussion">
-	       <bibl>
-	           <author>Tsakirgis</author>
-	           <date>1990</date>
-	           <citedRange>441</citedRange>
-	           <ptr target="http://zotero.org/groups/382445/items/TN8BG3BS"/>
-	       <ref target="https://biblio.inscriptiones.org/epig10002486">https://biblio.inscriptiones.org/epig10002486</ref></bibl>
-	   </listBibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002487">https://biblio.inscriptiones.org/epig10002487</ref>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Tsakirgis</author>
+                        <date>1990</date>
+                        <citedRange>441</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/TN8BG3BS"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002486">https://biblio.inscriptiones.org/epig10002486</ref>
+                    </bibl>
+                </listBibl>
             </div>
         </body>
     </text>

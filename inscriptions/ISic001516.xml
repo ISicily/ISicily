@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,17 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -62,7 +68,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A marble plaque, approximately square in form, intact on left and upper edges, but irregular on right and broken along the lower edge towards the right hand side. The plaque had plaster on both front and rear when found, from later re-use as a tomb cover.</p>
+                                <support>
+                                    <p>A marble plaque, approximately square in form, intact on left and upper edges, but irregular on right and broken along the lower edge towards the right hand side. The plaque had plaster on both front and rear when found, from later re-use as a tomb cover.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--La Rotonda di Adelfia / Orsi-->
@@ -72,16 +79,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p></p>
+                                <layout>
+                                    <p/>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Use of lunate epsilon and sigma, cursive omega, alpha frequently with oblique crossbar descending left, and some ligatures.</p>
+                            <handNote>
+                                <p>Use of lunate epsilon and sigma, cursive omega, alpha frequently with oblique crossbar descending left, and some ligatures.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -96,32 +105,32 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0401" notAfter-custom="0450" evidence="archaeological-context lettering">Early 5th century CE (Sgarlata)</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1894-06-22">Found by Orsi in the 'Cappella di Eusebio' in the southern region of the Catacomb of S.Giovanni, on 22 June 1894. Now on display in sector F of the Archaeological Museum.<geo>37.0769001,15.2844883</geo></provenance> <!-- representative location of the catacombs --> 
-                       <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1894-06-22">Found by Orsi in the 'Cappella di Eusebio' in the southern region of the Catacomb of S.Giovanni, on 22 June 1894. Now on display in sector F of the Archaeological Museum.<geo>37.0769001,15.2844883</geo></provenance> <!-- representative location of the catacombs -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -150,14 +159,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                            <change when="2020-11-13" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-13" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-05-21" who="#JP">Jonathan Prag revised from publication and added image</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -168,14 +178,14 @@
             <graphic n="print" url="ISic001516.jpg" height="2526px" width="2953px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo Archaeologico Regionale Paolo Orsi.</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <ab>
                     <lb n="1"/><persName type="attested"><name>Εὐσκία</name></persName> ἡ ἄ<hi rend="ligature">με</hi><hi rend="ligature">ντ</hi>ος <expan><abbr>ζ<hi rend="ligature">ήσ</hi>α</abbr><ex>σα</ex></expan>
-                    <lb n="2"/>χρηστῶς καὶ σε<hi rend="ligature">μνῶς</hi> ἔτη
+                    <lb n="2"/>χρηστῶς καὶ σε<hi rend="ligature">μνῶς</hi>ἔτη
                     <lb n="3"/><expan><abbr>πλῖο</abbr><ex>ν</ex></expan> ἔλαττον <num value="25">κε</num> ἀ<hi rend="ligature">νε</hi>
                     <lb n="4" break="no"/>παύσετο <hi rend="ligature" xml:id="l1">τῇ</hi> <hi rend="ligature" xml:id="l2">ἑ</hi>ορ<hi rend="ligature">τῇ</hi> <hi rend="ligature">τῆς</hi> κυ<link target="#l1 #l2"/>
                     <lb n="5" break="no"/>ρίας μου <persName type="attested"><name>Λουκίας</name></persName> εἰς <hi rend="ligature">ἢν</hi>
@@ -184,7 +194,7 @@
                     <lb n="8" break="no"/>τή τέλιος οὖσα εὐχα
                     <lb n="9" break="no"/>ριστοῦσα τῷ εἰδίῳ <hi rend="ligature">ἀν</hi>
                     <lb n="10" break="no"/>δρὶ πολλὰς εὐχαρισ
-                    <lb n="11" break="no"/>τίας <g ref="#alpha">α</g> <g ref="#staurogram">&#x101a0;</g> <g ref="#omega">ω</g> εὐο<hi rend="ligature">μεί</hi><supplied reason="lost">λητος</supplied>
+                    <lb n="11" break="no"/>τίας <g ref="#alpha" n="5">α</g> <g ref="#staurogram" n="10">𐆠</g> <g ref="#omega" n="15">ω</g> εὐο<hi rend="ligature">μεί</hi><supplied reason="lost">λητος</supplied>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
@@ -205,44 +215,52 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>2004.0656</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>54.0942</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>31.0842</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Agnello</author>
                         <date>1953</date>
                         <citedRange>no.20</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref>
+                    </bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>1895</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/M7C8KM46"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001714">https://biblio.inscriptiones.org/epig10001714</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001714">https://biblio.inscriptiones.org/epig10001714</ref>
+                    </bibl>
                     <bibl>
                         <author>Guarducci</author>
                         <date>1967-1978</date>
                         <citedRange>4.526-528 no.4 fig.164</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ENQ4AGD6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000193">https://biblio.inscriptiones.org/epig10000193</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000193">https://biblio.inscriptiones.org/epig10000193</ref>
+                    </bibl>
                     <bibl>
                         <author>Pace</author>
                         <date>1949</date>
                         <citedRange>15 fig.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZEDFITDZ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001690">https://biblio.inscriptiones.org/epig10001690</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001690">https://biblio.inscriptiones.org/epig10001690</ref>
+                    </bibl>
                     <bibl>
                         <author>Feissel</author>
                         <date>1981</date>
                         <citedRange>136 n.13</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/UK6WUH6Z"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002009">https://biblio.inscriptiones.org/epig10002009</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002009">https://biblio.inscriptiones.org/epig10002009</ref>
+                    </bibl>
                     <bibl>
                         <author>Sgarlata</author>
                         <date>1998</date>
@@ -255,15 +273,19 @@
                         <date>2003</date>
                         <citedRange>113-116 fig.69</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/W7FX3DNQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001584">https://biblio.inscriptiones.org/epig10001584</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001584">https://biblio.inscriptiones.org/epig10001584</ref>
+                    </bibl>
                     <bibl>
                         <author>Lamagna and Amato</author>
                         <date>2014</date>
                         <citedRange>23 fig.7</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/BRWNQRHF"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001892">https://biblio.inscriptiones.org/epig10001892</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001892">https://biblio.inscriptiones.org/epig10001892</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
