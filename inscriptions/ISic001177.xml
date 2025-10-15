@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,11 +20,15 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-	</titleStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001177</idno>
@@ -62,7 +68,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A large rectangular limestone block, damaged around the edges of the face and with some material lost from both the top and bottom. The surface is badly weathered. The remains of a clamp-hole (vel sim) preserved front left of the top surface. The rear is very uneven with a large rounded protrusion.</p>
+                                <support>
+                                    <p>A large rectangular limestone block, damaged around the edges of the face and with some material lost from both the top and bottom. The surface is badly weathered. The remains of a clamp-hole (vel sim) preserved front left of the top surface. The rear is very uneven with a large rounded protrusion.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone
                                     </material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
@@ -73,12 +80,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Greek text is visible over 10 lines, although much of the initial lines in particular is now lost</p>
+                                <layout>
+                                    <p>Greek text is visible over 10 lines, although much of the initial lines in particular is now lost</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -113,12 +121,12 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>		
-                                <offset>near
-                                    <placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462225">Halaesa</placeName>
+                                <offset>
+                                    near<placeName type="modern" ref="http://sws.geonames.org/2525099">Castel di Tusa</placeName>
                                 </offset>
-                            	<geo>37.99907, 14.26197</geo>
-		</origPlace>
+                                <geo>37.99907, 14.26197</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0241" notAfter-custom="-0049">Late Hellenistic (period of the Roman Republican province)</origDate>
                         </origin>
                         <provenance type="found" subtype="first-recorded">First recorded on the site by Antonio Agustín in 1559-1560</provenance>
@@ -129,18 +137,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -171,35 +179,37 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-05-24" who="#JP">Jonathan Prag revised the file on the basis of the edition prepared for the 2017 catalogue</change>
                 <change when="2020-09-09" who="#JP">Updated Zenodo DOI</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-          <surface type="front">
-                 <graphic n="screen" url="ISic001177_tiled.tif" height="6520px" width="4912px">
-                     <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
-                 </graphic>
-                 <graphic n="print" url="ISic001177.jpg" height="6520px" width="4912px">
-                     <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
-                 </graphic>
-              <graphic n="screen" url="ISic001177_RTI_tiled.tif" height="6203px" width="4890px">
-                  <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
-              </graphic>
-              <graphic n="print" url="ISic001177_RTI.jpg" height="6203px" width="4890px">
-                  <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
-              </graphic><graphic n="screen" url="ISic001177_leftthreequarter_tiled.tif" height="5520px" width="3680px">
-                  <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
-              </graphic>
-              <graphic n="print" url="ISic001177_leftthreequarter.jpg" height="5520px" width="3680px">
-                  <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
-              </graphic>
-            </surface>
+        <surface type="front">
+            <graphic n="screen" url="ISic001177_tiled.tif" height="6520px" width="4912px">
+                <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
+            </graphic>
+            <graphic n="print" url="ISic001177.jpg" height="6520px" width="4912px">
+                <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001177_RTI_tiled.tif" height="6203px" width="4890px">
+                <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
+            </graphic>
+            <graphic n="print" url="ISic001177_RTI.jpg" height="6203px" width="4890px">
+                <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001177_leftthreequarter_tiled.tif" height="5520px" width="3680px">
+                <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
+            </graphic>
+            <graphic n="print" url="ISic001177_leftthreequarter.jpg" height="5520px" width="3680px">
+                <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
+            </graphic>
+        </surface>
         <surface type="top">
             <graphic n="screen" url="ISic001177_top_tiled.tif" height="3680px" width="5520px">
                 <desc>Photo J. Prag courtesy Soprintendenza BBCCAA di Messina</desc>
@@ -221,20 +231,24 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="BRΤAK"/><w xml:id="BRΤAU">θεοῖς</w> <w xml:id="BRΤAe">πᾶσι</w> 
-                    <lb n="2" xml:id="BRΤAo"/><w xml:id="BRΤAy">οἱ</w> <roleName type="military" subtype="miles" xml:id="BRΤAΙ"><w xml:id="BRΤAΤ">στρατ</w> <w xml:id="BRΤAε"><supplied reason="omitted" xml:id="BRΤAο">ευσ</supplied></w> <w xml:id="BRΤBA">άμενοι</w></roleName> 
-                    <lb n="3" xml:id="BRΤBK"/><w xml:id="BRΤBU">ἐν</w> <w xml:id="BRΤBe">Ἔ<supplied reason="omitted" xml:id="BRΤBo">ρυκ</supplied>ι</w> 
-                    <lb n="4" xml:id="BRΤBy"/><gap reason="lost" extent="unknown" unit="character" xml:id="BRΤBΙ"/>
-                    <lb n="5" xml:id="BRΤBΤ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BRΤBε"/>
-                    <lb n="6" xml:id="BRΤBο"/><gap reason="lost" extent="unknown" unit="character" xml:id="BRΤCA"/>
-                    <lb n="7" xml:id="BRΤCK"/><w xml:id="BRΤCU">Ἡράκλεον</w> <w xml:id="BRΤCe">Διοδώρου</w> 
-                    <lb n="8" xml:id="BRΤCo"/><w xml:id="BRΤCy">Κα</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BRΤCΙ"/>
-                    <lb n="9" xml:id="BRΤCΤ"/><roleName type="military" subtype="chiliarchos" xml:id="BRΤCε"><w xml:id="BRΤCο">χιλιαρχήσαν</w></roleName> <w xml:id="BRΤDA"><supplied reason="lost" xml:id="BRΤDK">τα</supplied></w> <w xml:id="BRΤDU">ἐν</w> <w xml:id="BRΤDe">Ἔρυκι</w> 
-                    <lb n="10" xml:id="BRΤDo"/><w xml:id="BRΤDy"><supplied reason="lost" xml:id="BRΤDΙ">εὐ</supplied>ν<supplied reason="lost" xml:id="BRΤDΤ">οίας  ἕν</supplied>εκεν</w>
+                    <lb n="1" xml:id="BRΤAK"/><w xml:id="BRΤAU" n="5">θεοῖς</w> <w xml:id="BRΤAe" n="10">πᾶσι</w>
+                    <lb n="2" xml:id="BRΤAo"/><w xml:id="BRΤAy" n="15">οἱ</w> <roleName type="military" subtype="miles" xml:id="BRΤAΙ"><w xml:id="BRΤAΤ" n="20">στρατ</w> <w xml:id="BRΤAε" n="25"><supplied reason="omitted" xml:id="BRΤAο">ευσ</supplied></w> <w xml:id="BRΤBA" n="30">άμενοι</w></roleName>
+                    <lb n="3" xml:id="BRΤBK"/><w xml:id="BRΤBU" n="35">ἐν</w> <w xml:id="BRΤBe" n="40">Ἔ<supplied reason="omitted" xml:id="BRΤBo">ρυκ</supplied>ι</w>
+                    <lb n="4" xml:id="BRΤBy"/><gap reason="lost" extent="unknown" unit="character" xml:id="BRΤBΙ" n="45"/>
+                    <lb n="5" xml:id="BRΤBΤ"/><gap reason="lost" extent="unknown" unit="character" xml:id="BRΤBε" n="50"/>
+                    <lb n="6" xml:id="BRΤBο"/><gap reason="lost" extent="unknown" unit="character" xml:id="BRΤCA" n="55"/>
+                    <lb n="7" xml:id="BRΤCK"/><w xml:id="BRΤCU" n="60">Ἡράκλεον</w> <w xml:id="BRΤCe" n="65">Διοδώρου</w>
+                    <lb n="8" xml:id="BRΤCo"/><w xml:id="BRΤCy" n="70">Κα</w> <gap reason="lost" extent="unknown" unit="character" xml:id="BRΤCΙ" n="75"/>
+                    <lb n="9" xml:id="BRΤCΤ"/><roleName type="military" subtype="chiliarchos" xml:id="BRΤCε"><w xml:id="BRΤCο" n="80">χιλιαρχήσαν</w></roleName> <w xml:id="BRΤDA" n="85"><supplied reason="lost" xml:id="BRΤDK">τα</supplied></w> <w xml:id="BRΤDU" n="90">ἐν</w> <w xml:id="BRΤDe" n="95">Ἔρυκι</w>
+                    <lb n="10" xml:id="BRΤDo"/><w xml:id="BRΤDy" n="100"><supplied reason="lost" xml:id="BRΤDΙ">εὐ</supplied>ν<supplied reason="lost" xml:id="BRΤDΤ">οίας  ἕν</supplied>εκεν</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>provisional text after Kaibel in IG 14 and Prestianni Giallombardo 2012, pending processing of RTI imagery</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>provisional text after Kaibel in IG 14 and Prestianni Giallombardo 2012, pending processing of RTI imagery</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>The men who served as soldiers in Eryx [-----] (dedicate) to all the gods (a statue of) Herakleios son of Diodorus Ka[---], who was military tribune in Eryx, on account of his goodwill.</p>
@@ -243,7 +257,7 @@
                 <p>The text is badly damaged and was already very difficult to read when the first surviving transcription was made by Antonio Agustín in 1559-1560. The text of Agustín remains the closest to the best reconstruction which can now be made of the text, combining the conjectures and efforts of multiple scholars over the centuries (Prestianni Giallombardo 1993: tab.1 reproduces Agustín’s transcription, preserved in codex Matritensis 5781 f.22; see further Prestianni Giallombardo 2012: 175-176).
                     The text records honours set up by a group of soldiers for their military commander, one Herakleios son of Diodoros. Both names are well attested in Sicily, including at Halaesa (see LGPN). The incomplete word which follows the name could be the beginning of a demotic-type abbreviation, which is commonly found in Halaesan inscriptions, although none beginning ΚΑ- are currently known; it could also be a second name in the Sicilian Greek tradition (cf. Cordano 1997 and 1999: 152-154). Both the men serving as soldiers (presumably citizens of Halaesa) and the commander, described as a chiliarch, are recorded as serving at Eryx (modern Erice), where there was a major sanctuary of Astarte / Aphrodite / Venus. Diodorus Siculus (4.83.7) records that the Roman senate decreed “that the 17 most loyal cities in Sicily should wear gold in Aphrodite’s honour and that 200 soldiers should watch over the sanctuary.” Diodorus does not date this decree, but it is most likely to belong to the period immediately after the First Punic War (Prag 2011: 195-197). Two other inscriptions found at Eryx (<ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001101">ISic001101</ref> and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000538">ISic000538</ref>) also record soldiers and commanders at Eryx, and it is a reasonable assumption that all three inscriptions relate to this special garrison, and that this text records soldiers from Halaesa serving in the garrison. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001101">ISic001101</ref> records a Segestan also holding the position of chiliarch; the fact that our text was set up in Halaesa, makes it very likely that Herakleios was a Halaesan holding the same position. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000538">ISic000538</ref> describes the (unknown) commander of the same garrison as a tribunus militum and the Greek title chiliarch is the usual translation for this Roman position (it is interesting to see Greek citizens adopting a Roman military title). The presence of this text at Halaesa also implies that Halaesa was one of the 17 loyal cities mentioned by Diodorus and by Cicero (Verr.5.124), which fits with the city’s privileged status under Rome (see Pais 1888: 173-194 for the fullest discussion of this group, and Prag 2007b: 82-83 on the garrison).</p>
                 <p>The inscription finds a local parallel in <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000612">ISic000612</ref>, in which citizens of Halaesa and several other communities honour a Roman commander; a further parallel from Halaesa is offered by an as yet unpublished text in which cavalrymen from several cities including Halaesa honour an unknown individual.</p>
-                   <p> The text cannot be closely dated, but belongs in the period between 241 and 49 BC.</p>
+                <p> The text cannot be closely dated, but belongs in the period between 241 and 49 BC.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -254,15 +268,18 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">355</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>43.1208.2</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>41.0776</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Gualtherus</author>
                         <date>(no date)</date>
@@ -273,91 +290,108 @@
                         <date>1624 [1625]</date>
                         <citedRange>47 no.300</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                     <bibl>
                         <author>Muratori</author>
                         <date>1740</date>
                         <citedRange>820 no.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/9S5VIRWZ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001395">https://biblio.inscriptiones.org/epig10001395</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001395">https://biblio.inscriptiones.org/epig10001395</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1753</date>
                         <citedRange>147-148 no.5</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/U7S4ZAG3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002086">https://biblio.inscriptiones.org/epig10002086</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002086">https://biblio.inscriptiones.org/epig10002086</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1769</date>
                         <citedRange>cl.9 no.15</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>cl.9 no.16</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Franz</author>
                         <date>1853</date>
                         <citedRange>5598</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
+                    </bibl>
                     <bibl type="corpus" n="SGDI">
                         <author>Hoffmann</author>
                         <date>1904</date>
                         <citedRange>5203</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/DQDPC573"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGRR">
                         <author>Cagnat</author>
                         <date>1906</date>
                         <citedRange>507</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/KSH4D9GK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001116">https://biblio.inscriptiones.org/epig10001116</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001116">https://biblio.inscriptiones.org/epig10001116</ref>
+                    </bibl>
                     <bibl>
                         <author>Prestianni Giallombardo</author>
                         <date>1987</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/29XU2HR9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001663">https://biblio.inscriptiones.org/epig10001663</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001663">https://biblio.inscriptiones.org/epig10001663</ref>
+                    </bibl>
                     <bibl>
                         <author>Prestianni Giallombardo</author>
                         <date>1993</date>
                         <citedRange>ph</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HQDFME9N"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001659">https://biblio.inscriptiones.org/epig10001659</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001659">https://biblio.inscriptiones.org/epig10001659</ref>
+                    </bibl>
                     <bibl>
                         <author>Nenci</author>
                         <date>1998</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/RMIFQVHG"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001728">https://biblio.inscriptiones.org/epig10001728</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001728">https://biblio.inscriptiones.org/epig10001728</ref>
+                    </bibl>
                     <bibl>
                         <author>Facella</author>
                         <date>2006</date>
                         <citedRange>329-331</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/J4XWZPV6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002013">https://biblio.inscriptiones.org/epig10002013</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002013">https://biblio.inscriptiones.org/epig10002013</ref>
+                    </bibl>
                     <bibl>
                         <author>Scibona</author>
                         <date>2008</date>
                         <citedRange>27</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/EQC3W4UU"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001594">https://biblio.inscriptiones.org/epig10001594</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001594">https://biblio.inscriptiones.org/epig10001594</ref>
+                    </bibl>
                     <bibl>
                         <author>Prestianni Giallombardo</author>
                         <date>2012</date>
                         <citedRange>175 fig.152</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/CJISRIUV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001357">https://biblio.inscriptiones.org/epig10001357</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001357">https://biblio.inscriptiones.org/epig10001357</ref>
+                    </bibl>
                     <bibl>
                         <author>Prag and Tigano</author>
                         <date>2017</date>
                         <citedRange>no.7</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/MI64NB9L"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002630">https://biblio.inscriptiones.org/epig10002630</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
