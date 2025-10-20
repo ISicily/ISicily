@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -69,12 +75,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -115,10 +121,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>		
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487">Segesta</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
-                            	<geo>37.94171, 12.83649</geo>
-		</origPlace>
+                                <geo>37.94171, 12.83649</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0101" evidence="archaeological-context">Second half of the 2nd century BCEE (so Ampolo and Erdas)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Theatre</provenance>
@@ -129,18 +135,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -170,15 +176,16 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-09-23" who="#JP">Jonathan Prag added ISegesta ref and cleaned text div</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-02-17" who="#JP">Jonathan Prag added bibl, revised dating</change>
                 <change when="2022-09-12" who="#JP">Jonathan Prag added image and translations</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -195,12 +202,16 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="BKΤAK"/><w xml:id="BKΤAU">ὁ</w> <w xml:id="BKΤAe">δᾶμος</w> <w xml:id="BKΤAo">τῶν</w> <w xml:id="BKΤAy">Ἐγεσταίων</w> <w xml:id="BKΤAΙ">Φάλα<supplied reason="lost" xml:id="BKΤAΤ">κρον</supplied></w> 
-                    <lb n="2" xml:id="BKΤAε"/><w xml:id="BKΤAο"><supplied reason="lost" xml:id="BKΤBA">Δ</supplied>ιοδ<unclear xml:id="BKΤBK">ώ</unclear>ρου</w> <w xml:id="BKΤBU">Ἐρύσσιον</w> <w xml:id="BKΤBe">ἀρετᾶς</w> <w xml:id="BKΤBo">ἕνε<supplied reason="lost" xml:id="BKΤBy">κα</supplied></w>
+                    <lb n="1" xml:id="BKΤAK"/><w xml:id="BKΤAU" n="5">ὁ</w> <w xml:id="BKΤAe" n="10">δᾶμος</w> <w xml:id="BKΤAo" n="15">τῶν</w> <w xml:id="BKΤAy" n="20">Ἐγεσταίων</w> <w xml:id="BKΤAΙ" n="25">Φάλα<supplied reason="lost" xml:id="BKΤAΤ">κρον</supplied></w>
+                    <lb n="2" xml:id="BKΤAε"/><w xml:id="BKΤAο" n="30"><supplied reason="lost" xml:id="BKΤBA">Δ</supplied>ιοδ<unclear xml:id="BKΤBK">ώ</unclear>ρου</w> <w xml:id="BKΤBU" n="35">Ἐρύσσιον</w> <w xml:id="BKΤBe" n="40">ἀρετᾶς</w> <w xml:id="BKΤBo" n="45">ἕνε<supplied reason="lost" xml:id="BKΤBy">κα</supplied></w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text of Ampolo and Erdas 2019</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text of Ampolo and Erdas 2019</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>The people of the Segestans (honours/dedicates) Phalakros Eyrssios, son of Diodoros, on account of his virtue.</p>
@@ -221,85 +232,101 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">288.1</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>53.1029</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>41.0824</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGDS1">
-                         <author>Dubois</author>
-                         <date>1989</date> 
+                        <author>Dubois</author>
+                        <date>1989</date>
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">214a</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
-                         <author>Manni Piraino</author>
-                         <date>1973</date> 
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>46</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Franz</author>
                         <date>1853</date>
                         <citedRange>5542</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
+                    </bibl>
                     <bibl type="corpus" n="SGDI">
                         <author>Hoffmann</author>
                         <date>1904</date>
                         <citedRange>5191</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/DQDPC573"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref>
+                    </bibl>
                     <bibl>
                         <author>Maggiore</author>
                         <date>1833</date>
                         <citedRange>171</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4KGK8VTB"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002539">https://biblio.inscriptiones.org/epig10002539</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002539">https://biblio.inscriptiones.org/epig10002539</ref>
+                    </bibl>
                     <bibl>
                         <author>Agostiniani</author>
                         <date>1977</date>
                         <citedRange>146-149</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/QR2S9AJ9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002201">https://biblio.inscriptiones.org/epig10002201</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002201">https://biblio.inscriptiones.org/epig10002201</ref>
+                    </bibl>
                     <bibl>
                         <author>Consani</author>
                         <date>1996</date>
                         <citedRange>125</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQG9CZGX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002071">https://biblio.inscriptiones.org/epig10002071</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002071">https://biblio.inscriptiones.org/epig10002071</ref>
+                    </bibl>
                     <bibl>
                         <author>De Vido</author>
                         <date>1991</date>
                         <citedRange>972</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/KMKJH2E8"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001409">https://biblio.inscriptiones.org/epig10001409</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001409">https://biblio.inscriptiones.org/epig10001409</ref>
+                    </bibl>
                     <bibl>
                         <author>Cordano</author>
                         <date>1997</date>
                         <citedRange>408 III.6</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/WDH4NRJN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002069">https://biblio.inscriptiones.org/epig10002069</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002069">https://biblio.inscriptiones.org/epig10002069</ref>
+                    </bibl>
                     <bibl>
                         <author>De Vido</author>
                         <date>2003</date>
                         <citedRange>397 no.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/33HPA43I"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002041">https://biblio.inscriptiones.org/epig10002041</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002041">https://biblio.inscriptiones.org/epig10002041</ref>
+                    </bibl>
                     <bibl>
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>G7a</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/3PK3JKXR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

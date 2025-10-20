@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -46,7 +52,7 @@
                         <region>Sicily</region>
                         <settlement>Licata</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/134">Museo Archeologico della Badia</repository>
-                      <idno type="inventory"/>
+                        <idno type="inventory"/>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -60,7 +66,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Part of a slab of white limestone, intact on the left, albeit lightly damaged, broken top and right, and with a vacat below, possibly preserving part of the lower margin.</p>
+                                <support>
+                                    <p>Part of a slab of white limestone, intact on the left, albeit lightly damaged, broken top and right, and with a vacat below, possibly preserving part of the lower margin.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone
                                     </material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
@@ -71,12 +78,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>13 lines of Greek letters, with a regular left margin, set out in pseudo-stoichedon, and a vacat at the end</p>
+                                <layout>
+                                    <p>13 lines of Greek letters, with a regular left margin, set out in pseudo-stoichedon, and a vacat at the end</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -140,10 +148,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462424">Phintias</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462424">Phintias</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524393">Licata</placeName>
-                            	<geo>37.10267, 13.93972</geo>
-		</origPlace>
+                                <geo>37.10267, 13.93972</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0201" evidence="lettering">3rd century BCE (Manganaro)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">From excavations on via S. Maria, Licata (1989-1990)</provenance>
@@ -154,18 +162,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -195,12 +203,13 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-11-12" who="#JP">Jonathan Prag edited the file from publication and photograph</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -223,27 +232,35 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="DiyAK"/><w xml:id="DiyAU"><supplied reason="lost" xml:id="DiyAe">Θ</supplied>εοδο</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyAo"/>
-                    <lb n="2" xml:id="DiyAy"/><w xml:id="DiyAΙ">Ἀρτε</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyAΤ"/>
-                    <lb n="3" xml:id="DiyAε"/><w xml:id="DiyAο">Ἀρισ<unclear xml:id="DiyBA">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyBK"/>
-                    <lb n="4" xml:id="DiyBU"/><w xml:id="DiyBe"><unclear xml:id="DiyBo">Ἀ</unclear>σκλα</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyBy"/>
-                    <lb n="5" xml:id="DiyBΙ"/><w xml:id="DiyBΤ">Θεαντο</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyBε"/>
-                    <lb n="6" xml:id="DiyBο"/><w xml:id="DiyCA">Φαινιππ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyCK"/>
-                    <lb n="7" xml:id="DiyCU"/><w xml:id="DiyCe">Δαμα<unclear xml:id="DiyCo">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyCy"/>
-                    <lb n="8" xml:id="DiyCΙ"/><w xml:id="DiyCΤ">Δεινομ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyCε"/>
-                    <lb n="9" xml:id="DiyCο"/><w xml:id="DiyDA">Διοδωρ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyDK"/>
-                    <lb n="10" xml:id="DiyDU"/><w xml:id="DiyDe">Νικωμαχ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyDo"/>
-                    <lb n="11" xml:id="DiyDy"/><w xml:id="DiyDΙ">Μολοσσ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyDΤ"/>
-                    <lb n="12" xml:id="DiyDε"/><w xml:id="DiyDο">Ἀρ<unclear xml:id="DiyEA">ισ</unclear>το<unclear xml:id="DiyEK">μ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyEU"/>
-                    <lb n="13" xml:id="DiyEe"/><w xml:id="DiyEo">Εὐκλῆς</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyEy"/>
-                    <lb xml:id="DiyEΙ"/><space unit="line" quantity="1" xml:id="DiyEΤ"/>
+                    <lb n="1" xml:id="DiyAK"/><w xml:id="DiyAU" n="5"><supplied reason="lost" xml:id="DiyAe">Θ</supplied>εοδο</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyAo" n="10"/>
+                    <lb n="2" xml:id="DiyAy"/><w xml:id="DiyAΙ" n="15">Ἀρτε</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyAΤ" n="20"/>
+                    <lb n="3" xml:id="DiyAε"/><w xml:id="DiyAο" n="25">Ἀρισ<unclear xml:id="DiyBA">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyBK" n="30"/>
+                    <lb n="4" xml:id="DiyBU"/><w xml:id="DiyBe" n="35"><unclear xml:id="DiyBo">Ἀ</unclear>σκλα</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyBy" n="40"/>
+                    <lb n="5" xml:id="DiyBΙ"/><w xml:id="DiyBΤ" n="45">Θεαντο</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyBε" n="50"/>
+                    <lb n="6" xml:id="DiyBο"/><w xml:id="DiyCA" n="55">Φαινιππ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyCK" n="60"/>
+                    <lb n="7" xml:id="DiyCU"/><w xml:id="DiyCe" n="65">Δαμα<unclear xml:id="DiyCo">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyCy" n="70"/>
+                    <lb n="8" xml:id="DiyCΙ"/><w xml:id="DiyCΤ" n="75">Δεινομ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyCε" n="80"/>
+                    <lb n="9" xml:id="DiyCο"/><w xml:id="DiyDA" n="85">Διοδωρ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyDK" n="90"/>
+                    <lb n="10" xml:id="DiyDU"/><w xml:id="DiyDe" n="95">Νικωμαχ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyDo" n="100"/>
+                    <lb n="11" xml:id="DiyDy"/><w xml:id="DiyDΙ" n="105">Μολοσσ</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyDΤ" n="110"/>
+                    <lb n="12" xml:id="DiyDε"/><w xml:id="DiyDο" n="115">Ἀρ<unclear xml:id="DiyEA">ισ</unclear>το<unclear xml:id="DiyEK">μ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyEU" n="120"/>
+                    <lb n="13" xml:id="DiyEe"/><w xml:id="DiyEo" n="125">Εὐκλῆς</w> <gap reason="lost" extent="unknown" unit="character" xml:id="DiyEy" n="130"/>
+                    <lb xml:id="DiyEΙ"/><space unit="line" quantity="1" xml:id="DiyEΤ" n="135"/>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app><note>Text after Manganaro 2006, corrected against photograph by Prag</note></app>
-                    <app loc="Line 1"><note>Manganaro: ---<unclear>Δ</unclear>-; but [-]ΕΟΔΟ[-] visible on stone in photograph</note></app>
-                    <app loc="Line 10"><note>Manganaro: ΝΙΚΟΜΑΧ[-]; Ω clear on stone in photograph</note></app>
+                    <app>
+                        <note>Text after Manganaro 2006, corrected against photograph by Prag</note>
+                    </app>
+                    <app loc="Line 1">
+                        <note>
+                            Manganaro: ---<unclear>Δ</unclear>-; but [-]ΕΟΔΟ[-] visible on stone in photograph
+                        </note>
+                    </app>
+                    <app loc="Line 10">
+                        <note>Manganaro: ΝΙΚΟΜΑΧ[-]; Ω clear on stone in photograph</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -258,15 +275,19 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>56.1095</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2006</date>
                         <citedRange>131-132</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/KNA4DGCC"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001798">https://biblio.inscriptiones.org/epig10001798</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001798">https://biblio.inscriptiones.org/epig10001798</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

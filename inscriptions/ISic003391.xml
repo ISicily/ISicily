@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -44,7 +50,7 @@
                         <region>Sicily</region>
                         <settlement>Megara Hyblaea</settlement>
                         <repository role="site" ref="http://sicily.classics.ox.ac.uk/museum/167">Area archeologica di Megara Hyblaea</repository>
-                           <altIdentifier>
+                        <altIdentifier>
                             <settlement/>
                             <repository/>
                             <idno type="old"/>
@@ -56,7 +62,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>text set in an opus signunum pavement at the entrance to a room</p>
+                                <support>
+                                    <p>text set in an opus signunum pavement at the entrance to a room</p>
                                     <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.pavement" ref="http://www.eagle-network.eu/voc/objtyp/lod/190.htm">pavement</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -66,17 +73,18 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.inlaid" ref="https://www.eagle-network.eu/voc/writing/lod/4.html">inlaid</rs>
-                                	<damage ana="#text_condition.complete"/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
                             <handNote>
-                                <p>Letters neatly formed of small black basalt stone chips. Nu has a shorter right hand vertical; omicron is equal size to the other letters; alpha off vertical, cross-bar formed by single piece; mu formed by four equal off-vertical strokes, mid-point descending fully to the base-line.</p>                                <locus from="line1" to="line1">Line 1</locus>
+                                <p>Letters neatly formed of small black basalt stone chips. Nu has a shorter right hand vertical; omicron is equal size to the other letters; alpha off vertical, cross-bar formed by single piece; mu formed by four equal off-vertical strokes, mid-point descending fully to the base-line.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
                                 <p>
                                     Types list:
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html">Α type1</ref>
@@ -106,10 +114,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462307" corresp="#findspot">Megara Hyblaea</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462307" corresp="#findspot">Megara Hyblaea</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/8063661">Megara Iblea</placeName>
-                            	<geo>37.20380, 15.18274</geo>
-		</origPlace>
+                                <geo>37.20380, 15.18274</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="-0001" evidence="context">1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" xml:id="findspot">Mosaic at the entrance to room i of house 13,22 in SE quarter of Megara Hyblaea<geo>37.203839, 15.181060</geo></provenance>
@@ -117,22 +125,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2018.06.04</provenance>
                         <acquisition/>
                     </history>
-                    </msDesc>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -163,53 +171,58 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-06-07" who="#JP">Jonathan Prag updated file and added images after autopsy</change>
                 <change when="2019-09-12" who="#JP">Jonathan Prag revised dating and added bibliography</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-04-21" who="#JP">Jonathan Prag edited metadata</change>
-	</listChange>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-          <surface type="front">
-                    <graphic n="screen" url="ISic003391_tiled.tif" height="3024px" width="4032px">
-                    <desc>Photo J. Prag</desc>
-                    </graphic>
-                    <graphic n="print" url="ISic003391.jpg" height="3024px" width="4032px">
-                    <desc>Photo J. Prag</desc>
-                    </graphic>
-              <graphic n="screen" url="ISic003391_leftdetail_tiled.tif" height="3024px" width="4032px">
-                  <desc>Photo J. Prag</desc>
-              </graphic>
-              <graphic n="print" url="ISic003391_leftdetail.jpg" height="3024px" width="4032px">
-                  <desc>Photo J. Prag</desc>
-                  </graphic>
-              <graphic n="screen" url="ISic003391_rightdetail_tiled.tif" height="3024px" width="4032px">
-                  <desc>Photo J. Prag</desc>
-              </graphic>
-              <graphic n="print" url="ISic003391_rightdetail.jpg" height="3024px" width="4032px">
-                  <desc>Photo J. Prag</desc>
-              </graphic>
-              <graphic n="screen" url="ISic003391_context_tiled.tif" height="3024px" width="4032px">
-                  <desc>Photo J. Prag</desc>
-              </graphic>
-              <graphic n="print" url="ISic003391_context.jpg" height="3024px" width="4032px">
-                  <desc>Photo J. Prag</desc>
-              </graphic>
-           </surface>
+        <surface type="front">
+            <graphic n="screen" url="ISic003391_tiled.tif" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="print" url="ISic003391.jpg" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003391_leftdetail_tiled.tif" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="print" url="ISic003391_leftdetail.jpg" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003391_rightdetail_tiled.tif" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="print" url="ISic003391_rightdetail.jpg" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="screen" url="ISic003391_context_tiled.tif" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+            <graphic n="print" url="ISic003391_context.jpg" height="3024px" width="4032px">
+                <desc>Photo J. Prag</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="DnKAK"/><w xml:id="DnKAU">Γναΐου</w> <w xml:id="DnKAe">Μοδίου</w>
+                    <lb n="1" xml:id="DnKAK"/><w xml:id="DnKAU" n="5">Γναΐου</w> <w xml:id="DnKAe" n="10">Μοδίου</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text from autopsy</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>(House of) Gnaius Modius</p>
@@ -222,34 +235,42 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>2007.0671</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>59.1107</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>26.1102</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Manni Piraino</author>
                         <date>1975</date>
                         <citedRange>152 no.18 tav.34.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/UUNP76BF"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001772">https://biblio.inscriptiones.org/epig10001772</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001772">https://biblio.inscriptiones.org/epig10001772</ref>
+                    </bibl>
                     <bibl>
                         <author>Torelli</author>
                         <date>2007</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/B35EFD2T"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001558">https://biblio.inscriptiones.org/epig10001558</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001558">https://biblio.inscriptiones.org/epig10001558</ref>
+                    </bibl>
                     <bibl>
                         <author>Tréziny</author>
                         <date>2018</date>
                         <citedRange>273-274</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/5UHWUE4K"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002599">https://biblio.inscriptiones.org/epig10002599</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002599">https://biblio.inscriptiones.org/epig10002599</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

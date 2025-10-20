@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -60,7 +66,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A square block of blue-grey marble with white veins. The block is intact on all sides, but  appears to have been broken in half (with a further break in the upper part) at some point in the (modern) past, and repaired.  There is minor damage to the top left, top middle and bottom right of the front face.  The upper face contains a large square recess centred in relation to the block (30 cm wide x 34 cm front to back, border on left/right is 15 cm; border front/back is 14 cm), parallel to the overall form of the block.</p>
+                                <support>
+                                    <p>A square block of blue-grey marble with white veins. The block is intact on all sides, but  appears to have been broken in half (with a further break in the upper part) at some point in the (modern) past, and repaired.  There is minor damage to the top left, top middle and bottom right of the front face.  The upper face contains a large square recess centred in relation to the block (30 cm wide x 34 cm front to back, border on left/right is 15 cm; border front/back is 14 cm), parallel to the overall form of the block.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble
                                     </material>
                                     <objectType ana="#object.statue_base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">statue base
@@ -72,12 +79,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Two lines of Greek letters, across the middle of the front face. The letters are aligned on the left margin, and are arranged in pseudo-stoichedon, i.e. vertically aligned.</p>
+                                <layout>
+                                    <p>Two lines of Greek letters, across the middle of the front face. The letters are aligned on the left margin, and are arranged in pseudo-stoichedon, i.e. vertically aligned.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -131,10 +139,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
-                            	<geo>37.32084, 13.58876</geo>
-		</origPlace>
+                                <geo>37.32084, 13.58876</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0251">4th or earlier 3rd century BCE (letter forms)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found approx 200m north of Temple of Concord ('terreno Sclafani) in 1918<geo>37.291514, 13.591975</geo></provenance>
@@ -142,23 +150,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2018.07.17 Prag</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -188,46 +195,51 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-09-02" who="#JP">Jonathan Prag edited the file based on autospy, adding images, text, translation, metadata</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
-         <surface type="front">
-             <graphic n="screen" url="ISic001489_tiled.tif" height="3680px" width="5520px">
-                 <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
+        <surface type="front">
+            <graphic n="screen" url="ISic001489_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
             </graphic>
             <graphic n="print" url="ISic001489.jpg" height="3680px" width="5520px">
                 <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
             </graphic>
-             <graphic n="screen" url="ISic001489_rightthreequarter_tiled.tif" height="3680px" width="5520px">
-                 <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
-             </graphic>
-             <graphic n="print" url="ISic001489_rightthreequarter.jpg" height="3680px" width="5520px">
-                 <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
-             </graphic>
-             <graphic n="screen" url="ISic001489_leftthreequarter_tiled.tif" height="3680px" width="5520px">
-                 <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
-             </graphic>
-             <graphic n="print" url="ISic001489_leftthreequarter.jpg" height="3680px" width="5520px">
-                 <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
-             </graphic>
+            <graphic n="screen" url="ISic001489_rightthreequarter_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
+            </graphic>
+            <graphic n="print" url="ISic001489_rightthreequarter.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
+            </graphic>
+            <graphic n="screen" url="ISic001489_leftthreequarter_tiled.tif" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
+            </graphic>
+            <graphic n="print" url="ISic001489_leftthreequarter.jpg" height="3680px" width="5520px">
+                <desc>Photo J. Prag, courtesy Agrigento Museo Regionale Archeologico Pietro Griffo</desc>
+            </graphic>
         </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="BwοAK"/><w xml:id="BwοAU">Φάλακρος</w> <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#triple-colon" xml:id="BwοAe">⁝</g> <w xml:id="BwοAo">Θευδώρου</w> 
-                    <lb n="2" xml:id="BwοAy"/><w xml:id="BwοAΙ">Ἑρμᾶι</w> <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#triple-colon" xml:id="BwοAΤ">⁝</g> <w xml:id="BwοAε">ἀνέθηκε</w>
+                    <lb n="1" xml:id="BwοAK"/><w xml:id="BwοAU" n="5">Φάλακρος</w> <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#triple-colon" xml:id="BwοAe" n="10">⁝</g> <w xml:id="BwοAo" n="15">Θευδώρου</w>
+                    <lb n="2" xml:id="BwοAy"/><w xml:id="BwοAΙ" n="20">Ἑρμᾶι</w> <g ref="http://sicily.classics.ox.ac.uk/alists/listglyph.xml#triple-colon" xml:id="BwοAΤ" n="25">⁝</g> <w xml:id="BwοAε" n="30">ἀνέθηκε</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text based on autopsy</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text based on autopsy</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Phalakros son of Theudoros dedicated (this statue) to Hermes</p>
@@ -243,42 +255,50 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>04.0035</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGDS1">
-                         <author>Dubois</author>
-                         <date>1989</date> 
+                        <author>Dubois</author>
+                        <date>1989</date>
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">183</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Gabrici</author>
                         <title>NSA</title>
                         <date>1925</date>
                         <citedRange>421</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Langlotz</author>
                         <date>1943</date>
                         <citedRange>abb.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FIGPRCDC"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001891">https://biblio.inscriptiones.org/epig10001891</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001891">https://biblio.inscriptiones.org/epig10001891</ref>
+                    </bibl>
                     <bibl>
                         <author>De Waele</author>
                         <date>1971</date>
                         <citedRange>32-33 no.3 pl.4</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/CXHAXNBQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002040">https://biblio.inscriptiones.org/epig10002040</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002040">https://biblio.inscriptiones.org/epig10002040</ref>
+                    </bibl>
                     <bibl>
                         <author>Griffo</author>
                         <date>1987</date>
                         <citedRange>188 fig.163</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/HP9HQST2"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001934">https://biblio.inscriptiones.org/epig10001934</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001934">https://biblio.inscriptiones.org/epig10001934</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
