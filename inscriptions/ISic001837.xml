@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragment of an honorific inscription mentioning Pompeia Sosia Falconilla</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#FP">Francesca Prado</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="FP" ref="https://orcid.org/0000-0003-3326-3475">Francesca Prado</name>
+                    <resp>editing of EpiDoc</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001837</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001837</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Centuripe</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/002">Museo Archeologico Regionale di Centuripe</repository>
+                        <idno type="inventory">KA0852</idno>
+                        <!--Antiquarium - sala III-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Part of the left side of a large slab of white marble, composed of 5 joining fragments; broken off above, to the right and below.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">22</height>
+                                        <width unit="cm">31</width>
+                                        <depth unit="cm">2</depth> 
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragments.contiguous"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Parts of the initial letters of four lines, consistent left margin.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Large monumental v-cut letters with neat serifs.</p>
+                                <locus from="line2" to="line3">Lines 2-3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="55" atMost="65">55-65</height>
+                                </dimensions>
+                                <locus from="line1" to="line4">Interlineation line 1 to 4</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm" atLeast="20" atMost="30">20-30</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
+                                <geo>37.62336, 14.74049</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0110" notAfter-custom="0200" evidence="prosopography">wife of the consul of 163 CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Date, place and circumstances of discovery are unknown, but assumed to come from the area of the 'building of the Augustales'</provenance>
+                        <provenance type="observed" subtype="autopsied" xml:id="autopsy">Prado 2023-05-09</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                    <change when="2025-10-13" who="#JP">Jonathan Prag created initial draft file</change> 
+                </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001837_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09</desc>
+            </graphic>
+            <graphic n="print" url="ISic001837.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-05-09</desc>
+            </graphic>
+           </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#JP" source="#autopsy">
+                <ab>
+                    <lb n="1"/><supplied reason="lost">So</supplied>si<unclear>a</unclear><supplied reason="lost">e</supplied> <supplied reason="lost">Falconillae</supplied>
+                    <lb n="2"/><expan><abbr>Q</abbr><ex>uinti</ex></expan> Pomp<supplied reason="lost">ei</supplied> <supplied reason="lost">Sosi </supplied><supplied reason="lost">Prisci</supplied> <supplied reason="lost"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulis</ex></expan></supplied> <supplied reason="lost"><expan><abbr>fil</abbr><ex>iae</ex></expan></supplied>
+                    <lb n="3"/><expan><abbr>Q</abbr><ex>uinti</ex></expan> Pompe<supplied reason="lost">i</supplied> <supplied reason="lost">Falconis</supplied> <supplied reason="lost"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulis</ex></expan></supplied> <supplied reason="lost"><expan><abbr>nep</abbr><ex>ti</ex></expan></supplied>
+                    <lb n="4"/><expan><abbr>Q</abbr><ex>uinti</ex></expan> <unclear>S</unclear><supplied reason="lost">osi</supplied> <supplied reason="lost">Senecionis</supplied> <supplied reason="lost"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulis</ex></expan></supplied> <supplied reason="lost"><num value="2">II</num></supplied> <supplied reason="lost"><expan><abbr>pro</abbr><ex>nepti</ex></expan></supplied>
+                    <lb n="5"/><supplied reason="lost"><expan><abbr>Sex</abbr><ex>ti</ex></expan></supplied> <supplied reason="lost">Iuli</supplied> <supplied reason="lost">Frontini</supplied> <supplied reason="lost"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>ulis</ex></expan></supplied> <supplied reason="lost"><num value="3">III</num></supplied> <supplied reason="lost"><expan><abbr>abn</abbr><ex>epti</ex></expan></supplied>
+                    <lb/><gap reason="lost" extent="unknown" unit="line"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text of Prado from autopsy, after Eck and Barbera</note>
+                    </app>
+                    </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>For Pompeia Sosia Falconilla, daughter of the consul Q. Pompeius Sosius Priscus, granddaughter of the consul Q. Pompeius Falco, great-granddaughter of the consul Q. Sosius Senecio, great-great-granddaughter of the consul Sextus Iulius Frontinus...</p>
+            </div>
+                <div type="translation" xml:lang="it" resp="#FP">
+                    <p>Per Pompeia Sosia Falconilla, figlia di Q. Pompeius Sosius Priscus console, nipote di Q. Pompeius Falco, console, pronipote di Q. Sosius Senecio console, pronipote di Sextus Iulius Frontinus console…</p>
+            </div>
+            <div type="commentary" xml:lang="en" resp="#FP">
+                <p></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>1900</date>
+                        <citedRange>49 no.17</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/UE3VRJA7"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001707">https://biblio.inscriptiones.org/epig10001707</ref>
+                    </bibl>
+                    </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

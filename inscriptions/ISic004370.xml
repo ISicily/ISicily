@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -52,7 +58,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                        <support><p>A fragmentary slab of local limestone, broken on all sides</p>
+                                <support>
+                                    <p>A fragmentary slab of local limestone, broken on all sides</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.unknown" ref="http://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</objectType>
                                     <dimensions><!-- not recorded -->
@@ -62,13 +69,13 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <p>Remains of six lines of Greek letters, evenly spaced, all incomplete</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -104,10 +111,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462153">Centuripae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525032">Centuripe</placeName>
-                            	<geo>37.62336, 14.74049</geo>
-		</origPlace>
+                                <geo>37.62336, 14.74049</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101" evidence="lettering">2nd century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="first-seen" when="2017">Found in 2017 in re-use in the wall of a modern house in the old centre of Centuripe</provenance>
@@ -118,18 +125,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,20 +166,21 @@
             <listChange>
                 <change when="2017-11-16" resp="#JP">Jonathan Prag created draft file from template</change>
                 <change when="2018-04-09" resp="#JP">Jonathan Prag made minor edits and added image</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
                 <change when="2020-12-21" who="#JP">Jonathan Prag minor edits</change>
                 <change when="2021-01-06" who="#JP">Jonathan Prag amended bibliographic reference</change>
-	    <change when="2021-01-06" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2021-01-06" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
-                   <graphic n="screen" url="ISic004370_tiled.tif" height="1228px" width="1292px">
-                       <desc>Photo from https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html</desc>
+            <graphic n="screen" url="ISic004370_tiled.tif" height="1228px" width="1292px">
+                <desc>Photo from https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html</desc>
             </graphic>
             <graphic n="print" url="ISic004370.jpg" height="1228px" width="1292px">
                 <desc>Photo from https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html</desc>
@@ -183,12 +191,12 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1" xml:id="ElAAK"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElAAU"/><w xml:id="ElAAe"><supplied reason="lost" xml:id="ElAAo">Ἑρ</supplied>μᾶι</w> <w xml:id="ElAAy">Ἡρα<supplied reason="lost" xml:id="ElAAΙ">κλεῖ</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElAAΤ"/>
-                    <lb n="2" xml:id="ElAAε"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElAAο"/><w xml:id="ElABA">νασιαρχ</w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElABK"/>
-                    <lb n="3" xml:id="ElABU"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElABe"/><w xml:id="ElABo">ουτ</w> <gap reason="lost" unit="character" quantity="2" xml:id="ElABy"/><w xml:id="ElABΙ"><unclear xml:id="ElABΤ">ν</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElABε"/>
-                    <lb n="4" xml:id="ElABο"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElACA"/><w xml:id="ElACK">οντ<unclear xml:id="ElACU">ο</unclear></w> <gap reason="lost" unit="character" quantity="2" xml:id="ElACe"/><gap reason="illegible" unit="character" quantity="1" xml:id="ElACo"/><w xml:id="ElACy">α</w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElACΙ"/>
-                    <lb n="5" xml:id="ElACΤ"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElACε"/><w xml:id="ElACο"><unclear xml:id="ElADA">ε</unclear>σκ<unclear xml:id="ElADK">ε</unclear>υα<unclear xml:id="ElADU">ζ</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElADe"/>
-                    <lb n="6" xml:id="ElADo"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElADy"/><w xml:id="ElADΙ"><unclear xml:id="ElADΤ">α</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElADε"/>
+                    <lb n="1" xml:id="ElAAK"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElAAU" n="5"/><w xml:id="ElAAe" n="10"><supplied reason="lost" xml:id="ElAAo">Ἑρ</supplied>μᾶι</w> <w xml:id="ElAAy" n="15">Ἡρα<supplied reason="lost" xml:id="ElAAΙ">κλεῖ</supplied></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElAAΤ" n="20"/>
+                    <lb n="2" xml:id="ElAAε"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElAAο" n="25"/><w xml:id="ElABA" n="30">νασιαρχ</w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElABK" n="35"/>
+                    <lb n="3" xml:id="ElABU"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElABe" n="40"/><w xml:id="ElABo" n="45">ουτ</w> <gap reason="lost" unit="character" quantity="2" xml:id="ElABy" n="50"/><w xml:id="ElABΙ" n="55"><unclear xml:id="ElABΤ">ν</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElABε" n="60"/>
+                    <lb n="4" xml:id="ElABο"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElACA" n="65"/><w xml:id="ElACK" n="70">οντ<unclear xml:id="ElACU">ο</unclear></w> <gap reason="lost" unit="character" quantity="2" xml:id="ElACe" n="75"/><gap reason="illegible" unit="character" quantity="1" xml:id="ElACo" n="80"/><w xml:id="ElACy" n="85">α</w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElACΙ" n="90"/>
+                    <lb n="5" xml:id="ElACΤ"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElACε" n="95"/><w xml:id="ElACο" n="100"><unclear xml:id="ElADA">ε</unclear>σκ<unclear xml:id="ElADK">ε</unclear>υα<unclear xml:id="ElADU">ζ</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElADe" n="105"/>
+                    <lb n="6" xml:id="ElADo"/><gap reason="lost" unit="character" extent="unknown" xml:id="ElADy" n="110"/><w xml:id="ElADΙ" n="115"><unclear xml:id="ElADΤ">α</unclear></w> <gap reason="lost" unit="character" extent="unknown" xml:id="ElADε" n="120"/>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
@@ -212,14 +220,19 @@
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-               <bibl>
-                   <author>Isabella di Bartolo</author>
-                   <date>2017-09-18</date>
-                   <citedRange><ref target="https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html">https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html</ref></citedRange>
-                   <ptr target="http://zotero.org/groups/382445/items/XN2MHLWK"/>
-               <ref target="https://biblio.inscriptiones.org/epig10002687">https://biblio.inscriptiones.org/epig10002687</ref></bibl>
+                    <bibl>
+                        <author>Isabella di Bartolo</author>
+                        <date>2017-09-18</date>
+                        <citedRange>
+                            <ref target="https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html">https://archeosicilia.blogspot.co.uk/2017/09/centuripe-scoperta-la-dedica-di-un.html</ref>
+                        </citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/XN2MHLWK"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002687">https://biblio.inscriptiones.org/epig10002687</ref>
+                    </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
