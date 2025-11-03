@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -70,13 +76,13 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <p>The text is set out in two columns on the front face. The left margin of the second column is justified, the right margin of the first column is uneven. Part of the text of the right column, from line 6 (the oath) onwards, is indented</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -150,10 +156,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0265" notAfter-custom="-0215">Reign of Hieron II (c. 265—215 BCE)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1749">Found, according to Capodieci 1813: 178, in 1749 outside the walls of Siracusa in the lowest part of the ancient quarter of Akradina (presumably not far from the ancient agora<geo>37.065577, 15.285904</geo><!-- approximate location only --></provenance>
@@ -164,18 +170,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -206,13 +212,14 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-05-28" who="#JP">Jonathan Prag added image files and bibl item</change>
                 <change when="2018-06-01" who="#JP">Jonathan Prag added metadata and revised text</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-11-03" who="#RC">Robert Crellin added local IDs to edition elements</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -256,46 +263,50 @@
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc">
-                  <ab>
+                <ab>
                     <cb n="1" xml:id="AηΤAK"/>
-                    <lb n="0" xml:id="AηΤAU"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤAe"/>
-                    <lb n="1" xml:id="AηΤAo"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤAy"/><w xml:id="AηΤAΙ">Λ</w> <gap reason="illegible" quantity="1" unit="character" xml:id="AηΤAΤ"/><w xml:id="AηΤAε">Ι</w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤAο"/>
-                    <lb n="2" xml:id="AηΤBA"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤBK"/><w xml:id="AηΤBU"><supplied reason="lost" xml:id="AηΤBe">ὑμῖ</supplied>ν</w> <w xml:id="AηΤBo">φροντίζειν</w> 
-                    <lb n="3" xml:id="AηΤBy"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤBΙ"/><roleName type="supracivic" subtype="basileus" xml:id="AηΤBΤ"><w xml:id="AηΤBε">βασιλέων</w></roleName> <w xml:id="AηΤBο">καὶ</w> <w xml:id="AηΤCA">τὰν</w> 
-                    <lb n="4" xml:id="AηΤCK"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤCU"/><w xml:id="AηΤCe">ίδων</w> <w xml:id="AηΤCo">πᾶσαν</w> <w xml:id="AηΤCy">παρ</w> 
-                    <lb n="5" xml:id="AηΤCΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤCΤ"/><w xml:id="AηΤCε">ν</w> <w xml:id="AηΤCο">εἰς</w> <w xml:id="AηΤDA">ἁμὲ</w> <w xml:id="AηΤDK">εὔνοιαν</w> 
-                    <lb n="6" xml:id="AηΤDU"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤDe"/><w xml:id="AηΤDo"><supplied reason="lost" xml:id="AηΤDy">ἄρισ</supplied>τα</w> <w xml:id="AηΤDΙ">μόνον</w> <w xml:id="AηΤDΤ">παρεσκευ
-                    <lb n="7" break="no" xml:id="AηΤDε"/><supplied reason="lost" xml:id="AηΤDο">άσασθαι</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤEA"/><w xml:id="AηΤEK"><supplied reason="lost" xml:id="AηΤEU">τοῖς</supplied></w> <w xml:id="AηΤEe"><supplied reason="lost" xml:id="AηΤEo">Σ</supplied><unclear xml:id="AηΤEy">υ</unclear>ρακοσίοις.</w> <w xml:id="AηΤEΙ">φανερὸν</w> <w xml:id="AηΤEΤ">δὴ</w> 
-                    <lb n="8" xml:id="AηΤEε"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤEο"/><w xml:id="AηΤFA"><supplied reason="lost" xml:id="AηΤFK">ἐ</supplied><unclear xml:id="AηΤFU">ν</unclear></w> <w xml:id="AηΤFe">τοσούτοις</w> <w xml:id="AηΤFo">ἔτεσι</w> <w xml:id="AηΤFy">ὡς</w> 
-                    <lb n="9" xml:id="AηΤFΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤFΤ"/><w xml:id="AηΤFε"><supplied reason="lost" xml:id="AηΤFο">οὐδενὸς</supplied></w> <w xml:id="AηΤGA"><supplied reason="lost" xml:id="AηΤGK">τῶν</supplied></w> <w xml:id="AηΤGU"><supplied reason="lost" xml:id="AηΤGe">π</supplied><unclear xml:id="AηΤGo">ρ</unclear>ὸτερον</w> <w xml:id="AηΤGy">ἁγημένων</w> 
-                    <lb n="10" xml:id="AηΤGΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤGΤ"/><w xml:id="AηΤGε"><supplied reason="lost" xml:id="AηΤGο">τα</supplied>λικαῦται</w> <w xml:id="AηΤHA">ὑπάρχ<supplied reason="lost" xml:id="AηΤHK">οντι</supplied></w> 
-                    <lb n="11" xml:id="AηΤHU"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤHe"/><w xml:id="AηΤHo"><supplied reason="lost" cert="low" xml:id="AηΤHy">τριακ</supplied>άδι</w> <w xml:id="AηΤHΙ">τὸ</w> <w xml:id="AηΤHΤ">τε</w> <w xml:id="AηΤHε">κοιν</w> <gap reason="illegible" unit="character" quantity="1" xml:id="AηΤHο"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤIA"/>
-                    <lb n="12" xml:id="AηΤIK"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤIU"/><w xml:id="AηΤIe"><supplied reason="lost" xml:id="AηΤIo">τ</supplied>ε</w> <w xml:id="AηΤIy">ἀμεῖς</w> <w xml:id="AηΤIΙ"><unclear xml:id="AηΤIΤ">οι</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤIε"/>
-                    <lb n="13" xml:id="AηΤIο"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤJA"/><w xml:id="AηΤJK">ς</w> <w xml:id="AηΤJU">τ<unclear xml:id="AηΤJe">α</unclear><unclear xml:id="AηΤJo">ι</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤJy"/>
-                    <lb n="13a" xml:id="AηΤJΙ"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤJΤ"/><cb n="2" xml:id="AηΤJε"/>
-                    <lb n="0" xml:id="AηΤJο"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤKA"/>
-                    <lb n="1" xml:id="AηΤKK"/><gap reason="lost" unit="character" quantity="2" xml:id="AηΤKU"/><w xml:id="AηΤKe"><supplied reason="lost" xml:id="AηΤKo">μ</supplied>ηδενί</w> <w xml:id="AηΤKy">εξου</w> <gap reason="illegible" unit="character" quantity="1" xml:id="AηΤKΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤKΤ"/>
-                    <lb n="2" xml:id="AηΤKε"/><w xml:id="AηΤKο">διδῶτε</w>, <w xml:id="AηΤLA">πράσσειν</w> <w xml:id="AηΤLK">α</w> <gap reason="illegible" unit="character" quantity="1" xml:id="AηΤLU"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤLe"/>
-                    <lb n="3" xml:id="AηΤLo"/><w xml:id="AηΤLy">πραξεῖν</w> <w xml:id="AηΤLΙ">ἔτι</w> <w xml:id="AηΤLΤ">δὲ</w> <w xml:id="AηΤLε">καὶ</w> <w xml:id="AηΤLο"><unclear xml:id="AηΤMA">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤMK"/>
-                    <lb n="4" xml:id="AηΤMU"/><w xml:id="AηΤMe">οἱ</w> <w xml:id="AηΤMo">πατέρες</w> <w xml:id="AηΤMy">ὑμῶν</w> <w xml:id="AηΤMΙ">καὶ</w> <w xml:id="AηΤMΤ"><unclear xml:id="AηΤMε">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤMο"/><w xml:id="AηΤNA"><supplied reason="lost" xml:id="AηΤNK">τὰ</supplied></w> <w xml:id="AηΤNU"><supplied reason="lost" xml:id="AηΤNe">ὅρκια</supplied></w> 
-                    <lb n="5" xml:id="AηΤNo"/><w xml:id="AηΤNy">διαφυλάσσειν</w> <w xml:id="AηΤNΙ">ἃ</w> <w xml:id="AηΤNΤ">ἐντὶ</w> <w xml:id="AηΤNε"><supplied reason="lost" xml:id="AηΤNο">ὀμόμενα</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤOA"/>
-                    <lb n="6" xml:id="AηΤOK"/><space quantity="6" unit="character" xml:id="AηΤOU"/><seg type="oath" xml:id="AηΤOe"><w xml:id="AηΤOo">Ὄρκιον</w> <w xml:id="AηΤOy">βουλᾶς</w> <w xml:id="AηΤOΙ">κα<supplied reason="lost" xml:id="AηΤOΤ">ὶ</supplied></w> <w xml:id="AηΤOε"><supplied reason="lost" xml:id="AηΤOο">στραταγῶν</supplied></w> 
-                    <lb n="7" xml:id="AηΤPA"/> <space quantity="7" unit="character" xml:id="AηΤPK"/> <w xml:id="AηΤPU">καὶ</w> <w xml:id="AηΤPe">τῶν</w> <w xml:id="AηΤPo">ἄλλων</w> <w xml:id="AηΤPy"><supplied reason="lost" xml:id="AηΤPΙ">πολιτᾶν</supplied></w> 
-                    <lb n="8" xml:id="AηΤPΤ"/> <space quantity="3" unit="character" xml:id="AηΤPε"/> <w xml:id="AηΤPο">ὀμνύω</w> <w xml:id="AηΤQA">τὰν</w> <w xml:id="AηΤQK">Ἱστίαν</w> <w xml:id="AηΤQU">τῶ<supplied reason="lost" cert="low" xml:id="AηΤQe">ν</supplied></w> <w xml:id="AηΤQo"><supplied reason="lost" cert="low" xml:id="AηΤQy">Συρακοσίων</supplied></w> <w xml:id="AηΤQΙ"><supplied reason="lost" cert="low" xml:id="AηΤQΤ">καὶ</supplied></w> <w xml:id="AηΤQε"><supplied reason="lost" cert="low" xml:id="AηΤQο">τὸν</supplied></w> <w xml:id="AηΤRA"><supplied reason="lost" cert="low" xml:id="AηΤRK">Δία</supplied></w> 
-                    <lb n="9" xml:id="AηΤRU"/> <space quantity="3" unit="character" xml:id="AηΤRe"/> <w xml:id="AηΤRo">τὸν</w> <w xml:id="AηΤRy">Ὀλύμπιον</w> <w xml:id="AηΤRΙ">καὶ</w> <w xml:id="AηΤRΤ">τὰν</w> <w xml:id="AηΤRε"><supplied reason="lost" cert="low" xml:id="AηΤRο">Γᾶν</supplied></w> <w xml:id="AηΤSA"><supplied reason="lost" cert="low" xml:id="AηΤSK">καὶ</supplied></w> <w xml:id="AηΤSU"><supplied reason="lost" cert="low" xml:id="AηΤSe">τὸν</supplied></w> <w xml:id="AηΤSo"><supplied reason="lost" cert="low" xml:id="AηΤSy">Ἥλιον</supplied></w> <w xml:id="AηΤSΙ"><supplied reason="lost" cert="low" xml:id="AηΤSΤ">καὶ</supplied></w> <w xml:id="AηΤSε"><supplied reason="lost" cert="low" xml:id="AηΤSο">τὸν</supplied></w> 
-                    <lb n="10" xml:id="AηΤTA"/> <space quantity="3" unit="character" xml:id="AηΤTK"/> <w xml:id="AηΤTU">Ποσειδ<supplied reason="lost" xml:id="AηΤTe">ᾶνα</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤTo"/></seg>
-                    <lb n="10a" xml:id="AηΤTy"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤTΙ"/>
+                    <lb n="0" xml:id="AηΤAU"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤAe" n="5"/>
+                    <lb n="1" xml:id="AηΤAo"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤAy" n="10"/><w xml:id="AηΤAΙ" n="15">Λ</w> <gap reason="illegible" quantity="1" unit="character" xml:id="AηΤAΤ" n="20"/><w xml:id="AηΤAε" n="25">Ι</w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤAο" n="30"/>
+                    <lb n="2" xml:id="AηΤBA"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤBK" n="35"/><w xml:id="AηΤBU" n="40"><supplied reason="lost" xml:id="AηΤBe">ὑμῖ</supplied>ν</w> <w xml:id="AηΤBo" n="45">φροντίζειν</w>
+                    <lb n="3" xml:id="AηΤBy"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤBΙ" n="50"/><roleName type="supracivic" subtype="basileus" xml:id="AηΤBΤ"><w xml:id="AηΤBε" n="55">βασιλέων</w></roleName> <w xml:id="AηΤBο" n="60">καὶ</w> <w xml:id="AηΤCA" n="65">τὰν</w>
+                    <lb n="4" xml:id="AηΤCK"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤCU" n="70"/><w xml:id="AηΤCe" n="75">ίδων</w> <w xml:id="AηΤCo" n="80">πᾶσαν</w> <w xml:id="AηΤCy" n="85">παρ</w>
+                    <lb n="5" xml:id="AηΤCΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤCΤ" n="90"/><w xml:id="AηΤCε" n="95">ν</w> <w xml:id="AηΤCο" n="100">εἰς</w> <w xml:id="AηΤDA" n="105">ἁμὲ</w> <w xml:id="AηΤDK" n="110">εὔνοιαν</w>
+                    <lb n="6" xml:id="AηΤDU"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤDe" n="115"/><w xml:id="AηΤDo" n="120"><supplied reason="lost" xml:id="AηΤDy">ἄρισ</supplied>τα</w> <w xml:id="AηΤDΙ" n="125">μόνον</w> <w xml:id="AηΤDΤ" n="130">παρεσκευ
+                    <lb n="7" break="no" xml:id="AηΤDε"/><supplied reason="lost" xml:id="AηΤDο">άσασθαι</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤEA" n="135"/><w xml:id="AηΤEK" n="140"><supplied reason="lost" xml:id="AηΤEU">τοῖς</supplied></w> <w xml:id="AηΤEe" n="145"><supplied reason="lost" xml:id="AηΤEo">Σ</supplied><unclear xml:id="AηΤEy">υ</unclear>ρακοσίοις.</w> <w xml:id="AηΤEΙ" n="150">φανερὸν</w> <w xml:id="AηΤEΤ" n="155">δὴ</w>
+                    <lb n="8" xml:id="AηΤEε"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤEο" n="160"/><w xml:id="AηΤFA" n="165"><supplied reason="lost" xml:id="AηΤFK">ἐ</supplied><unclear xml:id="AηΤFU">ν</unclear></w> <w xml:id="AηΤFe" n="170">τοσούτοις</w> <w xml:id="AηΤFo" n="175">ἔτεσι</w> <w xml:id="AηΤFy" n="180">ὡς</w>
+                    <lb n="9" xml:id="AηΤFΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤFΤ" n="185"/><w xml:id="AηΤFε" n="190"><supplied reason="lost" xml:id="AηΤFο">οὐδενὸς</supplied></w> <w xml:id="AηΤGA" n="195"><supplied reason="lost" xml:id="AηΤGK">τῶν</supplied></w> <w xml:id="AηΤGU" n="200"><supplied reason="lost" xml:id="AηΤGe">π</supplied><unclear xml:id="AηΤGo">ρ</unclear>ὸτερον</w> <w xml:id="AηΤGy" n="205">ἁγημένων</w>
+                    <lb n="10" xml:id="AηΤGΙ"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤGΤ" n="210"/><w xml:id="AηΤGε" n="215"><supplied reason="lost" xml:id="AηΤGο">τα</supplied>λικαῦται</w> <w xml:id="AηΤHA" n="220">ὑπάρχ<supplied reason="lost" xml:id="AηΤHK">οντι</supplied></w>
+                    <lb n="11" xml:id="AηΤHU"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤHe" n="225"/><w xml:id="AηΤHo" n="230"><supplied reason="lost" cert="low" xml:id="AηΤHy">τριακ</supplied>άδι</w> <w xml:id="AηΤHΙ" n="235">τὸ</w> <w xml:id="AηΤHΤ" n="240">τε</w> <w xml:id="AηΤHε" n="245">κοιν</w> <gap reason="illegible" unit="character" quantity="1" xml:id="AηΤHο" n="250"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤIA" n="255"/>
+                    <lb n="12" xml:id="AηΤIK"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤIU" n="260"/><w xml:id="AηΤIe" n="265"><supplied reason="lost" xml:id="AηΤIo">τ</supplied>ε</w> <w xml:id="AηΤIy" n="270">ἀμεῖς</w> <w xml:id="AηΤIΙ" n="275"><unclear xml:id="AηΤIΤ">οι</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤIε" n="280"/>
+                    <lb n="13" xml:id="AηΤIο"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤJA" n="285"/><w xml:id="AηΤJK" n="290">ς</w> <w xml:id="AηΤJU" n="295">τ<unclear xml:id="AηΤJe">α</unclear><unclear xml:id="AηΤJo">ι</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤJy" n="300"/>
+                    <lb n="13a" xml:id="AηΤJΙ"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤJΤ" n="305"/><cb n="2" xml:id="AηΤJε"/>
+                    <lb n="0" xml:id="AηΤJο"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤKA" n="310"/>
+                    <lb n="1" xml:id="AηΤKK"/><gap reason="lost" unit="character" quantity="2" xml:id="AηΤKU" n="315"/><w xml:id="AηΤKe" n="320"><supplied reason="lost" xml:id="AηΤKo">μ</supplied>ηδενί</w> <w xml:id="AηΤKy" n="325">εξου</w> <gap reason="illegible" unit="character" quantity="1" xml:id="AηΤKΙ" n="330"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤKΤ" n="335"/>
+                    <lb n="2" xml:id="AηΤKε"/><w xml:id="AηΤKο" n="340">διδῶτε</w>, <w xml:id="AηΤLA" n="345">πράσσειν</w> <w xml:id="AηΤLK" n="350">α</w> <gap reason="illegible" unit="character" quantity="1" xml:id="AηΤLU" n="355"/><gap reason="lost" extent="unknown" unit="character" xml:id="AηΤLe" n="360"/>
+                    <lb n="3" xml:id="AηΤLo"/><w xml:id="AηΤLy" n="365">πραξεῖν</w> <w xml:id="AηΤLΙ" n="370">ἔτι</w> <w xml:id="AηΤLΤ" n="375">δὲ</w> <w xml:id="AηΤLε" n="380">καὶ</w> <w xml:id="AηΤLο" n="385"><unclear xml:id="AηΤMA">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤMK" n="390"/>
+                    <lb n="4" xml:id="AηΤMU"/><w xml:id="AηΤMe" n="395">οἱ</w> <w xml:id="AηΤMo" n="400">πατέρες</w> <w xml:id="AηΤMy" n="405">ὑμῶν</w> <w xml:id="AηΤMΙ" n="410">καὶ</w> <w xml:id="AηΤMΤ" n="415"><unclear xml:id="AηΤMε">τ</unclear></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤMο" n="420"/><w xml:id="AηΤNA" n="425"><supplied reason="lost" xml:id="AηΤNK">τὰ</supplied></w> <w xml:id="AηΤNU" n="430"><supplied reason="lost" xml:id="AηΤNe">ὅρκια</supplied></w>
+                    <lb n="5" xml:id="AηΤNo"/><w xml:id="AηΤNy" n="435">διαφυλάσσειν</w> <w xml:id="AηΤNΙ" n="440">ἃ</w> <w xml:id="AηΤNΤ" n="445">ἐντὶ</w> <w xml:id="AηΤNε" n="450"><supplied reason="lost" xml:id="AηΤNο">ὀμόμενα</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤOA" n="455"/>
+                    <lb n="6" xml:id="AηΤOK"/><space quantity="6" unit="character" xml:id="AηΤOU" n="460"/><seg type="oath" xml:id="AηΤOe"><w xml:id="AηΤOo" n="465">Ὄρκιον</w> <w xml:id="AηΤOy" n="470">βουλᾶς</w> <w xml:id="AηΤOΙ" n="475">κα<supplied reason="lost" xml:id="AηΤOΤ">ὶ</supplied></w> <w xml:id="AηΤOε" n="480"><supplied reason="lost" xml:id="AηΤOο">στραταγῶν</supplied></w>
+                    <lb n="7" xml:id="AηΤPA"/> <space quantity="7" unit="character" xml:id="AηΤPK" n="485"/> <w xml:id="AηΤPU" n="490">καὶ</w> <w xml:id="AηΤPe" n="495">τῶν</w> <w xml:id="AηΤPo" n="500">ἄλλων</w> <w xml:id="AηΤPy" n="505"><supplied reason="lost" xml:id="AηΤPΙ">πολιτᾶν</supplied></w>
+                    <lb n="8" xml:id="AηΤPΤ"/> <space quantity="3" unit="character" xml:id="AηΤPε" n="510"/> <w xml:id="AηΤPο" n="515">ὀμνύω</w> <w xml:id="AηΤQA" n="520">τὰν</w> <w xml:id="AηΤQK" n="525">Ἱστίαν</w> <w xml:id="AηΤQU" n="530">τῶ<supplied reason="lost" cert="low" xml:id="AηΤQe">ν</supplied></w> <w xml:id="AηΤQo" n="535"><supplied reason="lost" cert="low" xml:id="AηΤQy">Συρακοσίων</supplied></w> <w xml:id="AηΤQΙ" n="540"><supplied reason="lost" cert="low" xml:id="AηΤQΤ">καὶ</supplied></w> <w xml:id="AηΤQε" n="545"><supplied reason="lost" cert="low" xml:id="AηΤQο">τὸν</supplied></w> <w xml:id="AηΤRA" n="550"><supplied reason="lost" cert="low" xml:id="AηΤRK">Δία</supplied></w>
+                    <lb n="9" xml:id="AηΤRU"/> <space quantity="3" unit="character" xml:id="AηΤRe" n="555"/> <w xml:id="AηΤRo" n="560">τὸν</w> <w xml:id="AηΤRy" n="565">Ὀλύμπιον</w> <w xml:id="AηΤRΙ" n="570">καὶ</w> <w xml:id="AηΤRΤ" n="575">τὰν</w> <w xml:id="AηΤRε" n="580"><supplied reason="lost" cert="low" xml:id="AηΤRο">Γᾶν</supplied></w> <w xml:id="AηΤSA" n="585"><supplied reason="lost" cert="low" xml:id="AηΤSK">καὶ</supplied></w> <w xml:id="AηΤSU" n="590"><supplied reason="lost" cert="low" xml:id="AηΤSe">τὸν</supplied></w> <w xml:id="AηΤSo" n="595"><supplied reason="lost" cert="low" xml:id="AηΤSy">Ἥλιον</supplied></w> <w xml:id="AηΤSΙ" n="600"><supplied reason="lost" cert="low" xml:id="AηΤSΤ">καὶ</supplied></w> <w xml:id="AηΤSε" n="605"><supplied reason="lost" cert="low" xml:id="AηΤSο">τὸν</supplied></w>
+                    <lb n="10" xml:id="AηΤTA"/> <space quantity="3" unit="character" xml:id="AηΤTK" n="610"/> <w xml:id="AηΤTU" n="615">Ποσειδ<supplied reason="lost" xml:id="AηΤTe">ᾶνα</supplied></w> <gap reason="lost" extent="unknown" unit="character" xml:id="AηΤTo" n="620"/></seg>
+                    <lb n="10a" xml:id="AηΤTy"/><gap reason="lost" extent="unknown" unit="line" xml:id="AηΤTΙ" n="625"/>
                 </ab>
             </div>
-          <div type="apparatus">
-                <listApp><app><note>Text of Dimartino 2015: 62</note></app></listApp>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text of Dimartino 2015: 62</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary" resp="#JP">
                 <p>As Dimartino observes (2015: 58-59) it is quite possible that this is a small fragment from a larger dossier of multiple documents; it is also far from certain or necessary that the text in the second column is a direct continuation of the text in the first column (the first has 1st person plural pronouns; the second has a 2nd person plural pronoun; and the text of the oath at column II, line 6 is in turn clearly marked out as a distinct text by indentation, and may not therefore be a direct continuation from the lines preceding - in other words, parts of up to three separate (but related) texts may be preserved here. It seems most likely that the text in column I is part of a royal letter; the text in the first part of column II could be part of the same, or part of a separate letter or decree; the third text is an oath of the boule, which may or may not have been originally included in the preceding document(s).</p>
-                    <p>The form of the letters together with the references in the text to kings (basileis), the Syracusans, and the existence of the city council (boule) all suggest that this text, or dossier of texts, belongs to the reign of Hieron II of Syracuse, most likely in the period between 241 and 215 BC. Although most editors have attempted more or less extensive restoration of the text, as Dimartino argues cogently, there is little sound basis on which to do so: the extent of the missing text before and after is unknown, as is the actual original width of each of the two columns of text. It seems likely that the first column contains a royal letter, perhaps of Hieron II, addressing the Syracusans, and that the overall context is that of conslidating the relationship between the king and the city, with the latter part of column two containing an oath to be sworn by the boule and others, which may form part of that overall process. The stele itself, which might have recorded multiple documents pertaining to this moment, could in turn have formed part of a royal or other public monument in the area of the agora, but this can only be speculation.</p>
+                <p>The form of the letters together with the references in the text to kings (basileis), the Syracusans, and the existence of the city council (boule) all suggest that this text, or dossier of texts, belongs to the reign of Hieron II of Syracuse, most likely in the period between 241 and 215 BC. Although most editors have attempted more or less extensive restoration of the text, as Dimartino argues cogently, there is little sound basis on which to do so: the extent of the missing text before and after is unknown, as is the actual original width of each of the two columns of text. It seems likely that the first column contains a royal letter, perhaps of Hieron II, addressing the Syracusans, and that the overall context is that of conslidating the relationship between the king and the city, with the latter part of column two containing an oath to be sworn by the boule and others, which may form part of that overall process. The stele itself, which might have recorded multiple documents pertaining to this moment, could in turn have formed part of a royal or other public monument in the area of the agora, but this can only be speculation.</p>
                     <!--A grey stone stele; frag., with parts of two cols. of text surviving. Manganaro suggests it is a letter from Hieron II to the Syracusans, prob. composed at the time of the end of the First PW, 241 BC. The oath at the end of col.2 is that sworn subsequently / in response, by the Syracusans, at the request of H, writing in the name of the koinon of the Sicilians [but, Manganaro 1977 rejects this last part]. As Manganaro observes, col.1, line 11 is the only express mention of a 'koinon' in this context (restored as a 'koinon of the Sicilians', by M., but the relevant genitive plural is missing on the stone). M observes that the cities of the koinon are bound to Hieron and not to Syracuse (hence e.g. Leontinoi's protests in Liv. xxiv.29.11). In turn, M goes on to assert the existence of autonomous mint at Syracuse, and so also at other cities such as Tauromenion. Thus, the IE series of coins also has a parallel series with the legend 'Surakosion'. Tauromenion autonomy therefore, as indicated by the chron. system in IG XIV.421 also, should be dated to a grant on the part of the Syracusan king in the period 241-30 BC (rather than T's 'exclusion' / ejection from the koinon). The IE series, M thinks do reflect H's name, but that in this context he appears effectively as simply 'the minting magistrate', for which also there are parallels in the letters on the Sikeliotan coinages. These latter are to be dated in the period c.241 also [but Morgantina excavations suggest otherwise, and that these are c.214 in date], and for M 'sembrano voler celebrare un qualche evento straordinario', of victory and liberation; Therefore concludes: 'io credo che nel 241 a.C., il quale con il trattato di Lutazio segna una era nella storia siceliota, cioe la defenitiva soluzione del problema cartaginese, trovino l'occasione e la giustificazione le emissioni delle monte del koinon dei Sikeliotai e quelle di Gerone a nome della regina Filistide. La emissione della zecca siracusana, con leggenda Surakosioi Gelonos, andrebbe piuttosto connessa con l'elevazione di Gelone alla correggenza, che deve aver preceduto di qualche anno il 241 a.C., quando mi e sembrato lecito datare l'epistolare di Gerone II (IG XIV 7).'.-->
             </div>
             <div type="bibliography">
@@ -307,85 +318,103 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">7</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>59.1127</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>56.1103.2.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>55.1029</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Franz</author>
                         <date>1853</date>
                         <citedRange>5367</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
+                    </bibl>
                     <bibl type="corpus" n="SGDI">
                         <citedRange>3230</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JB4GMPBH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref>
+                    </bibl>
                     <bibl>
                         <author>Capodieci</author>
                         <date>1813</date>
                         <citedRange>vol. 1, §47, pp. 178-180</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4A4U5FEA"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002092">https://biblio.inscriptiones.org/epig10002092</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002092">https://biblio.inscriptiones.org/epig10002092</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1769</date>
-                        <citedRange><ref target="http://arachne.uni-koeln.de/item/buchseite/501554">262 cl.18 no.3</ref></citedRange>
+                        <citedRange>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/501554">262 cl.18 no.3</ref>
+                        </citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                    </bibl>
                     <bibl>
                         <author>Wilhelm</author>
                         <date>1900</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZXQX2SMW"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001512">https://biblio.inscriptiones.org/epig10001512</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001512">https://biblio.inscriptiones.org/epig10001512</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1965</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/VUT2KB38"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001840">https://biblio.inscriptiones.org/epig10001840</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001840">https://biblio.inscriptiones.org/epig10001840</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1977</date>
                         <citedRange>157 n. 44</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/JQHZXXJN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001440">https://biblio.inscriptiones.org/epig10001440</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001440">https://biblio.inscriptiones.org/epig10001440</ref>
+                    </bibl>
                     <bibl>
                         <author>Dubois</author>
                         <date>1989</date>
                         <citedRange>103</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2005</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/88D3ZH7D"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001801">https://biblio.inscriptiones.org/epig10001801</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001801">https://biblio.inscriptiones.org/epig10001801</ref>
+                    </bibl>
                     <bibl>
                         <author>Dimartino</author>
                         <date>2006</date>
                         <citedRange>no. 2.1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/7AQ7W2MW"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002022">https://biblio.inscriptiones.org/epig10002022</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002022">https://biblio.inscriptiones.org/epig10002022</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2009</date>
                         <citedRange>88</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/QC6X4IXA"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001794">https://biblio.inscriptiones.org/epig10001794</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001794">https://biblio.inscriptiones.org/epig10001794</ref>
+                    </bibl>
                     <bibl>
                         <author>Dimartino</author>
                         <date>2015</date>
                         <ptr target="http://zotero.org/groups/382445/items/FNAKTAU6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002019">https://biblio.inscriptiones.org/epig10002019</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002019">https://biblio.inscriptiones.org/epig10002019</ref>
+                    </bibl>
                     <bibl>
                         <author>Dimartino</author>
                         <date>2017</date>
@@ -394,7 +423,9 @@
                         <ref target="https://biblio.inscriptiones.org/epig10003127">https://biblio.inscriptiones.org/epig10003127</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
