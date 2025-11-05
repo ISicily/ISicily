@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,13 +24,21 @@
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing and English translation</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
                     <resp>editing and commentary</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -67,7 +77,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Marble plaque with irregular sides.</p>
+                                <support>
+                                    <p>Marble plaque with irregular sides.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--measurements taken by students of the Liceo Lazzaro, Catania-->
@@ -77,16 +88,17 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.damaged"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage ana="#text_condition.complete"/>
-			</layout>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Letters with serifs: lunate Ε, Θ, Σ, Α and Λ with a slightly curved right side (and A with a curved or broken bar). Presence of an ivy leaf between Θ and Κ at l. 1 and of a triangle-shaped interpunct between ἔζησε and ἔτη at l. 5. </p><!--measurements taken by students of the Liceo Lazzaro Catania-->
+                            <handNote>
+                                <p>Letters with serifs: lunate Ε, Θ, Σ, Α and Λ with a slightly curved right side (and A with a curved or broken bar). Presence of an ivy leaf between Θ and Κ at l. 1 and of a triangle-shaped interpunct between ἔζησε and ἔτη at l. 5. </p><!--measurements taken by students of the Liceo Lazzaro Catania-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="18" atMost="28">18-28</height>
@@ -137,10 +149,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0051" notAfter-custom="0150" evidence="lettering">Second half of 1st — first half of 2nd century CE (Korhonen)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1843">Faint pencil-writing on the reverse states "Rinvenuta a Catania nell'anno 1843 sotto l'orto Manganelli"</provenance>
@@ -152,18 +164,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -193,15 +205,17 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-07-04" who="#AA">Alex Antoniou Epidoc editing and English translation</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-08" who="#JP">Jonathan Prag revised file from photographs, Korhonen and student measurements and added bibliography</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-05-17" who="#martaf">Marta Fogagnolo revised the text encoding and added the commentary</change>
-	</listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -232,18 +246,35 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
                 <ab>
-                    <lb n="1"/><w><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <g ref="#ivy-leaf">❦</g> <w><expan><abbr>Κ</abbr><ex>ατακθονίοις</ex></expan></w>
-                    <lb n="2"/><persName type="attested"><name>Ἰουλία</name>
-                    <lb n="3"/><name>Γαλήνη</name></persName>
-                    <lb n="4"/><w>ἡ</w> <w>φιλόστολος</w>
-                    <lb n="5"/><w>ἔζησε</w> <g ref="#interpunct">·</g> <w>ἔτη</w>
-                    <lb n="6"/><hi rend="supraline"><num value="33">λγ</num></hi>
+                    <lb n="1"/><w n="5"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <g ref="#ivy-leaf" n="10">❦</g> <name><w n="15"><expan><abbr>Κ</abbr><ex>ατακθονίοις</ex></expan></w></name>
+                    <lb n="2"/><persName type="attested"><name><w n="20">Ἰουλία</w></name>
+                    <lb n="3"/><name><w n="25">Γαλήνη</w></name></persName>
+                    <lb n="4"/><w n="30">ἡ</w> <w n="35">φιλόστολος</w>
+                    <lb n="5"/><w n="40">ἔζησε</w> <g ref="#interpunct" n="45">·</g> <w n="50">ἔτη</w>
+                    <lb n="6"/><hi rend="supraline"><num value="33"><w n="55">λγ</w></num></hi>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="θεός">Θεοῖς</w>
+                    <w n="15" lemma="καταχθόνιος">Κατακθονίοις</w>
+                    <w n="20" lemma="Ἰουλία">Ἰουλία</w>
+                    <w n="25" lemma="Γαλήνη">Γαλήνη</w>
+                    <w n="30" lemma="ὁ">ἡ</w>
+                    <w n="35" lemma="φιλόστολος">φιλόστολος</w>
+                    <w n="40" lemma="ζάω">ἔζησε</w>
+                    <w n="50" lemma="ἔτος">ἔτη</w>
+                    <w n="55" lemma="λγ">λγ</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#martaf">
                 <listApp>
-                    <app><note>Text based on photographs</note></app>
-                    <app loc="line 4"><note>In the comment Kaibel cautiously suggests to correct φιλόστολος in φιλόστοργος</note></app>
+                    <app>
+                        <note>Text based on photographs</note>
+                    </app>
+                    <app loc="line 4">
+                        <note>In the comment Kaibel cautiously suggests to correct φιλόστολος in φιλόστοργος</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#AA">
@@ -264,18 +295,21 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">479</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
+                        <author>Korhonen</author>
+                        <date>2004</date>
                         <citedRange>99</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                    </bibl>
                     <bibl>
                         <author>Cassia</author>
                         <date>2020</date>
                         <ptr target="http://zotero.org/groups/382445/items/WUV3RMI6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002559">https://biblio.inscriptiones.org/epig10002559</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002559">https://biblio.inscriptiones.org/epig10002559</ref>
+                    </bibl>
                 </listBibl>
                 <listBibl type="discussion">
                     <bibl>
@@ -283,25 +317,29 @@
                         <date>2009</date>
                         <citedRange>202</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/EPANRKPM"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001635">https://biblio.inscriptiones.org/epig10001635</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001635">https://biblio.inscriptiones.org/epig10001635</ref>
+                    </bibl>
                     <bibl>
                         <author>Bertucci</author>
                         <date>1846</date>
                         <citedRange>32</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/Z6A8UGMR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002303">https://biblio.inscriptiones.org/epig10002303</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002303">https://biblio.inscriptiones.org/epig10002303</ref>
+                    </bibl>
                     <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
+                        <author>Korhonen</author>
+                        <date>2004</date>
                         <citedRange>213</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                    </bibl>
                     <bibl>
-                    <author>Cassia</author>
-                    <date>2020</date>
+                        <author>Cassia</author>
+                        <date>2020</date>
                         <citedRange>66-68</citedRange>
-                    <ptr target="http://zotero.org/groups/382445/items/WUV3RMI6"/>
-                <ref target="https://biblio.inscriptiones.org/epig10002559">https://biblio.inscriptiones.org/epig10002559</ref></bibl>
+                        <ptr target="http://zotero.org/groups/382445/items/WUV3RMI6"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002559">https://biblio.inscriptiones.org/epig10002559</ref>
+                    </bibl>
                 </listBibl>
             </div>
         </body>

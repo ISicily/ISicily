@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -68,16 +78,17 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Somewhat irregular sized letters, not strictly following the horizontal. Pronounced but simple heavy serifs on deep v-cut letters. Alpha has extended top stroke, with cross-bar sloping down to the left; epsilon is lunate; kappa has short equal length arms; mu has four equal slopint strokes; rho has a large just closed eye; phi has ovoid body with standard height vertical; omega is cursive.</p>
+                            <handNote>
+                                <p>Somewhat irregular sized letters, not strictly following the horizontal. Pronounced but simple heavy serifs on deep v-cut letters. Alpha has extended top stroke, with cross-bar sloping down to the left; epsilon is lunate; kappa has short equal length arms; mu has four equal slopint strokes; rho has a large just closed eye; phi has ovoid body with standard height vertical; omega is cursive.</p>
                                 <locus from="line1" to="line3">Lines 1-3</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="35" atMost="60">35-60</height>
@@ -92,10 +103,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">1st — 3rd century CE (?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1902-07-04">Hypogeum in Grotticelli, excavated 4 July 1902</provenance>
@@ -103,23 +114,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2006.07.25; 2013.09.30</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -150,12 +160,14 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-05-28" who="#JP">Jonathan Prag checked EpiDoc, added images</change>
                 <change when="2018-05-31" who="#JP">Jonathan Prag added text, translation, metadata</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -166,7 +178,7 @@
             <graphic n="print" url="ISic003359.jpg" height="2501px" width="4142px">
                 <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
             </graphic>
-         </surface>
+        </surface>
         <surface type="threequarter">
             <graphic n="screen" url="ISic003359_threequarter_tiled.tif" height="3835px" width="4945px">
                 <desc>Photo J. Prag, Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
@@ -180,13 +192,28 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><expan><abbr>Γ</abbr><ex>αι</ex></expan> · Ματρίνι
-                    <lb n="2"/>Φηλικίων ·
-                    <lb n="3"/><expan><abbr>χρη</abbr><ex>στὲ</ex></expan> · καὶ · <expan><abbr>ἄμε</abbr><ex>μπτε</ex></expan> · χαῖρε
+                    <lb n="1"/><w n="5"><expan><abbr>Γ</abbr><ex>αι</ex></expan></w> <g ref="#interpunct" n="10">·</g> <name><w n="15">Ματρίνι</w></name>
+                    <lb n="2"/><name><w n="20">Φηλικίων</w></name> <g ref="#interpunct" n="25">·</g>
+                    <lb n="3"/><w n="30"><expan><abbr>χρη</abbr><ex>στὲ</ex></expan></w> <g ref="#interpunct" n="35">·</g> <w n="40">καὶ</w> <g ref="#interpunct" n="45">·</g> <w n="50"><expan><abbr>ἄμε</abbr><ex>μπτε</ex></expan></w> <g ref="#interpunct" n="55">·</g> <w n="60">χαῖρε</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="Γαίους">Γαι</w>
+                    <w n="15" lemma="Ματρίνιος">Ματρίνι</w>
+                    <w n="20" lemma="Φηλίκιος">Φηλικίων</w>
+                    <w n="30" lemma="χρηστός">χρηστὲ</w>
+                    <w n="40" lemma="καί">καὶ</w>
+                    <w n="50" lemma="ἄμεμπτος">ἄμεμπτε</w>
+                    <w n="60" lemma="χαίρω">χαῖρε</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text from autopsy</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Gaius Matrinius Felicio, worthy and blameless, farewell!</p>
@@ -201,9 +228,12 @@
                         <date>1941</date>
                         <citedRange>217 no.97</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/4HR4GXBX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001456">https://biblio.inscriptiones.org/epig10001456</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001456">https://biblio.inscriptiones.org/epig10001456</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

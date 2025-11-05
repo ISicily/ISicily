@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,10 +24,18 @@
                     <name xml:id="SA">Serena Agodi</name>
                     <resp>Italian translation</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -73,12 +83,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -98,10 +108,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0051" notAfter-custom="0150">Second half of 1st — first half of 2nd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1931">Found before 1931 on the site of the demolished church and convent of the
@@ -111,23 +121,22 @@
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -158,13 +167,15 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2017-06-11" who="#JP">Jonathan Prag revised the EpiDoc and added translation</change>
                 <change when="2017-07-06" who="#JP">Jonathan Prag added elements for parallel Italian</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -175,26 +186,35 @@
             <graphic n="print" url="ISic003223.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
-                <ab><lb n="1"/>Δαίμοσι
-                    <lb n="2"/>χθονίοις
-                    <lb n="3"/>
-                    <persName type="attested">
-                        <name>Καιλία</name>
-                        ·
-                        <name>Ἑορτὴ</name>
-                    </persName>
-                    ·
-                    <lb n="4"/>ἐβίωσε · ἔτη · ο’
-                    <lb n="5"/>
-                    <persName type="attested">Βλάστη</persName>
-                    · θυγάτηρ
-                    <lb n="6"/>μητρὶ · εὐσεβεσ
-                    <lb n="7" break="no"/>τάτῃ · ἔποισε
+                <ab>
+                    <lb n="1"/><w n="5">Δαίμοσι</w>
+                    <lb n="2"/><w n="10">χθονίοις</w>
+                    <lb n="3"/><persName type="attested"><name><w n="15">Καιλία</w></name> <g ref="#interpunct" n="20">·</g> <name><w n="25">Ἑορτὴ</w></name></persName> <g ref="#interpunct" n="30">·</g>
+                    <lb n="4"/><w n="35">ἐβίωσε</w> <g ref="#interpunct" n="40">·</g> <w n="45">ἔτη</w> <g ref="#interpunct" n="50">·</g> <w n="55">ο’</w>
+                    <lb n="5"/><persName type="attested"><name><w n="60">Βλάστη</w></name></persName> <g ref="#interpunct" n="65">·</g> <w n="70">θυγάτηρ</w>
+                    <lb n="6"/><w n="75">μητρὶ</w> <g ref="#interpunct" n="80">·</g> <w n="85">εὐσεβεσ
+                    <lb n="7" break="no"/>τάτῃ</w> <g ref="#interpunct" n="90">·</g> <w n="95">ἔποισε</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="δαίμων">Δαίμοσι</w>
+                    <w n="10" lemma="χθόνιος">χθονίοις</w>
+                    <w n="15" lemma="Καιλία">Καιλία</w>
+                    <w n="25" lemma="Ἑορτή">Ἑορτὴ</w>
+                    <w n="35" lemma="βιόω">ἐβίωσε</w>
+                    <w n="45" lemma="ἔτος">ἔτη</w>
+                    <w n="55" lemma="ο᾽">ο’</w>
+                    <w n="60" lemma="Βλάστη">Βλάστη</w>
+                    <w n="70" lemma="θυγάτηρ">θυγάτηρ</w>
+                    <w n="75" lemma="μήτηρ">μητρὶ</w>
+                    <w n="85" lemma="εὐσεβής">εὐσεβεστάτῃ</w>
+                    <w n="95" lemma="ποιέω">ἔποισε</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -221,19 +241,23 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
+                        <author>Korhonen</author>
+                        <date>2004</date>
                         <citedRange>65</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                    </bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1931</date>
                         <citedRange>46 no.11 = Libertini (1981) 96</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/T67M4XMU"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001870">https://biblio.inscriptiones.org/epig10001870</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001870">https://biblio.inscriptiones.org/epig10001870</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
