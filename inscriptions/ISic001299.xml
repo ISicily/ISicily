@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,13 +24,21 @@
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing and English translation</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
                     <resp>editing, translation and commentary</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -67,7 +77,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Four joining marble fragments, damaged on the left and below. The larger fragment is set in plaster. Kaibel probably read the inscription intact.</p>
+                                <support>
+                                    <p>Four joining marble fragments, damaged on the left and below. The larger fragment is set in plaster. Kaibel probably read the inscription intact.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <p>Overall dimensions: <dimensions><!--measurements from Korhonen: Dimensions of frA: 10.5 x 7; of frB: 7.5 x 8.5; of frC: 3.7 x 13.5; of frD: 15 x 19.5-->
@@ -77,17 +88,18 @@
                                     </dimensions></p>
                                 </support>
                                 <condition ana="#condition.fragments.contiguous"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <rs ana="#execution.rubrication">Rubrication</rs>
                                     <damage ana="#text_condition.legible"/>
-			</layout>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Irregular letters: rhomboid Θ, Ο and Ω, angular Μ, ΤΗ in ligature at l. 5. Presence of two ivy leaves at the beginning and at the end of l. 6 (the last one seen by Kaibel)</p><!--measurements from Korhonen-->
+                            <handNote>
+                                <p>Irregular letters: rhomboid Θ, Ο and Ω, angular Μ, ΤΗ in ligature at l. 5. Presence of two ivy leaves at the beginning and at the end of l. 6 (the last one seen by Kaibel)</p><!--measurements from Korhonen-->
                                 <locus from="line1" to="line6">Lines 1-6</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="15" atMost="22">15-22</height>
@@ -102,10 +114,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0250">2nd century CE or first half of 3rd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1750">Found by the Prince of Biscari in 1750 "in un orto del barone delli Ficarazzi vicino le mura della selva del Convento de' pp. Riformati di S. Maria di Gesù".<geo>37.512473,15.078033</geo></provenance><!-- approximate location within the selva of the convent -->
@@ -117,18 +129,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -158,15 +170,17 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-07-04" who="#AA">Alex Antoniou Epidoc editing and English translation</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-05-16" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, Italian translation and commentary</change>
                 <change when="2024-01-17" who="#JP">Jonathan Prag added images</change>
-	</listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -201,7 +215,7 @@
             <graphic n="print" url="ISic001299_fr4.jpg" height="5520px" width="3680px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 13.05.2016</desc>
             </graphic>
-            </surface>
+        </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic001299_fr2_rear_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 13.05.2016</desc>
@@ -227,19 +241,49 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/><w><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <w><expan><abbr>Κ</abbr><ex>ατακθονίοις</ex></expan></w> <w><expan><abbr>ἱ</abbr><ex>ερόν</ex></expan></w>
-                    <lb n="2"/><persName type="attested"><name>Ζωτικὸς</name></persName> <w>πατήρ</w>
-                    <lb n="3"/><w>ἰδίῳ</w> <w>τέκνῳ</w> <w>μνή<lb n="4" break="no"/>μης</w> <w>χάριν</w> <w>ἐποίη<lb n="5" break="no"/>σεν</w>, <w>ὃς</w> <w>ἔζησεν</w> <w>ἔ<surplus>ε</surplus><hi rend="ligature">τη</hi></w>
-                    <lb n="6"/><g ref="#ivy-leaf">❦</g> <num value="27">κ<supplied reason="undefined" evidence="previouseditor">η</supplied></num> <supplied reason="undefined" evidence="previouseditor"><g ref="#ivy-leaf">❦</g></supplied>
+                    <lb n="1"/><w n="5"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <w n="10"><expan><abbr>κ</abbr><ex>ατακθονίοις</ex></expan></w> <w n="15"><expan><abbr>ἱ</abbr><ex>ερόν</ex></expan></w>
+                    <lb n="2"/><persName type="attested"><name><w n="20">Ζωτικὸς</w></name></persName> <w n="25">πατήρ</w>
+                    <lb n="3"/><w n="30">ἰδίῳ</w> <w n="35">τέκνῳ</w> <w n="40">μνή
+                    <lb n="4" break="no"/>μης</w> <w n="45">χάριν</w> <w n="50">ἐποίη
+                    <lb n="5" break="no"/>σεν</w>  <w n="55">ὃς</w> <w n="60">ἔζησεν</w> <w n="65">ἔ<surplus>ε</surplus><hi rend="ligature">τη</hi></w>
+                    <lb n="6"/><g ref="#ivy-leaf" n="70">❦</g> <num value="27"><w n="75">κ<supplied reason="undefined" evidence="previouseditor">η</supplied></w></num> <supplied reason="undefined" evidence="previouseditor"><g ref="#ivy-leaf" n="80">❦</g></supplied>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="θεός">Θεοῖς</w>
+                    <w n="10" lemma="καταχθόνιος">κατακθονίοις</w>
+                    <w n="15" lemma="ἱερόν">ἱερόν</w>
+                    <w n="20" lemma="Ζωτικός">Ζωτικὸς</w>
+                    <w n="25" lemma="πατήρ">πατήρ</w>
+                    <w n="30" lemma="ἴδιος">ἰδίῳ</w>
+                    <w n="35" lemma="τέκνον">τέκνῳ</w>
+                    <w n="40" lemma="μνήμη">μνήμης</w>
+                    <w n="45" lemma="χάριν">χάριν</w>
+                    <w n="50" lemma="ποιέω">ἐποίησεν</w>
+                    <w n="55" lemma="ὅς">ὃς</w>
+                    <w n="60" lemma="ζάω">ἔζησεν</w>
+                    <w n="65" lemma="ἔτος">ἔτη</w>
+                    <w n="75" lemma="κη">κη</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#martaf">
                 <listApp>
-                    <app><note>Text based on photographs</note></app>
-                    <app loc="line 2"><note>Biscari, Torremuzza, Franz: Ἰ(ούλιος) Ζωτικὸς; Ferrara, Kaibel, Korhonen: Ζωτικὸς</note></app>
-                    <app loc="line 3"><note>Biscari, Ferrara, Kaibel, Korhonen τέκνῳ; Torremuzza, Franz: τέκνῃ</note></app>
-                    <app loc="line 5"><note>ΕΕΤΗ lapis (although Korhonen reports FFTH, considering this linguistic interference; the reading is unclear from photograph due to modern repainting of letters)</note></app>
-                    <app loc="line 6"><note>Biscari, Torremuzza, Ferrara, Franz, Kaibel could see a Η and a second ivy leaf at line end, now lost.</note></app>
+                    <app>
+                        <note>Text based on photographs</note>
+                    </app>
+                    <app loc="line 2">
+                        <note>Biscari, Torremuzza, Franz: Ἰ(ούλιος) Ζωτικὸς; Ferrara, Kaibel, Korhonen: Ζωτικὸς</note>
+                    </app>
+                    <app loc="line 3">
+                        <note>Biscari, Ferrara, Kaibel, Korhonen τέκνῳ; Torremuzza, Franz: τέκνῃ</note>
+                    </app>
+                    <app loc="line 5">
+                        <note>ΕΕΤΗ lapis (although Korhonen reports FFTH, considering this linguistic interference; the reading is unclear from photograph due to modern repainting of letters)</note>
+                    </app>
+                    <app loc="line 6">
+                        <note>Biscari, Torremuzza, Ferrara, Franz, Kaibel could see a Η and a second ivy leaf at line end, now lost.</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#AA">
@@ -260,20 +304,20 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">476</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
                     </bibl>
                     <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
+                        <author>Korhonen</author>
+                        <date>2004</date>
                         <citedRange>148</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
                     </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Franz</author>
                         <date>1853</date>
                         <citedRange>5708</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/> 
+                        <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
                     </bibl>
                     <bibl>
@@ -281,32 +325,32 @@
                         <date>1769</date>
                         <citedRange>151 no. 34</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
                     </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>159 no. 37</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
                     </bibl>
                     <bibl>
                         <author>Ferrara</author>
-                        <date>1829</date> 
+                        <date>1829</date>
                         <citedRange>348 no. 3</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion">
-	       <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
-	           <citedRange>88</citedRange>
-	           <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-	       <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
-	       </bibl>
-	   </listBibl>
+                <listBibl type="discussion">
+                    <bibl type="corpus" n="IMusCatania">
+                        <author>Korhonen</author>
+                        <date>2004</date>
+                        <citedRange>88</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                    </bibl>
+                </listBibl>
             </div>
         </body>
     </text>
