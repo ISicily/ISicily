@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DM" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -64,7 +74,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Described by Rose, after an aopograph from Thomas Thorp, as a 'marmor', found among the tombs near the ruins of Acrae. The state of the stone is not described, and the use of 'marmor' is likely simply to be generic (i.e. such stones generally referred to as 'marbles' in this period), rather than a true representation of the original material.</p>
+                                <support>
+                                    <p>Described by Rose, after an aopograph from Thomas Thorp, as a 'marmor', found among the tombs near the ruins of Acrae. The state of the stone is not described, and the use of 'marmor' is likely simply to be generic (i.e. such stones generally referred to as 'marbles' in this period), rather than a true representation of the original material.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html" cert="low">marble</material>
                                     <objectType ana="#object.uknown" ref="https://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -74,12 +85,12 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                        <damage ana="#text_condition.incomplete"/>
-			</layout>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -98,12 +109,12 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>		
-                                <offset>near
-                                    <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>
+                                <offset>
+                                    near<placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
                                 </offset>
-                            	<geo>37.05780, 14.89346</geo>
-		</origPlace>
+                                <geo>37.05780, 14.89346</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0550" notAfter-custom="-0501" source="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">later 6th century BCE (IGDS) and Brugnone</origDate><!-- Kaibel suggests C5 BCE -->
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1825">Rose reports its from an apograph sent to him by Thomas Thorp of Trinity College, who saw it during a journey to Sicily, having been found by the Baron Iudica among the tombs near the ruins of ancient Akrai.</provenance>
@@ -114,18 +125,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -154,13 +165,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	            <change when="2021-03-02" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change> 	
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-03-02" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2025-12-09" who="#DM">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2025-12-09" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -172,14 +185,21 @@
             <graphic n="print" url="ISic001048.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/><supplied reason="lost" style="text-direction:l-to-r">Λ</supplied>ῦσις hο Τιμ
-                    <lb n="2" break="no" style="text-direction:r-to-l"/>άδου
+                    <lb n="1"/><w n="5"><supplied reason="lost" style="text-direction:l-to-r">Λ</supplied>ῦσις</w> <w n="10">hο</w> <name><w n="15">Τιμ
+                    <lb n="2" break="no" style="text-direction:r-to-l"/>άδου</w></name>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DM #RC">
+                <ab>
+                    <w n="5" lemma="Λῦσις">Λῦσις</w>
+                    <w n="10" lemma="ὁ">hο</w>
+                    <w n="15" lemma="Τίμαδος">Τιμάδου</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -204,7 +224,8 @@
                         <date>1825</date>
                         <citedRange>91 with Tab. XII. fig. 1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/93TGVAKL"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001381">https://biblio.inscriptiones.org/epig10001381</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001381">https://biblio.inscriptiones.org/epig10001381</ref>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <author>Kaibel</author>
                         <date>1890</date>
@@ -212,48 +233,56 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">227</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>45.1351bis</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>12.0408</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGDS1">
-                         <author>Dubois</author>
-                         <date>1989</date> 
+                        <author>Dubois</author>
+                        <date>1989</date>
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">107</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Franz</author>
                         <date>1853</date>
                         <citedRange>5458</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
+                    </bibl>
                     <bibl>
                         <author>Pugliese Carratelli</author>
                         <date>1956</date>
                         <citedRange>no.20</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/PJDRZH66"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001394">https://biblio.inscriptiones.org/epig10001394</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001394">https://biblio.inscriptiones.org/epig10001394</ref>
+                    </bibl>
                     <bibl n="LSAG[2]">
-                         <author>Jeffery</author>
-                         <author>Johnston</author>
+                        <author>Jeffery</author>
+                        <author>Johnston</author>
                         <date>1990</date>
                         <citedRange>275 no.13 pl.51</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/QUWGZA84"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000678">https://biblio.inscriptiones.org/epig10000678</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000678">https://biblio.inscriptiones.org/epig10000678</ref>
+                    </bibl>
                     <bibl>
                         <author>Jeffery</author>
                         <date>1961</date>
                         <citedRange>275 no.13 pl.51</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/V6CGSWPS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref>
+                    </bibl>
                     <bibl>
                         <author>Guarducci</author>
                         <date>1952</date>
@@ -264,9 +293,12 @@
                         <date>1998</date>
                         <citedRange>no.76</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/KMTS6RQX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000637">https://biblio.inscriptiones.org/epig10000637</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000637">https://biblio.inscriptiones.org/epig10000637</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
