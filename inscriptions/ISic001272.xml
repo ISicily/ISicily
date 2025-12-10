@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -63,7 +73,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A plaque with cornice above in a coarse stone, somewhat eroded and damaged around the edges and the surface. The epigraphic field below the cornice is 13.5 cm high. Five recessed rectangular panels  occupy the flat surface below the cornice, the first from the left incised with a hatched lozenge pattern, the second bearing a large Christian monogram, the third and fifth an incised palm leaf decoration, the fourth a Greek text over a single line.</p>
+                                <support>
+                                    <p>A plaque with cornice above in a coarse stone, somewhat eroded and damaged around the edges and the surface. The epigraphic field below the cornice is 13.5 cm high. Five recessed rectangular panels  occupy the flat surface below the cornice, the first from the left incised with a hatched lozenge pattern, the second bearing a large Christian monogram, the third and fifth an incised palm leaf decoration, the fourth a Greek text over a single line.</p>
                                     <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--IGPalermo-->
@@ -73,16 +84,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>The text in the fourth panel runs from bottom to top and appears to be written retrograde.</p>
+                                <layout>
+                                    <p>The text in the fourth panel runs from bottom to top and appears to be written retrograde.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Neat regular letters, with quadrate lunate sigma.</p>
+                            <handNote>
+                                <p>Neat regular letters, with quadrate lunate sigma.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="10" atMost="22">10-22</height><!-- IG Palermo -->
@@ -97,10 +110,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462506">Tauromenium</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462506">Tauromenium</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
-                            	<geo>37.85358, 15.28851</geo>
-		</origPlace>
+                                <geo>37.85358, 15.28851</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0351" notAfter-custom="0400">later 4th century CE (IG Palermo)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1773-06">Found 'vicino lo Stagnone' in June 1773, from the area upslope of the Naumachia<geo>37.8536778,15.2860956</geo>.</provenance><!-- approx geo based upon map location in Muscolino 2011-12 -->
@@ -111,18 +124,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -151,15 +164,17 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                 <change when="2020-10-20" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-10-20" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-07-30" who="#JP">revised from publications</change>
-	</listChange>
+                <change when="2025-12-10" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2025-12-10" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -178,14 +193,24 @@
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <div type="textpart" subtype="section" n="a">
                     <cb n="2"/>
-                <ab>
-                    <lb n="1"/><g ref="#staurogram">&#x101a0;</g>  <g ref="#star">*</g> <g ref="#alpha">α</g> <g ref="#omega">ω</g>
-                </ab>
-            </div> 
+                    <ab>
+                        <lb n="1"/><g ref="#staurogram" n="5">𐆠</g> <g ref="#star" n="10">*</g> <g ref="#alpha" n="15">α</g> <g ref="#omega" n="20">ω</g>
+                    </ab>
+                </div>
                 <div type="textpart" subtype="section" n="b">
                     <ab>
                         <cb n="4"/>
-                        <lb n="1" style="text-direction:vertical-upwards"/><hi rend="reversed">Χρυσίς</hi>
+                        <lb n="1" style="text-direction:vertical-upwards"/><w n="25"><hi rend="reversed">Χρυσίς</hi></w>
+                    </ab>
+                </div>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <div type="textpart" subtype="section" n="a">
+                    <ab/>
+                </div>
+                <div type="textpart" subtype="section" n="b">
+                    <ab>
+                        <w n="25" lemma="Χρυσίς">Χρυσίς</w>
                     </ab>
                 </div>
             </div>
@@ -208,25 +233,29 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">447</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
-                         <author>Manni Piraino</author>
-                         <date>1973</date> 
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>116</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Kirchhoff</author>
                         <date>1877</date>
                         <citedRange>9515</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/533T8HNS"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>cl.XVII no.26</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                    </bibl>
                     <bibl>
                         <author>Rizzo</author>
                         <date>1904</date>
@@ -239,11 +268,13 @@
                         <date>1989</date>
                         <citedRange>no.486</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/759ZXHKQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGCVO">
                         <citedRange>1934</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/9CT5ZWIK"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref>
+                    </bibl>
                     <bibl>
                         <author>Muscolino</author>
                         <date>2011-2012</date>
@@ -252,7 +283,9 @@
                         <ref target="https://biblio.inscriptiones.org/epig10002215">https://biblio.inscriptiones.org/epig10002215</ref>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
