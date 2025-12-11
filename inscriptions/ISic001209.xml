@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -61,7 +71,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A rectangular sandstone cippus, slightly damaged on the lower left corner</p>
+                                <support>
+                                    <p>A rectangular sandstone cippus, slightly damaged on the lower left corner</p>
                                     <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
                                     <dimensions><!-- from IGPal -->
@@ -71,16 +82,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Single line of Greek letters across the middle of the stone</p>
+                                <layout>
+                                    <p>Single line of Greek letters across the middle of the stone</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Regular plain letters. Phi is slightly taller than the rest, but with a small circular eye; sigma has horizontal top and bottom bars, with the diagonals joined by a curve; omicron is smaller than the other letters and mid-line.</p>
+                            <handNote>
+                                <p>Regular plain letters. Phi is slightly taller than the rest, but with a small circular eye; sigma has horizontal top and bottom bars, with the diagonals joined by a curve; omicron is smaller than the other letters and mid-line.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="30" atMost="35">30-35</height><!-- from IGPal -->
@@ -95,12 +108,12 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462062">Abacaenum</placeName>		
-                                <offset>near
-                                    <placeName type="modern" ref="http://sws.geonames.org/2522853">Tripi</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462062">Abacaenum</placeName>
+                                <offset>
+                                    near<placeName type="modern" ref="http://sws.geonames.org/2522853">Tripi</placeName>
                                 </offset>
-                            	<geo>38.05191, 15.10158</geo>
-		</origPlace>
+                                <geo>38.05191, 15.10158</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0300" notAfter-custom="-0101">3rd — 2nd century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">From the area of the necropolis in contrada Cardusa<geo>38.065190, 15.114380</geo></provenance>
@@ -111,18 +124,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -153,13 +166,15 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2020-03-08" who="#JP">Jonathan Prag revised the EpiDoc</change>
                 <change when="2020-06-09" who="#JP">Jonathan Prag made minor revisions and added image</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-12-10" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2025-12-10" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -176,11 +191,20 @@
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
                 <ab>
-                    <lb n="1"/>Φιλιστοῦς
+                    <lb n="1"/><w n="5">Φιλιστοῦς</w>
                 </ab>
                </div>
-             <div type="apparatus">
-                <listApp><app><note>Text of IG</note></app></listApp>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Φιλιστώ">Φιλιστοῦς</w>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text of IG</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>(Tomb) of Philisto</p>
@@ -197,34 +221,41 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">382d</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
-                         <author>Manni Piraino</author>
-                         <date>1973</date> 
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>123</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Salinas</author>
                         <title>NSA</title>
                         <date>1886</date>
                         <citedRange>464 no.b</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl type="corpus" n="SGDI">
                         <author>Hoffmann</author>
                         <date>1904</date>
                         <citedRange>5208d</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/DQDPC573"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000817">https://biblio.inscriptiones.org/epig10000817</ref>
+                    </bibl>
                     <bibl>
                         <author>Sofia</author>
                         <date>2015</date>
                         <citedRange>107 and fig.110</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/9QTE4E3Z"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001575">https://biblio.inscriptiones.org/epig10001575</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001575">https://biblio.inscriptiones.org/epig10001575</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
