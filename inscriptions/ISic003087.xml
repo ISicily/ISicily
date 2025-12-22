@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -26,10 +28,18 @@
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing and English translation</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -67,7 +77,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Marble fragment damaged on all sides, set in plaster in modern times.</p>
+                                <support>
+                                    <p>Marble fragment damaged on all sides, set in plaster in modern times.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257">plaque</objectType>
                                     <dimensions><!--measurements from Korhonen-->
@@ -77,16 +88,17 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.fragment"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Squared Ε, Α with broken bar. A wavy stroke at l. 3 divides the numeral from the following word.</p><!--measurements from Korhonen-->
+                            <handNote>
+                                <p>Squared Ε, Α with broken bar. A wavy stroke at l. 3 divides the numeral from the following word.</p><!--measurements from Korhonen-->
                                 <locus from="line1" to="line3">Lines 1-3</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="22" atMost="35">22-35</height>
@@ -101,10 +113,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0435" notAfter-custom="0435" evidence="internal-date">435 CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Original discovery not recorded, but probably from Catania.</provenance>
@@ -116,18 +128,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -157,13 +169,15 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-07-19" who="#AA">Alex Antoniou Epidoc editing and English translation</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-12-22" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
-	</listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -174,22 +188,47 @@
             <graphic n="print" url="ISic003087.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#martaf #AA">
                 <ab>
-                    <lb n="0"/><gap reason="lost" extent="unknown" unit="line"/>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <w>Νων<supplied reason="lost">ῶν</supplied></w> <gap reason="lost" extent="unknown" unit="character"/> <w><supplied reason="lost"><roleName type="supracivic" subtype="consul">ὑπατείᾳ</roleName></supplied></w>
-                    <lb n="2"/><persName type="attested" subtype="imperial"><name><supplied reason="lost">Θεοδ</supplied>οσίο<supplied reason="undefined" evidence="previouseditor">υ</supplied></name></persName> <w><supplied reason="lost">τὸ</supplied></w> <supplied reason="lost"><num value="15">ιε</num></supplied> <w><supplied reason="lost">καὶ</supplied></w> <persName type="attested" subtype="imperial"><name><supplied reason="lost">Βαλεν</supplied><lb n="3" break="no"/><supplied reason="lost">τινιανοῦ</supplied></name></persName> <w><supplied reason="lost">τ</supplied>ὸ</w> <num value="4">δ</num> <name><expan><abbr>Αὐγ<am>γ</am></abbr><ex>ούστων</ex></expan></name> <gap reason="lost" extent="unknown" unit="character" cert="low"/>
+                    <lb n="0"/><gap reason="lost" extent="unknown" unit="line" n="5"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="10"/> <w n="15">Νων<supplied reason="lost">ῶν</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="20"/> <w n="25"><supplied reason="lost"><roleName type="supracivic" subtype="consul">ὑπατείᾳ</roleName></supplied></w>
+                    <lb n="2"/><persName type="attested" subtype="imperial"><name><w n="30"><supplied reason="lost">Θεοδ</supplied>οσίο<supplied reason="undefined" evidence="previouseditor">υ</supplied></w></name></persName> <w n="35"><supplied reason="lost">τὸ</supplied></w> <supplied reason="lost"><num value="15"><w n="40">ιε</w></num></supplied> <w n="45"><supplied reason="lost">καὶ</supplied></w> <persName type="attested" subtype="imperial"><name><w n="50"><supplied reason="lost">Βαλεν</supplied>
+                    <lb n="3" break="no"/><supplied reason="lost">τινιανοῦ</supplied></w></name></persName> <w n="55"><supplied reason="lost">τ</supplied>ὸ</w> <num value="4"><w n="60">δ</w></num> <name><w n="65"><expan><abbr>Αὐγ<am>γ</am></abbr><ex>ούστων</ex></expan></w></name> <gap reason="lost" extent="unknown" unit="character" cert="low" n="70"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="line" n="5"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="10"><desc>[-?-]</desc></gap>
+                    <w n="15" lemma="nona">Νωνῶν</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="20"><desc>[-?-]</desc></gap>
+                    <w n="25" lemma="ὑπατία">ὑπατείᾳ</w>
+                    <w n="30" lemma="Θεοδόσιος">Θεοδοσίου</w>
+                    <w n="35" lemma="ὁ">τὸ</w>
+                    <w n="40" lemma="ιε">ιε</w>
+                    <w n="45" lemma="καί">καὶ</w>
+                    <w n="50" lemma="Βαλεντινιανός">Βαλεντινιανοῦ</w>
+                    <w n="55" lemma="ὁ">τὸ</w>
+                    <w n="60" lemma="δ">δ</w>
+                    <w n="65" lemma="Augustus">Αὐγούστων</w>
+                    <gap reason="lost" extent="unknown" unit="character" cert="low" n="70"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus" resp="#martaf">
                 <listApp>
-                    <app><note>Text based on photograph and on Ferrua's edition</note></app>
-                    <app loc="line 1"><note>The only trace at l. 1 seems to belong neither to a N nor to a Ω. ΝΩΝ was seen by Amico in 1741.</note></app>
-                    <app loc="line 1"><note>According to Korhonen, also μετὰ τὴν ὑπατείαν is possible.</note></app>
+                    <app>
+                        <note>Text based on photograph and on Ferrua's edition</note>
+                    </app>
+                    <app loc="line 1">
+                        <note>The only trace at l. 1 seems to belong neither to a N nor to a Ω. ΝΩΝ was seen by Amico in 1741.</note>
+                    </app>
+                    <app loc="line 1">
+                        <note>According to Korhonen, also μετὰ τὴν ὑπατείαν is possible.</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#martaf #AA">
@@ -208,25 +247,31 @@
                         <date>1741</date>
                         <citedRange>277</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>36.0842bis</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
+                        <author>Korhonen</author>
+                        <date>2004</date>
                         <citedRange>168</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                    </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1982-1983</date>
                         <citedRange>19 no.66 fig.1g</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q7DDNWD6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001996">https://biblio.inscriptiones.org/epig10001996</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001996">https://biblio.inscriptiones.org/epig10001996</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

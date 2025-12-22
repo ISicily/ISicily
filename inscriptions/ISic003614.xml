@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003614</title>
+                <title>Epitaph for Salvia</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -34,18 +34,16 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003614</idno>
                 <idno type="DOI" when="2020-12-23">10.5281/zenodo.4388831</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Rosolini, contrada Stafenna-Coda di Lupo</settlement>
-                        <repository>hypogeum E</repository>
+                        <repository corresp="#findspot">in situ, hypogeum E</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -60,9 +58,9 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.rock" ref="http://www.eagle-network.eu/voc/material/lod/1.html">natural rock
-                                    </material>
+                                <support><p>The text funs along the arch of the second arcosolium on the left in hypogeum E</p>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
+                                    <objectType ana="#object.funerary_monument.rock-cut_tomb" ref="http://vocab.getty.edu/aat/300120624">rock-cut tomb</objectType>
                                     <dimensions><!--Default values and requires editing-->
                                         <height unit="cm"/>
                                         <width unit="cm"/>
@@ -79,10 +77,10 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Irregular lunate letters</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="50" atMost="50">50</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -98,14 +96,12 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523581" corresp="#findspot">Rosolini</placeName>		
                             	<geo>36.82145, 14.95132</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0600">late Roman</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0600">late Roman</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" xml:id="findspot">Hypogeum E, contrada Stafenna-Coda di Lupo, Rosolini</provenance>
-                        <provenance type="observed" corresp="#findspot">in situ</provenance>
+                        <provenance type="found" subtype="discovered" xml:id="findspot">Hypogeum E, contrada Stafenna-Coda di Lupo, Rosolini<geo>36.8341101,14.9815633</geo></provenance><!-- location of the necropolis -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -147,7 +143,7 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="unchecked">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -155,10 +151,11 @@
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-12-12" who="#JP">Jonathan Prag revised from publication</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic003614_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -166,25 +163,43 @@
             <graphic n="print" url="ISic003614.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" subtype="unsupplied" xml:lang="la">
-                <ab><!--Greek or Latin (etc.) text here--></ab>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/K7PQWD75">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name>Σάλβιε</name></persName> <gap reason="lost" unit="character" quantity="2"/>ΗΣ<gap reason="lost" unit="character" quantity="2"/><unclear>ΘΙΚ</unclear><gap reason="lost" unit="character" extent="unknown"/>
+                </ab>
             </div>
             <div type="apparatus">
-                <p><!--external apparatus criticus (if applicable)--></p>
+                <listApp>
+                    <app><note>Text of Rizzone 2008</note></app>
+                    <app loc="1"><note>Fuehrer and Schultze: ΣΑΛΒΝ [---] ΙΡΟ(?)</note></app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--funerary inscription of Salbie...--></p>
+                <p>Rizzone notes a parallel in <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic003076">ISic003076 for the likely construction, vocative followed by a prayer for remembrance. Agnello merely reported Fuehrer's text, claiming the text was no longer legible.</ref></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                    <bibl>
+                        <author>Fuehrer</author>
+                        <author>Schultze</author>
+                        <date>1907</date>
+                        <citedRange>192 no.5</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/52GBQ6AW"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001979">https://biblio.inscriptiones.org/epig10001979</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Agnello</author>
+                        <date>1955</date>
+                        <citedRange>209</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/3Z7NQCM4"/>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>58.1049.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>

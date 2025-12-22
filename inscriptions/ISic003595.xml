@@ -1,15 +1,17 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003595</title>
+                <title>Epitaph of Kloutoria</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -43,11 +53,11 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository role="museum">Catacomba di San Giovanni</repository>
+                        <repository></repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -62,29 +72,33 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>A marble plaque recomposed of 6 fragments</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
+                                    <dimensions><!--Agnello-->
+                                        <height unit="cm">66</height>
+                                        <width unit="cm">30.5</width>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Rhomboid letters</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="40" atMost="40">40</height>
+                                </dimensions>
+                                <locus from="line2" to="line7">Line 2-7</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="35" atMost="35">35</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -96,34 +110,32 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300">2nd — 3rd century CE</origDate>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="archaeological-context">2nd — 3rd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Hypogeum 1, Villa Landolina</provenance>
-                        <provenance type="observed">Depositi</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -151,17 +163,19 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                            <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	   <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	               <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-            	   <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                            <change when="2021-01-22" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-	</listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-01-22" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic003595_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -169,19 +183,31 @@
             <graphic n="print" url="ISic003595.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>-->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/>Κλουτωρία
-                    <lb n="2"/>Μάρκου
-                    <lb n="3"/>Κλουτωρίου
-                    <lb n="4"/>Πτολεμαικὴ
-                    <lb n="5"/>τῆς Κυρ<hi rend="ligature">ήν</hi>ης
-                    <lb n="6"/>ἐτῶν
-                    <lb n="7"/><num value="60">ἑξήκοντα</num>
+                    <lb n="1"/><persName type="attested"><name><w n="5">Κλουτωρία</w></name>
+                    <lb n="2"/><name><w n="10">Μάρκου</w></name>
+                    <lb n="3"/><name><w n="15">Κλουτωρίου</w></name>
+                    <lb n="4"/><placeName type="ethnic"><w n="20">Πτολεμαικὴ</w></placeName>
+                    <lb n="5"/><w n="25">τῆς</w> <placeName><w n="30">Κυρ<hi rend="ligature">ήν</hi>ης</w></placeName></persName>
+                    <lb n="6"/><w n="35">ἐτῶν</w>
+                    <lb n="7"/><num value="60"><w n="40">ἑξήκοντα</w></num>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="Κλουτωρία">Κλουτωρία</w>
+                    <w n="10" lemma="Μᾶρκος">Μάρκου</w>
+                    <w n="15" lemma="Κλουτώριος">Κλουτωρίου</w>
+                    <w n="20" lemma="πτολεμαικός">Πτολεμαικὴ</w>
+                    <w n="25" lemma="ὁ">τῆς</w>
+                    <w n="30" lemma="Κυρήνη">Κυρήνης</w>
+                    <w n="35" lemma="ἔτος">ἐτῶν</w>
+                    <w n="40" lemma="ἑξήκοντα">ἑξήκοντα</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -203,28 +229,32 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>56.1105</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Agnello</author>
                         <date>1960</date>
                         <citedRange>36-37 no.34</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/5I5RNUU8"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002206">https://biblio.inscriptiones.org/epig10002206</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002206">https://biblio.inscriptiones.org/epig10002206</ref>
+                    </bibl>
                     <bibl>
                         <author>Sgarlata</author>
                         <date>2006</date>
                         <citedRange>1197-1198 fig.6</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q96B6VX3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001583">https://biblio.inscriptiones.org/epig10001583</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001583">https://biblio.inscriptiones.org/epig10001583</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion">
-	       <bibl>
-	           <author>Feissel</author>
-	           <date>1983</date>
-	           <citedRange>610 n.54</citedRange>
-	           <ptr target="https://www.zotero.org/groups/382445/items/CVJICVCM"/>
-	       <ref target="https://biblio.inscriptiones.org/epig10002008">https://biblio.inscriptiones.org/epig10002008</ref></bibl>
-	   </listBibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Feissel</author>
+                        <date>1983</date>
+                        <citedRange>610 n.54</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/CVJICVCM"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002008">https://biblio.inscriptiones.org/epig10002008</ref>
+                    </bibl>
+                </listBibl>
             </div>
         </body>
     </text>

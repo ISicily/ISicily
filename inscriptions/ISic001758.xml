@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,16 +9,26 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-             </titleStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001758</idno>
@@ -53,7 +63,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p/>
+                                <support>
+                                    <p/>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
@@ -65,14 +76,16 @@
                                 <condition ana="#condition.complete"/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><p/>
+                                <layout>
+                                    <p/>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage ana="#text_condition.complete"/>
-			</layout>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Described by Orsi as 'a buone lettere'.</p>
+                            <handNote>
+                                <p>Described by Orsi as 'a buone lettere'.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -87,10 +100,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0275" notAfter-custom="0400" cert="low">Late C3 AD - C4 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Catacomb of San Giovanni</provenance>
@@ -101,18 +114,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -141,7 +154,9 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2023-08-07" who="#JP">Created draft file</change>
-              </listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -156,18 +171,29 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>Μάγνος
-                    <lb n="2"/>πλούμαρις
-                    <lb n="3"/>ἐνθάδε
-                    <lb n="4"/>κεῖτε <expan><abbr><am><g ref="#christogram"/></am></abbr><ex cert="low">χριστιανό</ex><abbr>ς</abbr></expan>
-                  </ab>
+                    <lb n="1"/><w n="5">Μάγνος</w>
+                    <lb n="2"/><w n="10">πλούμαρις</w>
+                    <lb n="3"/><w n="15">ἐνθάδε</w>
+                    <lb n="4"/><w n="20">κεῖτε</w> <w n="25"><expan><abbr><am><g ref="#christogram" n="30"/></am></abbr><ex cert="low">χριστιανό</ex><abbr>ς</abbr></expan></w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="Μάγνος">Μάγνος</w>
+                    <w n="10" lemma="πλουμάριος">πλούμαρις</w>
+                    <w n="15" lemma="ἐνθάδε">ἐνθάδε</w>
+                    <w n="20" lemma="κεῖμαι">κεῖτε</w>
+                    <w n="25" lemma="χριστιανός">χριστιανός</w>
+                </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of Orsi 1893</note></app>
-                    </listApp>
+                    <app>
+                        <note>Text of Orsi 1893</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p/>
@@ -182,23 +208,26 @@
                         <date>1893</date>
                         <citedRange>286 no. 36</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/V7HNHTAG"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref>
+                    </bibl>
                     <bibl>
                         <author>Strazzulla</author>
                         <date>1897</date>
                         <citedRange>140 no. 173</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/TUA8RN5S"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001390">https://biblio.inscriptiones.org/epig10001390</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001390">https://biblio.inscriptiones.org/epig10001390</ref>
+                    </bibl>
                     <bibl>
                         <author>Wessel</author>
                         <date>1989</date>
                         <citedRange>40 no. 153A</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/9CT5ZWIK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000394">https://biblio.inscriptiones.org/epig10000394</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion">
-	       <bibl/>
-	   </listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

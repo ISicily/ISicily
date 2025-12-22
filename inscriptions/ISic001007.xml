@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,25 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RG" ref="https://orcid.org/0009-0003-5190-1722">Romeo Gessaga</name>
+                    <resp>named entity annotation</resp>
+               </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -73,12 +87,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -97,10 +111,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" cert="low">4th — 5th century CE; Christian; enthade keitai; age in years; semnos, hagnos; parthenos; oath against
                                 tombrobbers; chi-rho (2) (?)</origDate>
                         </origin>
@@ -112,18 +126,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -152,14 +166,17 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                           <change when="2020-11-10" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-10" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-12-09" who="#RG">tagged names and persons</change>
+                <change when="2025-12-09" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2025-12-09" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -170,22 +187,60 @@
             <graphic n="print" url="ISic001007.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/>αἱ μακάριε παρθένοι
-                    <lb n="2"/>Φωτίνη κὲ Φιλουμενὴ
-                    <lb n="3"/>ἐνθάδε κῖντε σεμνέ ἁγνὲ
-                    <lb n="4"/>παρθένοι ζήσασε βίου κα
-                    <lb n="5" break="no"/>λοῦ ἡ μιζοτέρα ἐτῶν
-                    <lb n="6"/><num value="80">π</num> <g ref="#interpunct">·</g> καὶ ἡ μικροτέρα ἐτῶ<supplied reason="omitted">ν</supplied>
-                    <lb n="7"/><num value="84">πδ</num> ὁρκοῦ σε κατὰ τοῦ θε
-                    <lb n="8" break="no"/>οῦ τοῦ παντοκράτορος
-                    <lb n="9"/>μηδένα αὐτὰς σκῦλέ
-                    <lb n="10"/><g ref="#staurogram">𐆠</g> ποτε <g ref="#staurogram">𐆠</g>
+                    <lb n="1"/><w n="5">αἱ</w> <w n="10">μακάριε</w> <w n="15">παρθένοι</w>
+                    <lb n="2"/><persName type="attested"><name><w n="20">Φωτίνη</w></name></persName> <w n="25">κὲ</w> <persName type="attested"><name><w n="30">Φιλουμενὴ</w></name></persName>
+                    <lb n="3"/><w n="35">ἐνθάδε</w> <w n="40">κῖντε</w> <w n="45">σεμνέ</w> <w n="50">ἁγνὲ</w>
+                    <lb n="4"/><w n="55">παρθένοι</w> <w n="60">ζήσασε</w> <w n="65">βίου</w> <w n="70">κα
+                    <lb n="5" break="no"/>λοῦ</w> <w n="75">ἡ</w> <w n="80">μιζοτέρα</w> <w n="85">ἐτῶν</w>
+                    <lb n="6"/><num value="80"><w n="90">π</w></num> <g ref="#interpunct" n="95">·</g> <w n="100">καὶ</w> <w n="105">ἡ</w> <w n="110">μικροτέρα</w> <w n="115">ἐτῶ<supplied reason="omitted">ν</supplied></w>
+                    <lb n="7"/><num value="84"><w n="120">πδ</w></num> <w n="125">ὁρκοῦ</w> <w n="130">σε</w> <w n="135">κατὰ</w> <w n="140">τοῦ</w> <w n="145">θε
+                    <lb n="8" break="no"/>οῦ</w> <w n="150">τοῦ</w> <w n="155">παντοκράτορος</w>
+                    <lb n="9"/><w n="160">μηδένα</w> <w n="165">αὐτὰς</w> <w n="170">σκῦλέ</w>
+                    <lb n="10"/><g ref="#staurogram" n="175">𐆠</g> <w n="180">ποτε</w> <g ref="#staurogram" n="185">𐆠</g>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="ὁ">αἱ</w>
+                    <w n="10" lemma="μακάριος">μακάριε</w>
+                    <w n="15" lemma="παρθένος">παρθένοι</w>
+                    <w n="20" lemma="Φωτίνη">Φωτίνη</w>
+                    <w n="25" lemma="καί">κὲ</w>
+                    <w n="30" lemma="Φιλουμενή">Φιλουμενὴ</w>
+                    <w n="35" lemma="ἐνθάδε">ἐνθάδε</w>
+                    <w n="40" lemma="κεῖμαι">κῖντε</w>
+                    <w n="45" lemma="σεμνός">σεμνέ</w>
+                    <w n="50" lemma="ἁγνός">ἁγνὲ</w>
+                    <w n="55" lemma="παρθένος">παρθένοι</w>
+                    <w n="60" lemma="ζῶ">ζήσασε</w>
+                    <w n="65" lemma="βίος">βίου</w>
+                    <w n="70" lemma="καλός">καλοῦ</w>
+                    <w n="75" lemma="ὁ">ἡ</w>
+                    <w n="80" lemma="μέγας">μιζοτέρα</w>
+                    <w n="85" lemma="ἔτος">ἐτῶν</w>
+                    <w n="90" lemma="π">π</w>
+                    <w n="100" lemma="καί">καὶ</w>
+                    <w n="105" lemma="ὁ">ἡ</w>
+                    <w n="110" lemma="μικρός">μικροτέρα</w>
+                    <w n="115" lemma="ἔτος">ἐτῶν</w>
+                    <w n="120" lemma="πν">πδ</w>
+                    <w n="125" lemma="ὁρκός">ὁρκοῦ</w>
+                    <w n="130" lemma="σύ">σε</w>
+                    <w n="135" lemma="κατά">κατὰ</w>
+                    <w n="140" lemma="ὁ">τοῦ</w>
+                    <w n="145" lemma="θεός">θεοῦ</w>
+                    <w n="150" lemma="ὁ">τοῦ</w>
+                    <w n="155" lemma="παντοκράτωρ">παντοκράτορος</w>
+                    <w n="160" lemma="μηδείς">μηδένα</w>
+                    <w n="165" lemma="αὐτός">αὐτὰς</w>
+                    <w n="170" lemma="σκύλλω">σκῦλέ</w>
+                    <w n="180" lemma="ποτε">ποτε</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -211,15 +266,19 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">187</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl>
                         <author>Agnello</author>
                         <date>1953</date>
                         <citedRange>no.15</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

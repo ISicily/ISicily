@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,16 +9,26 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-             </titleStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001817</idno>
@@ -53,7 +63,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Fragment of a marble plaque broken on all sides, with traces of two monumental Roman letters top and bottom</p>
+                                <support>
+                                    <p>Fragment of a marble plaque broken on all sides, with traces of two monumental Roman letters top and bottom</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
@@ -65,10 +76,11 @@
                                 <condition ana="#condition.fragment"/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><p/>
+                                <layout>
+                                    <p/>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage ana="#text_condition.incomplete"/>
-			</layout>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -87,10 +99,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0275" notAfter-custom="0400" cert="low">Late C3 AD - C4 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Catacomb of San Giovanni</provenance>
@@ -101,18 +113,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -141,7 +153,9 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2023-08-10" who="#JP">Created draft file</change>
-             </listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -156,17 +170,31 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΟΣΛΟΥ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><orig>ΑΝΟΥ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/> <g ref="#staurogram">𐆠</g> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="5"/><orig n="10">ΟΣΛΟΥ</orig><gap reason="lost" extent="unknown" unit="character" n="15"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" n="20"/><orig n="25">ΑΝΟΥ</orig><gap reason="lost" extent="unknown" unit="character" n="30"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character" n="35"/> <g ref="#staurogram" n="40">𐆠</g> <gap reason="lost" extent="unknown" unit="character" n="45"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="character" n="5"><desc>[-?-]</desc></gap>
+                    <orig n="10">ΟΣΛΟΥ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="15"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="20"><desc>[-?-]</desc></gap>
+                    <orig n="25">ΑΝΟΥ</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="30"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="35"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="45"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app><note>Text of Orsi 1893</note></app>
-                 </listApp>
+                    <app>
+                        <note>Text of Orsi 1893</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p/>
@@ -181,11 +209,12 @@
                         <date>1893</date>
                         <citedRange>287 no. 40</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/V7HNHTAG"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref></bibl>
-                  </listBibl>
-	   <listBibl type="discussion">
-	       <bibl/>
-	   </listBibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

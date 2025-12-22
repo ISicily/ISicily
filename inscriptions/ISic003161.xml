@@ -1,15 +1,17 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003161</title>
+                <title>Fragment of an epitaph</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -43,12 +53,12 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Siracusa</settlement>
-                        <repository><!--Add Repository Here--></repository>
-                        <!--No inventory number found-->
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">53167</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
@@ -62,28 +72,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Two fragments, rejoined, of a marble plaque, off-white with pink veining. Appears intact at top and right, but broken below and to the left.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">13.2</height>
+                                        <width unit="cm">16.2</width>
+                                        <depth unit="cm">2.1-2.3</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
-		    </supportDesc>
+                                <condition ana="#condition.fragments.contiguous"/>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Remains of four lines of Greek letters, falling off slightly to the right.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><p>Lunate letters, somewhat irregular in height / layout, deeply carved.</p>
+                                <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="10" atMost="20">10-20</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -95,32 +106,32 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400">4th century CE (SEG)</origDate>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0400" evidence="lettering">4th century CE (dating of Gentili by palaeography); the archaeological context was unstratified, including material from classical to Roman.</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="1950">Found during excavations in advance of construction of an appartment block, at 38-40Via G. Testaferrata, in 1950<geo>37.0731261,15.2841073</geo></provenance>
+                        <provenance type="observed" subtype="autopsied" xml:id="autopsy">Prag, 2014-09</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -146,67 +157,98 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
-                            <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	   <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	               <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-                            <change when="2021-01-15" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-15" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+                <change when="2025-11-20" who="#JP">Jonathan Prag revised edition from autopsy notes.</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
-            <graphic n="screen" url="ISic003161_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            <graphic n="screen" url="ISic003161.tif" height="4912px" width="7360px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-09</desc>
             </graphic>
-            <graphic n="print" url="ISic003161.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            <graphic n="print" url="ISic003161.jpg" height="4912px" width="7360px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-09</desc>
             </graphic>
-         </surface>
+        </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic003161_rear.tif" height="4912px" width="7360px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-09</desc>
+            </graphic>
+            <graphic n="print" url="ISic003161_rear.jpg" height="4912px" width="7360px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2014-09-09</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM #JP" source="#autopsy">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> καλανδῶν Ἰου
-                    <lb n="2" break="no"/><supplied reason="lost">λίου</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ἐ</supplied>τελεύτα Φηλη
-                    <lb n="3" break="no"/><supplied reason="lost">κί</supplied>ων <hi rend="ligature">κὲ</hi> ἐνθά
-                    <lb n="4" break="no"/><supplied reason="lost">δε</supplied> <supplied reason="lost">καθ</supplied>ίζε <supplied reason="lost">ετο</supplied> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="5"/> <w n="10">καλανδῶν</w> <w n="15">Ἰου
+                    <lb n="2" break="no"/><supplied reason="lost" cert="low">λίου</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="20"/> <w n="25"><supplied reason="lost">ἐ</supplied>τελεύτα</w> <name><w part="I" n="30">Φηλη</w></name> 
+                    <lb n="3" break="no"/><gap reason="lost" extent="unknown" unit="character" cert="low" n="32"/> <w n="34"><supplied reason="lost">ἐτ</supplied>ῶν</w> <num value="25"><w n="35"><hi rend="ligature">κε</hi></w></num> <w n="40">ἐνθά
+                    <lb n="4" break="no"/><supplied reason="lost">δε</supplied></w> <w n="45"><supplied reason="lost">καθ</supplied>ίζ<supplied reason="lost">εται</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="55"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="character" n="5"><desc>[-?-]</desc></gap>
+                    <w n="10" lemma="kalendae">καλανδῶν</w>
+                    <w n="15" lemma="Iulius">Ἰουλίου</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="20"><desc>[-?-]</desc></gap>
+                    <w n="25" lemma="τελευτάω">ἐτελεύτα</w>
+                    <w n="30" lemma="Φηλη">Φηλη</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="32"><desc>[-?-]</desc></gap>
+                    <w n="34" lemma="ἔτος">ἐτῶν</w>
+                    <w n="35" lemma="κε">κε</w>
+                    <w n="40" lemma="ἐνθάδε">ἐνθάδε</w>
+                    <w n="45" lemma="καθίζω">καθίζεται</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="55"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text after Gentili 1956</note>
+                        <note>Text from autopsy</note>
                     </app>
+                    <app loc="2-3"><note>Gentili: Φηλη-|[κί]ων κὲ; the reading adopted here suggested by Tod in SEG</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>[---] the kalends of July(?), Phele[?] passed away aged 25 years. Here they lie [-?-].</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--two joining frags. of marble plaque, found in vie G. Testaferrata and G. Di Natale. Dating formula at top, name is Phelekiwn, but mid part a restoration, and might be Phele[-?.--></p>
+                <p>The presence of a supraline above the letters ΚΕ in line 3 very strongly suggests a numeral, and not κε for και, since κε is not an abbreviation, which would be the only other purpose of the supraline. The resolution of the name Φηλη- is uncertain.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="SEG">
                         <citedRange>16.0536</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Gentili</author>
                         <title>NSA</title>
                         <date>1956</date>
                         <citedRange>116, fig.10</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

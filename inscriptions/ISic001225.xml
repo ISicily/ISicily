@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,13 +24,21 @@
                     <name xml:id="AL" ref="https://orcid.org/0000-0002-0000-7611">Andoni Llamazares</name>
                     <resp>text edition</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Addition of metadata</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -86,7 +96,8 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--ILipara--><p>Phi: 22-24mm</p>
+                            <handNote><!--ILipara-->
+                                <p>Phi: 22-24mm</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="12" atMost="14">12-14</height>
@@ -105,10 +116,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
-                            	<geo>38.48333, 14.93333</geo>
-		</origPlace>
+                                <geo>38.48333, 14.93333</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="textual-context">second or third century CE</origDate>
                         </origin>
                         <provenance type="found">Found in Lipari, but the exact place, circumstances and date of discovery are unknown. Taken to the Archaeological Museum of Palermo</provenance>
@@ -120,18 +131,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -160,15 +171,17 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-22" who="#AL">Andoni Llamazares added a new text edition and translation</change>
                 <change when="2023-04-06" who="#AA">Alex Antoniou Epidoc addition of metadata</change>
-	</listChange>
+                <change when="2025-12-10" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2025-12-10" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -179,45 +192,106 @@
             <graphic n="print" url="ISic001225.jpg" height="2356px" width="3824px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2023-07-28</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AL">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AL">
                 <ab>
-                    <lb n="1"/>Θεοῖς <space quantity="3" unit="character"/> καταχθονίοις
-                    <lb n="2"/><placeName type="ethnic">Καππαδόκων</placeName> ἔθνους πολυανθέας οἴδατε ἀρούρας
-                    <lb n="3"/>κεῖθεν ἐγὼ φυόμην ἐκ τοκέων ἀγαθῶν
-                    <lb n="4"/>ἐξέτι τοὺς λιπόμην δύσιν ἤλυθον ἠδὲ καὶ ἠῶ
-                    <lb n="5"/>οὔνομά μοι <persName type="attested"><name type="idionym">Γλάφυρος</name></persName> καὶ φρενὸς εἴκελον <expan><abbr><hi rend="supraline">ἦ</hi></abbr><ex>ν</ex></expan>
-                    <lb n="6"/><num value="60">ἑξηκοστὸν</num> ἔτος πανελεύθερον ἐξεβίωσα
-                    <lb n="7"/>καὶ καλὸν τὸ τύχης καὶ πικρὸν οἶδα βίου
+                    <lb n="1"/><w n="5">Θεοῖς</w> <space quantity="3" unit="character" n="10"/> <w n="15">καταχθονίοις</w>
+                    <lb n="2"/><placeName type="ethnic"><name><w n="20">Καππαδόκων</w></name></placeName> <w n="25">ἔθνους</w> <w n="30">πολυανθέας</w> <w n="35">οἴδατε</w> <w n="40">ἀρούρας</w>
+                    <lb n="3"/><w n="45">κεῖθεν</w> <w n="50">ἐγὼ</w> <w n="55">φυόμην</w> <w n="60">ἐκ</w> <w n="65">τοκέων</w> <w n="70">ἀγαθῶν</w>
+                    <lb n="4"/><w n="75">ἐξέτι</w> <w n="80">τοὺς</w> <w n="85">λιπόμην</w> <w n="90">δύσιν</w> <w n="95">ἤλυθον</w> <w n="100">ἠδὲ</w> <w n="105">καὶ</w> <w n="110">ἠῶ</w>
+                    <lb n="5"/><w n="115">οὔνομά</w> <w n="120">μοι</w> <persName type="attested"><name type="idionym"><w n="125">Γλάφυρος</w></name></persName> <w n="130">καὶ</w> <w n="135">φρενὸς</w> <w n="140">εἴκελον</w> <w n="145"><expan><abbr><hi rend="supraline">ἦ</hi></abbr><ex>ν</ex></expan></w>
+                    <lb n="6"/><num value="60"><w n="150">ἑξηκοστὸν</w></num> <w n="155">ἔτος</w> <w n="160">πανελεύθερον</w> <w n="165">ἐξεβίωσα</w>
+                    <lb n="7"/><w n="170">καὶ</w> <w n="175">καλὸν</w> <w n="180">τὸ</w> <w n="185">τύχης</w> <w n="190">καὶ</w> <w n="195">πικρὸν</w> <w n="200">οἶδα</w> <w n="205">βίου</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="θεός">Θεοῖς</w>
+                    <space quantity="3" unit="character" n="10"/>
+                    <w n="15" lemma="καταχθόνιος">καταχθονίοις</w>
+                    <w n="20" lemma="Καππαδόκαι">Καππαδόκων</w>
+                    <w n="25" lemma="ἔθνος">ἔθνους</w>
+                    <w n="30" lemma="πολυανθέος">πολυανθέας</w>
+                    <w n="35" lemma="οἶδα">οἴδατε</w>
+                    <w n="40" lemma="ἄρουρα">ἀρούρας</w>
+                    <w n="45" lemma="ἐκεῖθεν">κεῖθεν</w>
+                    <w n="50" lemma="ἐγώ">ἐγὼ</w>
+                    <w n="55" lemma="φύω">φυόμην</w>
+                    <w n="60" lemma="ἐκ">ἐκ</w>
+                    <w n="65" lemma="τοκεύς">τοκέων</w>
+                    <w n="70" lemma="ἀγαθός">ἀγαθῶν</w>
+                    <w n="75" lemma="ἐξέτι">ἐξέτι</w>
+                    <w n="80" lemma="ὁ">τοὺς</w>
+                    <w n="85" lemma="λείπω">λιπόμην</w>
+                    <w n="90" lemma="δύσις">δύσιν</w>
+                    <w n="95" lemma="ἔρχομαι">ἤλυθον</w>
+                    <w n="100" lemma="ἠδέ">ἠδὲ</w>
+                    <w n="105" lemma="καί">καὶ</w>
+                    <w n="110" lemma="ἠώς">ἠῶ</w>
+                    <w n="115" lemma="ὄνομα">οὔνομά</w>
+                    <w n="120" lemma="ἐγώ">μοι</w>
+                    <w n="125" lemma="Γλάφυρος">Γλάφυρος</w>
+                    <w n="130" lemma="καί">καὶ</w>
+                    <w n="135" lemma="φρήν">φρενὸς</w>
+                    <w n="140" lemma="εἴκελος">εἴκελον</w>
+                    <w n="145" lemma="εἰμί">ἦν</w>
+                    <w n="150" lemma="ἑξηκοστός">ἑξηκοστὸν</w>
+                    <w n="155" lemma="ἔτος">ἔτος</w>
+                    <w n="160" lemma="πανελεύθερος">πανελεύθερον</w>
+                    <w n="165" lemma="ἐκβιόω">ἐξεβίωσα</w>
+                    <w n="170" lemma="καί">καὶ</w>
+                    <w n="175" lemma="καλός">καλὸν</w>
+                    <w n="180" lemma="ὁ">τὸ</w>
+                    <w n="185" lemma="τύχη">τύχης</w>
+                    <w n="190" lemma="καί">καὶ</w>
+                    <w n="195" lemma="πικρός">πικρὸν</w>
+                    <w n="200" lemma="οἶδα">οἶδα</w>
+                    <w n="205" lemma="βίος">βίου</w>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>text according to I.Lipara</note></app>
-                <app loc="2">
-                    <rdg>οἶδα τε <note>Libertini</note></rdg>
-                </app>
-                <app loc="3">
-                    <rdg>φύομεν <note>Libertini</note></rdg>
-                </app>
-                <app loc="4">
-                    <rdg>ἐξότε <note>Ritschl</note></rdg>
-                    <rdg>ἐξ<supplied reason="lost">ό</supplied>τ<supplied reason="lost">ε</supplied> <note>Kaibel (1878)</note></rdg>
-                </app>
-                <app loc="6">
-                    <rdg>ΕΚΗΚΟΣΤΟΝ <note>Camarda</note></rdg>
-                    <rdg>πανελεύθερος <note>Camarda, Ritschl</note></rdg>
-                </app>
+                    <app>
+                        <note>text according to I.Lipara</note>
+                    </app>
+                    <app loc="2">
+                        <rdg>
+                            οἶδα τε<note>Libertini</note>
+                        </rdg>
+                    </app>
+                    <app loc="3">
+                        <rdg>
+                            φύομεν<note>Libertini</note>
+                        </rdg>
+                    </app>
+                    <app loc="4">
+                        <rdg>
+                            ἐξότε<note>Ritschl</note>
+                        </rdg>
+                        <rdg>
+                            ἐξ<supplied reason="lost">ό</supplied>τ
+                            <supplied reason="lost">ε</supplied>
+                            <note>Kaibel (1878)</note>
+                        </rdg>
+                    </app>
+                    <app loc="6">
+                        <rdg>
+                            ΕΚΗΚΟΣΤΟΝ<note>Camarda</note>
+                        </rdg>
+                        <rdg>
+                            πανελεύθερος<note>Camarda, Ritschl</note>
+                        </rdg>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#AL">
                 <p>To the Underworld Gods. You know about the flowerful fields of the Cappadocian people. There I was born from good parents. After I left them, I went to the West and to the East. My name is Glaphyr (elegant) and so is my soul. I lived until my sixtieth year being completely free, and knew the beauty of fortune and the bitterness of life.</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p/>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -228,29 +302,35 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">400</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILipara">
-                          <author>Bernabó-Brea</author>
-                          <author>Cavalier</author>
-                          <author>Campagna</author>
-                          <date>2003</date> 
+                        <author>Bernabó-Brea</author>
+                        <author>Cavalier</author>
+                        <author>Campagna</author>
+                        <date>2003</date>
                         <citedRange>376</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VDAQH5D2"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ref>
+                    </bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1921</date>
                         <citedRange>219 no.18</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/QECEVGHN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001875">https://biblio.inscriptiones.org/epig10001875</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001875">https://biblio.inscriptiones.org/epig10001875</ref>
+                    </bibl>
                     <bibl>
                         <author>Ritschl</author>
                         <date>1866</date>
                         <citedRange>137-138 no.1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/84WVZ5F7"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001643">https://biblio.inscriptiones.org/epig10001643</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001643">https://biblio.inscriptiones.org/epig10001643</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

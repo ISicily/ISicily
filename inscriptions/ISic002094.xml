@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Epitaph for Soter</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+              </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic003599</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002094</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Modica</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/094">Museo Archeologico Belgiorno</repository>
+                        <idno type="inventory"></idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A plaque of the local soft limestone, intact above, left and right, broken below.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!--catalogue-->
+                                        <height unit="cm">22</height>
+                                        <width unit="cm">27</width>
+                                        <depth unit="cm">4.5</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.damaged"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Five lines of Latin letters, filling the width of the stone.</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <rs ana="#execution.rubrication">rubrication</rs>
+                                	<damage ana="#text_condition.complete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Deeply carved plain latin letters, S consistently reversed, traces of rubrication. Greek cross at start with forks at the end of each stroke.</p>
+                                <locus from="line1" to="line5">Line 1-5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="25" atMost="25">25</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462378" corresp="#findspot">Mutyca</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/6541972">Modica</placeName>
+                            	<geo>36.84594, 14.77399</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0501" notAfter-custom="0600" evidence="archaeological-context">6th century CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="2013">Found in excavation in 2013, a partially violated hypogeum in the vicinity of multiple others, in contrada Treppiedi, Modica<geo>36.8347122,14.7729222</geo></provenance><!-- location of the hypogeum, from catalogue -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+               <change when="2025-12-16" who="#JP">Jonathan Prag created from publication</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic002094_tiled.tif" height="1269px" width="2175px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo M. Metcalfe 2016-10-30</desc>
+            </graphic>
+            <graphic n="print" url="ISic002094.jpg" height="1269px" width="2175px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo M. Metcalfe 2016-10-30</desc>
+            </graphic>
+         </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP" source="https://www.zotero.org/groups/382445/items/TLANX4H9">
+                <ab>
+                    <lb n="1"/><g ref="#cross_greek">&#x1F7A3;</g> <persName type="attested"><name><hi rend="reversed">S</hi>oter</name></persName> <choice><orig>defuc
+                    <lb n="2" break="no"/>tu<hi rend="reversed">s</hi></orig><reg>defunctus</reg></choice> e<hi rend="reversed">s</hi>t pridi
+                    <lb n="3" break="no"/>e idu<hi rend="reversed">s</hi> <hi rend="reversed">S</hi>epte<hi rend="reversed">n</hi>
+                   <lb n="4" break="no"/>bre<hi rend="reversed">s</hi> indictio
+                    <lb n="5" break="no"/>ne octaba
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>Text after Terranova, checked against photograph</note></app></listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>((cross)) Soter died the day before the Ides of September, in the eighth indiction.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="Terranova">
+                <p>Soter è morto il giorno prima delle Idi di settembre nel corso della indizione ottava</p>
+            </div>
+            <div type="commentary">
+                <p></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Terranova</author>
+                        <date>2014</date>
+                        <citedRange>81 no.87</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TLANX4H9"/>
+                    </bibl>
+                    <bibl>
+                        <author>Rizzone</author>
+                        <date>2014-2015</date>
+                        <citedRange>75 no.5 fig.5</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/S3G73QA2"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001626">https://biblio.inscriptiones.org/epig10001626</ref>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

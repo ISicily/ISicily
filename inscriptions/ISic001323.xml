@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -26,10 +28,18 @@
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing and English translation</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -67,7 +77,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Marble plaque damaged on the lower edge (slightly convex surface), originally connected to a marble column, as part of a statue base.</p>
+                                <support>
+                                    <p>Marble plaque damaged on the lower edge (slightly convex surface), originally connected to a marble column, as part of a statue base.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions><!--measurements from Korhonen-->
@@ -77,17 +88,19 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.damaged"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Lines 1, 4 and 7 are set further to the left, with the other lines indented by one character space, reflecting the beginning of each line of hexameter verse.</p>
+                                <layout>
+                                    <p>Lines 1, 4 and 7 are set further to the left, with the other lines indented by one character space, reflecting the beginning of each line of hexameter verse.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <rs ana="#execution.rubrication">Rubrication</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Regular letters: lunate Ε, Σ, cursive Ω, Α with broken bar.</p><!--measurements from Korhonen-->
+                            <handNote>
+                                <p>Regular letters: lunate Ε, Σ, cursive Ω, Α with broken bar.</p><!--measurements from Korhonen-->
                                 <locus from="line1" to="line9">Lines 1-9</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="26" atMost="40">26-40</height>
@@ -102,10 +115,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0251" notAfter-custom="0400" evidence="lettering">Late 3rd — late 4th century CE (Korhonen on the basis of lettering)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1594">Found in 1594 among the ruins of the Odeon (at the house of Dott. D. Cataldo Fimia Patricio) between Porta di Mezzo and Convento di S. Agostino<geo>37.5033164,15.0838968</geo>.</provenance><!-- geo for the odeon -->
@@ -117,18 +130,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -158,16 +171,18 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-07-09" who="#AA">Alex Antoniou Epidoc editing and English translation</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-10-11" who="#JP">Jonathan Prag added bibl ref</change>
                 <change when="2022-10-31" who="#martaf">Marta Fogagnolo revised the text encoding, added dimensions, translations and commentary</change>
                 <change when="2024-01-17" who="#JP">Jonathan Prag added images</change>
-	</listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -184,7 +199,7 @@
             <graphic n="print" url="ISic001323_copy2.jpg" height="3168px" width="4752px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
             </graphic>
-         </surface>
+        </surface>
         <surface type="rear">
             <graphic n="screen" url="ISic001323_rear_tiled.tif" height="3168px" width="4752px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo students of Liceo Lazzaro, 12.01.2018</desc>
@@ -196,26 +211,64 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#martaf">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#martaf">
                 <ab>
-                    <lb n="1"/><persName type="divine"><name>Εὐσεβέων</name></persName> <w>κλυτὸν</w>
-                    <lb n="2"/><w>ἄστυ</w> <w>πανόλβιον</w>
-                    <lb n="3"/><w>ἄνδρα</w> <w>ἀνέθηκε</w>
-                    <lb n="4"/><persName type="attested"><name type="patronymic">Ζωσυμιανείδην</name>
-                    <lb n="5"/><roleName type="civic" subtype="agonothetes"><w>ἀγωνοθετῆρα</w></roleName>
-                    <lb n="6"/><name>Σεβῆρον</name></persName>
-                    <lb n="7"/><w>ὄφρα</w> <w>καὶ</w> <w>ἐσομένοισι</w>
-                    <lb n="8"/><gap reason="lost" quantity="1" unit="character"/><gap reason="illegible" quantity="3" unit="character"/><orig>ΟΣΝΖΕ<unclear>Ι</unclear></orig> <w>βρ<unclear>ο</unclear>
-                    <lb n="9" break="no"/><supplied reason="lost">τοῖσιν</supplied></w><gap reason="lost" unit="character" extent="unknown"/>
+                    <lb n="1"/><persName type="divine"><name><w n="5">Εὐσεβέων</w></name></persName> <w n="10">κλυτὸν</w>
+                    <lb n="2"/><w n="15">ἄστυ</w> <w n="20">πανόλβιον</w>
+                    <lb n="3"/><w n="25">ἄνδρα</w> <w n="30">ἀνέθηκε</w>
+                    <lb n="4"/><persName type="attested"><name type="patronymic"><w n="35">Ζωσυμιανείδην</w></name>
+                    <lb n="5"/><roleName type="civic" subtype="agonothetes"><w n="40">ἀγωνοθετῆρα</w></roleName>
+                    <lb n="6"/><name><w n="45">Σεβῆρον</w></name></persName>
+                    <lb n="7"/><w n="50">ὄφρα</w> <w n="55">καὶ</w> <w n="60">ἐσομένοισι</w>
+                    <lb n="8"/><gap reason="lost" quantity="1" unit="character" n="65"/> <gap reason="illegible" quantity="3" unit="character" n="70"/> <orig n="75">ΟΣΝΖΕ<unclear>Ι</unclear></orig> <w n="80">βρ<unclear>ο</unclear>
+                    <lb n="9" break="no"/><supplied reason="lost">τοῖσιν</supplied></w> <gap reason="lost" unit="character" extent="unknown" n="85"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="εὐσεβής">Εὐσεβέων</w>
+                    <w n="10" lemma="κλυτός">κλυτὸν</w>
+                    <w n="15" lemma="ἄστυ">ἄστυ</w>
+                    <w n="20" lemma="πανόλβιος">πανόλβιον</w>
+                    <w n="25" lemma="ἀνήρ">ἄνδρα</w>
+                    <w n="30" lemma="ἀνατίθημι">ἀνέθηκε</w>
+                    <w n="35" lemma="Ζωσυμιανείδης">Ζωσυμιανείδην</w>
+                    <w n="40" lemma="ἀγωνοθετήρ">ἀγωνοθετῆρα</w>
+                    <w n="45" lemma="Σεβῆρος">Σεβῆρον</w>
+                    <w n="50" lemma="ὄφρα">ὄφρα</w>
+                    <w n="55" lemma="καί">καὶ</w>
+                    <w n="60" lemma="εἰμί">ἐσομένοισι</w>
+                    <gap reason="lost" quantity="1" unit="character" n="65"><desc>[.]</desc></gap>
+                    <gap reason="illegible" quantity="3" unit="character" n="70"><desc>[-?-]</desc></gap>
+                    <orig n="75">ΟΣΝΖΕΙ</orig>
+                    <w n="80" lemma="βροτός">βροτοῖσιν</w>
+                    <gap reason="lost" unit="character" extent="unknown" n="85"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus" resp="#martaf">
                 <listApp>
-                    <app><note>Text based on photographs</note></app>
-                    <app loc="line 4"><note>Franz, Kaibel: Ζωσιμιανείδην</note></app>
-                    <app loc="line 5"><note>Walther, Torremuzza: ἀγωνοθεθῆρα</note></app> 
-                    <app loc="line 7"><note>Franz, Kaibel: ὄφρα καὶ ἐσ<supplied reason="omitted">σ</supplied>ομένοισι</note></app>                        
-                    <app loc="lines 8-9"><note>Walther, Torremuzza: ΙΡΟΠΟCΛΙΖΕΒΡΟ; Amico, Ferrara: ΙΡ...ΟΕΛΙΖΕΒΙΡΟ; Burmann: ἀοίδιμος ᾖσι βροτοῖσιν; Welcker: βροτοῖσι μέλῃ Σευήρου; Franz: ΡΩCΚΛΗΖΟΙΤΟ = [ἥ]ρ[ως κ]λ[ῄ]ζ[οιτο] βρο|[τοῖσιν] (see Arcangelo, Istoria delle cose insigni e famosi successi di Catania “ut heroibus celebris memores servetur”); Kaibel: the upper parts of ΙΡCΙΙΙΟCΑΙΖΕΙΒΡΟ (reported the reading πρόμος by Röhl); Manganaro ΙΙΙ<unclear>Μ</unclear>ΟCΙΓCΙ<unclear>ΒΡΟ</unclear> = [π]ρόμος ἀ(ε)ὶ ζ(ῆ)ι βρο|[τοῖσιν]; Wilson: πρόμος ἀῒ ζεῖ (= ἀεὶ ζῇ) βρό|[τοισι]; Korhonen [-]+++ΟCΝΖΕ<unclear>Ι</unclear> βρ<unclear>ο</unclear>-|[τοῖσιν ---]</note></app>      
+                    <app>
+                        <note>Text based on photographs</note>
+                    </app>
+                    <app loc="line 4">
+                        <note>Franz, Kaibel: Ζωσιμιανείδην</note>
+                    </app>
+                    <app loc="line 5">
+                        <note>Walther, Torremuzza: ἀγωνοθεθῆρα</note>
+                    </app>
+                    <app loc="line 7">
+                        <note>
+                            Franz, Kaibel: ὄφρα καὶ ἐσ<supplied reason="omitted">σ</supplied>ομένοισι
+                        </note>
+                    </app>
+                    <app loc="lines 8-9">
+                        <note>
+                            Walther, Torremuzza: ΙΡΟΠΟCΛΙΖΕΒΡΟ; Amico, Ferrara: ΙΡ...ΟΕΛΙΖΕΒΙΡΟ; Burmann: ἀοίδιμος ᾖσι βροτοῖσιν; Welcker: βροτοῖσι μέλῃ Σευήρου; Franz: ΡΩCΚΛΗΖΟΙΤΟ = [ἥ]ρ[ως κ]λ[ῄ]ζ[οιτο] βρο|[τοῖσιν] (see Arcangelo, Istoria delle cose insigni e famosi successi di Catania “ut heroibus celebris memores servetur”); Kaibel: the upper parts of ΙΡCΙΙΙΟCΑΙΖΕΙΒΡΟ (reported the reading πρόμος by Röhl); Manganaro ΙΙΙ<unclear>Μ</unclear>ΟCΙΓCΙ
+                            <unclear>ΒΡΟ</unclear>= [π]ρόμος ἀ(ε)ὶ ζ(ῆ)ι βρο|[τοῖσιν]; Wilson: πρόμος ἀῒ ζεῖ (= ἀεὶ ζῇ) βρό|[τοισι]; Korhonen [-]+++ΟCΝΖΕ
+                            <unclear>Ι</unclear>βρ
+                            <unclear>ο</unclear>-|[τοῖσιν ---]
+                        </note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#martaf">
@@ -234,35 +287,35 @@
                         <date>1624 [1625]</date>
                         <citedRange>no.37</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
                     </bibl>
                     <bibl>
                         <author>Amico</author>
                         <date>1741</date>
                         <citedRange>238-240</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref>
                     </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1769</date>
                         <citedRange>52 no.36</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
                     </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>57 no.37</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
                     </bibl>
                     <bibl>
                         <author>Ferrara</author>
                         <date>1829</date>
                         <citedRange>277-278</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/82T4IWDN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002005">https://biblio.inscriptiones.org/epig10002005</ref>
                     </bibl>
                     <bibl type="corpus" n="IG">
                         <author>Kaibel</author>
@@ -271,35 +324,35 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">502</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
                     </bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1959.0024</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
                     </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>44.0738.11</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
                     </bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1959.0541</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
                     </bibl>
                     <bibl type="corpus" n="IMusCatania">
-                         <author>Korhonen</author>
-                         <date>2004</date> 
+                        <author>Korhonen</author>
+                        <date>2004</date>
                         <citedRange>24</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2EUC82DH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10000028">https://biblio.inscriptiones.org/epig10000028</ref>
                     </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Franz</author>
                         <date>1853</date>
                         <citedRange>5727</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/> 
+                        <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref>
                     </bibl>
                     <bibl>
@@ -307,58 +360,59 @@
                         <date>1878</date>
                         <citedRange>no.887</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/R6EN7EKK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001900">https://biblio.inscriptiones.org/epig10001900</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001900">https://biblio.inscriptiones.org/epig10001900</ref>
                     </bibl>
                     <bibl type="corpus" n="IGRR">
                         <author>Cagnat</author>
                         <date>1906</date>
                         <citedRange>491</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/KSH4D9GK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001116">https://biblio.inscriptiones.org/epig10001116</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001116">https://biblio.inscriptiones.org/epig10001116</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1958-1959</date>
                         <citedRange>15-17</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/BVD8KVF7"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001856">https://biblio.inscriptiones.org/epig10001856</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001856">https://biblio.inscriptiones.org/epig10001856</ref>
                     </bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1990</date>
                         <citedRange>172</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1994</date>
                         <citedRange>97 no.XI</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/532NF7SV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001825">https://biblio.inscriptiones.org/epig10001825</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001825">https://biblio.inscriptiones.org/epig10001825</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>2010</date>
                         <citedRange>passim</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZJA2JMRW"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001793">https://biblio.inscriptiones.org/epig10001793</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10001793">https://biblio.inscriptiones.org/epig10001793</ref>
                     </bibl>
                     <bibl>
                         <author>Molè Ventura</author>
                         <date>2018</date>
                         <citedRange>passim</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/46K2DWI7"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002256">https://biblio.inscriptiones.org/epig10002256</ref>
+                        <ref target="https://biblio.inscriptiones.org/epig10002256">https://biblio.inscriptiones.org/epig10002256</ref>
                     </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl>
-                    <author>Franzoni</author>
-                    <date>1995</date>
-                    <citedRange>209-222</citedRange>
-                    <ptr target="http://zotero.org/groups/382445/items/TCRRXBFB"/>
-                <ref target="https://biblio.inscriptiones.org/epig10002244">https://biblio.inscriptiones.org/epig10002244</ref>
-                </bibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Franzoni</author>
+                        <date>1995</date>
+                        <citedRange>209-222</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/TCRRXBFB"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002244">https://biblio.inscriptiones.org/epig10002244</ref>
+                    </bibl>
                 </listBibl>
             </div>
         </body>

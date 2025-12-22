@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,20 +9,30 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="FP" ref="https://orcid.org/0000-0001-8435-3601">Fiona Phillips</name>
                     <resp>Encoding the inscription</resp>
                 </respStmt>
-              </titleStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+            </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001759</idno>
@@ -57,7 +67,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Tablet of ?Parian (so Orsi) marble.</p>
+                                <support>
+                                    <p>Tablet of ?Parian (so Orsi) marble.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions>
@@ -69,10 +80,11 @@
                                 <condition ana="#condition.complete"/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><p/>
+                                <layout>
+                                    <p/>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage ana="#text_condition.complete"/>
-			</layout>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -91,10 +103,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0275" notAfter-custom="0400" cert="low">Late C3 AD - C4 AD</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Catacomb of San Giovanni</provenance>
@@ -105,18 +117,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -146,7 +158,9 @@
             <listChange>
                 <change when="2023-01-12" who="#JP">Created stub file</change>
                 <change when="2023-03-06" who="#FP">Encoded the inscription</change>
-	</listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -161,18 +175,42 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#FP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#FP">
                 <ab>
-                    <lb n="1"/>Ἐνθαδε κῖτε 
-                    <lb n="2"/><persName type="attested"><name>Βενίγνα</name></persName> ζησάσα
-                    <lb n="3"/>καλῶς <g ref="#staurogram">𐆠</g> τελεύ
-                    <lb n="4" break="no"/>τα δὲ πρὸ <expan><abbr>νών</abbr><ex>ας</ex><abbr><am>s</am></abbr></expan> <expan><abbr>Φεβ</abbr><ex>ρουαρί</ex><abbr>α</abbr><ex>ς</ex><abbr><am>s</am></abbr></expan>
-                    <lb n="5"/>ὑπατίᾳ <persName type="attested"><name>Ταύρου</name></persName> κὲ 
-                    <lb n="6"/><persName type="attested"><name>Φήλικος</name></persName> τῶν <expan><abbr><hi rend="ligature small">λα</hi><hi rend="small">μ</hi></abbr><ex>πρότατων</ex></expan>
+                    <lb n="1"/><w n="5">Ἐνθαδε</w> <w n="10">κῖτε</w>
+                    <lb n="2"/><persName type="attested"><name><w n="15">Βενίγνα</w></name></persName> <w n="20">ζησάσα</w>
+                    <lb n="3"/><w n="25">καλῶς</w> <g ref="#staurogram" n="30">𐆠</g> <w n="35">τελεύ
+                    <lb n="4" break="no"/>τα</w> <w n="40">δὲ</w> <w n="45">πρὸ</w> <w n="50"><expan><abbr>νών</abbr><ex>α</ex><abbr><hi rend="stacked">s</hi></abbr></expan></w> <name><w n="55"><expan><abbr>Φεβ</abbr><ex>ρουαρί</ex><abbr>ας</abbr></expan></w></name>
+                    <lb n="5"/><w n="60">ὑπατίᾳ</w> <persName type="attested"><name><w n="65">Ταύρου</w></name></persName> <w n="70">κὲ</w>
+                    <lb n="6"/><persName type="attested"><name><w n="75">Φήλικος</w></name></persName> <w n="80">τῶν</w> <w n="85"><expan><abbr><hi rend="ligature small">λα</hi><hi rend="small">μ</hi></abbr><ex>πρότατων</ex></expan></w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="ἐνθάδε">Ἐνθαδε</w>
+                    <w n="10" lemma="κεῖμαι">κῖτε</w>
+                    <w n="15" lemma="Βενίγνα">Βενίγνα</w>
+                    <w n="20" lemma="ζάω">ζησάσα</w>
+                    <w n="25" lemma="καλός">καλῶς</w>
+                    <w n="35" lemma="τελευτάω">τελεύτα</w>
+                    <w n="40" lemma="δέ">δὲ</w>
+                    <w n="45" lemma="πρό">πρὸ</w>
+                    <w n="50" lemma="nona">νώνας</w>
+                    <w n="55" lemma="Februarius">Φεβρουαρίας</w>
+                    <w n="60" lemma="ὑπατία">ὑπατίᾳ</w>
+                    <w n="65" lemma="Ταύρος">Ταύρου</w>
+                    <w n="70" lemma="καί">κὲ</w>
+                    <w n="75" lemma="Φήλικος">Φήλικος</w>
+                    <w n="80" lemma="ὁ">τῶν</w>
+                    <w n="85" lemma="λαμπρός">λαμπρότατων</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text after Orsi 1893 and Strazzulla</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text after Orsi 1893 and Strazzulla</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en">
                 <p/>
@@ -187,23 +225,26 @@
                         <date>1893</date>
                         <citedRange>289 no.44</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/V7HNHTAG"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001715">https://biblio.inscriptiones.org/epig10001715</ref>
+                    </bibl>
                     <bibl>
                         <author>Strazzulla</author>
                         <date>1897</date>
                         <citedRange>142 no. 178</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/TUA8RN5S"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001390">https://biblio.inscriptiones.org/epig10001390</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001390">https://biblio.inscriptiones.org/epig10001390</ref>
+                    </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1982-1983</date>
                         <citedRange>18 no. 58</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/Q7DDNWD6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001996">https://biblio.inscriptiones.org/epig10001996</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001996">https://biblio.inscriptiones.org/epig10001996</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion">
-	       <bibl/>
-	   </listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

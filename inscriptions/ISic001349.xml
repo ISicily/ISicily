@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-        	    <respStmt>
-         	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-         	       <resp>standardisation of template and tidying up encoding</resp>
-         	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Epidoc editing and English translation</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VF" ref="https://orcid.org/0000-0001-6302-3726">Victoria Fendel</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -73,12 +83,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -97,10 +107,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">imperial period</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">in vico S. Constantini apud Franciscum Bolani</provenance>
@@ -111,18 +121,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -151,14 +161,16 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-        		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-        	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-11" who="#AA">Epidoc editing and English translation</change>
-	</listChange>
+                <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
+                <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -169,20 +181,40 @@
             <graphic n="print" url="ISic001349.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#AA">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>ἐνθάδε κῖτε <name>Βικ<supplied reason="lost">τωρεῖ</supplied>
-                    <lb n="2" break="no"/>να</name> ζήσασα ἒτη <num value="30"><hi rend="supraline">λ</hi></num> <supplied reason="lost">τελευ</supplied>
-                    <lb n="3" break="no"/>τᾷ τῇ πρὸ <num value="6"><hi rend="supraline">ς</hi></num> <expan><abbr>εἰδ</abbr><ex>ῶν</ex></expan> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="4"/><g ref="#alpha">Α</g> <g ref="#staurogram">⳨</g> <g ref="#omega">Ω</g>
+                    <lb n="1"/><w n="5">ἐνθάδε</w> <w n="10">κῖτε</w> <name><w n="15">Βικ<supplied reason="lost">τωρεῖ</supplied>
+                    <lb n="2" break="no"/>να</w></name> <w n="20">ζήσασα</w> <w n="25">ἒτη</w> <num value="30"><w n="30"><hi rend="supraline">λ</hi></w></num> <w n="35"><supplied reason="lost">τελευ</supplied>
+                    <lb n="3" break="no"/>τᾷ</w> <w n="40">τῇ</w> <w n="45">πρὸ</w> <num value="6"><w n="50"><hi rend="supraline">ς</hi></w></num> <w n="55"><expan><abbr>εἰδ</abbr><ex>ῶν</ex></expan></w> <gap reason="lost" extent="unknown" unit="character" n="60"/>
+                    <lb n="4"/><g ref="#alpha" n="65">Α</g> <g ref="#staurogram" n="70">⳨</g> <g ref="#omega" n="75">Ω</g>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
+                <ab>
+                    <w n="5" lemma="ἐνθάδε">ἐνθάδε</w>
+                    <w n="10" lemma="κεῖμαι">κῖτε</w>
+                    <w n="15" lemma="Βικτωρεῖνα">Βικτωρεῖνα</w>
+                    <w n="20" lemma="ζάω">ζήσασα</w>
+                    <w n="25" lemma="ἔτος">ἒτη</w>
+                    <w n="30" lemma="λ">λ</w>
+                    <w n="35" lemma="τελευτάω">τελευτᾷ</w>
+                    <w n="40" lemma="ὁ">τῇ</w>
+                    <w n="45" lemma="πρό">πρὸ</w>
+                    <w n="50" lemma="ς">ς</w>
+                    <w n="55" lemma="εἰδοί">εἰδῶν</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="60"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text: IG</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text: IG</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#AA">
                 <p>Here lies Biktoreina, having lived for 30 years [...] who died 6 [days] before the Ides [of ...]</p>
@@ -200,21 +232,26 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">530a</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
                         <citedRange>no.40</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIG">
                         <author>Kirchhoff</author>
                         <date>1877</date>
                         <citedRange>9492</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/533T8HNS"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

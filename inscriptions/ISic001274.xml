@@ -38,14 +38,12 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001274</idno>
                 <idno type="DOI" when="2020-12-22">10.5281/zenodo.4385739</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
@@ -64,27 +62,26 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.local" ref="http://www.eagle-network.eu/voc/material/lod/2.html">
-                                        local stone
-                                    </material>
-                                    <dimensions><!--Default values and requires editing-->
+                                <support><p>Described as 'in petra Catanensi' by Gualtherus, but whether this means the local lava stone, or something else is unclear. Described as 'in fornice valvarum', and so some sort of architrave piece (or else simply mounted there subsequently?). No dimensions recorded.</p>
+                                    <material ana="#material.stone" ref="http://www.eagle-network.eu/voc/material/lod/2.html"> stone</material>
+                                    <objectType ana="#object.arch_element.architrave">architrave</objectType>
+                                    <dimensions>
                                         <height unit="cm"/>
                                         <width unit="cm"/>
                                         <depth unit="cm"/>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout><p>Gualtherus' presentation implies the text was partly on a moulding or panel, and partly in a section above.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -103,10 +100,11 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0400" notAfter-custom="-0001">Hellenistic?</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered" notAfter="1624">Reported by Gualtherus in the Loggia of the city, having been found 'ad S. Spiritum, in villa Octavii Ioenii Equitis'; a church of the Holy Spirit was located in the vicinity of the so-called Temple of Ceres, which, in part on the basis of this inscrption, was identified in the vicinity of the Batione degli Infetti, on the NW side of the city, where a substantial walled structure was identified in the 16th century<geo>37.5071946,15.0802665</geo>. Like many inscriptions preserved in the Loggia, it does not seem to have survived the eruption and earthquake of 1669 / 1693.</provenance><!-- location of the walls in Holm's plan / after Carta ARcheological di Catania no.51-->
                         <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -146,7 +144,7 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.dedication #function.building" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html" cert="low">dedication; building</term>
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -160,10 +158,11 @@
 	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-05-21" who="#GC">edited text</change>
+                <change when="2025-12-09" who="#JP">Jonathan Prag revised from publication</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic001274_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -171,27 +170,27 @@
             <graphic n="print" url="ISic001274.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
-            <div type="edition" xml:space="preserve" xml:lang="grc">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#GC" source="https://www.zotero.org/groups/382445/items/Q2SBPG9F">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><orig>K</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/>Δημήτηρ ἡ ἱερ<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="2"/><persName type="divine"><name>Δημήτηρ</name></persName> ἡ <w part="I">ἱερ</w><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of IG</note></app>
+                    <app><note>Text of Gualtherus</note></app>
+                    <app loc="2"><note>Franz suggests: Δήμητρ[ι] ἱερ[όν]</note></app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag. from the arch of a Doric doorway; Has the name Demeter, in dative.--></p>
+                <p>Only seen by Gualtherus, and while Franz' amendment is attractive, it is difficult to see how exactly that is recovered from Gualtherus' transcription. Tortorici suggests that the inscription may not be genuine, a result of antiquarian enthusiasm to attribute the ruins as the temple, although this would be a relatively early date for such invention.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -201,6 +200,27 @@
                         <citedRange>no.31</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/ZP8DE8KS"/>
                     <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
+                    <bibl>
+                        <author>Amico</author>
+                        <date>1741</date>
+                        <citedRange>236</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1769</date>
+                        <citedRange>cl.1, no.20</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/SPTB56H3"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Castelli</author>
+                        <date>1784</date>
+                        <citedRange>cl.1, no.22</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7PSFHSUH"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <author>Kaibel</author>
                         <date>1890</date>
@@ -215,6 +235,12 @@
                         <citedRange>5649e</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/TQMVHEVL"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001250">https://biblio.inscriptiones.org/epig10001250</ref></bibl>
+                    <bibl>
+                        <author>Tortorici</author>
+                        <date>2016</date>
+                        <citedRange>65</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/7VKRCTAP"/>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
