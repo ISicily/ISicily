@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -45,7 +55,7 @@
                         <settlement>Cefalù</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/068">Museo Mandralisca</repository>
                         <!--No inventory number -->
-                    <altIdentifier>
+                        <altIdentifier>
                             <settlement/>
                             <repository/>
                             <idno type="old"/>
@@ -57,7 +67,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A limestone block, consisting part of the marker on the top of an epytymbion type monument, with a missing element on top, perhaps a stylised head.</p>
+                                <support>
+                                    <p>A limestone block, consisting part of the marker on the top of an epytymbion type monument, with a missing element on top, perhaps a stylised head.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.funerary_monument" ref="http://www.eagle-network.eu/voc/objtyp/lod/230.html">funerary monument</objectType>
                                     <dimensions>
@@ -67,12 +78,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -91,10 +102,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462154">Cephaloedium</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462154">Cephaloedium</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525041">Cefalù</placeName>
-                            	<geo>38.03856, 14.02285</geo>
-		</origPlace>
+                                <geo>38.03856, 14.02285</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="-0001" evidence="archaeological-context">1st century BCE (Tullio)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">South-West necropolis, tomb 508</provenance>
@@ -102,22 +113,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">2018-07-06 Prag</provenance>
                         <acquisition/>
                     </history>
-                    </msDesc>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -146,14 +157,16 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-03-05" who="#JP">Jonathan Prag revised file from photographs and added images</change>
-	</listChange>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -170,7 +183,7 @@
             <graphic n="print" url="ISic002951_copy1.jpg" height="3680px" width="5520px">
                 <desc>Photo J. Prag, courtesy Museo Mandralisca</desc>
             </graphic>
-           <graphic n="screen" url="ISic002951_l3q_tiled.tif" height="3178px" width="3480px">
+            <graphic n="screen" url="ISic002951_l3q_tiled.tif" height="3178px" width="3480px">
                 <desc>Photo J. Prag, courtesy Museo Mandralisca</desc>
             </graphic>
             <graphic n="print" url="ISic002951_l3q.jpg" height="3178px" width="3480px">
@@ -182,16 +195,31 @@
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>Πομπήϊα
-                    <lb n="2"/>Ῥοῦφου Μέγα
-                    <lb n="3"/>Μεγάλαι χαῖρε
+                    <lb n="1"/><w n="5">Πομπήϊα</w>
+                    <lb n="2"/><name><w n="10">Ῥοῦφου</w></name> <name><w n="15">Μέγα</w></name>
+                    <lb n="3"/><name><w n="20">Μεγάλαι</w></name> <w n="25">χαῖρε</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Πομπήϊα">Πομπήϊα</w>
+                    <w n="10" lemma="Ῥοῦφος">Ῥοῦφου</w>
+                    <w n="15" lemma="Μέγας">Μέγα</w>
+                    <w n="20" lemma="Μεγάλη">Μεγάλαι</w>
+                    <w n="25" lemma="χαίρω">χαῖρε</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app><note>Text of Tullio</note></app>
-                    <app loc="2"><note>Brugnone: Ρούφου Μέγα χαῖρε (typographic mistake?)</note></app>
-                    <app loc="3"><note>Brugnone: Μέγα χαῖρε; letters between Μέγα and χαῖρε are difficult to discern without further autopsy</note></app>
+                    <app>
+                        <note>Text of Tullio</note>
+                    </app>
+                    <app loc="2">
+                        <note>Brugnone: Ρούφου Μέγα χαῖρε (typographic mistake?)</note>
+                    </app>
+                    <app loc="3">
+                        <note>Brugnone: Μέγα χαῖρε; letters between Μέγα and χαῖρε are difficult to discern without further autopsy</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -206,46 +234,56 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>2009.0442</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>57.0877</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>42.0849b</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Tullio</author>
                         <date>1988-1989</date>
                         <citedRange>680 tav. 114.1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/82IWAJBA"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001551">https://biblio.inscriptiones.org/epig10001551</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001551">https://biblio.inscriptiones.org/epig10001551</ref>
+                    </bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1995-1996</date>
                         <citedRange>105</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/SPPJMW9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001508">https://biblio.inscriptiones.org/epig10001508</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001508">https://biblio.inscriptiones.org/epig10001508</ref>
+                    </bibl>
                     <bibl>
                         <author>Tullio</author>
                         <date>1993</date>
                         <citedRange>241</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RQWVBFIV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001549">https://biblio.inscriptiones.org/epig10001549</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001549">https://biblio.inscriptiones.org/epig10001549</ref>
+                    </bibl>
                     <bibl>
                         <author>Brugnone</author>
                         <date>2005</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZDDSRBHN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002116">https://biblio.inscriptiones.org/epig10002116</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002116">https://biblio.inscriptiones.org/epig10002116</ref>
+                    </bibl>
                     <bibl>
                         <author>Tullio</author>
                         <date>2005</date>
                         <citedRange>845-847 fig. 12-14</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ASI7X2QE"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001546">https://biblio.inscriptiones.org/epig10001546</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001546">https://biblio.inscriptiones.org/epig10001546</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

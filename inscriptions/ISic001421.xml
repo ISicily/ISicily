@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,14 +24,22 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-                <respStmt> 
-                    <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
-                    <resp>named entity annotation</resp> 
-                </respStmt> 
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -77,12 +87,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -101,12 +111,12 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462269">Kasmenai</placeName>		
-                                <offset>near
-                                    <placeName type="modern" ref="http://sws.geonames.org/2525010">Chiaramonte Gulfi</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462269">Kasmenai</placeName>
+                                <offset>
+                                    near<placeName type="modern" ref="http://sws.geonames.org/2525010">Chiaramonte Gulfi</placeName>
                                 </offset>
-                            	<geo>37.0771, 14.8320</geo>
-		</origPlace>
+                                <geo>37.0771, 14.8320</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0600" notAfter-custom="-0501">6th century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Monte Casale</provenance>
@@ -114,23 +124,22 @@
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,15 +168,17 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-09-20" who="#VM">edit text, add metadata, bibliography</change>
-                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
-	</listChange>
+                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -178,22 +189,46 @@
             <graphic n="print" url="ISic001421.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name><unclear>Κ</unclear>αλικράτε̄ς</name> καλὸ<unclear>ς</unclear> <supplied reason="lost">ὁ</supplied> <persName type="attested"><name type="patronym"><unclear>Κ</unclear><supplied reason="lost" cert="low">ρα</supplied>σίπου</name></persName></persName> καὶ <persName type="attested"><name>Λο̄σαις</name> <persName type="attested"><name>Ἀμουνφί
-                    <lb n="2" break="no"/>ο̄<unclear>ν</unclear>ος</name></persName></persName> τοκε͂ς ͱοί κ’ ἔλαβον χο̄́ρε̄<supplied reason="lost">ν</supplied> ͱο͂ι ͱο̄ς μνε̄́μα μεῖν
-                    <lb n="3" break="no"/>αι καὶ ͱο̄ς
+                    <lb n="1"/><persName type="attested"><name><w n="5"><unclear>Κ</unclear>αλικράτε̄ς</w></name> <w n="10">καλὸ<unclear>ς</unclear></w> <w n="15"><supplied reason="lost">ὁ</supplied></w> <persName type="attested"><name type="patronym"><w n="20"><unclear>Κ</unclear><supplied reason="lost" cert="low">ρα</supplied>σίπου</w></name></persName></persName> <w n="25">καὶ</w> <persName type="attested"><name><w n="30">Λο̄σαις</w></name> <persName type="attested"><name><w n="35">Ἀμουνφί
+                    <lb n="2" break="no"/>ο̄<unclear>ν</unclear>ος</w></name></persName></persName> <w n="40">τοκε͂ς</w> <w n="45">ͱοί</w> <w n="50">κ’</w> <w n="55">ἔλαβον</w> <w n="60">χο̄́ρε̄<supplied reason="lost">ν</supplied></w> <w n="65">ͱο͂ι</w> <w n="70">ͱο̄ς</w> <w n="75">μνε̄́μα</w> <w n="80">μεῖν
+                    <lb n="3" break="no"/>αι</w> <w n="85">καὶ</w> <w n="90">ͱο̄ς</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Καλικράτης">Καλικράτε̄ς</w>
+                    <w n="10" lemma="καλός">καλὸς</w>
+                    <w n="15" lemma="ὁ">ὁ</w>
+                    <w n="20" lemma="Κράσιπος">Κρασίπου</w>
+                    <w n="25" lemma="καί">καὶ</w>
+                    <w n="30" lemma="Λο̄σαίς">Λο̄σαις</w>
+                    <w n="35" lemma="Ἀμουνφίων">Ἀμουνφίο̄νος</w>
+                    <w n="40" lemma="τοκεύς">τοκε͂ς</w>
+                    <w n="45" lemma="ὅς">ͱοί</w>
+                    <w n="50" lemma="ἄν">κ’</w>
+                    <w n="55" lemma="λαμβάνω">ἔλαβον</w>
+                    <w n="60" lemma="χωρέω">χο̄́ρε̄ν</w>
+                    <w n="65" lemma="ὅς">ͱο͂ι</w>
+                    <w n="70" lemma="ὥς">ͱο̄ς</w>
+                    <w n="75" lemma="μνῆμα">μνε̄́μα</w>
+                    <w n="80" lemma="μένω">μεῖναι</w>
+                    <w n="85" lemma="καί">καὶ</w>
+                    <w n="90" lemma="ὥς">ͱο̄ς</w>
                 </ab>
             </div>
             <div type="apparatus">
                 <p>After Manganaro 1996</p>
             </div>
             <app loc="1">
-                <note>Jeffery Archive: Καλικράτε̄ς καλὸ<unclear>ς</unclear> ͱο το [καλ]ίπου νοθος Ἀισα Μουνφί</note>
+                <note>
+                    Jeffery Archive: Καλικράτε̄ς καλὸ<unclear>ς</unclear>ͱο το [καλ]ίπου νοθος Ἀισα Μουνφί
+                </note>
             </app>
             <app loc="2">
                 <note>Jeffery Archive: με[λ]εν αμεινο</note>
@@ -215,57 +250,69 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>46.1260.2</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>43.0633</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1997.0723</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
+                    </bibl>
                     <bibl type="bulletin" n="BE">
                         <citedRange>1967.0709</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
+                    </bibl>
                     <bibl type="archive">
                         <author>Jeffery</author>
                         <citedRange>J.WC.Kamar.15b.p.01(2)-02(2)</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/ASS38955"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002295">https://biblio.inscriptiones.org/epig10002295</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002295">https://biblio.inscriptiones.org/epig10002295</ref>
+                    </bibl>
                     <bibl n="LSAG[2]">
                         <author>Jeffery, Johnston</author>
                         <date>1990</date>
                         <citedRange>459 no.15b</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/V6CGSWPS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGDS1">
-                         <author>Dubois</author>
-                         <date>1989</date> 
+                        <author>Dubois</author>
+                        <date>1989</date>
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">104</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1965</date>
                         <citedRange>193-194 tav.68.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RGTHAFKT"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001841">https://biblio.inscriptiones.org/epig10001841</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001841">https://biblio.inscriptiones.org/epig10001841</ref>
+                    </bibl>
                     <bibl>
                         <author>Curbera</author>
                         <date>1993</date>
                         <ptr target="https://www.zotero.org/groups/382445/items/Z7SMXPNX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001490">https://biblio.inscriptiones.org/epig10001490</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001490">https://biblio.inscriptiones.org/epig10001490</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1996</date>
                         <citedRange>60-63 no.13 fig. 24-26</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FGU3JFCM"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001817">https://biblio.inscriptiones.org/epig10001817</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001817">https://biblio.inscriptiones.org/epig10001817</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

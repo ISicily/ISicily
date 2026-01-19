@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -73,12 +83,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -97,10 +107,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500">4th — 5th century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1900-02">Excavated in February 1900 from Hypogeum XI, Capuccini catacombs</provenance>
@@ -112,18 +122,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -151,16 +161,18 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                            <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	   <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		  <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	               <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-            	   <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                            <change when="2021-01-21" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-01-21" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
                 <change when="2021-08-05" who="#JP">Jonathan Prag updated provenance and repository information</change>
-	</listChange>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -171,17 +183,35 @@
             <graphic n="print" url="ISic003418.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/>Εἰρῆνα Νύμφη
-                    <lb n="2"/>ὧδε κεῖται
-                    <lb n="3"/>κατὰ τοῦ μυστηρί
-                    <lb n="4" break="no"/>ου οὖν τούτου μη
-                    <lb n="5" break="no"/><choice><reg>δεὶ</reg><orig>τὶ</orig></choice>ς ὧδε ἀν<choice><reg>οί</reg><orig>ύ</orig></choice>ξη
+                    <lb n="1"/><w n="5">Εἰρῆνα</w> <name><w n="10">Νύμφη</w></name>
+                    <lb n="2"/><w n="15">ὧδε</w> <w n="20">κεῖται</w>
+                    <lb n="3"/><w n="25">κατὰ</w> <w n="30">τοῦ</w> <w n="35">μυστηρί
+                    <lb n="4" break="no"/>ου</w> <w n="40">οὖν</w> <w n="45">τούτου</w> <w n="50">μη
+                    <lb n="5" break="no"/><choice><reg>δεὶ</reg><orig n="55">τὶ</orig></choice>ς</w> <w n="60">ὧδε</w> <w n="65">ἀν<choice><reg>οί</reg><orig n="70">ύ</orig></choice>ξη</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Εἰρήνη">Εἰρῆνα</w>
+                    <w n="10" lemma="Νύμφη">Νύμφη</w>
+                    <w n="15" lemma="ὧδε">ὧδε</w>
+                    <w n="20" lemma="κεῖμαι">κεῖται</w>
+                    <w n="25" lemma="κατά">κατὰ</w>
+                    <w n="30" lemma="ὁ">τοῦ</w>
+                    <w n="35" lemma="μυστήριον">μυστηρίου</w>
+                    <w n="40" lemma="οὖν">οὖν</w>
+                    <w n="45" lemma="οὗτος">τούτου</w>
+                    <w n="50" lemma="μηδείς">μηδεὶς</w>
+                    <orig n="55"/>
+                    <w n="60" lemma="ὧδε">ὧδε</w>
+                    <w n="65" lemma="ἀνοίγνυμι">ἀνοίξη</w>
+                    <orig n="70"/>
                 </ab>
             </div>
             <div type="apparatus">
@@ -205,31 +235,38 @@
                         <date>1993</date>
                         <citedRange>no.151</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/IBA4JMAN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000166">https://biblio.inscriptiones.org/epig10000166</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000166">https://biblio.inscriptiones.org/epig10000166</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIJ">
                         <citedRange>1.651</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ACIZXQF2"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000582">https://biblio.inscriptiones.org/epig10000582</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000582">https://biblio.inscriptiones.org/epig10000582</ref>
+                    </bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>1900</date>
                         <citedRange>194-197</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GFSK4HM3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001706">https://biblio.inscriptiones.org/epig10001706</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001706">https://biblio.inscriptiones.org/epig10001706</ref>
+                    </bibl>
                     <bibl>
                         <author>Feissel</author>
                         <date>1981</date>
                         <citedRange>486</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/AWUTDEHF"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002010">https://biblio.inscriptiones.org/epig10002010</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002010">https://biblio.inscriptiones.org/epig10002010</ref>
+                    </bibl>
                     <bibl>
                         <author>Robert</author>
                         <date>1946</date>
                         <citedRange>98</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F2GXFXKN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001624">https://biblio.inscriptiones.org/epig10001624</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001624">https://biblio.inscriptiones.org/epig10001624</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,7 +68,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Marble plauqe, broken vertically in two and reconnected. The upper and lower left corners are lost, and the text is damaged across the break.</p>
+                                <support>
+                                    <p>Marble plauqe, broken vertically in two and reconnected. The upper and lower left corners are lost, and the text is damaged across the break.</p>
                                     <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
@@ -68,16 +79,18 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete.broken"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Text is centred with both margins justified, and filling the available surface.</p>
+                                <layout>
+                                    <p>Text is centred with both margins justified, and filling the available surface.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.deteriorated"/>
-			</layout>
+                                    <damage ana="#text_condition.deteriorated"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>somewhat crudely and irregularly cut letters of regular height. Lunate eipsilon and sigma, cursive omega and mu; extensive use of simple hederae for word division.</p>
+                            <handNote>
+                                <p>somewhat crudely and irregularly cut letters of regular height. Lunate eipsilon and sigma, cursive omega and mu; extensive use of simple hederae for word division.</p>
                                 <locus from="line1" to="line5">Line 1-5</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="17" atMost="17">17</height>
@@ -92,10 +105,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462538">Messana</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462538">Messana</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524170">Messina</placeName>
-                            	<geo>38.19394, 15.55256</geo>
-		</origPlace>
+                                <geo>38.19394, 15.55256</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">1st — 3rd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Necropolis at the Orti della Maddalena</provenance>
@@ -106,18 +119,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -146,14 +159,16 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-08-16" who="#JP">Jonathan Prag edited file from earlier editions</change>
-	</listChange>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -164,21 +179,46 @@
             <graphic n="print" url="ISic003529.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan> <space unit="character" quantity="3"/> <expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan>
-                    <lb n="2"/><expan><abbr>Κλ</abbr><ex>ωδία</ex></expan> <g ref="#ivy-leaf">❦</g> Ῥωμα<hi rend="ligature">ντ</hi>ίλ
-                    <lb n="3" break="no"/>λα <g ref="#ivy-leaf">❦</g> <expan><abbr>ἔζ</abbr><ex>ησεν</ex></expan> <g ref="#ivy-leaf">❦</g> <expan><abbr>ἔτ</abbr><ex>η</ex></expan> <g ref="#ivy-leaf">❦</g> <num value="4">δ</num> <g ref="#ivy-leaf">❦</g> <expan><abbr>μ</abbr><ex>ῆνας</ex></expan> <g ref="#ivy-leaf">❦</g> <num value="8">η</num>
-                    <lb n="4"/><expan><abbr>ἡμ</abbr><ex>έρας</ex></expan> <g ref="#ivy-leaf">❦</g> <num value="14">ιδ</num> <g ref="#ivy-leaf">❦</g> <expan><abbr>Κλ</abbr><ex>ώδιος</ex></expan> <g ref="#ivy-leaf">❦</g> Θησ
-                    <lb n="5" break="no"/>εὺς <g ref="#ivy-leaf">❦</g> π<supplied reason="lost">ατ</supplied><hi rend="ligature">ὴρ</hi> <g ref="#ivy-leaf">❦</g> <expan><abbr>τέκ</abbr><ex>νῳ</ex></expan> <g ref="#ivy-leaf">❦</g> <expan><abbr>γλυκυτ</abbr><ex>άτῳ</ex></expan>
+                    <lb n="1"/><w n="5"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <space unit="character" quantity="3" n="10"/> <name><w n="15"><expan><abbr>Κ</abbr><ex>αταχθονίοις</ex></expan></w></name>
+                    <lb n="2"/><name><w n="20"><expan><abbr>Κλ</abbr><ex>ωδία</ex></expan></w></name> <g ref="#ivy-leaf" n="25">❦</g> <name><w n="30">Ῥωμα<hi rend="ligature">ντ</hi>ίλ
+                    <lb n="3" break="no"/>λα</w></name> <g ref="#ivy-leaf" n="35">❦</g> <w n="40"><expan><abbr>ἔζ</abbr><ex>ησεν</ex></expan></w> <g ref="#ivy-leaf" n="45">❦</g> <w n="50"><expan><abbr>ἔτ</abbr><ex>η</ex></expan></w> <g ref="#ivy-leaf" n="55">❦</g> <num value="4"><w n="60">δ</w></num> <g ref="#ivy-leaf" n="65">❦</g> <w n="70"><expan><abbr>μ</abbr><ex>ῆνας</ex></expan></w> <g ref="#ivy-leaf" n="75">❦</g> <num value="8"><w n="80">η</w></num>
+                    <lb n="4"/><w n="85"><expan><abbr>ἡμ</abbr><ex>έρας</ex></expan></w> <g ref="#ivy-leaf" n="90">❦</g> <num value="14"><w n="95">ιδ</w></num> <g ref="#ivy-leaf" n="100">❦</g> <name><w n="105"><expan><abbr>Κλ</abbr><ex>ώδιος</ex></expan></w></name> <g ref="#ivy-leaf" n="110">❦</g> <name><w n="115">Θησ
+                    <lb n="5" break="no"/>εὺς</w></name> <g ref="#ivy-leaf" n="120">❦</g> <w n="125">π<supplied reason="lost">ατ</supplied><hi rend="ligature">ὴρ</hi></w> <g ref="#ivy-leaf" n="130">❦</g> <w n="135"><expan><abbr>τέκ</abbr><ex>νῳ</ex></expan></w> <g ref="#ivy-leaf" n="140">❦</g> <w n="145"><expan><abbr>γλυκυτ</abbr><ex>άτῳ</ex></expan></w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="θεός">Θεοῖς</w>
+                    <space unit="character" quantity="3" n="10"/>
+                    <w n="15" lemma="Καταχθονίοις">Καταχθονίοις</w>
+                    <w n="20" lemma="Κλωδία">Κλωδία</w>
+                    <w n="30" lemma="Ῥωμαντίλλα">Ῥωμαντίλλα</w>
+                    <w n="40" lemma="ζῶ">ἔζησεν</w>
+                    <w n="50" lemma="ἔτος">ἔτη</w>
+                    <w n="60" lemma="δ">δ</w>
+                    <w n="70" lemma="μείς">μῆνας</w>
+                    <w n="80" lemma="η">η</w>
+                    <w n="85" lemma="ἡμέρα">ἡμέρας</w>
+                    <w n="95" lemma="ιδ">ιδ</w>
+                    <w n="105" lemma="Κλώδιος">Κλώδιος</w>
+                    <w n="115" lemma="Θησεύς">Θησεὺς</w>
+                    <w n="125" lemma="πατήρ">πατὴρ</w>
+                    <w n="135" lemma="τέκνον">τέκνῳ</w>
+                    <w n="145" lemma="γλυκύς">γλυκυτάτῳ</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text after Bitto and Griffo</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text after Bitto and Griffo</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -191,32 +231,39 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>2005.0669</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl type="bulletin" n="SEG">
                         <citedRange>55.1013bis</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="corpus" n="IMusMessina">
-                         <author>Bitto</author>
-                         <date>2001</date> 
+                        <author>Bitto</author>
+                        <date>2001</date>
                         <citedRange>20</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/M9HMEP2R"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000029">https://biblio.inscriptiones.org/epig10000029</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000029">https://biblio.inscriptiones.org/epig10000029</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Griffo</author>
                         <title>NSA</title>
                         <date>1942</date>
                         <citedRange>83 no.4 fig.22</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Solin</author>
                         <date>2005</date>
                         <citedRange>180</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2UJHZZXJ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001423">https://biblio.inscriptiones.org/epig10001423</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001423">https://biblio.inscriptiones.org/epig10001423</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,10 +24,18 @@
                     <name xml:id="AL" ref="https://orcid.org/0000-0002-0000-7611">Andoni Llamazares</name>
                     <resp>text edition</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -74,16 +84,17 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Note the epsilon in style of four-bar sigma with extended middle bar</p>
+                            <handNote>
+                                <p>Note the epsilon in style of four-bar sigma with extended middle bar</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -98,33 +109,33 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462283">Lipara</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524378">Lipari</placeName>
-                            	<geo>38.48333, 14.93333</geo>
-		</origPlace>
+                                <geo>38.48333, 14.93333</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200" evidence="lettering nomenclature">2nd century CE (Ferrua)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1928">Found by Orsi in 1928 in contr. Diana, reused as cover of t.14</provenance>
                         <provenance type="transferred" when="1960">transferred from Museo Archeologico Regionale Paolo Orsi in 1960</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
-                    </history>                    
+                    </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -153,13 +164,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-07-19" who="#AL">Andoni Llamazares added text edition</change>
-	</listChange>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -170,22 +183,33 @@
             <graphic n="print" url="ISic001504.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AL">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name type="praenomen">Κύϊντος</name>
-                    <lb n="2"/><name type="nomen">Βαλέριος</name> <name type="cognomen">Νί
-                    <lb n="3" break="no"/>γερ</name> <persName type="attested"><name type="patronym">Ἀρτεμι
-                    <lb n="4" break="no"/>σίου</name></persName> <w>υ
+                    <lb n="1"/><persName type="attested"><name type="praenomen"><w n="5">Κύϊντος</w></name>
+                    <lb n="2"/><name type="nomen"><w n="10">Βαλέριος</w></name> <name type="cognomen"><w n="15">Νί
+                    <lb n="3" break="no"/>γερ</w></name> <persName type="attested"><name type="patronym"><w n="20">Ἀρτεμι
+                    <lb n="4" break="no"/>σίου</w></name></persName> <w n="25">υ
                     <lb n="5" break="no"/>ἱός</w></persName>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Κύϊντος">Κύϊντος</w>
+                    <w n="10" lemma="Βαλέριος">Βαλέριος</w>
+                    <w n="15" lemma="Νίγερ">Νίγερ</w>
+                    <w n="20" lemma="Ἀρτεμίσιος">Ἀρτεμισίου</w>
+                    <w n="25" lemma="υἱός">υἱός</w>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>text according to I.Lipara</note></app>
+                    <app>
+                        <note>text according to I.Lipara</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -198,28 +222,33 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="ILipara">
-                          <author>Bernabó-Brea</author>
-                          <author>Cavalier</author>
-                          <author>Campagna</author>
-                          <date>2003</date> 
+                        <author>Bernabó-Brea</author>
+                        <author>Cavalier</author>
+                        <author>Campagna</author>
+                        <date>2003</date>
                         <citedRange>718</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VDAQH5D2"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000541">https://biblio.inscriptiones.org/epig10000541</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Orsi</author>
                         <title>NSA</title>
                         <date>1929</date>
                         <citedRange>71 fig.30</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Ferrua</author>
                         <date>1941</date>
                         <citedRange>270 no.45</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/P7QQ9SB6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002655">https://biblio.inscriptiones.org/epig10002655</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002655">https://biblio.inscriptiones.org/epig10002655</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
