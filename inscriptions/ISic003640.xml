@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,7 +68,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A stele in the form of a 'horned' altar, in local limestone. The lefthand horn is slightly damaged. The upper part of the face is deocrated with a series of five incised horizontal lines to imitate mouldings. The space between the top two of these is decorated by a broad incised zig-zig. Most of the face is left plain and roughly finished/smoothed, to be occupied by the inscription. There is a projection at the base, partly damaged.</p>
+                                <support>
+                                    <p>A stele in the form of a 'horned' altar, in local limestone. The lefthand horn is slightly damaged. The upper part of the face is deocrated with a series of five incised horizontal lines to imitate mouldings. The space between the top two of these is decorated by a broad incised zig-zig. Most of the face is left plain and roughly finished/smoothed, to be occupied by the inscription. There is a projection at the base, partly damaged.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
                                     <dimensions><!--Manganaro-->
@@ -68,16 +79,18 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Text on the upper half of the front face, filling the available width, below two large hederae.</p>
+                                <layout>
+                                    <p>Text on the upper half of the front face, filling the available width, below two large hederae.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Alpha with straight bar; lunate epsilon and sigma; uncial mu and omega; rhomboid omicron, theta and phi.</p>
+                            <handNote>
+                                <p>Alpha with straight bar; lunate epsilon and sigma; uncial mu and omega; rhomboid omicron, theta and phi.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -93,31 +106,31 @@
                         <origin>
                             <origPlace>
                                 <placeName type="ancient"/>
-                                <placeName type="modern" ref="http://sws.geonames.org/2524493">Ispica</placeName>		
-                            	<geo>36.78622, 14.9053</geo>
-		</origPlace>
+                                <placeName type="modern" ref="http://sws.geonames.org/2524493">Ispica</placeName>
+                                <geo>36.78622, 14.9053</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0300" evidence="lettering">2nd — 3rd century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Contrada Carrubba (<geo>36.760765, 14.965952</geo>), proprieta Fidelio, at km 8 on the Ispica-Pachino road</provenance><!-- km 8 on the road is 36.741943, 14.985649 -->
-<provenance type="observed" subtype="autopsied">none, but seen on display (on the stairs) in the museum, 2015.01.13.</provenance>
+                        <provenance type="observed" subtype="autopsied">none, but seen on display (on the stairs) in the museum, 2015.01.13.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -146,15 +159,17 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2023-02-06" who="#JP">Jonathan Prag edited draft edition from publication</change>
                 <change when="2025-12-10" who="#JP">Jonathan Prag revised from photograph</change>
-	</listChange>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -165,30 +180,56 @@
             <graphic n="print" url="ISic003640.jpg" height="5520px" width="3680px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-13</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="#JP">
                 <ab>
-                    <lb n="1"/>Γονεῦσιν γλυκυ
-                    <lb n="2" break="no"/>τάτοις ζησάντοις
-                    <lb n="3"/>ἀμέμπτως πρὸς
-                    <lb n="4"/>πάντας φίλους ἐπό
-                    <lb n="5" break="no"/>ησεν <persName type="attested"><name>Τρυφέρα</name></persName> θυγά
-                    <lb n="6" break="no"/>τηρ ζήσαντι <persName type="attested"><name>Ἐλπι
-                    <lb n="7" break="no"/>δηφόρῳ</name></persName> <space unit="character" quantity="1"/> ἔτη <g ref="#ivy-leaf">❦</g><num value="85">πε</num> <g ref="#ivy-leaf">❦</g>
-                    <lb n="8"/><persName type="attested"><name>Νίκῃ</name></persName> ἔτη <g ref="#ivy-leaf">❦</g> <num value="80">π</num> <g ref="#ivy-leaf">❦</g>
+                    <lb n="1"/><w n="5">Γονεῦσιν</w> <w n="10">γλυκυ
+                    <lb n="2" break="no"/>τάτοις</w> <w n="15">ζησάντοις</w>
+                    <lb n="3"/><w n="20">ἀμέμπτως</w> <w n="25">πρὸς</w>
+                    <lb n="4"/><w n="30">πάντας</w> <w n="35">φίλους</w> <w n="40">ἐπό
+                    <lb n="5" break="no"/>ησεν</w> <persName type="attested"><name><w n="45">Τρυφέρα</w></name></persName> <w n="50">θυγά
+                    <lb n="6" break="no"/>τηρ</w> <w n="55">ζήσαντι</w> <persName type="attested"><name><w n="60">Ἐλπι
+                    <lb n="7" break="no"/>δηφόρῳ</w></name></persName> <space unit="character" quantity="1" n="65"/> <w n="70">ἔτη</w> <g ref="#ivy-leaf" n="75">❦</g> <num value="85"><w n="80">πε</w></num> <g ref="#ivy-leaf" n="85">❦</g>
+                    <lb n="8"/><persName type="attested"><name><w n="90">Νίκῃ</w></name></persName> <w n="95">ἔτη</w> <g ref="#ivy-leaf" n="100">❦</g> <num value="80"><w n="105">π</w></num> <g ref="#ivy-leaf" n="110">❦</g>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="γονεύς">Γονεῦσιν</w>
+                    <w n="10" lemma="γλυκύς">γλυκυτάτοις</w>
+                    <w n="15" lemma="ζῶ">ζησάντοις</w>
+                    <w n="20" lemma="ἄμεμπτος">ἀμέμπτως</w>
+                    <w n="25" lemma="πρός">πρὸς</w>
+                    <w n="30" lemma="πᾶς">πάντας</w>
+                    <w n="35" lemma="φίλος">φίλους</w>
+                    <w n="40" lemma="ποιέω">ἐπόησεν</w>
+                    <w n="45" lemma="Τρυφέρα">Τρυφέρα</w>
+                    <w n="50" lemma="θυγάτηρ">θυγάτηρ</w>
+                    <w n="55" lemma="ζῶ">ζήσαντι</w>
+                    <w n="60" lemma="Ἐλπιδήφορος">Ἐλπιδηφόρῳ</w>
+                    <space unit="character" quantity="1" n="65"/>
+                    <w n="70" lemma="ἔτος">ἔτη</w>
+                    <w n="80" lemma="πε">πε</w>
+                    <w n="90" lemma="Νίκη">Νίκῃ</w>
+                    <w n="95" lemma="ἔτος">ἔτη</w>
+                    <w n="105" lemma="π">π</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text based upon photograph</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text based upon photograph</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>For my dearest parents, who lived blamelessly towards all their friends. Tryphe, their daughter, made it, for Elpidephoros, who lived 85 years, and Nike who lived for 80 years.</p>
             </div>
             <div type="commentary">
-                <p></p>
+                <p/>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -197,9 +238,12 @@
                         <date>1965</date>
                         <citedRange>199 tav.70.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RGTHAFKT"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001841">https://biblio.inscriptiones.org/epig10001841</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001841">https://biblio.inscriptiones.org/epig10001841</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
