@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -62,7 +72,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>A funerary altar, somewhat eroded on all faces. Quadrangular in form, with triple moulding at the top of the main block, surmounted by scrolls on each side with a central horn, and a raised square block on the upper surface behind the horn. The front face of the altar has relief designs on the lower half, which may relate to milling, and a relief form of a tabula ansata on the upper part, which contains a Greek funerary inscription. The right side carries further relief designs showing tools associated with crafts.</p>
+                                <support>
+                                    <p>A funerary altar, somewhat eroded on all faces. Quadrangular in form, with triple moulding at the top of the main block, surmounted by scrolls on each side with a central horn, and a raised square block on the upper surface behind the horn. The front face of the altar has relief designs on the lower half, which may relate to milling, and a relief form of a tabula ansata on the upper part, which contains a Greek funerary inscription. The right side carries further relief designs showing tools associated with crafts.</p>
                                     <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar</objectType>
                                     <dimensions><!-- Orsi's measurements -->
@@ -72,16 +83,18 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>The text is set out within a tabula ansata, 26 cm x 18 cm, and heavily eroded, over four lines</p>
+                                <layout>
+                                    <p>The text is set out within a tabula ansata, 26 cm x 18 cm, and heavily eroded, over four lines</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.deteriorated"/>
-			</layout>
+                                    <damage ana="#text_condition.deteriorated"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Lunate sigma and epsilon, but little detail is visible.</p><!-- measurement of Rizzone -->
+                            <handNote>
+                                <p>Lunate sigma and epsilon, but little detail is visible.</p><!-- measurement of Rizzone -->
                                 <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="20" atMost="20">20</height>
@@ -96,10 +109,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462307">Megara Hyblaea</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462307">Megara Hyblaea</placeName>
                                 <placeName type="modern" ref="https://sws.geonames.org/2523679/">Priolo Gargallo</placeName>
                                 <geo>37.20380,15.18274</geo>
-		</origPlace><!-- nearest ancient and modern sites -->
+                            </origPlace><!-- nearest ancient and modern sites -->
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300" cert="low">Imperial</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Recovered on the line of the railway, approx. 2.5km north of Priolo Gargallo, near the southern edge of Megara Hyblaea (so Orsi)<geo cert="medium">37.181889, 15.187915</geo></provenance><!-- geo is point approx 2.5km north of Priolo station -->
@@ -107,22 +120,22 @@
                         <provenance type="observed" subtype="autopsied" resp="#JP">Prag, preliminary autopsy 2013.10.03</provenance>
                         <acquisition/>
                     </history>
-                    </msDesc>
+                </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -150,15 +163,17 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	   <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-                    <change when="2021-01-20" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-20" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-02" who="#JP">Jonathan Prag revised edition from autopsy/photographs/editions</change>
-	</listChange>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -182,15 +197,28 @@
                 <desc>Photo J. Prag (2013), Aut. Assessorato Beni Culturali Regione Siciliana n.10681 del 06/05/2014</desc>
             </graphic>
         </surface>
-        </facsimile>
+    </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/>Εὐτυχής <choice><orig>χρησσ
-                    <lb n="2" break="no"/>τὸς</orig><reg>χρηστὸς</reg></choice>  καὶ ἂμ
-                    <lb n="3" break="no"/>εμπτος <choice><orig>χε͂ρ
-                    <lb n="4" break="no"/>ε</orig><reg>χαῖρε</reg></choice> ἔζησε ἔτη <num value="30">λ</num>
+                    <lb n="1"/><w n="5">Εὐτυχής</w> <w n="10"><choice><orig>χρησσ
+                    <lb n="2" break="no"/>τὸς</orig><reg>χρηστὸς</reg></choice></w> <w n="20">καὶ</w> <w n="25">ἂμ
+                    <lb n="3" break="no"/>εμπτος</w> <w n="30"><choice><orig>χε͂ρ
+                    <lb n="4" break="no"/>ε</orig><reg>χαῖρε</reg></choice></w> <w n="40">ἔζησε</w> <w n="45">ἔτη</w> <num value="30"><w n="50">λ</w></num>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Εὐτυχής">Εὐτυχής</w>
+                    <w n="10" lemma="χρηστός">χρησστὸς</w>
+                    <orig n="15"/>
+                    <w n="20" lemma="καί">καὶ</w>
+                    <w n="25" lemma="ἄμεμπτος">ἂμεμπτος</w>
+                    <w n="30" lemma="χαίρω">χε͂ρε</w>
+                    <w n="40" lemma="ζῶ">ἔζησε</w>
+                    <w n="45" lemma="ἔτος">ἔτη</w>
+                    <w n="50" lemma="λ">λ</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
@@ -198,7 +226,7 @@
                     <app>
                         <note>Text after Manganaro 1962</note>
                     </app>
-                    </listApp>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#JP">
                 <p>Eutyches, worthy and blameless, farewell! He lived 30 years.&gt;</p>
@@ -212,52 +240,62 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>57.0895.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl>
                         <author>Orsi</author>
                         <date>2018</date>
                         <citedRange>Tacc. 2, p. 131</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/RGRSRUHK"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002617">https://biblio.inscriptiones.org/epig10002617</ref>
+                    </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Orsi</author>
                         <title>NSA</title>
                         <date>1891</date>
                         <citedRange>359</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                    </bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1929</date>
                         <citedRange>124</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/AHZ3TB5P"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001872">https://biblio.inscriptiones.org/epig10001872</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001872">https://biblio.inscriptiones.org/epig10001872</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1962</date>
                         <citedRange>499 fig.7-8</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q7KT855P"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001851">https://biblio.inscriptiones.org/epig10001851</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001851">https://biblio.inscriptiones.org/epig10001851</ref>
+                    </bibl>
                     <bibl>
                         <author>Sirena</author>
                         <date>2011</date>
                         <citedRange>91 fig.112</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/327AAMAH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001578">https://biblio.inscriptiones.org/epig10001578</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001578">https://biblio.inscriptiones.org/epig10001578</ref>
+                    </bibl>
                     <bibl>
                         <author>Bommara and Rizzone</author>
                         <date>2007</date>
                         <citedRange>1654</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VU6FA6Q3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002134">https://biblio.inscriptiones.org/epig10002134</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002134">https://biblio.inscriptiones.org/epig10002134</ref>
+                    </bibl>
                     <bibl>
                         <author>Rizzone</author>
                         <date>2014-2015</date>
                         <citedRange>58 no.28</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/6S5HVU2E"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001627">https://biblio.inscriptiones.org/epig10001627</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001627">https://biblio.inscriptiones.org/epig10001627</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

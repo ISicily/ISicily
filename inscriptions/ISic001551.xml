@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -25,6 +27,18 @@
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -81,7 +95,8 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Relatively broad brushstrokes with some fluidity. Alpha is broad with straight bar; beta has distinct closed eyes, somewhat angular; eta is broad with outward turning lower strokes; theta is ovid with horizontal bar; mu is broad with vertical uprights, and the middle strokes only descending half-way; omicron is sometimes slightly smaller and above the line; sigma is lunate; omega is lunate.</p>
+                            <handNote>
+                                <p>Relatively broad brushstrokes with some fluidity. Alpha is broad with straight bar; beta has distinct closed eyes, somewhat angular; eta is broad with outward turning lower strokes; theta is ovid with horizontal bar; mu is broad with vertical uprights, and the middle strokes only descending half-way; omicron is sometimes slightly smaller and above the line; sigma is lunate; omega is lunate.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm"/>
@@ -96,7 +111,7 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
                                 <geo>37.80355, 12.4379</geo>
                             </origPlace>
@@ -158,6 +173,9 @@
                 <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-03-09" who="#JP">Jonathan Prag edited metadata and bibliography, revised text from photograph</change>
+                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -169,20 +187,32 @@
             <graphic n="print" url="ISic001551.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM #JP">
                 <ab>
-                    <lb n="1"/>Μάρχος Σημβρόνις
-                    <lb n="2"/>ἥρως ἀγαθός
+                    <lb n="1"/><persName type="attested"><name><w n="5">Μάρχος</w></name> <name><w n="10">Σημβρόνις</w></name></persName>
+                    <lb n="2"/><w n="15">ἥρως</w> <w n="20">ἀγαθός</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Μάρκος">Μάρχος</w>
+                    <w n="10" lemma="Σεμπρώνιος">Σημβρόνις</w>
+                    <w n="15" lemma="ἥρως">ἥρως</w>
+                    <w n="20" lemma="ἀγαθός">ἀγαθός</w>
                 </ab>
             </div>
             <div type="apparatus" resp="#JP">
                 <listApp>
-                    <app><note>text checked against photograph in Vento</note></app>
-                    <app loc="line 1"><note>Kretschmer: Μάρχιος (mislead by part of the decoration); Manni Piraino: Σημβρῶνις</note></app>
+                    <app>
+                        <note>text checked against photograph in Vento</note>
+                    </app>
+                    <app loc="line 1">
+                        <note>Kretschmer: Μάρχιος (mislead by part of the decoration); Manni Piraino: Σημβρῶνις</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -197,45 +227,54 @@
                     <bibl type="bulletin" n="SEG">
                         <citedRange>04.0040</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
-                         <author>Manni Piraino</author>
-                         <date>1973</date> 
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>21</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl>
                         <author>Kretschmer</author>
                         <date>1927</date>
                         <citedRange>306 no.1</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/NT9TNH4M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002533">https://biblio.inscriptiones.org/epig10002533</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002533">https://biblio.inscriptiones.org/epig10002533</ref>
+                    </bibl>
                     <bibl>
                         <author>Gabrici</author>
                         <date>1929</date>
                         <citedRange>53-54</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/W9I8NZBC"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001976">https://biblio.inscriptiones.org/epig10001976</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001976">https://biblio.inscriptiones.org/epig10001976</ref>
+                    </bibl>
                     <bibl>
                         <author>Bisi</author>
                         <date>1970</date>
                         <citedRange>100 no.3</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/2DZ9TJFH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002148">https://biblio.inscriptiones.org/epig10002148</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002148">https://biblio.inscriptiones.org/epig10002148</ref>
+                    </bibl>
                     <bibl>
                         <author>Di Stefano</author>
                         <date>1984</date>
                         <citedRange>169</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q5PB252W"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002035">https://biblio.inscriptiones.org/epig10002035</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002035">https://biblio.inscriptiones.org/epig10002035</ref>
+                    </bibl>
                     <bibl>
                         <author>Vento</author>
                         <date>2000</date>
                         <citedRange>101-105 tav.68-73</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RTAB9A28"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001525">https://biblio.inscriptiones.org/epig10001525</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001525">https://biblio.inscriptiones.org/epig10001525</ref>
+                    </bibl>
                 </listBibl>
-                <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

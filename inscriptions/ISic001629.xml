@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -19,13 +21,25 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="AD">Arianna Cinquatti</name>
+                    <name xml:id="AC">Arianna Cinquatti</name>
                     <resp>Encoding of text into epidoc and transcription of Italian translation</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -73,12 +87,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -97,10 +111,10 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>		
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462270">Catina</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
-                            	<geo>37.49223, 15.07041</geo>
-		</origPlace>
+                                <geo>37.49223, 15.07041</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500" cert="low">4th — 5th century CE
                                 (?)</origDate>
                         </origin>
@@ -112,18 +126,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -152,15 +166,16 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-                <change when="2017-09-12" who="#JP">Jonathan Prag added text encoded by Arianna Cinquatti and Italian
-                    translation
-                </change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2017-09-12" who="#JP">Jonathan Prag added text encoded by Arianna Cinquatti and Italian translation</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2025-12-24" who="#ZL">tagged names and persons</change>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -171,32 +186,42 @@
             <graphic n="print" url="ISic001629.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
-                <ab><lb n="1"/>Ἐνθ<supplied reason="omitted">ά</supplied>δε κεῖτε Ἰε
-                    <lb n="2" break="no"/>ναρὶς υἱὸς Πρίμου
-                    <lb n="3"/>τελευτᾆ τᾖ πρὸ θ'
-                    <expan>
-                        <abbr>καλ</abbr>
-                        <ex>ανδῶν</ex>
-                    </expan>
-                    <lb n="4"/>Άπριλίων
-                    <expan>
-                        <abbr>ζήσ</abbr>
-                        <ex>ας</ex>
-                    </expan>
-                    ἔτη η'
-                    <lb n="5"/>
-                    <expan>
-                        <abbr>μήν</abbr>
-                        <ex>ης</ex>
-                    </expan>
-                    ς' κεῖτε μετὰ
-                    <lb n="6"/>τῆς μάμη
-                    <supplied reason="omitted">ς</supplied>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AC #JP">
+                <ab>
+                    <lb n="1"/><w n="5">Ἐνθ<supplied reason="omitted">ά</supplied>δε</w> <w n="10">κεῖτε</w> <persName type="attested"><name><w n="15">Ἰε
+                    <lb n="2" break="no"/>ναρὶς</w></name> <w n="20">υἱὸς</w> <persName type="attested"><name type="patronym"><w n="25">Πρίμου</w></name></persName></persName>
+                    <lb n="3"/><w n="30">τελευτᾆ</w> <w n="35">τᾖ</w> <w n="40">πρὸ</w> <num value="9"><w n="45">θ</w></num> <w n="50"><expan><abbr>καλ</abbr><ex>ανδῶν</ex></expan></w>
+                    <lb n="4"/><name><w n="55">Άπριλίων</w></name> <w n="60"><expan><abbr>ζήσ</abbr><ex>ας</ex></expan></w> <w n="65">ἔτη</w> <num value="8"><w n="70">η</w></num>
+                    <lb n="5"/><w n="75"><expan><abbr>μήν</abbr><ex>ης</ex></expan></w> <num value="6"><w n="80">ς</w></num> <w n="85">κεῖτε</w> <w n="90">μετὰ</w>
+                    <lb n="6"/><w n="95">τῆς</w> <w n="100">μάμη<supplied reason="omitted">ς</supplied></w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="ἐνθάδε">Ἐνθάδε</w>
+                    <w n="10" lemma="κεῖμαι">κεῖτε</w>
+                    <w n="15" lemma="Ἰεναρίς">Ἰεναρὶς</w>
+                    <w n="20" lemma="υἱός">υἱὸς</w>
+                    <w n="25" lemma="Πρῖμος">Πρίμου</w>
+                    <w n="30" lemma="τελευτάω">τελευτᾆ</w>
+                    <w n="35" lemma="ὁ">τᾖ</w>
+                    <w n="40" lemma="πρό">πρὸ</w>
+                    <w n="45" lemma="θ">θ</w>
+                    <w n="50" lemma="Kalendae">καλανδῶν</w>
+                    <w n="55" lemma="Aprilis">Άπριλίων</w>
+                    <w n="60" lemma="ζῶ">ζήσας</w>
+                    <w n="65" lemma="ἔτος">ἔτη</w>
+                    <w n="70" lemma="η">η</w>
+                    <w n="75" lemma="μείς">μήνης</w>
+                    <w n="80" lemma="ς">ς</w>
+                    <w n="85" lemma="κεῖμαι">κεῖτε</w>
+                    <w n="90" lemma="μετά">μετὰ</w>
+                    <w n="95" lemma="ὁ">τῆς</w>
+                    <w n="100" lemma="μάμμη">μάμης</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -207,7 +232,7 @@
                 </listApp>
             </div>
             <div type="translation" xml:lang="it" resp="#AC">
-                <p>Qui giace Ienaris figlio di Priamos. Egli è morto prima delle Calende di Aprile, all'età di 9 anni e
+                <p>Qui giace Ienaris figlio di Priamos. Egli è morto 9 giorni prima delle Calende di Aprile, all'età di 8 anni e
                     6 mesi. Giace accanto a (sua) madre</p>
             </div>
             <div type="commentary">
@@ -220,15 +245,19 @@
                         <date>1953</date>
                         <citedRange>no.61</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/D9BZFDDR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002211">https://biblio.inscriptiones.org/epig10002211</ref>
+                    </bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1931</date>
                         <citedRange>44 no.7</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/T67M4XMU"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001870">https://biblio.inscriptiones.org/epig10001870</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001870">https://biblio.inscriptiones.org/epig10001870</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

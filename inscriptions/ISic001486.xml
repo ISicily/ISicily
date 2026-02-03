@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,21 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                     <resp>encoding text division and checking the edition</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="DD" ref="https://orcid.org/0009-0003-5889-9362">Dmitry Dundua</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -64,7 +74,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Described as a block of the local stone ('arenaria') from Monte Rosso by Mingazzini. the block appears largly intact, but with a break across the face</p>
+                                <support>
+                                    <p>Described as a block of the local stone ('arenaria') from Monte Rosso by Mingazzini. the block appears largly intact, but with a break across the face</p>
                                     <material ana="#material.stone.sandstone" ref="http://www.eagle-network.eu/voc/material/lod/75.html">sandstone</material>
                                     <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
                                     <dimensions><!--Mingazzini-->
@@ -74,12 +85,13 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete.broken"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Boustrophedon across the upper part of the face, with a dividing line/ledge between the two lines.</p>
+                                <layout>
+                                    <p>Boustrophedon across the upper part of the face, with a dividing line/ledge between the two lines.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -113,18 +125,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -153,18 +165,21 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                           <change when="2020-10-23" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-10-23" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-18" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-12-12" who="#JP">Jonathan prag added metadata from publication</change>
-	</listChange>
+                <change when="2026-01-19" who="#DD">Dmitry Dundua's lemmatizations were added from source CoNLL-U files</change>
+                <change when="2026-01-19" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc using PyEpiDoc and associated scripts</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
+    <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic001486_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -178,8 +193,21 @@
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM" source="https://www.zotero.org/groups/382445/items/F66S4X3M">
                 <ab>
-                    <lb n="1" style="text-direction:r-to-l"/>Μυλο͂ ε̄̓μὶ το͂ Σάϙο̄νος
-                    <lb n="2" style="text-direction:l-to-r"/>καὶ Σάϙο̄νος το͂ Μυλο͂ ε̄̓μί
+                    <lb n="1" style="text-direction:r-to-l"/><w n="5">Μυλο͂</w> <w n="10">ε̄̓μὶ</w> <w n="15">το͂</w> <name><w n="20">Σάϙο̄νος</w></name>
+                    <lb n="2" style="text-direction:l-to-r"/><w n="25">καὶ</w> <name><w n="30">Σάϙο̄νος</w></name> <w n="35">το͂</w> <name><w n="40">Μυλο͂</w></name> <w n="45">ε̄̓μί</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#DD #RC">
+                <ab>
+                    <w n="5" lemma="Μύλος">Μυλο͂</w>
+                    <w n="10" lemma="εἰμί">ε̄̓μὶ</w>
+                    <w n="15" lemma="ὁ">το͂</w>
+                    <w n="20" lemma="Σάκων">Σάϙο̄νος</w>
+                    <w n="25" lemma="καί">καὶ</w>
+                    <w n="30" lemma="Σάκων">Σάϙο̄νος</w>
+                    <w n="35" lemma="ὁ">το͂</w>
+                    <w n="40" lemma="Μύλος">Μυλο͂</w>
+                    <w n="45" lemma="εἰμί">ε̄̓μί</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -194,62 +222,71 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IGDS1">
-                         <author>Dubois</author>
-                         <date>1989</date> 
+                        <author>Dubois</author>
+                        <date>1989</date>
                         <citedRange>
                             <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">165</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
                     <bibl type="corpus" n="IGMusPalermo">
-                         <author>Manni Piraino</author>
-                         <date>1973</date> 
+                        <author>Manni Piraino</author>
+                        <date>1973</date>
                         <citedRange>37</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/F66S4X3M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000531">https://biblio.inscriptiones.org/epig10000531</ref>
+                    </bibl>
                     <bibl>
                         <author>Arena</author>
                         <date>2002</date>
                         <citedRange>no.101</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/65P7AM6N"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001373">https://biblio.inscriptiones.org/epig10001373</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001373">https://biblio.inscriptiones.org/epig10001373</ref>
+                    </bibl>
                     <bibl>
                         <author>Mingazzini</author>
                         <date>1937</date>
                         <citedRange>663-665 (b) fig.23</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/XWF92UGN"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001744">https://biblio.inscriptiones.org/epig10001744</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001744">https://biblio.inscriptiones.org/epig10001744</ref>
+                    </bibl>
                     <bibl n="LSAG[2]">
                         <author>Jeffery</author>
                         <author>Johnston</author>
                         <date>1990</date>
                         <citedRange>278 no.58 pl.53</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/QUWGZA84"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000678">https://biblio.inscriptiones.org/epig10000678</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000678">https://biblio.inscriptiones.org/epig10000678</ref>
+                    </bibl>
                     <bibl>
                         <author>Jeffery</author>
                         <date>1961</date>
                         <citedRange>278 no.58 pl.53</citedRange>
                         <ptr target="http://zotero.org/groups/382445/items/V6CGSWPS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref>
+                    </bibl>
                     <bibl>
                         <author>Gallavotti</author>
                         <date>1975-1976</date>
                         <citedRange>103-105</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/5QX2D4PT"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001974">https://biblio.inscriptiones.org/epig10001974</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001974">https://biblio.inscriptiones.org/epig10001974</ref>
+                    </bibl>
                     <bibl>
                         <author>Cordano</author>
                         <date>1984</date>
                         <citedRange>137-138 no.2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/EWJDSA3R"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001453">https://biblio.inscriptiones.org/epig10001453</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001453">https://biblio.inscriptiones.org/epig10001453</ref>
+                    </bibl>
                     <bibl>
                         <author>Manni Piraino</author>
                         <date>1964-1965</date>
                         <citedRange>482 tav.31.4</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/UV6AFQWM"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001780">https://biblio.inscriptiones.org/epig10001780</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001780">https://biblio.inscriptiones.org/epig10001780</ref>
+                    </bibl>
                     <bibl>
                         <author>Siracusano</author>
                         <date>1996</date>
@@ -257,7 +294,9 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/RCBJEDMJ"/>
                     </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
