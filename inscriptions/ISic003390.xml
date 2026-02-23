@@ -26,6 +26,10 @@
                     <name xml:id="GC" ref=" https://orcid.org/0000-0003-1030-5679">Giorgia Capra</name>
                     <resp>epidoc editing</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -96,7 +100,7 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace>
+                            <origPlace><region>Grecia</region>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/579885">Athenae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/264371">Athens</placeName>
                             	<geo>37.970793, 23.719536</geo>
@@ -108,7 +112,6 @@
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -159,10 +162,11 @@
 	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-05-21" who="#GC">edited text and added english and italian translation</change>
+                <change when="2026-02-11" who="#ZL">tagged names and persons</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic003390_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -170,14 +174,14 @@
             <graphic n="print" url="ISic003390.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+         </surface> -->
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#GC">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name>Δεινίας</name> <persName type="attested"><name type="patronym">Κηφ<supplied reason="lost">ισο</supplied>δότου</name></persName> Βουτάδης</persName>
-                    <lb n="2"/><roleName type="civic" subtype="thesmothete">θεσμοθετήσας</roleName> ἐπὶ <name>Φειδοστράτου</name>
+                    <lb n="1"/><persName type="attested"><name>Δεινίας</name> <persName type="attested"><name type="patronym">Κηφ<supplied reason="lost">ισο</supplied>δότου</name></persName> <orgName type="demotic">Βουτάδης</orgName></persName>
+                    <lb n="2"/><roleName type="civic" subtype="thesmothete">θεσμοθετήσας</roleName> ἐπὶ <persName type="attested"><name>Φειδοστράτου</name></persName>
                     <lb n="3"/><roleName type="civic" subtype="archon">ἄρχοντος</roleName> ἀνέθηκεν
                     <lb n="4"/><supplied reason="lost">ἡ</supplied> <supplied reason="lost">βουλή</supplied> ὁ δῆμος
                 </ab>
@@ -194,23 +198,40 @@
                 <p>Deinias figlio di Kephisodotos di Boutadai, che era tesmoteta durante l'arcontato di Pheidostratos, dedicò questo. (In corona, a sinistra) Il consiglio. (In corona, a destra) Il popolo.</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--large block with two relief crowns below inscribed field; lower part of inscr only, conclusion of a dedication - final word appears to be 'anatheken'. Demos recorded within right hand wreath. Names visible include Butades, Denikaskes, and Philision son of Athenodotos (these all Libertini's readings), and possible mention of a Thesmothetes--></p>
+                <p>The inscription appears already in the museum inventory of 1885, described as 'prov. incerta', and was previously observed in the earlier version of the museum by Julius Schubring in the 1860s. There is no record of how it came to be in Sicily, and as Manganaro obserfves, it most likely arrived as ballast stone in a ship (at some date prior to c.1860).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="corpus" n="IG">
-                        <citedRange>
-                            <ref target="https://clio.columbia.edu/catalog/6873760">02.2855</ref>
-                        </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
+                        <citedRange>02/03(2).3.1.2855</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/KVYN6RR3"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000420">https://biblio.inscriptiones.org/epig10000420</ref>
+                    </bibl>
+                    <bibl type="corpus" n="IG">
+                        <citedRange>02/03(3).4.1.99</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/AXP6R9HE"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10000413">https://biblio.inscriptiones.org/epig10000413</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Schubring</author>
+                        <date>1861-1867</date>
+                        <citedRange>672 no. 7, tab. no.7</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/TBDXRINA"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001601">https://biblio.inscriptiones.org/epig10001601</ref></bibl>
                     <bibl>
                         <author>Libertini</author>
                         <date>1929</date>
                         <citedRange>121</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/AHZ3TB5P"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001872">https://biblio.inscriptiones.org/epig10001872</ref></bibl>
+                    <ref target="https://biblio.inscriptiones.org/epig10001872">https://biblio.inscriptiones.org/epig10001872</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1965</date>
+                        <citedRange>205 tav. LXXV.1</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RGTHAFKT"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001841">https://biblio.inscriptiones.org/epig10001841</ref>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
