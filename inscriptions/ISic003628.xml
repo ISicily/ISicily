@@ -22,6 +22,10 @@
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
+                <respStmt> 
+                    <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
+                    <resp>named entity annotation</resp> 
+                </respStmt>  
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -34,9 +38,7 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic003628</idno>
                 <idno type="DOI" when="2020-12-21">10.5281/zenodo.4381426</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
-                        Commons-Attribution 4.0 licence.
-                    </licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
@@ -45,7 +47,7 @@
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Caronia</settlement>
-                        <repository>Deposito della Soprintendenza BB.CC. di Messina</repository>
+                        <repository role="store" ref="http://sicily.classics.ox.ac.uk/museum/197">Soprintendenza Beni Culturali e Ambientali di Messina</repository>
                         <idno type="inventory">Caronia 25274</idno>
                         <altIdentifier>
                             <settlement/>
@@ -59,10 +61,10 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
-                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType ana="#object.unknown" ref="http://www.eagle-network.eu/voc/objtyp/lod/2.html">unknown</objectType>
-                                    <dimensions>
+                                <support><p>A small marble plaque, intact above and to the right, but broken to the left and below, the surface worn; the rear very uneven.</p>
+                                    <material ana="#material.stone.marble" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!-- arena -->
                                         <height unit="cm">12.7</height>
                                         <width unit="cm">14</width>
                                         <depth unit="cm">3.5-4</depth>
@@ -73,19 +75,19 @@
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
+                                	<damage ana="#text_condition.incomplete"/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
+                            <handNote><p>Very small letters, rather worn such that terminal points are clear, but impossible to identify extent of serifs. Alpha with straight bar; epsilon with shorter middle bar; almost full-size omicron; lunate sigma; tear-drop shaped, closed omega.</p>
                                 <locus from="line1" to="line3">Line 1-3</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="6" atMost="6">6</height>
+                                    <height unit="mm" atLeast="5" atMost="7">5-7</height>
                                 </dimensions>
                                 <locus from="line4" to="line14">Line 4-14</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="4" atMost="4">4</height>
+                                    <height unit="mm" atLeast="3" atMost="5">3-5</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -101,10 +103,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525344">Caronia</placeName>
                             	<geo>38.02381, 14.44142</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101">2nd century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0200" notAfter-custom="-0101" evidence="lettering">2nd century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in a field in Caronia</provenance>
-                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance type="found" subtype="discovered" when="2003">Found in November 2003, a chance surface find in a field on the NE slope of the hill of Caronia, immediately below the town, in an area rich in scattered material from the ancient town above<geo cert="high">38.0283617,14.4408091</geo>.</provenance><!-- findspot as marked in Collura 2016, fig. 2 -->
+                        <provenance type="observed" subtype="autopsied">Studied but not transcribed, Prag 2019</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -148,62 +150,86 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="draft">
+        <revisionDesc status="edited">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-                <change when="2017-09-04" who="#JP">Jonathan Prag made preliminary updates to EpiDoc adding some
-                    metadata and text
-                </change>
+                <change when="2017-09-04" who="#JP">Jonathan Prag made preliminary updates to EpiDoc adding some metadata and text</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
             	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
             		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-21" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2026-02-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
+                <change when="2026-02-26" who="#JP">Jonathan Prag revised from publication, partial autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic003628_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02</desc>
             </graphic>
             <graphic n="print" url="ISic003628.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02</desc>
             </graphic>
          </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic003628_rear_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02</desc>
+            </graphic>
+            <graphic n="print" url="ISic003628_rear.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2019-10-02</desc>
+            </graphic>
+        </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
-                <ab><lb n="1"/>Ἐπὶ <roleName type="civic.religious" subtype="amphipolos">ἀμφιπόλου</roleName> (?) e.g. ᾿Απολλωνίο]υ τοῦ̣ Ἀπολλοδώρου̣
-                    <lb n="2"/>[᾿Ελωρείου (?) μηνὸς ἑν]δεκάται <roleName type="civic" subtype="prostates">προστ(άτας)</roleName>
-                    <lb n="3"/>[τᾶς βουλᾶς e.g. Ξένι]ς Ξενίσκου Πλη·
-                    <lb n="4"/>[ἔδοξε τᾶι ἁλίαι καθὰ κ]αὶ τᾶι συγκλήτωι καὶ τᾶι βουλᾶι·
-                    <lb n="5"/>[ἐπειδὴ? --]ι̣ς Ἄνδρου Τηλ φανερός ἐστι ἁμῶν
-                    <lb n="6"/>[φίλος, ἄξια πράσσων] καὶ λόγωι καὶ ἔργωι, δίκαιον δέ
-                    <lb n="7"/>[ἐστι διαμένειν αὐ]τ̣οῦ̣ μνάμαν, ποιεῖσθαι δὲ ὅσα τὰ̣
-                    <lb n="8"/>[? νόμιμα καὶ <roleName type="paracivic" subtype="euergetes">εὐεργ]έ̣ταν</roleName> αὐτὸν εἴμειν τοῦ δάμου,
-                    <lb n="9"/>[ὅπως φανερὸν ἦι πᾶσι] τοῖς ἐπιγινο[μέν]οις, ὅτι [τ]ο[ῖς]
-                    <lb n="10"/>[<roleName type="paracivic" subtype="euergetes">εὐεργετεῖν</roleName> αἱρουμέν]οις τὸ κοινὸν δύναται χάριτας
-                    <lb n="11"/>[καὶ τιμὰς ἀπονέμειν] τὰς καταξίας· τὸ δὲ ἁλίασμα
-                    <lb n="12"/>[ἐπιγράψασθαι εἰς χαλκ]ώ̣ματα δύο καὶ ἀναθέμειν
-                    <lb n="13"/>[τὸ μὲν ἐν τῶι ἱερῶι τοῦ Ἀ]πόλλωνος, τὸ δὲ δόμειν̣
-                    <lb n="14"/>[αὐτῶι ὑπόμναμα τᾶς πο]τὶ τὸν δᾶμον εὐ[νοίας· τοὺς δὲ]
-                    <lb n="15"/>[<roleName type="civic" subtype="tamias">ταμίας</roleName> ἐξοδιάξαι -----------------------------------------------]
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+                <ab>
+                    <lb n="1"/><supplied reason="lost">Ἐπὶ</supplied> <gap reason="lost" extent="unknown" unit="character"><desc>office and name</desc></gap> <persName type="attested"><name><w part="F"><unclear>υ</unclear></w></name> τοῦ <persName type="attested"><name type="patronym">Ἀπολλοδώρο<unclear>υ</unclear></name></persName></persName>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"><desc>month name</desc></gap>δεκάται <roleName type="civic" subtype="prostates"><expan><abbr>προστ</abbr><ex>άτας</ex></expan></roleName>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><w part="F"><unclear>ς</unclear></w></name> <persName type="attested"><name type="patronym">Ξενίσκου</name></persName> <orgName type="demotic">Πλη</orgName></persName>
+                    <lb n="4"/><supplied reason="lost">ἔδοξε</supplied> <supplied reason="lost">τᾶι</supplied> <supplied reason="lost">ἁλίαι</supplied> <supplied reason="lost">καθὰ</supplied> <supplied reason="lost">κ</supplied>αὶ τᾶι συγκλήτωι καὶ τᾶι βουλᾶι
+                    <lb n="5"/><supplied reason="lost">ἐπειδὴ</supplied> <persName type="attested"><gap reason="lost" unit="character" extent="unknown"><desc>name</desc></gap><persName type="attested"><name type="patronym"><w part="F">σανδρου</w></name></persName> <orgName type="demotic">Τηλ</orgName></persName> φανερός ἐστι ἁμῶν
+                    <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">προνοούμενος</supplied> καὶ λόγωι καὶ ἔργωι δίκαιον δέ
+                    <lb n="7"/><supplied reason="lost">ἐστι</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">αὐτοῦ</supplied> <supplied reason="lost">ἀθάν</supplied><unclear>ατ</unclear>ον μνάμαν ποιεῖσθαι δέδοκτ<unclear>α</unclear><supplied reason="lost">ι</supplied>
+                    <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/> <roleName type="paracivic" subtype="euergetes"><supplied reason="lost">εὐεργ</supplied><unclear>έ</unclear>ταν</roleName> αὐτὸν εἴμειν τοῦ δάμου
+                    <lb n="9"/><supplied reason="lost">ὅπως</supplied> <supplied reason="lost">φανερὸν</supplied> <supplied reason="lost">ἦι</supplied> <unclear>τ</unclear>οῖς ἐπιγινο<unclear>μέ</unclear>νοις ὅτι <space unit="character" quantity="1"/> ὀ <space unit="character" quantity="1"/> <supplied reason="lost">δᾶ</supplied>
+                    <lb n="10" break="no"/><supplied reason="lost">μος</supplied> <supplied reason="lost">τοῖς</supplied> <roleName type="paracivic" subtype="euergetes"><supplied reason="lost">εὐεργετεῖν</supplied></roleName> <supplied reason="lost">προαιρουμέν</supplied>οις τὸ κοινὸν δύναται χάριτας
+                    <lb n="11"/><supplied reason="lost">καὶ</supplied> <supplied reason="lost">τὰς</supplied> <supplied reason="lost">τιμὰς</supplied> <supplied reason="lost">ἀπονέμει</supplied><unclear>ν</unclear> τὰς καταξίας τὸ δὲ ἁλίασμα
+                    <lb n="12"/><supplied reason="lost">ἀναγράψαι</supplied> <supplied reason="lost">εἰς</supplied> <supplied reason="lost">χαλκ</supplied>ώματα δύο καὶ ἀναθέμειν
+                    <lb n="13"/><supplied reason="lost">τὸ</supplied> <supplied reason="lost">μὲν</supplied> <supplied reason="lost">ἐν</supplied> <supplied reason="lost">τῶι</supplied> <supplied reason="lost">ἱερῶι</supplied> <supplied reason="lost">τοῦ</supplied> <persName type="divine"><name><supplied reason="lost">Ἀ</supplied>πόλλωνος</name></persName> τὸ δὲ δόμειν
+                    <lb n="14"/><gap reason="lost" extent="unknown" unit="character"><desc>name</desc></gap> <supplied reason="lost">ὑπόμναμα</supplied> <supplied reason="lost">τᾶς</supplied> <supplied reason="lost">πο</supplied>τὶ τὸν δᾶμον <unclear>ε</unclear><supplied reason="lost">ὐνοίας</supplied>
+                    <lb n="15"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" unit="character" quantity="5"/><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#JP">
                 <listApp>
                     <app>
-                        <note>Text of Manganaro 2011</note>
+                        <note>Text of Arena 2016, checked against photograph</note>
                     </app>
+                    <app loc="1"><note>Manganaro 2011: [Ἐπὶ ἀμφιπόλου(?) (Ἀπολλωνίου?) το]ῦ; Arena 2016: Ἐπὶ ---Αἰσχύλο]υ</note></app>
+                    <app loc="2"><note>Manganaro 2011: [᾿Ελωρείου (?) μηνὸς ἑν]δεκάται</note></app>
+                    <app loc="3"><note>Manganaro 2011: [τᾶς βουλᾶς ? Ξένι]ς; Arena: [τᾶς βουλᾶς ---]ς</note></app>
+                    <app loc="4"><note>Manganaro 2009: [ἀγαθᾶι τύχαι δεδόχθ]αι</note></app>
+                    <app loc="5"><note>Manganaro 2009: [ἐπειδὴ (name?) Ἐ]<unclear>π</unclear>άνδρου; Battistoni 2010: [ἐπειδη --- ]άνδρου; Manganaro 2011: [ἐπειδὴ? ---]<unclear>ι</unclear>ς Ἄνδρου; Arena 2016: [ἐπειδὴ ὁ δεῖνα τοῦ---].σάνδρου</note></app>
+                    <app loc="6"><note>Manganaro 2009: [φίλος, ἀγαθὸν πράττων];  Manganaro 2011: [φίλος, ἄξια πράσσων]</note></app>
+                    <app loc="7"><note>Manganaro 2009: [ἐστι ὅτι ἔχοιεν οἱ ἄλ]λοι μνάμαν ποιεῖσθαι δὲ ὅσα τ<unclear>ε</unclear>; Battistoni 2010: [ἐστι ---].οι μνάμαν ποιεῖσθαι ΔΕ....; Manganaro 2011: [ἐστι διαμένειν αὐ]<unclear>τ</unclear>ο<unclear>ῦ</unclear> μνάμαν ποιεῖσθαι δὲ ὅσα τ<unclear>ὰ</unclear></note></app>
+                    <app loc="8"><note>Manganaro 2009: [χρήσασθαι ὥστε εὐεργ]έταν; Battistoni 2010: [--- δέδοχθαι εὐεργ]<unclear>έ</unclear>ταν; Manganaro 2011: [νόμιμα καὶ εὐεργ]<unclear>έ</unclear>ταν; Arena 2016: [οὖν τᾶι πόλει(?) --- εὐεργ]<unclear>έ</unclear>ταν</note></app>
+                    <app loc="9"><note>Manganaro 2009: [ὅπως δὲ μνᾶμν γίνεται] τοῖς ἐπιγιγνο[μέν]οις ὅτι ἐ<unclear>κ</unclear>; Battistoni 2010: ἐπιγιγνο[μέν]οις;  Manganaro 2011: [ὅπως φανερὸν ἦ πᾶσι ]τοῖς ἐπιγιγνο[μέν]οις ὅτι [τ]οῖ[ς]; Arena 2016: ὅτι ο &lt;δᾶ&gt;</note></app>
+                    <app loc="10"><note>Manganaro 2009: [δίδοται ὁ δᾶμος ὅσον] εἰς; Battistoni 2010: [μος τοῖς ---]; Manganaro 2011: [εὐεργετεῖν αἰρουμέν]οις</note></app>
+                    <app loc="11"><note>Manganaro 2009: [καθηκούσας χάριτας]; Battistoni 2011: [καὶ τὰς τιμὰς ἀποδόμειν]; Manganaro 2011: [καὶ τιμὰς ἀπονέμειν]</note></app>
+                    <app loc="12"><note>Manganaro 2009: [γράψασθαι εἰς χαλκ]<unclear>ω</unclear>ματα; Manganaro 2011: [ἐπιγράψασθαι εἰς χαλκ]<unclear>ω</unclear>ματα</note></app>
+                    <app loc="13"><note>Manganaro 2009: τὸ δὲ δόμενα[ι]; Battistoni 2010: τὸ δὲ δόμε[ιν]; Manganaro 2011: τὸ δὲ δόμει<unclear>ν</unclear></note></app>
+                    <app loc="14"><note>Manganaro 2011: [αὐτῶι ὑπόμναμα πο]τὶ τὸν δᾶμον  εὐ[νοίας τοὺς δὲ]</note></app>
+                    <app loc="15"><note>Manganaro 2009, Battistoni 2010: [----]ΚΙ<unclear>Υ</unclear>[----]; Manganaro 2011: ταμίας ἐξοδιάξαι; Arena 2016: [----------] </note></app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision--></p>
+                <p>For the material context, see Collura 2016. Among the many points of interest, is the fact that the piece survives on a small marble plaque, when it contains instructions for publication in two copies on bronze (compare the Halaesa bronze inscriptions for Nemenios). The presence of lunate sigma alongside consistent iota adscript is also notable, perhaps encouraging a second century BCE date, and the style of the lettering has most in common with texts on metal at this date. The use of marble is relatively rare in the Hellenistic period on the island. The piece also offers a rare example, for Sicily, of honours explicitly for a euergetes.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -240,6 +266,11 @@
                         <date>2016</date>
                         <ptr target="http://zotero.org/groups/382445/items/SHHDSKRM"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002178">https://biblio.inscriptiones.org/epig10002178</ref></bibl>
+                    <bibl>
+                        <author>Collura</author>
+                        <date>2016</date>
+                        <ptr target="http://zotero.org/groups/382445/items/LX4MRMIG"/>
+                     </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
