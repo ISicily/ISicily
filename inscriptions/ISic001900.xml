@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Tomb of Aristomenes</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+               </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001900</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001900</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>contrada Arco</settlement>
+                        <repository>in situ</repository>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A rock cut tomb, with a doorway 1.07m wide by 0.86 m high, a worked facade 6.2m wide, and a rock-cut chamber behind 3.53m wide, 2.09m long and 1-1.08m high. The inscription is carved on the exterior in the space immediately above the doorway, with an epigraphic field c.177 cm wide.</p>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.funerary_monument.rock-cut_tomb" ref="http://vocab.getty.edu/aat/300120624">rock-cut tomb</objectType>
+                                    <dimensions><!--Cannata et al.-->
+                                        <height unit="cm"></height>
+                                        <width unit="cm">177</width>
+                                        <depth unit="cm"></depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.complete"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>The text is set out over a single line, become larger to the right</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.complete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Although difficult to read, the text appears to show both three-bar and four-bar sigma.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="60" atMost="130">60-130</height><!-- Cannata et al-->
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                <geo>37.05780, 14.89346</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0525" notAfter-custom="-0475" evidence="lettering textual-context">Late 6th or early 5th century BCE (Sansone in Cannata et al. 2022)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="2022">Found in 2022, in contrada Arco, which lies along the ancient route between Akrai and Netum (Noto antica), likely in the territory of ancient Akrai, c.8.5km SE of Palazzao and c.7km SW of Canicattini Bagni<geo>37.0097335,14.9831142</geo></provenance><!-- location of the tomb based upon Cannata et al. fig.3 -->
+                        <provenance type="observed" subtype="autopsied">none</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+               <change when="2026-03-05" who="#JP">Jonathan Prag created draft file from published materials</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/><!-- 
+        <surface type="front">
+            <graphic n="screen" url="ISic001900_tiled.tif" height="5520px" width="3680px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-13</desc>
+            </graphic>
+            <graphic n="print" url="ISic001900.jpg" height="5520px" width="3680px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-01-13</desc>
+            </graphic>
+         </surface> -->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="https://www.zotero.org/groups/382445/items/8ENX9UZ5">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name><w><unclear>Ἀ</unclear>ρι<unclear>στο</unclear>μένε<unclear>ος</unclear></w></name></persName> <w><unclear>ε</unclear>ἱμὶ</w> <w>σᾶμα</w>
+                 </ab>
+            </div>
+            <div type="apparatus">
+                <listApp><app><note>Text of Sansone in Cannata et al.</note></app></listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>I am the memorial of Aristomenes</p>
+            </div>
+            <div type="commentary">
+                <p>A remarkable monumental rock-cut tomb deep in the hinterland of Akrai/Netum (suggested to fall within the territory of ancient Akrai), with a Greek name and archaic letter forms compatible with the Syracusan alphabet. Nothing remains within the tomb, whcih was presumably robbed out in antiquity (although Catagnino Berlinghieri et al. 2026 speculate on the (unlikely) possibility of the monument as cenotaph on that basis). The hypogeum shows signs of prehistoric presence/use also, and so the site has a long history of usage. Whether the deceased was Greek or 'hellenized' indigenous is impossible to know. The 'speaking' formula is attested elsewhere on the island, such as at Selinunte or Megara Hyblaea. The text shows Doric elements.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Sansone</author>
+                        <date>2022</date>
+                        <citedRange>17-19, fig.13-14</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/IWTBCB32"/>
+                    </bibl>
+                    <bibl>
+                        <author>Castagnino Berlinghieri, Cannata, Ricciardi</author>
+                        <date>2026</date>
+                        <citedRange>80-82, fig.22</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PKPAES83"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
