@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragmentary Latin inscription</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic002133</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002133</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Agrigento</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/130">Museo Regionale Archeologico Pietro Griffo</repository>
+                        <idno type="inventory"/><!-- no inv nr yet assigned? -->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>A fragment of a thin white marble plaque, seemingly broken on all sides, and worked flat (but not smooth) on the reverse.</p>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!-- measurements of Gammella -->
+                                        <height unit="cm">7.5</height>
+                                        <width unit="cm">7.8</width>
+                                        <depth unit="cm">1.2</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <p>The remains of two lines of Latin letters visible, with vacats at the end of both lines</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.incomplete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Relatively tall and narrow letters, with serifs formed by simple extension of strokes, or by thin cross strokes on M and S. Both M and V appear relatively broad.</p>
+                                <locus from="line1" to="line2">Lines 1-2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="25" atMost="25">25</height><!-- Gammella-->
+                                </dimensions>
+                                <locus from="line1" to="line2">Line 1-2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm" atLeast="15" atMost="15">15</height>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462086">Agrigentum</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/6541860">Agrigento</placeName>
+                            	<geo>37.32084, 13.58876</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0151" notAfter-custom="0250" evidence="lettering">later 2nd or earlier 3rd century CE (Gammella on palaeographic grounds)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="2024">Found during excavation of a trench (EK2) on the southern terrace of the ekklesiasterion at Poggio S. Nicola, in a layer of collapse (US2003), in a structure abandoned around the C4 CE, with final collapse between C4 and C6/7 CE<geo>37.2961601,13.5881243</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">No autopsy</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.honorific" ref="http://www.eagle-network.eu/voc/typeins/lod/69.html" cert="low">Honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2026-05-04" who="#JP">Jonathan Prag created file from publication</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/><!-- 
+          <surface type="front">
+            <graphic n="screen" url="ISic002133_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic002133.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface>-->
+   </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ab>
+                    <lb n="1"/><gap reason="lost" unit="character" extent="unknown"/><orig>M</orig> <g ref="#interpunct">·</g> <orig><unclear>PET</unclear></orig> <space unit="character" quantity="1"/>
+                    <lb n="2"/><gap reason="lost" unit="character" extent="unknown"/><w part="F">us</w> <hi rend="tall"><unclear>f</unclear></hi><unclear>e</unclear><space unit="character" quantity="1"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text after Gammella</note></app>
+                    <app loc="1"><note>Gammella reads: M(arcus) · Pe<unclear>t</unclear>-; although the M may be considered certain, the following three letters are very closely spaced and it seems impossible to be certain of the reading.</note></app>
+                    <app loc="2"><note>Gammella reads: [--]us fe-</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p/>
+            </div>
+            <div type="commentary" resp="#JP">
+                <p>Gammella interprets as probably a Severan period honorific, given the use of marble and the findspot in the vicinity of the principal public spaces of the city. This seems likely, although such a plaque could also be from a funerary text; but the findspot, albeit seemingly in secondary deposition, encourages the reading as a public text. For the archaeological context, see Rignanese, Giuseppe, and Federico Figura, ‘5. Agrigento. Lo scavo nella terrazza meridionale dell’ekklesiasterion (Saggio EK2)’, ANNALI SCUOLA NORMALE SUPERIORE - CLASSE DI LETTERE E FILOSOFIA, 30 December 2025, pp. 82–104, doi:10.2422/3035-3769.202502_s06. The reading of both lines would seem to be far from certain, with E and F not readily distinguishable, and the lower portions of E, F, T, L,. P and I all sharing considerable similarities in texts of this date. The absence of an interpunct in line 2, while hardly definitive, further complicates the reading with the vacat at the end, and other interpretations are possible (such as f(ilius) f(ecit) or v(otum) s(olvit) fe(liciter)).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                   <bibl>
+                        <author>Gammella</author>
+                        <date>2025</date>
+                        <citedRange>134-145</citedRange>
+                       <ptr target="https://www.zotero.org/groups/382445/items/TVJFIWIM"/>
+                   </bibl>
+                 </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
