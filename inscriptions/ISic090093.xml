@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Dedication to Sarapis, Isis, the Nile and the monarchs</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>Lemmatization</resp>
+                </respStmt>
+                <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority> 
+                <idno type="filename">ISic090093</idno>
+                <idno type="TM">102617</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic090093</idno>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Available under a CC BY-NC 4.0 License.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>France</country>
+                        <repository role="museum">Bibliothèque Nationale Cabinet des Médailles</repository> <!-- Paris in modern location -->
+                        <collection type="former">Private collection Froehner</collection>
+                        <idno/>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>A limestone stele.</p>
+                                    <material type="stone.calcilutite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250.html">stele</objectType>
+                                    <dimensions>
+                                            <height unit="m">0.15</height>
+                                            <width unit="m">0.245</width>
+                                            <depth unit="m">0.040</depth>
+                                        </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                    <layout>
+                                        <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>.
+                                        <p>Text inscribed ‘between engraved lines’ according to a note in Fraser’s manuscript but these are not really visible on the photograph or squeeze.</p>
+                                    </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="m">0.010</height>
+                                    <height unit="m">0.008 (omicron)</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="m"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace type="ancient" ref="https://pleiades.stoa.org/places/727097">Kanopos</origPlace>
+                            <placeName type="modern" ref="http://www.geonames.org/362485">Abukir</placeName>
+                            <origDate datingMethod="#julian" notBefore-custom="-0247" notAfter-custom="-0221">247 – 221</origDate> 
+                        </origin>
+                        <provenance type="found">Probably Kanopos region (Abukir).</provenance> 
+                        <provenance type="observed">Paris</provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+                <language ident="cop">Coptic</language>
+                <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+                <language ident="cop">Coptic</language>
+                 <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                 <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                 <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change who="#SS" when="2020-04-29">Created file, encoded metadata, text and apparatus.</change>
+                <change who="Kyriakos" when="2019">Initial pass of Greek text</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic090093_tiled.tif" height="2604px" width="3994px">
+                <desc>...</desc>
+            </graphic>
+            <graphic n="print" url="ISic090093.jpg" height="2604px" width="3994px">
+                <desc>...</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+           <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
+                <ab>
+                    <lb n="01"/><w n="5">Σαράπιδι</w> <w n="10">Ἴσιδι</w> <w n="15">Νείλωι</w>
+                    <lb n="02"/><w lemma="καί" rend="καὶ" n="20">καὶ</w> <w lemma="βασιλεύς" rend="βασιλεῖ" n="25">βασιλεῖ</w> <w n="30">Πτολεμαίωι</w>
+                    <lb n="03"/><w lemma="καί" rend="καὶ" n="35">καὶ</w> <w lemma="βασίλισσα" rend="βασιλίσσηι" n="40">βασιλίσσηι</w> <w n="45">Βερενίκηι</w>
+                    <lb n="04"/><w lemma="θεός" rend="θεοῖς" n="50">θεοῖς</w> <w lemma="εὐεργέτης" rend="Εὐεργέταις" n="55">Εὐεργέταις</w>
+                    <lb n="05"/><w n="60">Καλλικράτης</w> <w n="65">Ἀντιπάτρου.</w>
+                </ab>
+          </div>
+            <div type="apparatus"><!-- references in note will go in @source on app once bibliography is encoded -->
+                <listApp>
+                    <app loc="5">
+                        <rdg>Καλλικράτης  <note>corr. from</note> Καλλικράτηι <note>by the stonecutter</note></rdg>
+                    </app>
+                </listApp>
+            </div> 
+            <div type="translation">
+                <p>To Sarapis, Isis and Neilos, and to King Ptolemy and Queen Berenike, gods Euergetai, Kallikrates son of Antipatros.</p>
+            </div> 
+            <div type="commentary">
+                <p>One of three such dedications (see also 094 and 095)<!-- link to inscriptions -->, of which only two include Neilos. The provenance of 93 is unrecorded but since the content makes it very probable that it also comes from Kanopos it is included here. The dedicant Kallikrates is Trismegistos P245120<!-- link to TM people -->.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>Robert 1936,  <citedRange>97</citedRange></bibl>
+                    <bibl>I. Delta, <citedRange>pp. 235-236, no. 6</citedRange></bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>Ptol. Alex. <citedRange>I, 236</citedRange>; <citedRange>II, 385, n. 365</citedRange>; <citedRange>II, 415, n. 584</citedRange>; <citedRange>II, 416, n. 593</citedRange></bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

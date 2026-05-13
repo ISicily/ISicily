@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Dedication of a Kleopatreion by the garrison of Schedia</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>Lemmatization</resp>
+                </respStmt>
+                <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority> 
+                <idno type="filename">ISic090110</idno>
+                <idno type="TM">710</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic090110</idno>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Available under a CC BY-NC 4.0 License.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Germany</country>
+                        <repository role="museum">Archäologisches Institut der Universität</repository> <!-- Tübingen in modern location -->
+                        <collection type="former">private collection von Sieglin, without number</collection>
+                        <idno type="inventory">S.113/3955</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>A limestone plaque.</p>
+                                    <material type="stone.calcilutite" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>   
+                                    <dimensions>
+                                            <height unit="m">0.255</height>
+                                            <width unit="m">0.575</width>
+                                            <depth unit="m">0.08</depth>
+                                        </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <p>Inscription between engraved lines; marginal line cut to the left.</p>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Height of lines containing letters generally 0.024; space between lines 0.02.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="m">0.021-0.025</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="m"/>
+                                </dimensions>
+                                </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Egypt</region>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/727221">Schedia</placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/9781945">Kom el-Giza</placeName>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0116" notAfter-custom="-0107">116 – 107</origDate> 
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="1900">Schedia (Kom el-Giza near Kafr el-Dawar), 1900.</provenance> 
+                        <provenance type="observed" subtype="former">Stuttgart</provenance>
+                        <provenance type="observed">Tübingen</provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+                <language ident="cop">Coptic</language>
+                <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+                <language ident="cop">Coptic</language>
+                 <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                 <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                 <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change who="#SS" when="2020-06-25">Created file, encoded metadata, text and apparatus.</change>
+                <change who="Kyriakos" when="2019">Initial pass of Greek text</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic090110_tiled.tif" height="2524px" width="5378px">
+                <desc>...</desc>
+            </graphic>
+            <graphic n="print" url="ISic090110.jpg" height="2524px" width="5378px">
+                <desc>...</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
+                <ab>
+                    <lb n="01"/><w lemma="θεός" rend="θεῶν" n="5"><unclear>θ</unclear><unclear>ε</unclear>ῶν</w> <w lemma="φιλομήτωρ" rend="Φιλομητόρων" n="10">Φιλομητόρων</w> <w lemma="σωτήρ" rend="Σωτήρων" n="15">Σωτή-
+                    <lb n="02" break="no"/>ρων</w> <w n="20">vac.</w> <w lemma="ὁ" rend="οἱ" n="25">οἱ</w> <w lemma="ἀποτάσσω" rend="ἀποτεταγμένοι" n="30">ἀποτεταγμένοι</w>
+                    <lb n="03"/><w lemma="ἐπί" rend="ἐπὶ" n="35">ἐπὶ</w> <w n="40">Σχεδίᾳ</w> <w lemma="στρατιώτης" rend="στρατιῶται" n="45">στρατιῶται</w> <w lemma="ὅς" rend="ὧν" n="50">ὧν</w>
+                    <lb n="04"/><w lemma="ἡγεμών" rend="ἡγεμὼν" n="55">ἡγεμὼν</w> <w lemma="καί" rend="καὶ" n="60">καὶ</w> <w lemma="χιλίαρχος" rend="χιλίαρχος" n="65">χιλίαρχος</w> <w n="70">Σωσίπατρος</w>
+                    <lb n="05"/><w lemma="ὁ" rend="τὸ" n="75">τὸ</w> <w lemma="Κλεοπατρεῖον" rend="Κλεοπατρεῖον" n="80">Κλεοπατρεῖον</w>.
+                </ab>
+            </div>
+            <div type="apparatus"><!-- references in note will go in @source on app once bibliography is encoded -->
+                <listApp>
+                    <app loc="1 2">
+                    <rdg>[ὑπὲρ βασιλίσσης Κλεοπάτρας] / [καὶ βασιλέως Πτολεμαίου] <note>ed.pr. and subsequent edd.</note></rdg>
+                    <rdg>Ὑπὲρ βασιλέως Πτολεμαίου τοῦ καὶ Ἀλεξάνδρου καὶ βασιλίσσης Κλεοπάτρας [or: Βερενίκης τῆς Ἀδέλφης] θεῶν Φιλομητόρων Σωτήρων? <note>Scheuble 2009</note></rdg>
+                    </app>
+                </listApp>
+            </div> 
+            <div type="translation">
+                    <p>In favour of Queen Kleopatra and King Ptolemy, [or: King Ptolemy also called Alexander and Queen Kleopatra (or: Berenike his sister) the gods Philometores Soteres,  the soldiers stationed in Schedia, whose commander is the chiliarch Sosipatros, the Kleopatreion.</p>
+            </div> 
+            <div type="commentary">
+                <p>Dedication of a temple to Kleopatra III, by the garrison of Schedia, under the command of the chiliarch Sosipatros (Trismegistos P13824). The royal names and cult titles have normally been restored as referring to Ptolemy IX Soter II and Kleopatra III (116-107) but might alternatively refer to Ptolemy X Alexander I and Berenike III (101-88), see Scheuble 2009.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>Arvanitakis 1902, <citedRange>17</citedRange></bibl>
+                    <bibl>Botti 1902, <citedRange>49-51</citedRange> 
+                        (= <bibl>Meyer 1902, <citedRange>478, no. 5</citedRange></bibl> 
+                        <bibl>Schiff 1903, <citedRange>385-387, no. 2</citedRange></bibl>
+                        <bibl>Strack 1903, <citedRange>554-555, no. 37</citedRange></bibl> 
+                        <bibl>OGIS <citedRange>2 738</citedRange></bibl> 
+                        <bibl>SB <citedRange>1 4222</citedRange></bibl>
+                        <bibl>SB <citedRange>5 8930</citedRange></bibl>)</bibl>
+                    <bibl>I. Delta, <citedRange>pp. 415-416 no. 4</citedRange></bibl>
+                    <bibl>Scheuble 2009, <citedRange>471-5, no. 4</citedRange> (registered at <bibl>SEG <citedRange>59 1888</citedRange></bibl>)</bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>Wilamowitz-Moellendorff 1902, <citedRange>1095</citedRange></bibl>
+                <bibl>Launey 1987, <citedRange>I, 26</citedRange>, <citedRange>II, 1009, n. 4</citedRange></bibl>
+                <bibl>SEG <citedRange>59 1888</citedRange></bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
