@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Lex sacra</title>
+            <editor ref="#JP">Jonathan Prag</editor>
+	<principal ref="#JP">Jonathan Prag</principal>
+            <funder>John Fell OUP Research Fund</funder>
+            <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+            <respStmt>
+               <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+               <resp>Project direction and corpus editing</resp>
+            </respStmt>
+           </titleStmt>
+         <publicationStmt>
+            <authority>I.Sicily</authority>
+            <idno type="filename">ISic030112</idno>
+            <idno type="TM">696111</idno>
+            <idno type="EDR">121294</idno> 
+            <idno type="EDH"/> 
+            <idno type="EDCS">65000035</idno>
+            <idno type="PHI">332705</idno> 
+            <idno type="PHI">301154</idno>
+            <idno type="PHI">336697</idno>
+            <idno type="PHI">336698</idno>
+            <idno type="PHI">333372</idno>
+            <idno type="PHI">333373</idno>
+            <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030112</idno>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country>Italy</country>
+                  <region>Sicily</region>
+                  <settlement>Selinunte</settlement>
+                  <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/116">Baglio Florio Selinunte</repository>
+                  <idno type="inventory"/>
+                  <altIdentifier>
+                     <settlement/>
+                     <repository/>
+                     <idno/>
+                  </altIdentifier>
+                </msIdentifier>
+               <msContents>
+                  <textLang mainLang="grc">Ancient Greek</textLang>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <p>A rectangular lead sheet</p>
+                           <material ana="#material.inorganic.metal.lead" type="metal.lead" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/108.html">Lead</material>
+                           <objectType ana="#object.lamina" ref="http://www.eagle-network.eu/voc/objtyp/lod/145.html">lamina</objectType>
+                           <dimensions><!-- from Dubois -->
+                              <height unit="cm">23</height>
+                              <width unit="cm">59.7</width>
+                              <depth unit="cm">0.2</depth>
+                           </dimensions>
+                        </support>
+                        <condition ana="#condition.damaged"/>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout>
+                           <p>Greek text inscribed in two columns, one inverted in relation to the other</p>
+                           <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
+                           <damage ana="#text_condition.incomplete"/>
+                           </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote><p></p>
+                         <locus from="line1" to="line1">Line 1</locus>
+                        <dimensions type="letterHeight">
+                           <height unit="mm" atLeast="8" atMost="8">8</height><!-- from Dubois-->
+                        </dimensions> 
+                        <locus from="line1" to="line2">Interlineation</locus>
+                        <dimensions type="interlinear">
+                           <height unit="mm"/>
+                        </dimensions>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace><region>Sicilia</region>
+                        <placeName type="ancient" ref="http://pleiades.stoa.org/places/462489">Selinus</placeName>
+                        <placeName type="modern" ref="http://sws.geonames.org/2523164/">Selinunte</placeName>
+                        <geo>37.58337, 12.82522</geo>
+                     </origPlace>
+                     <origDate notBefore-custom="-0500" notAfter-custom="-0451" evidence="lettering">First half of the 5th cent. BCE</origDate>
+                  </origin>
+                  <provenance type="found" subtype="discovered">Obtained by the Getty Museum in 1981, repatriated in 1992; textual features imply Selinunte, and suggested to come from the area of the Gaggera hill</provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>Encoded following the latest EpiDoc guidelines</p>
+         <xi:include href="../alists/ISicily-taxonomies.xml">
+            <xi:fallback>
+               <p>Taxonomies for ISicily controlled values</p>
+            </xi:fallback>
+         </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+      </encodingDesc>
+      <profileDesc>
+         <calendarDesc>
+            <calendar xml:id="julian">
+               <p>Julian Calendar</p>
+            </calendar>
+         </calendarDesc>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="it">Italian</language>
+            <language ident="grc">Ancient Greek</language>
+            <language ident="la">Latin</language>
+            <language ident="he">Hebrew</language>
+            <language ident="phn">Phoenician</language>
+            <language ident="xpu">Punic</language>
+            <language ident="osc">Oscan</language>
+            <language ident="xly">Elymian</language>
+            <language ident="scx">Sikel</language>
+            <language ident="sxc">Sikan</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+               <term ana="#function.lex_sacra" ref="https://ontology.inscriptiones.org/type_of_inscription/Lex_sacra">lex sacra</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc status="draft">
+         <listChange>
+            <change when="2026-05-17" who="#JP">Jonathan Prag created draft file from publications</change>
+         </listChange>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile><surface/><!-- 
+      <surface type="front">
+            <graphic n="screen" url="ISic030112_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+            <graphic n="print" url="ISic030112.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
+            </graphic>
+         </surface> -->
+   </facsimile>
+   <text>
+      <body>
+         <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP"><!-- needs proofreading still -->
+            <div type="textpart" subtype="column" n="1">
+               <ab>
+               <cb n="1"/>
+                 <lb n="1"/><gap reason="lost" unit="character" quantity="8"/><gap reason="illegible" unit="character" quantity="1"/><orig>ΑΝ</orig><gap reason="lost" unit="character" quantity="4"/><orig><unclear>Α</unclear></orig><gap reason="lost" unit="character" extent="unknown"/>
+                  <lb n="2"/><gap reason="lost" unit="character" quantity="6"/><gap reason="illegible" unit="character" quantity="1"/><orig>ΔΕΜΑ</orig><gap reason="lost" unit="character" quantity="1"/><unclear>Α</unclear><gap reason="lost" unit="character" quantity="1"/><orig>ΤΕ Η<unclear>ΑΛ</unclear>ΑΤ<unclear>Ε</unclear>ΡΑ</orig><gap reason="lost" unit="character" quantity="1"/><orig>ΚΑ<unclear>ΙΟ</unclear></orig><gap reason="lost" unit="character" extent="unknown"/>
+                  <lb n="3"/><gap reason="lost" unit="character" quantity="4" cert="low"/><gap reason="illegible" unit="character" quantity="1"/><unclear>Β</unclear><gap reason="lost" unit="character" quantity="1"/> καταλ<supplied reason="lost">ε</supplied><unclear>ί</unclear>ποντας κα<unclear>τ</unclear>ͱαιγίζ<unclear>ε</unclear>ν δὲ τὸς ͱομοσεπύος <space unit="character" extent="unknown"/>
+                  <lb n="4"/><del rend="erasure"><gap reason="lost" unit="character" extent="unknown"/></del>
+                  <lb n="5"/><del rend="erasure"><gap reason="lost" unit="character" extent="unknown"/></del>
+                  <lb n="6"/><del rend="erasure"><gap reason="lost" unit="character" extent="unknown"/></del>
+                  <lb n="7"/>το͂ν ͱιαρο͂ν ͱα θυσία πρὸ Ϙοτυτίον καὶ τᾶς ἐχεχερίας πέν<unclear>π</unclear><supplied reason="lost">τοι</supplied>
+                  <lb n="8"/> ϝέτει ͱο͂ιπερ ͱόκα ͱα Ὀλυνπιὰς ποτείε· το͂ι Διὶ <g ref="#dipunct">⁚</g> το͂ι Εὐμενεῖ θύ<supplied reason="lost">ε</supplied><unclear>ν</unclear> <supplied reason="lost">καὶ</supplied>
+                  <lb n="9"/> ταῖς  <g ref="#dipunct">⁚</g> Εὐμενίδεσι <g ref="#dipunct">⁚</g> τέλεον, καὶ το͂ι Διὶ  <g ref="#dipunct">⁚</g> το͂ι Μιλιχίοι το͂ι  <g ref="#dipunct">⁚</g> ἐν Μύσϙο <g ref="#dipunct">⁚</g> τέλεον <g ref="#dipunct">⁚</g> τοῖς Τρ
+                  <lb n="10" break="no"/>ιτοπατρεῦσι <g ref="#interpunct">·</g> τοῖς <g ref="#interpunct">·</g> μιαροῖς ͱόσπερ τοῖς ͱερόεσι, ϝοῖνον ͱυπολͱεί
+                  <lb n="11" break="no"/>ψας <g ref="#interpunct">·</g> δι’ ὀρόφο <g ref="#interpunct">·</g> καὶ τᾶν μοιρᾶν τᾶν ἐνάταν <g ref="#interpunct">·</g> κατακα
+                  <lb n="12" break="no"/>ίεν <g ref="#interpunct">·</g> μίαν. θυόντο θῦμα <g ref="#dipunct">⁚</g> καὶ καταγιζόντο ͱοῖς ͱοσία <g ref="#interpunct">·</g> καὶ περιρά
+                  <lb n="13" break="no"/>ναντες καταλινάντο <g ref="#dipunct">⁚</g> κἔπειτα <g ref="#dipunct">⁚</g> τοῖς κ<supplied reason="omitted">α</supplied>θαροῖς <g ref="#dipunct">⁚</g> τέλεον θυόντο̄ <g ref="#dipunct">⁚</g> μελίκρατα ͱυπο
+                  <lb n="14"/>λείβον <g ref="#interpunct">·</g> καὶ τράπεζαν καὶ κλίναν κἐνβαλέτο καθαρὸν ͱε͂μα καὶ στεφά
+                  <lb n="15" break="no"/>νος ἐλαίας καὶ μελίκρατα ἐν καιναῖς ποτε̄ρίδ<unclear>ε</unclear><supplied reason="lost">σ</supplied>ι καὶ <g ref="#dipunct">⁚</g> πλάσματα καὶ κρᾶ κἀπ
+                  <lb n="16" break="no"/>αρξάμενοι κατακαάντο καὶ καταλινάντο <unclear>τ</unclear>ὰς ποτε̄ρίδας ἐνθέντε<unclear>ς</unclear>.
+                  <lb n="17"/>θυόν<unclear>τ</unclear>ο̄ ͱό̄σπερ τοῖς θεοῖς τὰ πατρο͂ια <g ref="#dipunct">⁚</g> το͂ι ἐν Εὐθυδάμο̄ Μιλιχίο̄ι <g ref="#dipunct">⁚</g> κριὸν <unclear>θ</unclear><supplied reason="lost">υ</supplied>
+                  <lb n="18" break="no"/>όντο̄. ἔστο̄ δὲ καὶ θῦμα πεδὰ ϝέτος θύε̄ν. τὰ δὲ ͱιαρὰ τὰ δαμόσια ἐξͱ<supplied reason="omitted">α</supplied>ιρέτο̄ καὶ τρά<supplied reason="lost">πεζα</supplied>
+                  <lb n="19" break="no"/>ν <g ref="#dipunct">⁚</g> προθέμεν καὶ ϙολέαν καὶ τἀπὸ τᾶς τραπέζας <g ref="#dipunct">⁚</g> ἀπάργματα καὶ τὀστέα κα<supplied reason="lost">τα</supplied>
+                  <lb n="20" break="no"/>κᾶαι <g ref="#interpunct">·</g> τὰ κρᾶ μἐχφερέτο̄. καλέ̄το̄ <supplied reason="lost">ͱ</supplied>όντινα λε͂ι. ἔστο̄ δὲ καὶ πεδὰ ϝέτ<supplied reason="lost">ος</supplied> <supplied reason="lost">ϝ</supplied>
+                  <lb n="21" break="no"/>οίϙοι θύεν <g ref="#dipunct">⁚</g> σφαζόντο δὲ <g ref="#dipunct">⁚</g> καὶ β<supplied reason="lost">ν</supplied> <supplied reason="lost">πρ</supplied>ὸ ἀγαλμάτο̄ν <gap reason="lost" unit="character" quantity="3"/><orig><unclear>Δ</unclear>ΕΣ</orig><gap reason="lost" unit="character" extent="unknown"/>
+                  <lb n="22"/> Ο θῦμα ͱότι κα προχο̄ρε͂ι τὰ πατρο͂<supplied reason="lost">ια</supplied><gap reason="lost" unit="character" quantity="1"/><orig>ΕΞΑΙ</orig><gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" unit="character" extent="unknown"/>
+                  <lb n="23"/><orig><unclear>Τ</unclear></orig><gap reason="lost" unit="character" quantity="2"/><orig>ΙΤΟΙΑΠΤΟΧΟΙ</orig> τρίτοι ϝέ<unclear>τ</unclear><supplied reason="lost">ει</supplied> <orig><unclear>Ε</unclear></orig><gap reason="lost" unit="character" extent="unknown"/>
+                  <lb n="24"/><gap reason="lost" unit="character" atLeast="7" atMost="8"/><orig><unclear>Ε</unclear>ΥΣΥΝ<unclear>Β</unclear></orig><gap reason="lost" unit="character" extent="unknown"/>
+            </ab>
+         </div>
+            <div type="textpart" subtype="column" n="2">
+               <ab>
+                  <cb n="2"/>
+                  <lb n="1"/><supplied reason="lost">αἴ</supplied> <unclear>κ</unclear>᾿ ἄ<unclear>ν</unclear>θρ<unclear>ο</unclear>̄<unclear>πο</unclear>ς <supplied reason="lost">αὐτορέκ</supplied>τ<supplied reason="lost">ας</supplied> <supplied reason="lost">ἐλ</supplied>αστέρο̄ν ἀποκα<supplied reason="lost">θαίρεσθαι</supplied>
+                  <lb n="2"/><supplied reason="lost">λε͂ι</supplied>, προειπὸ̄ν hόπο̄ κα λε͂ι<unclear> κ</unclear>αὶ το͂ ϝ<unclear>έ</unclear><supplied reason="lost">τ</supplied><unclear>ε</unclear>ος hοπ〈εί〉ο̄ κα λε͂ι καὶ <supplied reason="lost">το͂ με̄νὸς</supplied>
+                  <lb n="3"/>hοπείο̄ κα λε͂ι καὶ ἀμέραι hοπείαι κα λ<supplied reason="omitted">ε͂</supplied>ι, ποροειπὸ̄ν hὸπυι κα λε͂ι, καθαιρέσθο̄, <supplied reason="lost">Hο</supplied> <supplied reason="lost">hυ</supplied>
+                  <lb n="4" break="no"/>ποδεκόμενος ἀπονίψασθαι δότο̄ κἀκρατίξασθαι καὶ hάλα το͂ι αὐ<supplied reason="lost">τορέκ</supplied>
+                  <lb n="5" break="no"/><supplied reason="lost">τ</supplied>α θύσας το͂ι Δὶ χοῖρον ἐξ αὐτο͂ ἴτο καὶ περιστιραφέσθο̄
+                  <lb n="6"/>καὶ ποταγορέ̄σθο̄ καὶ σῖτον hαιρέ̄σθο καὶ καθευδέτο̄ hοπε̄ <unclear>κ</unclear>
+                  <lb n="7" break="no"/>α λε͂ι. αἴ τίς κα λε͂ι ξενικὸν ἒ πατρο͂ιον ἒ ᾿πακουστὸν ἒ ᾿φορατὸν
+                  <lb n="8"/>ἒ καὶ χὄντινα καθαίρεσθαι, τὸν αὐτὸν τρόπο<unclear>ν</unclear> <unclear>κ</unclear>αθαιρέσθο̄
+                  <lb n="9"/>hόνπερ hοὐτορέκτας ἐπεί κ᾿ἐλαστέρο̄ ἀποκαθάρε̄ται.
+                  <lb n="10"/>hιαρεῖον τέλεον ἐπὶ το͂ι βομο͂ι το͂ι δαμασίο̄ι θύσας καθαρὸ
+                  <lb n="11" break="no"/>ς ἔστο̄. διορίξας hαλὶ καὶ χρυσο͂ι ἀπορανάμενος ἀπίτο̄.
+                  <lb n="12"/>hόκα το͂ι Ἐλαστέρο̄ι χρέ̄ζει θύε̄ν, θύε̄ν hό̄σπερ τοῖς
+                  <lb n="13"/>ἀθανάτοισι. σφαζέτο̄ δ᾿ ἐς γᾶν.
+               </ab>
+            </div>
+         </div>
+         <div type="apparatus">
+           <listApp>
+              <app><note>Text of Dubois</note></app>
+           </listApp>
+         </div>
+         <div type="translation" xml:lang="en">
+            <p><!-- add your English translation here --></p>
+         </div>
+         <div type="translation" xml:lang="it">
+            <p><!-- add you Italian translation here (include source, if not yourself, in parentheses)--></p>
+         </div>
+         <div type="commentary">
+            <p><!-- add any commentary you wish here (and a resp attribute on the div element if so) --></p>
+         </div>
+         <div type="bibliography"><!-- lots to add still -->
+            <listBibl type="edition">
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>43.0630</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+               <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>44.0783</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>45.1413</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>46.1273</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>48.1250</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>49.1253</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>49.1327</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>50.1021</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>51.1387</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>52.0932bis</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>53.1032</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>56.1098</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="bulletin" n="SEG">
+                  <citedRange>58.1029</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>   
+                  <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+               </bibl>
+               <bibl type="corpus" n="IGASM1[2]">
+                  <author>Arena</author>
+                  <date>1996</date>
+                  <citedRange>104 no.53bis</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/BJUFRNS9"/>
+                  <ref target="https://biblio.inscriptiones.org/epig10001374">https://biblio.inscriptiones.org/epig10001374</ref>
+               </bibl>
+               <bibl type="corpus" n="IGDS2">
+                  <author>Dubois</author>
+                  <date>2008</date> 
+                  <citedRange>18</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/SM2KDHZC"/>
+                  <ref target="https://biblio.inscriptiones.org/epig10000160">https://biblio.inscriptiones.org/epig10000160</ref>
+               </bibl>
+               <bibl>
+                  <author>Kotansky</author>
+                  <date>2015</date> 
+                  <citedRange>127-134</citedRange>
+                  <ptr target="https://www.zotero.org/groups/382445/items/BF3A9Z63"/>
+              </bibl>
+            </listBibl>
+         </div>
+      </body>
+   </text>
+</TEI>

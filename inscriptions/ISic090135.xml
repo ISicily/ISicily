@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Dedication to a ‘Great Hero’</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="OC" ref="https://orcid.org/0009-0006-5165-8381">Oliver Clarke</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
+                <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority> 
+                <idno type="filename">ISic090135</idno>
+                <idno type="TM">110354</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic090135</idno>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Available under a CC BY-NC 4.0 License.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Poland</country>
+                        <repository role="museum">National Museum</repository><!-- Warsaw in modern location -->
+                        <collection/> 
+                        <idno type="inventory">198748</idno>
+                        <altIdentifier type="old"> <!-- XSLT output 'formerly' before content of altIdentifier with @type="former" -->
+                            <repository role="museum">Lyceum Hosianum</repository>
+                            <idno type="inventory">870</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>A plaque of black granite.</p>
+                                    <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/11.html">granite</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                        <dimensions>
+                                            <height unit="m">0.22</height>
+                                            <width unit="m">0.325</width>
+                                            <depth unit="m">0.75</depth>
+                                        </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Carefully cut letters with serifs. Superscript bar with vertical finials over the numeral in line 4.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="m">0.01-0.014</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="m"/>
+                                </dimensions>
+                                </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin><origPlace><region>Egypt</region>
+                                <placeName type="modern" ref="https://www.geonames.org/360829">El-Mahalla el-Kubra</placeName>
+                        </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0100" cert="low">150 – 100</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Probably El-Mahalla el-Kubra (Sebennyte Nome).</provenance>
+                        <provenance type="observed">Warsaw</provenance>
+                        <provenance type="observed" subtype="former">Braniewo</provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+                <language ident="cop">Coptic</language>
+                <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+                <language ident="cop">Coptic</language>
+                 <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                 <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                 <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.dedication" ref="https://ontology.inscriptiones.org/type_of_inscription/Dedication">dedication</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change who="#SS" when="2020-08-12">Created file, encoded metadata, text and apparatus.</change>
+                <change who="Kyriakos" when="2019">Initial pass of Greek text</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic090135_tiled.tif" height="2978px" width="4134px">
+                <desc>...</desc>
+            </graphic>
+            <graphic n="print" url="ISic090135.jpg" height="2978px" width="4134px">
+                <desc>...</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
+                <ab>
+                    <lb n="1"/><w lemma="ἥρως" rend="Ἥρωι" n="5">Ἥρωι</w> <w lemma="μέγας" rend="μεγάλωι" n="10">μεγάλωι</w> <w lemma="καί" rend="καὶ" n="15">καὶ</w> <w lemma="ὁ" rend="τοῖς" n="20">τοῖς</w>
+                    <lb n="2"/><w lemma="σύνναος" rend="συννάοις" n="25">συννάοις</w> <w lemma="θεός" rend="θεοῖς" n="30">θεοῖς</w> <w lemma="ὁ" rend="οἱ" n="35">οἱ</w> <w lemma="ἀπό" rend="ἀπὸ" n="40">ἀπὸ</w> <w lemma="ὁ" rend="τῆς" n="45">τῆς</w>
+                    <lb n="3"/><w lemma="πόλις" rend="πόλεως" n="50">πόλεως</w> <w lemma="γεοῦχος" rend="γεοῦχοι" n="55">γεοῦχοι</w> <w lemma="ἔτος" rend="ἔτους" n="60">ἔτους</w>
+                    <lb n="4"/><w lemma="ἔνατος" rend="ἐνάτου" n="65">ἐνάτου</w> <w n="70">Παχὼν</w> <space n="75"/> <num value="25">κε</num>
+                </ab>
+            </div>
+            <div type="apparatus"> <!-- references in note will go in @source on app once bibliography is encoded -->
+               <listApp>
+                   <app/>
+               </listApp>
+            </div>
+            <div type="translation">
+                <p>To the Great Hero and τhe gods who share the temple, the landowners of the city, the ninth year, Pachon 25.</p>
+            </div>
+            <div type="commentary">
+                <p>A dedication to an unnamed ‘Great Hero’ and other temple-sharing gods (synnaoi theoi), by the landowners ‘from the polis’ (presumably Alexandrians who have land in the Sebennyte Nome). There is some uncertainty about the provenance of the inscription. Rubensohn 1913 reported it as ’Mehallet el-Kebir’ in the Delta, an unattested toponym, but A. Bernand suggested El-Mahalla el-Kubra (see I. Varsovie, p. 153, Trismegistos GEO 3669).</p> 
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>Arvanitakis 1903, <citedRange>38, no. I</citedRange>I</bibl>
+                    <bibl>Rubensohn 1913, <citedRange>162, no. 8</citedRange></bibl>
+                    <bibl>I. Varsovie <citedRange>52</citedRange></bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>Wilcken 1913a, <citedRange>227</citedRange></bibl>
+                     <bibl>Roussel 1934, <citedRange>40, n. 5</citedRange></bibl>
+                     <bibl>I. Delta, <citedRange>p. 451</citedRange></bibl>
+                     <bibl>Ronchi 1975, <citedRange>680-681</citedRange></bibl>
+                     <bibl>Łajtar 1999, <citedRange>158, no. 65</citedRange></bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

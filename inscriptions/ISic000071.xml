@@ -64,15 +64,16 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Fragment of a marble plaque, the rear unfinished </p>
                                     <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions><!--ILPalermo-->
+                                        <height unit="cm">23.5</height>
+                                        <width unit="cm">23</width>
+                                        <depth unit="cm">5</depth>
                                     </dimensions>
                                 </support>
-                                <condition/>
+                                <condition ana="#condition.fragment"/>
 		    </supportDesc>
                             <layoutDesc>
                                 <layout>
@@ -82,10 +83,10 @@
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>Plain, narrow letters, very straight, without serifs</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="75" atMost="75">75</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -101,9 +102,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/10282151">Tindari</placeName>
                             	<geo>38.14227, 15.04385</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400">Roman imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Noted in the inventory as coming from Tindari</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -143,8 +144,8 @@
                 <language ident="sxc">Sikan</language>
             </langUsage>
             <textClass>
-                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html" cert="low">funerary</term>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.funerary" ref="https://ontology.inscriptiones.org/type_of_inscription/Funerary" cert="low">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -158,6 +159,7 @@
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
 	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2026-04-14" who="#JP">Jonathan Prag revised from publication</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -173,14 +175,15 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><abbr>s</abbr> <g ref="#interpunct">·</g> <abbr>l</abbr> <g ref="#interpunct">·</g> <abbr>f</abbr> <g ref="#interpunct">·</g> <abbr>f</abbr>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><abbr>s</abbr> <g ref="#interpunct">·</g> <abbr>l</abbr> <g ref="#interpunct">·</g> <abbr>f</abbr> <g ref="#interpunct">·</g> <abbr>f</abbr> <gap reason="illegible" unit="character" quantity="1"/><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of <hi rend="italic">IMusPalermo</hi></note></app>
+                    <app><note>Text of IMusPalermo checked against photograph</note></app>
+                    <app loc="1"><note>Bivona and Mommsen do not note the diagonal letter trace visible after the second F.</note></app>
                 </listApp>
             </div>
             <div type="translation">

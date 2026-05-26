@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Dedication to an association of landowners</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>Lemmatization</resp>
+                </respStmt>
+                <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority> 
+                <idno type="filename">ISic090080</idno>
+                <idno type="TM">58482</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic090080</idno>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Available under a CC BY-NC 4.0 License.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Egypt</country>
+                        <repository role="museum">Graeco-Roman Museum</repository> <!-- Alexandria in modern location -->
+                        <collection type="former">Private collection Stamati Vinga, without inv. number</collection> 
+                        <idno type="inventory">43</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>White marble plaque, its sides bevelled for insertion into a cavity.</p>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                        <dimensions>
+                                            <height unit="m">0.135</height>
+                                            <width unit="m">0.035</width>
+                                            <depth unit="m">0.06</depth>
+                                        </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>.
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Inscribed firmly if inelegantly with overlapping cuts and prominent bar serifs: alpha with broken and curving crossbar; mu has diverging, sigma almost parallel outer strokes, pi equal verticals and an overhanging top bar; upsilon has a short stem.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="m">0.008-0.011</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="m">0.017</height>
+                                </dimensions>
+                                </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Egypt</region>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/727070">Alexandria</placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/361058">Alexandria</placeName>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0150" notAfter-custom="-0030">150 – 30</origDate> 
+                        </origin>
+                        <provenance type="found">Probably from Alexandria.</provenance>
+                        <provenance type="observed">Alexandria</provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+                <language ident="cop">Coptic</language>
+                <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+                <language ident="cop">Coptic</language>
+                 <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                 <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                 <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.dedication" ref="https://ontology.inscriptiones.org/type_of_inscription/Dedication">dedication</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change who="#SS" when="2020-04-23">Created file, encoded metadata, text and apparatus.</change>
+                <change who="Kyriakos" when="2019">Initial pass of Greek text</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic090080_tiled.tif" height="1240px" width="4046px">
+                <desc>...</desc>
+            </graphic>
+            <graphic n="print" url="ISic090080.jpg" height="1240px" width="4046px">
+                <desc>...</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc">
+                <ab>
+                    <lb n="01"/><w n="5">Τῆι</w> <w lemma="σύνοδος" rend="συνόδωι" n="10">συνόδωι</w> <w lemma="ὁ" rend="τῶν" n="15">τῶν</w> <w lemma="συγγεοῦχος" rend="συνγεούχων" n="20">συνγεούχων</w>
+                    <lb n="02"/><w n="25">Πτολεμαῖος</w> <w n="30">Ἀλεξάνδρου</w>
+                    <lb n="03"/><w n="35">Αἰακιδεύς.</w> <w n="40">(</w> <w rend="ἔτους" n="45">ἔτους</w>) <w n="50">κ.</w>
+                </ab>
+            </div>
+            <div type="apparatus"><!-- references in note will go in @source on app once bibliography is encoded -->
+                   <p/>
+            </div> 
+            <div type="translation">
+                <p>To the association of fellow landowners, Ptolemaios the son of Alexandros, of the deme Aiakideus, (dedicated this), year 20.</p>
+            </div> 
+            <div type="commentary">
+                <p>This dedicatory plaque for an association of landowners is offered by an Alexandrian citizen with the impeccably dynastic name of Ptolemy the son of Alexander. The date in line 3 is cut slightly out of vertical alignment; the lettering of the inscription belongs to the later second or first century, so that year 20 is more likely to belong to the reign of Ptolemy X (95-4) or XII (62-1) than Ptolemy VI (162-1).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>Botti 1893, <citedRange>244, no. 15</citedRange></bibl>
+                    <bibl>I. Musée d’Alexandrie <citedRange>131</citedRange></bibl>
+                    <bibl>I. Alex. Ptol. <citedRange>46</citedRange></bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>Ziebarth 1896, <citedRange>213, no. 2</citedRange></bibl>
+                    <bibl>Botti 1898a, <citedRange>133, no. 126</citedRange></bibl>
+                    <bibl>Botti 1900, <citedRange>259, no. 24</citedRange></bibl>
+                    <bibl>Strack 1901, <citedRange>209, no. 27</citedRange></bibl>
+                    <bibl>Poland 1909, <citedRange>19, 61</citedRange></bibl>
+                    <bibl>San Nicolo 1937, <citedRange>163</citedRange></bibl>
+                    <bibl>Guéraud 1938, <citedRange>26</citedRange></bibl>
+                    <bibl>Pros. Ptol. <citedRange>IV 11703</citedRange></bibl>
+                    <bibl>Ptol. Alex. <citedRange>I, 42, 45</citedRange>, <citedRange>II, 115, n. 21</citedRange>, <citedRange>II, 128, n. 58</citedRange></bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

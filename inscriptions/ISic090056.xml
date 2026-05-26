@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Inscribed base of a statue in honour of the Chief Bodyguard Ptolemaios</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
+                    <resp>conversion to EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="OC" ref="https://orcid.org/0009-0006-5165-8381">Oliver Clarke</name>
+                    <resp>named entity annotation</resp>
+                </respStmt>
+                <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority> 
+                <idno type="filename">ISic090056</idno>
+                <idno type="TM">6315</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic090056</idno>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Available under a CC BY-NC 4.0 License.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <repository role="museum">Museo Egiziano</repository> <!-- Turin in modern location -->
+                        <collection>formerly private collection Millingen</collection> 
+                        <idno type="inventory">7147</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Green basalt base, with a cutting in its upper surface, to a depth of 0.075, 0.27 wide and 0.24 across, to mount a statue.</p>
+                                    <material ana="#material.inorganic.stone.magmatic_rock.basalt" type="stone.basalt" subtype="unspecified" ref="http://www.eagle-network.eu/voc/material/lod/28.html">basalt</material>
+                                    <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
+                                    <dimensions>
+                                         <height unit="m">0.25</height>
+                                         <width unit="m">0.47</width>
+                                         <depth unit="m">0.37</depth>
+                                     </dimensions>
+                                </support>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Regular lettering with short serifs at the end of some letter strokes (epsilon, sigma, tau, upsilon, omega): alpha has a straight crossbar, pi a shorter right vertical and projecting top bar; sigma has parallel, mu parallel and slightly diverging outer strokes; round letters are for the most part almost full size: theta has a central point; omega has prominant finials, and phi an extended stem.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="m">0.015</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="m">0.01</height>
+                                </dimensions>
+                                </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Egypt</region>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/727070">Alexandria</placeName>
+                                <placeName type="modern" ref="http://www.geonames.org/361058">Alexandria</placeName>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0182" notAfter-custom="-0180">182 – 180</origDate> 
+                        </origin>
+                        <provenance type="found" subtype="discovered" when="1814">Alexandria, found by Drovetti in 1814 (letter of J. A. Bramsen).</provenance>
+                        <provenance type="observed">Turin.</provenance>
+                        <provenance type="observed" subtype="former">Livorno</provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+                <language ident="cop">Coptic</language>
+                 <language ident="egy-Egyd">Egyptian in Demotic script</language>
+                 <language ident="egy-Egyh">Egyptian in Hieratic script</language>
+                 <language ident="egy-Egyp">Egyptian Hieroglyphic</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.honorific" ref="https://ontology.inscriptiones.org/type_of_inscription/Honorific">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change who="#SS" when="2020-03-20">Created file, encoded metadata, text and apparatus.</change>
+                <change who="Kyriakos" when="2019">Initial pass of Greek text</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic090056_tiled.tif" height="1752px" width="3500px">
+                <desc>...</desc>
+            </graphic>
+            <graphic n="print" url="ISic090056.jpg" height="1752px" width="3500px">
+                <desc>...</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc">
+                <ab>
+                    <lb n="1"/><w lemma="Πτολεμαῖονς" rend="Πτολεμαῖον" n="5"><supplied reason="lost">Πτο</supplied>λεμαῖον</w> <w lemma="ὁ" rend="τὸν" n="10">τὸν</w> <w lemma="ἀρχισωματόφυλαξ" rend="ἀρχισωματοφύλακα" n="15">ἀρχισωματοφύλακα</w>
+                    <lb n="2"/><w lemma="καί" rend="καὶ" n="20">καὶ</w> <w lemma="ἀρχικύνηγος" rend="ἀρχικύνηγον" n="25">ἀρχικύνηγον</w> <w lemma="ὁ" rend="τὸν" n="30">τὸν</w> <w n="35">Πτολεμαίου</w>
+                    <lb n="3"/><w lemma="ὁ" rend="τῶν" n="40">τῶν</w> <w lemma="πρῶτος" rend="πρώτων" n="45">πρώτων</w> <w lemma="φίλος" rend="φίλων" n="50">φίλων</w> <w lemma="καί" rend="καὶ" n="55">καὶ</w> <w lemma="ἀρχικύνηγος" rend="ἀρχικυνήγου" n="60">ἀρχικυνήγου</w> <w lemma="ὑιός" rend="υἱὸν" n="65">υἱὸν</w>
+                    <lb n="4"/><w lemma="ὁ" rend="τὸ" n="70">τὸ</w> <w lemma="κοινόν" rend="κοινὸν" n="75">κοινὸν</w> <w lemma="ὁ" rend="τῶν" n="80">τῶν</w> <w n="85">Λυκίων</w> <space n="90"/> <w lemma="ἀρετῆς" rend="ἀρετῆς" n="95">ἀρετῆς</w> <w lemma="ἕνεκεν" rend="ἕνεκεν" n="100">ἕνεκεν</w>
+                    <lb n="5"/><w lemma="καί" rend="καὶ" n="105">καὶ</w> <w lemma="εὔνοιας" rend="εὐνοίας" n="110">εὐνοίας</w> <w lemma="ὅς" rend="ἧς" n="115">ἧς</w> <w lemma="ὁ" rend="ὁ " n="120">ὁ</w> <w n="125">πατὴρ</w> <w lemma="αὐτός" rend="αὐτοῦ" n="130">αὐτοῦ</w> <w lemma="διατελέω" rend="διατελεῖ" n="135">διατελεῖ</w>
+                    <lb n="6"/><w lemma="παρέχω" rend="παρεχόμενος" n="140">παρεχόμενος</w> <w lemma="εἰς" rend="εἴς" n="145">εἴς</w> <w lemma="τε" rend="τε" n="150">τε</w> <w lemma="βασιλεύς" rend="βασιλέα" n="155">βασιλέα</w> <w n="160">Πτολεμαῖον</w>
+                    <lb n="7"/><w lemma="καί" rend="καὶ" n="165">καὶ</w> <w lemma="ὁ" rend="τὴν" n="170">τὴν</w> <w lemma="ἀδελφή" rend="ἀδελφὴν" n="175">ἀδελφὴν</w> <w lemma="βασίλισσα" rend="βασίλισσαν" n="180">βασίλισσαν</w> <w n="185">Κλεοπάτραν</w>
+                    <lb n="8"/><w lemma="θεός" rend="θεοὺς" n="190">θεοὺς</w> <w lemma="ἐπιφανής" rend="Ἐπιφανεῖς" n="195">Ἐπιφανεῖς</w> <w lemma="καί" rend="καὶ" n="200">καὶ</w> <w lemma="εὐχάριστος" rend="Εὐχαρίστους" n="205">Εὐχαρίστους</w> <w lemma="καί" rend="καὶ" n="210">καὶ</w> <w lemma="ὁ" rend="τὰ" n="215">τὰ</w> <w lemma="τέκνον" rend="τέκνα" n="220">τέκνα</w>
+                    <lb n="9"/><w lemma="καί" rend="καὶ" n="225">καὶ</w> <w lemma="εἰς" rend="εἰς" n="230">εἰς</w> <w lemma="ὁ" rend="τὸ" n="235">τὸ</w> <w lemma="κοινόν" rend="κοινὸν" n="240">κοινὸν</w> <w lemma="ὁ" rend="τῶν" n="245">τῶν</w> <w n="250">Λυκίων</w>
+                </ab>
+            </div>
+            <div type="apparatus"> <!-- references in note will go in @source on app once bibliography is encoded -->
+                    <listApp>
+                        <app>
+                            <note>1. The reading here reflects the present state of the stone from a photograph; Letronne recorded the first three letters but these were already missing from Cordero de S. Quintino’s copy in 1823.</note>
+                        </app>
+                        <app loc="8">
+                            <rdg>καὶ Εὐχαρίστους <note>omitted in OGIS</note></rdg>
+                        </app>
+                        <app loc="9">
+                            <rdg>τὸ κοινὸν τὸν Λυκίων <note>Cordero de S. Quintino, followed by CIG</note></rdg>
+                            <rdg>τὸ κοινὸν τ⟨ῶ⟩ν Λυκίων <note>OGIS</note></rdg>
+                        </app>
+                    </listApp>
+            </div>
+            <div type="translation">
+                <p>The association of the Lycians (honours) Ptolemaios, the Chief Bodyguard (archisomatophylax) and Master of the Royal Hunt (archikynegos), the son of Ptolemaios, One of the First Friends and Master of the Royal Hunt, for his excellence and the goodwill that his father continues to show to both King Ptolemy and Queen Kleopatra, gods Epiphaneis and Eucharistoi and their children and to the association of the Lycians.</p>
+            </div>
+            <div type="commentary">
+                <p>The honorand and his father were substantial figures in the Ptolemaic court: Ptolemaios and his father and the latter’s wife Agathokleia appear as beneficiaries of a ὑπέρ formula c. 187-184 in a dedication from Philae to Ptolemy V and Kleopatra I and Isis by the garrison commander Kleon (440)<!-- link to inscription --> The association (koinon) of Lycians which honoured Ptolemaios has been identified as the Lycian Federal League (so Bagnall 1976a, Lazzarini 1980) rather than a local association of Lycian soldiers such as the association of Thracian Tralleis which honoured a First Friend in 55<!-- link to inscription --> above. However Lanciers 2017 has now argued convincingly that ties between the Ptolemies and Lycia after 196 BC are at best limited  and that the koinon of Lycians should be understood here as an association of Lycian military personnel in Alexandria, comparable to the association of Thracian Tralleis in 55<!-- link to inscription -->.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>Letronne 1823, <citedRange>52-61</citedRange></bibl>
+                    <bibl>Cordero de S. Quintino 1823, <citedRange>206-207</citedRange> 
+                        (= <bibl>CIG <citedRange>3 4677</citedRange>, from Minutoli’s copy</bibl>
+                        <bibl>Dynastie, <citedRange>246, no. 77</citedRange></bibl> 
+                        <bibl>Michel 1900, <citedRange>1314</citedRange></bibl> 
+                        <bibl>OGIS <citedRange>1 99</citedRange></bibl> 
+                        <bibl>SB <citedRange>5 8274</citedRange></bibl>)</bibl>
+                    <bibl>De Meulenaere 1977, <citedRange>122-124</citedRange> 
+                        (= <bibl>SEG <citedRange>27 1029</citedRange></bibl>
+                        <bibl>Lazzarini 1980, <citedRange>129-136</citedRange></bibl> 
+                        <bibl>SEG <citedRange>30 1721</citedRange></bibl>)</bibl>
+                    <bibl>I. Alex. Ptol. <citedRange>27</citedRange></bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>Bramsen 1818, <citedRange>I, 181-182</citedRange> (discovery)</bibl>
+                <bibl>Wilhelm 1898, <citedRange>211</citedRange></bibl>
+                <bibl>Bagnall 1976a, <citedRange>110 with n. 111</citedRange> (Lycian koinon)</bibl>
+                <bibl>Mooren 1981b (family of Ptolemaios)</bibl>
+                <bibl>SEG <citedRange>31 1482</citedRange></bibl>
+                <bibl>Lanciers 2017 (not the Lycian League)</bibl>
+                <bibl>Lanciers 2018, <citedRange>56-7, 60-61</citedRange> (family of Ptolemaios)</bibl>
+                <bibl>Fisher-Bovet 2020 (dedications by associations of soldiers)</bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
