@@ -1,1 +1,96 @@
 
+# .github/workflows/generate-manifests.yml
+#
+# When XML files change, detect which ones, build their raw GitHub URLs,
+# and POST them to the webhook server on iiif.csad.ox.ac.uk.
+# The server downloads the files and runs the manifest generator itself.
+# No SSH keys. No rsync. Just one HTTP call.
+
+name: Generate IIIF Manifests
+
+on:
+  push:
+    paths:
+      - "inscriptions/**.xml"
+  workflow_dispatch:
+    inputs:
+      full_rebuild:
+        description: "Rebuild all manifests"
+        type: boolean
+        default: false
+
+jobs:
+  notify-webhook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed XML files
+        id: changed
+        run: |
+          if [ "${{ github.event.inputs.full_rebuild }}" = "true" ]; then
+            echo "mode=full" >> $GITHUB_OUTPUT
+          else
+            CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'inscriptions/*.xml')
+            echo "Changed files: $CHANGED"
+            if [ -z "$CHANGED" ]; then
+              echo "mode=none" >> $GITHUB_OUTPUT
+            else
+              echo "mode=incremental" >> $GITHUB_OUTPUT
+              JSON_URLS=$(echo "$CHANGED" | python3 -c "
+          import sys, json
+          repo = 'ISicily/ISic-greek-names-testing'
+          branch = 'main'
+          files = [f.strip() for f in sys.stdin if f.strip()]
+          urls = [f'https://raw.githubusercontent.com/{repo}/{branch}/{f}' for f in files]
+          print(json.dumps(urls))
+          ")
+              echo "urls=$JSON_URLS" >> $GITHUB_OUTPUT
+              echo "count=$(echo "$CHANGED" | wc -l)" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Skip if no changes
+        if: steps.changed.outputs.mode == 'none'
+        run: echo "No XML files changed — nothing to do"
+
+      - name: Trigger manifest generation
+        if: steps.changed.outputs.mode != 'none'
+        run: |
+          if [ "${{ steps.changed.outputs.mode }}" = "full" ]; then
+            PAYLOAD='{"secret":"${{ secrets.WEBHOOK_SECRET }}","files":[],"full_rebuild":true}'
+          else
+            URLS='${{ steps.changed.outputs.urls }}'
+            PAYLOAD="{\"secret\":\"${{ secrets.WEBHOOK_SECRET }}\",\"files\":$URLS,\"full_rebuild\":false}"
+          fi
+
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X POST \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD" \
+            --max-time 300 \
+            "${{ secrets.WEBHOOK_URL }}/webhook")
+
+          HTTP_BODY=$(echo "$RESPONSE" | head -n -1)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n 1)
+
+          echo "HTTP status: $HTTP_CODE"
+          echo "Response: $HTTP_BODY"
+
+          if [ "$HTTP_CODE" != "200" ]; then
+            echo "Webhook failed with status $HTTP_CODE"
+            exit 1
+          fi
+
+          echo "$HTTP_BODY" | python3 -c "
+          import json, sys
+          r = json.load(sys.stdin)
+          print(f'Status:  {r[\"status\"]}')
+          print(f'Updated: {len(r.get(\"updated\", []))} manifest(s)')
+          for f in r.get('updated', []): print(f'  v {f}')
+          for f in r.get('failed',  []): print(f'  x {f[\"file\"]}: {f[\"error\"]}')
+          "
