@@ -43,10 +43,10 @@ jobs:
               echo "mode=incremental" >> $GITHUB_OUTPUT
               JSON_URLS=$(echo "$CHANGED" | python3 -c "
           import sys, json
-          repo = 'ISicily/ISicily'
-          branch = 'master'
+          repo = '${{ github.repository }}'
+          sha = '${{ github.sha }}'
           files = [f.strip() for f in sys.stdin if f.strip()]
-          urls = [f'https://raw.githubusercontent.com/{repo}/{branch}/{f}' for f in files]
+          urls = [f'https://raw.githubusercontent.com/{repo}/{sha}/{f}' for f in files]
           print(json.dumps(urls))
           ")
               echo "urls=$JSON_URLS" >> $GITHUB_OUTPUT
