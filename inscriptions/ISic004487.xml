@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>A stone monetary weight</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+               <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>research, autopsy, editing</resp>
+                </respStmt>
+               </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic004487</idno>
+                <idno type="TM">492399 </idno>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS">39300394</idno>
+                <idno type="PHI">195557</idno>
+                <idno type="PHI">175427</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004487</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory">13316</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>A rounded river-stone of compact limestone, of elliptical shape, worked so that it is flattened on two sides. Weight 17.51 gr.</p>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite" type="stone.calcarenite" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.pebble" ref="https://www.eagle-network.eu/voc/objtyp/lod/1986.html">pebble</objectType>
+                                    <dimensions>
+                                        <height unit="cm">2.8</height>
+                                        <width unit="cm">1.8</width>
+                                        <depth unit="cm"/>
+                                        </dimensions>
+                                </support>
+                                <condition ana="#condition.complete "/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Two lines, perhaps inscribed at different times</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage ana="#text_condition.complete"/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="6" atMost="6">6</height>
+                                </dimensions>
+                                <locus from="line2" to="line2">Line 2</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm" atLeast="2" atMost="2">2</height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462068">Acrae</placeName>		
+                                <offset>near
+                                    <placeName type="modern" ref="http://sws.geonames.org/2523922">Palazzolo Acreide</placeName>
+                                </offset>
+                            	<geo>37.05780, 14.89346</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0500" notAfter-custom="-0475" evidence="le">Early fifth century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">From Palazzolo but without more specific context, acquired by Orsi in 1893.</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#VM">Mignose</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.measure.weight" ref="https://ontology.inscriptiones.org/type_of_inscription/Weight">weight</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+              <change when="2026-06-08" who="#JP">Jonathan Prag created draft file from publication</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/>
+        <surface type="front">
+            <graphic n="screen" url="ISic004487_tiled.tif" height="5615px" width="6299px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo archeologico regionale di Siracusa</desc>
+            </graphic>
+            <graphic n="print" url="ISic004487.jpg" height="5615px" width="6299px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo archeologico regionale di Siracusa</desc>
+            </graphic>
+         </surface>
+        <surface type="rear">
+            <graphic n="screen" url="ISic004487_rear_tiled.tif" height="5615px" width="6299px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo archeologico regionale di Siracusa</desc>
+            </graphic>
+            <graphic n="print" url="ISic004487_rear.jpg" height="5615px" width="6299px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo Museo archeologico regionale di Siracusa</desc>
+            </graphic>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1"/>δίκαιο<supplied reason="omitted">ς</supplied>
+                    <lb n="2"/>στατέ̄ρ
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text of Mignosa</note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p>A just (or 'legal') stater</p>
+            </div>
+            <div type="commentary">
+                <p></p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Pugliese Carratelli</author>
+                        <date>1956</date>
+                        <citedRange>no.17</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/PJDRZH66"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001394">https://biblio.inscriptiones.org/epig10001394</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Orsi</author>
+                        <date>1900</date>
+                        <citedRange>43 no.5</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/UE3VRJA7"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001707">https://biblio.inscriptiones.org/epig10001707</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Willers</author>
+                        <date>1905</date>
+                        <citedRange>346-347 fig.4</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/5EAJX28I"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001511">https://biblio.inscriptiones.org/epig10001511</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Guarducci</author>
+                        <date>1969</date>
+                        <citedRange>475-476 fig.117</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/Z9VHMSXN"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000355">https://biblio.inscriptiones.org/epig10000355</ref>
+                    </bibl>
+                    <bibl type="corpus" n="IGDS1">
+                        <author>Dubois</author>
+                        <date>1989</date>
+                        <citedRange>
+                            <ref target="http://www.persee.fr/doc/efr_0000-0000_1989_cat_119_1">108</ref>
+                        </citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/RWXNUFEX"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Arena</author>
+                        <date>1998</date>
+                        <citedRange>no.79</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/KMTS6RQX"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000637">https://biblio.inscriptiones.org/epig10000637</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Manenti and Mignosa</author>
+                        <date>2024</date>
+                        <citedRange>117 no.3 fig.7-8</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/XJUBNCHS"/>
+                    </bibl>
+                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
