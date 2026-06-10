@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,11 +24,18 @@
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name>
+                    <resp>Petrographic observation and analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -75,12 +84,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -98,34 +107,34 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0500" cert="low">Christian</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Catacomb of S.Giovanni (Also labelled S.G. 06)</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -155,13 +164,14 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-09-02" who="#TA"> Tuuli Ahlholm revised the Epidoc, encoded the text, added an apparatus and translation.</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2026-06-10" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -172,22 +182,41 @@
             <graphic n="print" url="ISic000458.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la">
                 <ab>
-                    <lb n="1"/><supplied reason="lost">In</supplied> <supplied reason="lost">ho</supplied><unclear>c</unclear> tum<supplied reason="lost">ulo</supplied>
-                    <lb n="2"/><unclear>requies</unclear><supplied reason="lost">ci</supplied>t puel<supplied reason="lost">la</supplied> <supplied reason="lost">no</supplied>
-                    <lb n="3" break="no"/>mine Bo<unclear>n</unclear><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">quae</supplied>
-                    <lb n="4"/><unclear>vixit</unclear> <expan><abbr>pl</abbr><ex>us</ex></expan> <expan><abbr>m</abbr><ex>inus</ex></expan> ann<supplied reason="lost">os</supplied> 
-                    <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><w n="5"><supplied reason="lost">In</supplied></w> <w n="10"><supplied reason="lost">ho</supplied><unclear>c</unclear></w> <w n="15">tum<supplied reason="lost">ulo</supplied></w>
+                    <lb n="2"/><w n="20"><unclear>requies</unclear><supplied reason="lost">ci</supplied>t</w> <w n="25">puel<supplied reason="lost">la</supplied></w> <w n="30"><supplied reason="lost">no</supplied>
+                    <lb n="3" break="no"/>mine</w> <name><w n="35">Bo<unclear>n</unclear></w></name> <gap reason="lost" extent="unknown" unit="character" n="40"/> <w n="45"><supplied reason="lost">quae</supplied></w>
+                    <lb n="4"/><w n="50"><unclear>vixit</unclear></w> <w n="55"><expan><abbr>pl</abbr><ex>us</ex></expan></w> <w n="60"><expan><abbr>m</abbr><ex>inus</ex></expan></w> <w n="65">ann<supplied reason="lost">os</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="70"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="in">In</w>
+                    <w n="10" lemma="hic">hoc</w>
+                    <w n="15" lemma="tumulus">tumulo</w>
+                    <w n="20" lemma="requiesco">requiescit</w>
+                    <w n="25" lemma="puella">puella</w>
+                    <w n="30" lemma="nomen">nomine</w>
+                    <w n="35" lemma="NOLEMMA">Bon</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="40"><desc>[-?-]</desc></gap>
+                    <w n="45" lemma="qui">quae</w>
+                    <w n="50" lemma="vivo">vixit</w>
+                    <w n="55" lemma="multus">plus</w>
+                    <w n="60" lemma="paruus">minus</w>
+                    <w n="65" lemma="annus">annos</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="70"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of Griesheimer 1989</note></app>
+                    <app>
+                        <note>Text of Griesheimer 1989</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#TA">
@@ -206,19 +235,24 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650770">7180</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>1990.0436</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl>
                         <author>Griesheimer</author>
                         <date>1989</date>
                         <citedRange>150 no.6</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/B29C27GP"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001939">https://biblio.inscriptiones.org/epig10001939</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001939">https://biblio.inscriptiones.org/epig10001939</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

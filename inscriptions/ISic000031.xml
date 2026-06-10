@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -22,11 +24,18 @@
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name>
+                    <resp>Petrographic observation and analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -73,12 +82,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -96,11 +105,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
-                            	<geo>38.13205, 13.33561</geo>
-		</origPlace>
+                                <geo>38.13205, 13.33561</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200">2nd century CE</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
@@ -111,18 +121,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -153,14 +163,15 @@
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2017-11-16" who="#JP">Jonathan Prag edited a bibl element</change>
                 <change when="2018-05-03" who="#TA">Tuuli Ahlholm cleaned up the autogenerated EpiDoc and added an apparatus</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-	   <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-03-01" who="#JP">Jonathan Prag added images</change>
-	</listChange>
+                <change when="2026-06-10" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -183,26 +194,168 @@
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost" cert="low"><roleName type="civic" subtype="curator">curatori</roleName></supplied> <supplied reason="lost">kalendarii</supplied> <gap reason="lost" extent="unknown" unit="character"/>iani <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> mera <g ref="#interpunct">·</g> fide <g ref="#interpunct">·</g> admi
-                    <lb n="2" break="no"/><supplied reason="lost">nistravit</supplied> <supplied reason="lost"><g ref="#interpunct">·</g></supplied> <supplied reason="lost">eodemque</supplied> <supplied reason="lost"><g ref="#interpunct">·</g></supplied> <supplied reason="lost">tempore</supplied> <g ref="#interpunct">·</g> <roleName type="civic" subtype="curator"><expan><abbr>cur</abbr><ex>ator</ex></expan></roleName> <g ref="#interpunct">·</g> portensis <g ref="#interpunct">·</g> <expan><abbr>kal</abbr><ex>endarii</ex></expan> <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> singulari
-                    <lb n="3"/><supplied reason="lost">diligentia</supplied> <supplied reason="lost">tractavit</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">l</supplied>audabili <g ref="#interpunct">·</g> munerario <g ref="#interpunct">·</g> qui <g ref="#interpunct">·</g> indulgentia
-                    <lb n="4"/><supplied reason="lost">sacra</supplied> <supplied reason="lost">cum</supplied> <supplied reason="lost">munus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">ex</supplied>hibuit <g ref="#interpunct">·</g> <choice><orig>illut</orig><reg>illud</reg></choice> <g ref="#interpunct">·</g> meruit <g ref="#interpunct">·</g> optando <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> voluit
-                    <lb n="5"/><supplied reason="lost">et</supplied> <supplied reason="lost">universis</supplied> <supplied reason="lost">civibus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">e</supplied>ditionem <g ref="#interpunct">·</g> gratissimam <g ref="#interpunct">·</g> reddidit <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> die
-                    <lb n="6" break="no"/><supplied reason="lost">bus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">populum</supplied> <supplied reason="lost">per</supplied> <supplied reason="lost">multa</supplied>s <g ref="#interpunct">·</g> horas <g ref="#interpunct">·</g> theatri <g ref="#interpunct">·</g> voluptas <g ref="#interpunct">·</g> tenuit <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> hilaris
-                    <lb n="7"/><supplied reason="lost">totus</supplied> <supplied reason="lost">in</supplied> <supplied reason="lost">harenam</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">inde</supplied> <supplied reason="lost">a</supplied> <supplied reason="lost">m</supplied>eridie <g ref="#interpunct">·</g> transiit <g ref="#interpunct">·</g> in <g ref="#interpunct">·</g> qua <g ref="#interpunct">·</g> miratus <g ref="#interpunct">·</g> honestissimum
-                    <lb n="8"/><supplied reason="lost">apparatum</supplied> <supplied reason="lost">instructum</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">omni</supplied> genere <g ref="#interpunct">·</g> herbariarum <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> numerosas <g ref="#interpunct">·</g> orientales
-                    <lb n="9"/><supplied reason="lost">bestias</supplied> <supplied reason="lost">versatusque</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">inde</supplied> <supplied reason="lost">a</supplied> meridie <g ref="#interpunct">·</g> in <g ref="#interpunct">·</g> utriusque <g ref="#interpunct">·</g> caveis <g ref="#interpunct">·</g> <choice><orig>varis</orig><reg>variis</reg></choice> <g ref="#interpunct">·</g> missionibus
-                    <lb n="10"/><supplied reason="lost">delectatus</supplied> <supplied reason="lost">est</supplied> <supplied reason="lost">idemque</supplied> <supplied reason="lost">ex</supplied> <supplied reason="lost">indulg</supplied>entia <g ref="#interpunct">·</g> sacra <g ref="#interpunct">·</g> specialiter <g ref="#interpunct">·</g> meruit <g ref="#interpunct">·</g> at <g ref="#interpunct">·</g> cultum
-                    <lb n="11"/><supplied reason="lost">epulum</supplied> <supplied reason="lost">instructumque</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">a</supplied>mplissimo <g ref="#interpunct">·</g> apparatu <g ref="#interpunct">·</g> <roleName type="civic" subtype="civis">cives</roleName> <g ref="#interpunct">·</g> suos <g ref="#interpunct">·</g> universos
-                    <lb n="12"/><supplied reason="lost">ut</supplied> <supplied reason="lost">vocaret</supplied> <supplied reason="lost">cui</supplied> <supplied reason="lost">cum</supplied> <supplied reason="lost">populus</supplied> <supplied reason="lost">propter</supplied> voluptates <g ref="#interpunct">·</g> honeste <g ref="#interpunct">·</g> exhibitas <g ref="#interpunct">·</g> ad <g ref="#interpunct">·</g> augendam
-                    <lb n="13"/><supplied reason="lost">optimi</supplied> <supplied reason="lost">viri</supplied> <supplied reason="lost">honorificentiam</supplied> <supplied reason="lost">frequ</supplied>entissimis <g ref="#interpunct">·</g> vocibus <g ref="#interpunct">·</g> bigas <g ref="#interpunct">·</g> centuriatim
-                    <lb n="14"/><supplied reason="lost">postulasset</supplied> <supplied reason="lost">motus</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost">verec</supplied>undia <g ref="#interpunct">·</g> quod <g ref="#interpunct">·</g> esset <g ref="#interpunct">·</g> duabus <g ref="#interpunct">·</g> bigiis <g ref="#interpunct">·</g> et <g ref="#interpunct">·</g> <expan><abbr>equestri</abbr><ex>bus</ex></expan>
-                    <lb n="15"/><supplied reason="lost" cert="low">statuis</supplied> <supplied reason="lost">tribus</supplied> <supplied reason="lost">contentus</supplied><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="5"/> <w n="10"><supplied reason="lost" cert="low"><roleName type="civic" subtype="curator">curatori</roleName></supplied></w> <w n="15"><supplied reason="lost">kalendarii</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="20"/> <w n="25">iani</w> <g ref="#interpunct" n="30">·</g> <w n="35">quod</w> <g ref="#interpunct" n="40">·</g> <w n="45">mera</w> <g ref="#interpunct" n="50">·</g> <w n="55">fide</w> <g ref="#interpunct" n="60">·</g> <w n="65">admi
+                    <lb n="2" break="no"/><supplied reason="lost">nistravit</supplied></w> <supplied reason="lost"><g ref="#interpunct" n="70">·</g></supplied> <w n="75"><supplied reason="lost">eodemque</supplied></w> <supplied reason="lost"><g ref="#interpunct" n="80">·</g></supplied> <w n="85"><supplied reason="lost">tempore</supplied></w> <g ref="#interpunct" n="90">·</g> <roleName type="civic" subtype="curator"><w n="95"><expan><abbr>cur</abbr><ex>ator</ex></expan></w></roleName> <g ref="#interpunct" n="100">·</g> <w n="105">portensis</w> <g ref="#interpunct" n="110">·</g> <w n="115"><expan><abbr>kal</abbr><ex>endarii</ex></expan></w> <g ref="#interpunct" n="120">·</g> <w n="125">quod</w> <g ref="#interpunct" n="130">·</g> <w n="135">singulari</w>
+                    <lb n="3"/><w n="140"><supplied reason="lost">diligentia</supplied></w> <w n="145"><supplied reason="lost">tractavit</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="150"/> <w n="155"><supplied reason="lost">l</supplied>audabili</w> <g ref="#interpunct" n="160">·</g> <w n="165">munerario</w> <g ref="#interpunct" n="170">·</g> <w n="175">qui</w> <g ref="#interpunct" n="180">·</g> <w n="185">indulgentia</w>
+                    <lb n="4"/><w n="190"><supplied reason="lost">sacra</supplied></w> <w n="195"><supplied reason="lost">cum</supplied></w> <w n="200"><supplied reason="lost">munus</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="205"/> <w n="210"><supplied reason="lost">ex</supplied>hibuit</w> <g ref="#interpunct" n="215">·</g> <w n="220"><choice><orig n="225">illut</orig><reg>illud</reg></choice></w> <g ref="#interpunct" n="230">·</g> <w n="235">meruit</w> <g ref="#interpunct" n="240">·</g> <w n="245">optando</w> <g ref="#interpunct" n="250">·</g> <w n="255">quod</w> <g ref="#interpunct" n="260">·</g> <w n="265">voluit</w>
+                    <lb n="5"/><w n="270"><supplied reason="lost">et</supplied></w> <w n="275"><supplied reason="lost">universis</supplied></w> <w n="280"><supplied reason="lost">civibus</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="285"/> <w n="290"><supplied reason="lost">e</supplied>ditionem</w> <g ref="#interpunct" n="295">·</g> <w n="300">gratissimam</w> <g ref="#interpunct" n="305">·</g> <w n="310">reddidit</w> <g ref="#interpunct" n="315">·</g> <w n="320">quod</w> <g ref="#interpunct" n="325">·</g> <w n="330">die
+                    <lb n="6" break="no"/><supplied reason="lost">bus</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="335"/> <w n="340"><supplied reason="lost">populum</supplied></w> <w n="345"><supplied reason="lost">per</supplied></w> <w n="350"><supplied reason="lost">multa</supplied>s</w> <g ref="#interpunct" n="355">·</g> <w n="360">horas</w> <g ref="#interpunct" n="365">·</g> <w n="370">theatri</w> <g ref="#interpunct" n="375">·</g> <w n="380">voluptas</w> <g ref="#interpunct" n="385">·</g> <w n="390">tenuit</w> <g ref="#interpunct" n="395">·</g> <w n="400">et</w> <g ref="#interpunct" n="405">·</g> <w n="410">hilaris</w>
+                    <lb n="7"/><w n="415"><supplied reason="lost">totus</supplied></w> <w n="420"><supplied reason="lost">in</supplied></w> <w n="425"><supplied reason="lost">harenam</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="430"/> <w n="435"><supplied reason="lost">inde</supplied></w> <w n="440"><supplied reason="lost">a</supplied></w> <w n="445"><supplied reason="lost">m</supplied>eridie</w> <g ref="#interpunct" n="450">·</g> <w n="455">transiit</w> <g ref="#interpunct" n="460">·</g> <w n="465">in</w> <g ref="#interpunct" n="470">·</g> <w n="475">qua</w> <g ref="#interpunct" n="480">·</g> <w n="485">miratus</w> <g ref="#interpunct" n="490">·</g> <w n="495">honestissimum</w>
+                    <lb n="8"/><w n="500"><supplied reason="lost">apparatum</supplied></w> <w n="505"><supplied reason="lost">instructum</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="510"/> <w n="515"><supplied reason="lost">omni</supplied></w> <w n="520">genere</w> <g ref="#interpunct" n="525">·</g> <w n="530">herbariarum</w> <g ref="#interpunct" n="535">·</g> <w n="540">et</w> <g ref="#interpunct" n="545">·</g> <w n="550">numerosas</w> <g ref="#interpunct" n="555">·</g> <w n="560">orientales</w>
+                    <lb n="9"/><w n="565"><supplied reason="lost">bestias</supplied></w> <w n="570"><supplied reason="lost">versatusque</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="575"/> <w n="580"><supplied reason="lost">inde</supplied></w> <w n="585"><supplied reason="lost">a</supplied></w> <w n="590">meridie</w> <g ref="#interpunct" n="595">·</g> <w n="600">in</w> <g ref="#interpunct" n="605">·</g> <w n="610">utriusque</w> <g ref="#interpunct" n="615">·</g> <w n="620">caveis</w> <g ref="#interpunct" n="625">·</g> <w n="630"><choice><orig n="635">varis</orig><reg>variis</reg></choice></w> <g ref="#interpunct" n="640">·</g> <w n="645">missionibus</w>
+                    <lb n="10"/><w n="650"><supplied reason="lost">delectatus</supplied></w> <w n="655"><supplied reason="lost">est</supplied></w> <w n="660"><supplied reason="lost">idemque</supplied></w> <w n="665"><supplied reason="lost">ex</supplied></w> <w n="670"><supplied reason="lost">indulg</supplied>entia</w> <g ref="#interpunct" n="675">·</g> <w n="680">sacra</w> <g ref="#interpunct" n="685">·</g> <w n="690">specialiter</w> <g ref="#interpunct" n="695">·</g> <w n="700">meruit</w> <g ref="#interpunct" n="705">·</g> <w n="710">at</w> <g ref="#interpunct" n="715">·</g> <w n="720">cultum</w>
+                    <lb n="11"/><w n="725"><supplied reason="lost">epulum</supplied></w> <w n="730"><supplied reason="lost">instructumque</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="735"/> <w n="740"><supplied reason="lost">a</supplied>mplissimo</w> <g ref="#interpunct" n="745">·</g> <w n="750">apparatu</w> <g ref="#interpunct" n="755">·</g> <roleName type="civic" subtype="civis"><w n="760">cives</w></roleName> <g ref="#interpunct" n="765">·</g> <w n="770">suos</w> <g ref="#interpunct" n="775">·</g> <w n="780">universos</w>
+                    <lb n="12"/><w n="785"><supplied reason="lost">ut</supplied></w> <w n="790"><supplied reason="lost">vocaret</supplied></w> <w n="795"><supplied reason="lost">cui</supplied></w> <w n="800"><supplied reason="lost">cum</supplied></w> <w n="805"><supplied reason="lost">populus</supplied></w> <w n="810"><supplied reason="lost">propter</supplied></w> <w n="815">voluptates</w> <g ref="#interpunct" n="820">·</g> <w n="825">honeste</w> <g ref="#interpunct" n="830">·</g> <w n="835">exhibitas</w> <g ref="#interpunct" n="840">·</g> <w n="845">ad</w> <g ref="#interpunct" n="850">·</g> <w n="855">augendam</w>
+                    <lb n="13"/><w n="860"><supplied reason="lost">optimi</supplied></w> <w n="865"><supplied reason="lost">viri</supplied></w> <w n="870"><supplied reason="lost">honorificentiam</supplied></w> <w n="875"><supplied reason="lost">frequ</supplied>entissimis</w> <g ref="#interpunct" n="880">·</g> <w n="885">vocibus</w> <g ref="#interpunct" n="890">·</g> <w n="895">bigas</w> <g ref="#interpunct" n="900">·</g> <w n="905">centuriatim</w>
+                    <lb n="14"/><w n="910"><supplied reason="lost">postulasset</supplied></w> <w n="915"><supplied reason="lost">motus</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="920"/> <w n="925"><supplied reason="lost">verec</supplied>undia</w> <g ref="#interpunct" n="930">·</g> <w n="935">quod</w> <g ref="#interpunct" n="940">·</g> <w n="945">esset</w> <g ref="#interpunct" n="950">·</g> <w n="955">duabus</w> <g ref="#interpunct" n="960">·</g> <w n="965">bigiis</w> <g ref="#interpunct" n="970">·</g> <w n="975">et</w> <g ref="#interpunct" n="980">·</g> <w n="985"><expan><abbr>equestri</abbr><ex>bus</ex></expan></w>
+                    <lb n="15"/><w n="990"><supplied reason="lost" cert="low">statuis</supplied></w> <w n="995"><supplied reason="lost">tribus</supplied></w> <w n="1000"><supplied reason="lost">contentus</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="1005"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="character" n="5"><desc>[-?-]</desc></gap>
+                    <w n="10" lemma="curator">curatori</w>
+                    <w n="15" lemma="kalendarius">kalendarii</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="20"><desc>[-?-]</desc></gap>
+                    <w n="25" lemma="NOLEMMA">iani</w>
+                    <w n="35" lemma="quod">quod</w>
+                    <w n="45" lemma="merus">mera</w>
+                    <w n="55" lemma="fides">fide</w>
+                    <w n="65" lemma="administro">administravit</w>
+                    <w n="75" lemma="idem">eodemque</w>
+                    <w n="85" lemma="tempus">tempore</w>
+                    <w n="95" lemma="curator">curator</w>
+                    <w n="105" lemma="portensis">portensis</w>
+                    <w n="115" lemma="kalendarius">kalendarii</w>
+                    <w n="125" lemma="quod">quod</w>
+                    <w n="135" lemma="singularis">singulari</w>
+                    <w n="140" lemma="diligentia">diligentia</w>
+                    <w n="145" lemma="tracto">tractavit</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="150"><desc>[-?-]</desc></gap>
+                    <w n="155" lemma="laudabilis">laudabili</w>
+                    <w n="165" lemma="munerarius">munerario</w>
+                    <w n="175" lemma="qui">qui</w>
+                    <w n="185" lemma="indulgentia">indulgentia</w>
+                    <w n="190" lemma="sacer">sacra</w>
+                    <w n="195" lemma="cum">cum</w>
+                    <w n="200" lemma="munus">munus</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="205"><desc>[-?-]</desc></gap>
+                    <w n="210" lemma="exhibeo">exhibuit</w>
+                    <w n="220" lemma="ille">illud</w>
+                    <orig n="225"/>
+                    <w n="235" lemma="mereo">meruit</w>
+                    <w n="245" lemma="opto">optando</w>
+                    <w n="255" lemma="quod">quod</w>
+                    <w n="265" lemma="volo">voluit</w>
+                    <w n="270" lemma="et">et</w>
+                    <w n="275" lemma="universus">universis</w>
+                    <w n="280" lemma="civis">civibus</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="285"><desc>[-?-]</desc></gap>
+                    <w n="290" lemma="editio">editionem</w>
+                    <w n="300" lemma="gratus">gratissimam</w>
+                    <w n="310" lemma="reddo">reddidit</w>
+                    <w n="320" lemma="quod">quod</w>
+                    <w n="330" lemma="dies">diebus</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="335"><desc>[-?-]</desc></gap>
+                    <w n="340" lemma="populus">populum</w>
+                    <w n="345" lemma="per">per</w>
+                    <w n="350" lemma="multus">multas</w>
+                    <w n="360" lemma="hora">horas</w>
+                    <w n="370" lemma="theater">theatri</w>
+                    <w n="380" lemma="voluptas">voluptas</w>
+                    <w n="390" lemma="teneo">tenuit</w>
+                    <w n="400" lemma="et">et</w>
+                    <w n="410" lemma="hilaris">hilaris</w>
+                    <w n="415" lemma="totus">totus</w>
+                    <w n="420" lemma="in">in</w>
+                    <w n="425" lemma="harena">harenam</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="430"><desc>[-?-]</desc></gap>
+                    <w n="435" lemma="inde">inde</w>
+                    <w n="440" lemma="ab">a</w>
+                    <w n="445" lemma="meridies">meridie</w>
+                    <w n="455" lemma="transeo">transiit</w>
+                    <w n="465" lemma="in">in</w>
+                    <w n="475" lemma="qui">qua</w>
+                    <w n="485" lemma="miror">miratus</w>
+                    <w n="495" lemma="honestus">honestissimum</w>
+                    <w n="500" lemma="apparatus">apparatum</w>
+                    <w n="505" lemma="instruo">instructum</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="510"><desc>[-?-]</desc></gap>
+                    <w n="515" lemma="omnis">omni</w>
+                    <w n="520" lemma="genus">genere</w>
+                    <w n="530" lemma="herbaria">herbariarum</w>
+                    <w n="540" lemma="et">et</w>
+                    <w n="550" lemma="numerosus">numerosas</w>
+                    <w n="560" lemma="orientalis">orientales</w>
+                    <w n="565" lemma="bestia">bestias</w>
+                    <w n="570" lemma="versor">versatusque</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="575"><desc>[-?-]</desc></gap>
+                    <w n="580" lemma="inde">inde</w>
+                    <w n="585" lemma="ab">a</w>
+                    <w n="590" lemma="meridies">meridie</w>
+                    <w n="600" lemma="in">in</w>
+                    <w n="610" lemma="uterque">utriusque</w>
+                    <w n="620" lemma="caveis">caveis</w>
+                    <w n="630" lemma="variis">variis</w>
+                    <orig n="635"/>
+                    <w n="645" lemma="missio">missionibus</w>
+                    <w n="650" lemma="delecto">delectatus</w>
+                    <w n="655" lemma="sum">est</w>
+                    <w n="660" lemma="idem">idemque</w>
+                    <w n="665" lemma="ex">ex</w>
+                    <w n="670" lemma="indulgentia">indulgentia</w>
+                    <w n="680" lemma="sacer">sacra</w>
+                    <w n="690" lemma="specialiter">specialiter</w>
+                    <w n="700" lemma="mereo">meruit</w>
+                    <w n="710" lemma="at">at</w>
+                    <w n="720" lemma="cultus">cultum</w>
+                    <w n="725" lemma="epulum">epulum</w>
+                    <w n="730" lemma="instruo">instructumque</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="735"><desc>[-?-]</desc></gap>
+                    <w n="740" lemma="amplus">amplissimo</w>
+                    <w n="750" lemma="apparatus">apparatu</w>
+                    <w n="760" lemma="civis">cives</w>
+                    <w n="770" lemma="suus">suos</w>
+                    <w n="780" lemma="universus">universos</w>
+                    <w n="785" lemma="ut">ut</w>
+                    <w n="790" lemma="voco">vocaret</w>
+                    <w n="795" lemma="qui">cui</w>
+                    <w n="800" lemma="cum">cum</w>
+                    <w n="805" lemma="populus">populus</w>
+                    <w n="810" lemma="propter">propter</w>
+                    <w n="815" lemma="voluptas">voluptates</w>
+                    <w n="825" lemma="honestus">honeste</w>
+                    <w n="835" lemma="exhibeo">exhibitas</w>
+                    <w n="845" lemma="ad">ad</w>
+                    <w n="855" lemma="augeo">augendam</w>
+                    <w n="860" lemma="bonus">optimi</w>
+                    <w n="865" lemma="vir">viri</w>
+                    <w n="870" lemma="honorificentia">honorificentiam</w>
+                    <w n="875" lemma="frequens">frequentissimis</w>
+                    <w n="885" lemma="vox">vocibus</w>
+                    <w n="895" lemma="biiugus">bigas</w>
+                    <w n="905" lemma="centuriatim">centuriatim</w>
+                    <w n="910" lemma="postulo">postulasset</w>
+                    <w n="915" lemma="moveo">motus</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="920"><desc>[-?-]</desc></gap>
+                    <w n="925" lemma="verecundia">verecundia</w>
+                    <w n="935" lemma="quod">quod</w>
+                    <w n="945" lemma="suit">esset</w>
+                    <w n="955" lemma="duabus">duabus</w>
+                    <w n="965" lemma="biiugus">bigiis</w>
+                    <w n="975" lemma="et">et</w>
+                    <w n="985" lemma="equestris">equestribus</w>
+                    <w n="990" lemma="statua">statuis</w>
+                    <w n="995" lemma="tres">tribus</w>
+                    <w n="1000" lemma="contentus">contentus</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="1005"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text of IMusPalermo</note></app>
+                    <app>
+                        <note>Text of IMusPalermo</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -245,25 +398,31 @@
                             <ref target="http://arachne.uni-koeln.de/item/buchseite/650791">7295</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILMusPalermo">
-                         <author>Bivona</author>
-                         <date>1970</date> 
+                        <author>Bivona</author>
+                        <date>1970</date>
                         <citedRange>31</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/FZWWPUD6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002142">https://biblio.inscriptiones.org/epig10002142</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILS">
                         <citedRange>5055</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/XHMS9K6S"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000352">https://biblio.inscriptiones.org/epig10000352</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000352">https://biblio.inscriptiones.org/epig10000352</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>43, 59</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

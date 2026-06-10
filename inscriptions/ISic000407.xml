@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,11 +20,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name>
+                    <resp>Petrographic observation and analysis</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -59,7 +68,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Fragment of a thick plaque of grey marble. Intact on the lower edge, but broken on the other three sides. The rear is only pick-finished. Part of the face is lost to the lower right.</p>
+                                <support>
+                                    <p>Fragment of a thick plaque of grey marble. Intact on the lower edge, but broken on the other three sides. The rear is only pick-finished. Part of the face is lost to the lower right.</p>
                                     <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unspecified" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
                                     <dimensions>
@@ -69,16 +79,18 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
-                                <layout><p>Three lines of Latin letters, with vacat in line 3.</p>
+                                <layout>
+                                    <p>Three lines of Latin letters, with vacat in line 3.</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Tall letters poorly v-cut with limited serifs, in a later style (tall, narrow letters, with extended apices, short feet to the Ls). Guidelines are visible above and below each line.</p>
+                            <handNote>
+                                <p>Tall letters poorly v-cut with limited serifs, in a later style (tall, narrow letters, with extended apices, short feet to the Ls). Guidelines are visible above and below each line.</p>
                                 <locus from="line1" to="line2">Line 1-2</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="33" atMost="37">33-37</height>
@@ -92,11 +104,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
-                            	<geo>37.08415, 15.27628</geo>
-		</origPlace>
+                                <geo>37.08415, 15.27628</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0400" evidence="lettering">second to fourth century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" notAfter="1865">Original discovery not recorded, first record appears to be the autopsy notes of Schubring c.1865 (currently in the CIL archive), subsequently recorded in the initial inventory in c.1888 and seen by Mommsen prior to 1883.</provenance>
@@ -107,18 +120,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -148,14 +161,15 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2018-01-20" who="#JP">Jonathan Prag checked file and encoded text division</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2024-06-04" who="#JP">Jonathan Prag revised from autopsy and added images.</change>
-	</listChange>
+                <change when="2026-06-10" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -166,31 +180,57 @@
             <graphic n="print" url="ISic000407.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-10-22.</desc>
             </graphic>
-         </surface>
+        </surface>
         <surface type="rear">
-        <graphic n="screen" url="ISic000407_rear_tiled.tif" height="3680px" width="5520px">
-            <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-10-22.</desc>
-        </graphic>
-        <graphic n="print" url="ISic000407_rear.jpg" height="3680px" width="5520px">
-            <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-10-22.</desc>
-        </graphic>
+            <graphic n="screen" url="ISic000407_rear_tiled.tif" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-10-22.</desc>
+            </graphic>
+            <graphic n="print" url="ISic000407_rear.jpg" height="3680px" width="5520px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2015-10-22.</desc>
+            </graphic>
         </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/> <g ref="#interpunct">·</g><orig>CMV</orig> <g ref="#interpunct">·</g> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/> <gap reason="illegible" unit="character" quantity="1"/>illa <g ref="#interpunct">·</g> so<gap reason="lost" extent="unknown" unit="character"/> 
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><unclear>s</unclear> <space unit="character" extent="unknown"/>
+                    <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="5"/> <g ref="#interpunct" n="10">·</g> <orig n="15">CMV</orig><g ref="#interpunct" n="20">·</g> <gap reason="lost" extent="unknown" unit="character" n="25"/>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" n="30"/> <gap reason="illegible" unit="character" quantity="1" n="35"/> <w n="40">illa</w> <g ref="#interpunct" n="45">·</g> <w n="50">so</w> <gap reason="lost" extent="unknown" unit="character" n="55"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character" n="60"/> <w n="65"><unclear>s</unclear></w> <space unit="character" extent="unknown" n="70"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="character" n="5"><desc>[-?-]</desc></gap>
+                    <orig n="15">CMV</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="25"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="30"><desc>[-?-]</desc></gap>
+                    <gap reason="illegible" unit="character" quantity="1" n="35"><desc>[.]</desc></gap>
+                    <w n="40" lemma="NOLEMMA">illa</w>
+                    <w n="50" lemma="NOLEMMA">so</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="55"><desc>[-?-]</desc></gap>
+                    <gap reason="lost" extent="unknown" unit="character" n="60"><desc>[-?-]</desc></gap>
+                    <w n="65" lemma="NOLEMMA">s</w>
+                    <space unit="character" extent="unknown" n="70"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text from autopsy</note></app>
-                    <app loc="1"><note>Mommsen: C · M · V; Schubring: EMV</note></app>
-                    <app loc="2"><note>Mommsen: <unclear>C</unclear>ILIA · S<unclear>O</unclear>; Schubring: IILAS; the final letter could be O or C</note></app>
-                    <app loc="3"><note>Mommsen, Schubring: omitted</note></app>
+                    <app>
+                        <note>Text from autopsy</note>
+                    </app>
+                    <app loc="1">
+                        <note>Mommsen: C · M · V; Schubring: EMV</note>
+                    </app>
+                    <app loc="2">
+                        <note>
+                            Mommsen:<unclear>C</unclear>ILIA · S
+                            <unclear>O</unclear>; Schubring: IILAS; the final letter could be O or C
+                        </note>
+                    </app>
+                    <app loc="3">
+                        <note>Mommsen, Schubring: omitted</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -208,10 +248,13 @@
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7126</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
