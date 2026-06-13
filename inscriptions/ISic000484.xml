@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -25,6 +27,10 @@
                 <respStmt>
                     <name xml:id="AR" ref="https://orcid.org/0000-0001-5677-4679">Alessandra Rocchetti</name>
                     <resp>Epidoc editing and translation</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -96,11 +102,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462305">Mazara</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462305">Mazara</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524205">Mazara del Vallo</placeName>
-                            	<geo>37.65418, 12.59304</geo>
-		</origPlace>
+                                <geo>37.65418, 12.59304</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0350">315—337 CE (governor in
                                 reign of Constantine)</origDate>
                         </origin>
@@ -112,18 +119,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -159,6 +166,7 @@
                 <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-04-23" who="#AR">edited text division and added translation</change>
+                <change when="2026-06-10" who="#RC">Robert Crellin provided lemmatizations</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -170,22 +178,52 @@
             <graphic n="print" url="ISic000484.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#AR">
                 <ab>
-                    <lb n="1"/>clementissimo <g ref="#interpunct">·</g> et 
-                    <lb n="2"/>victoriossimo
-                    <lb n="3"/><roleName type="supracivic" subtype="dominus"><expan><abbr>d</abbr><ex>omino</ex></expan></roleName> <g ref="#interpunct">·</g> <expan><abbr>n</abbr><ex>ostro</ex></expan> <g ref="#interpunct">·</g> <name>Flavio</name> <g ref="#interpunct">·</g> <name>Valerio</name> 
-                    <lb n="4"/><name>Constantino</name> <g ref="#interpunct">·</g> maximo
-                    <lb n="5"/>pio <g ref="#interpunct">·</g> felici <g ref="#interpunct">·</g> invicto <g ref="#interpunct">·</g> <expan><abbr>Aug</abbr><ex>usto</ex></expan>
-                    <lb n="6"/><name>Betitius</name> <g ref="#interpunct">·</g> <name>Perpetuus</name>
-                    <lb n="7"/><expan><abbr>v</abbr><ex>ir</ex></expan> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="clarissimus"><expan><abbr>c</abbr><ex>larissimus</ex></expan></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="corrector"><expan><abbr>corr</abbr><ex>ector</ex></expan></roleName> <g ref="#interpunct">·</g> <expan><abbr>prov</abbr><ex>inciae</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>Sicil</abbr><ex>iae</ex></expan>
-                    <lb n="8"/>devotus <g ref="#interpunct">·</g> numini maies
-                    <lb n="9" break="no"/>tatique <g ref="#interpunct">·</g> eius 
-                    <lb n="10"/>semper <g ref="#interpunct">·</g> dicatus
+                    <lb n="1"/><w n="5">clementissimo</w> <g ref="#interpunct" n="10">·</g> <w n="15">et</w>
+                    <lb n="2"/><w n="20">victoriossimo</w>
+                    <lb n="3"/><roleName type="supracivic" subtype="dominus"><w n="25"><expan><abbr>d</abbr><ex>omino</ex></expan></w></roleName> <g ref="#interpunct" n="30">·</g> <w n="35"><expan><abbr>n</abbr><ex>ostro</ex></expan></w> <g ref="#interpunct" n="40">·</g> <name><w n="45">Flavio</w></name> <g ref="#interpunct" n="50">·</g> <name><w n="55">Valerio</w></name>
+                    <lb n="4"/><name><w n="60">Constantino</w></name> <g ref="#interpunct" n="65">·</g> <w n="70">Maximo</w>
+                    <lb n="5"/><w n="75">Pio</w> <g ref="#interpunct" n="80">·</g> <w n="85">Felici</w> <g ref="#interpunct" n="90">·</g> <w n="95">Invicto</w> <g ref="#interpunct" n="100">·</g> <name><w n="105"><expan><abbr>Aug</abbr><ex>usto</ex></expan></w></name>
+                    <lb n="6"/><name><w n="110">Betitius</w></name> <g ref="#interpunct" n="115">·</g> <name><w n="120">Perpetuus</w></name>
+                    <lb n="7"/><w n="125"><expan><abbr>v</abbr><ex>ir</ex></expan></w> <g ref="#interpunct" n="130">·</g> <roleName type="supracivic" subtype="clarissimus"><w n="135"><expan><abbr>c</abbr><ex>larissimus</ex></expan></w></roleName> <g ref="#interpunct" n="140">·</g> <roleName type="supracivic" subtype="corrector"><w n="145"><expan><abbr>corr</abbr><ex>ector</ex></expan></w></roleName> <g ref="#interpunct" n="150">·</g> <w n="155"><expan><abbr>prov</abbr><ex>inciae</ex></expan></w> <g ref="#interpunct" n="160">·</g> <placeName><w n="165"><expan><abbr>Sicil</abbr><ex>iae</ex></expan></w></placeName>
+                    <lb n="8"/><w n="170">devotus</w> <g ref="#interpunct" n="175">·</g> <w n="180">numini</w> <w n="185">maies
+                    <lb n="9" break="no"/>tatique</w> <g ref="#interpunct" n="190">·</g> <w n="195">eius</w>
+                    <lb n="10"/><w n="200">semper</w> <g ref="#interpunct" n="205">·</g> <w n="210">dicatus</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="clemens">clementissimo</w>
+                    <w n="15" lemma="et">et</w>
+                    <w n="20" lemma="victoriosus">victoriossimo</w>
+                    <w n="25" lemma="dominus">domino</w>
+                    <w n="35" lemma="noster">nostro</w>
+                    <w n="45" lemma="Flavius">Flavio</w>
+                    <w n="55" lemma="Valerius">Valerio</w>
+                    <w n="60" lemma="Constantinus">Constantino</w>
+                    <w n="70" lemma="magnus">maximo</w>
+                    <w n="75" lemma="pius">pio</w>
+                    <w n="85" lemma="felix">felici</w>
+                    <w n="95" lemma="invictus">invicto</w>
+                    <w n="105" lemma="Augustus">Augusto</w>
+                    <w n="110" lemma="Betitius">Betitius</w>
+                    <w n="120" lemma="Perpetuus">Perpetuus</w>
+                    <w n="125" lemma="vir">vir</w>
+                    <w n="135" lemma="clarus">clarissimus</w>
+                    <w n="145" lemma="corrector">corrector</w>
+                    <w n="155" lemma="provincia">provinciae</w>
+                    <w n="165" lemma="Sicilia">Siciliae</w>
+                    <w n="170" lemma="devoveo">devotus</w>
+                    <w n="180" lemma="numen">numini</w>
+                    <w n="185" lemma="maiestas">maiestatique</w>
+                    <w n="195" lemma="is">eius</w>
+                    <w n="200" lemma="semper">semper</w>
+                    <w n="210" lemma="dico">dicatus</w>
                 </ab>
             </div>
             <div type="apparatus">
@@ -200,7 +238,7 @@
             </div>
             <div type="translation" xml:lang="en" resp="#AR">
                 <p>To the most merciful and victorious, our lord Flavius Valerius Constantinus, the greatest, pious, fortunate, unconquered, augustus, Betitius Perpetuus, vir clarissimus, governor of the Sicilian province, always faithful to his Genius and authority, dedicated (this)</p>
-            </div> 
+            </div>
             <div type="commentary">
                 <p><!--commentary--></p>
             </div>
@@ -227,10 +265,13 @@
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7204</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-                <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

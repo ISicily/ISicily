@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,17 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-        	    <respStmt>
-         	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-         	       <resp>standardisation of template and tidying up encoding</resp>
-         	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing and English translation</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -73,12 +79,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -96,11 +102,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
-                            	<geo>37.80355, 12.4379</geo>
-		</origPlace>
+                                <geo>37.80355, 12.4379</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0050">18/19 CE</origDate>
                         </origin>
                         <provenance type="found">Original discovery not recorded.</provenance>
@@ -108,23 +115,22 @@
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
-                    
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -153,14 +159,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-        		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-        	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-04-29" who="#AA">Epidoc editing and English translation</change>
-	</listChange>
+                <change when="2026-06-10" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -171,21 +178,50 @@
             <graphic n="print" url="ISic000506.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="1"/><name><expan><abbr>Ti</abbr><ex>berio</ex></expan></name> <g ref="#interpunct">·</g> <name>Caesari</name> <g ref="#interpunct">·</g> divi <name><expan><abbr>A<supplied reason="lost">ug</supplied></abbr><ex>usti</ex></expan></name> <supplied reason="lost"><expan><abbr>f</abbr><ex>ilio</ex></expan></supplied>
-                    <lb n="2"/>divi <g ref="#interpunct">·</g> <name>Iuli</name> <expan><abbr>n</abbr><ex>epoti</ex></expan> <g ref="#interpunct">·</g> Augusto
-                    <lb n="3"/><roleName type="supracivic.religious" subtype="pontifex.maximus"><expan><abbr>pontif</abbr><ex>ici</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>max</abbr><ex>imo</ex></expan></roleName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="consul"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="3">III</num> <roleName type="supracivic" subtype="imperator"><expan><abbr>Imp</abbr><ex>eratori</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="8"><hi rend="supraline">VIII</hi></num>
-                    <lb n="4"/><roleName type="supracivic" subtype="tribunicia.potestas"><expan><abbr>trib</abbr><ex>unicia</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>potest</abbr><ex>ate</ex></expan></roleName> <g ref="#interpunct">·</g> <num value="20"><hi rend="supraline">XX</hi></num>
-                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><orig>HACLIO</orig><gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="1"/><name><w n="5"><expan><abbr>Ti</abbr><ex>berio</ex></expan></w></name> <g ref="#interpunct" n="10">·</g> <name><w n="15">Caesari</w></name> <g ref="#interpunct" n="20">·</g> <w n="25">divi</w> <name><w n="30"><expan><abbr>A<supplied reason="lost">ug</supplied></abbr><ex>usti</ex></expan></w></name> <w n="35"><supplied reason="lost"><expan><abbr>f</abbr><ex>ilio</ex></expan></supplied></w>
+                    <lb n="2"/><w n="40">divi</w> <g ref="#interpunct" n="45">·</g> <name><w n="50">Iuli</w></name> <w n="55"><expan><abbr>n</abbr><ex>epoti</ex></expan></w> <g ref="#interpunct" n="60">·</g> <name><w n="65">Augusto</w></name>
+                    <lb n="3"/><roleName type="supracivic.religious" subtype="pontifex.maximus"><w n="70"><expan><abbr>pontif</abbr><ex>ici</ex></expan></w> <g ref="#interpunct" n="75">·</g> <w n="80"><expan><abbr>max</abbr><ex>imo</ex></expan></w></roleName> <g ref="#interpunct" n="85">·</g> <roleName type="supracivic" subtype="consul"><w n="90"><expan><abbr>co</abbr><ex>n</ex><abbr>s</abbr><ex>uli</ex></expan></w></roleName> <g ref="#interpunct" n="95">·</g> <num value="3"><w n="100">III</w></num> <roleName type="supracivic" subtype="imperator"><name><w n="105"><expan><abbr>Imp</abbr><ex>eratori</ex></expan></w></name></roleName> <g ref="#interpunct" n="110">·</g> <num value="8"><w n="115"><hi rend="supraline">VIII</hi></w></num>
+                    <lb n="4"/><roleName type="supracivic" subtype="tribunicia.potestas"><w n="120"><expan><abbr>trib</abbr><ex>unicia</ex></expan></w> <g ref="#interpunct" n="125">·</g> <w n="130"><expan><abbr>potest</abbr><ex>ate</ex></expan></w></roleName> <g ref="#interpunct" n="135">·</g> <num value="20"><w n="140"><hi rend="supraline">XX</hi></w></num>
+                    <lb n="5"/><gap reason="lost" extent="unknown" unit="character" n="145"/> <orig n="150">HACLIO</orig><gap reason="lost" extent="unknown" unit="character" n="155"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="Tiberius">Tiberio</w>
+                    <w n="15" lemma="Caesar">Caesari</w>
+                    <w n="25" lemma="divus">divi</w>
+                    <w n="30" lemma="Augustus">Augusti</w>
+                    <w n="35" lemma="filius">filio</w>
+                    <w n="40" lemma="divus">divi</w>
+                    <w n="50" lemma="Iulius">Iuli</w>
+                    <w n="55" lemma="nepos">nepoti</w>
+                    <w n="65" lemma="Augustus">Augusto</w>
+                    <w n="70" lemma="pontifex">pontifici</w>
+                    <w n="80" lemma="magnus">maximo</w>
+                    <w n="90" lemma="consul">consuli</w>
+                    <w n="100" lemma="III">III</w>
+                    <w n="105" lemma="imperator">Imperatori</w>
+                    <w n="115" lemma="VIII">VIII</w>
+                    <w n="120" lemma="tribunicia">tribunicia</w>
+                    <w n="130" lemma="potestas">potestate</w>
+                    <w n="140" lemma="XX">XX</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="145"><desc>[-?-]</desc></gap>
+                    <orig n="150">HACLIO</orig>
+                    <gap reason="lost" extent="unknown" unit="character" n="155"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text: CIL</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text: CIL</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#AA">
                 <p>To Tiberius Caesar Augustus, son of the deified Augustus, grandson of the deified Julius, pontifex maximus, consul for the 3rd time, imperator for the 8th time, with tribunician power for the 20th time [...]</p>
@@ -203,21 +239,26 @@
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7226</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>65</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
+                    </bibl>
                     <bibl>
                         <author>Kragelund</author>
                         <date>2008</date>
                         <citedRange>120 n.15</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/8CZHBMK9"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001895">https://biblio.inscriptiones.org/epig10001895</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001895">https://biblio.inscriptiones.org/epig10001895</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
