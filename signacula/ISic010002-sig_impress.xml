@@ -1,37 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title></title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#IG">Ilenia Gradante</principal> 
-                <funder ref="#JP">John Fell OUP Research Fund</funder>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref> <!-- add Crossreads funding -->
+                </funder>
                 <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>  <!-- remove Valeria, James, Michael and system -->
                     <resp>Project direction, corpus editing, and original template construction</resp>
-                </respStmt>
-               <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-                    <resp>standardisation of template and tidying up encoding</resp>
+                    <resp>standardisation of template, data structure and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
@@ -68,10 +55,6 @@
                     </msIdentifier>
                     <msContents>
                         <textLang mainLang="la">Latin</textLang>
-                        <msItem>
-                            <author>
-                            </author>
-                        </msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc>
@@ -116,18 +99,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
             <xi:include href="../alists/charDecl.xml">
                 <xi:fallback>
                     <p>ISicily glyphs authority list</p>
                 </xi:fallback>
             </xi:include>
-         </encodingDesc>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -154,21 +137,22 @@
                 </textClass>
         </profileDesc>
         <revisionDesc status="draft">
-            <change when="2021-02-03" who="#IG">Ilenia Gradante created the file</change>
-            <change when="2021-04-14" who="#SS">xinclude taxonomy and charDecl files</change>
+            <listChange>
+                <change when="2021-02-03" who="#IG">Ilenia Gradante created the file</change>
+                <change when="2021-04-14" who="#SS">xinclude taxonomy and charDecl files</change>
+                <change when="2026-06-18" who="#SS">simplified template for ISicily integration</change>
+            </listChange>
         </revisionDesc>
       </teiHeader>
       <facsimile>
-              <surface> <!-- we can put @type with main or handle, to be decided -->
-                  <desc></desc>
+              <surface>
                   <graphic url="">
-                      <desc>Digital reproduction ....</desc>
+                      <desc></desc>
                   </graphic>
               </surface>
               <surface>
-                  <desc></desc>
                   <graphic url="">
-                      <desc>Digital reproduction ....</desc>
+                      <desc></desc>
                   </graphic>
               </surface>
       </facsimile>
@@ -195,7 +179,7 @@
                    <p xml:lang="xx"></p>
               </div>
               <div type="bibliography">
-                  <listBibl>
+                  <listBibl type="edition"> <!-- change to "discussion" where applicable; can have two listBibl, one with each type -->
                       <bibl>
                           <author>Manganaro Perrone</author>
                           <date>2006</date>
