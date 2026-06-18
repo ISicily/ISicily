@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -9,29 +9,16 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#IG">Ilenia Gradante</principal> 
                 <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>Project direction, corpus editing, and original template construction</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
-                    <resp>editing of geo data</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="MM">Michael Metcalfe</name>
-                    <resp>museum data collection</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="system">system</name>
-                    <resp>automated or batch processes</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-                    <resp>standardisation of template and tidying up encoding</resp>
+                    <resp>standardisation of template, data structure and tidying up encoding</resp>
                 </respStmt>
                 <respStmt>
                     <name xml:id="IG" ref="https://orcid.org/0000-0002-7176-2833">Ilenia Gradante</name>
@@ -68,17 +55,13 @@
                     </msIdentifier>
                     <msContents>
                         <textLang mainLang="la">Latin</textLang>
-                        <msItem>
-                            <author>
-                             </author>
-                        </msItem>
                     </msContents>
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
                                 <support><p>Bronze seal with framed rectangular lamina. Intact ring handle, with square external profile.</p> 
                                     <objectType ana="#object.signaculum" ref="https://www.eagle-network.eu/voc/objtyp/lod/240.html">signaculum</objectType>
-                                    <material ana="#material.metal.bronze" ref="https://www.eagle-network.eu/voc/material/lod/109.html">lead alloy</material>
+                                    <material ana="#material.metal.bronze" ref="https://www.eagle-network.eu/voc/material/lod/109.html">lead alloy</material> <!-- update with Alessia's analysis -->
                                     <dimensions >
                                         <height unit="mm"></height>
                                         <width unit="mm"></width>
@@ -90,7 +73,7 @@
                                 <condition ana="#condition.complete"/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout></layout>
+                                <layout/>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -104,11 +87,11 @@
                         </physDesc>
                     <history>
                         <origin>
-                            <origPlace>Palazzolo Acreide (Siracusa)</origPlace>
+                            <origPlace>Palazzolo Acreide (Siracusa)</origPlace> <!-- add full encoding, cf ISicily files -->
                                <origDate datingMethod="#julian" notBefore-custom="0075" notAfter-custom="0125" evidence="lettering">75-125 CE</origDate>
                         </origin>
                         <provenance type="found">contrada La Piana</provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#IG" when="2015-06">Ilenia Gradante, June 2015</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#IG" when="2015-06">Ilenia Gradante, June 2015</provenance> <!-- add autopsy in xml:id-->
                         <acquisition></acquisition>
                     </history>
                     <msPart type="lamina" xml:id="part1">  
@@ -191,18 +174,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following EpiDoc guidelines 9.2</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
             <xi:include href="../alists/charDecl.xml">
                 <xi:fallback>
                     <p>ISicily glyphs authority list</p>
                 </xi:fallback>
             </xi:include>
-         </encodingDesc>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -224,33 +207,34 @@
             </langUsage>
             <textClass>
                 <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
-                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/105.html" cert="low">ownership</term>
+                    <term ana="#function.ownership" ref="https://www.eagle-network.eu/voc/typeins/lod/105.html" cert="low">ownership</term> <!-- change to FAIR URI -->
                 </keywords>
             </textClass>
         </profileDesc>
         <revisionDesc status="draft">
-            <change when="2022-08-04" who="#IG">Ilenia Gradante created the file</change>
-            <change when="2021-04-14" who="#SS">xinclude taxonomy and charDecl files</change>
+            <listChange>
+                <change when="2022-08-04" who="#IG">Ilenia Gradante created the file</change>
+                <change when="2021-04-14" who="#SS">xinclude taxonomy and charDecl files</change>
+                <change when="2026-06-18" who="#SS">simplified template for ISicily integration</change>
+            </listChange>
         </revisionDesc>
       </teiHeader>
       <facsimile>
-              <surface> 
-                  <desc></desc>
+              <surface>
                   <graphic url="">
-                      <desc>Digital reproduction ....</desc>
+                      <desc></desc>
                   </graphic>
               </surface>
               <surface>
-                  <desc></desc>
                   <graphic url="">
-                      <desc>Digital reproduction ....</desc>
+                      <desc></desc>
                   </graphic>
               </surface>
       </facsimile>
       <text>
           <body>
-              <div type="edition" xml:space="preserve" xml:lang="la" resp="#IG">
-                      <div type="textpart" subtype="lamina" corresp="#part1">
+              <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#IG">
+                      <div type="textpart" subtype="lamina" corresp="#part1"> <!-- remove corresp attribute from textparts -->
                              <ab>
                                       <lb n="1" style="text-direction:r-to-l"/><expan><abbr>Gnomoni</abbr><ex>s</ex></expan>
                                </ab>
@@ -279,7 +263,7 @@
                       i.e. the signacula derive by approximation from a common reference model / archetype.</p>
               </div>
               <div type="bibliography">
-                  <listBibl>
+                  <listBibl type="edition"> <!-- change to "discussion" where applicable; , can have two listBibl, one with each type -->
                       <bibl>
                           <author>Ferrua</author>
                           <date>1941</date>
