@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fragment of an imperial dedication</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic002007</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic002007</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Palermo</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/052">Antiquarium di Tindari</repository>
+                        <idno type="inventory">ME28145</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Marble fragment of a monumental inscription on a plaque, right margin preserved</p>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm"></height>
+                                        <width unit="cm"></width>
+                                        <depth unit="cm"></depth>
+                                    </dimensions>
+                                </support>
+                                <condition/>
+		    </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                	<damage/>
+			</layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"></height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462527">Tyndaris</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/10282151">Tindari</placeName>
+                            	<geo>38.14227, 15.04385</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0151" notAfter-custom="0200">Later C2 CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered"></provenance>
+                        <provenance type="observed" subtype="autopsy"></provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.honorific" ref="https://ontology.inscriptiones.org/type_of_inscription/Honorific">honorific</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="stub">
+            <listChange>
+                <change when="2026-06-07" who="#JP">Jonathan Prag created stub file</change>
+	</listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/><!--  
+        <surface type="front">
+            <graphic n="screen" url="ISic002007_tiled.tif" height="3522px" width="2550px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21</desc>
+            </graphic>
+            <graphic n="print" url="ISic002007.jpg" height="3522px" width="2550px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2017-07-21</desc>
+            </graphic>
+         </surface>-->
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la">
+                <ab>
+                    <lb n="1"/>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text to be added</note></app>
+                </listApp>
+            </div>
+            <div type="translation">
+                <p></p>
+            </div>
+            <div type="commentary" resp="#JP">
+                <p>Manganaro proposed that this fragment formed the ends of lines 3-5 of ISic000065 in Palermo Archaeological Museum, and this attribution has generally been accepted (e.g. Zambito 2007). Fasolo 2013: 73 no.5 rejected the attribution, but his reasoning is flawed (he suggested that the presence of VA at the start of line 5 in the preserved fragments precluded the integration of the new fragment, and yet at first sight it directly supports it, only that the word division at the end of line 5 in the currently proposed restorations of the text would require minor revision). However, a more serious objection lies in the fact that the new fragment is only half as thick (3.5-3.9 cm) as the existing plaque (6.5 cm), and close study of the letter forms (which have the same height, 60-65mm in the existing plaque; 60mm in the new fragment) also suggests minor differences. It is, additionally, given that the right margin of the new plaque is preserved, extremely hard to restore ARTHI at the end of line 1 of the fragment (required at the end of line 3 of the existing text, given CI at the start of line 4), where autopsy confirms that there appears to be no trace of, or space for, the final two verticals required, and the traces preserved are more readily compatible with e.g. ARI·F or similar, unless a complex triple ligature has been employed (unlikely). The new fragment clearly comes from a very similar and contemporary text, but unless other arguments can be adduced, it should be considered part of a separate text. It is also unclear whether the stone is the same. The existing text of ISic000065 is entirely painted in red, but this is presumably antiquarian recolouring in the earlier 19th century and the absence of paint in the new fragment should not be considered an argument either way.</p>
+                 </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                  <bibl type="bulletin" n="AE">
+                        <citedRange>1989.0338c</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                    <bibl>
+                        <author>Manganaro</author>
+                        <date>1989</date>
+                        <citedRange>162 no. 4 fig. 4</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/EZMBJ6GN"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001831">https://biblio.inscriptiones.org/epig10001831</ref></bibl>
+                 <bibl>
+                        <author>Zambito</author>
+                        <date>2007</date>
+                        <citedRange>105 and fig. 1</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/I2845RRS"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10001503">https://biblio.inscriptiones.org/epig10001503</ref></bibl>
+                    <bibl>
+                        <author>Fasolo</author>
+                        <date>2013</date>
+                        <citedRange>72-73 no. 5</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/X2SEXMRX"/>
+                    <ref target="https://biblio.inscriptiones.org/epig10002011">https://biblio.inscriptiones.org/epig10002011</ref></bibl>
+                </listBibl>
+	   <listBibl type="discussion">
+	       <bibl/>
+	   </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

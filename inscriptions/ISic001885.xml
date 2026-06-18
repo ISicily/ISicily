@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Funerary inscription for a young woman</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#JP">Jonathan Prag</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>original data collection and editing</resp>
+                </respStmt>
+                </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic001885</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001885</idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Taormina</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/062">Antiquarium del Teatro Antico</repository>
+                        <idno type="inventory">ME33871</idno>
+                        <!--Adding location for old id numbers if available-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="la">Latin</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support><p>Marble plaque broken on the left and above, intact below and right.</p>
+                                    <material ana="#material.inorganic.stone.metamorphic_rock.marble" type="stone.marble" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">A grainy white marble</material>
+                                    <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259">plaque</objectType>
+                                    <dimensions><!--mostra-->
+                                        <height unit="cm">24.5</height>
+                                        <width unit="cm">19</width>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout><p>Text over five lines, seemingly centred</p>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote><p>Neatly carved, regular v-cut letters, of a medium wwidth module and with pronounced wedge serifs.</p>
+                                <locus from="line1" to="line5">Line 1-5</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"></height>
+                                </dimensions>
+                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <dimensions type="interlinear">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace><region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462506">Tauromenium</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2522975">Taormina</placeName>
+                                <geo>37.85358, 15.28851</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0200">2nd century CE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">From excavation in the Villa San Pancrazio (area 8000, US 8080), Taormina<geo cert="high">37.8548581,15.2895483</geo></provenance><!-- area of the villa san pancrazio excavations -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.funerary" ref="https://ontology.inscriptiones.org/type_of_inscription/Funerary">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2026-06-10" who="#JP">Jonathan Prag created draft edition from photo and observation in exhibition</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface type="front">
+            <graphic n="screen" url="ISic001885_tiled.tif" height="3901px" width="3241px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2024-09-28</desc>
+            </graphic>
+            <graphic n="print" url="ISic001885.jpg" height="3901px" width="3241px">
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2024-09-28</desc>
+            </graphic>
+         </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
+                <ab>
+                    <lb n="1"/><supplied reason="lost"><expan><abbr>d</abbr><ex>is</ex></expan></supplied> <expan><abbr>m</abbr><ex>anibus</ex></expan> <g ref="#ivy-leaf">❦</g> <expan><abbr>s</abbr><ex>acrum</ex></expan>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><persName type="attested"><name><w part="F">nta</w></name> <g ref="#interpunct">·</g> <name><w part="I">Fla</w></name></persName>
+                     <lb n="3" break="no"/><gap reason="lost" extent="unknown" unit="character"/> <g ref="#interpunct">·</g> vixit <g ref="#interpunct">·</g> 
+                     <lb n="4"/><supplied reason="lost">an</supplied>nis <g ref="#interpunct">·</g> <num value="18">XVIII</num>
+                    <lb n="5"/><supplied reason="lost">p</supplied><unclear>a</unclear>ter fecit
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text from autopsy/photograph</note></app>
+                    <app loc="5"><note>Alternatively: [m]ater; the serif of the foot of the initial A is just visible.</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="it" resp="#JP">
+                <p>Sacro agli dei Mani. [---]nta Fla[---] visse 18 anni. Il padre (o la madre) fece.</p>
+            </div>
+            <div type="translation" xml:lang="en" resp="#JP">
+                <p>Sacred to the shades of the underworld. [---]nta Fla[---] lived 18 years. Her father (or mother) made it.</p>
+            </div>
+            <div type="commentary">
+                <p>The first, fourth and fifth lines indicate that only 2-3 letters are missing on the left side, suggesting a pair of names such as Quinta Flavia (but many other names such as Amynta, Inventa, Leonta, etc. are also possible).</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                <bibl/>    
+                </listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
