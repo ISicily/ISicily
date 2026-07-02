@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,17 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-        	    <respStmt>
-         	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-         	       <resp>standardisation of template and tidying up encoding</resp>
-         	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -73,12 +79,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -96,11 +102,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462201">Eryx</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462201">Eryx</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2524815">Erice</placeName>
-                            	<geo>38.03785, 12.58778</geo>
-		</origPlace>
+                                <geo>38.03785, 12.58778</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0100" notAfter-custom="0100">1st century BCE or 1st century CE (?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Found, prior to 1624 (first mentioned in Gualtherus) at the high point of the city, where the temple of Venus supposedly stood.</provenance>
@@ -112,18 +119,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -152,14 +159,15 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-        		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-        	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-03-24" who="#AA">Epidoc editing</change>
-	</listChange>
+                <change when="2026-07-02" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile><!-- 
@@ -176,15 +184,38 @@
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="0"/><gap reason="lost" quantity="1" unit="line"/>
-                    <lb n="2"/><roleName type="supracivic" subtype="quaestor.pro.praetore"><supplied reason="lost"><expan><abbr>q</abbr><ex>uaestor</ex></expan></supplied> pro <g ref="#interpunct">·</g> <expan><abbr>pr</abbr><ex>aetore</ex></expan></roleName>
-                    <lb n="3"/><roleName type="military" subtype="miles"><supplied reason="lost">mi</supplied>lites</roleName>que <g ref="#interpunct">·</g> in <g ref="#interpunct">·</g> monte
-                    <lb n="4"/>Eruco <g ref="#interpunct">·</g> fecerunt
-                    <lb n="5"/><roleName type="military" subtype="tribunus.militum"><expan><abbr>tr</abbr><ex>ibunus</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>mil</abbr><ex>itum</ex></expan></roleName> <g ref="#interpunct">·</g> <gap reason="lost" extent="unknown" unit="character"/>eus Pr<gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="0"/><gap reason="lost" quantity="1" unit="line" n="5"/>
+                    <lb n="2"/><roleName type="supracivic" subtype="quaestor.pro.praetore"><w n="10"><supplied reason="lost"><expan><abbr>q</abbr><ex>uaestor</ex></expan></supplied></w> <w n="15">pro</w> <g ref="#interpunct" n="20">·</g> <w n="25"><expan><abbr>pr</abbr><ex>aetore</ex></expan></w></roleName>
+                    <lb n="3"/><roleName type="military" subtype="miles"><w n="30"><supplied reason="lost">mi</supplied>lites</w></roleName>que <g ref="#interpunct" n="35">·</g> <w n="40">in</w> <g ref="#interpunct" n="45">·</g> <w n="50">monte</w>
+                    <lb n="4"/><name><w n="55">Eruco</w></name> <g ref="#interpunct" n="60">·</g> <w n="65">fecerunt</w>
+                    <lb n="5"/><roleName type="military" subtype="tribunus.militum"><w n="70"><expan><abbr>tr</abbr><ex>ibunus</ex></expan></w> <g ref="#interpunct" n="75">·</g> <w n="80"><expan><abbr>mil</abbr><ex>itum</ex></expan></w></roleName> <g ref="#interpunct" n="85">·</g> <gap reason="lost" extent="unknown" unit="character" n="90"/> <w n="95">eus</w> <name><w n="100">Pr</w></name> <gap reason="lost" extent="unknown" unit="character" n="105"/>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <gap reason="lost" quantity="1" unit="line" n="5"><desc>[-?-]</desc></gap>
+                    <w n="10" lemma="quaestor">quaestor</w>
+                    <w n="15" lemma="pro">pro</w>
+                    <w n="25" lemma="praetor">praetore</w>
+                    <w n="30" lemma="miles">milites</w>
+                    <w n="40" lemma="in">in</w>
+                    <w n="50" lemma="mons">monte</w>
+                    <w n="55" lemma="Erucus">Eruco</w>
+                    <w n="65" lemma="facio">fecerunt</w>
+                    <w n="70" lemma="tribunus">tribunus</w>
+                    <w n="80" lemma="miles">militum</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="90"><desc>[-?-]</desc></gap>
+                    <w n="95" lemma="NOLEMMA">eus</w>
+                    <w n="100" lemma="NOLEMMA">Pr</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="105"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text: CIL</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text: CIL</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -216,25 +247,31 @@
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7258</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIL">
                         <citedRange>
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">01.0843</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl type="corpus" n="ILLRP">
                         <citedRange>446</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/88TW7IMC"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001379">https://biblio.inscriptiones.org/epig10001379</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001379">https://biblio.inscriptiones.org/epig10001379</ref>
+                    </bibl>
                     <bibl>
                         <author>Bivona</author>
                         <date>2000</date>
                         <citedRange>154-155</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/94ICR94M"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002135">https://biblio.inscriptiones.org/epig10002135</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002135">https://biblio.inscriptiones.org/epig10002135</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,13 +20,17 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-        	    <respStmt>
-         	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-         	       <resp>standardisation of template and tidying up encoding</resp>
-         	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
                 <respStmt>
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>EpiDoc editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -73,12 +79,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -96,11 +102,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462410">Panhormus</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523920">Palermo</placeName>
-                            	<geo>38.13205, 13.33561</geo>
-		</origPlace>
+                                <geo>38.13205, 13.33561</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0400">Imperial app. reads clariss...in last line (?)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Described by Gualtherus as 'recently' found, and set up in front of D. Maria de Pinta in Cassari.</provenance>
@@ -112,18 +119,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -152,17 +159,19 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	<change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	<change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		        <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	            <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                <change when="2021-03-17" who="#AA">Epidoc editing</change> 
-	</listChange>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2021-03-17" who="#AA">Epidoc editing</change>
+                <change when="2026-07-02" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
+    <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic000555_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -176,14 +185,36 @@
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#AA">
                 <ab>
-                    <lb n="1"/><name><expan><abbr>A</abbr><ex>ulo</ex></expan></name> <g ref="#interpunct">·</g> <name>Agri<hi rend="ligature">li</hi>o</name> <g ref="#interpunct">·</g> <name><expan><abbr>A</abbr><ex>uli</ex></expan></name> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilio</ex></expan> <g ref="#interpunct">·</g> <name>Asprena<supplied reason="lost">ti</supplied></name>
-                    <lb n="2"/><name><expan><abbr>A</abbr><ex>ulus</ex></expan></name> <g ref="#interpunct">·</g> <name>Pinnius</name> <g ref="#interpunct">·</g> <name>Maximus</name>
-                    <lb n="3"/>ex <g ref="#interpunct">·</g> testamento <name>Pinni<gap reason="lost" extent="unknown" unit="character"/></name>
-                    <lb n="4"/>cl<supplied reason="lost">a</supplied>riss<supplied reason="lost">imo</supplied> <orig>MI</orig>
+                    <lb n="1"/><name><w n="5"><expan><abbr>A</abbr><ex>ulo</ex></expan></w></name> <g ref="#interpunct" n="10">·</g> <name><w n="15">Agri<hi rend="ligature">li</hi>o</w></name> <g ref="#interpunct" n="20">·</g> <name><w n="25"><expan><abbr>A</abbr><ex>uli</ex></expan></w></name> <g ref="#interpunct" n="30">·</g> <w n="35"><expan><abbr>f</abbr><ex>ilio</ex></expan></w> <g ref="#interpunct" n="40">·</g> <name><w n="45">Asprena<supplied reason="lost">ti</supplied></w></name>
+                    <lb n="2"/><name><w n="50"><expan><abbr>A</abbr><ex>ulus</ex></expan></w></name> <g ref="#interpunct" n="55">·</g> <name><w n="60">Pinnius</w></name> <g ref="#interpunct" n="65">·</g> <name><w n="70">Maximus</w></name>
+                    <lb n="3"/><w n="75">ex</w> <g ref="#interpunct" n="80">·</g> <w n="85">testamento</w> <name><w n="90">Pinni<gap reason="lost" extent="unknown" unit="character" n="95"/></w></name>
+                    <lb n="4"/><w n="100">cl<supplied reason="lost">a</supplied>riss<supplied reason="lost">imo</supplied></w> <orig n="105">MI</orig>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="Aulus">Aulo</w>
+                    <w n="15" lemma="Agrilius">Agrilio</w>
+                    <w n="25" lemma="Aulus">Auli</w>
+                    <w n="35" lemma="filius">filio</w>
+                    <w n="45" lemma="Asprenatus">Asprenati</w>
+                    <w n="50" lemma="Aulus">Aulus</w>
+                    <w n="60" lemma="Pinnius">Pinnius</w>
+                    <w n="70" lemma="Maximus">Maximus</w>
+                    <w n="75" lemma="ex">ex</w>
+                    <w n="85" lemma="testamentum">testamento</w>
+                    <w n="90" lemma="NOLEMMA">Pinni[-?-]</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="95"><desc>[-?-]</desc></gap>
+                    <w n="100" lemma="clarus">clarissimo</w>
+                    <orig n="105">MI</orig>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text: CIL</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text: CIL</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -214,10 +245,13 @@
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7301</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
