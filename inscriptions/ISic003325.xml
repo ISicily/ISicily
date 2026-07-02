@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -58,7 +64,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Three quadrangular slabs originally from the crepidoma of the west side of the great north stoa, but reused for the crepidoma of the annex to the podium temple on the west side of the agora, and inscribed in that context.</p>
+                                <support>
+                                    <p>Three quadrangular slabs originally from the crepidoma of the west side of the great north stoa, but reused for the crepidoma of the annex to the podium temple on the west side of the agora, and inscribed in that context.</p>
                                     <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.arch_element.crepidoma" ref="https://www.eagle-network.eu/voc/objtyp/lod/1876.html">crepidoma</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -68,16 +75,17 @@
                                     </dimensions>
                                 </support>
                                 <condition ana="#condition.complete"/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage ana="#text_condition.complete"/>
-			</layout>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Regular letters with triangular interpuncts.</p>
+                            <handNote>
+                                <p>Regular letters with triangular interpuncts.</p>
                                 <locus from="line1" to="line4">Line 1-4</locus>
                                 <dimensions type="letterHeight">
                                     <height unit="mm" atLeast="72" atMost="78">72-78</height>
@@ -91,11 +99,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487" corresp="#findspot">Segesta</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462487" corresp="#findspot">Segesta</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523171">Segesta</placeName>
-                            	<geo>37.94171, 12.83649</geo>
-		</origPlace>
+                                <geo>37.94171, 12.83649</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0050" notAfter-custom="-0001" evidence="archaeological-context lettering">second half of the 1st century BCE (Ampolo - Erdas)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" xml:id="findspot" when="1995">Agora, Found during excavations in 1995, US 4558<geo>37.939716, 12.842467</geo></provenance>
@@ -107,18 +116,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -148,14 +157,15 @@
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2019-09-23" who="#JP">Jonathan Prag added ISegesta ref</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-	<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-05-10" who="#JP">Jonathan Prag made initial edits from ISegesta edition</change>
-	</listChange>
+                <change when="2026-07-02" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -166,20 +176,45 @@
             <graphic n="print" url="ISic003325.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface>
+        </surface>
     </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name type="praenomen"><expan><abbr>L</abbr><ex>ucius</ex></expan></name> <g ref="#interpunct">·</g> <name type="nomen">Caecilius</name>  <g ref="#interpunct">·</g> <persName type="attested"><name type="patronym"><expan><abbr>A</abbr><ex>uli</ex></expan></name></persName> <g ref="#interpunct">·</g> <expan><abbr>f</abbr><ex>ilius</ex></expan> <g ref="#interpunct">·</g> <name type="cognomen">Martiales</name>
-                    <lb n="2"/><name type="cognomen"><choice><orig>Apetaius</orig><reg>Aretaius</reg></choice></name></persName> <g ref="#interpunct">·</g> <roleName type="supracivic" subtype="praefectus">praefectus</roleName>
-                    <lb n="3"/>deos <g ref="#interpunct">·</g> forenses <g ref="#interpunct">·</g> reposuit templum
-                    <lb n="4" break="no"/>que <g ref="#interpunct">·</g> eis <g ref="#interpunct">·</g> sua <g ref="#interpunct">·</g> <choice><orig>pequnia</orig><reg>pecunia</reg></choice> <g ref="#interpunct">·</g> adornavit
+                    <lb n="1"/><persName type="attested"><name type="praenomen"><w n="5"><expan><abbr>L</abbr><ex>ucius</ex></expan></w></name> <g ref="#interpunct" n="10">·</g> <name type="nomen"><w n="15">Caecilius</w></name> <g ref="#interpunct" n="20">·</g> <persName type="attested"><name type="patronym"><w n="25"><expan><abbr>A</abbr><ex>uli</ex></expan></w></name></persName> <g ref="#interpunct" n="30">·</g> <w n="35"><expan><abbr>f</abbr><ex>ilius</ex></expan></w> <g ref="#interpunct" n="40">·</g> <name type="cognomen"><w n="45">Martiales</w></name>
+                    <lb n="2"/><name type="cognomen"><w n="50"><choice><orig n="55">Apetaius</orig><reg>Aretaius</reg></choice></w></name></persName> <g ref="#interpunct" n="60">·</g> <roleName type="supracivic" subtype="praefectus"><w n="65">praefectus</w></roleName>
+                    <lb n="3"/><w n="70">deos</w> <g ref="#interpunct" n="75">·</g> <w n="80">forenses</w> <g ref="#interpunct" n="85">·</g> <w n="90">reposuit</w> <w n="95">templum
+                    <lb n="4" break="no"/>que</w> <g ref="#interpunct" n="100">·</g> <w n="105">eis</w> <g ref="#interpunct" n="110">·</g> <w n="115">sua</w> <g ref="#interpunct" n="120">·</g> <w n="125"><choice><orig n="130">pequnia</orig><reg>pecunia</reg></choice></w> <g ref="#interpunct" n="135">·</g> <w n="140">adornavit</w>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="Lucius">Lucius</w>
+                    <w n="15" lemma="Caecilius">Caecilius</w>
+                    <w n="25" lemma="Aulus">Auli</w>
+                    <w n="35" lemma="filius">filius</w>
+                    <w n="45" lemma="Martialis">Martiales</w>
+                    <w n="50" lemma="Aretaius">Aretaius</w>
+                    <orig n="55"/>
+                    <w n="65" lemma="praefectus">praefectus</w>
+                    <w n="70" lemma="deus">deos</w>
+                    <w n="80" lemma="forensis">forenses</w>
+                    <w n="90" lemma="repono">reposuit</w>
+                    <w n="95" lemma="templum">templumque</w>
+                    <w n="105" lemma="is">eis</w>
+                    <w n="115" lemma="suus">sua</w>
+                    <w n="125" lemma="pecunia">pecunia</w>
+                    <orig n="130"/>
+                    <w n="140" lemma="adorno">adornavit</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>text of ISegesta l1 (checked against photograph for interpuncts)</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>text of ISegesta l1 (checked against photograph for interpuncts)</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -193,37 +228,45 @@
                     <bibl type="bulletin" n="AE">
                         <citedRange>2003.0783</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl type="bulletin" n="AE">
                         <citedRange>2000.0642</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
+                    </bibl>
                     <bibl>
                         <author>Michelini</author>
                         <date>1999</date>
                         <citedRange>441-442 ph</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/DI69MHYJ"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002305">https://biblio.inscriptiones.org/epig10002305</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002305">https://biblio.inscriptiones.org/epig10002305</ref>
+                    </bibl>
                     <bibl>
                         <author>Nenci</author>
                         <date>2000</date>
                         <citedRange>811-813 tav. 155.4</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/V2NMCFNB"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001726">https://biblio.inscriptiones.org/epig10001726</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001726">https://biblio.inscriptiones.org/epig10001726</ref>
+                    </bibl>
                     <bibl>
                         <author>Tribulato</author>
                         <date>2012</date>
                         <citedRange>315</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/X5ZZ4GPT"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001557">https://biblio.inscriptiones.org/epig10001557</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001557">https://biblio.inscriptiones.org/epig10001557</ref>
+                    </bibl>
                     <bibl>
                         <author>Ampolo and Erdas</author>
                         <date>2019</date>
                         <citedRange>L1</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/3PK3JKXR"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001036">https://biblio.inscriptiones.org/epig10001036</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>

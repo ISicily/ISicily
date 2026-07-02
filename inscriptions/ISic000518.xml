@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,7 +9,9 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -18,10 +20,14 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -57,7 +63,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>No information recorded on the object</p>
+                                <support>
+                                    <p>No information recorded on the object</p>
                                     <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.unknown" ref="https://ontology.inscriptiones.org/type_of_inscription/Unable_to_determine">unknown</objectType>
                                     <dimensions>
@@ -67,12 +74,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -90,11 +97,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462281">Lilybaeum</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/6542148">Marsala</placeName>
-                            	<geo>37.80355, 12.4379</geo>
-		</origPlace>
+                                <geo>37.80355, 12.4379</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0300">Imperial</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Original discovery not recorded; described by Gualtherus among the 'deperditae et in fornace exustae' of Marsala</provenance>
@@ -106,18 +114,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -146,17 +154,19 @@
         <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
-            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
-            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+                <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
+                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-01-20" who="#JP">edited from publications</change>
-	</listChange>
+                <change when="2026-07-02" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile><surface/><!-- 
+    <facsimile>
+        <surface/><!-- 
         <surface type="front">
             <graphic n="screen" url="ISic000518_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -170,16 +180,42 @@
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="0"/><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="1"/>ex aere conlato patrono
-                    <lb n="2"/>bene de se merito curante
-                    <lb n="3"/>et de suo quod defuerat
-                    <lb n="4"/>supplente
-                    <lb n="5"/><persName type="attested"><name>Paconio</name> <name>Clodiano</name></persName>
+                    <lb n="0"/><gap reason="lost" extent="unknown" unit="character" n="5"/>
+                    <lb n="1"/><w n="10">ex</w> <w n="15">aere</w> <w n="20">conlato</w> <w n="25">patrono</w>
+                    <lb n="2"/><w n="30">bene</w> <w n="35">de</w> <w n="40">se</w> <w n="45">merito</w> <w n="50">curante</w>
+                    <lb n="3"/><w n="55">et</w> <w n="60">de</w> <w n="65">suo</w> <w n="70">quod</w> <w n="75">defuerat</w>
+                    <lb n="4"/><w n="80">supplente</w>
+                    <lb n="5"/><persName type="attested"><name><w n="85">Paconio</w></name> <name><w n="90">Clodiano</w></name></persName>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <gap reason="lost" extent="unknown" unit="character" n="5"><desc>[-?-]</desc></gap>
+                    <w n="10" lemma="ex">ex</w>
+                    <w n="15" lemma="aes">aere</w>
+                    <w n="20" lemma="confero">conlato</w>
+                    <w n="25" lemma="patronus">patrono</w>
+                    <w n="30" lemma="bene">bene</w>
+                    <w n="35" lemma="de">de</w>
+                    <w n="40" lemma="se">se</w>
+                    <w n="45" lemma="mereo">merito</w>
+                    <w n="50" lemma="curo">curante</w>
+                    <w n="55" lemma="et">et</w>
+                    <w n="60" lemma="de">de</w>
+                    <w n="65" lemma="suus">suo</w>
+                    <w n="70" lemma="quod">quod</w>
+                    <w n="75" lemma="defuo">defuerat</w>
+                    <w n="80" lemma="suppleo">supplente</w>
+                    <w n="85" lemma="Paconius">Paconio</w>
+                    <w n="90" lemma="Clodianus">Clodiano</w>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text from Gualtherus; Mommsen adds interpuncts throughout, but these are not recorded by Gualtherus and so have no basis in fact.</note></app></listApp>
+                <listApp>
+                    <app>
+                        <note>Text from Gualtherus; Mommsen adds interpuncts throughout, but these are not recorded by Gualtherus and so have no basis in fact.</note>
+                    </app>
+                </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
@@ -194,25 +230,29 @@
                         <date>1624</date>
                         <citedRange>249</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GIN6NANU"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002388">https://biblio.inscriptiones.org/epig10002388</ref>
+                    </bibl>
                     <bibl>
                         <author>Gualtherus</author>
                         <date>1624 [1625]</date>
                         <citedRange>146</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref></bibl>
-                   <bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
+                    <bibl>
                         <author>Castelli</author>
                         <date>1769</date>
                         <citedRange>cl. 5, no. 28</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/SPTB56H3"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002084">https://biblio.inscriptiones.org/epig10002084</ref>
+                    </bibl>
                     <bibl>
                         <author>Castelli</author>
                         <date>1784</date>
                         <citedRange>cl. 5, no. 29</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
+                    </bibl>
                     <bibl type="corpus" n="CIL">
                         <author>Mommsen</author>
                         <date>1883</date>
@@ -220,10 +260,13 @@
                             <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7238</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
+                    </bibl>
                     <bibl/>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
