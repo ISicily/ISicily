@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -9,15 +9,21 @@
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
                 </respStmt>
-	    <respStmt>
-     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-     	       <resp>standardisation of template and tidying up encoding</resp>
- 	   </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
+                    <resp>lemmatization and linguistic analysis</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -28,7 +34,7 @@
                 <idno type="EDCS"/>
                 <idno type="PHI"/>
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic001692</idno>
-               <availability>
+                <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
                 </availability>
             </publicationStmt>
@@ -54,7 +60,8 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Text only recorded by transcription in manuscript tradition.</p>
+                                <support>
+                                    <p>Text only recorded by transcription in manuscript tradition.</p>
                                     <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.unknown" ref="https://ontology.inscriptiones.org/type_of_inscription/Unable_to_determine">unknown</objectType>
                                     <dimensions>
@@ -64,12 +71,12 @@
                                     </dimensions>
                                 </support>
                                 <condition/>
-		    </supportDesc>
+                            </supportDesc>
                             <layoutDesc>
                                 <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                	<damage/>
-			</layout>
+                                    <damage/>
+                                </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
@@ -87,11 +94,12 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462187">Drepanum</placeName>		
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462187">Drepanum</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2522876">Trapani</placeName>
-                            	<geo>38.0176, 12.53617</geo>
-		</origPlace>
+                                <geo>38.0176, 12.53617</geo>
+                            </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="1769" notAfter-custom="1800">One of a set of forgeries produced in the immediate decades after the publication of Torremuzza 1769</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Reportedly found in 1768 during work on the Chiesa di San Pietro, Trapani</provenance>
@@ -102,18 +110,18 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-             <p>Encoded following the latest EpiDoc guidelines</p>
-             <xi:include href="../alists/ISicily-taxonomies.xml">
-                 <xi:fallback>
-                     <p>Taxonomies for ISicily controlled values</p>
-                 </xi:fallback>
-             </xi:include>
-	  <xi:include href="../alists/charDecl.xml">
-	     <xi:fallback>
-	       <p>ISicily glyphs authority list</p>
-	     </xi:fallback>
-	   </xi:include>
-         </encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -141,8 +149,9 @@
         </profileDesc>
         <revisionDesc status="draft">
             <listChange>
-                        <change when="2022-09-07" who="#JP">Jonathan Prag created file from publications</change>
-	</listChange>
+                <change when="2022-09-07" who="#JP">Jonathan Prag created file from publications</change>
+                <change when="2026-07-23" who="#RC">Robert Crellin provided lemmatizations</change>
+            </listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -153,18 +162,35 @@
             <graphic n="print" url="ISic001692.jpg" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-         </surface></facsimile>
+        </surface>
+    </facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#JP">
                 <ab>
-                    <lb n="1"/><abbr>L</abbr> <abbr>L</abbr> <abbr>D</abbr> Augusto sacrum et genio civitatis
-                    <lb n="2"/>populus <expan><abbr>Drepanit</abbr><ex>orum</ex></expan>
-                  </ab>
+                    <lb n="1"/><w n="5"><abbr>L</abbr></w> <name><w n="10"><abbr>L</abbr></w></name> <name><w n="15"><abbr>D</abbr></w></name> <name><w n="20">Augusto</w></name> <w n="25">sacrum</w> <w n="30">et</w> <w n="35">genio</w> <w n="40">civitatis</w>
+                    <lb n="2"/><w n="45">populus</w> <name><w n="50"><expan><abbr>Drepanit</abbr><ex>orum</ex></expan></w></name>
+                </ab>
+            </div>
+            <div type="edition" subtype="simple-lemmatized" resp="#RC">
+                <ab>
+                    <w n="5" lemma="L">L</w>
+                    <w n="10" lemma="L">L</w>
+                    <w n="15" lemma="D">D</w>
+                    <w n="20" lemma="Augustus">Augusto</w>
+                    <w n="25" lemma="sacer">sacrum</w>
+                    <w n="30" lemma="et">et</w>
+                    <w n="35" lemma="genius">genio</w>
+                    <w n="40" lemma="civitas">civitatis</w>
+                    <w n="45" lemma="populus">populus</w>
+                    <w n="50" lemma="Drepanitus">Drepanitorum</w>
+                </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text as reported by Kaibel from the manuscript tradition.</note></app>
+                    <app>
+                        <note>Text as reported by Kaibel from the manuscript tradition.</note>
+                    </app>
                 </listApp>
             </div>
             <div type="translation">
@@ -182,27 +208,33 @@
                             <ref target="https://clio.columbia.edu/catalog/6873760">31*</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/Q2SBPG9F"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref></bibl>
-                  <bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001072">https://biblio.inscriptiones.org/epig10001072</ref>
+                    </bibl>
+                    <bibl>
                         <author>Filippi</author>
                         <date>2002</date>
                         <citedRange/>
                         <ptr target="https://www.zotero.org/groups/382445/items/PIPP325H"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001991">https://biblio.inscriptiones.org/epig10001991</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001991">https://biblio.inscriptiones.org/epig10001991</ref>
+                    </bibl>
                     <bibl>
                         <author>Filippi</author>
                         <date>2005</date>
                         <citedRange>70 no. 31 / s.n.</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/WBLZEBQ8"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002296">https://biblio.inscriptiones.org/epig10002296</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10002296">https://biblio.inscriptiones.org/epig10002296</ref>
+                    </bibl>
                     <bibl>
                         <author>Korhonen</author>
                         <date>2017</date>
                         <citedRange>199</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/92ITYJC6"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10001484">https://biblio.inscriptiones.org/epig10001484</ref></bibl>
+                        <ref target="https://biblio.inscriptiones.org/epig10001484">https://biblio.inscriptiones.org/epig10001484</ref>
+                    </bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+                <listBibl type="discussion">
+                    <bibl/>
+                </listBibl>
             </div>
         </body>
     </text>
