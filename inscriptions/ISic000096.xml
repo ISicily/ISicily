@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Honours for Cn. Pollienus</title>
+                <title>I.Sicily inscription 000096</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder>
-                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
-                </funder>
+	   <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>original data collection and editing</resp>
@@ -21,22 +19,29 @@
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
                 <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
+                <respStmt>
                     <name xml:id="TA" ref="https://orcid.org/0000-0001-8417-7089">Tuuli Ahlholm</name>
                     <resp>EpiDoc editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
-                    <resp>standardisation of template and tidying up encoding</resp>
+	    <respStmt>
+     	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+     	       <resp>standardisation of template and tidying up encoding</resp>
+ 	   </respStmt>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>Edition on basis of autopsy and photographs</resp>
-                </respStmt>
-                <respStmt>
-                    <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
-                    <resp>lemmatization and linguistic analysis</resp>
-                </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -60,7 +65,7 @@
                         <settlement>Termini Imerese</settlement>
                         <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
                         <idno type="inventory">121</idno>
-                        <!--4 inventory numbers recorded on stone: 139(?), 107(?), 177(?) 123-->
+                        <!--Adding location for old id numbers if available-->
                         <altIdentifier>
                             <settlement/>
                             <repository/>
@@ -74,41 +79,35 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p>A quadrangular statue base, of variegated pink/white stone. The stone is heavily damaged, entirely missing in the upper part, damaged on all corners, and heavily damaged / reduced around the base. No face is preserved intact. Traces of a projecting moulding around the base cornice visible on the sides and front. Rear is relatively flat.</p>
-                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcite_limestone.red.calcare-lucidabile_rosso_sicilia-occidentale" type="stone.limestone.polishable.red" subtype="calcare_rosso_SiciliaOCC" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/73.html">breccia (di San Marco)</material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.base" ref="http://www.eagle-network.eu/voc/objtyp/lod/57.html">base</objectType>
                                     <dimensions>
-                                        <height unit="cm">128</height>
-                                        <width unit="cm">54.4</width>
-                                        <depth unit="cm">60</depth>
+                                        <!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
-                            </supportDesc>
+		    </supportDesc>
                             <layoutDesc>
                                 <layout>
-                                    <p>Three lines of Latin text (despite abrasions, it is likely that there are no missing lines), seemingly set in the middle of the face of the base. Use of one triangular interpunct (line 2).</p>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
-                                    <damage/>
-                                </layout>
+                                	<damage/>
+			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote>
-                                <p>Text is very deeply and widely incised. Text is regular, with serifs. Spacing between letters and lines is precise.</p>
-                                <locus from="line1" to="line1">Line 1</locus>
+                            <handNote><!--Default value and requires editing-->
+                                <locus from="line1" to="line1">Line
+                                    1
+                                </locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="56" atMost="57">56-57</height>
+                                    <height unit="mm"/>
                                 </dimensions>
-                                <locus from="line2" to="line2">Line 2</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="45" atMost="48">45-48</height>
-                                </dimensions>
-                                <locus from="line3" to="line3">Line 3</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="46" atMost="51">46-51</height>
-                                </dimensions>
-                                <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
+                                <locus from="line1" to="line2">Interlineation line 1 to
+                                    2
+                                </locus>
                                 <dimensions type="interlinear">
                                     <height unit="mm"/>
                                 </dimensions>
@@ -117,33 +116,33 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
-                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
-                                <geo>37.98365, 13.69555</geo>
-                            </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0021" notAfter-custom="0014" evidence="textual-context">Likely an early colonist of Thermae Himeraeae, probably Augustan in date (after 21 BCE).</origDate>
+                            	<geo>37.98365, 13.69555</geo>
+		</origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0050" notAfter-custom="-0001" precision="low">Same dedicant as CIL 7349, so late 1st century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1876">Reported as found 'verso il centro del piano', in the vicinity of the duomo, along with a number of other remains (mosaic pavement and other elements), on or around 22 February 1876.<geo>37.987300, 13.696410</geo></provenance><!-- generic centre of piazza -->
-                        <provenance type="observed" subtype="autopsied" when="2022-07-08" resp="#AA">Antoniou, 2022-07-08. On display in the courtyard portico of Museo Civico Baldassare Romano</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <p>Encoded following the latest EpiDoc guidelines</p>
-            <xi:include href="../alists/ISicily-taxonomies.xml">
-                <xi:fallback>
-                    <p>Taxonomies for ISicily controlled values</p>
-                </xi:fallback>
-            </xi:include>
-            <xi:include href="../alists/charDecl.xml">
-                <xi:fallback>
-                    <p>ISicily glyphs authority list</p>
-                </xi:fallback>
-            </xi:include>
-        </encodingDesc>
+             <p>Encoded following the latest EpiDoc guidelines</p>
+             <xi:include href="../alists/ISicily-taxonomies.xml">
+                 <xi:fallback>
+                     <p>Taxonomies for ISicily controlled values</p>
+                 </xi:fallback>
+             </xi:include>
+	  <xi:include href="../alists/charDecl.xml">
+	     <xi:fallback>
+	       <p>ISicily glyphs authority list</p>
+	     </xi:fallback>
+	   </xi:include>
+         </encodingDesc>
         <profileDesc>
             <calendarDesc>
                 <calendar xml:id="julian">
@@ -151,41 +150,38 @@
                 </calendar>
             </calendarDesc>
             <langUsage>
-                <language ident="en">English</language>
-                <language ident="it">Italian</language>
-                <language ident="grc">Ancient Greek</language>
-                <language ident="la">Latin</language>
-                <language ident="he">Hebrew</language>
+                <language ident="en">English</language> 
+                <language ident="it">Italian</language> 
+                <language ident="grc">Ancient Greek</language> 
+                <language ident="la">Latin</language> 
+                <language ident="he">Hebrew</language> 
                 <language ident="phn">Phoenician</language>
                 <language ident="xpu">Punic</language>
-                <language ident="osc">Oscan</language>
-                <language ident="xly">Elymian</language>
-                <language ident="scx">Sikel</language>
-                <language ident="sxc">Sikan</language>
+                <language ident="osc">Oscan</language> 
+                <language ident="xly">Elymian</language> 
+                <language ident="scx">Sikel</language>  
+                <language ident="sxc">Sikan</language>  
             </langUsage>
             <textClass>
-                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
-                    <term ana="#function.honorific" ref="https://ontology.inscriptiones.org/type_of_inscription/Honorific">honorific</term>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="edited">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2017-11-16" who="#JP">Jonathan Prag added a bibl element</change>
                 <change when="2018-05-18" who="#TA">Tuuli Ahlholm cleaned up the autogenerated text and added an apparatus</change>
-                <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
-                <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
-                <change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
-                <change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-                <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
-                <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
+            	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
+            	   <change when="2020-10-08" who="#SS">Simona Stoyanova updated list of languages</change>
+            	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
+		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
+            	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2022-11-07" who="#JP">Jonathan Prag added bibl and provenance</change>
                 <change when="2023-08-23" who="#JP">Jonathan Prag added image</change>
-                <change when="2023-08-29" who="#AA">edition on basis of autopsy and photographs</change>
-                <change when="2024-02-13" who="#JP">Jonathan Prag revised images and minor edits</change>
-                <change when="2025-10-15" who="#RC">Robert Crellin added local IDs to edition elements</change>
-            </listChange>
+	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
@@ -196,45 +192,28 @@
             <graphic n="print" url="ISic000096.jpg" height="5520px" width="3680px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
-        </surface>
-        <surface type="left">
-            <graphic n="screen" url="ISic000096_left_tiled.tif" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 08-07-2022</desc>
-            </graphic>
-            <graphic n="print" url="ISic000096_left.jpg" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 08-07-2022</desc>
-            </graphic>
-        </surface>
-        <surface type="right">
-            <graphic n="screen" url="ISic000096_right_tiled.tif" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 08-07-2022</desc>
-            </graphic>
-            <graphic n="print" url="ISic000096_right.jpg" height="4032px" width="1960px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 08-07-2022</desc>
-            </graphic>
-        </surface>
+         </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#TA #AA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#TA">
                 <ab>
-                    <lb n="1" xml:id="AJΙAK"/><persName type="attested" xml:id="AJΙAU"><name xml:id="AJΙAe"><supplied reason="lost" xml:id="AJΙAo"><expan xml:id="AJΙAy"><abbr xml:id="AJΙAΙ">Cn</abbr><ex xml:id="AJΙAΤ">aeo</ex></expan></supplied></name> <name xml:id="AJΙAε"><supplied reason="lost" xml:id="AJΙAο">P</supplied>ollieno</name> <persName type="attested" xml:id="AJΙBA"><name type="patronym" xml:id="AJΙBK"><supplied reason="lost" xml:id="AJΙBU"><expan xml:id="AJΙBe"><abbr xml:id="AJΙBo">Cn</abbr><ex xml:id="AJΙBy">aei</ex></expan></supplied></name></persName> <w xml:id="AJΙBΙ" n="5"><supplied reason="lost" xml:id="AJΙBΤ"><expan xml:id="AJΙBε"><abbr xml:id="AJΙBο">f</abbr><ex xml:id="AJΙCA">ilio</ex></expan></supplied></w></persName>
-                    <lb n="2" xml:id="AJΙCK"/><roleName type="military" subtype="tribunus.militum" xml:id="AJΙCU"><w xml:id="AJΙCe" n="10"><expan xml:id="AJΙCo"><abbr xml:id="AJΙCy"><supplied reason="lost" xml:id="AJΙCΙ">t</supplied>r</abbr><ex xml:id="AJΙCΤ">ibuno</ex></expan></w> <g ref="#interpunct" xml:id="AJΙCε" n="15">·</g> <w xml:id="AJΙCο" n="20"><expan xml:id="AJΙDA"><abbr xml:id="AJΙDK">mil</abbr><ex xml:id="AJΙDU">itum</ex></expan></w></roleName>
-                    <lb n="3" xml:id="AJΙDe"/><placeName type="ethnic" xml:id="AJΙDo"><w xml:id="AJΙDy" n="25"><supplied reason="lost" xml:id="AJΙDΙ">A</supplied></w> <w xml:id="AJΙDΤ" n="30">thenienses</w></placeName>
+                    <lb n="1"/><persName type="attested"><name><supplied reason="lost"><expan><abbr>Cn</abbr><ex>aeo</ex></expan></supplied></name> <name><supplied reason="lost">P</supplied>ollieno</name></persName>
+                    <lb n="2"/><expan><abbr><supplied reason="lost">t</supplied>r</abbr><ex>ibuno</ex></expan> <g ref="#interpunct">·</g> <expan><abbr>mil</abbr><ex>itum</ex></expan>
+                    <lb n="3"/><supplied reason="lost"><expan><abbr>c</abbr><ex>ives</ex></expan></supplied> <supplied reason="lost"><expan><abbr>r</abbr><ex>omani</ex></expan></supplied> <supplied reason="lost">et</supplied> <supplied reason="lost">A</supplied>thenienses
                 </ab>
             </div>
-            <div type="apparatus" resp="#AA">
+            <div type="apparatus">
                 <listApp>
-                    <app>
-                        <note>Text from autopsy</note>
-                    </app>
+                    <app><note>Text of ILTermini</note></app>
                 </listApp>
             </div>
-            <div type="translation" resp="#AA">
-                <p>To Gnaeus Pollienus, military tribune. The Athenians [erected this].</p>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary" resp="#AA">
-                <p>It is extremely likely that this base is dedicated to the same Pollienus as <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000095">ISic000095</ref>. Here, only his position as tribunus militum is recorded. If correct, this Pollienus is Cn. Pollienus Cn. f. tribunus militum of the 12th Fulminata legion. While it is likely that Pollienus settled in Thermae Himeraeae after it was made a colonia, Bivona (1994, 126) and Wilson (1990, 38-39) disagree as to whether Pollienus was at the beginning of his career, or a soldier of proven experience. Bivona and Wilson equally disagree as to whether veterans of Legio XII Fulminata were sent to Thermae Himeraeae at the foundation of the colony. Our Pollienus could be the son of Gnaeus Pollienus (rendered in Greek) at Haluntium <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic001190">ISic001190</ref>, although the recent reconsideration of that inscription by Korhonen and Soraci (2019, 103-106) suggest that both men might be one and the same. Mommsen suggested a sizeable lacuna to the left of [A]thenienses and that this should be restored as '<foreign xml:lang="la">[c(ives) r(omani) et]</foreign>', i.e. erected by Roman citizens resident in Athens, together with the Athenians (in order to explain the use of Latin by Athenians). Bivona (1994, 127) accepts this restoration. Korhonen and Soraci (2019, 105 n.51) suggest that this is unnecessary with the dimensions of the stone, and question Mommsen's reasoning that the Athenians would not dedicate in Latin; and while that reasoning must remain uncertain, the spacing seems to support their reading. Given that the letters '<foreign xml:lang="la">CN·F</foreign>' are presumably missing at the end of line 1, the text is not far off symmetrical even with only '<foreign xml:lang="la">Athenienses</foreign>' in line 3. Bivona (1994, 127) rightly rejects Manganaro's (1988, 42) suggestion of '<foreign xml:lang="la">[publice] Hennenses</foreign>' as this ignores what is clearly visible in line 3 and has no justification. It is unclear why Athenians should dedicate a base to Pollienus, but perhaps relates to activities during the civil wars. The nomen Pollienus is rare, but for scattered attestations across the empire.</p>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--apparently dedicated by Athenians, but no-one can see why - and is only a restoration from ]thenienses; prob. same man as CIL 10.7349; and his father p'haps in IG 14.367, q.v. Manganaro suggests publice Hennenses (ANRW 1988, p.42), but Bivona rejects as a) not matching what's on the stone, b) no good reason.--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -243,59 +222,35 @@
                         <title>NSA</title>
                         <date>1876</date>
                         <citedRange>95 [=261]</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
                     <bibl type="bulletin" n="NSA">
                         <author>Fiorelli</author>
                         <title>NSA</title>
                         <date>1876</date>
                         <citedRange>147 =[324]</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                     </bibl>
                     <bibl type="corpus" n="CIL">
-                        <author>Mommsen</author>
-                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650796">7350</ref>
+                            <ref target="http://arachne.uni-koeln.de/item/buchseite/650796">10.7350</ref>
                         </citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref>
-                    </bibl>
-                    <bibl type="corpus" n="ILMusTermini">
-                        <author>Bivona</author>
-                        <date>1994</date>
-                        <citedRange>14</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref>
-                    </bibl>
+                        <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/></bibl>
+                    <bibl type="corpus" n="ILMusTermini"><citedRange>14</citedRange><ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/></bibl>
                     <bibl>
                         <author>Wilson</author>
                         <date>1990</date>
                         <citedRange>359 n.57</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/VF9MMBI9"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001509">https://biblio.inscriptiones.org/epig10001509</ref>
                     </bibl>
                     <bibl>
                         <author>Manganaro</author>
                         <date>1988</date>
                         <citedRange>42</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/RZSFKACR"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10001427">https://biblio.inscriptiones.org/epig10001427</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Korhonen</author>
-                        <author>Soraci</author>
-                        <date>2019</date>
-                        <citedRange>105</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/I8LT7XNE"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002542">https://biblio.inscriptiones.org/epig10002542</ref>
                     </bibl>
                 </listBibl>
-                <listBibl type="discussion">
-                    <bibl/>
-                </listBibl>
+	   <listBibl type="discussion"><bibl/></listBibl>
             </div>
         </body>
     </text>

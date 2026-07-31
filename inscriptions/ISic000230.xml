@@ -1,11 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>                                                
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Funerary inscription for Vecilia</title>
+                <title>I.Sicily inscription 000230</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -18,6 +18,18 @@
                     <name xml:id="JCu" ref="http://orcid.org/0000-0002-6686-3728">James Cummings</name>
                     <resp>conversion to EpiDoc</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VV" ref="http://orcid.org/0000-0002-9695-0240">Valeria Vitale</name>
+                    <resp>editing of geo data</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="MM">Michael Metcalfe</name>
+                    <resp>museum data collection</resp>
+                </respStmt>
 	    <respStmt>
      	       <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
      	       <resp>standardisation of template and tidying up encoding</resp>
@@ -26,11 +38,10 @@
                  <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
                  <resp>encoding text division and checking the edition</resp>
         </respStmt>
-                <respStmt>
-                    <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
-                    <resp>Edition on basis of autopsy and photographs</resp>
+	    <respStmt>
+                    <name xml:id="system">system</name>
+                    <resp>automated or batch processes</resp>
                 </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -43,16 +54,19 @@
                 <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic000230</idno>
                 <idno type="DOI" when="2020-12-17">10.5281/zenodo.4334660</idno>
                 <availability>
-                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative
+                        Commons-Attribution 4.0 licence.
+                    </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier>
+                    <msIdentifier><!--Default country and region-->
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Termini Imerese</settlement>
-                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico Baldassare Romano</repository>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/066">Museo Civico
+                            Baldassare Romano</repository>
                         <idno type="inventory">124</idno>
                         <!--Adding location for old id numbers if available-->
                         <altIdentifier>
@@ -67,33 +81,28 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support><p>Rectangular stele, grey limestone. Sides relatively squared, with chips on top and bottom faces. Rear tapers to flat surface. Significant later damage, including later graffiti scratched onto front face. Large scratches on front face.</p>
-                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcite_limestone.grey.calcare-lucidabile_grigio_sicilia-occidentale" type="stone.limestone.polishable.grey" subtype="calcare_grigio_SiciliaOCC" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <objectType ana="#object.stele" ref="http://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
-                                    <dimensions>
-                                        <height unit="cm">32</height>
-                                        <width unit="cm">67.5</width>
-                                        <depth unit="cm">21</depth>
+                                <support>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <dimensions><!--Default values and requires editing-->
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
                                     </dimensions>
                                 </support>
                                 <condition/>
 		    </supportDesc>
                             <layoutDesc>
-                                <layout><p>Two lines of Latin text, roughly centred on stone, but all contained within top half of the stone. Small dash interpunct is evident in line 1, but possible traces elsewhere. Graffiti squeezed into stone between left edge of stone and start of text, and roughly follows lines of inscription (but far from faithfully).</p>
+                                <layout><!--Default value and requires checking-->
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                 	<damage/>
 			</layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><p>Text is only lightly inscribed on stone. Letters even spaced and well-formed. Light serifs. Graffiti very rough, grey scratches on surface. Letters are imitative of main text, but thickness of lines, size of letters and orientation of letters are inconsistent.</p>
+                            <handNote><!--Default value and requires editing-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="36" atMost="41">36-41</height>
-                                </dimensions>
-                                <locus from="line2" to="line2">Line 2</locus>
-                                <dimensions type="letterHeight">
-                                    <height unit="mm" atLeast="35" atMost="42">35-42</height>
+                                    <height unit="mm"/>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -104,15 +113,16 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462513">Thermae Himeraeae</placeName>		
                                 <placeName type="modern" ref="http://sws.geonames.org/6539140">Termini Imerese</placeName>
                             	<geo>37.98365, 13.69555</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0050">Bivona (1994, 239) dates to the first half of the 1st century CE based on the missing cognomen.</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0050">B: 'manca invece del
+                                cognomen indizio questo di una possibile datazione dell'epigrafe alla prima meta del I sec. d.C.'</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered" when="1783">Found in Termini Imerese in 1783 (so Castelli 1784), and in the local senate house collection by 1829 (Romano).</provenance>
-                        <provenance type="observed" subtype="autopsied" when="2022-07-08" resp="#AA">Antoniou, 2022-07-08. On display in the courtyard portico of Museo Civico Baldassare Romano</provenance>
+                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -151,12 +161,12 @@
                 <language ident="sxc">Sikan</language>
             </langUsage>
             <textClass>
-                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
-                    <term ana="#function.funerary" ref="https://ontology.inscriptiones.org/type_of_inscription/Funerary">funerary</term>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="edited">
+        <revisionDesc status="draft">
             <listChange>
                    <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
             	   <change when="2020-10-05" who="#SS">Simona Stoyanova normalised Unicode</change>
@@ -164,73 +174,53 @@
                    <change when="2020-10-09" who="#VM">Valentina Mignosa encoded text division, cleaned up the autogenerated text and checked the edition</change>
             	<change when="2020-11-20" who="#SS">Simona Stoyanova added EDCS numbers</change>
 		<change when="2020-11-26" who="#SS">Simona Stoyanova restructured bibliography</change>
-	    <change when="2020-12-17" who="#JP">Updated Zenodo DOI</change>
+	    <change when="2020-12-17" who="#system">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
-                <change when="2023-08-30" who="#AA">edition on basis of autopsy and photographs</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
     <facsimile>
         <surface type="front">
             <graphic n="screen" url="ISic000230_tiled.tif" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-08</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
             <graphic n="print" url="ISic000230.jpg" height="3680px" width="5520px">
-                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana; photo J. Prag 2022-07-08</desc>
+                <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="la" resp="#VM #AA">
+            <div type="edition" xml:space="preserve" xml:lang="la" resp="#VM">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name><expan><abbr>L</abbr><ex>ucia</ex></expan></name> <g ref="#interpunct">·</g> <name>Vecilia</name> <persName type="attested"><name type="patronym"><expan><abbr>L</abbr><ex>ucii</ex></expan></name></persName> <w><expan><abbr>f</abbr><ex>ilia</ex></expan></w></persName>
+                    <lb n="1"/><expan><abbr>L</abbr><ex>ucia</ex></expan> Vecilia <expan><abbr>L</abbr><ex>ucii</ex></expan> <expan><abbr>f</abbr><ex>ilia</ex></expan>
                     <lb n="2"/><expan><abbr>vix</abbr><ex>it</ex></expan> <expan><abbr>an</abbr><ex>nis</ex></expan> <num value="30">XXX</num>
                 </ab>
             </div>
-            <div type="apparatus" resp="#AA">
+            <div type="apparatus">
                 <listApp>
-                    <app><note>Text from autopsy</note></app>
-                    <app loc="1"><note>Castelli: VICILIA L. F</note></app>
-                    <app loc="2"><note>Castelli: VIX. ANN. XXX.</note></app>
+                    <app><note>Text of ILTermini</note></app>
                 </listApp>
             </div>
-            <div type="translation" xml:lang="en" resp="#AA">
-                <p>Lucia Vecilia, daughter of Lucius, lived for 30 years.</p>
+            <div type="translation">
+                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary" resp="#AA">
-                <p>Vecilia, unusually, has a praenomen, presumably adopted from her father, Lucius. Vecilii are well-attested in Thermae Himeraeae, see esp. <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000231">ISic000231</ref>, <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000229">ISic000229</ref>, and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic000228">ISic000228</ref>. Romano notes that Castelli's text, which was at second hand, was somewhat inaccurate.</p>
+            <div type="commentary">
+                <p><!--commented out pending revision-->
+                    <!--L.Vecilia L.f.vix.an.XXX - unusally has a praenom, which matches that of other Vecilii in TI;--></p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
-                    <bibl>
-                        <author>Castelli</author>
-                        <date>1784</date>
-                        <citedRange>331 no.4</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/7PSFHSUH"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002083">https://biblio.inscriptiones.org/epig10002083</ref>
-                    </bibl>
-                    <bibl>
-                        <author>Romano</author>
-                        <date>1829</date>
-                        <citedRange>303 no.14</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/2UJS2UVS"/>
-                        <ref target="https://biblio.inscriptiones.org/epig10002748">https://biblio.inscriptiones.org/epig10002748</ref>
-                    </bibl>
                     <bibl type="corpus" n="CIL">
-                        <author>Mommsen</author>
-                        <date>1883</date>
                         <citedRange>
-                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">7444</ref>
+                            <ref target="http://arachne.uni-koeln.de/books/CILv10pII1883">10.7444</ref>
                         </citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/GQN8UZSI"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10000589">https://biblio.inscriptiones.org/epig10000589</ref></bibl>
+                    </bibl>
                     <bibl type="corpus" n="ILMusTermini">
-                         <author>Bivona</author>
-                         <date>1994</date> 
                         <citedRange>155</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/JCV85C79"/>
-                    <ref target="https://biblio.inscriptiones.org/epig10002137">https://biblio.inscriptiones.org/epig10002137</ref></bibl>
+                    </bibl>
                     <bibl/>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
