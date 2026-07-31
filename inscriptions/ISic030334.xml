@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Dedication of Pantares at Olympia</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder>
+                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
+                </funder>
+                <respStmt>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>project direction, template development and general editor</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>original data collection and editing, encoding text in EpiDoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic030334</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI">329378</idno>
+                <idno type="PHI">213947</idno>
+                <idno type="PHI">215014</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic030334</idno>
+                <idno type="DOI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Greece</country>
+                        <settlement>Olympia</settlement>
+                        <repository role="museum" ref="http://odysseus.culture.gr/h/1/eh151.jsp?obj_id=7126">Archaeological Museum of Olympia</repository>
+                        <idno type="inventory">521</idno>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Fragment of a thin bronze plinth belonging to a votive statuette.</p>
+                                    <material ana="#material.metal.bronze" ref="http://www.eagle-network.eu/voc/material/lod/109.html">bronze</material>
+                                    <objectType ana="#object.arch_element.plinth" ref="https://www.eagle-network.eu/voc/objtyp/lod/1910.html">plinth</objectType>
+                                    <dimensions>
+                                        <height unit="cm">3.6</height>
+                                        <width unit="cm">8.8</width>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <p>The lightly engraved text follows at least three outer edges of the plinth, changing direction, and ends in a right-to-left curve towards the centre.</p>
+                                    <rs ana="#execution.engraved" ref="https://www.eagle-network.eu/voc/writing/lod/3.html">engraved</rs>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Lightly engraved in the local alphabet of Gela.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <region>Sicilia</region>
+                                <placeName type="ancient" ref="https://pleiades.stoa.org/places/462214">Gela</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2524653/">Gela</placeName>
+                                <geo>37.0630925, 14.2584705</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0550" notAfter-custom="-0525" evidence="lettering">ca. 550–525 BCE, Dubois (ca. 525 BCE in LSAG)</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found in the sanctuary of Zeus at <placeName ref="https://pleiades.stoa.org/places/570531">Olympia</placeName><geo>37.6386894206, 21.6308747804</geo>, Greece.</provenance>
+                        <provenance type="observed" subtype="autopsied">No Autopsy</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.dedication.votive" ref="https://ontology.inscriptiones.org/type_of_inscription/Dedication">votive dedication</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2026-07-30" who="#VM">Creation of file and EpiDoc encoding</change>
+                <change when="2026-07-31" who="#VM">Bibliography</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name>Παντάρε̄ς</name></persName> μ’ ἀνέθε̄κ<supplied reason="lost">ε</supplied> <persName type="attested"><name>Μενεκράτιος</name></persName> Διὸ<supplied reason="lost" cert="low">ς ἆθλον</supplied> <unclear>τ</unclear>ο͂ <placeName type="ethnic">Γελοαίο̄</placeName>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app>
+                        <note>Text after Jeffery 1961 (LSAG, p. 273 and no. 48), as reproduced by Arena 2002 (IGASMG II² 4).</note>
+                    </app>
+                    <app loc="1">
+                        <note>Jeffery's restoration Διὸ[ς ἆθλον] το͂ Γελοαίο̄ is adopted here. Ebert 1972 restores two hexameters, Διὸ[ς ἆθλα / hίπ(π)οι νικάσας πέδο ἐ(κ)κλε]το͂ Γελοαίο̄, interpreting the dedication as the prize 
+                            for a victory in the horse race. IvO 142 and earlier editions instead reconstruct a victory in the chariot race. Since the original extent of the plinth is unknown, all extended restorations remain conjectural.</note>
+                    </app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p>Pantares, son of Menekrates the Geloan, dedicated me as a prize of Zeus.</p>
+                <p>Pantares,  the  son  of  Menekrates,  from  the  renowned  plain  of  Gela,  dedicated  me,  after  having  won by horse the contests of Zeus. (Translation by Fouquet following Ebert's edition)</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#VM">
+                <p>Pantares, figlio di Menecrate di Gela, mi dedicò come premio di Zeus.</p>
+                <p>Pantares, figlio di Menekrates, proveniente dalla rinomata pianura di Gela, mi dedicò, dopo aver vinto con il cavallo le gare in onore di Zeus. (Italian translation following Ebert's edition)</p>
+            </div>
+            <div type="commentary" xml:lang="en" resp="#VM">
+                <p>The object was interpreted in IvO 142 as a bronze plaque attached to a larger stone base, 
+                    but since Jeffery it has generally been identified as the plinth of a small bronze statuette. 
+                    One dowel-hole survives, and the plinth was originally attached by two lateral clamps to a larger pedestal, 
+                    probably of marble. Because neither the original dimensions of the plinth nor the statuette are preserved, 
+                    the longer restorations and the identification of the represented animal remain uncertain.
+                The dedicator is generally identified with Pantares, father of the Geloan tyrants Cleandros and Hippokrates 
+                    <ref target="https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0125:book=7:chapter=154">(Hdt. 7.154)</ref>, 
+                although the identification cannot be established from the inscription alone.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl type="corpus" n="IGA">
+                        <author>Roehl</author>
+                        <date>1882</date>
+                        <citedRange>512a</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/HR24PMMR"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001044">https://biblio.inscriptiones.org/epig10001044</ref>
+                    </bibl>
+                    <bibl type="corpus" n="IvO">
+                        <author>Dittenberger</author>
+                        <author>Purgold</author>
+                        <date>1896</date>
+                        <citedRange>241–244 no. 142</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/55QXQ7XE"/>
+                    </bibl>
+                    <bibl type="corpus" n="SGDI">
+                        <author>Hoffmann</author>
+                        <date>1904</date>
+                        <citedRange>4248</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/DQDPC573"/>
+                    </bibl>
+                    <bibl type="corpus" n="Roehl">
+                        <author>Roehl</author>
+                        <date>1907</date>
+                        <citedRange>34.II</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/KV7SJ9VF"/>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>11.1215</citedRange>
+                        <date>1950</date>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
+                    <bibl type="corpus" n="LSAG">
+                        <author>Jeffery</author>
+                        <date>1961</date>
+                        <citedRange>273; 278 no. 48; pl. 53</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/V6CGSWPS"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000677">https://biblio.inscriptiones.org/epig10000677</ref>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>16.288</citedRange>
+                        <date>1959</date>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Ebert</author>
+                        <date>1972</date>
+                        <citedRange>44–46 no. 5</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/ZZ2KHIMJ"/>
+                    </bibl>
+                    <bibl>
+                        <author>Lazzarini</author>
+                        <date>1976</date>
+                        <citedRange>299 no. 854</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/3N7Z6QX5"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002517">https://biblio.inscriptiones.org/epig10002517</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Gallavotti</author>
+                        <date>1977</date>
+                        <citedRange>115–116</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/QDUP6UP8"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001973">https://biblio.inscriptiones.org/epig10001973</ref>
+                    </bibl>
+                    <bibl type="bulletin" n="SEG">
+                        <citedRange>27.49</citedRange>
+                        <date>1977</date>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
+                    </bibl>
+                    <bibl type="corpus" n="CEG I">
+                        <author>Hansen</author>
+                        <date>1983</date>
+                        <citedRange>398</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/PCVG9ND6"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002468">https://biblio.inscriptiones.org/epig10002468</ref>
+                    </bibl>
+                    <bibl type="corpus" n="IGDS I">
+                        <author>Dubois</author>
+                        <date>1989</date>
+                        <citedRange>132</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RWXNUFEX"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000187">https://biblio.inscriptiones.org/epig10000187</ref>
+                    </bibl>
+                    <bibl type="corpus" n="LSAG">
+                        <author>Jeffery</author>
+                        <author>Johnston</author>
+                        <date>1990</date>
+                        <citedRange>273; 278 no. 48; pl. 53; 459</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/QUWGZA84"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10000678">https://biblio.inscriptiones.org/epig10000678</ref>
+                    </bibl>
+                    <bibl type="corpus" n="IGASMG II">
+                        <author>Arena</author>
+                        <date>2002</date>
+                        <citedRange>4</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/65P7AM6N"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001373">https://biblio.inscriptiones.org/epig10001373</ref>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl>
+                        <author>Brugnone</author>
+                        <date>1995</date>
+                        <citedRange>1319, tav. CCXCI.5</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/JV5W86A5"/>
+                    </bibl>
+                    <bibl>
+                        <author>Fouquet</author>
+                        <date>2022</date>
+                        <citedRange>149–150 fig. 2</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/BMX56R43"/>
+                        <ref target="https://biblio.inscriptiones.org/">https://biblio.inscriptiones.org/</ref>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
