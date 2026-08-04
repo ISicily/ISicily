@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Graffito of Thexenos on a black-glaze kylix from Syracuse</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>Project direction, template development, general editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="https://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>Site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>Standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>File added and EpiDoc encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic020938</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic020938</idno>
+                <idno type="DOI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository/>
+                        <!--Present location and inventory number not reported by Guzzardi 2012-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Fragment of a black-glaze kylix, probably an Attic import.</p>
+                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/130.html">ceramic</material>
+                                    <objectType ana="#object.vessel.kylix" ref="http://kerameikos.org/id/kylix">kylix</objectType>
+                                    <!--No dimensions supplied by Guzzardi 2012-->
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9.html">scratched</rs>
+                                    <p>The graffito is placed on the preserved floor of the vessel.</p>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <locus from="line1" to="line1">Line 1</locus>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace cert="low">
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                                <geo>37.0599531, 15.2932725</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" evidence="material-context" notBefore-custom="-0490" notAfter-custom="-0480" precision="low">c. 490–480 BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found with Roman-period material in a fill layer in the eastern area of the excavation, outside the municipal building, in the archaeological complex of the Ionic temple at Ortygia, Syracuse<geo>37.0599531, 15.2932725</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">None; edited from the published photograph.</provenance>
+                        <provenance/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.attribution.ownership" cert="low" ref="https://ontology.inscriptiones.org/type_of_inscription/Ownership">ownership (?)</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2026-08-04" who="#VM">File added and EpiDoc encoding</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/></facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name type="idionym">Θέξενος</name></persName>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text after photograph (Guzzardi 2012, 174 fig. 16).</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p>Thexenos.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#VM">
+                <p>Thexenos.</p>
+            </div>
+            <div type="commentary" xml:lang="en" resp="#VM">
+                <p>The graffito preserves the personal name Θέξενος. Guzzardi compares this form with the well-attested name Θεόξενος. 
+                    The name Θέξενος is listed by Pape and Benseler (1911, 274 s.v.) and is independently attested at Delphi in <ref target="https://epigraphy.packhum.org/text/241664">SGDI II 2156, l. 6</ref>, 
+                    as Θέξενος Φιλαιτώλου. The use of Ξ for /ks/ is particularly significant for assigning the graffito to the Syracusan alphabet since contemporary 
+                    Attic writing represented /ks/ with the digraph ΧΣ (see for comparison Dubois, IGDS I, no. 96). The forms of the other letters, including theta, 
+                    are also compatible with the Syracusan alphabet, although they are not independently diagnostic. The palaeography therefore favours a Syracusan attribution 
+                    for the inscription, despite the probable Attic manufacture of the kylix. An ownership function is plausible for an isolated personal name scratched 
+                    on a drinking vessel, but it remains uncertain. Guzzardi regards the vessel as contemporary with the phase of the Ionic temple dated to c. 490–480 BCE, 
+                    although it was recovered as residual material together with Roman-period finds in a fill layer east of the excavation and outside the municipal building. 
+                    The same archaeological complex also preserves three signs incised on architectural blocks, recorded as <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004516">ISic004516</ref> (sigma, or possibly mu), <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004517">ISic004517</ref> (pi) and <ref target="http://sicily.classics.ox.ac.uk/inscription/ISic004518">ISic004518</ref> (theta).
+                    </p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Guzzardi</author>
+                        <date>2012</date>
+                        <citedRange>173–174, fig. 16</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RW3TZH5H"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion">
+                    <bibl type="corpus" n="SGDI">
+                        <citedRange>II 2156, l. 6</citedRange>
+                        <ptr target="https://epigraphy.packhum.org/text/241664"/>
+                    </bibl>
+                    <bibl n="Pape-Benseler">
+                        <author>Pape</author>
+                        <author>Benseler</author>
+                        <date>1911</date>
+                        <citedRange>274, s.v. Θέξενος</citedRange>
+                        <ptr target="https://anemi.lib.uoc.gr/metadata/0/b/4/metadata-02-0000515.tkl"/>
+                    </bibl>
+                </listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
