@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
     <teiHeader>
@@ -14,11 +14,7 @@
                     <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
                     <resp>Project direction, template development, general editing</resp>
                 </respStmt>
-                <respStmt>
-                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
+            <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -91,11 +87,13 @@
                     <history>
                         <origin>
                             <origPlace>
-                                <placeName type="modern">Contrada San Martino, near San Giacomo (Ragusa)</placeName>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462252" corresp="#findspot">Hybla Heraea</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523650">Ragusa</placeName>
+                                <geo>36.92653, 14.74761</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0525" notAfter-custom="-0491" precision="low">Late 6th to early 5th century BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0525" notAfter-custom="-0491">Late 6th to early 5th century BCE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in Contrada San Martino, on the left bank of the Irminio, near San Giacomo (Ragusa), close to a small group of artificial rock-cut tombs.</provenance>
+                        <provenance type="found" subtype="discovered">Found in Contrada San Martino, on the left bank of the Irminio, near San Giacomo (c.5km north-west of Ragusa), close to a small group of artificial rock-cut tombs.<geo cert="medium">36.9740823,14.7971441</geo></provenance><!-- approx location based on map in Scerra -->
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance></provenance>
                     </history>
@@ -153,14 +151,14 @@
         <body>
             <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
                 <ab>
-                    <lb n="1"/><name>Αἰσχύλου</name>
+                    <lb n="1"/><persName type="attested"><name>Αἰσχύλου</name>
                     <lb n="2"/><supplied reason="lost" cert="low">ἐ</supplied>ιμὶ τοῦ <name>Γ<supplied reason="lost">ο</supplied>
-                    <lb n="3" break="no"/>ργου</name>
+                    <lb n="3" break="no"/>ργου</name></persName>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text after photograph</note></app>
+                    <app><note>Text after photograph in Scerra 2018</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#VM">
