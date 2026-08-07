@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Mason's mark (pi) from the Ionic temple at Syracuse</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>Project direction, template development, general editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="http://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>File added and EpiDoc encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic004517</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004517</idno>
+                <idno type="DOI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="site">Ionic temple</repository> <!-- I need to create a ref in pleiades for the 'Artemision' -->
+                        <!--In situ; no inventory number-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.block" ref="http://www.eagle-network.eu/voc/objtyp/lod/189.html">block</objectType>
+                                    <!--No dimensions supplied for this block-->
+                                </support>
+                                <condition ana="#condition.complete"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage ana="#text_condition.complete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>The incised sign resembles the Greek letter pi.</p>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
+                                <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
+                                <geo>37.0599531, 15.2932725</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0525" notAfter-custom="-0475" precision="low">Late 6th to early 5th century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Recorded in situ on a limestone block belonging to the same masonry structure within the perimeter of the cella as the block bearing the sigma-shaped mark (ISic004516), beneath the municipal building east of Palazzo Vermexio, Ortygia, Syracuse<geo>37.0599531, 15.2932725</geo></provenance>
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.mason" ref="http://www.eagle-network.eu/voc/typeins/lod/390.html">mason's mark</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2026-07-31" who="#VM">Creation of file and EpiDoc encoding</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1"/><orig>Π</orig>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app loc="1"><note>Text after Guzzardi 2012, 174 n. 61.</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p>Pi-shaped mark.</p>
+            </div>
+            <div type="commentary">
+                <p>Guzzardi records this sign, resembling Greek pi, on one of two further blocks in the same masonry structure within 
+                    the perimeter of the cella as the block bearing the sigma-shaped mark. The publication supplies neither an illustration 
+                    nor measurements of the individual block. Its context places it within the same construction phase, dated to the late sixth 
+                    or early fifth century BCE. Comparable signs on blocks from the temple are interpreted as setting-out marks used to guide 
+                    their positioning and orientation.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Guzzardi</author>
+                        <date>2012</date>
+                        <citedRange>150; 174 n. 61</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RW3TZH5H"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

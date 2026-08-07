@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Ligatured graffito on an Attic kylix from Kasmenai</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>Project direction, template development, general editing</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="JCh" ref="https://orcid.org/0000-0001-6823-0265">James Chartrand</name>
+                    <resp>Site construction and encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>Standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>File added and EpiDoc encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic020949</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic020949</idno>
+                <idno type="DOI"/>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement>Siracusa</settlement>
+                        <repository role="museum" ref="http://sicily.classics.ox.ac.uk/museum/097">Museo Archeologico Regionale Paolo Orsi</repository>
+                        <idno type="inventory"><!--No inventory number--></idno>
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <p>Fragmentary foot of an Attic Type C black-glaze kylix.</p>
+                                    <material ana="#material.clay.fired" ref="https://www.eagle-network.eu/voc/material/lod/130.html">ceramic</material>
+                                    <objectType ana="#object.vessel.kylix" ref="http://kerameikos.org/id/kylix">kylix</objectType>
+                                    <dimensions>
+                                        <height unit="cm"/>
+                                        <width unit="cm"/>
+                                        <depth unit="cm"/>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.fragment"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.scratched" ref="https://www.eagle-network.eu/voc/writing/lod/9.html">scratched</rs>
+                                    <p>The graffito was scratched after firing on the underside of the foot. The characters are joined in a ligature.</p>
+                                    <damage ana="#text_condition.partly_illegible"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <p>Alpha has a horizontal crossbar and a right stroke approximately one third longer than the left one. The second character, damaged internally, is probably delta and is arranged symmetrically to alpha. One of its strokes continues beyond the horizontal stroke, while the meeting of the two apices produces a chi-shaped form.</p>
+                                <locus from="line1" to="line1">Line 1</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm">10</height>
+                                    <width unit="mm">7</width>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace cert="low">Possibly mainland Greece</origPlace>
+                            <origDate datingMethod="#julian" evidence="material-context lettering" notBefore-custom="-0500" notAfter-custom="-0480" precision="low">500-480 BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found in the urban sanctuary at Kasmenai, Monte Casale, near Chiaramonte Gulfi; the fragment was preserved among materials in boxes attributed to the temple, but its precise excavation context is not recorded<geo>37.0771, 14.8320</geo>.</provenance>
+                        <provenance type="observed" subtype="autopsied">None; edited from a photograph.</provenance>
+                        <acquisition/>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
+                    <term ana="#function.unknown" ref="https://ontology.inscriptiones.org/type_of_inscription/Unable_to_determine">unknown</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="edited">
+            <listChange>
+                <change when="2026-08-04" who="#VM">File added and EpiDoc encoding and edition</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile><surface/></facsimile>
+    <text>
+        <body>
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1"/><hi rend="ligature"><orig><unclear>δ</unclear>χα</orig></hi>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text: Mignosa in Scarci 2026, section 4.3.1, figs. 44-45.</note></app>
+                    <app><note>The marks may alternatively be read as a ligature of delta and alpha; chi results from the meeting of their apices.</note></app>
+                    <app><note>The possible expansion δραχμὰ αʹ is interpretative and is not otherwise attested in this form.</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p cert="low">[Of the value of] one drachma.</p>
+            </div>
+            <div type="translation" xml:lang="it" resp="#VM">
+                <p cert="low">[Del valore di] una dracma.</p>
+            </div>
+            <div type="commentary" xml:lang="en" resp="#VM">
+                <p>Alpha is clearly legible, whereas the second character, damaged internally, is probably delta. 
+                    The two characters are arranged symmetrically and their apices touch, producing a chi-shaped form. 
+                    The graffito may therefore be read either as a ligature of delta and alpha or, as proposed by Mignosa, as delta-chi-alpha. 
+                    The shape of delta suggests the Attic alphabet and supports a broadly fifth-century date, consistent with the chronology 
+                    of the Type C kylix, c. 500-480 BCE. The marks may be para-alphabetic signs referring to the owner, producer or production batch. 
+                    Alternatively, they may abbreviate δραχμὰ αʹ, indicating a price of one drachma, a plausible amount for an everyday vessel 
+                    imported from mainland Greece. On this interpretation, the graffito may have been added in Greece before export, 
+                    although the proposed abbreviation is not otherwise attested. Its position beneath the foot might be connected with 
+                    a sales practice in which vessels were displayed upside down, leaving the price visible.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Scarci</author>
+                        <date>2026</date>
+                        <citedRange>section 4.3.1 by V. Mignosa, figs. 44-45</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/RUWBSDWC"/>
+                        <ptr target="https://schnell-und-steiner.de/produkt/ricontestualizzare-i-vecchi-scavi/"/>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>
