@@ -32,6 +32,10 @@
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
                     <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -170,6 +174,7 @@
                 <change when="2024-07-10" who="#JP">Jonathan Prag revised from publication</change>
                 <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
                 <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+                <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the apparatus, added the translation and the commentary</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -208,27 +213,21 @@
                     <gap reason="lost" extent="unknown" unit="character" n="50"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
-            <div type="apparatus" resp="#JP">
+            <div type="apparatus" resp="#JP #martaf">
                 <listApp>
                     <app>
                         <note>Text after Amico and Kaibel</note>
                     </app>
-                    <app loc="1">
-                        <note>Amico 1741: 274: ΕΝΘΑΚ</note>
-                    </app>
-                    <app loc="3">
-                        <note>Amico 1741: 274: ΕΤΗΝ; Amico 1741: 277: ΕΤΕΝ̅</note>
-                    </app>
-                    <app loc="4">
-                        <note>Amico 1741: 274: ΚΤΩ....; Kirchoff: [τελευτᾷ τῇ πρὸ -- Ὀ]κτω[βρίων]; Ferrua:  [ὑπατίᾳ — —ο]υ τὸ[</note>
-                    </app>
+                    <app loc="line 1"><note>ἐνθάδ[ε Amico 1741, 277, IG XIV 558; ΕΝΘΑΚ Amico 1741, 274; ἔνθα κ[ῖτε --- CIG IV 9500</note></app>
+                    <app loc="line 2"><note>ζησας Amico, ΙG XIV 558; ζήσας [ἄμεμπτος καὶ ἄλυπος CIG IV 9500</note></app>
+                    <app loc="lines 3-4"><note>ἔτη ν´ [---] | [---] ΥΤΟ Amico 1741, 277; ἔτη ν´ [---] | [---] ΚΤΩ Amico 1741, 274; ἔτη ν´. [τελευτᾷ τῇ πρὸ --- Ὀ]|κτω[βρίων CIG IV 9500, IG XIV 558; ἔτη ν´. [ὑπατίᾳ] | [---o]υ ΤΟ Ferrua</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Here … having lived … 50 years …</p>
             </div>
-            <div type="commentary">
-                <p>Amico presents the text in two different variants, without seemingly recognising that it is the same text. Ferrua suggests that the traces in line 4 would be compatible with a consular dating, such as for an imperial consul, as with Honorius in 404 CE, but obviously the actual date is speculative. Kirchoff in CIG offered a possible restoration of line 3-4 on the basic of Amico's alternative reading.</p>
+            <div type="commentary" resp="#martaf #JP">
+                <p>The funerary inscription is highly fragmentary. Amico copied it twice, with only a minor variation in line 4, failing to recognize that the two copies represented the same text. The restorations proposed by Kirchhoff (ap. CIG IV 9500) and Kaibel (ap. IG XIV 558) are based on one of the variants (Amico 1741, 274), whereas Ferrua's restoration (1983, 27 no. 91) relies on the other (Amico 1741, 277). Kirchhoff and Kaibel interpreted the last two lines as containing the formula recording the date of death, including the specification of the month (ll. 3–4: <foreign xml:lang="grc">τῇ πρὸ --- Ὀ]|κτω[βρίων</foreign>), whereas Ferrua interpreted them as preserving a consular dating formula (<foreign xml:lang="grc">ὑπατίᾳ --- ο]|υ</foreign>), suggesting that the reference was to the consulship of the emperor Honorius (404 CE).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
