@@ -15,10 +15,6 @@
                     <resp>Project direction, template development, general editing</resp>
                 </respStmt>
                 <respStmt>
-                    <name xml:id="JCh" ref="https://orcid.org/0000-0001-6823-0265">James Chartrand</name>
-                    <resp>Site construction and encoding</resp>
-                </respStmt>
-                <respStmt>
                     <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
                     <resp>Standardisation of template and tidying up encoding</resp>
                 </respStmt>
@@ -90,7 +86,7 @@
                                 <p>The letters were painted with a fine brush, with a maximum stroke width of approximately 2-3 mm. Tau has an oblique upper stroke; alpha has a crossbar descending to the left and a short tail beyond the right stroke; iota is slightly curved to the left.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm">20-22</height>
+                                    <height unit="mm" atLeast="20" atMost="22">20-22</height>
                                 </dimensions>
                             </handNote>
                         </handDesc>
@@ -106,10 +102,10 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2523164">Selinunte</placeName>
                                 <geo>37.5853775, 12.8298666</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="-0628" notAfter-custom="-0570" evidence="archaeological-context lettering" precision="low">628-570 BCE or post 570 BCE</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="-0628" notAfter-custom="-0570" evidence="archaeological-context lettering">628-570 BCE (or post 570 BCE)</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="2023">Found during the 2023 excavation campaign in Temple R, SAS T, US 25, in a layer of calcarenite chips, silt and sand beneath the original floor of the temple.</provenance>
-                        <provenance type="observed" subtype="autopsied">Autopsied by Valentina Mignosa.</provenance>
+                        <provenance type="observed" subtype="autopsied" xml:id="autopsy">Autopsied by Valentina Mignosa.</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -162,22 +158,22 @@
     <facsimile><surface/></facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM" source="#autopsy">
                 <ab>
                     <lb n="1" style="text-direction:l-to-r"/><gap reason="lost" extent="unknown" unit="character"/>ΤΑΙ<unclear>Ν</unclear><gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app><note>Text: Bertaiola et al. 2023, pp. 383-388.</note></app>
+                    <app><note>Text from autopsy, as Bertaiola et al. 2023, pp. 383-388.</note></app>
                     <app><note>The fourth letter is read tentatively as nu by the editors.</note></app>
                 </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#VM">
-                <p cert="low">[Dedicated] to the two goddesses.</p>
+                <p>[Dedicated] to the two goddesses.</p>
             </div>
             <div type="translation" xml:lang="it" resp="#VM">
-                <p cert="low">[Dedicato] alle due dee.</p>
+                <p>[Dedicato] alle due dee.</p>
             </div>
             <div type="commentary" xml:lang="en" resp="#VM">
                 <p>Only three letters are fully preserved; the traces after iota are most plausibly read as nu. 
