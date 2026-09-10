@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001317</title>
+                <title>Funerary inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -36,6 +36,10 @@
                     <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
                     <resp>named entity annotation</resp> 
                 </respStmt> 
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -115,6 +119,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400">imperial period</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Carrera reports found outside the walls of the city on the west side</provenance>
+                        <provenance type="not-observed" subtype="lost">Lost</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -171,11 +176,11 @@
                 <change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
                 <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
-                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
+                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001317_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -184,12 +189,12 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
         </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
-                    <lb n="1"/><w n="5"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <w n="10"><expan><abbr>κ<unclear>α</unclear></abbr><ex>ταχθονίοις</ex></expan></w>
+                    <lb n="1"/><w n="5"><expan><abbr>Θ</abbr><ex>εοῖς</ex></expan></w> <w n="10"><expan><abbr>κ<unclear>α</unclear></abbr><ex>ταχθονίοις</ex></expan></w> <w n="12"><expan><abbr>Δ</abbr><ex>αίμοσι</ex></expan></w>
                     <lb n="2"/><persName type="attested"><name><w n="15">Βειψάνιο<supplied reason="lost">ς</supplied></w></name>
                     <lb n="3"/><name><w n="20">Ζώτικος</w></name></persName> <w n="25"><supplied reason="lost">ἔζησεν</supplied></w>
                     <lb n="4"/><w n="30">ἔτη</w> <g ref="#interpunct" n="35">·</g> <num value="30"><w n="40">λ</w></num> <g ref="#interpunct" n="45">·</g> <persName type="attested"><name><w n="50">Ἡρακλ<supplied reason="lost">εία</supplied></w></name></persName>
@@ -200,6 +205,7 @@
                 <ab>
                     <w n="5" lemma="θεός">Θεοῖς</w>
                     <w n="10" lemma="καταχθόνιος">καταχθονίοις</w>
+                    <w n="12" lemma="δαιμόνιος">Δαίμοσι</w>
                     <w n="15" lemma="Βειψάνιος">Βειψάνιος</w>
                     <w n="20" lemma="Ζώτικος">Ζώτικος</w>
                     <w n="25" lemma="ζάω">ἔζησεν</w>
@@ -210,25 +216,27 @@
                     <w n="60" lemma="εὐσεβής">εὐσεβεστάτῳ</w>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#martaf">
                 <listApp>
-                    <app>
-                        <note>Text of Kaibel, with minor emendation</note>
-                    </app>
-                    <app loc="line 1">
-                        <note>Kaibel: Κ[α](ταχθονίοις)</note>
-                    </app>
+                    <app loc="line 1"><note>ΘΚΔ lapis; Θ(εοῖς) Κ<unclear>α</unclear>(ταχθονίοις) CIG III 5709, IG XIV 495</note></app>	
+                    <app loc="line 5"><note>ἀνδρὶ εὐσεβ[εστάτῳ IG XIV 495; ἀνδρὶ εὐσε[βεῖ Amico; ἀνδρὶ εὐσε[βεῖ μνήμης χάριν CIG III 5709</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" resp="#martaf">
+                <p>To the Underworld Gods. Vipsanius Zotikos lived for 30 years. Herakleia (set this up) for her most devoted husband.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Th.K. heading; to Beipsanios (Vipsanius) Zotikos; age in years. erected by Herakleia. cf. IG 14.494 and CIL 10.7101 for family?--></p>
+            <div type="commentary" resp="#martaf #JP">
+                <p>The epitaph was dedicated by his wife, Herakleia, to her husband, Vispanius Zotikos, who was probably a freedman of the gens Vipsania, whose members were well represented at Catania. This is unsurprising, as Vipsanius Agrippa owned estates in the area (see Salmeri 1984, 18–19), and is further confirmed by other Imperial-period funerary inscriptions mentioning individuals of the Vipsanii (IG XIV 494; IMusCatania 146; CIL X 2, 7101). The epitaph belongs to Formula G4 in Korhonen’s classification (2004, 86–87). It comprises an invocation to the gods — in the otherwise unparalleled abbreviated form <foreign xml:lang="grc">ΘΚΔ</foreign>, which represents a conflation of the formulae <foreign xml:lang="grc">Θ(εοῖς) Κ(αταχθονίοις)</foreign> and <foreign xml:lang="grc">Θ(εοῖς) Δ(αίμοσι)</foreign> (the instances in SEG 52.903 and 905 are antiquarian forgeries derived from this text) — followed by the name of the deceased and his age, the name of the dedicator, and the deceased’s name in the dative accompanied by an expression specifying the relationship between the two. The header is reported as complete and intact by Carrera and there is therefore no inherent reason to doubt it, although the abbreviation <foreign xml:lang="grc">Κα(ταχθονίοις)</foreign> is attested in ISic001152 from Termini Imerese and Carrera might have misread delta for alpha. The restoration proposed by Kaibel for line 5 (ap. IG XIV 495), <foreign xml:lang="grc">εὐσεβ[εστάτῳ]</foreign>, is particularly convincing, since at Catania the superlative of <foreign xml:lang="grc">εὐσεβής</foreign> is attested exclusively in this type of funerary formula (cf. Korhonen 2004, 90).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
+                     <bibl>
+                        <author>Carrera</author>
+                        <date>1639</date>
+                        <citedRange>289</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/JPVJSTWU"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002755">https://biblio.inscriptiones.org/epig10002755</ref>
+                    </bibl>
                     <bibl type="corpus" n="IG">
                         <author>Kaibel</author>
                         <date>1890</date>
@@ -254,7 +262,13 @@
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl/>
+                    <bibl>
+                        <author>Korhonen</author>
+                        <date>2004</date>
+                        <citedRange>86-87, 90</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/2EUC82DH"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001897">https://biblio.inscriptiones.org/epig10001897</ref>
+                    </bibl>
                 </listBibl>
             </div>
         </body>

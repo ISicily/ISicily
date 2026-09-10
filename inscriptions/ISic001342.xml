@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001342</title>
+                <title>Fragment of a funerary inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -36,6 +36,10 @@
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
                     <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -55,7 +59,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
@@ -111,9 +115,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                                 <geo>37.49223, 15.07041</geo>
                             </origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400">Roman</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Original discovery not recorded. Observed by Gualtherus "in muro D.Agathe-Veteris Franciscanorum Observantia."</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -170,10 +174,11 @@
                 <change when="2021-06-04" who="#AA">Epidoc editing</change>
                 <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
                 <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
+                <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001342_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -182,14 +187,14 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
         </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character" n="5"/><orig n="10">ΗΙΑΚ</orig><gap reason="lost" extent="unknown" unit="character" n="15"/>
                     <lb n="2"/><gap reason="lost" extent="unknown" unit="character" n="20"/><orig n="25">ΒΥΤΗ</orig><gap reason="lost" extent="unknown" unit="character" n="30"/>
-                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character" n="35"/><orig n="40">ΕΤΟΜΗΘ</orig><gap reason="lost" extent="unknown" unit="character" n="45"/>
+                    <lb n="3"/><gap reason="lost" extent="unknown" unit="character" n="35"/><w n="40"><supplied reason="lost">ἔζησεν</supplied></w> <w n="45"><expan><abbr>ἔτ</abbr><ex>η</ex></expan></w> <num value="70"><w n="50">ο</w></num> <w n="55"><expan><abbr>μῆ</abbr><ex>νας</ex></expan></w> <num value="9"><w n="60">θ</w></num><gap reason="lost" extent="unknown" unit="character" n="65"/>
                 </ab>
             </div>
             <div type="edition" subtype="simple-lemmatized" resp="#VF #RC">
@@ -201,26 +206,26 @@
                     <orig n="25">ΒΥΤΗ</orig>
                     <gap reason="lost" extent="unknown" unit="character" n="30"><desc>[-?-]</desc></gap>
                     <gap reason="lost" extent="unknown" unit="character" n="35"><desc>[-?-]</desc></gap>
-                    <orig n="40">ΕΤΟΜΗΘ</orig>
-                    <gap reason="lost" extent="unknown" unit="character" n="45"><desc>[-?-]</desc></gap>
+                    <w n="40" lemma="ζῶ">ἔζησεν</w>
+                    <w n="45" lemma="ἔτος">ἔτη</w>
+                    <w n="50" lemma="ο">ο</w>
+                    <w n="55" lemma="μείς">μῆνας</w>
+                    <w n="60" lemma="θ">θ</w>
+                    <gap reason="lost" extent="unknown" unit="character" n="65"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#martaf">
                 <listApp>
-                    <app>
-                        <note>Text: IG</note>
-                    </app>
-                    <app loc="line 1">
-                        <note>IG suggests, tentatively, the restoration of ἒτ(η) ο' μῆ(νας) θ...</note>
+                    <app loc="lines 2-3">
+                        <note>πρεσ]βύτη[ς ἔζησεν] ἔτ(η) ο μῆ(νας) θ CIG III 5732a; ἔζησεν] ἔτ(η) ο μῆ(νας) θ IG XIV 522</note>
                     </app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>… lived 70 years and 8 months …</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag. age in years and months?--></p>
+            <div type="commentary" resp="#martaf">
+                <p>The funerary inscription is too fragmentary to allow a secure reconstruction. However, l. 3 may preserve a reference to the age of the deceased expressed by means of numerals, which are also abbreviated in the funerary inscriptions from Catania (cf. IG XIV 484; IG XIV 525).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001354</title>
+                <title>Funerary inscription for Eutychianos</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -40,6 +40,10 @@
                     <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
                     <resp>named entity annotation</resp> 
                 </respStmt> 
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -79,28 +83,29 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
+                                    <p>Marble plaque, rounded at the corners.</p>                                    
                                     <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/48.html">marble</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                        <height unit="cm">14.5</height>
+                                        <width unit="cm">18</width>
+                                        <depth unit="cm">2.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote><p>The letters are narrow and elongated, becoming progressively smaller and shorter in the final lines. E and Σ are square, while Ω is cursive. Numerous ligatures and abbreviation marks are present.</p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="5" atMost="22">5-22</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -177,10 +182,11 @@
                 <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
                 <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
                 <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
+                <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the metadata, added the translation and the commentary</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001354_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -189,7 +195,7 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
         </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
@@ -225,22 +231,22 @@
                     <w n="95" lemma="Φίλιππος">Φιλίππου</w>
                 </ab>
             </div>
-            <div type="apparatus">
+            <div type="apparatus" resp="#martaf">
                 <listApp>
                     <app>
                         <note>Text of IGPalermo checked against photograph; Kaibel followed Kirchoff's reedition of the report by Alessi</note>
                     </app>
-                    <app loc="line 6">
-                        <note>Kaibel: ΦΛΦΙΛ etc.</note>
-                    </app>
+                    <app loc="line 3"><note>ΠΡΟΘΕ Alessi</note></app>
+                    <app loc="line 5"><note>ὑπ(ατείᾳ) IG XIV 535, Agnello; IMusPalermo; ὑπ(ατίᾳ) CIG IV 9478; ΥΠΑΤΙΣ Alessi</note></app>
+                    <app loc="line 6"><note>ΒΑΣΣΥ Κ Alessi</note></app>
+                    <app loc="line 6"><note>ΙΦΛΙΠΠΟΥ lapis</note></app> 
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Here lies Eutychianos, having lived in Christ. He died eight days before the Kalends of August, during the consulship of Anicius Auchenius Bassus and Flavius Philippus.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Eutychianos; enthade keitai; lived in Christ; date of death; odd symbol at end, either a botched hedera, or possibly a Latin D for depositus (seems unlikely)--></p>
+            <div type="commentary" resp="#martaf">
+                <p>The epitaph opens at l. 1 with the standard formula <foreign xml:lang="grc">ἐνθάδε κεῖται</foreign>, followed by the name of the deceased, Eutychianos (for the name in Sicily, see CIL X 7006 = <ref target="https://sicily.classics.ox.ac.uk/inscription/ISic000005">ISic000005</ref>; LGPN IIIA, 178). The expression <foreign xml:lang="grc">ζήσας ἐν | Χ(ριστ)ῷ</foreign> (ll. 2–3) is also attested in other Christian epitaphs (cf. I.Pal.Tertia Ia 258, ll. 3–4) and serves to emphasize the deceased's principal virtue, namely that of being a believer (Agnello 1953, 99). At ll. 3–5, the date of death is introduced by the verb <foreign xml:lang="grc">τελευτᾷ</foreign> and is further specified by the consular dating, during the consulship of Anicius Auchenius Bassus and Flavius Philippus, corresponding to AD 408. Below the text was a symbol that has been interpreted either as an ivy leaf or as an inverted D, representing the Latin abbreviation depositus (Manni Piraino 1973, 31).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

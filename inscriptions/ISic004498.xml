@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Epitaph of Aischylos</title>
+                <editor ref="#JP">Jonathan Prag</editor>
+                <principal ref="#VM">Valentina Mignosa</principal>
+                <funder>John Fell OUP Research Fund</funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
+                <respStmt>
+                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>Project direction, template development, general editing</resp>
+                </respStmt>
+            <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>File added and EpiDoc encoding</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>I.Sicily</authority>
+                <idno type="filename">ISic004498</idno>
+                <idno type="TM"/>
+                <idno type="EDR"/>
+                <idno type="EDH"/>
+                <idno type="EDCS"/>
+                <idno type="PHI"/>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004498</idno>
+                <idno type="DOI"></idno>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence.</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country>Italy</country>
+                        <region>Sicily</region>
+                        <settlement/>
+                        <repository/>
+                        <!--Current repository and inventory number are not specified by Scerra-->
+                        <altIdentifier>
+                            <settlement/>
+                            <repository/>
+                            <idno type="old"/>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="grc">Ancient Greek</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.stele" ref="https://www.eagle-network.eu/voc/objtyp/lod/250">stele</objectType>
+                                    <dimensions>
+                                        <height unit="cm">97</height>
+                                        <width unit="cm">55</width>
+                                        <depth unit="cm">23</depth>
+                                    </dimensions>
+                                </support>
+                                <condition ana="#condition.complete"/>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout>
+                                    <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
+                                    <damage ana="#text_condition.incomplete"/>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc>
+                            <handNote>
+                                <locus from="line1" to="line3">Line 1-3</locus>
+                                <dimensions type="letterHeight">
+                                    <height unit="mm"/>
+                                </dimensions>
+                            </handNote>
+                        </handDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origPlace>
+                                <placeName type="ancient" ref="http://pleiades.stoa.org/places/462252" corresp="#findspot">Hybla Heraea</placeName>		
+                                <placeName type="modern" ref="http://sws.geonames.org/2523650">Ragusa</placeName>
+                                <geo>36.92653, 14.74761</geo>
+                            </origPlace>
+                            <origDate datingMethod="#julian" notBefore-custom="-0525" notAfter-custom="-0491">Late 6th to early 5th century BCE</origDate>
+                        </origin>
+                        <provenance type="found" subtype="discovered">Found in Contrada San Martino, on the left bank of the Irminio, near San Giacomo (c.5km north-west of Ragusa), close to a small group of artificial rock-cut tombs.<geo cert="medium">36.9740823,14.7971441</geo></provenance><!-- approx location based on map in Scerra -->
+                        <provenance type="observed" subtype="autopsied">None</provenance>
+                        <provenance></provenance>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Encoded following the latest EpiDoc guidelines</p>
+            <xi:include href="../alists/ISicily-taxonomies.xml">
+                <xi:fallback>
+                    <p>Taxonomies for ISicily controlled values</p>
+                </xi:fallback>
+            </xi:include>
+            <xi:include href="../alists/charDecl.xml">
+                <xi:fallback>
+                    <p>ISicily glyphs authority list</p>
+                </xi:fallback>
+            </xi:include>
+        </encodingDesc>
+        <profileDesc>
+            <calendarDesc>
+                <calendar xml:id="julian">
+                    <p>Julian Calendar</p>
+                </calendar>
+            </calendarDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="it">Italian</language>
+                <language ident="grc">Ancient Greek</language>
+                <language ident="la">Latin</language>
+                <language ident="he">Hebrew</language>
+                <language ident="phn">Phoenician</language>
+                <language ident="xpu">Punic</language>
+                <language ident="osc">Oscan</language>
+                <language ident="xly">Elymian</language>
+                <language ident="scx">Sikel</language>
+                <language ident="sxc">Sikan</language>
+            </langUsage>
+            <textClass>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.funerary" ref="http://www.eagle-network.eu/voc/typeins/lod/92.html">funerary</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc status="draft">
+            <listChange>
+                <change when="2026-07-31" who="#VM">Creation of file and EpiDoc encoding</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface/>
+    </facsimile>
+    <text>
+        <body>
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#VM">
+                <ab>
+                    <lb n="1"/><persName type="attested"><name>Αἰσχύλου</name>
+                    <lb n="2"/><supplied reason="lost" cert="low">ἐ</supplied>ιμὶ τοῦ <name>Γ<supplied reason="lost">ο</supplied>
+                    <lb n="3" break="no"/>ργου</name></persName>
+                </ab>
+            </div>
+            <div type="apparatus">
+                <listApp>
+                    <app><note>Text after photograph in Scerra 2018</note></app>
+                </listApp>
+            </div>
+            <div type="translation" xml:lang="en" resp="#VM">
+                <p>I belong to Aischylos, [son] of Gorgos.</p>
+            </div>
+            <div type="commentary">
+                <p>The inscription follows a funerary formula characteristic of Greek Sicily, consisting of the name of the deceased in the genitive, the first-person verb εἰμί and the patronymic. 
+                    The three lines are separated by horizontal incised rules, an unusual feature in early lapidary inscriptions, as is the spelling -ου for the long close vowel /oː/, especially given the context. 
+                    The letters tend towards vertical alignment. The semicircular gamma, rho with a descending appendage and cross-shaped chi support a date between 
+                    the end of the sixth and the beginning of the fifth century BCE. The slab was found close to a group of artificial rock-cut tombs and probably served as the closing slab of one of them. 
+                    Scerra interprets the inscription as evidence for the adoption of Greek language and funerary practices within the indigenous settlement of Contrada San Martino.</p>
+            </div>
+            <div type="bibliography">
+                <listBibl type="edition">
+                    <bibl>
+                        <author>Scerra</author>
+                        <date>2018</date>
+                        <citedRange>470-471, figs. 4-5</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/BKW9Q5A5"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002691">https://biblio.inscriptiones.org/epig10002691</ref>
+                    </bibl>
+                </listBibl>
+                <listBibl type="discussion"><bibl/></listBibl>
+            </div>
+        </body>
+    </text>
+</TEI>

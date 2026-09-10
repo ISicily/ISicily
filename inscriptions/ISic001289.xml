@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001289</title>
+                <title>Funerary inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -40,6 +40,10 @@
                     <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
                     <resp>named entity annotation</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -60,7 +64,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
@@ -79,28 +83,29 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Limestone funerary slab, broken at the upper left corner.</p>
                                     <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                        <height unit="cm">16</height>
+                                        <width unit="cm">25</width>
+                                        <depth unit="cm">2.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage/>
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
                         <handDesc>
-                            <handNote><!--Default value and requires editing-->
+                            <handNote>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="10" atMost="18">10-18</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -118,7 +123,7 @@
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0251" notAfter-custom="0300">Later 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found">Found by the Pappalardo family in 1815 “prope moenia veteris urbis” during the excavations by S. Orsola and sold to Ferrara by the Abbot Pappalardo.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -176,10 +181,11 @@
                 <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
                 <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
                 <change when="2025-12-23" who="#ZL">tagged names and persons</change>
+                <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001289_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -188,7 +194,7 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
         </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
@@ -214,14 +220,13 @@
                 </ab>
             </div>
             <div type="apparatus">
-                <p>Text of IGPalermo</p>
+                <listApp><app><note>Text of IGPalermo. Ferrara placed a punctuation mark between the words.</note></app></listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>(Property of) Aphrodisia, Theudas, Marylla. The sons built (i.e. this) in memory of their parents.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Erected by children of Aphrodisia, Theudas and Marylla (?Theudas, hypercoristic for Theodoros) remarried? Note cursive and non-cursive mu, showing in period of transition.--></p>
+            <div type="commentary" resp="#martaf">
+                <p>This is an epitaph found on a stone plaque. The syntax of the epitaph is complex and has led to differing interpretations. Ferrara (1829, 342) believed that two brothers (Aphrodisias and Maryllas) and a sister (Theuda) had dedicated the tomb to their parents. Kaibel (ap. IG XIV 465) shared this view, but understood the names in the genitive case (in this case, Aphrodisias and Maryllas would be the daughters, Theudas the son), without explaining why the names of the dedicators would appear in this case while the names of the parents were not expressed. Franz (ap. CIG III 5698), followed by Manni Piraino (1973, 28), however, held a different opinion, interpreting the genitives as dependent on <foreign xml:lang="grc">τὸ μνημεῖὸν ἐστι</foreign>, thus effectively taking these names as those of the parents, while the names of the sons would not have been expressed. The sons would therefore have been born to a single father (Theudas), but to two different mothers (Aphrodisia and Marylla). Another possibility would be to understand the genitive as an expression of ownership: having built the tomb for their parents, the sons may have wished to claim that it was their exclusive property. <foreign xml:lang="grc">Ἀφροδίσια</foreign> is a fairly common female name in Sicily (LGPN 3A p. 86), <foreign xml:lang="grc">Θεῦδας</foreign> could be an epichoric form for <foreign xml:lang="grc">Θεόδωρος</foreign> (on which, see Manni Piraino 1973, 28) and <foreign xml:lang="grc">Μαρύλλας</foreign> is attested in another inscription from Catania (IG 14.491 = <ref target="https://sicily.classics.ox.ac.uk/inscription/ISic000361">ISic000361</ref>).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

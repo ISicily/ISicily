@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001277</title>
+                <title>Fragmentary funerary inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -40,6 +40,10 @@
                     <name xml:id="ZL" ref="https://orcid.org/0009-0007-0586-7956">Zoé Lienard</name>
                     <resp>named entity annotation</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -62,7 +66,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Palermo</settlement>
@@ -81,18 +85,19 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Fragment of a limestone slab, fragmentary on the right.</p>
                                     <material type="inorganic.stone" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
-                                    <dimensions><!--Default values and requires editing-->
-                                        <height unit="cm"/>
-                                        <width unit="cm"/>
-                                        <depth unit="cm"/>
+                                    <objectType ana="#object.plaque" ref="https://www.eagle-network.eu/voc/objtyp/lod/259.html">plaque</objectType>
+                                    <dimensions>
+                                        <height unit="cm">18</height>
+                                        <width unit="cm">14.5</width>
+                                        <depth unit="cm">2.5</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
                             </supportDesc>
                             <layoutDesc>
-                                <layout><!--Default value and requires checking-->
+                                <layout>
                                     <rs ana="#execution.chiselled" ref="http://www.eagle-network.eu/voc/writing/lod/1">chiselled</rs>
                                     <damage/>
                                 </layout>
@@ -102,7 +107,7 @@
                             <handNote><!--Default value and requires editing-->
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"/>
+                                    <height unit="mm" atLeast="15" atMost="30">15-30</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -120,7 +125,7 @@
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0151" notAfter-custom="0250">Late 2nd century CE or early 3rd century CE</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found">First recorded by Gualtherus 1624 as being in the 'foro Trissini', in the possession of Fancisca Caruso.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -178,10 +183,11 @@
                 <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
                 <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
                 <change when="2025-12-23" who="#ZL">tagged names and persons</change>
+                <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001277_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -190,15 +196,15 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
         </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM #martaf">
                 <ab>
                     <lb n="1"/><w n="5">θή<supplied reason="lost">κη</supplied></w>
                     <lb n="2"/><persName type="attested"><name><w part="I" n="10">Ἀρτεμ</w><gap reason="lost" extent="unknown" unit="character" n="15"/></name></persName>
                     <lb n="3"/><w n="20">καὶ</w> <w n="25">τοῦ</w> <gap reason="lost" extent="unknown" unit="character" n="30"/>
-                    <lb n="4" break="no"/><w part="F" n="35">ου</w> <w n="40">αὐτοῦ</w> <gap reason="lost" extent="unknown" unit="character" n="45"/>
+                    <lb n="4" break="no"/><w part="F" n="35">ου</w> <w n="40">αὐτο<supplied reason="lost">ῦ</supplied></w> <gap reason="lost" extent="unknown" unit="character" n="45"/>
                     <lb n="5"/><w part="I" n="50">εὐπλ</w> <gap reason="lost" extent="unknown" unit="character" n="55"/>
                 </ab>
             </div>
@@ -217,15 +223,18 @@
                     <gap reason="lost" extent="unknown" unit="character" n="55"><desc>[-?-]</desc></gap>
                 </ab>
             </div>
-            <div type="apparatus">
-                <p>Text of IGPalermo</p>
+            <div type="apparatus" resp="martaf">
+                <app loc="line 1"><note>θήκη Franz (ap. CIG III 5572), Sandberg, IGMusPalermo 6; Ferrua; ΘΗ Torremuzza; ΘΜ Schiavo; Θε(οῖς πᾶσι) Kaibel (ap. IG XIV 452)</note></app>
+                <app loc="line 2"><note>Ἀρτεμ[- - ? - -] IGMusPalermo 6 (fortasse Ἀρτέμ[ονος, Ferrua); Ἀρτέμ[ωνος Franz (ap. CIG III 5572), SEG 14.597; Ἀρτεμ[ισίου Sandberg</note></app>
+                <app loc="lines 3-4"><note>καὶ τοῦ[- - ? - -]-|ου IGMusPalermo 6 (fortasse καὶ τοῦ [υἱων|οῦ); καὶ τοῦ [υἱ|οῦ Franz (ap. CIG III 5572); καὶ τοῦ [ἀδελφ|οῦ ? Sandberg; καῖ τοῦ [υεἵ|ου Ferrua</note></app>
+                <app loc="line 4"><note>αὐτο[ῦ Franz (ap. CIG III 5572), Sandberg; αὐτο[ῦ οὐκ  IGMusPalermo 6</note></app>
+                <app loc="line 5"><note>εὐπλ[- - ? - -] IGMusPalermo 6 (fortasse εὐπλ[όων); Εὐπλ[--- Franz (ap. CIG III 5572); εὐπλοίας ἔνεκα Kaibel (ap. IG XIV 452); εὔπλ[οει vel εὐπλ[οεῖτε Sandberg; Εὔπλ[ους vel Εὐπλ[ία Alföldi; Εὔπλ[ου Ferrua</note></app>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" resp="#martaf">
+                <p>Tomb of Artem… and of his … fare you well.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag; heading appears to be theke (known elsewhere in Italy); name could be Artemon. The whole is restored in SEG as: Theke Artemonos kai tou adelphou autou ... euploeite. Also Torremuzza Iscr. Pal. no. LXI and p.340 f.--></p>
+            <div type="commentary" resp="#martaf">
+                <p>This inscription is highly fragmentary: most editors have interpreted it as a funerary inscription. Torremuzza’s reading (1784 cl. XVIII no. 33) of l. 1 ΘΗ, together with the presence of two genitives in ll. 3–4, leaves no room for alternative interpretations: <foreign xml:lang="grc">θήκη</foreign> is also used in other funerary inscriptions in the sense of “tomb” (e.g. IG XIV 633, 783). Ferrua (1989, 113–114 no. 428) identifies this term as a Christian word and integrates a christogram at the end of the inscription. Kaibel’s reading (ap. IG XIV 452) of l. 1 <foreign xml:lang="grc">Θε[οῖς πᾶσι</foreign>, besides being erroneous, is at the root of an incorrect interpretation of the document’s typology, which the scholar considered to be a dedicatory epigraph; this interpretation, however, conflicts with the genitives at ll. 3–4. It is therefore preferable to understand the text as an epitaph, for a deceased individual whose name is only partially preserved and which scholars have variously restored as <foreign xml:lang="grc">Ἀρτέμων</foreign> (Franz ap. CIG III 5572; Manni Piraino ap. IGMusPalermo 6) or <foreign xml:lang="grc">Ἀρτεμίσιος</foreign> (Sandberg 1954, 41), and for one of his relatives (the son according to Franz ap. CIG III 5572; the brother according to Sandberg 1954, 41; or the grandson according to Manni Piraino ap. IGMusPalermo 6). The last line has received several readings: Kaibel (ap. IG XIV 452), assuming it to be a dedication, read <foreign xml:lang="grc">εὐπλοίας ἔνεκα</foreign>, the expression used to thank the gods for a safe voyage, whereas Alföldi (1976, 511), although agreeing on the funerary destination of the text, was perhaps influenced by Kaibel’s interpretation and read a proper name (<foreign xml:lang="grc">Εὔπλους</foreign> or <foreign xml:lang="grc">Εὐπλία</foreign>), understood as the dedicant. For Ferrua (1989, 113–114 no. 428), this was the proper name of the deceased’s son, <foreign xml:lang="grc">Εὔπλου</foreign>. Sandberg (1954, 41–42), supported by Manni Piraino (ap. IGMusPalermo 6), read the imperative <foreign xml:lang="grc">εὔπλοει</foreign> or <foreign xml:lang="grc">εὐπλοεῖτε</foreign> as a wish addressed to the passer-by, similar to <foreign xml:lang="grc">εὐτύχει</foreign> or <foreign xml:lang="grc">εὐτυχεῖτε</foreign>: the plural form is also found in IG XIV 933 l. 11 (Portus, 1st–2nd century AD), while in the singular the contracted form <foreign xml:lang="grc">εὐπλόι</foreign> is more common (IG XIV 2409, 8; SEG 42.942 l. 2; IG XIV 2472 l. 9 = CIL XII 758).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -273,7 +282,25 @@
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl/>
+                    <bibl>
+                        <author>Alföldi</author>
+                        <date>1976</date>
+                        <citedRange>511</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/VX7VTWVH"/>
+                    </bibl>
+                    <bibl>
+                        <author>Ferrua</author>
+                        <date>1989</date>
+                        <citedRange>113–114</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/759ZXHKQ"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001995">https://biblio.inscriptiones.org/epig10001995</ref>
+                    </bibl>
+                    <bibl>
+                        <author>Sandberg</author>
+                        <date>1954</date>
+                        <citedRange>41</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/TW4BAGUU"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -7,26 +7,32 @@
             <titleStmt>
                 <title>ISic004488</title>
                 <editor ref="#JP">Jonathan Prag</editor>
-                <principal ref="#JP">Jonathan Prag</principal>
+                <principal ref="#VM">Valentina Mignosa</principal>
                 <funder>John Fell OUP Research Fund</funder>
-                <funder>
-                    <ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref>
-                </funder>
+                <funder><ref target="https://cordis.europa.eu/project/id/885040">ERC Advanced Grant no.885040</ref></funder>
                 <respStmt>
-                    <name xml:id="JP" ref="http://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
-                    <resp>original data collection and editing</resp>
+                    <name xml:id="JP" ref="https://orcid.org/0000-0003-3819-8537">Jonathan Prag</name>
+                    <resp>project direction, template development and general editor</resp>
                 </respStmt>
-             <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+                <respStmt>
+                    <name xml:id="VM" ref="https://orcid.org/0000-0002-7122-2511">Valentina Mignosa</name>
+                    <resp>original data collection and editing, encoding text in Epidoc</resp>
+                </respStmt>
+                <respStmt>
+                    <name xml:id="SS" ref="https://orcid.org/0000-0003-3914-9569">Simona Stoyanova</name>
+                    <resp>standardisation of template and tidying up encoding</resp>
+                </respStmt>
+                <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
-                <idno type="filename">ISic004481</idno>
+                <idno type="filename">ISic004488</idno>
                 <idno type="TM"/>
                 <idno type="EDR"/>
                 <idno type="EDH"/>
                 <idno type="EDCS"/>
                 <idno type="PHI"/>
-                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004481</idno>
+                <idno type="URI">http://sicily.classics.ox.ac.uk/inscription/ISic004488</idno>
                 <availability>
                     <licence target="http://creativecommons.org/licenses/by/4.0/">Licensed under a Creative Commons-Attribution 4.0 licence</licence>
                 </availability>
@@ -53,13 +59,17 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <p></p>
-                                    <material ana="#material.inorganic.stone.sedimentary_rock" type="stone.sedimentary_rock" subtype="unspecified" resp="#Coccato">limestone</material>
+                                    <p>A naturally tapering pebble of very hard stone, perhaps calcareous tuff. It measures 13 cm in maximum length, 
+                                        3.8 cm in maximum width and approximately 1.8 cm in maximum thickness, and weighs 187.392 g. 
+                                        It is complete apart from minor chipping and shows no visible traces of wear. The inscription occupies one face. 
+                                        The opposite face bears a carefully cut square recess, 2 cm wide and only a few millimetres deep, containing three shallow 
+                                        holes that do not pierce the stone.</p>
+                                    <material ana="#material.inorganic.stone.sedimentary_rock" type="stone.sedimentary_rock" subtype="unspecified" resp="#Coccato">sedimentary or meta-sedimentary rock, likely unknown (identification based on pXRF, digital microscopy)</material>
                                     <objectType ana="#object.pebble" ref="https://www.eagle-network.eu/voc/objtyp/lod/1986.html">pebble</objectType>
                                     <dimensions>
-                                        <height unit="cm"></height>
-                                        <width unit="cm"></width>
-                                        <depth unit="cm"></depth>
+                                        <height unit="cm">13</height>
+                                        <width unit="cm">3.8</width>
+                                        <depth unit="cm">1.8</depth>
                                     </dimensions>
                                 </support>
                                 <condition/>
@@ -76,7 +86,7 @@
                                 <p></p>
                                 <locus from="line1" to="line1">Line 1</locus>
                                 <dimensions type="letterHeight">
-                                    <height unit="mm"></height>
+                                    <height unit="mm" atLeast="12" atMost="13">12-13</height>
                                 </dimensions>
                                 <locus from="line1" to="line2">Interlineation line 1 to 2</locus>
                                 <dimensions type="interlinear">
@@ -95,7 +105,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="-0525" notAfter-custom="-0475" evidence="lettering">Late sixth or early fifth century BCE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered">Area of Fusco, Siracusa</provenance>
-                        <provenance type="observed" subtype="autopsied"></provenance>
+                        <provenance type="observed" subtype="autopsied" xml:id="autopsy">Mignosa</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -139,9 +149,10 @@
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="stub">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2026-06-08" who="#JP">Jonathan Prag created stub</change>
+                <change when="2026-07-30" who="#VM">Valentina Mignosa added metadata</change>
                 </listChange>
         </revisionDesc>
     </teiHeader>
@@ -157,29 +168,41 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#VM" source="#autopsy">
                 <ab>
+                    <lb n="1"/>Ἐνγυμάχο
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app>
-                        <note>Text to be added</note>
+                        <note>Text from autopsy</note>
                     </app>
                 </listApp>
             </div>
             <div type="translation">
                 <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
             </div>
-            <div type="commentary">
-                <p>Placeholder file awaiting editing</p>
+            <div type="commentary" resp="#VM">
+                <p>The inscription can be dated on palaeographical grounds to the late sixth or early fifth century BCE . 
+                    The trident-shaped chi, dotted alpha and curved gamma point to a Geloan-Akragantine alphabetic context. 
+                    The text is read as Ἐνγυμάχο (= Ἐγγυμάχο), an otherwise unattested personal name in the genitive, 
+                    and is therefore best interpreted as an ownership inscription. Its formation from ἐγγύς and μάχη 
+                    may be compared with the name Ἐγγύδιχος.
+                    The function of the object remains uncertain. The square recess and its three shallow holes may have 
+                    accommodated a square-section handle secured by three projections or nails. 
+                    Some Roman stone weights provide morphological parallels, but its weight of 187.392 g does not correspond 
+                    to any known weight standard attested by comparable objects in Archaic or Classical Sicily. Alternatively, it may 
+                    have been a small hafted tool, perhaps a hammer intended for a specific purpose. 
+                    The absence of wear might be explained by a votive use, but the generic provenance from the Fusco 
+                    area does not permit a more precise interpretation because of the lack of archaeological context.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl>
                         <author>Manenti and Mignosa</author>
                         <date>2024</date>
-                        <citedRange>113 no.1 fig.1-2</citedRange>
+                        <citedRange>113-115 no.1 figs.1-2</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/XJUBNCHS"/>
                     </bibl>
                 </listBibl>

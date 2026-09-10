@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001336</title>
+                <title>Funerary inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -26,6 +26,10 @@
                     <name xml:id="AA" ref="http://orcid.org/0000-0001-7077-0703">Alex Antoniou</name>
                     <resp>Epidoc editing</resp>
                 </respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -45,7 +49,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
@@ -101,9 +105,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" cert="low">(?)</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0001" notAfter-custom="0400">Roman imperial</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found">Original discovery not recorded. Seen by Amico (1740, 277) “in museo S. Nicolai”.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -158,10 +162,11 @@
         	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-04" who="#AA">Epidoc editing</change>
+                <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001336_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -170,27 +175,31 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
+                    <lb n="0"/><gap reason="lost" extent="unknown" unit="character"/>
                     <lb n="1"/><gap reason="lost" extent="unknown" unit="character" cert="low"/><orig>ΕΝΕ</orig><gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" cert="low"/><orig>ΙΝΕΣ</orig><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost">ἐκ τ</supplied>
-                    <lb n="3" break="no"/><supplied reason="lost">ῶν</supplied> ἰδίων <supplied reason="lost">ἐποίησεν</supplied>
-                    <lb n="4"/><supplied reason="lost">τό</supplied><unclear>π</unclear>ον <supplied reason="lost">ἑ</supplied>α<supplied reason="lost">υτῷ</supplied>      
-                    <lb n="5"/><supplied reason="lost">καί τοῖς ἰδίος</supplied>
+                    <lb n="2"/><gap reason="lost" extent="unknown" unit="character" cert="low"/><orig>ΙΝΕΣ</orig><gap reason="lost" extent="unknown" unit="character"/><w><supplied reason="lost">ἐκ</supplied></w> <w><supplied reason="lost">τ</supplied>
+                    <lb n="3" break="no"/><supplied reason="lost">ῶν</supplied></w> <w>ἰδίων</w> <w><supplied reason="lost">ἐποίησεν</supplied></w>
+                    <lb n="4"/><w><supplied reason="lost">τό</supplied><unclear>π</unclear>ον</w> <w><supplied reason="lost">ἑ</supplied>α<supplied reason="lost">υτῷ</supplied></w>      
+                    <lb n="5"/><supplied reason="lost"><w>καί</w> <w>τοῖς</w> <w>ἰδίος</w></supplied>
                 </ab>
             </div>
-            <div type="apparatus">
-                <listApp><app><note>Text: Ferrua 1941</note></app></listApp>
+            <div type="apparatus" resp="#martaf">
+                <listApp>
+                    <app loc="lines 2-3"><note>ἐκ τ|ῶν] ἰδίων [ἐποίησεν Ferrua</note></app>
+                    <app loc="line 4"><note>ΙΟΝ .. Α Amico, Kaibel; [τό]<unclear>π</unclear>ον [ἑ]α[υτῷ Ferrua</note></app>
+                    <app loc="line 5"><note>[καὶ τοῖς ἰδίοις Ferrua</note></app>     
+                </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>… built it at his own expense for himself and his children.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--frag. appears to have idios in it, presumably as poss.pron.--></p>
+            <div type="commentary" resp="#martaf">
+                <p>According to Ferrua’s restorations (1941, 243), the epitaph includes a reference to the construction of the funerary monument at the deceased's own expense, for himself and his descendants. A less likely, though still possible, restoration is <foreign xml:lang="grc">ἐκ τ|ῶν] ἰδίων [ἐγόρασεν</foreign> (cf. IG XIV 529, ll. 4–5). On the formula fecit sibis et suis, which at Catania is attested exclusively in Christian funerary inscriptions, see Ferrua 1941, 242–243.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">

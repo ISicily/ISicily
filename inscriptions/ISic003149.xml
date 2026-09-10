@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003149</title>
+                <title>Funerary inscription for Eirenaios</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -23,6 +23,10 @@
      	       <resp>standardisation of template and tidying up encoding</resp>
  	   </respStmt>
             <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -99,7 +103,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0500">4th — 5th century CE</origDate>
                         </origin>
                         <provenance type="found" subtype="discovered" when="1897">Found by Paolo Orsi, walled into a loculus in prop. M. Sangiorgi, via A. di San Giuliano (formerly via Lincoln), Catania<geo cert="medium">37.505045, 15.089149</geo></provenance>
-                        <provenance type="observed" subtype="autopsied" resp="#JP">2016.05.12</provenance>
+                        <provenance type="observed" subtype="autopsied" resp="#JP" xml:id="autopsy">2016.05.12</provenance>
                         <acquisition/>
                     </history>
                 </msDesc>
@@ -153,6 +157,7 @@
 	    <change when="2020-12-23" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-12-14" who="#JP">Jonathan Prag edited text and metadata, added images</change>
+                <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
@@ -176,24 +181,28 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP" source="#autopsy">
                 <ab>
-                    <lb n="1"/><persName type="attested"><name><choice><orig>Εἰρῆνες</orig><reg>Εἰρηναῖος</reg></choice></name></persName> πρε
-                    <lb n="2" break="no"/>σβύτερος ἠ
-                    <lb n="3" break="no"/>γόρασεν τό
-                    <lb n="4" break="no"/>πον, μη<choice><corr>δ</corr><sic>λ</sic></choice>ὲν β
-                    <lb n="5" break="no"/>λάψας τὴν ἐν
-                    <lb n="6" break="no"/>τολήν
+                    <lb n="1"/><persName type="attested"><name><choice><orig>Εἰρῆνες</orig><reg>Εἰρηναῖος</reg></choice></name></persName> <w>πρε
+                    <lb n="2" break="no"/>σβύτερος</w> <w>ἠ
+                    <lb n="3" break="no"/>γόρασεν</w> <w>τό
+                    <lb n="4" break="no"/>πον</w>, <w>μη<choice><corr>δ</corr><sic>λ</sic></choice>ὲν</w> <w>β
+                    <lb n="5" break="no"/>λάψας</w> <w>τὴν</w> <w>ἐν
+                    <lb n="6" break="no"/>τολήν</w>
                 </ab>
             </div>
             <div type="apparatus">
-               <listApp><app><note>Text from autopsy</note></app></listApp>
+               <listApp>
+                   <app><note>Text from autopsy</note></app>
+                   <app loc="line 1"><note>ΕΙΡΗΝΕΣ lapis; Εἰρην(ο)ς IGCVO 855</note></app>
+                   <app loc="lines 4-5"><note>μη<corr>δ</corr>ὲν β|λάψας Manganaro, CIJud 1(2).650c, JIWE 148, Biondi-Buscemi Felici (ΜΗΛΕΝ lapis); Μηλένβι λάψας Orsi; Ferrua</note></app>
+               </listApp>
             </div>
-            <div type="translation">
-                <p/>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Eirenaios the Elder bought the place, violating the commandment in no way.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision--></p>
+            <div type="commentary" resp="#martaf">
+                <p>The funerary inscription presents the standard purchase formula for the tomb (ll. 2-4), with the verb <foreign xml:lang="grc">ἀγοράζω</foreign> in the aorist, characteristic of many inscriptions from Catania (IG XIV 538, 555, 566, IGCVO 866, IMusCatania 176, 194, 200; on the use of this verb in epitaphs with tomb-purchase formulas, see Grossi Gondi 1920, 246). Lines 4-6 have been variously interpreted: Orsi (1897, 240) read <foreign xml:lang="grc">Μηλένβ|ι λάψας τὴν ἐν|τολήν</foreign> in the sense of facultatem sumere, with the genitive <foreign xml:lang="grc">Μηλένβι</foreign> referring to the previous owner of the tomb. Manganaro (1959, 347; 1959-1960, 201-202), on the other hand, corrected this to <foreign xml:lang="grc">μη<corr>δ</corr>ὲν β|λάψας τὴν ἐν|τολήν</foreign>, identifying the typically Jewish formula concerning the non-violation of the commandment (for another attestation at Catania, see IMusCatania 229 ll. 2-4 <foreign xml:lang="grc">μηδὲν ζημι|ώσας τὴν ἐντολήν</foreign>), and thus attributing this inscription to a Jewish milieu (cf. also BE 1960.459, 1961.882). Noy (1993, 196) identified in this ‘commandment’ aspects, not further specified, of Jewish burial law: on the connection between <foreign xml:lang="grc">ἐντολή</foreign> and the Jewish world, see also the epithet <foreign xml:lang="grc">φιλέντολος</foreign> in JIWE II 240, 281, 576. The deceased is called <foreign xml:lang="grc">Εἰρῆνες</foreign>, another variant of <foreign xml:lang="grc">Εἰρηναῖος</foreign> (Noy 1993, 195 records other possible variants, rejecting the correction found in Wessel 1989), and his name is accompanied by the title characteristic of the Christian and Jewish ecclesiastical hierarchy, presbyteros.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -253,7 +262,15 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/8CH847SJ"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002149">https://biblio.inscriptiones.org/epig10002149</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Grossi Gondi</author>
+	           <date>1920</date>
+	           <citedRange>246</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/GDVDNXIC"/>
+	           <ref target="https://biblio.inscriptiones.org/epig10002241">https://biblio.inscriptiones.org/epig10002241</ref>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>

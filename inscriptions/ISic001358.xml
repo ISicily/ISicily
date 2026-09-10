@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001358</title>
+                <title>Funerary inscription for Iulianus</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -30,6 +30,10 @@
                     <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
                     <resp>named entity annotation</resp> 
                 </respStmt> 
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, add commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -49,7 +53,7 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
                         <settlement>Catania</settlement>
@@ -108,7 +112,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0600">Date of death; age in
                                 years (?)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Found in 1741 “in area Stesichori”; seen by Kirchhoff “in lapide musei Ioannis Rizzari”.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -163,11 +167,12 @@
         	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-11" who="#AA">Epidoc editing and English translation</change>
-                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
+                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change>
+				<change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001358_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -176,17 +181,17 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>ἐτελεύτησεν
+                    <lb n="1"/><w>ἐτελεύτησεν</w>
                     <lb n="2"/><persName type="attested"><name>Ἰουλιανὸς</name></persName>
-                    <lb n="3"/>τῇ πρὸ <num value="15"><hi rend="supraline">ιε</hi></num> <expan><abbr>κ<hi rend="supraline">αλ</hi></abbr><ex>ανδῶν</ex></expan>
-                    <lb n="4"/>Ἀπριλίων ζή
-                    <lb n="5" break="no"/>σας ἔτη <num value="50">ν</num>
-                    <lb n="6"/><g ref="#alpha">Α</g><g ref="#staurogram">⳨</g><g ref="#omega">Ω</g>
+                    <lb n="3"/><w>τῇ</w> <w>πρὸ</w> <num value="15"><hi rend="supraline">ιε</hi></num> <w><expan><abbr>κ<hi rend="supraline">αλ</hi></abbr><ex>ανδῶν</ex></expan></w>
+                    <lb n="4"/><w>Ἀπριλίων</w> <w>ζή
+                    <lb n="5" break="no"/>σας</w> <w>ἔτη</w> <num value="50">ν</num>
+                    <lb n="6"/><g ref="#alpha">Α</g> <g ref="#staurogram">⳨</g> <g ref="#omega">Ω</g>
                 </ab>
             </div>
             <div type="apparatus">
@@ -196,8 +201,7 @@
                 <p>Ioulianos died 15 days before the Kalends of April, having lived for 50 years</p>
             </div>
             <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Ioulianos; date of death, age in years; chi-rho, alpha-omega--></p>
+                <p>The funerary inscription is Christian, as suggested by the particular attention devoted to recording the day of the deceased's death and by the final Christogram. For the name <foreign xml:lang="grc">Ἰουλιανός</foreign> in Sicily, see IG XIV 126 (= <ref target="https://sicily.classics.ox.ac.uk/inscription/ISic000943">ISic000943</ref>), from Syracuse.</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -215,6 +219,13 @@
                         <citedRange>9489</citedRange>
                         <ptr target="https://www.zotero.org/groups/382445/items/533T8HNS"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref></bibl>
+                    <bibl>
+                        <author>Amico</author>
+                        <date>1741</date>
+                        <citedRange>267 no. IX</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/F5INCW3T"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10002186">https://biblio.inscriptiones.org/epig10002186</ref>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

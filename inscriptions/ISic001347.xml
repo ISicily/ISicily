@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001347</title>
+                <title>Funerary inscription</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -30,6 +30,11 @@
                     <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
                     <resp>named entity annotation</resp> 
                 </respStmt> 
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, add commentary</resp>
+                </respStmt>
+                
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -108,7 +113,7 @@
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0500">Age in years; day of death
                                 (?)</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found">Found in S. Spirito.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -163,11 +168,12 @@
         	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-04" who="#AA">Epidoc editing and English translation</change>
-                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
+                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change>
+				<change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001347_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -176,28 +182,31 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/><supplied reason="lost">ἒζησεν</supplied> <supplied reason="lost">ὁ</supplied> 
+                    <lb n="1"/><w><supplied reason="lost">ἔζησεν</supplied></w> <supplied reason="lost">ὁ</supplied> 
                     <lb n="2"/><persName type="attested"><name><supplied reason="lost">Ἀν</supplied><w part="M">τών</w><supplied reason="lost">ιος</supplied></name></persName> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="3"/>ἒτη <num value="70">ο</num> <gap reason="lost" extent="unknown" unit="character"/>
-                    <lb n="4"/>ἒζησεν ὁ <persName type="attested"><name>Σ
-                    <lb n="5" break="no"/><supplied reason="lost">α</supplied>τορνῖλος</name></persName> ἒ<supplied reason="lost">τη</supplied> <gap reason="lost" extent="unknown" unit="character"/> <supplied reason="lost"><expan><abbr>τελ</abbr><ex>ευτᾷ</ex></expan></supplied>
-                    <lb n="6"/>τῇ <expan><abbr>πρ</abbr><ex>ὸ</ex></expan> <num value="4">δ</num> <expan><abbr>κα<supplied reason="lost">λ</supplied></abbr><supplied reason="lost"><ex>ανδῶν</ex></supplied></expan> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="3"/><w>ἔτη</w> <num value="70">ο</num> <gap reason="lost" extent="unknown" unit="character"/>
+                    <lb n="4"/><w>ἔζησεν</w> <w>ὁ</w> <persName type="attested"><name>Σ<supplied reason="lost">α</supplied>
+                    <lb n="5" break="no"/>τορνῖλος</name></persName> <w>ἔ<supplied reason="lost">τη</supplied></w> <num><gap reason="lost" extent="unknown" unit="character"/></num> <w><supplied reason="lost"><expan><abbr>τελ</abbr><ex>ευτᾷ</ex></expan></supplied></w>
+                    <lb n="6"/><w>τῇ</w> <w><expan><abbr>πρ</abbr><ex>ὸ</ex></expan></w> <num value="4">δ</num> <w><expan><abbr>κα<supplied reason="lost">λ</supplied></abbr><supplied reason="lost"><ex>ανδῶν</ex></supplied></expan></w> <gap reason="lost" extent="unknown" unit="character"/>
                 </ab>
             </div>
             <div type="apparatus">
-                <listApp><app><note>Text: IG</note></app></listApp>
+                <listApp>
+					<app><note>Text after IG</note></app>
+                    <app loc="line 5"><note>ἔ<corr>τ</corr>[η IG XIV 528; ἔ[τη CIG IV 9496</note></app>
+                    <app loc="line 6"><note>l. 6 τῇ πρ(ὸ) δʹ IG XIV 528; τῇ πρ(ὸ) ςʹ CIG IV 9496</note></app>
+                </listApp>
             </div>
             <div type="translation" xml:lang="en" resp="#AA">
                 <p>Antonios lived [...] for 70 years [...] Satornilos lived for [?] years [...] [and died] 4 [days] before the Kalends [of...]</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--contains two burials; frag. second is Satornilos (Saturnilus?); day of death as well as age.--></p>
+            <div type="commentary" resp="#martaf">
+                <p>Both funerary inscriptions are Christian, as suggested also by the attention devoted to recording the exact day of death. Both <foreign xml:lang="grc">Ἀντώνιος</foreign> and <foreign xml:lang="grc">Σατορνῖλος</foreign> are names attested in Sicily. For an <foreign xml:lang="grc">Ἀντώνιος Σατορνῖλος</foreign>, see IG XIV 245 (= <ref target="https://sicily.classics.ox.ac.uk/inscription/ISic001063">ISic001063</ref>, from Cava d’Ispica).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -216,6 +225,13 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/533T8HNS"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001249">https://biblio.inscriptiones.org/epig10001249</ref></bibl>
                     <bibl>cf. ICatania no.12</bibl>
+                    <bibl>
+                        <author>Gualtherus</author>
+                        <date>1624 [1625]</date>
+                        <citedRange>102 no. 14</citedRange>
+                        <ptr target="https://www.zotero.org/groups/382445/items/ZP8DE8KS"/>
+                        <ref target="https://biblio.inscriptiones.org/epig10001931">https://biblio.inscriptiones.org/epig10001931</ref>
+                    </bibl>
                 </listBibl>
 	   <listBibl type="discussion"><bibl/></listBibl>
             </div>

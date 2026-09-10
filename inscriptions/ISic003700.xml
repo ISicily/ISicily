@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 003700</title>
+                <title>Funerary inscription for Pelagia</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -40,6 +40,10 @@
                     <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
                     <resp>named entity annotation</resp> 
                 </respStmt> 
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -79,7 +83,7 @@
                     <physDesc>
                         <objectDesc>
                             <supportDesc>
-                                <support>
+                                <support><p>Marble plaque. From Gualtherus’ drawing, the inscription is inscribed on the same plaque as IG XIV 530a.</p>
                                     <material ana="#material.inorganic.stone" type="stone.unspecified" subtype="unverified" ref="http://www.eagle-network.eu/voc/material/lod/2.html">stone</material>
                                     <objectType ana="#object.plaque" ref="http://www.eagle-network.eu/voc/objtyp/lod/257" cert="low">plaque</objectType>
                                     <dimensions><!--Default values and requires editing-->
@@ -119,7 +123,7 @@
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="0101" notAfter-custom="0400">Imperial period</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found">Found in vico S. Constantini, at the residence of Francesca Bolani.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <acquisition/>
                     </history>
@@ -175,11 +179,11 @@
                 <change when="2021-06-11" who="#AA">Epidoc editing and English translation</change>
                 <change when="2025-11-05" who="#VF">Victoria Fendel's lemmatizations were added from source CoNLL-U files using PyEpiDoc and associated scripts</change>
                 <change when="2025-11-05" who="#RC">Robert Crellin integrated lemmatizations into EpiDoc</change>
-                <change when="2026-02-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
+                <change when="2026-02-18" who="#ZG">Zoe Greblunas tagged names and persons</change> <change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic003700_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -188,7 +192,7 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
         </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
@@ -227,26 +231,20 @@
             </div>
             <div type="apparatus">
                 <listApp>
-                    <app>
-                        <note>Text: Ferrua 1989</note>
-                    </app>
-                    <app loc="line 1">
-                        <note>IG: [--- Π]α[λλ]αδίου; CIG: [Μνημεῖον Γενν]αδίου</note>
-                    </app>
-                    <app loc="line 5">
-                        <note>IG and CIG: [Σε]π[τ]εμβρίω[ν] </note>
-                    </app>
-                    <app loc="line 6">
-                        <note>CIG: --- ἐμὸν ἃνδρ[α]</note>
-                    </app>
+                    <app loc="line 1"><note>[ἀγορασία] [Π]αλλαδίου Ferrua; [μνημεῖον Γενν]αδίου CIG IV 9497; ... [Π]αλλαδίου IG XIV 530b</note></app>
+                    <app loc="line 2"><note>[συμβίου] [τ]ῆς Πελαγίας Ferrua; [συμβίου --- ] Πελαγίας CIG IV 9497; --- τ]ῆς Πελαγίας IG XIV 530b</note></app>
+                    <app loc="lines 2-3"><note>ἐ[γέ|νετο Πελαγία] Ferrua; ἐ[γ|γένηθη] CIG IV 9497 ἐ[|γένηθη] IG XIV 530b</note></app>
+                    <app loc="line 4"><note>[--- ίων] CIG IV 9497</note></app>
+                    <app loc="lines 4-5"><note>δ[ὲ | --- Σε]πτεμβρίων Ferrua; δ[ε τῇ πρὸ --- CIG IV 9497, IG XIV 530b (vel μηνὶ Σε]πτεμβρίω<corr>ι</corr>)</note></app>
+                    <app loc="line 6"><note>[ἐνθάδε] [κῖτ]ε μόνανδρο[ς] Ferrua; --- ] ἐμὸν ἄνδρ<corr>α</corr> CIG IV 9497; κ]ὲ μόνανδρος IG XIV 530b</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p>The purchase of the tomb. Palladios, the spouse of Pelagia. Pelagia having passed 11 [days] before the Kalends of [...], having died [...] of September, here she, who had one husband, lies</p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>Purchase by Palladios, the husband of Pelagia. Pelagia was born 11 days before the Kalends of … and died on … September. Here lies, having had only one husband.</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--right side of an incomplete funerary inscription perhaps recording a Palladios and a Pelagia, died in the month of september. Kaible connects physically with 530a, although this appears to be based on an over literal reading of the layout of Gualtherus no.40 and no.41--></p>
+            <div type="commentary" resp="#martaf">
+                <p><!--right side of an incomplete funerary inscription perhaps recording a Palladios and a Pelagia, died in the month of september. Kaible connects physically with 530a, although this appears to be based on an over literal reading of the layout of Gualtherus no.40 and no.41-->
+                    The funerary inscription includes reference to the purchase of the tomb by the husband of the deceased, <foreign xml:lang="grc">Παλλάδιος</foreign>, with the presence of the noun <foreign xml:lang="grc">ἀγορασία</foreign> (restored) and the genitive of the purchaser, following a formula more widespread at Syracuse, but also attested at Catania (cf. SEG 4.60, JIWE I 150). For the deceased <foreign xml:lang="grc">Πελάγια</foreign> (the name is also attested in Syracuse, ASSiracusano 1956, 57), both her date of birth (ll. 2-3) and date of death (ll. 4-5) are indicated, while the final closing expression with <foreign xml:lang="grc">ἐνθάδε κεῖται</foreign> contains the information that Pelagia had only one husband in her lifetime: on the epithet <foreign xml:lang="grc">μόνανδρος</foreign> used in epitaphs to emphasize a woman's virtue, and other epithets highlighting conjugal fidelity and love, see Grandinetti 2006, 35-36 (for <foreign xml:lang="grc">μόνανδρος</foreign> used in another Sicilian epitaph, see IG XIV 191, from Syracuse).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -282,7 +280,12 @@
                     </bibl>
                 </listBibl>
                 <listBibl type="discussion">
-                    <bibl/>
+                    <bibl>
+                        <author>Grandinetti</author>
+                        <date>2006</date>
+                        <citedRange>35-36</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/JQBTRE7A"/>
+                    </bibl>
                 </listBibl>
             </div>
         </body>

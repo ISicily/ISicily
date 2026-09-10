@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>I.Sicily inscription 001368</title>
+                <title>Funerary inscription for Sabina</title>
                 <editor ref="#JP">Jonathan Prag</editor>
                 <principal ref="#JP">Jonathan Prag</principal>
                 <funder>John Fell OUP Research Fund</funder>
@@ -30,7 +30,11 @@
                     <name xml:id="ZG" ref="https://orcid.org/0009-0008-0871-248X">Zoe Greblunas</name> 
                     <resp>named entity annotation</resp> 
                 </respStmt> 
-            </titleStmt>
+                <respStmt>
+                    <name xml:id="martaf" ref="https://orcid.org/0000-0001-5187-5163">Marta Fogagnolo</name>
+                    <resp>check encoded text, translation and commentary</resp>
+                </respStmt>
+			</titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
                 <idno type="filename">ISic001368</idno>
@@ -49,10 +53,10 @@
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
-                    <msIdentifier><!--Default country and region-->
+                    <msIdentifier>
                         <country>Italy</country>
                         <region>Sicily</region>
-                        <settlement>unknown</settlement>
+                        <settlement>Catania</settlement>
                         <repository>unknown</repository>
                         <!--No inventory number found-->
                         <!--Adding location for old id numbers if available-->
@@ -105,9 +109,9 @@
                                 <placeName type="modern" ref="http://sws.geonames.org/2525068">Catania</placeName>
                             	<geo>37.49223, 15.07041</geo>
 		</origPlace>
-                            <origDate datingMethod="#julian" notBefore-custom="0201" notAfter-custom="0600" cert="low">Christian</origDate>
+                            <origDate datingMethod="#julian" notBefore-custom="0301" notAfter-custom="0600">Christian</origDate>
                         </origin>
-                        <provenance type="found">Original discovery not recorded.</provenance>
+                        <provenance type="found" subtype="discovered">Original discovery not recorded. Observed by Müller in Museo Biscari.</provenance>
                         <provenance type="observed" subtype="autopsied">None</provenance>
                         <provenance type="not-observed" subtype="lost">Lost.</provenance>
                     </history>
@@ -162,11 +166,12 @@
         	    <change when="2020-12-22" who="#JP">Updated Zenodo DOI</change>
             	<change when="2021-01-19" who="#SS">renumbered files, uris and references</change>
                 <change when="2021-06-11" who="#AA">Epidoc editing</change>
-                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change> 
+                <change when="2025-12-18" who="#ZG">Zoe Greblunas tagged names and persons</change>
+				<change when="2026-08-03" who="#martaf">Marta Fogagnolo revised the text encoding, added the translation and the commentary</change>
 	</listChange>
         </revisionDesc>
     </teiHeader>
-    <facsimile>
+    <facsimile><surface/><!--
         <surface type="front">
             <graphic n="screen" url="ISic001368_tiled.tif" height="3680px" width="5520px">
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
@@ -175,30 +180,30 @@
                 <desc>I.Sicily with the permission of the Assessorato Regionale dei Beni Culturali e dell’Identità Siciliana - Dipartimento dei Beni Culturali e dell’Identità Siciliana</desc>
             </graphic>
          </surface>
-    </facsimile>
+     --></facsimile>
     <text>
         <body>
             <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#AA">
                 <ab>
-                    <lb n="1"/>σὺν θεῷ <expan><abbr><am><g ref="#staurogram">⳨</g></am></abbr><ex>Χριστῷ</ex></expan> <expan><abbr>κ</abbr><ex>αὶ</ex></expan> <supplied reason="lost">πατρι</supplied>
-                    <lb n="2"/>αὐτοῦ ἐκοιμ<supplied reason="lost">ήθη</supplied>
-                    <lb n="3"/>ἡ δούλη τοῦ <supplied reason="lost">θεοῦ</supplied>
-                    <lb n="4"/><persName type="attested"><name>Σαβεῖνα</name></persName> τῇ <supplied reason="lost">πρὸ</supplied>
-                    <lb n="5"/><num value="3">τρειῶν</num> εἰδῶν
+                    <lb n="1"/><w>σὺν</w> <w>θεῷ</w> <expan><abbr><am><g ref="#staurogram">⳨</g></am></abbr><ex>Χριστῷ</ex></expan> <w><expan><abbr>κ</abbr><ex>αὶ</ex></expan></w> <w><supplied reason="lost">πατρι</supplied></w>
+                    <lb n="2"/><w>αὐτοῦ</w> <w>ἐκοιμ<supplied reason="lost">ήθη</supplied></w>
+                    <lb n="3"/><w>ἡ</w> <w>δούλη</w> <w>τοῦ</w> <w><supplied reason="lost">θεοῦ</supplied></w>
+                    <lb n="4"/><persName type="attested"><name>Σαβεῖνα</name></persName> <w>τῇ</w> <w><supplied reason="lost">πρὸ</supplied></w>
+                    <lb n="5"/><num value="3">τρειῶν</num> <w>Εἰδῶν</w>
                 </ab>
             </div>
             <div type="apparatus">
                 <listApp>
                     <app><note>Text: IG with emendation from Ferrua</note></app>
                     <app loc="line 1"><note>IG and CIG record Latin cross, Staurogram supplied by Ferrua</note></app>
+                    <app loc="lines 1-2"><note>σὺν θεῷ Χρ(ιστῷ) κ(αὶ) [πατρὶ] | αὐτοῦ Agnello; σὺν θεῷ κ(αὶ) [τῷ Χ(ριστ)ῷ] vel σὺν θεῷ κ(αὶ) [τῷ ὑῷ] | αὐτοῦ CIG IV 9479; σὺν θεῷ κ(αὶ) [τῷ ὑῷ] | αὐτοῦ IG XIV 549</note></app>
                 </listApp>
             </div>
-            <div type="translation">
-                <p><!--translation(s) - add @xml:lang for 'en' or 'it' to div--></p>
+            <div type="translation" xml:lang="en" resp="#martaf">
+                <p>With God, Christ and His Father, the servant of God Sabina fell asleep three days before the Ides of ...</p>
             </div>
-            <div type="commentary">
-                <p><!--commented out pending revision-->
-                    <!--Sabeina (Sabina) - slave of god, with god and his son.--></p>
+            <div type="commentary" resp="#martaf">
+                <p>The Christian funerary inscription opens with the formula <foreign xml:lang="grc">σὺν θεῷ Χρ(ιστῷ) κ(αὶ) [πατρὶ] | αὐτοῦ</foreign> (ll. 1–2). The deceased, named Sabina (cf. NScav. 1905, 397 no. 3, from Syracuse; IG XIV 264 (<ref target="https://sicily.classics.ox.ac.uk/inscription/ISic001083">ISic001083</ref>), from Agrigento), is described by the formula <foreign xml:lang="grc">ἡ δούλη τοῦ [θεοῦ]</foreign> (l. 3), which is characteristic of Christian funerary inscriptions (cf. Grossi Gondi 1920, 139–162).</p>
             </div>
             <div type="bibliography">
                 <listBibl type="edition">
@@ -229,7 +234,15 @@
                         <ptr target="https://www.zotero.org/groups/382445/items/BPRRV8SB"/>
                     <ref target="https://biblio.inscriptiones.org/epig10002004">https://biblio.inscriptiones.org/epig10002004</ref></bibl>
                 </listBibl>
-	   <listBibl type="discussion"><bibl/></listBibl>
+	   <listBibl type="discussion">
+	       <bibl>
+	           <author>Grossi Gondi</author>
+	           <date>1920</date>
+	           <citedRange>139–162</citedRange>
+	           <ptr target="http://zotero.org/groups/382445/items/GDVDNXIC"/>
+	           <ref target="https://biblio.inscriptiones.org/epig10002241">https://biblio.inscriptiones.org/epig10002241</ref>
+	       </bibl>
+	   </listBibl>
             </div>
         </body>
     </text>
