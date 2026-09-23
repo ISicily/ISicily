@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="../schematron/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en">
@@ -28,7 +28,6 @@
                     <name xml:id="RC" ref="https://orcid.org/0000-0002-0100-7437">Robert Crellin</name>
                     <resp>lemmatization and linguistic analysis</resp>
                 </respStmt>
-            <respStmt><name xml:id="Coccato" ref="https://orcid.org/0000-0002-6641-2820">Alessia Coccato</name><resp>Petrographic observation and analysis</resp></respStmt>
             </titleStmt>
             <publicationStmt>
                 <authority>I.Sicily</authority>
@@ -65,7 +64,7 @@
                         <objectDesc>
                             <supportDesc>
                                 <support>
-                                    <material ana="#material.inorganic.stone.sedimentary_rock.limestone.calcarenite.whitish.iblei-orientali #material.inorganic.stone.sedimentary_rock.limestone.calcarenite.whitish.iblei-occidentali" type="stone.limestone.non-polishable.whitish" subtype="calcarenite_ibleiOR|calcarenite_ibleiOCC" resp="#Coccato" ref="http://www.eagle-network.eu/voc/material/lod/66.html">whitish soft calcarenite with grey patina, likely calcarenite degli Iblei (sand-grade limestone) (identification based on pXRF)</material>
+                                    <material ana="#material.stone.limestone" ref="http://www.eagle-network.eu/voc/material/lod/66.html">limestone</material>
                                     <objectType ana="#object.altar" ref="http://www.eagle-network.eu/voc/objtyp/lod/29.html">altar</objectType>
                                     <p>A white limestone altar, finished with a claw chisel on all four sides, with inscription on the front face, a relief of an eagle standing on a thunderbolt on the reverse, mouldings on all four sides form the base and the upper register. The altar is broken/damaged across the top</p>
                                     <dimensions>
@@ -87,7 +86,7 @@
                         <handDesc>
                             <handNote>
                                 <p>Carefully carved letters, with minimal use of serifs, most visible on tau and chi; the iota adscript at the end of line 2 is small and mid-line; omicron is rhomboid in form, the hastae of the mu are all angled.</p>
-                                <p source="https://kingsdigitallab.github.io/crossreads/annotator.html">
+                                <p>
                                     Types list:
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.html">Α type1</ref>
                                     <ref target="https://kingsdigitallab.github.io/crossreads/data/allographs/types/greek-Α-type1.3.html">Α type1.3</ref>
@@ -134,14 +133,14 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origPlace><region>Sicilia</region>
+                            <origPlace>
                                 <placeName type="ancient" ref="http://pleiades.stoa.org/places/462503">Syracusae</placeName>
                                 <placeName type="modern" ref="http://sws.geonames.org/2523083">Siracusa</placeName>
                                 <geo>37.08415, 15.27628</geo>
                             </origPlace>
                             <origDate datingMethod="#julian" notBefore-custom="-0050" notAfter-custom="0050">Later first century BCE or earlier first century CE</origDate>
                         </origin>
-                        <provenance type="found" subtype="discovered">Found in June 1943, during ground-levelling work in the ex Giardino Spagna area, immediately to the west of the Umberto I hosptial<geo cert="medium">37.0739516,15.2808496,</geo></provenance><!-- representative point just to the west of the hospital; exact spot not documented -->
+                        <provenance type="found" subtype="discovered">Found in excavations in the Giardino Spagna necropolis (area of the Umberto I hospital), Siracusa, in 1943; exact findspot not currently localised <geo cert="medium">37.074295, 15.283237</geo></provenance>
                         <provenance type="observed" subtype="autopsied" when="2006-07" resp="#JP">2006.07 by Prag and checked 2013.09.30, 2017.03.24, on display in sector D</provenance>
                         <acquisition/>
                     </history>
@@ -181,12 +180,12 @@
                 <language ident="sxc">Sikan</language>
             </langUsage>
             <textClass>
-                <keywords scheme="https://ontology.inscriptiones.org/type_of_inscription">
-                    <term ana="#function.dedication" ref="https://ontology.inscriptiones.org/type_of_inscription/Dedication">dedication</term>
+                <keywords scheme="http://www.eagle-network.eu/voc/typeins.html">
+                    <term ana="#function.dedication" ref="http://www.eagle-network.eu/voc/typeins/lod/88.html">dedication</term>
                 </keywords>
             </textClass>
         </profileDesc>
-        <revisionDesc status="edited">
+        <revisionDesc status="draft">
             <listChange>
                 <change when="2016-12-03" who="#JCu">James Cummings autogenerated EpiDoc output from database</change>
                 <change when="2017-01-20" who="#JP">Jonathan Prag checked the EpiDoc and added images</change>
@@ -234,7 +233,7 @@
     </facsimile>
     <text>
         <body>
-            <div type="edition" subtype="primary" xml:space="preserve" xml:lang="grc" resp="#JP">
+            <div type="edition" xml:space="preserve" xml:lang="grc" resp="#JP">
                 <ab>
                     <lb n="1" xml:id="AΜoAK"/><persName type="divine"><name><w xml:id="AΜoAU" n="5">Διὶ</w></name></persName> <w xml:id="AΜoAe" n="10">καὶ</w>
                     <lb n="2" xml:id="AΜoAo"/><persName type="divine"><name><w xml:id="AΜoAy" n="15">Τύχη<hi rend="small" xml:id="AΜoAΙ">ι</hi></w></name></persName>
@@ -257,21 +256,18 @@
             <div type="bibliography">
                 <listBibl type="edition">
                     <bibl type="bulletin" n="AE">
-                        <date>1994</date>
-                        <citedRange>757</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/R46KDTZX"/>
+                        <citedRange>1994.0757</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/R46KDTZX"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001283">https://biblio.inscriptiones.org/epig10001283</ref>
                     </bibl>
                     <bibl type="bulletin" n="SEG">
-                        <date>1994</date>
                         <citedRange>44.0787</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/F2GG87EQ"/>
+                        <ptr target="http://zotero.org/groups/382445/items/F2GG87EQ"/>
                         <ref target="https://biblio.inscriptiones.org/epig10000796">https://biblio.inscriptiones.org/epig10000796</ref>
                     </bibl>
                     <bibl type="bulletin" n="BE">
-                        <date>1951</date>
-                        <citedRange>255a</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/77P5MNIR"/>
+                        <citedRange>1951.0255a</citedRange>
+                        <ptr target="http://zotero.org/groups/382445/items/77P5MNIR"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001282">https://biblio.inscriptiones.org/epig10001282</ref>
                     </bibl>
                     <bibl type="bulletin" n="NSA">
@@ -279,7 +275,7 @@
                         <title>NSA</title>
                         <date>1947</date>
                         <citedRange>202-203</citedRange>
-                        <ptr target="https://www.zotero.org/groups/382445/items/4MCP2PVV"/>
+                        <ptr target="http://zotero.org/groups/382445/items/4MCP2PVV"/>
                         <ref target="https://biblio.inscriptiones.org/epig10001392">https://biblio.inscriptiones.org/epig10001392</ref>
                     </bibl>
                     <bibl>
